@@ -12,7 +12,7 @@ async function main(){
  const id=process.argv[2];if(!id||!context.pipePath)throw Error('Metadata connection unavailable');
  const threadResult=JSON.parse(await appTool(context.pipePath,context.callerThreadId,'read_thread',{threadId:id,turnLimit:1,includeOutputs:false}));
  const projectResult=JSON.parse(await appTool(context.pipePath,context.callerThreadId,'list_projects',{}));
- const listed=JSON.parse(await appTool(context.pipePath,context.callerThreadId,'list_threads',{limit:200}));
+ let listed={threads:[],pinnedThreads:[]};try{listed=JSON.parse(await appTool(context.pipePath,context.callerThreadId,'list_threads',{limit:20}));}catch{}
  const summary=[...(listed.threads||[]),...(listed.pinnedThreads||[])].find(t=>t.id===id);
  const thread={...threadResult.thread,...summary};
  console.log(JSON.stringify({title:thread.title,projectName:projectFor(thread,projectResult.projects||[]),resolved:true}));
