@@ -37,7 +37,7 @@ export function validSignature(body,signature,secret) {
 const here=path.dirname(fileURLToPath(import.meta.url));
 const home=process.env.CODEX_HOME||path.join(os.homedir(),'.codex');
 const state=path.join(home,'line-bridge');
-function localThread(id) {
+export function localThread(id) {
   const d=new DatabaseSync(path.join(home,'state_5.sqlite'),{readOnly:true});
   try {const r=d.prepare('SELECT id,cwd,archived FROM threads WHERE id=?').get(id);return r&&!r.archived&&fs.existsSync(r.cwd)?r:null;}finally{d.close();}
 }

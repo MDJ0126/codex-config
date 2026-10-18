@@ -23,6 +23,20 @@ if($env:CODEX_APP_TOOLS_PIPE_PATH -and $env:CODEX_THREAD_ID){
     @{pipePath=$env:CODEX_APP_TOOLS_PIPE_PATH;callerThreadId=$env:CODEX_THREAD_ID} | ConvertTo-Json -Compress | Set-Content -LiteralPath (Join-Path $state 'app-context.json') -Encoding utf8
 }
 $healthy=$false
+if($settings.CentralUrl){
+    $pidFile=Join-Path $state 'processes.json'
+    if(Test-Path -LiteralPath $pidFile){
+        $running=Get-Content -Raw -LiteralPath $pidFile | ConvertFrom-Json
+        if(@($running.processes).Count -eq 1){
+            $entry=@($running.processes)[0]
+            $proc=Get-Process -Id $entry.id -ErrorAction SilentlyContinue
+            $healthy=$proc -and $proc.StartTime.ToUniversalTime().Ticks.ToString() -eq $entry.started
+        }
+    }
+    if(-not $healthy){& (Join-Path $PSScriptRoot 'Start-LineBridge.ps1')}
+    else{Write-Output 'CENTRAL_AGENT_READY: existing per-PC receiver retained.'}
+    return
+}
 try{$healthy=(Invoke-RestMethod -Uri 'http://127.0.0.1:17843/health' -TimeoutSec 2) -eq 'ok'}catch{}
 if(-not $healthy){& (Join-Path $PSScriptRoot 'Start-LineBridge.ps1');return}
 if($Activate -and (Test-Path -LiteralPath (Join-Path $state 'endpoint.txt'))){

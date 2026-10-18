@@ -16,6 +16,12 @@ $shared=Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'line-notificatio
 if(-not $shared.ChannelSecret){throw 'ChannelSecret missing from shared private settings; sync the repository.'}
 . (Join-Path $PSScriptRoot 'Resolve-LineNode.ps1')
 $node=Resolve-LineNode
+if($shared.CentralUrl){
+    $server=Start-Process -FilePath $node -ArgumentList ('"'+(Join-Path $PSScriptRoot 'central-agent.mjs')+'"') -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $state 'server.out.log') -RedirectStandardError (Join-Path $state 'server.err.log')
+    @{processes=@(@{id=$server.Id;started=$server.StartTime.ToUniversalTime().Ticks.ToString()})} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $pidFile -Encoding utf8
+    Write-Output 'CENTRAL_AGENT_STARTED: this PC polls its own durable queue; no webhook takeover.'
+    return
+}
 
 $tunnelBin=Join-Path $state 'cloudflared.exe'
 if(-not(Test-Path -LiteralPath $tunnelBin)){

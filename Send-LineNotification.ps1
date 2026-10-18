@@ -19,6 +19,7 @@ $notificationTime = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(9)).
 $Message = @(
     ($statusIcons[$Status] + ' 작업 ' + $Status),
     ('📁 ' + $ProjectName),
+    ('🖥 ' + $env:COMPUTERNAME),
     ('[' + $SessionTitle + ']'),
     '━━━━━━━━━━━━',
     '💬 요청',
@@ -58,6 +59,14 @@ if ([string]::IsNullOrWhiteSpace($token) -or $recipient -cnotmatch '^U[0-9a-f]{3
 }
 $headers = @{ Authorization = 'Bearer ' + $token }
 try {
+    if($settings -and $settings.CentralUrl){
+        if(-not $SessionId){throw 'Central notification requires the actual SessionId.'}
+        . (Join-Path $PSScriptRoot 'Resolve-LineNode.ps1')
+        $centralNode=Resolve-LineNode
+        $deviceId=& $centralNode (Join-Path $PSScriptRoot 'device-id.mjs')
+        $centralBody=@{deviceId=$deviceId;threadId=$SessionId;title=$SessionTitle;project=$ProjectName;text=$Message}|ConvertTo-Json -Compress
+        $pushResponse=Invoke-RestMethod -Method Post -Uri ($settings.CentralUrl+'/notify') -Headers @{Authorization='Bearer '+$settings.BridgeKey} -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($centralBody)) -TimeoutSec 30
+    }else{
     $quota = Invoke-RestMethod -Method Get -Uri 'https://api.line.me/v2/bot/message/quota' -Headers $headers -TimeoutSec 20
     $usage = Invoke-RestMethod -Method Get -Uri 'https://api.line.me/v2/bot/message/quota/consumption' -Headers $headers -TimeoutSec 20
     if ($quota.type -eq 'limited' -and $usage.totalUsage -ge $quota.value) {
@@ -67,6 +76,7 @@ try {
     $body = @{ to = $recipient; messages = @(@{ type = 'text'; text = $Message }) } | ConvertTo-Json -Depth 5 -Compress
     $headers['X-Line-Retry-Key'] = [guid]::NewGuid().ToString()
     $pushResponse = Invoke-RestMethod -Method Post -Uri 'https://api.line.me/v2/bot/message/push' -Headers $headers -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 20
+    }
     if ($SessionId -and (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'bridge.mjs'))) {
         try {
             $receipt = @{threadId=$SessionId;title=$SessionTitle;project=$ProjectName;messageIds=@($pushResponse.sentMessages | ForEach-Object { $_.id })} | ConvertTo-Json -Compress
