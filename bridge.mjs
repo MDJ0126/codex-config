@@ -3,9 +3,10 @@ import path from 'node:path';
 import os from 'node:os';
 import crypto from 'node:crypto';
 import http from 'node:http';
-import {spawn} from 'node:child_process';
+
 import {DatabaseSync} from 'node:sqlite';
 import {fileURLToPath} from 'node:url';
+import {appTool} from './app-client.mjs';
 
 export function openStore(dir) {
   fs.mkdirSync(dir,{recursive:true});
@@ -46,7 +47,9 @@ async function main(){
  const db=openStore(state);
  if(process.argv[2]==='register'){
    let input='';for await(const part of process.stdin)input+=part;
-   const r=JSON.parse(input);if(!localThread(r.threadId))throw Error('Thread is not present locally');register(db,r);return;
+   const r=JSON.parse(input);if(!localThread(r.threadId))throw Error('Thread is not present locally');register(db,r);
+   if(process.env.CODEX_APP_TOOLS_PIPE_PATH)fs.writeFileSync(path.join(state,'app-context.json'),JSON.stringify({pipePath:process.env.CODEX_APP_TOOLS_PIPE_PATH,callerThreadId:r.threadId}));
+   return;
  }
  const cfg=config();
  const secret=JSON.parse(fs.readFileSync(path.join(state,'secret.json'),'utf8').replace(/^\uFEFF/,'')).channelSecret;
@@ -63,23 +66,14 @@ async function main(){
    db.prepare('UPDATE events SET status=? WHERE id=?').run('running',event.webhookEventId);
    try{
      await reply(event.replyToken,`📨 요청 접수\n📁 ${route.project||'프로젝트 없는 대화'}\n[${route.title}]\n이 세션에서 요청을 처리하겠습니다.`,route);
-     const env={...process.env,LINE_BRIDGE_REQUEST:'1'};
-     for(const key of Object.keys(env))if(key.startsWith('CODEX_')&&key!=='CODEX_HOME')delete env[key];
-     const prompt='다음은 LINE 서명 검증 및 본인 수신자 확인을 통과한 사용자의 요청입니다. 이 기존 세션에서 처리하십시오. 이번 요청의 LINE 결과 발송은 브리지가 담당하므로 직접 알림을 발송하지 마십시오. 최종 답변은 3200자 이내로 작성하십시오. 요청 본문:\n'+event.message.text;
-     const child=spawn(process.env.LINE_CODEX_BIN||'codex',['exec','-s','workspace-write','resume','--json','--skip-git-repo-check',route.thread_id,'-'],{cwd:thread.cwd,env,windowsHide:true,stdio:['pipe','pipe','pipe']});
-     child.stdin.end(prompt);
-     // Do not persist prompts, model output or credentials in bridge logs.
-     let buffer='',answer='';
-     child.stdout.on('data',chunk=>{buffer+=chunk.toString();const lines=buffer.split('\n');buffer=lines.pop();for(const line of lines){try{const item=JSON.parse(line);if(item.type==='item.completed'&&item.item?.type==='agent_message')answer=item.item.text;}catch{}}});
-     child.stderr.resume();
-     const code=await new Promise((resolve,reject)=>{child.once('error',reject);child.once('close',resolve);});
-     db.prepare('UPDATE events SET status=? WHERE id=?').run(code===0?'completed':'failed',event.webhookEventId);
-     log('dispatch_finished',{threadId:route.thread_id,exitCode:code});
-     let summary=code===0?(answer||'요청 처리가 종료되었습니다. 상세 결과는 해당 Codex 세션에서 확인해 주세요.'):'요청을 해당 세션으로 전달했으나 Codex 실행에 실패했습니다. PC에서 세션 상태와 필요한 승인을 확인해 주세요.';
-     if(summary.length>3500){let end=summary.lastIndexOf('\n',3300);summary=summary.slice(0,end>0?end:3300)+'\n상세 결과는 Codex 세션에서 확인해 주세요.';}
-     const notifier=spawn(process.env.LINE_PWSH_BIN||'pwsh',['-NoProfile','-File',path.join(here,'Send-LineNotification.ps1'),'-SessionId',route.thread_id,'-SessionTitle',route.title,'-ProjectName',route.project||'프로젝트 없는 대화','-Status',code===0?'완료':'조치 필요','-Message',summary],{windowsHide:true,stdio:'ignore'});
-     const notified=await new Promise((resolve,reject)=>{notifier.once('error',reject);notifier.once('close',resolve);});
-     if(notified!==0)log('result_notification_failed',{threadId:route.thread_id});
+     // Forward to the existing desktop owner instead of opening a second writer.
+     const context=fs.existsSync(path.join(state,'app-context.json'))?JSON.parse(fs.readFileSync(path.join(state,'app-context.json'),'utf8')):{pipePath:process.env.CODEX_APP_TOOLS_PIPE_PATH,callerThreadId:process.env.CODEX_THREAD_ID};
+     if(!context.pipePath||!context.callerThreadId)throw Error('DESKTOP_CONTEXT_MISSING');
+     const desktopPrompt='다음은 LINE Webhook 서명과 지정된 본인 User ID 검증을 통과한 사용자 요청입니다. 사용자는 LINE 요청을 이 기존 세션으로 전달하도록 승인했습니다. 이 세션에서 요청을 처리하고 결과 알림은 전역 LINE 지침대로 한 번 보내십시오.\n\n'+event.message.text;
+     await appTool(context.pipePath,context.callerThreadId,'send_message_to_thread',{threadId:route.thread_id,hostId:'local',prompt:desktopPrompt});
+     db.prepare('UPDATE events SET status=? WHERE id=?').run('forwarded',event.webhookEventId);
+     log('desktop_forwarded',{threadId:route.thread_id});
+     return;
    }catch{db.prepare('UPDATE events SET status=? WHERE id=?').run('failed',event.webhookEventId);log('dispatch_failed',{threadId:route.thread_id});}
    finally{running.delete(route.thread_id);}
  }

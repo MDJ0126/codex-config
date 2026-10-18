@@ -90,3 +90,9 @@
 - LINE Webhook은 한 번에 한 수신 PC를 가리킨다. PC 전환 시 그 PC의 Start-LineBridge.ps1을 실행하여 Webhook을 전환한다. 다른 PC의 세션을 가져오거나 새 세션을 자동 생성하지 않는다. 현재 PC에 없는 세션 요청은 실행하지 않는다.
 - 브리지는 기존 세션 ID로 Codex CLI exec resume을 사용하며 승인을 무시하는 옵션을 쓰지 않는다. LINE_BRIDGE_REQUEST=1인 실행의 결과 알림은 브리지가 담당하므로 에이전트가 중복 알림을 보내지 않는다. 실행 중인 LINE 요청이 있는 세션에는 추가 LINE 요청을 실행하지 않고 안내한다. 데스크톱 UI의 실시간 갱신이나 실행 중 대화와 동시 쓰기는 보장하지 않는다.
 - 채널 서명키는 CODEX_HOME/line-bridge/secret.json의 channelSecret으로 PC에만 저장한다. 이 키는 기존 Git 저장 예외에 포함되지 않는다. Start-LineBridge.ps1 실행 중에만 수신하며 재부팅 자동 시작은 구성하지 않았다. Quick Tunnel은 실행마다 URL이 바뀌고 가용성 보장이 없으므로 고정 주소나 상시 서비스를 설치했다고 보고하지 않는다.
+
+# LINE 데스크톱 세션 전달 — CLI 재개 대체
+
+- 데스크톱에서 이미 열린 세션은 활성 writer를 보유하므로 LINE 요청을 codex exec resume으로 다시 열지 않는다. 앞선 CLI 재개 및 LINE_BRIDGE_REQUEST 결과 대행 규칙은 이 규칙으로 대체한다.
+- bridge.mjs는 설치된 공식 codex-app-tools의 로컬 파이프 인터페이스로 send_message_to_thread를 호출하여 기존 데스크톱 세션에 전달한다. 알림 등록 시 확인된 CODEX_APP_TOOLS_PIPE_PATH와 caller 세션 ID를 PC 로컬 app-context.json에 저장한다. 해당 접속 정보는 Git으로 동기화하지 않는다.
+- 데스크톱 세션의 에이전트가 요청을 처리하고 기존 전역 지침대로 LINE 결과 알림을 한 번 보낸다. 브리지의 forwarded 상태는 세션 전달 접수만 의미하며 작업 완료로 보고하지 않는다. Codex 앱이 종료되거나 파이프가 바뀌면 그 앱에서 새 알림을 한 번 보내 접속 정보를 갱신해야 한다.

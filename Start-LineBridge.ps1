@@ -14,7 +14,7 @@ if(Test-Path -LiteralPath $pidFile){
 if($Stop){Write-Output 'Bridge stopped on this PC.';return}
 if(-not(Test-Path -LiteralPath (Join-Path $state 'secret.json'))){throw 'Set channelSecret in CODEX_HOME/line-bridge/secret.json locally first.'}
 $node=(Get-Command node -ErrorAction Stop).Source
-$env:LINE_CODEX_BIN=(Get-Command codex -ErrorAction Stop).Source
+
 $tunnelBin=Join-Path $state 'cloudflared.exe'
 if(-not(Test-Path -LiteralPath $tunnelBin)){
     Invoke-WebRequest -Uri 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe' -OutFile $tunnelBin
