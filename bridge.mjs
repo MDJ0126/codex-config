@@ -65,7 +65,8 @@ async function main(){
    running.add(route.thread_id);
    db.prepare('UPDATE events SET status=? WHERE id=?').run('running',event.webhookEventId);
    try{
-     await reply(event.replyToken,`📨 요청 접수\n📁 ${route.project||'프로젝트 없는 대화'}\n[${route.title}]\n이 세션에서 요청을 처리하겠습니다.`,route);
+     try{await reply(event.replyToken,`📨 요청 접수\n📁 ${route.project||'프로젝트 없는 대화'}\n[${route.title}]\n이 세션에서 요청을 처리하겠습니다.`,route);}
+     catch{log('ack_failed',{threadId:route.thread_id});}
      // Forward to the existing desktop owner instead of opening a second writer.
      const context=fs.existsSync(path.join(state,'app-context.json'))?JSON.parse(fs.readFileSync(path.join(state,'app-context.json'),'utf8')):{pipePath:process.env.CODEX_APP_TOOLS_PIPE_PATH,callerThreadId:process.env.CODEX_THREAD_ID};
      if(!context.pipePath||!context.callerThreadId)throw Error('DESKTOP_CONTEXT_MISSING');
