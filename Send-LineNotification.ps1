@@ -1,12 +1,27 @@
 param(
     [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][string]$SessionTitle,
     [Parameter(Mandatory=$true)][string]$Message,
+    [string]$ProjectName,
+    [ValidateSet('완료','일부 완료','실패','조치 필요')][string]$Status = '완료',
     [switch]$DryRun
 )
 $ErrorActionPreference = 'Stop'
 $SessionTitle = ($SessionTitle -replace '[\r\n]+', ' ').Trim()
 if ([string]::IsNullOrWhiteSpace($SessionTitle)) { throw 'SessionTitle must not be blank.' }
-$Message = '[' + $SessionTitle + "]`n" + $Message
+if ([string]::IsNullOrWhiteSpace($Message)) { throw 'Message must not be blank.' }
+$ProjectName = ($ProjectName -replace '[\r\n]+', ' ').Trim()
+if ([string]::IsNullOrWhiteSpace($ProjectName)) { $ProjectName = '프로젝트 없는 대화' }
+$statusIcons = @{ '완료' = '✅'; '일부 완료' = '🟡'; '실패' = '❌'; '조치 필요' = '🔔' }
+$notificationTime = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(9)).ToString('yyyy-MM-dd HH:mm:ss')
+$Message = @(
+    ($statusIcons[$Status] + ' 작업 ' + $Status),
+    ('📁 ' + $ProjectName),
+    ('[' + $SessionTitle + ']'),
+    '━━━━━━━━━━━━',
+    $Message.Trim(),
+    '━━━━━━━━━━━━',
+    ('🕒 ' + $notificationTime + ' KST · 알림 시각')
+) -join "`n"
 # Require an editorial summary instead of silently cutting a result mid-sentence.
 if ([string]::IsNullOrWhiteSpace($Message) -or $Message.Length -gt 4500) {
     throw 'Provide a nonempty summary of at most 4500 UTF-16 code units.'
