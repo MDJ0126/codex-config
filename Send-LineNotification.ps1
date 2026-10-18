@@ -8,6 +8,20 @@ param(
     [switch]$DryRun
 )
 $ErrorActionPreference = 'Stop'
+if($SessionId -and (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'resolve-thread.mjs'))){
+    try{
+        . (Join-Path $PSScriptRoot 'Resolve-LineNode.ps1')
+        $metadataNode=Resolve-LineNode
+        $metadataJson=& $metadataNode (Join-Path $PSScriptRoot 'resolve-thread.mjs') $SessionId 2>$null
+        if($LASTEXITCODE -ne 0){throw 'Metadata lookup failed'}
+        $metadata=$metadataJson|ConvertFrom-Json
+        if($metadata.title){$SessionTitle=$metadata.title}
+        $ProjectName=if($metadata.projectName){$metadata.projectName}else{'프로젝트 없는 대화'}
+    }catch{
+        if([string]::IsNullOrWhiteSpace($ProjectName)){$ProjectName='프로젝트명 미확인'}
+        Write-Warning 'Live thread metadata unavailable; retaining supplied metadata or explicit unknown label.'
+    }
+}
 $SessionTitle = ($SessionTitle -replace '[\r\n]+', ' ').Trim()
 if ([string]::IsNullOrWhiteSpace($SessionTitle)) { throw 'SessionTitle must not be blank.' }
 if ([string]::IsNullOrWhiteSpace($Message)) { throw 'Message must not be blank.' }
