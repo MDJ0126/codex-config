@@ -23,3 +23,29 @@ git clone https://github.com/MDJ0126/codex-config.git (Join-Path $codexDirectory
 CODEX_HOME을 별도로 사용하는 경우 해당 경로에서 스크립트를 실행하세요. Codex는 전역 지침 수정 시 검토·커밋·푸시하도록 AGENTS.md에 지시되어 있습니다. 상주 감시나 예약 작업은 설치하지 않습니다. 다른 PC에서는 Pull을 실행해야 변경 사항이 적용됩니다. 이미 열린 대화에 즉시 다시 로드되는 것은 보장하지 않으므로 새 대화에서 지침을 확인하세요.
 
 Pull은 fast-forward만 허용하며 로컬 변경을 보존합니다. Push는 지정된 네 파일만 추가하고 강제 푸시하지 않습니다. 동시 수정으로 푸시가 거부되면 변경을 보존한 채 수동으로 병합하세요.
+
+## LINE 양방향 연결
+
+현재 구현은 LINE 알림 답장의 원본 메시지 ID를 이 PC의 세션 ID와 연결합니다. 일반 메시지는 이 PC에서 마지막으로 알림을 보낸 세션으로 전달합니다. 모르는 답장 원본, 다른 PC 알림, 로컬에 없는/보관된 세션에는 대응하지 않으며 다른 세션으로 대체하지 않습니다. 설치 이후 보낸 알림부터 답장 매핑이 생깁니다.
+
+- 답장: 원하는 알림을 LINE에서 길게 누르고 답장을 선택해 요청합니다.
+- 일반 메시지: 이 PC의 가장 최근 등록 세션으로 요청합니다.
+- 수신 PC는 한 번에 한 대입니다. PC를 바꾸면 해당 PC에서 아래 시작 스크립트를 실행합니다.
+- PC가 꺼져 있거나 브리지가 중지되면 수신하지 않습니다. 자동 시작은 설치하지 않았습니다.
+
+### 시작과 중지
+
+Node.js 24 이상, Codex CLI 로그인, PowerShell 7, 저장소 접근이 필요합니다. 이 PC에는 구성되어 있습니다.
+
+```powershell
+& "$HOME/.codex/config-repo/Start-LineBridge.ps1"
+& "$HOME/.codex/config-repo/Start-LineBridge.ps1" -Stop
+```
+
+새 PC에는 채널 서명 검증용 Channel secret을 `$CODEX_HOME/line-bridge/secret.json`에 `{"channelSecret":"발급된 값"}` 형식으로 로컬 저장해야 합니다. 이 파일은 Git에 올리지 않습니다. 액세스 토큰과 수신자 ID는 명시 승인된 비공개 `line-notification.private.json`으로 동기화됩니다. 앞선 문서의 '인증값 미포함' 원칙에는 이 파일만 예외입니다.
+
+시작 스크립트는 공식 cloudflared 바이너리를 내려받고 숨겨진 서버와 Quick Tunnel을 실행한 뒤 LINE Webhook URL을 등록합니다. LINE Developers에서 Use webhook을 한 번 켜야 합니다. Quick Tunnel은 무료 임시 주소이며 재시작 시 주소가 바뀝니다. 중지 시 Webhook URL을 자동으로 삭제하지 않습니다.
+
+요청 접수 안내는 Reply API, 처리 결과는 Push API를 사용합니다. 처리 결과는 월 500건 한도에 포함됩니다. 원본 메시지 ID·세션 ID·중복 이벤트 상태는 로컬 SQLite에만 저장합니다. 로그에는 입력 본문과 토큰을 기록하지 않습니다.
+
+기존 Codex 세션은 CLI로 재개합니다. 데스크톱의 열려 있는 화면에 즉시 반영되거나 이미 실행 중인 작업과 동시 쓰기가 가능한지는 보장하지 않습니다. 승인이나 실행 오류는 우회하지 않습니다. 실패하면 결과 알림에 조치 필요로 표시합니다.

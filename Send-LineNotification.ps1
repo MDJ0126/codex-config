@@ -2,6 +2,7 @@ param(
     [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][string]$SessionTitle,
     [Parameter(Mandatory=$true)][string]$Message,
     [string]$ProjectName,
+    [string]$SessionId = $env:CODEX_THREAD_ID,
     [ValidateSet('완료','일부 완료','실패','조치 필요')][string]$Status = '완료',
     [switch]$DryRun
 )
@@ -59,7 +60,14 @@ try {
     }
     $body = @{ to = $recipient; messages = @(@{ type = 'text'; text = $Message }) } | ConvertTo-Json -Depth 5 -Compress
     $headers['X-Line-Retry-Key'] = [guid]::NewGuid().ToString()
-    $null = Invoke-RestMethod -Method Post -Uri 'https://api.line.me/v2/bot/message/push' -Headers $headers -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 20
+    $pushResponse = Invoke-RestMethod -Method Post -Uri 'https://api.line.me/v2/bot/message/push' -Headers $headers -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 20
+    if ($SessionId -and (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'bridge.mjs'))) {
+        try {
+            $receipt = @{threadId=$SessionId;title=$SessionTitle;project=$ProjectName;messageIds=@($pushResponse.sentMessages | ForEach-Object { $_.id })} | ConvertTo-Json -Compress
+            $receipt | & node (Join-Path $PSScriptRoot 'bridge.mjs') register
+            if ($LASTEXITCODE -ne 0) { Write-Warning 'Notification sent, but reply route registration failed.' }
+        } catch { Write-Warning 'Notification sent, but reply route registration failed.' }
+    }
     Write-Output 'API_ACCEPTED: LINE accepted the push request; device delivery is unconfirmed.'
 } catch {
     $status = 'unknown'
