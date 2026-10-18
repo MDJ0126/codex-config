@@ -88,10 +88,11 @@ async function main(){
    if(req.method!=='POST'||req.url!=='/webhook'){res.writeHead(404);res.end();return;}
    let body=Buffer.alloc(0);
    for await(const chunk of req){body=Buffer.concat([body,chunk]);if(body.length>1024*1024){res.writeHead(413);res.end();return;}}
-   if(!validSignature(body,req.headers['x-line-signature'],secret)){res.writeHead(401);res.end();return;}
+   if(!validSignature(body,req.headers['x-line-signature'],secret)){log('invalid_signature');res.writeHead(401);res.end();return;}
    let payload;try{payload=JSON.parse(body);}catch{res.writeHead(400);res.end();return;}
+   log('webhook_received',{eventCount:(payload.events||[]).length});
    for(const event of payload.events||[]){
-     if(event.source?.type!=='user'||event.source.userId!==cfg.UserId||!event.webhookEventId)continue;
+     if(event.source?.type!=='user'||event.source.userId!==cfg.UserId||!event.webhookEventId){log('ignored_sender_or_event');continue;}
      const route=resolve(db,event,localThread);
      if(!route){log('ignored_unknown_or_foreign_session');continue;}
      const inserted=db.prepare('INSERT OR IGNORE INTO events VALUES(?,?,?,?)').run(event.webhookEventId,'queued',route.thread_id,Date.now());
