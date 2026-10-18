@@ -68,3 +68,9 @@
 
 - 사용자는 2026-10-18 비공개 MDJ0126/codex-config 저장소에 본인 알림용 LINE 채널 액세스 토큰과 수신자 ID를 저장하고 PC 간 동기화하도록 명시 승인하였다. 이 파일(line-notification.private.json)만 기존 인증정보 Git 저장 금지의 예외이며, 다른 인증정보에는 적용하지 않는다. 비공개 상태를 유지하며 토큰을 응답·로그·diff 출력으로 노출하지 않는다.
 - Send-LineNotification.ps1은 같은 디렉터리의 line-notification.private.json을 우선 사용한다. 사용자 환경 변수는 해당 파일이 없을 때의 대체 수단이므로 각 Windows에서 별도 환경 변수 등록은 필요하지 않다. 다른 PC는 비공개 저장소 접근 인증 후 저장소를 갱신해야 한다. Sync.ps1 -Direction Pull은 저장소 전체를 갱신하므로 발송 스크립트와 설정도 함께 받는다.
+
+# LINE 알림 세션 제목 형식
+
+- 모든 LINE 작업 결과 알림은 첫 줄을 [현재 세션 제목]으로 작성하고, 다음 줄부터 결과 본문을 작성한다. 호출 형식은 Send-LineNotification.ps1 -SessionTitle <현재 세션 제목> -Message <결과 본문>이다. 이전 -Message 단독 호출 지침보다 이 형식을 우선한다.
+- 세션 제목은 현재 대화의 실제 제목을 사용한다. 필요하면 list_threads에서 현재 thread ID로 확인하며 다른 세션 제목을 사용하거나 추측하지 않는다. 실제 제목을 확인할 수 없으면 SessionTitle에 '제목 미확인 | 세션 ID'처럼 확인 가능한 식별자를 넣는다.
+- SessionTitle에는 대괄호를 붙이지 않고 전달하며 스크립트가 [제목]과 줄바꿈을 추가한다. 제목과 본문을 합쳐 4500 UTF-16 코드 단위 이내로 요약한다.

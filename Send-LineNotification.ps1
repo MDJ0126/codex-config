@@ -1,8 +1,12 @@
 param(
+    [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][string]$SessionTitle,
     [Parameter(Mandatory=$true)][string]$Message,
     [switch]$DryRun
 )
 $ErrorActionPreference = 'Stop'
+$SessionTitle = ($SessionTitle -replace '[\r\n]+', ' ').Trim()
+if ([string]::IsNullOrWhiteSpace($SessionTitle)) { throw 'SessionTitle must not be blank.' }
+$Message = '[' + $SessionTitle + "]`n" + $Message
 # Require an editorial summary instead of silently cutting a result mid-sentence.
 if ([string]::IsNullOrWhiteSpace($Message) -or $Message.Length -gt 4500) {
     throw 'Provide a nonempty summary of at most 4500 UTF-16 code units.'
@@ -48,4 +52,3 @@ try {
     # Never print the raw request, headers, token, recipient, or response body.
     throw "LINE_REQUEST_FAILED: HTTP $status; no automatic retry performed."
 }
-
