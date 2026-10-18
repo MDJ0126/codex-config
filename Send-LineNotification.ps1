@@ -18,8 +18,15 @@ function Read-LineSetting([string]$Name) {
     }
     return $value
 }
-$token = Read-LineSetting 'LINE_CHANNEL_ACCESS_TOKEN'
-$recipient = Read-LineSetting 'LINE_USER_ID'
+$settingsPath = Join-Path $PSScriptRoot 'line-notification.private.json'
+if (Test-Path -LiteralPath $settingsPath) {
+    $settings = Get-Content -Raw -LiteralPath $settingsPath | ConvertFrom-Json
+    $token = $settings.ChannelAccessToken
+    $recipient = $settings.UserId
+} else {
+    $token = Read-LineSetting 'LINE_CHANNEL_ACCESS_TOKEN'
+    $recipient = Read-LineSetting 'LINE_USER_ID'
+}
 if ([string]::IsNullOrWhiteSpace($token) -or $recipient -cnotmatch '^U[0-9a-f]{32}$') {
     throw 'LINE_NOT_CONFIGURED: set LINE_CHANNEL_ACCESS_TOKEN and LINE_USER_ID locally.'
 }
@@ -41,3 +48,4 @@ try {
     # Never print the raw request, headers, token, recipient, or response body.
     throw "LINE_REQUEST_FAILED: HTTP $status; no automatic retry performed."
 }
+

@@ -63,3 +63,8 @@
 - 사용자가 선택한 알림 서비스는 LINE Messaging API이다. 본인 수신처는 사용자 환경 변수 LINE_USER_ID, 채널 액세스 토큰은 LINE_CHANNEL_ACCESS_TOKEN에서 읽는다. 값은 출력하지 않는다.
 - 작업 종료 시 한국어 결과 요약을 4500 UTF-16 코드 단위 이내로 작성하고, $CODEX_HOME/config-repo/Send-LineNotification.ps1 -Message <요약>으로 발송한다. CODEX_HOME 미설정 시 사용자 홈의 .codex/config-repo를 사용한다. 스크립트가 없으면 설정 저장소에서 동기화하며, 자격 증명 미설정은 미발송으로 보고한다.
 - 스크립트는 월간 한도와 사용량을 확인한 후 본인 한 명에게 텍스트 한 건만 발송하며 자동 재시도하지 않는다. API_ACCEPTED는 요청 접수만 뜻하며 단말 수신을 보장하지 않는다. -DryRun은 네트워크 발송 검증이 아니다.
+
+# LINE 토큰 저장 예외 — 사용자 명시 승인
+
+- 사용자는 2026-10-18 비공개 MDJ0126/codex-config 저장소에 본인 알림용 LINE 채널 액세스 토큰과 수신자 ID를 저장하고 PC 간 동기화하도록 명시 승인하였다. 이 파일(line-notification.private.json)만 기존 인증정보 Git 저장 금지의 예외이며, 다른 인증정보에는 적용하지 않는다. 비공개 상태를 유지하며 토큰을 응답·로그·diff 출력으로 노출하지 않는다.
+- Send-LineNotification.ps1은 같은 디렉터리의 line-notification.private.json을 우선 사용한다. 사용자 환경 변수는 해당 파일이 없을 때의 대체 수단이므로 각 Windows에서 별도 환경 변수 등록은 필요하지 않다. 다른 PC는 비공개 저장소 접근 인증 후 저장소를 갱신해야 한다. Sync.ps1 -Direction Pull은 저장소 전체를 갱신하므로 발송 스크립트와 설정도 함께 받는다.
