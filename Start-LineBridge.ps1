@@ -12,8 +12,10 @@ if(Test-Path -LiteralPath $pidFile){
     }
 }
 if($Stop){Write-Output 'Bridge stopped on this PC.';return}
-if(-not(Test-Path -LiteralPath (Join-Path $state 'secret.json'))){throw 'Set channelSecret in CODEX_HOME/line-bridge/secret.json locally first.'}
-$node=(Get-Command node -ErrorAction Stop).Source
+$shared=Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'line-notification.private.json') | ConvertFrom-Json
+if(-not $shared.ChannelSecret){throw 'ChannelSecret missing from shared private settings; sync the repository.'}
+. (Join-Path $PSScriptRoot 'Resolve-LineNode.ps1')
+$node=Resolve-LineNode
 
 $tunnelBin=Join-Path $state 'cloudflared.exe'
 if(-not(Test-Path -LiteralPath $tunnelBin)){
@@ -27,7 +29,7 @@ $endpoint=$null
 for($i=0;$i -lt 40;$i++){
     Start-Sleep -Milliseconds 500
     $text=Get-Content -Raw -LiteralPath (Join-Path $state 'tunnel.log') -ErrorAction SilentlyContinue
-    if($text -match 'https://[a-z0-9-]+\.trycloudflare\.com'){$endpoint=$Matches[0]+'/webhook';break}
+    if(($text -match 'https://[a-z0-9-]+\.trycloudflare\.com') -and $text.Contains('Registered tunnel connection')){$endpoint=$Matches[0]+'/webhook';break}
 }
 if(-not $endpoint){throw 'Tunnel URL not ready; inspect local tunnel logs.'}
 $settings=Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'line-notification.private.json') | ConvertFrom-Json
@@ -37,7 +39,14 @@ try{
     catch { if($_.Exception.Response -and [int]$_.Exception.Response.StatusCode -eq 404){$previous=@{active=$false;endpoint=''}}else{throw} }
     $previous | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $state 'previous-endpoint.json') -Encoding utf8
     $body=@{endpoint=$endpoint} | ConvertTo-Json
-    $null=Invoke-RestMethod -Method Put -Uri 'https://api.line.me/v2/bot/channel/webhook/endpoint' -Headers $headers -ContentType 'application/json' -Body $body
+    $registered=$false
+    for($attempt=0;$attempt -lt 5;$attempt++){
+        try{
+            $null=Invoke-RestMethod -Method Put -Uri 'https://api.line.me/v2/bot/channel/webhook/endpoint' -Headers $headers -ContentType 'application/json' -Body $body -TimeoutSec 15
+            $registered=$true;break
+        }catch{if($attempt -eq 4){throw};Start-Sleep -Seconds 1}
+    }
+    if(-not $registered){throw 'Webhook registration did not complete.'}
     $endpoint | Set-Content -LiteralPath (Join-Path $state 'endpoint.txt')
     Write-Output ('Webhook endpoint: '+$endpoint)
     Write-Output ('Previous webhook active: '+$previous.active)

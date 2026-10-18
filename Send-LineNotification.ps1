@@ -64,8 +64,14 @@ try {
     if ($SessionId -and (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'bridge.mjs'))) {
         try {
             $receipt = @{threadId=$SessionId;title=$SessionTitle;project=$ProjectName;messageIds=@($pushResponse.sentMessages | ForEach-Object { $_.id })} | ConvertTo-Json -Compress
-            $receipt | & node (Join-Path $PSScriptRoot 'bridge.mjs') register
+            . (Join-Path $PSScriptRoot 'Resolve-LineNode.ps1')
+            $lineNode=Resolve-LineNode
+            $receipt | & $lineNode (Join-Path $PSScriptRoot 'bridge.mjs') register
             if ($LASTEXITCODE -ne 0) { Write-Warning 'Notification sent, but reply route registration failed.' }
+            if($env:CODEX_APP_TOOLS_PIPE_PATH){
+                try{& (Join-Path $PSScriptRoot 'Initialize-LineBridge.ps1') -SkipSync}
+                catch{Write-Warning 'Notification sent, but automatic receiver setup failed. Codex should inspect local bridge status.'}
+            }
         } catch { Write-Warning 'Notification sent, but reply route registration failed.' }
     }
     Write-Output 'API_ACCEPTED: LINE accepted the push request; device delivery is unconfirmed.'

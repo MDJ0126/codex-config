@@ -42,7 +42,7 @@ Node.js 24 이상, Codex CLI 로그인, PowerShell 7, 저장소 접근이 필요
 & "$HOME/.codex/config-repo/Start-LineBridge.ps1" -Stop
 ```
 
-새 PC에는 채널 서명 검증용 Channel secret을 `$CODEX_HOME/line-bridge/secret.json`에 `{"channelSecret":"발급된 값"}` 형식으로 로컬 저장해야 합니다. 이 파일은 Git에 올리지 않습니다. 액세스 토큰과 수신자 ID는 명시 승인된 비공개 `line-notification.private.json`으로 동기화됩니다. 앞선 문서의 '인증값 미포함' 원칙에는 이 파일만 예외입니다.
+액세스 토큰·Channel secret·수신자 ID는 사용자 명시 승인에 따라 비공개 line-notification.private.json에 함께 저장하여 동기화합니다. 별도 키·환경 변수 등록은 필요하지 않습니다.
 
 시작 스크립트는 공식 cloudflared 바이너리를 내려받고 숨겨진 서버와 Quick Tunnel을 실행한 뒤 LINE Webhook URL을 등록합니다. LINE Developers에서 Use webhook을 한 번 켜야 합니다. Quick Tunnel은 무료 임시 주소이며 재시작 시 주소가 바뀝니다. 중지 시 Webhook URL을 자동으로 삭제하지 않습니다.
 
@@ -53,3 +53,9 @@ Node.js 24 이상, Codex CLI 로그인, PowerShell 7, 저장소 접근이 필요
 ### 데스크톱 전달 수정
 
 데스크톱이 열린 세션에 `codex exec resume`을 사용하면 `already has an active writer`로 실패하는 문제가 실제 재현되어, 데스크톱의 기존 `send_message_to_thread` 도구 경로로 교체했습니다. 이전 CLI 재개·브리지 결과 대행 설명보다 이 항목을 우선합니다. 브리지는 전달 접수까지만 담당하고, 실제 작업과 LINE 결과 발송은 해당 데스크톱 세션이 처리합니다. Codex 앱은 실행 중이어야 합니다. 앱이 재시작되면 새 작업 알림 한 번으로 로컬 접속 정보를 갱신합니다. 이는 Codex 앱 내부 도구 프로토콜을 사용하므로 앱 업데이트 후 호환성 확인이 필요합니다.
+
+### 다른 PC 자동 초기화
+
+전역 지침이 설치된 Codex는 새 세션 시작 시 `Initialize-LineBridge.ps1 -Activate`를 실행하도록 지시되어 있습니다. 이 스크립트는 변경 사항이 없는 저장소를 fast-forward 동기화하고 번들 Node 탐색, 서버·터널 시작, Webhook 전환, 앱 접속 정보 설정을 수행합니다. 발송 스크립트도 중지된 수신 서버를 자동 기동합니다. 키는 공유 설정에 있으므로 수동 등록하지 않습니다.
+
+이는 Codex가 지침을 실행할 때의 자동화입니다. Windows 로그인 작업이나 부팅 서비스는 설치하지 않았습니다. 다른 PC에는 최초 Git 인증과 전역 지침 동기화가 필요하며, 첫 Codex 세션부터 자동 초기화합니다. 여러 PC가 동시에 시작하면 마지막으로 초기화한 PC가 수신합니다. 네트워크나 권한 오류를 성공으로 처리하지 않습니다.

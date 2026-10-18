@@ -52,7 +52,8 @@ async function main(){
    return;
  }
  const cfg=config();
- const secret=JSON.parse(fs.readFileSync(path.join(state,'secret.json'),'utf8').replace(/^\uFEFF/,'')).channelSecret;
+ const secret=cfg.ChannelSecret;
+ if(!secret)throw Error('SHARED_CHANNEL_SECRET_MISSING');
  const running=new Set();
  async function reply(token,text,route){
    const res=await fetch('https://api.line.me/v2/bot/message/reply',{method:'POST',headers:{Authorization:'Bearer '+cfg.ChannelAccessToken,'Content-Type':'application/json'},body:JSON.stringify({replyToken:token,messages:[{type:'text',text}]})});
@@ -68,7 +69,7 @@ async function main(){
      try{await reply(event.replyToken,`📨 요청 접수\n📁 ${route.project||'프로젝트 없는 대화'}\n[${route.title}]\n이 세션에서 요청을 처리하겠습니다.`,route);}
      catch{log('ack_failed',{threadId:route.thread_id});}
      // Forward to the existing desktop owner instead of opening a second writer.
-     const context=fs.existsSync(path.join(state,'app-context.json'))?JSON.parse(fs.readFileSync(path.join(state,'app-context.json'),'utf8')):{pipePath:process.env.CODEX_APP_TOOLS_PIPE_PATH,callerThreadId:process.env.CODEX_THREAD_ID};
+     const context=fs.existsSync(path.join(state,'app-context.json'))?JSON.parse(fs.readFileSync(path.join(state,'app-context.json'),'utf8').replace(/^\uFEFF/,'')):{pipePath:process.env.CODEX_APP_TOOLS_PIPE_PATH,callerThreadId:process.env.CODEX_THREAD_ID};
      if(!context.pipePath||!context.callerThreadId)throw Error('DESKTOP_CONTEXT_MISSING');
      const desktopPrompt='다음은 LINE Webhook 서명과 지정된 본인 User ID 검증을 통과한 사용자 요청입니다. 사용자는 LINE 요청을 이 기존 세션으로 전달하도록 승인했습니다. 이 세션에서 요청을 처리하고 결과 알림은 전역 LINE 지침대로 한 번 보내십시오.\n\n'+event.message.text;
      await appTool(context.pipePath,context.callerThreadId,'send_message_to_thread',{threadId:route.thread_id,hostId:'local',prompt:desktopPrompt});

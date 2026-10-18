@@ -66,7 +66,7 @@
 
 # LINE 토큰 저장 예외 — 사용자 명시 승인
 
-- 사용자는 2026-10-18 비공개 MDJ0126/codex-config 저장소에 본인 알림용 LINE 채널 액세스 토큰과 수신자 ID를 저장하고 PC 간 동기화하도록 명시 승인하였다. 이 파일(line-notification.private.json)만 기존 인증정보 Git 저장 금지의 예외이며, 다른 인증정보에는 적용하지 않는다. 비공개 상태를 유지하며 토큰을 응답·로그·diff 출력으로 노출하지 않는다.
+- 사용자는 2026-10-18 비공개 MDJ0126/codex-config 저장소에 본인 알림용 LINE 채널 액세스 토큰·Channel secret·수신자 ID를 저장하고 PC 간 동기화하도록 명시 승인하였다. 이 파일(line-notification.private.json)만 기존 인증정보 Git 저장 금지의 예외이며, 다른 인증정보에는 적용하지 않는다. 비공개 상태를 유지하며 토큰을 응답·로그·diff 출력으로 노출하지 않는다.
 - Send-LineNotification.ps1은 같은 디렉터리의 line-notification.private.json을 우선 사용한다. 사용자 환경 변수는 해당 파일이 없을 때의 대체 수단이므로 각 Windows에서 별도 환경 변수 등록은 필요하지 않다. 다른 PC는 비공개 저장소 접근 인증 후 저장소를 갱신해야 한다. Sync.ps1 -Direction Pull은 저장소 전체를 갱신하므로 발송 스크립트와 설정도 함께 받는다.
 
 # LINE 알림 세션 제목 형식
@@ -89,10 +89,18 @@
 - 매핑은 CODEX_HOME/line-bridge/routing.sqlite에 PC별로만 보관하며 Git에 동기화하지 않는다. 모르는 원본 알림, 다른 PC에서 보낸 알림, 로컬에 없는 세션, 보관된 세션, 없는 작업 폴더는 무시하며 최근 세션으로 대체하지 않는다. 이 기능 설치 이전 알림에는 매핑이 없다.
 - LINE Webhook은 한 번에 한 수신 PC를 가리킨다. PC 전환 시 그 PC의 Start-LineBridge.ps1을 실행하여 Webhook을 전환한다. 다른 PC의 세션을 가져오거나 새 세션을 자동 생성하지 않는다. 현재 PC에 없는 세션 요청은 실행하지 않는다.
 - 브리지는 기존 세션 ID로 Codex CLI exec resume을 사용하며 승인을 무시하는 옵션을 쓰지 않는다. LINE_BRIDGE_REQUEST=1인 실행의 결과 알림은 브리지가 담당하므로 에이전트가 중복 알림을 보내지 않는다. 실행 중인 LINE 요청이 있는 세션에는 추가 LINE 요청을 실행하지 않고 안내한다. 데스크톱 UI의 실시간 갱신이나 실행 중 대화와 동시 쓰기는 보장하지 않는다.
-- 채널 서명키는 CODEX_HOME/line-bridge/secret.json의 channelSecret으로 PC에만 저장한다. 이 키는 기존 Git 저장 예외에 포함되지 않는다. Start-LineBridge.ps1 실행 중에만 수신하며 재부팅 자동 시작은 구성하지 않았다. Quick Tunnel은 실행마다 URL이 바뀌고 가용성 보장이 없으므로 고정 주소나 상시 서비스를 설치했다고 보고하지 않는다.
+- Channel secret은 사용자 승인에 따라 비공개 저장소의 line-notification.private.json에서 읽는다. PC마다 키나 환경 변수를 수동 등록하도록 안내하지 않는다. Quick Tunnel은 임시 주소이며 Windows 로그인 자동 실행 작업은 설치하지 않았다.
 
 # LINE 데스크톱 세션 전달 — CLI 재개 대체
 
 - 데스크톱에서 이미 열린 세션은 활성 writer를 보유하므로 LINE 요청을 codex exec resume으로 다시 열지 않는다. 앞선 CLI 재개 및 LINE_BRIDGE_REQUEST 결과 대행 규칙은 이 규칙으로 대체한다.
 - bridge.mjs는 설치된 공식 codex-app-tools의 로컬 파이프 인터페이스로 send_message_to_thread를 호출하여 기존 데스크톱 세션에 전달한다. 알림 등록 시 확인된 CODEX_APP_TOOLS_PIPE_PATH와 caller 세션 ID를 PC 로컬 app-context.json에 저장한다. 해당 접속 정보는 Git으로 동기화하지 않는다.
 - 데스크톱 세션의 에이전트가 요청을 처리하고 기존 전역 지침대로 LINE 결과 알림을 한 번 보낸다. 브리지의 forwarded 상태는 세션 전달 접수만 의미하며 작업 완료로 보고하지 않는다. Codex 앱이 종료되거나 파이프가 바뀌면 그 앱에서 새 알림을 한 번 보내 접속 정보를 갱신해야 한다.
+
+# 다른 PC의 LINE 자동 초기화 — 사용자 명시 요청
+
+- 사용자는 Channel secret도 비공개 설정 저장소에 포함하고 다른 PC에서 Codex가 자동으로 설정하도록 명시 요청하였다. 인증정보 저장 예외는 line-notification.private.json의 ChannelAccessToken, ChannelSecret, UserId 세 항목에 적용한다. 값은 로그와 응답에 출력하지 않는다.
+- 모든 PC에서 새 Codex 세션 시작 시 본 작업에 앞서 CODEX_HOME/config-repo의 Initialize-LineBridge.ps1 -Activate를 실행하여 저장소와 전역 지침을 동기화하고, Node 런타임 탐색·수신 서버 기동·Webhook 전환·앱 파이프 접속 정보 갱신을 자동 수행한다. CODEX_HOME 미설정 시 사용자 홈의 .codex를 사용한다. 사용자가 키 등록이나 시작 명령을 직접 반복하도록 요구하지 않는다.
+- 저장소가 없는 PC는 Git 인증이 준비되어 있으면 https://github.com/MDJ0126/codex-config 를 해당 위치에 복제한 후 초기화한다. Node가 PATH에 없으면 Codex 번들 런타임을 자동 탐색한다. 찾지 못하면 load_workspace_dependencies로 번들 Node를 확인하여 해당 경로를 사용하고 재실행한다. 접근 권한·네트워크·인증·실제 설치 누락 등 실패는 근거를 확인하고 보고하며 자동 설정 성공으로 꾸미지 않는다.
+- Send-LineNotification.ps1도 알림 발송 후 수신 서버 상태를 확인하여 중지됐으면 자동 초기화한다. 재부팅 후 첫 Codex 세션에서 다시 자동 기동하며, Windows 부팅 직후 Codex 없이 상시 실행되는 서비스나 로그인 작업은 아니다.
+- 한 번에 한 PC만 수신하며 새 PC의 세션 초기화 시 해당 PC로 전환한다. PC별 세션 매핑은 동기화하지 않으므로 다른 PC에만 있는 세션은 계속 무시한다. 다른 PC에서 실제 실행 검증을 하기 전까지 동일 동작을 검증 완료로 보고하지 않는다.
