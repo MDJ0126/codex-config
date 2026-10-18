@@ -37,9 +37,10 @@ export function validSignature(body,signature,secret) {
 const here=path.dirname(fileURLToPath(import.meta.url));
 const home=process.env.CODEX_HOME||path.join(os.homedir(),'.codex');
 const state=path.join(home,'line-bridge');
-export function localThread(id) {
-  const d=new DatabaseSync(path.join(home,'state_5.sqlite'),{readOnly:true});
-  try {const r=d.prepare('SELECT id,cwd,archived FROM threads WHERE id=?').get(id);return r&&!r.archived&&fs.existsSync(r.cwd)?r:null;}finally{d.close();}
+export function localThread(id,databasePath=path.join(home,'state_5.sqlite')) {
+  const d=new DatabaseSync(databasePath,{readOnly:true});
+  // Desktop delivery uses the session ID; its historical cwd may have moved.
+  try {const r=d.prepare('SELECT id,cwd,archived FROM threads WHERE id=?').get(id);return r&&!r.archived?r:null;}finally{d.close();}
 }
 function config(){return JSON.parse(fs.readFileSync(path.join(here,'line-notification.private.json'),'utf8').replace(/^\uFEFF/,''));}
 function log(event,extra={}){fs.appendFileSync(path.join(state,'events.log'),JSON.stringify({time:new Date().toISOString(),event,...extra})+'\n');}
