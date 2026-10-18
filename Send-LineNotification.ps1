@@ -1,6 +1,7 @@
 param(
     [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][string]$SessionTitle,
     [Parameter(Mandatory=$true)][string]$Message,
+    [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][string]$Question,
     [string]$ProjectName,
     [string]$SessionId = $env:CODEX_THREAD_ID,
     [ValidateSet('완료','일부 완료','실패','조치 필요')][string]$Status = '완료',
@@ -10,6 +11,7 @@ $ErrorActionPreference = 'Stop'
 $SessionTitle = ($SessionTitle -replace '[\r\n]+', ' ').Trim()
 if ([string]::IsNullOrWhiteSpace($SessionTitle)) { throw 'SessionTitle must not be blank.' }
 if ([string]::IsNullOrWhiteSpace($Message)) { throw 'Message must not be blank.' }
+if ([string]::IsNullOrWhiteSpace($Question)) { throw 'Question must not be blank.' }
 $ProjectName = ($ProjectName -replace '[\r\n]+', ' ').Trim()
 if ([string]::IsNullOrWhiteSpace($ProjectName)) { $ProjectName = '프로젝트 없는 대화' }
 $statusIcons = @{ '완료' = '✅'; '일부 완료' = '🟡'; '실패' = '❌'; '조치 필요' = '🔔' }
@@ -19,6 +21,10 @@ $Message = @(
     ('📁 ' + $ProjectName),
     ('[' + $SessionTitle + ']'),
     '━━━━━━━━━━━━',
+    '💬 요청',
+    $Question.Trim(),
+    '',
+    '📝 결과',
     $Message.Trim(),
     '━━━━━━━━━━━━',
     ('🕒 ' + $notificationTime + ' KST · 알림 시각')
