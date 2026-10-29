@@ -22,8 +22,10 @@ for(const file of ['index.html','write/index.html','guide/index.html',...reports
   assert.ok(resolved.startsWith(root+path.sep));await access(resolved);links++;
  }
 }
-const elements=[...index.matchAll(/data-search="([^"]*)" data-project="([^"]*)" data-type="([^"]*)" data-group="([^"]*)" data-stage="([^"]*)"/g)].map(m=>({search:m[1],project:m[2],type:m[3],group:m[4],stage:m[5]}));
+const elements=[...index.matchAll(/data-search="([^"]*)" data-project="([^"]*)" data-type="([^"]*)" data-group="([^"]*)" data-stage="([^"]*)" data-collection="([^"]*)"/g)].map(m=>({search:m[1],project:m[2],type:m[3],group:m[4],stage:m[5],collection:m[6]}));
 assert.ok(elements.length>0);
+const projectGroups=JSON.parse(await readFile(path.join(root,'project-groups.json'),'utf8'));
+for(const [id,g]of Object.entries(projectGroups)){const expected=elements.filter(e=>g.projects.includes(e.project));assert.ok(expected.length>0);assert.deepEqual(elements.filter(e=>matchesRecord(e,{project:'collection:'+id})),expected);for(const group of ['result','bug'])assert.equal(elements.filter(e=>matchesRecord(e,{project:'collection:'+id,group})).length,expected.filter(e=>e.group===group).length);}
 assert.equal(elements.filter(e=>matchesRecord(e,{query:'없는검색결과'})).length,0);
 for(const project of Object.keys(registry))assert.equal(elements.filter(e=>matchesRecord(e,{project})).length,elements.filter(e=>e.project===project).length);
 for(const group of ['result','bug'])assert.equal(elements.filter(e=>matchesRecord(e,{group})).length,elements.filter(e=>e.group===group).length);

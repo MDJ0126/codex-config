@@ -60,3 +60,9 @@ AI도 접수 저장소를 사용할 때는 GitHub 이슈 본문에 <!-- tracefol
 | 시간·검색 | proposedTime, actualTime, xerjUsage, xerjEvidence |
 
 빠진 시간·검증·원인을 추측으로 채우지 않습니다. 작성자가 제공하지 않은 항목은 미기록 또는 미확인으로 표시합니다. 세부 필드는 JSON 템플릿을 기준으로 합니다. 이미 작성된 v1·과거 기록은 읽기 호환을 유지하지만 새 보고서는 공통 계약 v2로 작성합니다.
+
+## 프로젝트 소항목
+
+사이드바의 제품 프로젝트 아래 Pixora(pixora), 턴룸(turnroom), Design Data Table(designdatatable)을 소항목으로 관리합니다. 상위 항목은 세 제품의 글을 합쳐 보여주며, 소항목은 해당 제품만 보여줍니다. 묶음 정의는 project-groups.json에서 관리합니다.
+
+사람은 작성 폼의 제품 프로젝트 그룹에서 소항목을 고릅니다. AI는 기존 JSON project에 해당 소항목 ID를 기록합니다. 상위 묶음 ID인 products 또는 collection:products를 보고서 project로 쓰지 않습니다. 프로젝트별 폴더·원본·이전 링크는 유지합니다. 소항목에서 결과·버그 분류와 버그 5단계를 함께 필터링할 수 있습니다.
