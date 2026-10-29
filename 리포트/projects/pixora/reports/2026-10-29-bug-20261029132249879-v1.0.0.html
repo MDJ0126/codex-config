@@ -1,0 +1,27 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>팔레트 화면 변경 이벤트의 반복 재생성 차단 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>Pixora</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>팔레트 화면 변경 이벤트의 반복 재생성 차단</h1><span class="badge" data-state="verification">해결</span></div><p class="post-summary">팔레트 화면 구성 중 중복 이벤트가 CreateGUI를 반복 호출하던 오류를 차단하고 에디터를 복구했습니다.</p><div class="detail-workflow"><span class="">접수</span><i>→</i><span class="">검토</span><i>→</i><span class="">진행</span><i>→</i><span class="current">해결</span><i>→</i><span class="">종료</span></div><div class="post-byline"><time datetime="2026-10-29T13:22:49.879Z">2026년 10월 29일 오후 10:22 KST</time><span>v1.0.0</span><span>버그 추적</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>중복·하위 이벤트를 반환 처리하고 실제 팔레트 변경만 지연 재구성하도록 수정했습니다. 취소 요청 전 실제 창에서 톤 적용과 해제 동작을 확인했으며 이후 최종 코드의 배치 검사도 통과했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>Windows / Unity 6000.0.83f1 / Pixora 팔레트 탭.</p>
+<h3 id="section-4">재현 순서</h3>
+<p>팔레트 탭에서 해상도·팔레트·ColorField를 포함한 화면을 구성합니다. 수정 전 로그의 ChangeEvent&lt;string&gt; → BuildSettings → CreateGUI 스택이 재진입했습니다.</p>
+<h3 id="section-5">기대 동작</h3>
+<p>실제 설정값이 바뀔 때만 화면을 다시 구성하고 사용자 입력에 응답합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>수정 전 busy 상태와 재귀 이벤트 깊이 495까지의 반복 스택을 확인했습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>PopupField 콜백이 이벤트 대상과 현재 값을 구분하지 않고 즉시 CreateGUI를 호출해 구성 중 변경 이벤트가 재진입했습니다. 실행 로그와 콜백 소스를 대조했습니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<p>해상도·팔레트 콜백에서 하위 요소 이벤트와 동일 선택을 무시합니다. 팔레트의 실제 변경은 스케줄러를 통해 구성 이후 처리합니다. 멈춘 Pixora 프로세스만 복구했으며 다른 프로젝트 에디터는 유지했습니다.</p>
+<h2 id="section-9">검증</h2>
+<p>수정 후 실제 창에서 보정 해제 → 원래 색감 복귀 → 참고 톤 재적용을 확인했습니다. 이는 사용자가 컴퓨터 유즈를 취소하기 전에 수행한 기존 버튼 검증입니다. 이후 새 공통 톤·줌 구현에 대한 검증과 구분합니다. 최종 코드의 Unity 배치 검사는 전용 403개와 기본 88개가 통과했습니다.</p>
+<p><a class="report-link" href="../assets/common-tone-v2/CommonToneVerification.json">전용 검사</a> · <a class="report-link" href="../assets/common-tone-v2/Verification.json">기본 검사</a> · <a class="report-link" href="https://github.com/MDJ0126/Pixora/commit/f7a9da45d69c0dafe58bcffa2015f2760ce169dd">코드 커밋</a></p>
+<h2 id="section-10">남은 사항</h2>
+<p>다른 Unity 버전의 이벤트 동작은 미확인입니다. 원본 에디터 로그 대신 재현 스택과 수정·검증 내용을 요약했으며 새 줌 화면 직접 조작은 취소 요청으로 실행하지 않았습니다.</p>
+<h2 id="section-11">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초 20<del>35분. 사용자 의도 정정과 줌 요청에 따라 추가 수정·검증 15</del>25분을 제시했습니다.</li>
+<li>실제로 완료된 시간: 시작 2026-10-29 21:34:10 KST. 최종 배치 검증 22:17 KST, 프로젝트 푸시 22:21 KST 완료. 보고서 생성 2026-10-29T22:22:49+09:00, 전체 경과 48분 39초. 새 줌 UI 직접 조작은 취소 요청에 따라 미실행이며 공개 배포는 후속 Actions로 확인합니다.</li>
+<li>XERJ: 실패 — Xerj.ps1 Status가 XERJ node is not running으로 실패해 rg·현재 소스·실행 검증으로 대체했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-bug-20261029132249879-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-9">검증</a><a href="#section-10">남은 사항</a><a href="#section-11">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

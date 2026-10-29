@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>서로 다른 이미지의 공통 톤 통일과 실제 픽셀 크기 미리보기 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>Pixora</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>서로 다른 이미지의 공통 톤 통일과 실제 픽셀 크기 미리보기</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">각 원본의 색감 차이를 하나의 기준 톤으로 줄이도록 수정했습니다. 기본 점무늬를 끄고 실제 크기 줌을 구현했으며 배치 검증을 통과했습니다.</p><div class="post-byline"><time datetime="2026-10-29T13:22:49.818Z">2026년 10월 29일 오후 10:22 KST</time><span>v1.0.0</span><span>수정사항</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>공통 톤 통일·애니메이션 보정 잠금·실제 크기 줌을 구현하고 프로젝트에 푸시했습니다. 실제 Unity 배치 모드에서 변환 출력과 정렬·줌 계산을 검증했습니다. 새 줌 버튼의 직접 화면 조작은 컴퓨터 유즈 취소 요청에 따라 미실행입니다.</p>
+<p><figure><img class="report-image" src="../assets/common-tone-v2/CommonTone-Robots.png" alt="위쪽은 공통 기준에 맞춘 결과, 아래쪽은 따뜻한 원본·차가운 원본·기준 이미지" loading="lazy"><figcaption>위쪽은 공통 기준에 맞춘 결과, 아래쪽은 따뜻한 원본·차가운 원본·기준 이미지</figcaption></figure></p>
+<p>위쪽은 보정 결과이며 아래쪽은 보정 전 원본과 공통 기준입니다. 이전의 따뜻한 보정값을 전부에 일괄 적용하는 방식은 사용자가 의도한 톤 통일과 달라 수정했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">원본마다 다른 색감을 공통 기준으로</h3>
+<p>참고 이미지 하나를 공통 기준으로 지정합니다. 서로 다른 이미지 각각의 가시 RGB 평균·표준편차를 기준 통계에 맞춘 뒤 전체 묶음에서 하나의 팔레트를 추출합니다. 프레임마다 별도 보정하는 방식과 구분합니다.</p>
+<ul>
+<li>2D 원본 시트는 시트 전체에서 한 보정값을 계산해 모든 셀에 공유합니다.</li>
+<li>선택 파일이 하나의 애니메이션이면 해당 옵션을 켭니다. 첫 파일의 보정값을 전체 파일에 고정합니다.</li>
+<li>3D는 전체 모델 첫 출력 프레임의 보정값을 모든 방향·프레임·장비에 공유합니다. 장비만 따로 재보정하지 않습니다.</li>
+<li>기준 통계와 보정 사용·강도·잠금 옵션은 프로필 JSON으로 공유합니다.</li>
+</ul>
+<h3 id="section-5">픽셀 크기와 점무늬</h3>
+<p>미리보기는 기본 100%이며 디스플레이 배율을 고려해 실제 픽셀 크기를 계산합니다. 25·50·100·200·400·800%와 화면 맞춤을 구분합니다. 큰 이미지는 스크롤하고 Ctrl+휠로 확대합니다. 줌은 PNG 출력 크기를 변경하지 않습니다. 기본 프리셋 디더링은 0이며, 저장된 사용자 프로필 값은 보존합니다.</p>
+<h3 id="section-6">3D 장비와 샘플</h3>
+<p>전체 출력 자세·방향·장비의 경계로 카메라를 고정합니다. 스킨 메시 경계도 BakeMesh로 계산합니다. 시트와 개별 PNG는 같은 셀 크기·중앙 피벗·FullRect를 유지하며 가장자리 잘림은 차단합니다.</p>
+<p>Window/Pixora/Tone Matching Demo(Ctrl+Shift+F11)에 서로 다른 색감의 WarmVariant·CoolVariant와 CommonReference 예제를 넣었습니다. 9개 언어 안내도 갱신했습니다.</p>
+<p><a class="report-link" href="https://github.com/MDJ0126/Pixora/commit/f7a9da45d69c0dafe58bcffa2015f2760ce169dd">최종 프로젝트 커밋</a></p>
+<h2 id="section-7">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>대상</th>
+<th>실제 결과</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Unity 배치 모드 / Direct3D11</td>
+<td>실제 렌더링·변환 실행 통과</td>
+<td><a class="report-link" href="../assets/common-tone-v2/CommonToneHeadlessVerification.json">실행 환경</a></td>
+</tr>
+<tr>
+<td>전용 검사</td>
+<td>403/403 통과, 2026-10-29 22:17 KST</td>
+<td><a class="report-link" href="../assets/common-tone-v2/CommonToneVerification.json">원본 결과</a></td>
+</tr>
+<tr>
+<td>기본 변환·3D·애니메이션</td>
+<td>88/88 통과, 같은 배치 실행</td>
+<td><a class="report-link" href="../assets/common-tone-v2/Verification.json">원본 결과</a></td>
+</tr>
+<tr>
+<td>문서</td>
+<td>10장·이미지 5개, 9개 언어·주요 54장·코드 예시 54개 통과</td>
+<td>VerifyDocs.mjs / VerifyLocalizedGuides.mjs</td>
+</tr>
+</tbody></table>
+</div><p>403개에는 다국어 키 232개 검사와 프레임·스킨·톤·줌 계산·개별 PNG 검사가 포함됩니다. 서로 다른 색감의 시험 원본이 공통 기준으로 수렴했고 양자화 전 색상 차이가 90% 이상 감소했습니다. 최종 일괄 출력도 공통 32색 팔레트를 지켰습니다. 모든 사용자 이미지에서 같은 감소율을 보장한다는 뜻은 아닙니다.</p>
+<p>같은 애니메이션 파일 옵션에서는 상대적인 프레임 색 차이가 보존되는 것을 확인했습니다. 4방향×4프레임의 몸체·장비 알파 합집합과 합본의 위치 차이는 16개 모두 0픽셀이었습니다. 시트 Sprite와 개별 PNG 48개의 48×32 셀·중앙 (24,16) 피벗·사각 메시를 확인했습니다.</p>
+<p>100%가 자동 확대되지 않는 계산, 정수 배율, 화면 맞춤 구분, 기본 프리셋의 디더링 0을 검사했습니다. 결과 비교 PNG를 직접 시각 확인했으며 새 줌 UI를 직접 조작한 검증과는 구분합니다.</p>
+<h2 id="section-8">남은 사항</h2>
+<p>컴퓨터 유즈 취소 이후 새 줌 버튼·스크롤·Ctrl+휠의 실제 창 조작과 모든 DPI 화면 배치는 미확인입니다. 구현·컴파일·줌 계산 검사는 완료했습니다. 통계 기반 톤 보정은 의미별 재질 분류가 아니며 사용자 지정 팔레트가 목표 색감을 제한할 수 있습니다. 임의 사용자 모델·URP/HDRP·런타임 IK·물리는 별도 검증이 필요합니다. 부위 위치 정렬과 3D 깊이 가림은 다르며 평면 레이어 합성으로 가림을 복원하지 않습니다.</p>
+<h2 id="section-9">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초 20<del>35분. 사용자 의도 정정과 줌 요청에 따라 추가 수정·검증 15</del>25분을 제시했습니다.</li>
+<li>실제로 완료된 시간: 시작 2026-10-29 21:34:10 KST. 최종 배치 검증 22:17 KST, 프로젝트 푸시 22:21 KST 완료. 보고서 생성 2026-10-29T22:22:49+09:00, 전체 경과 48분 39초. 새 줌 UI 직접 조작은 취소 요청에 따라 미실행이며 공개 배포는 후속 Actions로 확인합니다.</li>
+<li>XERJ: 실패 — Xerj.ps1 Status가 XERJ node is not running으로 실패해 rg·현재 소스·실행 검증으로 대체했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-result-20261029132249818-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-7">검증</a><a href="#section-8">남은 사항</a><a href="#section-9">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
