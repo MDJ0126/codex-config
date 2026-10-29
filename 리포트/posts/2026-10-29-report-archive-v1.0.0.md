@@ -3,6 +3,8 @@ title: 보고서가 모이는 하나의 작업 기록실
 date: 2026-10-29T17:14:24+09:00
 version: v1.0.0
 status: 구현 기록
+project: codex-config
+type: 작업 결과
 category: 시스템
 summary: HTML 결과 보고 규칙과 Markdown 원본, 날짜·버전별 아카이브를 도입했습니다.
 ---

@@ -3,6 +3,8 @@ title: Pixora — 창 제어·6개 사용 예제·9개 언어
 date: 2026-10-29T19:26:46+09:00
 version: v1.1.0
 status: 구현·필수 검증 완료
+project: pixora
+type: 작업 결과
 category: Unity 개발
 summary: 최소화·최대화·복원·닫기와 창 이동·리사이즈를 실제 확인했습니다. 여섯 사용 예제 씬, 시작 설정, 9개 언어 UI·문서·코드 주석 전환을 추가했습니다.
 ---

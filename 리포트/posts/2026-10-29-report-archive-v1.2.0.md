@@ -3,6 +3,8 @@ title: 보고서 중심으로 메인 화면 디자인 정리
 date: 2026-10-29T17:32:39+09:00
 version: v1.2.0
 status: 구현·로직 검증 완료
+project: codex-config
+type: 수정사항
 category: 시스템
 summary: 큰 상단 장식을 제거하고 간결한 제목, 조밀한 보고서 목록, 차분한 업무용 스타일을 적용했습니다.
 ---

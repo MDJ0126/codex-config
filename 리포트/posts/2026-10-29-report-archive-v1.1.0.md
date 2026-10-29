@@ -3,6 +3,8 @@ title: 보고서 아카이브 구축 결과와 검증
 date: 2026-10-29T17:18:51+09:00
 version: v1.1.0
 status: 구현·검증 완료
+project: codex-config
+type: 작업 결과
 category: 시스템
 summary: 전역 지침 적용, Markdown 기반 사이트 구축과 기능 실행 검증, 첫 커밋·푸시를 완료했습니다.
 ---

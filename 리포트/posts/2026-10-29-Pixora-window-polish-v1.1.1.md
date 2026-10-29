@@ -3,6 +3,8 @@ title: Pixora — 보조 창 디자인과 선명한 벡터 아이콘
 date: 2026-10-29T19:56:19+09:00
 version: v1.1.1
 status: 구현·실행 검증·프로젝트 푸시 완료
+project: pixora
+type: 수정사항
 category: Unity 개발
 summary: 사용 예시와 스프라이트 창에도 공통 창 프레임과 라이트·다크 테마를 적용하고, 확대하던 래스터 명령 아이콘을 벡터로 교체했습니다.
 ---
