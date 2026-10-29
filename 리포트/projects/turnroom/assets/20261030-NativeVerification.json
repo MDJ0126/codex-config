@@ -1,0 +1,72 @@
+{
+  "unity": "6000.0.83f1",
+  "actualWindowsUI": true,
+  "method": "Real Win32 mouse input with target/pointer validation, native ordering reads, and local captures; sky package unavailable",
+  "before": {
+    "action": "Pixora to DataTable via shared bottom window list",
+    "relativeOrder": [
+      "selected DataTable",
+      "Unity main",
+      "previous Pixora",
+      "unrelated DataTable"
+    ],
+    "previousDocumentBehindMain": true,
+    "allThreeDocumentObjectsAlive": true
+  },
+  "after": {
+    "action": "same actual click with focus handoff enabled",
+    "relativeOrder": [
+      "selected DataTable",
+      "previous Pixora",
+      "Unity main",
+      "unrelated DataTable"
+    ],
+    "previousDocumentBehindMain": false,
+    "selectedWindowRetainsForeground": true,
+    "allDocumentIdsAndHandlesUnchanged": true
+  },
+  "reverseClick": {
+    "relativeOrder": [
+      "selected Pixora",
+      "previous DataTable",
+      "Unity main",
+      "unrelated DataTable"
+    ],
+    "selectedWindowRetainsForeground": true
+  },
+  "minimize": {
+    "onlySelectedDataTableHidden": true,
+    "pixoraRemainsVisible": true,
+    "unrelatedDocumentRemainsUnchanged": true
+  },
+  "restore": {
+    "sameDataTableIdAndHandle": true,
+    "pixoraRemainsAheadOfMain": true,
+    "noGroupRestore": true
+  },
+  "menu": {
+    "actualTopMenuOpened": true,
+    "groups": [
+      "Design Data Table",
+      "Pixora",
+      "Windows",
+      "UI Template"
+    ]
+  },
+  "limits": [
+    "Not tested on other Unity versions or operating systems",
+    "Actual product UI captured in Korean; all nine language layouts not visually certified"
+  ],
+  "finalWithoutDiagnosticRequest": {
+    "passed": true,
+    "relativeOrder": [
+      "selected DataTable",
+      "previous Pixora",
+      "Unity main",
+      "unrelated DataTable"
+    ],
+    "originalWindowPositionsRestored": true,
+    "temporaryProbeSourcesRemoved": true,
+    "diagnosticRequestFilesRemoved": true
+  }
+}
