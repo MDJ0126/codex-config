@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "project": "pixora",
+  "kind": "result",
+  "type": "수정사항",
+  "title": "Pixora 샘플을 선택 설치 가능한 Editor 어셈블리로 분리",
+  "summary": "예제 6개를 제품 어셈블리에서 분리하고 자동 참조를 해제했습니다. 샘플 포함·제외 프로젝트의 31개 검증과 실제 예제 6개 출력을 확인했습니다.",
+  "outcome": "샘플 어셈블리 분리·실제 컴파일·실행 검증과 통합 브랜치 푸시를 완료했습니다. 샘플 코드가 사용자 기본 어셈블리에 포함되거나 자동 참조되지 않으며, 샘플 코드 없이도 제품이 컴파일됩니다.",
+  "state": "complete",
+  "priority": "normal",
+  "severity": "normal",
+  "reporter": "Codex",
+  "assignee": "Codex",
+  "changes": "DataTable의 샘플 어셈블리 정책을 기준으로 Samples/Pixora.Samples.Editor.asmdef를 추가했습니다. includePlatforms는 Editor, autoReferenced와 allowUnsafeCode는 false이며 Pixora.Editor만 명시적으로 참조합니다. 현재 샘플에는 런타임 C# 코드가 없어 빈 런타임 어셈블리를 추가하지 않았습니다.\n\n기존 Pixora.Examples.Editor.asmref는 예제를 Pixora.Editor에 합치고 있었으므로 제거했습니다. 의존 방향은 Pixora.Samples.Editor → Pixora.Editor → TurnRoom.Editor입니다. 제품에서 예제 타입을 직접 참조하던 호출은 설치된 샘플 어셈블리의 공개 Run 메서드를 찾아 호출하도록 변경했습니다. 샘플 미설치 시 실행 요청에는 설치 안내 오류를 반환합니다.\n\n분리 컴파일에서 드러난 내부 TextureOwner 접근 문제는 리소스 정리 클래스를 별도 파일의 공개 API로 옮겨 해결했습니다. 예제 6개의 소스·클래스명·네임스페이스·스크립트 GUID와 씬·에셋 경로는 유지했습니다. 기존 DataTable 코드는 수정하지 않았습니다.\n\nREADME, 샘플 안내와 개발 문서를 갱신했습니다. 사용자 Editor 어셈블리에서 예제 클래스를 직접 호출할 때는 Pixora.Samples.Editor를 명시적으로 참조해야 합니다.\n\n[변경 커밋](https://github.com/MDJ0126/TurnRoom/commit/db957c6efa4bb5a6be1b356e9589b7938c5e806f)",
+  "verification": "Unity 6000.0.83f1의 숨겨진 batchmode 프로젝트 두 개에서 검증했습니다. 두 프로젝트 모두 Common, Pixora, DataTable 및 일반 사용자 런타임·에디터 스크립트를 포함합니다. 화면 조작은 수행하지 않았습니다.\n\n샘플 포함 프로젝트는 컴파일과 22개 검증을 통과했습니다. 예제 6개의 실제 어셈블리 소속과 단방향 참조를 확인하고, 예제 1–6을 실제 실행해 이미지·모델·부위 분리·애니메이션·시트 변환 출력 파일 또는 폴더 생성을 확인했습니다.\n\n샘플 제외 프로젝트는 컴파일과 9개 검증을 통과했습니다. 제품 컴파일, 샘플 미설치 실행 안내와 잘못된 예제 인덱스 거부를 확인했습니다.\n\nCompilationPipeline의 실제 결과로 Assembly-CSharp와 Assembly-CSharp-Editor에 Pixora 샘플 소스와 자동 샘플 참조가 없고, 제품 어셈블리에도 샘플 참조가 없음을 확인했습니다. 플레이어 어셈블리 그래프에 Pixora 편집기·샘플 어셈블리가 없음을 확인했습니다.\n\n개발 가이드 10개 장·5개 이미지 링크 및 내비게이션 검사와 Git 공백 검사도 통과했습니다.\n\n[샘플 포함 검증 JSON](../assets/sample-assembly-with-20261030.json) · [샘플 제외 검증 JSON](../assets/sample-assembly-without-20261030.json)",
+  "remaining": "요청한 샘플 코드 격리는 완료했습니다. 임의의 모든 외부 프로젝트나 실제 Standalone 플레이어 빌드를 검증한 것은 아닙니다. 플레이어 씬에서 명시적으로 참조한 일반 샘플 이미지·모델 에셋은 어셈블리 분리만으로 빌드에서 제거되지 않습니다. 이번 작업은 UI 레이아웃 변경이 없어 화면 재캡처를 수행하지 않았습니다.",
+  "proposedTime": "15–30분",
+  "actualTime": "구현·검증·프로젝트 푸시: 7분 28초. 시작 2026-10-30 02:31:27 KST, 완료 2026-10-30 02:38:56 KST. 보고서 배포 확인을 포함한 전체 시간은 최종 채팅에 별도 기록합니다.",
+  "xerjUsage": "사용",
+  "xerjEvidence": "Tools/Search/Xerj.ps1 Status, TutorialScenes·RunExampleCode·TextureOwner 검색을 실행하고 후보를 현재 소스로 대조했습니다. 샘플 폴더는 인덱스 범위 밖이므로 rg와 직접 읽기를 병행했습니다."
+}

@@ -1,0 +1,30 @@
+{
+    "passed": true,
+    "samplesInstalled": true,
+    "unity": "6000.0.83f1",
+    "checks": [
+        "Product has no sample assembly reference",
+        "Assembly-CSharp has no automatic sample reference",
+        "Assembly-CSharp contains no Pixora sample source",
+        "Assembly-CSharp-Editor has no automatic sample reference",
+        "Assembly-CSharp-Editor contains no Pixora sample source",
+        "Player assembly graph excludes Pixora editor and samples",
+        "All six examples belong to separate sample assembly",
+        "Sample depends on product in one direction",
+        "Example assembly identity 1",
+        "Actual example output 1",
+        "Example assembly identity 2",
+        "Actual example output 2",
+        "Example assembly identity 3",
+        "Actual example output 3",
+        "Example assembly identity 4",
+        "Actual example output 4",
+        "Example assembly identity 5",
+        "Actual example output 5",
+        "Example assembly identity 6",
+        "Actual example output 6",
+        "Existing host editor script remains usable",
+        "Invalid example index is rejected"
+    ],
+    "error": ""
+}
