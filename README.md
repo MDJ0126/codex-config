@@ -1,5 +1,9 @@
 # Codex 전역 지침
 
+## 결과 보고서 사이트
+
+`리포트/index.html`을 열면 날짜·버전별 보고서를 게시글 목록으로 볼 수 있습니다. 원본은 `리포트/posts/`의 Markdown이며 `node 리포트/build.mjs`로 HTML을 갱신합니다. 작성 규칙은 [리포트/README.md](리포트/README.md)를 참고하세요. 사이트는 로컬 파일로 제공되며 인터넷에 배포한 상태는 아닙니다.
+
 여러 Windows PC에서 사용하는 전역 AGENTS.md와 동기화 스크립트입니다. 세션·config.toml은 포함하지 않습니다.
 
 ## 새 PC 연결
