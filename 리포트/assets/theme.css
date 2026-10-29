@@ -43,7 +43,7 @@
  html[data-theme=dark] .project-logo{background:#e7ecf3}
  html[data-theme=dark] .report-groups{border-color:var(--line)}
  html[data-theme=dark] .report-groups button{background:transparent}
- html[data-theme=dark] .report-groups button.active{color:#f5b28d;border-color:#f0a27b}
+ html[data-theme=dark] .report-groups button.active{background:transparent;color:#f5b28d;border-color:#f0a27b}
  html[data-theme=dark] .stage-grid button{background:#202b3a;border-color:#354256;color:var(--ink)}
  html[data-theme=dark] .stage-grid .step-number{color:#acb9cb}
  html[data-theme=dark] .stage-grid button[data-stage-filter=closed]{--stage-bg:#2b3545;--stage-ink:#c5cfdd}
