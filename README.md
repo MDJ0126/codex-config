@@ -1,5 +1,17 @@
 # Codex 전역 지침
 
+## Affinity 전용 CLI
+
+품질 우선 디자인 자동화를 위한 CLI를 [tools/affinity-cli/](tools/affinity-cli/README.md)에 보관합니다. 외부 npm 의존성 없이 Node.js 22 이상에서 실행하며, PowerShell 래퍼는 Codex 번들 Node도 찾습니다.
+
+```powershell
+./tools/affinity-cli/affinity.ps1 doctor --timeout 3000
+./tools/affinity-cli/affinity.ps1 status
+./tools/affinity-cli/affinity.ps1 help
+```
+
+실제 Affinity MCP 서버 연결이 필요합니다. 구현·자동 테스트와 실제 앱 검증 상태는 [VALIDATION.md](tools/affinity-cli/VALIDATION.md)에 구분하여 기록합니다. 전역 지침에서 이 CLI의 진단·문서 조회·디자인 작업·출력 검증 사용 순서를 안내합니다.
+
 ## 결과 보고서 사이트
 
 `리포트/index.html`을 열면 날짜·버전별 보고서를 게시글 목록으로 볼 수 있습니다. 원본은 `리포트/posts/`의 Markdown이며 `node 리포트/build.mjs`로 HTML을 갱신합니다. 작성 규칙은 [리포트/README.md](리포트/README.md)를 참고하세요. 사이트는 로컬 파일로 제공되며 인터넷에 배포한 상태는 아닙니다.

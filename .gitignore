@@ -5,3 +5,10 @@
 !.gitignore
 !리포트/
 !리포트/**
+!tools/
+!tools/affinity-cli/
+!tools/affinity-cli/**
+tools/affinity-cli/.cache/
+tools/affinity-cli/output/
+tools/affinity-cli/node_modules/
+tools/affinity-cli/*.local.json

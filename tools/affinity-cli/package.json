@@ -1,0 +1,10 @@
+{
+  "name": "codex-affinity-cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Non-UI CLI for the local Affinity design application's MCP server",
+  "bin": { "affinity-cli": "./bin/affinity.mjs" },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "engines": { "node": ">=22" }
+}
