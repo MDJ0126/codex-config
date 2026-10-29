@@ -1,0 +1,74 @@
+{
+  "baseline": {
+    "suites": 160,
+    "successfulAssertions": 13770,
+    "failedSuites": 7,
+    "failures": [
+      {
+        "suite": "WorkbookChecks",
+        "message": "System.FormatException: Enum definition missing: BlankEnum"
+      },
+      {
+        "suite": "object.six-line-end-styles",
+        "message": "System.Exception: line end save/reopen preserves style and text none"
+      },
+      {
+        "suite": "object.basic-shape-style",
+        "message": "System.Exception: gradient authoring retains text and line properties"
+      },
+      {
+        "suite": "game.integration.SampleCharacter",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleShopProduct",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleDropItem",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleSkill",
+        "message": "System.Exception: isolated runtime-data namespace"
+      }
+    ]
+  },
+  "integrated": {
+    "suites": 160,
+    "successfulAssertions": 13770,
+    "failedSuites": 7,
+    "failures": [
+      {
+        "suite": "WorkbookChecks",
+        "message": "System.FormatException: Enum definition missing: BlankEnum"
+      },
+      {
+        "suite": "object.six-line-end-styles",
+        "message": "System.Exception: line end save/reopen preserves style and text none"
+      },
+      {
+        "suite": "object.basic-shape-style",
+        "message": "System.Exception: gradient authoring retains text and line properties"
+      },
+      {
+        "suite": "game.integration.SampleCharacter",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleShopProduct",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleDropItem",
+        "message": "System.Exception: isolated runtime-data namespace"
+      },
+      {
+        "suite": "game.integration.SampleSkill",
+        "message": "System.Exception: isolated runtime-data namespace"
+      }
+    ]
+  },
+  "sameResult": true,
+  "actualUnityUIExecuted": false
+}

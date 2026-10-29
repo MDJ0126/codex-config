@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "command": "git diff --cached --check -- *.cs",
+  "scope": "C# only; Unity YAML and historical original bytes preserved",
+  "utc": "2026-10-29T14:53:23.8764035Z"
+}

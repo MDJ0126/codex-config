@@ -1,0 +1,151 @@
+{
+  "utc": "2026-10-29T14:51:58.109495+00:00",
+  "actualUnityUIExecuted": false,
+  "scenarios": [
+    {
+      "passed": true,
+      "expected": "Common",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "CommonOnly"
+    },
+    {
+      "passed": true,
+      "expected": "DesignDataTable",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "DataTableThenPixora"
+    },
+    {
+      "passed": true,
+      "expected": "Pixora",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "PixoraThenDataTable"
+    },
+    {
+      "passed": true,
+      "expected": "DesignDataTable+Pixora",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "DataTableThenPixora"
+    },
+    {
+      "passed": true,
+      "expected": "DesignDataTable+Pixora",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "PixoraThenDataTable"
+    },
+    {
+      "passed": true,
+      "expected": "DesignDataTable",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "LegacyDataTableUpgrade"
+    },
+    {
+      "passed": true,
+      "expected": "Pixora",
+      "unityVersion": "6000.0.83f1",
+      "error": "",
+      "checks": [
+        "Common assembly compiled",
+        "Pixora editor dependency presence",
+        "Pixora installation root",
+        "DesignDataTable editor dependency presence",
+        "DesignDataTable installation root",
+        "No legacy product root created",
+        "Development checks excluded from packages",
+        "Common has no product references",
+        "Optional DataTable host registration"
+      ],
+      "scenario": "LegacyPixoraUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "product": "DesignDataTable",
+      "preservedMetaGuids": 1353,
+      "missing": [],
+      "changed": [],
+      "legacyRootRemoved": true,
+      "passed": true
+    },
+    {
+      "product": "Pixora",
+      "preservedMetaGuids": 935,
+      "missing": [],
+      "changed": [],
+      "legacyRootRemoved": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

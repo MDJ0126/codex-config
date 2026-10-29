@@ -1,0 +1,27 @@
+{
+    "passed": true,
+    "utc": "2026-10-29T14:06:09.2680043Z",
+    "unityVersion": "6000.0.83f1",
+    "actualUnityUIExecuted": false,
+    "checks": [
+        "Independent studio IDs",
+        "Settings copied without alias",
+        "Palette array copied without alias",
+        "Resolution and shared tone copied",
+        "3D capture state copied without alias",
+        "Grid dimensions copied",
+        "Window zoom copied",
+        "Output location copied",
+        "Editing duplicate leaves original unchanged",
+        "Duplication preserves independent IDs",
+        "Both studios registered together",
+        "Minimized state isolated by ID",
+        "Restore clears minimized state",
+        "Common assembly has no product dependency",
+        "DataTable supplies shared window host",
+        "DataTable inherits common window contract",
+        "DataTable retains its own document close policy",
+        "Migrated logo resolves"
+    ],
+    "error": ""
+}
