@@ -1,0 +1,318 @@
+{
+    "fixedVersion": true,
+    "passed": true,
+    "desktopUIUsed": false,
+    "error": "",
+    "checks": [
+        "New studios start in Fit view",
+        "One-time migration preserves later user zoom",
+        "Session records preview layout version",
+        "New session restores independent chosen zoom",
+        "Legacy session upgrades to Fit once",
+        "Legacy non-default zoom remains unchanged",
+        "Restoring another studio leaves original zoom unchanged",
+        "100% preserves physical pixel size before and after viewport resize"
+    ],
+    "cases": [
+        {
+            "name": "64px-zoom3",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 201.0,
+                "y": 193.0,
+                "width": 64.0,
+                "height": 64.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "64px-zoom3-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 171.0,
+                "y": 133.0,
+                "width": 64.0,
+                "height": 64.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "64px-zoom0",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 53.0,
+                "y": 45.0,
+                "width": 360.0,
+                "height": 360.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "64px-zoom0-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 83.0,
+                "y": 45.0,
+                "width": 240.0,
+                "height": 240.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "64px-zoom5",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 105.0,
+                "y": 97.0,
+                "width": 256.0,
+                "height": 256.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "64px-zoom5-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 75.0,
+                "y": 45.0,
+                "width": 256.0,
+                "height": 256.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 256.0
+            },
+            "centerErrorY": 8.0
+        },
+        {
+            "name": "256px-zoom3",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 105.0,
+                "y": 97.0,
+                "width": 256.0,
+                "height": 256.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "256px-zoom3-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 75.0,
+                "y": 45.0,
+                "width": 256.0,
+                "height": 256.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 256.0
+            },
+            "centerErrorY": 8.0
+        },
+        {
+            "name": "256px-zoom0",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 53.0,
+                "y": 45.0,
+                "width": 360.0,
+                "height": 360.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "256px-zoom0-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 83.0,
+                "y": 45.0,
+                "width": 240.0,
+                "height": 240.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "centerErrorY": 0.0
+        },
+        {
+            "name": "256px-zoom5",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 440.0,
+                "height": 360.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 1024.0,
+                "height": 1024.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 1024.0,
+                "height": 1024.0
+            },
+            "centerErrorY": 332.0
+        },
+        {
+            "name": "256px-zoom5-resized",
+            "viewport": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 380.0,
+                "height": 240.0
+            },
+            "image": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 1024.0,
+                "height": 1024.0
+            },
+            "canvas": {
+                "serializedVersion": "2",
+                "x": 13.0,
+                "y": 45.0,
+                "width": 1024.0,
+                "height": 1024.0
+            },
+            "centerErrorY": 392.0
+        }
+    ]
+}
