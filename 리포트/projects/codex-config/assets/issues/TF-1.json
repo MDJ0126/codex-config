@@ -1,0 +1,41 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "bug",
+    "title": "Markdown 줄바꿈 변환으로 공개 빌드 해시 검사 실패",
+    "summary": "Windows 작업 파일과 Linux CI의 줄바꿈 차이로 편집 후 해시 검사가 실패한 문제를 LF 통일로 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "Windows 작업 PC, Git autocrlf, Ubuntu GitHub Actions, Node.js 24.",
+    "steps": "1. CRLF가 섞인 편집 Markdown의 로컬 바이트 해시를 기록했습니다.\n2. Git에 커밋해 Linux Actions에서 같은 파일의 해시를 검사했습니다.",
+    "expected": "편집 후 파일과 커밋·CI의 파일 해시가 같아야 합니다.",
+    "actual": "Actions 실행 40872561810의 verify-editorial.mjs 단계에서 실제 해시와 기대 해시가 달라 실패했습니다.",
+    "cause": "실제 git show 바이트가 로컬 파일을 LF로 정규화한 결과와 같음을 확인했습니다. Git 줄바꿈 변환으로 로컬·CI 바이트가 달랐습니다.",
+    "changes": ".gitattributes의 프로젝트 posts Markdown에 text eol=lf를 지정하고 정규화했습니다. 원문 백업은 변경하지 않았습니다.",
+    "verification": "보완 커밋 0fcf663 및 Actions 실행 40872895161에서 원문·편집 해시·자동 검사와 공개 배포가 통과했습니다. https://github.com/MDJ0126/codex-config/actions/runs/40872895161",
+    "remaining": "전체 과거 제품 테스트의 재실행 결과를 의미하지 않습니다.",
+    "outcome": "이전에 실제로 발생한 공개 빌드 실패를 버그 보고서로 등록합니다. 원문 백업은 보존했고 편집 게시물의 줄바꿈을 통일해 검사와 배포를 통과시켰습니다.",
+    "proposedTime": "당시 게시물 정리 작업 8~12분.",
+    "actualTime": "공개 배포·대표 화면 확인 기록은 2026-10-29 21:26:42 KST. 버그 수정 단독 소요 시간은 분리 측정하지 않았습니다.",
+    "xerjEvidence": "공개 빌드 로그와 실제 파일·커밋 바이트를 비교했습니다.",
+    "priority": "normal",
+    "severity": "major",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  },
+  "issue": 1,
+  "url": "https://github.com/MDJ0126/codex-config/issues/1",
+  "updatedAt": "2026-10-29T12:48:19Z",
+  "history": [
+    {
+      "at": "2026-10-29T12:48:19Z",
+      "action": "opened",
+      "stage": "resolved",
+      "actor": "MDJ0126"
+    }
+  ],
+  "post": "projects/codex-config/posts/2026-10-29-TF-1-v1.0.1.md"
+}

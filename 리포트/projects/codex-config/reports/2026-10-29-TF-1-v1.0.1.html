@@ -1,0 +1,30 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Markdown 줄바꿈 변환으로 공개 빌드 해시 검사 실패 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>Markdown 줄바꿈 변환으로 공개 빌드 해시 검사 실패</h1><span class="badge" data-state="verification">해결</span></div><p class="post-summary">Windows 작업 파일과 Linux CI의 줄바꿈 차이로 편집 후 해시 검사가 실패한 문제를 LF 통일로 수정했습니다.</p><div class="detail-workflow"><span class="">접수</span><i>→</i><span class="">검토</span><i>→</i><span class="">진행</span><i>→</i><span class="current">해결</span><i>→</i><span class="">종료</span></div><div class="post-byline"><time datetime="2026-10-29T12:48:19Z">2026년 10월 29일 오후 9:48 KST</time><span>v1.0.1</span><span>버그 추적</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>이전에 실제로 발생한 공개 빌드 실패를 버그 보고서로 등록합니다. 원문 백업은 보존했고 편집 게시물의 줄바꿈을 통일해 검사와 배포를 통과시켰습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>Windows 작업 PC, Git autocrlf, Ubuntu GitHub Actions, Node.js 24.</p>
+<h3 id="section-4">재현 순서</h3>
+<ol>
+<li>CRLF가 섞인 편집 Markdown의 로컬 바이트 해시를 기록했습니다.</li>
+<li>Git에 커밋해 Linux Actions에서 같은 파일의 해시를 검사했습니다.</li>
+</ol>
+<h3 id="section-5">기대 동작</h3>
+<p>편집 후 파일과 커밋·CI의 파일 해시가 같아야 합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>Actions 실행 40872561810의 verify-editorial.mjs 단계에서 실제 해시와 기대 해시가 달라 실패했습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>실제 git show 바이트가 로컬 파일을 LF로 정규화한 결과와 같음을 확인했습니다. Git 줄바꿈 변환으로 로컬·CI 바이트가 달랐습니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<p>.gitattributes의 프로젝트 posts Markdown에 text eol=lf를 지정하고 정규화했습니다. 원문 백업은 변경하지 않았습니다.</p>
+<h2 id="section-9">검증</h2>
+<p>보완 커밋 0fcf663 및 Actions 실행 40872895161에서 원문·편집 해시·자동 검사와 공개 배포가 통과했습니다. <a class="report-link" href="https://github.com/MDJ0126/codex-config/actions/runs/40872895161">https://github.com/MDJ0126/codex-config/actions/runs/40872895161</a></p>
+<h2 id="section-10">남은 사항</h2>
+<p>전체 과거 제품 테스트의 재실행 결과를 의미하지 않습니다.</p>
+<h2 id="section-11">작업 시간</h2>
+<ul>
+<li>제안 시간: 당시 게시물 정리 작업 8~12분.</li>
+<li>실제로 완료된 시간: 공개 배포·대표 화면 확인 기록은 2026-10-29 21:26:42 KST. 버그 수정 단독 소요 시간은 분리 측정하지 않았습니다.</li>
+<li>XERJ: 미사용 — 공개 빌드 로그와 실제 파일·커밋 바이트를 비교했습니다.</li>
+</ul>
+<p><a class="report-link" href="https://github.com/MDJ0126/codex-config/issues/1">등록·상태 변경 이력</a></p>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-TF-1-v1.0.1.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-9">검증</a><a href="#section-10">남은 사항</a><a href="#section-11">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
