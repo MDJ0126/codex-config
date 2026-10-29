@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "qaPerformedOn": "2026-10-29",
+  "reviewedAt": "2026-10-30T03:12:28.118347+09:00",
+  "reviewActionsToday": [
+    "Read preserved QA records",
+    "Check deployed Core SHA-256",
+    "Check ZIP SHA-256 and CRC",
+    "Check packaged Core SHA-256"
+  ],
+  "productTestsRerunToday": false,
+  "qa": {
+    "baselineCases": 10,
+    "baselineFailed": 8,
+    "fixedCases": 18,
+    "fixedFailed": 0,
+    "regressionChecks": 403,
+    "engineExecution": false,
+    "fullRoundtripExecuted": false,
+    "actualHumanGuiInputTested": false,
+    "appExeOffscreenSelfTest": true,
+    "winFormsClickHandlerTested": true,
+    "nativeCppStandaloneTested": true,
+    "nativeCppUsesValueStorageStandIns": true
+  },
+  "realInput": {
+    "status": "READ_ONLY_INSPECTION_PASS",
+    "assets": 60,
+    "scripts": 2,
+    "dependencyCandidates": 155,
+    "dependencyBlockers": 0,
+    "trackedOriginalFiles": 4,
+    "originalHashesUnchanged": true,
+    "engineExecution": false,
+    "actualPortingPerformed": false
+  },
+  "artifacts": {
+    "appFolder": "EngineMigrator-qa-preview-20261029-v1.0.1",
+    "zipName": "EngineMigrator-qa-preview-20261029-v1.0.1.zip",
+    "files": 370,
+    "coreSha256": "f1ecc4c9afa260828de37e8052e21d473800d2d5bf0844ef33fbbe3f70daf131",
+    "zipSha256": "5a3fdccc09b7e7be93222a6d5e578bea527e3ea3ee13f80a7c91468efa1fabb7",
+    "hashesAndCrcRecheckedToday": true
+  },
+  "fixedCases": [
+    {
+      "id": "QA-01",
+      "name": "Partial export must not write into selected target",
+      "pass": true
+    },
+    {
+      "id": "QA-02",
+      "name": "Missing plugin Name becomes a structured blocker rather than a scan crash",
+      "pass": true
+    },
+    {
+      "id": "QA-03a",
+      "name": "Native plugin importer metadata changes invalidate consent",
+      "pass": true
+    },
+    {
+      "id": "QA-03b",
+      "name": "Platform bundle importer metadata changes invalidate consent",
+      "pass": true
+    },
+    {
+      "id": "QA-04",
+      "name": "Source files in legitimate nested Assets/bin are inventoried",
+      "pass": true
+    },
+    {
+      "id": "QA-05",
+      "name": "One dependency consent cannot start two independent operations",
+      "pass": true
+    },
+    {
+      "id": "QA-06",
+      "name": "Undefined engine enum cannot be treated as Unreal implicitly",
+      "pass": true
+    },
+    {
+      "id": "QA-07",
+      "name": "Malformed dependency field type fails closed without output",
+      "pass": true
+    },
+    {
+      "id": "QA-08",
+      "name": "Declined dependency consent creates neither export nor receipt",
+      "pass": true
+    },
+    {
+      "id": "QA-09",
+      "name": "Unreal project Binaries third-party DLL is included in review",
+      "pass": true
+    },
+    {
+      "id": "QA-10",
+      "name": "Concurrent attempts cannot consume one consent twice",
+      "pass": true
+    },
+    {
+      "id": "QA-11",
+      "name": "Repeated validation within one transaction remains possible",
+      "pass": true
+    },
+    {
+      "id": "QA-12",
+      "name": "Nested output inside target is also rejected",
+      "pass": true
+    },
+    {
+      "id": "QA-13",
+      "name": "False Enabled strings are not silently treated as enabled plugins",
+      "pass": true
+    },
+    {
+      "id": "QA-14",
+      "name": "Plugin descriptor errors remain structured in full project inspection",
+      "pass": true
+    },
+    {
+      "id": "QA-15",
+      "name": "Changed root binary or module manifest invalidates existing consent",
+      "pass": true
+    },
+    {
+      "id": "QA-16",
+      "name": "A declined decision cannot be reused on a dependency-free operation",
+      "pass": true
+    },
+    {
+      "id": "QA-17",
+      "name": "Cancelled export performs no output writes",
+      "pass": true
+    }
+  ],
+  "qaTime": "2026-10-29 18:40:08–19:20:12 KST (40분 4초)",
+  "fullProjectPortingComplete": false
+}

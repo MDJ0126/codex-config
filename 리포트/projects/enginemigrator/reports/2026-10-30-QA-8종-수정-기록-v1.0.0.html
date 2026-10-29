@@ -1,0 +1,61 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>지난 QA에서 재현·수정한 8종의 문제와 검증 한계 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=e36d7dae3830"><link rel="stylesheet" href="../../../assets/theme.css?v=e36d7dae3830"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/enginemigrator/assets/logo.png" alt="EngineMigrator 로고"><span>EngineMigrator</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>지난 QA에서 재현·수정한 8종의 문제와 검증 한계</h1><span class="badge" data-state="verification">해결</span></div><p class="post-summary">출력 경계·설명자·의존성 지문·파일 조사·동의 재사용·엔진 값·바이너리 탐지·경고창 문제를 수정했습니다. 10월 29일 기록이며 엔진 E2E는 미실행입니다.</p><div class="detail-workflow"><span data-stage="new" class=""><img class="stage-icon" src="../../../assets/workflow/new.svg" alt="" width="40" height="40" aria-hidden="true">접수</span><i>→</i><span data-stage="review" class=""><img class="stage-icon" src="../../../assets/workflow/review.svg" alt="" width="40" height="40" aria-hidden="true">검토</span><i>→</i><span data-stage="in_progress" class=""><img class="stage-icon" src="../../../assets/workflow/in_progress.svg" alt="" width="40" height="40" aria-hidden="true">진행</span><i>→</i><span data-stage="resolved" class="current"><img class="stage-icon" src="../../../assets/workflow/resolved.svg" alt="" width="40" height="40" aria-hidden="true">해결</span><i>→</i><span data-stage="closed" class=""><img class="stage-icon" src="../../../assets/workflow/closed.svg" alt="" width="40" height="40" aria-hidden="true">종료</span></div><div class="post-byline"><time datetime="2026-10-29T18:13:05.536Z">2026년 10월 30일 오전 3:13 KST</time><span>v1.0.0</span><span>버그 추적</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>2026-10-29 배포 DLL 자체에서 Core 실패 사례 8건을 재현했습니다. 두 .meta 사례를 한 종류로 묶으면 Core 문제 7종이며, 최소 경고창 버튼 잘림 1종을 합쳐 8종입니다. 수정 후 해당 독립 검사와 기존 회귀가 통과했습니다. 이 해결 상태는 아래 문제 범위에 한정하며 전체 엔진 포팅 QA의 종료를 뜻하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>2026-10-29 Windows의 EngineMigrator 개발 프리뷰를 사용했습니다. 이전 Core SHA-256 A8B8E8115BFADAE8C8FE944797AE59AC6F4647E0024B5B63B33E8E99004973A2와 수정 배포본을 합성 프로젝트로 비교했습니다. .NET 앱·CLI·MSVC 독립 실행 환경이며 Unity/Unreal은 실행하지 않았습니다.</p>
+<h3 id="section-4">재현 순서</h3>
+<ol>
+<li>대상 프로젝트 또는 중첩 Content를 부분 코드 출력 위치로 지정합니다.</li>
+<li>Name이 없는 Unreal 플러그인 설명자를 검사합니다.</li>
+<li>동의 후 DLL 또는 플랫폼 번들의 .meta만 변경하고 재검사합니다.</li>
+<li>Assets/bin 아래 사용자 C#을 조사합니다.</li>
+<li>같은 동의 객체로 두 독립 작업 또는 동시 작업을 시작합니다.</li>
+<li>정의되지 않은 엔진 값 99를 전달합니다.</li>
+<li>Unreal Binaries/Win64에 합성 VendorSDK.dll을 두고 조사합니다.</li>
+<li>경고창을 최소 크기로 렌더링하고 버튼 경계를 확인합니다.</li>
+</ol>
+<h3 id="section-5">기대 동작</h3>
+<p>원본·대상에 쓰지 않고, 잘못된 설명자·엔진 값은 구조화된 진단으로 거부하며, 의존성 변경과 재사용 동의를 차단하고 사용자 파일·바이너리를 조사해야 합니다. 최소 창에서도 선택 버튼이 잘리지 않아야 합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>이전 버전은 대상 내부 출력 생성, KeyNotFoundException, .meta 변경 수용 2건, Assets/bin C# 누락, 동의 재사용, 엔진 99 수용, Binaries DLL 누락을 보였습니다. 별도 UI 재현에서는 버튼 하단이 잘렸습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>확인한 구현 경계의 누락입니다. 대상 경로 보호가 빠졌고, Name을 필수 확인 없이 읽었으며, 일부 .meta와 Binaries가 지문/후보에서 빠졌습니다. 폴더 이름만으로 파일을 제외하고 동의 객체의 단일 사용을 강제하지 않았습니다. 엔진 열거값과 최소 버튼 영역도 검증이 부족했습니다. 재현 기록과 수정 후 같은 검사로 확인한 범위입니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<ul>
+<li>원본·대상과 그 내부 출력 경로를 모두 차단했습니다.</li>
+<li>Name·Enabled를 확인하고 설명자 경로가 있는 차단 진단으로 반환합니다.</li>
+<li>DLL/번들의 .meta와 Unreal Binaries·.modules/.target을 지문에 포함했습니다.</li>
+<li>프로젝트 설정을 근거로 빌드 폴더를 구분해 사용자 파일 누락을 수정했습니다.</li>
+<li>작업 시작에서 동의를 원자적으로 한 번만 사용하도록 했습니다. 한 작업 안의 반복 변경 검사는 허용합니다.</li>
+<li>정의된 엔진 값만 받도록 했습니다.</li>
+<li>최소 경고창 버튼 여백과 줄바꿈을 수정했습니다.</li>
+<li>이후 실제 입력 조사에서 중복 경로 조회를 줄이고 해시 도중 취소 확인을 보강했습니다. 단회 시간 관측 213.65초→131.87초는 캐시 영향을 분리하지 않았으므로 일반 속도 보장이 아닙니다.</li>
+<li>오늘은 위 수정 기록을 분리 등록했으며 새 수정·재시험으로 표시하지 않습니다.</li>
+</ul>
+<h2 id="section-9">검증</h2>
+<ul>
+<li>아래 제품 테스트는 모두 2026-10-29에 수행한 기록입니다. 2026-10-30에 다시 실행했다고 표시하지 않습니다.</li>
+<li>이전 배포 Core DLL 재현 10개 중 실패 8개, 수정 후 독립 QA 18개 통과, 기존 회귀 검사 403개 통과를 대조했습니다.</li>
+<li>실제 배포 exe의 오프스크린 자체 검사와 한글 폴더에서의 실행, CLI 프로세스의 잘못된 엔진 값·리디렉션 승인 차단, 원본/복원 C# 및 생성 C++ 독립 실행을 확인한 기록입니다.</li>
+<li>C++의 벡터/쿼터니언 저장 구조는 대역입니다. Unreal 런타임·Transform·GC 실행 검증이 아닙니다.</li>
+<li>WinForms OnClick 결과 전달과 기본/최소 레이아웃 렌더링을 확인했습니다. 실제 사람이 마우스·키보드로 모달 창을 조작하는 E2E 테스트는 아닙니다.</li>
+<li>사용자 제공 Unity 입력의 파일 60개·C# 2개·의존성 후보 155개를 읽기 전용으로 조사했습니다. 추적한 원본 파일 4개의 해시는 같았습니다. 엔진 실행 또는 포팅 완료 검증이 아닙니다.</li>
+<li>방화벽 규칙은 읽기 전용으로 조회했습니다. Unity·Unreal·게임·엔진 빌드는 이번 QA에서 실행하지 않았습니다.</li>
+<li>오늘은 보존된 기록의 범위를 대조하고, 배포 Core·ZIP·압축 안의 Core SHA-256과 ZIP CRC/파일 수 370개를 재확인했습니다.</li>
+<li><a class="report-link" href="../assets/qa-scope-evidence-20261030.json">공개용 검증 요약 JSON</a>에는 개인 경로·원본 로그·세션 기록을 제외했습니다.</li>
+</ul>
+<h2 id="section-10">남은 사항</h2>
+<ul>
+<li>Unity → Unreal → Unity 실제 엔진 포팅·빌드·게임 실행을 확인하는 엔진 E2E QA는 미실행입니다.</li>
+<li>실제 게임플레이·화면·물리·애니메이션 동등성, 임의 외부 플러그인, 모든 엔진 버전의 지원은 이번 결과로 보증하지 않습니다.</li>
+<li>실제 모달 사용자 입력·모든 DPI/해상도·실물 심볼릭 링크는 미검증입니다.</li>
+<li>다음 엔진 E2E 검증은 승인된 안전 실행기·개인 복사본·방화벽 사전 확인을 유지하고, 원본과 결과의 실제 실행을 대조해야 합니다. 안전 차단을 우회하거나 과거 캡처로 대체해서는 안 됩니다.</li>
+<li>Windows 실행 폴더와 ZIP은 로컬 배포본입니다. 프로그램 파일을 공개 다운로드로 올린 것은 아닙니다.</li>
+</ul>
+<h2 id="section-11">작업 시간</h2>
+<ul>
+<li>제안 시간: 이번 재확인·보고서 등록·외부 배포 확인 10<del>20분. 지난 QA의 제안 시간은 45</del>75분이었습니다.</li>
+<li>실제로 완료된 시간: 보고서 재확인·JSON 작성까지 5분 14초, 2026-10-30 03:12:28 KST. 등록·공개 배포 검사는 이후 수행하며 최종 응답에서 별도로 확인합니다. 지난 QA 자체는 2026-10-29 40분 4초였습니다.</li>
+<li>XERJ: 미사용 — 보존된 QA 기록과 배포 파일 무결성 대조·보고서 등록 작업이며 제품 코드 검색은 불필요했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-QA-8%EC%A2%85-%EC%88%98%EC%A0%95-%EA%B8%B0%EB%A1%9D-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-9">검증</a><a href="#section-10">남은 사항</a><a href="#section-11">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
