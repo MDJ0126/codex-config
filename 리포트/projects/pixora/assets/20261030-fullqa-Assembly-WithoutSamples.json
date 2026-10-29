@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "samplesInstalled": false,
+    "unity": "6000.0.83f1",
+    "checks": [
+        "Product has no sample assembly reference",
+        "Assembly-CSharp has no automatic sample reference",
+        "Assembly-CSharp contains no Pixora sample source",
+        "Assembly-CSharp-Editor has no automatic sample reference",
+        "Assembly-CSharp-Editor contains no Pixora sample source",
+        "Player assembly graph excludes Pixora editor and samples",
+        "Product compiles with Samples folder omitted",
+        "Missing samples have an explicit execution error",
+        "Invalid example index is rejected"
+    ],
+    "error": ""
+}

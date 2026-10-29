@@ -1,0 +1,108 @@
+{
+    "passed": true,
+    "completedAt": "2026-10-30T04:55:09.4127696+09:00",
+    "unityVersion": "6000.0.83f1",
+    "assertions": 761,
+    "cases": [
+        {
+            "id": "01-Image",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (19 assertions).",
+            "evidence": "Artifacts/TutorialQuality/01-Image.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 86.5991,
+            "assertions": 19
+        },
+        {
+            "id": "02-Palette",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (19 assertions).",
+            "evidence": "Artifacts/TutorialQuality/02-Palette.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 45.5275,
+            "assertions": 19
+        },
+        {
+            "id": "03-Model",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (18 assertions).",
+            "evidence": "Artifacts/TutorialQuality/03-Model.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 68.6269,
+            "assertions": 18
+        },
+        {
+            "id": "04-Parts",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (63 assertions).",
+            "evidence": "Artifacts/TutorialQuality/04-Parts.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 61.2897,
+            "assertions": 63
+        },
+        {
+            "id": "05-Animation",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (87 assertions).",
+            "evidence": "Artifacts/TutorialQuality/05-Animation.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 56.0979,
+            "assertions": 87
+        },
+        {
+            "id": "06-Sheet",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (29 assertions).",
+            "evidence": "Artifacts/TutorialQuality/06-Sheet.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 51.6854,
+            "assertions": 29
+        },
+        {
+            "id": "07-Tone",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (21 assertions).",
+            "evidence": "Artifacts/TutorialQuality/07-Tone.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 46.6036,
+            "assertions": 21
+        },
+        {
+            "id": "08-Equipment",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (462 assertions).",
+            "evidence": "Artifacts/TutorialQuality/08-Equipment.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 74.47160000000001,
+            "assertions": 462
+        },
+        {
+            "id": "09-Alpha",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (19 assertions).",
+            "evidence": "Artifacts/TutorialQuality/09-Alpha.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 45.7988,
+            "assertions": 19
+        },
+        {
+            "id": "10-BatchProfile",
+            "expected": "Stored scene and first-frame preview match real conversion; exported cells, importers and animation assets obey the tutorial settings.",
+            "actual": "Scene rendered; preview pixels and exported asset properties checked (24 assertions).",
+            "evidence": "Artifacts/TutorialQuality/10-BatchProfile.png",
+            "error": "",
+            "passed": true,
+            "milliseconds": 43.8258,
+            "assertions": 24
+        }
+    ]
+}

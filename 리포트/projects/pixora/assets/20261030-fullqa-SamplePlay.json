@@ -1,0 +1,112 @@
+{
+  "phase": "exit",
+  "startedAt": "2026-10-30T05:31:22.6938266+09:00",
+  "completedAt": "2026-10-30T05:31:54.2770915+09:00",
+  "index": 10,
+  "firstSprite": 26166,
+  "sampledAt": 2354.2720494,
+  "changed": false,
+  "passed": true,
+  "cases": [
+    {
+      "example": 1,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-01.png"
+    },
+    {
+      "example": 2,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-02.png"
+    },
+    {
+      "example": 3,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-03.png"
+    },
+    {
+      "example": 4,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-04.png"
+    },
+    {
+      "example": 5,
+      "passed": true,
+      "animated": true,
+      "observedSpriteChange": true,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; runtime Sprite changed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-05.png"
+    },
+    {
+      "example": 6,
+      "passed": true,
+      "animated": true,
+      "observedSpriteChange": true,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; runtime Sprite changed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-06.png"
+    },
+    {
+      "example": 7,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-07.png"
+    },
+    {
+      "example": 8,
+      "passed": true,
+      "animated": true,
+      "observedSpriteChange": true,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; runtime Sprite changed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-08.png"
+    },
+    {
+      "example": 9,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-09.png"
+    },
+    {
+      "example": 10,
+      "passed": true,
+      "animated": false,
+      "observedSpriteChange": false,
+      "expected": "Sample scene renders in actual Play mode; animated examples advance real Sprite references.",
+      "actual": "Play mode camera rendered visible content; static workflow scene displayed",
+      "error": "",
+      "evidence": "Artifacts/FullQA/PlayScene-10.png"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "images": [
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Studio-Light.webp",
+      "sourceBytes": 102590,
+      "compressedBytes": 54206,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "f2fd7bee44401bf1a05c22463745bdfa55780ca1c1822c7a9f0e1de4cad6b224",
+      "capturedAt": "2026-10-30T05:50:19.330719+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Studio-Dark.webp",
+      "sourceBytes": 101724,
+      "compressedBytes": 51100,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "d64bdb466dc3a1454d21b56ed5af10cce35e5c396f2c732c9b7378005b1fcfe2",
+      "capturedAt": "2026-10-30T05:50:14.605606+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Setup-Dark.webp",
+      "sourceBytes": 37888,
+      "compressedBytes": 17410,
+      "width": 760,
+      "height": 650,
+      "losslessPixelMatch": true,
+      "sha256": "6eac54cb760648e6ee68115edc276d0aa377bf2d2b12740c3f4809fc5ac13631",
+      "capturedAt": "2026-10-30T05:50:16.255804+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/WindowList.webp",
+      "sourceBytes": 7466,
+      "compressedBytes": 2410,
+      "width": 480,
+      "height": 320,
+      "losslessPixelMatch": true,
+      "sha256": "38c7dc83ea9740aeeab06938627546142a26c6217db4c03fa3203ba4eeb16b2d",
+      "capturedAt": "2026-10-30T06:01:12.506947+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Two-Studios.webp",
+      "sourceBytes": 155328,
+      "compressedBytes": 85876,
+      "width": 1920,
+      "height": 760,
+      "losslessPixelMatch": true,
+      "sha256": "5465eda514be9cfaf5e145d43d3683c04263d41dbf3c346e0aa98218276a8079",
+      "capturedAt": "2026-10-30T05:18:36.506878+09:00",
+      "method": "actual desktop capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.en.webp",
+      "sourceBytes": 106416,
+      "compressedBytes": 48538,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "b81409b9e8edec6fed76f4a5502653fceba3559c4991ca5571afa229a8c40291",
+      "capturedAt": "2026-10-30T05:47:20.423272+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "en"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.ko.webp",
+      "sourceBytes": 86757,
+      "compressedBytes": 37940,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "7fe23bb5e64fb2d95fa6d7b6a1ad499503f2acb8d4a3b09eef86e98b8c4e6f65",
+      "capturedAt": "2026-10-30T05:47:22.085799+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "ko"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.ja.webp",
+      "sourceBytes": 92435,
+      "compressedBytes": 41242,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "e842d6abc477b42fe9a6b75ca75c19e588635613295e3537fc74b76b8fbeb34c",
+      "capturedAt": "2026-10-30T05:47:24.197554+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "ja"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.zh-Hans.webp",
+      "sourceBytes": 88305,
+      "compressedBytes": 39040,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "c64ef9e64c243d767c661c601ec1db9ecdc4b429964c632b53ed315ee37e6b4d",
+      "capturedAt": "2026-10-30T05:47:26.147539+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "zh-Hans"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.zh-Hant.webp",
+      "sourceBytes": 93881,
+      "compressedBytes": 41650,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "6b78a4d8c28310c88c2faa1a721dc25b9a27768a650f8733f52524cd58daa4c5",
+      "capturedAt": "2026-10-30T05:47:28.113502+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "zh-Hant"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.es.webp",
+      "sourceBytes": 96553,
+      "compressedBytes": 42782,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "03c8a77899ccda577ba1eee15e249b7ed21fc102c374007de02a552e2d733bc2",
+      "capturedAt": "2026-10-30T05:47:30.079805+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "es"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.fr.webp",
+      "sourceBytes": 99503,
+      "compressedBytes": 43522,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "2029d0ceaeda7e943694f37dbf1e60a91be08c60af4ee058fe938a729636c0fe",
+      "capturedAt": "2026-10-30T05:47:32.219089+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "fr"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.de.webp",
+      "sourceBytes": 103644,
+      "compressedBytes": 46142,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "7de5e72e8361cea9a62fca53cdcb8e2c5a6fd5f6dba76c103866d85ebb6b57e4",
+      "capturedAt": "2026-10-30T05:47:34.180772+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "de"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Guide.pt-BR.webp",
+      "sourceBytes": 98881,
+      "compressedBytes": 42754,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "sha256": "428537bd942a533f561acc499b8f99d0832e92dd6aeab482d0c7b57118065299",
+      "capturedAt": "2026-10-30T05:47:36.114428+09:00",
+      "method": "actual Unity native window capture",
+      "uiLanguage": "pt-BR"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-01.webp",
+      "sourceBytes": 18953,
+      "compressedBytes": 7384,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-02.webp",
+      "sourceBytes": 19283,
+      "compressedBytes": 7530,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-03.webp",
+      "sourceBytes": 15387,
+      "compressedBytes": 4070,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-04.webp",
+      "sourceBytes": 15215,
+      "compressedBytes": 3984,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-05.webp",
+      "sourceBytes": 15981,
+      "compressedBytes": 4320,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-06.webp",
+      "sourceBytes": 20489,
+      "compressedBytes": 8774,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-07.webp",
+      "sourceBytes": 17888,
+      "compressedBytes": 5162,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-08.webp",
+      "sourceBytes": 16046,
+      "compressedBytes": 4364,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-09.webp",
+      "sourceBytes": 19561,
+      "compressedBytes": 7506,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/PlayScene-10.webp",
+      "sourceBytes": 19865,
+      "compressedBytes": 7846,
+      "width": 640,
+      "height": 400,
+      "losslessPixelMatch": true,
+      "method": "actual Unity Play mode camera render"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/Preview-Before.webp",
+      "sourceBytes": 73576,
+      "compressedBytes": 28268,
+      "width": 1280,
+      "height": 820,
+      "losslessPixelMatch": true,
+      "method": "actual Unity native window capture before fix"
+    },
+    {
+      "file": "Artifacts/PixoraFullQA/Images/WindowList-Before.webp",
+      "sourceBytes": 11320,
+      "compressedBytes": 3070,
+      "width": 356,
+      "height": 589,
+      "losslessPixelMatch": true,
+      "method": "actual Unity native window capture before fix"
+    }
+  ]
+}

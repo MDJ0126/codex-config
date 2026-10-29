@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "startedAt": "2026-10-30T03:42:35.5578476+09:00",
+  "verifiedAt": "2026-10-30T06:04:19.824861+09:00",
+  "environment": "Windows / Unity 6000.0.83f1 / Built-in",
+  "automatic": {
+    "coreAssertions": 88,
+    "tutorialAssertions": 2820,
+    "frameToneAssertions": 421,
+    "sceneQualityAssertions": 761,
+    "previewCases": 72,
+    "previewAssertions": 408,
+    "sessionIsolationAssertions": 18,
+    "assemblyWithSamplesAssertions": 30,
+    "assemblyWithoutSamplesAssertions": 9,
+    "savedSceneGuidReferences": 475
+  },
+  "actualUnityUI": {
+    "tutorialCases": 10,
+    "tutorialMouseClicks": 90,
+    "playModeScenes": 10,
+    "animatedSceneNumbers": [
+      5,
+      6,
+      8
+    ],
+    "crossProductClicks": 8,
+    "sameProductClicks": 8,
+    "standaloneProductClicks": 8,
+    "standaloneMinimizeRestore": true,
+    "maximizeRestore": true,
+    "mixedMinimizeRestore": true,
+    "duplicateAndClose": true,
+    "pngSaveAndCancel": true,
+    "additiveSceneOpenAndFraming": true,
+    "interfaceLanguagesCaptured": 9
+  },
+  "documentation": {
+    "localizedChapters": 99,
+    "localizedCodeExamples": 90,
+    "compressedImages": 26,
+    "maximumCompressedImageBytes": 85876,
+    "losslessPixelsVerified": true
+  },
+  "limitations": [
+    "Windows and Built-in only; other OS/render pipelines/DPI unverified",
+    "Node VM document checks do not constitute browser layout verification",
+    "Guarded Win32 SendInput/PrintWindow fallback used; official computer-use runtime unavailable",
+    "Pre-existing DesignDataTable historical screenshot/source hash failures not rewritten or marked passing"
+  ],
+  "xerj": "Actual Search and Index; recovered checkout-scoped index; FileDialog search returned current sources"
+}
