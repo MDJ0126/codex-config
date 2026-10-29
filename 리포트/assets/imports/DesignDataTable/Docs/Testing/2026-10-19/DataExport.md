@@ -1,34 +1,3 @@
-# 내보내기 / 변환
+# Tracefolio · 보고서 이동
 
-게임 데이터 편집기의 기존 CSV 내보내기 버튼을 **내보내기 / 변환** 메뉴로 바꿨습니다.
-
-| 형식 | 내용 |
-|---|---|
-| XLSX | 이름·자료형 두 행, 원문 수식, 편집 메타데이터 |
-| 원본 CSV | 기존 이름·자료형 두 행과 원문 수식 형식 유지 |
-| TSV | 열 이름 한 행과 계산된 값. 탭·따옴표·여러 줄 셀 인용 처리 |
-| JSON | 테이블 이름, 열 이름·자료형, 자료형에 맞는 계산된 행 데이터 |
-| XML | 테이블·열 자료형·계산된 행 데이터. XML 문자 이스케이프 |
-| ScriptableObject | 텍스트 템플릿 기반 코드와 실제 행 데이터를 가진 `.asset` |
-
-원본 테이블은 내보내기 과정에서 변경하지 않습니다. 내보내기로 등록 원본을 덮어쓰는 경로는 거부하며, 원본 변경에는 저장을 사용합니다. JSON/ScriptableObject는 빈 숫자·논리값·날짜를 런타임 자료형 기본값으로 내보냅니다. JSON의 Int64는 정수 리터럴이므로 JavaScript Number로 읽는 소비자는 정밀도 처리에 주의해야 합니다.
-
-## ScriptableObject 템플릿과 데이터 삽입
-
-- 템플릿: `Assets/DesignDataTable/Scripts/Editor/Sources/ScriptableObjectSource.txt`
-- 코드: `Assets/DesignDataTable/Generated/Code/DataAssets/<테이블 이름>DataAsset.cs`
-- 에셋: 내보내기 창에서 Assets 안의 `.asset` 경로를 선택합니다.
-- 사용: 생성된 에셋의 `Rows`를 읽습니다. 각 행은 열 이름에 대응하는 자료형 필드를 가집니다.
-
-템플릿은 `/*TABLE_NAME*/`, `/*CLASS_NAME*/`, `/*ROW_CLASS*/`, `/*FIELDS*/`, `/*SCHEMA_ID*/` 치환자를 사용합니다. DateTime은 Unity 직렬화를 위해 ISO 문자열 필드에 저장하고 DateTime 속성을 노출합니다. 템플릿과 스키마가 바뀌면 새 코드의 스키마 식별자와 일치하는 컴파일이 끝난 뒤 데이터를 삽입합니다. 작업은 Library 아래 파일로 남겨 도메인 리로드 후에도 이어갑니다.
-
-기존 같은 형식 에셋은 갱신하며, 다른 형식의 에셋이나 사용자 스크립트는 임의 덮어쓰지 않습니다. 같은 에셋에 대한 대기 중 요청은 최신 요청으로 대체합니다. 데이터 삽입 오류나 컴파일 실패는 오류를 기록하고 작업 파일을 `.failed`로 남깁니다. ScriptableObject를 원본으로 역변환하거나 자동 동기화하는 기능은 이번 범위가 아닙니다.
-
-## 검증
-
-- 전체 소스 컴파일 및 **10,208개 회귀 검증 통과**.
-- JSON 한글·제어 문자·Int64·논리값·날짜, TSV 여러 줄/탭, XML 특수 문자, 계산값과 원본 수식 불변, 잘못된 내보내기 시 기존 파일 보존을 확인했습니다.
-- Unity에서 템플릿의 실제 컴파일, `.asset` 생성과 모든 지원 자료형의 행 삽입, DateTime 접근자, 기존 에셋 갱신, 빈 테이블 재내보내기 시 이전 행 제거를 검증했습니다. **129개 통과, 오류 0개, 샘플 씬 3개 완료**. [실행 기록](data-export-complete/unity-session.jsonl).
-- 9개 언어 UI·가이드와 영어 PDF를 갱신했습니다. 실제 메뉴 클릭과 팝업 배치는 별도 미검증입니다.
-
-XERJ: 미사용 — 연결 도구가 없어 rg로 현재 소스를 확인했습니다.
+[프로젝트 폴더의 원문 열기](../../../../../../projects/designdatatable/assets/imports/Docs/Testing/2026-10-19/DataExport.md)

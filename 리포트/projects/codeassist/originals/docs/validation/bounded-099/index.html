@@ -1,0 +1,50 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>항목당 5초 자동화 실행기</title><style>body{font:16px/1.7 system-ui;background:#20222a;color:#eee;max-width:1100px;margin:30px auto}a{color:#ffd166}pre{white-space:pre-wrap;background:#15161c;padding:15px}td,th{border:1px solid #555;padding:9px}table{border-collapse:collapse;width:100%}</style><h1>항목당 5초 자동화 실행기</h1><p>기능 하나의 VA·CA 쌍에 공통 5초 예산을 부여합니다. 검사 작업은 4.3초까지 허용하고 나머지는 검사 자식 프로세스 종료·결과 저장에 남깁니다. VS 자체는 강제 종료하지 않습니다. 항목별 실제 시간을 기록하며 5초를 넘기면 budget-violation으로 실패 처리합니다.</p><p>COM/UIA/화면 촬영은 항목별 자식 프로세스로 격리했습니다. 창 관찰기는 버튼을 누르지 않고 상위 실행기만 토큰·PID가 일치하는 창에 닫기 요청을 한 번 보냅니다. 시간 초과로 상태가 불확실한 호스트는 격리해 후속 항목을 통과로 처리하지 않습니다.</p><h2>검증</h2><p>검사기 테스트 12/12 통과. 아래 가상 시험은 실행기 검증이며 제품 기능 동기화 증거가 아닙니다.</p><table><tr><th>시험</th><th>결과</th><th>소요</th></tr><tr><td>quick</td><td>representative-match</td><td>154.74 ms</td></tr><tr><td>hang</td><td>timeout</td><td>4315.64 ms</td></tr><tr><td>shared</td><td>timeout</td><td>4314.4 ms</td></tr></table><h2>실제 VS 호출</h2><p>VA 호출·창 닫기는 수행했습니다. CA의 DTE 연결이 준비되지 않아 paired 기능 일치로 판정하지 않았습니다.</p><pre>[
+  {
+    &quot;id&quot;: &quot;live-options-cancel&quot;,
+    &quot;elapsedMs&quot;: 2063.35,
+    &quot;status&quot;: &quot;unverified&quot;,
+    &quot;withinBudget&quot;: true
+  },
+  {
+    &quot;id&quot;: &quot;live-scope-next&quot;,
+    &quot;elapsedMs&quot;: 1030.43,
+    &quot;status&quot;: &quot;unverified&quot;,
+    &quot;withinBudget&quot;: true
+  }
+]</pre><p><a href="live-with-modal/summary.json">실제 원본 결과</a> · <a href="live-with-modal/live-options-cancel/VA/cancel-owner.json">닫기 1회 근거</a> · <a href="timing-tests.json">시간 시험</a> · <a href="summary.json">요약</a></p><h2>실행</h2><pre>pwsh -NoProfile -File tools/ParityRunner/RunBounded.ps1 -VaProcessId &lt;VA 전용 PID&gt; -CaProcessId &lt;CA 전용 PID&gt; -Plan &lt;계획 JSON&gt;</pre><p>빌드는 배치 시작 시 한 번 수행합니다. 기능별 기대 결과가 없는 창 열기/취소는 observed-only이며 통과가 아닙니다. 기존 98개 기능 검증 완료나 제품 유사도 향상으로 보고하지 않습니다.</p><pre>{
+  &quot;task&quot;: &quot;Bounded automation runner configuration&quot;,
+  &quot;toolConfigurationComplete&quot;: true,
+  &quot;proposedSeconds&quot;: 600,
+  &quot;startedAt&quot;: &quot;2026-10-18T21:54:58+09:00&quot;,
+  &quot;finishedAt&quot;: &quot;2026-10-18T22:03:15.190305+09:00&quot;,
+  &quot;elapsedSeconds&quot;: 497,
+  &quot;pairedItemBudgetMs&quot;: 5000,
+  &quot;diagnosticWorkBudgetMs&quot;: 4300,
+  &quot;supervisorTestsPassed&quot;: 12,
+  &quot;supervisorTestsTotal&quot;: 12,
+  &quot;syntheticWorstMs&quot;: 4315.64,
+  &quot;liveItemTimings&quot;: [
+    {
+      &quot;id&quot;: &quot;live-options-cancel&quot;,
+      &quot;elapsedMs&quot;: 2063.35,
+      &quot;status&quot;: &quot;unverified&quot;,
+      &quot;withinBudget&quot;: true
+    },
+    {
+      &quot;id&quot;: &quot;live-scope-next&quot;,
+      &quot;elapsedMs&quot;: 1030.43,
+      &quot;status&quot;: &quot;unverified&quot;,
+      &quot;withinBudget&quot;: true
+    }
+  ],
+  &quot;singleCancelRequests&quot;: 1,
+  &quot;legacyUnboundedRunner&quot;: &quot;disabled&quot;,
+  &quot;legacyGlobalCloser&quot;: &quot;disabled&quot;,
+  &quot;productParityUnchanged&quot;: {
+    &quot;representativeMatches&quot;: 4,
+    &quot;differences&quot;: 7,
+    &quot;unverified&quot;: 97,
+    &quot;denominator&quot;: 108
+  },
+  &quot;XERJ&quot;: &quot;Used; retrieved candidates then verified current source. No exact bounded-runner hits.&quot;
+}</pre></html>

@@ -1,3 +1,4 @@
+import {postFiles} from './layout.mjs';
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -5,11 +6,13 @@ import path from 'node:path';
 import vm from 'node:vm';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const index=await readFile(path.join(root,'index.html'),'utf8');
-const reports=(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html'));
-const posts=(await readdir(path.join(root,'posts'))).filter(f=>f.endsWith('.md'));
+const registry=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
+const entries=await postFiles(root,registry);
+const reports=entries.map(e=>e.reportPath);
+const posts=entries.map(e=>e.postPath);
 assert.equal(posts.length,reports.length);
 let links=0;
-for(const file of ['index.html',...reports.map(f=>`reports/${f}`)]){
+for(const file of ['index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
  const html=await readFile(path.join(root,file),'utf8');
  assert.match(html,/<html lang="ko">/);assert.match(html,/name="viewport"/);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
@@ -36,4 +39,4 @@ projectButtons[0].click();buttons[0].click();search.value='';search.input();asse
 assert.ok(!index.includes('design-example'));
 const projects=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
 for(const p of Object.values(projects)){if(p.logo){const data=await readFile(path.join(root,p.logo));assert.equal(data.subarray(1,4).toString(),'PNG');assert.ok(data.length>100);}}
-console.log(`PASS: ${reports.length} Markdown/HTML pairs, ${links} local links, all project/type filters, combined project+type+version search, empty/reset, example removal and PNG logos. Browser layout not tested.`);
+console.log(`PASS: ${reports.length} Markdown/HTML pairs, ${links} local links, project-scoped folders, legacy redirect targets, all project/type filters, combined project+type+version search, empty/reset, example removal and PNG logos. Browser layout not tested.`);

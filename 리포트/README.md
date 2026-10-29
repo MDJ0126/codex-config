@@ -1,14 +1,38 @@
-# 작업 기록실
+# Tracefolio — Reports & Issues
+
+## 프로젝트별 파일 구조
+
+```text
+리포트/
+  projects/
+    pixora/
+      posts/       Markdown 원본
+      reports/     생성된 HTML
+      assets/      프로젝트 로고·첨부파일·이전 자료
+      originals/   변경하지 않은 원문 백업 (웹 패키지 제외)
+    codeassist/
+    designdatatable/
+    enginemigrator/
+    windowsfoldersize/
+    codex-config/
+    affinity-cli/
+  assets/brand/    Tracefolio 공통 브랜드
+  assets/style.css
+  assets/app.js
+  index.html
+```
+
+`project` 값과 프로젝트 폴더 이름은 같아야 합니다. `layout.mjs`가 프로젝트 폴더에서 게시물을 수집하며 누락된 필수 메타데이터나 잘못된 위치는 빌드 오류가 됩니다. 과거 주소의 HTML은 이동 안내 파일이며 실제 보고서는 프로젝트 폴더 한 곳에서 관리합니다. 외부 주소는 그대로 유지합니다. 사이트의 표기는 Tracefolio이며 주황색 문서 보관함 심벌을 사용합니다.
 
 외부 사이트: https://mdj0126.github.io/codex-config/
 
-main의 리포트 변경을 푸시하면 `.github/workflows/reports-pages.yml`이 빌드·링크·검색·원본 해시 검증 후 GitHub Pages로 자동 배포합니다. 설정 파일과 도구·이전 매니페스트·원문 백업은 Pages 패키지에서 제외합니다. 공개 Git 저장소의 원문 백업은 별도로 읽을 수 있습니다.
+main의 리포트 변경을 푸시하면 `.github/workflows/reports-pages.yml`이 빌드·링크·검색·원본 해시 검증 후 GitHub Pages로 자동 배포합니다. 설정 파일과 도구·이전 매니페스트·프로젝트별 원문 백업은 Pages 패키지에서 제외합니다. 공개 Git 저장소의 원문 백업은 별도로 읽을 수 있습니다.
 
 `index.html`을 브라우저에서 열면 게시글 목록을 볼 수 있습니다. 별도의 설치나 서버 없이 파일로 열 수 있습니다. 공개 인터넷 배포는 별도 작업입니다.
 
 ## 보고서 추가
 
-1. `posts/YYYY-MM-DD-작업명-vN.N.N.md`를 새로 만듭니다. 기존 파일을 덮어쓰지 않습니다.
+1. `projects/<project>/posts/YYYY-MM-DD-작업명-vN.N.N.md`를 새로 만듭니다. 기존 파일을 덮어쓰지 않습니다.
 2. 아래 메타데이터와 본문을 작성합니다.
 3. 저장소 루트에서 `node 리포트/build.mjs`를 실행합니다.
 4. `리포트/index.html`과 해당 보고서를 열어 확인하고 원본과 생성물을 함께 커밋합니다.

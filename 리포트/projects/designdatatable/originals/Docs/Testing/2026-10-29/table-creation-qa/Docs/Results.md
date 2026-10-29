@@ -1,0 +1,23 @@
+# Documentation and store refresh — 2026-10-29
+
+## Delivered
+
+Nine concise offline HTML guides, English/Korean PDFs, locally bundled Inter 4.1 and Pretendard 1.3.9 with unmodified source provenance and SIL OFL licenses. Two-tab general/game-data navigation and feature/description tables remain concise. No CDN or system-font installation is required.
+
+All 25 active guide images were newly captured in an isolated native Unity 6000.0.83f1 Windows project: 15 workbook/UI screens, 6 selected dialogs, 4 real Play-mode game renders. The capture run also produced 27 dialog states for inspection. Current source bytes were compared against the isolated project before recording manifest hashes. Capture completion timestamps and native logs are preserved. Repeated old check lines in native append logs are not counted as extra assertions.
+
+Current store delivery: 7 feature gallery images and 4 key images, original native capture pixels, editable HTML/CSS/SVG sources and local font licenses. Copy is separated into canonical JSON, English listing, Korean review copy and portal fields. Historical listing files point to the current canonical source. A verified ZIP contains the complete local still-image delivery.
+
+## Verification
+
+- Nine-language link, image and current source-hash verification: zero errors; 25 active images, 93 unused historical records preserved.
+- 128 headless browser checks: tabs, keyboard, anchors, entry links, mobile bounds, image decoding and bundled font loading.
+- 11 store PNGs: expected dimensions, loaded native images, element bounds; contact sheet and corrected card individually inspected.
+- Two PDFs, 11 pages each: all 22 rendered pages visually inspected; text extraction and embedded glyph programs checked. Chromium serializes variable-font glyphs as Type3. Poppler emitted a Type3 bounding-box warning while rendering; no page or text extraction failure occurred. An initial assertion that PDF resources retained font-family names was incorrect and was replaced with embedded-glyph and text checks; browser font-family loading is tested separately.
+- Store file hashes, canonical-copy parity, archive CRC and every archived payload hash verified.
+
+## Scope
+
+No physical desktop input, no foreground interaction, no live portal upload, no store submission and no newly approved package binary. English native UI was captured; all nine native UI language layouts were not separately certified. Older videos show earlier UI and are excluded from this current still-image delivery. Before upload, confirm the portal image slots and validate the selected release package.
+
+XERJ: failed — server was not running; rg fallback used.

@@ -1,1 +1,3 @@
-A later 390 px Japanese mobile regression check failed after adding heading keep-all typography. Added an anywhere overflow fallback to headings and repeated the nine-language mobile render checks; final results are in BrowserChecks.json. This failure was not counted as a passing run.
+# Tracefolio · 보고서 이동
+
+[프로젝트 폴더의 원문 열기](../../../../../../../projects/designdatatable/assets/imports/Docs/Testing/2026-10-29/minimal-guide/MobileHeadingOverflow.md)

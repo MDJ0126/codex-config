@@ -1,15 +1,3 @@
-# Background hover and reusable prepared preview host
+# Tracefolio · 보고서 이동
 
-The user reported ongoing preview flicker and no mini card when Unity was not focused.
-
-Confirmed source condition: UpdateHover cancelled whenever PreviewProcessActive was false, or the foreground handle differed from the entry snapshot. Both foreground conditions have been removed. Eligibility now uses actual exposed taskbar/card hit testing for all preview states, including during peek, so another application covering an entry prevents activation. Hover never requests foreground activation; explicit document clicks retain the existing native activation path.
-
-Lifecycle changes: one card host is cached per shelf. Hover exit, retarget and click hide it with SWP_NOACTIVATE instead of destroying its EditorWindow/ContainerWindow. Same-source DWM leases are retained across reuse; source changes reset the lease while the destination is hidden. Removing the shelf, closing all documents or reloading assemblies closes the cache. Hidden cards do not schedule idle repaint retries, and their native host is excluded from layout saving. The card is an unowned NoShadow custom host, replacing Unity's tooltip host mode.
-
-Initial presentation: project-authored reflection setup uses the installed HostView/ContainerWindow APIs with loadPosition=false, displayImmediately=false and setFocus=false. After layout preparation, the owned native handle is located even when hidden, configured without activation, painted and then exposed. Reuse prepares the hidden host before showing. The retained native handle is used for DWM registration while hidden, avoiding a handle-not-ready placeholder retry. Native pointer capture is released only when owned by that card.
-
-Validation: final .NET build against Unity 6000.0.83f1 assemblies passed with zero warnings/errors. Existing tests include installed prepared-host API availability, timer/click/ownership behavior, native ABI and geometry: 77 hover, 153 overflow, 92 status-layout assertions (322 total). git diff --check passed. Nine localized guide notes updated, with English default. No new tests were added that pretend to execute native rendering or host reuse.
-
-Limits: host creation/reuse, inactive-Unity presentation, current native focus/input behavior and pixel-level flicker elimination have NOT been executed/visually verified by tools. A manual retry question is pending. The former foreground gate is a verified source blocker; complete visual root cause and resolution remain unconfirmed. Computer use remains prohibited. No probe, screenshots, key/mouse injection, foreground manipulation or user app restart was executed by tools. Documentation capture/source-hash verification remains failing for pending/stale captures and historical hashes were preserved.
-
-XERJ: project MCP search for PreviewProcessActive followed by current source and Unity 6000.0 reference API inspection. Reference context: https://github.com/Unity-Technologies/UnityCsReference/blob/6000.0/Editor/Mono/ContainerWindow.cs and https://github.com/Unity-Technologies/UnityCsReference/blob/6000.0/Editor/Mono/HostView.cs . Framework source was consulted as API context; the reflection setup is project-authored.
+[프로젝트 폴더의 원문 열기](../../../../../../../projects/designdatatable/assets/imports/Docs/Testing/2026-10-26/preview-background-host/Verification.md)

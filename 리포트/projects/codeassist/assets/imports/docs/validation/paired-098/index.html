@@ -1,0 +1,678 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>VA 단독 / CA 단독 실제 추가 검증</title><style>body{background:#1b1d24;color:#eee;font:15px/1.6 system-ui;margin:30px}a{color:#ffd166}pre{white-space:pre-wrap}img{max-width:47%}details{border:1px solid #555;margin:14px 0;padding:12px}.different{color:#ff9999}.representative-match{color:#8fe0aa}</style><h1>VA·CA 실제 추가 검증</h1><p>108개 고정 목록: 대표 결과 일치 4/108 (3.7%) · 차이 6/108 · 미검증 98/108. 판정 근거 확보 10/108 (9.26%). 제품 전체 유사도 값이 아닙니다.</p><p>이번 신규 실제 입력 시나리오 13개. VA 단독 새 프로필과 CA 0.0.94 단독 프로필을 실제 실행했습니다. 이전 기록의 다음 이동·선택 확장만 일치했던 기능도 반대 방향에서 차이가 나오면 차이로 재분류했습니다. 무반응·사용할 수 없는 명령·단순 팝업 열기는 통과하지 않습니다. 101개 전체 검증은 미완료입니다.</p><p><a data-unavailable-href="true" title="원본에 없거나 공개 웹 자료가 아닌 참조">확장 분리 근거</a> · <a data-unavailable-href="true" title="원본에 없거나 공개 웹 자료가 아닌 참조">원본 실제 출력</a> · <a data-unavailable-href="true" title="원본에 없거나 공개 웹 자료가 아닌 참조">108개 상태</a> · <a data-unavailable-href="true" title="원본에 없거나 공개 웹 자료가 아닌 참조">집계</a></p><details><summary class="different">sort-lines · 기능 53 · different</summary><p>동일 입력의 실제 버퍼·커서·선택 결과 차이</p><pre>{
+  &quot;id&quot;: &quot;sort-lines&quot;,
+  &quot;feature&quot;: 53,
+  &quot;state&quot;: &quot;different&quot;,
+  &quot;reason&quot;: &quot;동일 입력의 실제 버퍼·커서·선택 결과 차이&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;sort-lines&quot;,
+    &quot;feature&quot;: 53,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;,
+      &quot;caret&quot;: 23,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 23,
+      &quot;selectedText&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;alpha\r\nbravo\r\ncharlie\r\n&quot;,
+      &quot;caret&quot;: 23,
+      &quot;selectionStart&quot;: 23,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;,
+      &quot;caret&quot;: 23,
+      &quot;selectionStart&quot;: 23,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;sort-lines&quot;,
+    &quot;feature&quot;: 53,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;,
+      &quot;caret&quot;: 23,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 23,
+      &quot;selectedText&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;,
+      &quot;caret&quot;: 23,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 23,
+      &quot;selectedText&quot;: &quot;charlie\r\nalpha\r\nbravo\r\n&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: &quot;System.Runtime.InteropServices.COMException (0x80004005): \&quot;Edit.Undo\&quot; 명령은 사용할 수 없습니다.\r\n   위치: EnvDTE._DTE.ExecuteCommand(String CommandName, String CommandArgs)\r\n   위치: ShortcutProbe.RunPaired(DTE d, Int32 pid, String role, String root, String planFile)&quot;,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/sort-lines-before.png"><img loading="lazy" src="VA-project2/sort-lines-before.png"></a><a href="CA-project/sort-lines-before.png"><img loading="lazy" src="CA-project/sort-lines-before.png"></a></div><div><a href="VA-project2/sort-lines-after.png"><img loading="lazy" src="VA-project2/sort-lines-after.png"></a><a href="CA-project/sort-lines-after.png"><img loading="lazy" src="CA-project/sort-lines-after.png"></a></div><div><a href="VA-project2/sort-lines-undo.png"><img loading="lazy" src="VA-project2/sort-lines-undo.png"></a></div></details><details><summary class="representative-match">smart-extend · 기능 51 · representative-match</summary><p>실제 대표 출력 일치</p><pre>{
+  &quot;id&quot;: &quot;smart-extend&quot;,
+  &quot;feature&quot;: 51,
+  &quot;state&quot;: &quot;representative-match&quot;,
+  &quot;reason&quot;: &quot;실제 대표 출력 일치&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;smart-extend&quot;,
+    &quot;feature&quot;: 51,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 25,
+      &quot;selectionStart&quot;: 20,
+      &quot;selectionLength&quot;: 5,
+      &quot;selectedText&quot;: &quot;value&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 30,
+      &quot;selectionStart&quot;: 16,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;int value = 1;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;smart-extend&quot;,
+    &quot;feature&quot;: 51,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 25,
+      &quot;selectionStart&quot;: 20,
+      &quot;selectionLength&quot;: 5,
+      &quot;selectedText&quot;: &quot;value&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 30,
+      &quot;selectionStart&quot;: 16,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;int value = 1;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/smart-extend-before.png"><img loading="lazy" src="VA-project2/smart-extend-before.png"></a><a href="CA-project/smart-extend-before.png"><img loading="lazy" src="CA-project/smart-extend-before.png"></a></div><div><a href="VA-project2/smart-extend-after.png"><img loading="lazy" src="VA-project2/smart-extend-after.png"></a><a href="CA-project/smart-extend-after.png"><img loading="lazy" src="CA-project/smart-extend-after.png"></a></div><div></div></details><details><summary class="different">smart-shrink · 기능 51 · different</summary><p>동일 입력의 실제 버퍼·커서·선택 결과 차이</p><pre>{
+  &quot;id&quot;: &quot;smart-shrink&quot;,
+  &quot;feature&quot;: 51,
+  &quot;state&quot;: &quot;different&quot;,
+  &quot;reason&quot;: &quot;동일 입력의 실제 버퍼·커서·선택 결과 차이&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;smart-shrink&quot;,
+    &quot;feature&quot;: 51,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 30,
+      &quot;selectionStart&quot;: 16,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;int value = 1;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 25,
+      &quot;selectionStart&quot;: 20,
+      &quot;selectionLength&quot;: 5,
+      &quot;selectedText&quot;: &quot;value&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;smart-shrink&quot;,
+    &quot;feature&quot;: 51,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 30,
+      &quot;selectionStart&quot;: 16,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;int value = 1;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+      &quot;caret&quot;: 30,
+      &quot;selectionStart&quot;: 16,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;int value = 1;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/smart-shrink-before.png"><img loading="lazy" src="VA-project2/smart-shrink-before.png"></a><a href="CA-project/smart-shrink-before.png"><img loading="lazy" src="CA-project/smart-shrink-before.png"></a></div><div><a href="VA-project2/smart-shrink-after.png"><img loading="lazy" src="VA-project2/smart-shrink-after.png"></a><a href="CA-project/smart-shrink-after.png"><img loading="lazy" src="CA-project/smart-shrink-after.png"></a></div><div></div></details><details><summary class="representative-match">scope-next · 기능 9 · representative-match</summary><p>실제 대표 출력 일치</p><pre>{
+  &quot;id&quot;: &quot;scope-next&quot;,
+  &quot;feature&quot;: 9,
+  &quot;state&quot;: &quot;representative-match&quot;,
+  &quot;reason&quot;: &quot;실제 대표 출력 일치&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;scope-next&quot;,
+    &quot;feature&quot;: 9,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 0,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 17,
+      &quot;selectionStart&quot;: 17,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;scope-next&quot;,
+    &quot;feature&quot;: 9,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 0,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 17,
+      &quot;selectionStart&quot;: 17,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/scope-next-before.png"><img loading="lazy" src="VA-project2/scope-next-before.png"></a><a href="CA-project/scope-next-before.png"><img loading="lazy" src="CA-project/scope-next-before.png"></a></div><div><a href="VA-project2/scope-next-after.png"><img loading="lazy" src="VA-project2/scope-next-after.png"></a><a href="CA-project/scope-next-after.png"><img loading="lazy" src="CA-project/scope-next-after.png"></a></div><div></div></details><details><summary class="different">scope-prev · 기능 9 · different</summary><p>동일 입력의 실제 버퍼·커서·선택 결과 차이</p><pre>{
+  &quot;id&quot;: &quot;scope-prev&quot;,
+  &quot;feature&quot;: 9,
+  &quot;state&quot;: &quot;different&quot;,
+  &quot;reason&quot;: &quot;동일 입력의 실제 버퍼·커서·선택 결과 차이&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;scope-prev&quot;,
+    &quot;feature&quot;: 9,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 33,
+      &quot;selectionStart&quot;: 33,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 0,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;scope-prev&quot;,
+    &quot;feature&quot;: 9,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 33,
+      &quot;selectionStart&quot;: 33,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+      &quot;caret&quot;: 17,
+      &quot;selectionStart&quot;: 17,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/scope-prev-before.png"><img loading="lazy" src="VA-project2/scope-prev-before.png"></a><a href="CA-project/scope-prev-before.png"><img loading="lazy" src="CA-project/scope-prev-before.png"></a></div><div><a href="VA-project2/scope-prev-after.png"><img loading="lazy" src="VA-project2/scope-prev-after.png"></a><a href="CA-project/scope-prev-after.png"><img loading="lazy" src="CA-project/scope-prev-after.png"></a></div><div></div></details><details><summary class="unverified">toggle-braces · 기능 34 · unverified</summary><p>명령 비활성·실행 실패</p><pre>{
+  &quot;id&quot;: &quot;toggle-braces&quot;,
+  &quot;feature&quot;: 34,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;명령 비활성·실행 실패&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;toggle-braces&quot;,
+    &quot;feature&quot;: 34,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;void Probe() { if (true) Call(); }\r\n&quot;,
+      &quot;caret&quot;: 32,
+      &quot;selectionStart&quot;: 25,
+      &quot;selectionLength&quot;: 7,
+      &quot;selectedText&quot;: &quot;Call();&quot;
+    },
+    &quot;after&quot;: null,
+    &quot;undo&quot;: null,
+    &quot;error&quot;: &quot;System.Runtime.InteropServices.COMException (0x80004005): \&quot;VAssistX.BracesToggle\&quot; 명령은 사용할 수 없습니다.\r\n   위치: EnvDTE._DTE.ExecuteCommand(String CommandName, String CommandArgs)\r\n   위치: ShortcutProbe.RunPaired(DTE d, Int32 pid, String role, String root, String planFile)&quot;,
+    &quot;executed&quot;: false
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;toggle-braces&quot;,
+    &quot;feature&quot;: 34,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Probe() { if (true) Call(); }\r\n&quot;,
+      &quot;caret&quot;: 32,
+      &quot;selectionStart&quot;: 25,
+      &quot;selectionLength&quot;: 7,
+      &quot;selectedText&quot;: &quot;Call();&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Probe() { if (true) { Call(); } }\r\n&quot;,
+      &quot;caret&quot;: 36,
+      &quot;selectionStart&quot;: 25,
+      &quot;selectionLength&quot;: 11,
+      &quot;selectedText&quot;: &quot;{ Call(); }&quot;
+    },
+    &quot;undo&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;void Probe() { if (true) Call(); }\r\n&quot;,
+      &quot;caret&quot;: 32,
+      &quot;selectionStart&quot;: 25,
+      &quot;selectionLength&quot;: 7,
+      &quot;selectedText&quot;: &quot;Call();&quot;
+    },
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/toggle-braces-before.png"><img loading="lazy" src="VA-project2/toggle-braces-before.png"></a><a href="CA-project/toggle-braces-before.png"><img loading="lazy" src="CA-project/toggle-braces-before.png"></a></div><div><a href="CA-project/toggle-braces-after.png"><img loading="lazy" src="CA-project/toggle-braces-after.png"></a></div><div><a href="CA-project/toggle-braces-undo.png"><img loading="lazy" src="CA-project/toggle-braces-undo.png"></a></div></details><details><summary class="unverified">document-method · 기능 40 · unverified</summary><p>명령 비활성·실행 실패</p><pre>{
+  &quot;id&quot;: &quot;document-method&quot;,
+  &quot;feature&quot;: 40,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;명령 비활성·실행 실패&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;document-method&quot;,
+    &quot;feature&quot;: 40,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;int Sum(int left, int right);\r\n&quot;,
+      &quot;caret&quot;: 29,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 29,
+      &quot;selectedText&quot;: &quot;int Sum(int left, int right);&quot;
+    },
+    &quot;after&quot;: null,
+    &quot;undo&quot;: null,
+    &quot;error&quot;: &quot;System.Runtime.InteropServices.COMException (0x80004005): \&quot;VAssistX.RefactorDocumentMethod\&quot; 명령은 사용할 수 없습니다.\r\n   위치: EnvDTE._DTE.ExecuteCommand(String CommandName, String CommandArgs)\r\n   위치: ShortcutProbe.RunPaired(DTE d, Int32 pid, String role, String root, String planFile)&quot;,
+    &quot;executed&quot;: false
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;document-method&quot;,
+    &quot;feature&quot;: 40,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;int Sum(int left, int right);\r\n&quot;,
+      &quot;caret&quot;: 29,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 29,
+      &quot;selectedText&quot;: &quot;int Sum(int left, int right);&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;/**\r\n * @brief \r\n * @param left \r\n * @param right \r\n * @return \r\n */\r\nint Sum(int left, int right);\r\n&quot;,
+      &quot;caret&quot;: 70,
+      &quot;selectionStart&quot;: 70,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;int Sum(int left, int right);\r\n&quot;,
+      &quot;caret&quot;: 29,
+      &quot;selectionStart&quot;: 0,
+      &quot;selectionLength&quot;: 29,
+      &quot;selectedText&quot;: &quot;int Sum(int left, int right);&quot;
+    },
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/document-method-before.png"><img loading="lazy" src="VA-project2/document-method-before.png"></a><a href="CA-project/document-method-before.png"><img loading="lazy" src="CA-project/document-method-before.png"></a></div><div><a href="CA-project/document-method-after.png"><img loading="lazy" src="CA-project/document-method-after.png"></a></div><div><a href="CA-project/document-method-undo.png"><img loading="lazy" src="CA-project/document-method-undo.png"></a></div></details><details><summary class="unverified">create-implementation · 기능 38 · unverified</summary><p>명령 비활성·실행 실패</p><pre>{
+  &quot;id&quot;: &quot;create-implementation&quot;,
+  &quot;feature&quot;: 38,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;명령 비활성·실행 실패&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;create-implementation&quot;,
+    &quot;feature&quot;: 38,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;class Audit { public: void Update(); };\r\n&quot;,
+      &quot;caret&quot;: 36,
+      &quot;selectionStart&quot;: 22,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;void Update();&quot;
+    },
+    &quot;after&quot;: null,
+    &quot;undo&quot;: null,
+    &quot;error&quot;: &quot;System.Runtime.InteropServices.COMException (0x80004005): \&quot;VAssistX.RefactorCreateImplementation\&quot; 명령은 사용할 수 없습니다.\r\n   위치: EnvDTE._DTE.ExecuteCommand(String CommandName, String CommandArgs)\r\n   위치: ShortcutProbe.RunPaired(DTE d, Int32 pid, String role, String root, String planFile)&quot;,
+    &quot;executed&quot;: false
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;create-implementation&quot;,
+    &quot;feature&quot;: 38,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;class Audit { public: void Update(); };\r\n&quot;,
+      &quot;caret&quot;: 36,
+      &quot;selectionStart&quot;: 22,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;void Update();&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;class Audit { public: void Update(); };\r\n\r\nvoid Audit::Update()\r\n{\r\n    throw \&quot;Not implemented\&quot;;\r\n}\r\n&quot;,
+      &quot;caret&quot;: 101,
+      &quot;selectionStart&quot;: 41,
+      &quot;selectionLength&quot;: 60,
+      &quot;selectedText&quot;: &quot;\r\nvoid Audit::Update()\r\n{\r\n    throw \&quot;Not implemented\&quot;;\r\n}\r\n&quot;
+    },
+    &quot;undo&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;class Audit { public: void Update(); };\r\n&quot;,
+      &quot;caret&quot;: 36,
+      &quot;selectionStart&quot;: 22,
+      &quot;selectionLength&quot;: 14,
+      &quot;selectedText&quot;: &quot;void Update();&quot;
+    },
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/create-implementation-before.png"><img loading="lazy" src="VA-project2/create-implementation-before.png"></a><a href="CA-project/create-implementation-before.png"><img loading="lazy" src="CA-project/create-implementation-before.png"></a></div><div><a href="CA-project/create-implementation-after.png"><img loading="lazy" src="CA-project/create-implementation-after.png"></a></div><div><a href="CA-project/create-implementation-undo.png"><img loading="lazy" src="CA-project/create-implementation-undo.png"></a></div></details><details><summary class="different">comment-continuation · 기능 43 · different</summary><p>동일 입력의 실제 버퍼·커서·선택 결과 차이</p><pre>{
+  &quot;id&quot;: &quot;comment-continuation&quot;,
+  &quot;feature&quot;: 43,
+  &quot;state&quot;: &quot;different&quot;,
+  &quot;reason&quot;: &quot;동일 입력의 실제 버퍼·커서·선택 결과 차이&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;comment-continuation&quot;,
+    &quot;feature&quot;: 43,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;// note&quot;,
+      &quot;caret&quot;: 7,
+      &quot;selectionStart&quot;: 7,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;// note&quot;,
+      &quot;caret&quot;: 7,
+      &quot;selectionStart&quot;: 7,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: &quot;System.Runtime.InteropServices.COMException (0x80004005): \&quot;Edit.Undo\&quot; 명령은 사용할 수 없습니다.\r\n   위치: EnvDTE._DTE.ExecuteCommand(String CommandName, String CommandArgs)\r\n   위치: ShortcutProbe.RunPaired(DTE d, Int32 pid, String role, String root, String planFile)&quot;,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;comment-continuation&quot;,
+    &quot;feature&quot;: 43,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;// note&quot;,
+      &quot;caret&quot;: 7,
+      &quot;selectionStart&quot;: 7,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;// note\r\n&quot;,
+      &quot;caret&quot;: 9,
+      &quot;selectionStart&quot;: 9,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;// note&quot;,
+      &quot;caret&quot;: 7,
+      &quot;selectionStart&quot;: 7,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/comment-continuation-before.png"><img loading="lazy" src="VA-project2/comment-continuation-before.png"></a><a href="CA-project/comment-continuation-before.png"><img loading="lazy" src="CA-project/comment-continuation-before.png"></a></div><div><a href="VA-project2/comment-continuation-after.png"><img loading="lazy" src="VA-project2/comment-continuation-after.png"></a><a href="CA-project/comment-continuation-after.png"><img loading="lazy" src="CA-project/comment-continuation-after.png"></a></div><div><a href="CA-project/comment-continuation-undo.png"><img loading="lazy" src="CA-project/comment-continuation-undo.png"></a></div></details><details><summary class="unverified">acronym · 기능 42 · unverified</summary><p>양쪽 무반응은 통과 아님</p><pre>{
+  &quot;id&quot;: &quot;acronym&quot;,
+  &quot;feature&quot;: 42,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;양쪽 무반응은 통과 아님&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;acronym&quot;,
+    &quot;feature&quot;: 42,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { ALTN }\r\n&quot;,
+      &quot;caret&quot;: 49,
+      &quot;selectionStart&quot;: 49,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { ALTN }\r\n&quot;,
+      &quot;caret&quot;: 49,
+      &quot;selectionStart&quot;: 49,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;acronym&quot;,
+    &quot;feature&quot;: 42,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { ALTN }\r\n&quot;,
+      &quot;caret&quot;: 49,
+      &quot;selectionStart&quot;: 49,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { ALTN }\r\n&quot;,
+      &quot;caret&quot;: 49,
+      &quot;selectionStart&quot;: 49,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/acronym-before.png"><img loading="lazy" src="VA-project2/acronym-before.png"></a><a href="CA-project/acronym-before.png"><img loading="lazy" src="CA-project/acronym-before.png"></a></div><div><a href="VA-project2/acronym-after.png"><img loading="lazy" src="VA-project2/acronym-after.png"></a><a href="CA-project/acronym-after.png"><img loading="lazy" src="CA-project/acronym-after.png"></a></div><div></div></details><details><summary class="unverified">substring-shorthand · 기능 50 · unverified</summary><p>양쪽 무반응은 통과 아님</p><pre>{
+  &quot;id&quot;: &quot;substring-shorthand&quot;,
+  &quot;feature&quot;: 50,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;양쪽 무반응은 통과 아님&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;substring-shorthand&quot;,
+    &quot;feature&quot;: 50,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { LongType }\r\n&quot;,
+      &quot;caret&quot;: 53,
+      &quot;selectionStart&quot;: 53,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { LongType }\r\n&quot;,
+      &quot;caret&quot;: 53,
+      &quot;selectionStart&quot;: 53,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;substring-shorthand&quot;,
+    &quot;feature&quot;: 50,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { LongType }\r\n&quot;,
+      &quot;caret&quot;: 53,
+      &quot;selectionStart&quot;: 53,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditLongTypeName {};\r\nvoid Probe() { LongType }\r\n&quot;,
+      &quot;caret&quot;: 53,
+      &quot;selectionStart&quot;: 53,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/substring-shorthand-before.png"><img loading="lazy" src="VA-project2/substring-shorthand-before.png"></a><a href="CA-project/substring-shorthand-before.png"><img loading="lazy" src="CA-project/substring-shorthand-before.png"></a></div><div><a href="VA-project2/substring-shorthand-after.png"><img loading="lazy" src="VA-project2/substring-shorthand-after.png"></a><a href="CA-project/substring-shorthand-after.png"><img loading="lazy" src="CA-project/substring-shorthand-after.png"></a></div><div></div></details><details><summary class="different">dot-to-arrow · 기능 69 · different</summary><p>동일 입력의 실제 버퍼·커서·선택 결과 차이</p><pre>{
+  &quot;id&quot;: &quot;dot-to-arrow&quot;,
+  &quot;feature&quot;: 69,
+  &quot;state&quot;: &quot;different&quot;,
+  &quot;reason&quot;: &quot;동일 입력의 실제 버퍼·커서·선택 결과 차이&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;dot-to-arrow&quot;,
+    &quot;feature&quot;: 69,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditNode { int Value; };\r\nvoid Probe() { AuditNode* pointer = nullptr; pointer }\r\n&quot;,
+      &quot;caret&quot;: 86,
+      &quot;selectionStart&quot;: 86,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditNode { int Value; };\r\nvoid Probe() { AuditNode* pointer = nullptr; pointer-&gt; }\r\n&quot;,
+      &quot;caret&quot;: 88,
+      &quot;selectionStart&quot;: 88,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;dot-to-arrow&quot;,
+    &quot;feature&quot;: 69,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditNode { int Value; };\r\nvoid Probe() { AuditNode* pointer = nullptr; pointer }\r\n&quot;,
+      &quot;caret&quot;: 86,
+      &quot;selectionStart&quot;: 86,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditNode { int Value; };\r\nvoid Probe() { AuditNode* pointer = nullptr; pointer. }\r\n&quot;,
+      &quot;caret&quot;: 87,
+      &quot;selectionStart&quot;: 87,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/dot-to-arrow-before.png"><img loading="lazy" src="VA-project2/dot-to-arrow-before.png"></a><a href="CA-project/dot-to-arrow-before.png"><img loading="lazy" src="CA-project/dot-to-arrow-before.png"></a></div><div><a href="VA-project2/dot-to-arrow-after.png"><img loading="lazy" src="VA-project2/dot-to-arrow-after.png"></a><a href="CA-project/dot-to-arrow-after.png"><img loading="lazy" src="CA-project/dot-to-arrow-after.png"></a></div><div></div></details><details><summary class="unverified">repair-case · 기능 73 · unverified</summary><p>대소문자 교정이 실제 발동하지 않음</p><pre>{
+  &quot;id&quot;: &quot;repair-case&quot;,
+  &quot;feature&quot;: 73,
+  &quot;state&quot;: &quot;unverified&quot;,
+  &quot;reason&quot;: &quot;대소문자 교정이 실제 발동하지 않음&quot;,
+  &quot;VA&quot;: {
+    &quot;id&quot;: &quot;repair-case&quot;,
+    &quot;feature&quot;: 73,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditWidget {};\r\nvoid Probe() { auditwidget }\r\n&quot;,
+      &quot;caret&quot;: 50,
+      &quot;selectionStart&quot;: 50,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 100,
+      &quot;text&quot;: &quot;struct AuditWidget {};\r\nvoid Probe() { auditwidget  }\r\n&quot;,
+      &quot;caret&quot;: 51,
+      &quot;selectionStart&quot;: 51,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  },
+  &quot;CA&quot;: {
+    &quot;id&quot;: &quot;repair-case&quot;,
+    &quot;feature&quot;: 73,
+    &quot;before&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditWidget {};\r\nvoid Probe() { auditwidget }\r\n&quot;,
+      &quot;caret&quot;: 50,
+      &quot;selectionStart&quot;: 50,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;after&quot;: {
+      &quot;zoom&quot;: 140,
+      &quot;text&quot;: &quot;struct AuditWidget {};\r\nvoid Probe() { auditwidget  }\r\n&quot;,
+      &quot;caret&quot;: 51,
+      &quot;selectionStart&quot;: 51,
+      &quot;selectionLength&quot;: 0,
+      &quot;selectedText&quot;: &quot;&quot;
+    },
+    &quot;undo&quot;: null,
+    &quot;error&quot;: null,
+    &quot;executed&quot;: true
+  }
+}</pre><div><a href="VA-project2/repair-case-before.png"><img loading="lazy" src="VA-project2/repair-case-before.png"></a><a href="CA-project/repair-case-before.png"><img loading="lazy" src="CA-project/repair-case-before.png"></a></div><div><a href="VA-project2/repair-case-after.png"><img loading="lazy" src="VA-project2/repair-case-after.png"></a><a href="CA-project/repair-case-after.png"><img loading="lazy" src="CA-project/repair-case-after.png"></a></div><div></div></details><h2>전체 108개</h2><p>VA-F001 Find by Context — unverified</p><p>VA-F002 Find References — unverified</p><p>VA-F003 Find Symbol in Solution — unverified</p><p>VA-F004 GoTo Implementation — unverified</p><p>VA-F005 GoTo Member — unverified</p><p>VA-F006 GoTo Related — unverified</p><p>VA-F007 Highlight Current Line — unverified</p><p>VA-F008 List Methods in File — unverified</p><p>VA-F009 Move Scope — different</p><p>VA-F010 Navigate Back and Forward — unverified</p><p>VA-F011 Open Corresponding File — unverified</p><p>VA-F012 Open File in Solution — unverified</p><p>VA-F013 VA Hashtags — unverified</p><p>VA-F014 VA Navigation Bar — unverified</p><p>VA-F015 Access to Refactoring Commands — unverified</p><p>VA-F016 Change Signature — unverified</p><p>VA-F017 Convert Between Pointer and Instance — unverified</p><p>VA-F018 Encapsulate Field — unverified</p><p>VA-F019 Extract Method — unverified</p><p>VA-F020 Introduce Variable — unverified</p><p>VA-F021 Move Implementation to Header File — unverified</p><p>VA-F022 Move Implementation to Source File — unverified</p><p>VA-F023 Move Method Implementations to Source File — unverified</p><p>VA-F024 Move Selection to New File — unverified</p><p>VA-F025 Rename — different</p><p>VA-F026 Rename Files — unverified</p><p>VA-F027 Simplify Instance Declaration — unverified</p><p>VA-F028 Add Forward Declaration — unverified</p><p>VA-F029 Add Member — unverified</p><p>VA-F030 Add Missing Case Statements — unverified</p><p>VA-F031 Add Similar Member — unverified</p><p>VA-F032 Add Using Directive — unverified</p><p>VA-F033 Add include Directive — unverified</p><p>VA-F034 Add/Remove Braces — unverified</p><p>VA-F035 Create Declaration — unverified</p><p>VA-F036 Create File — unverified</p><p>VA-F037 Create from Usage — unverified</p><p>VA-F038 Create Implementation — unverified</p><p>VA-F039 Create Method Implementations — unverified</p><p>VA-F040 Document Method — unverified</p><p>VA-F041 Implement Interface / Virtual Methods — unverified</p><p>VA-F042 Acronyms — unverified</p><p>VA-F043 Auto-Extend Multi-Line Comments — different</p><p>VA-F044 Enhanced Listboxes — representative-match</p><p>VA-F045 Format After Paste — unverified</p><p>VA-F046 Insert () and Closing Brackets and Quotes — representative-match</p><p>VA-F047 Insert _ After m and Shift — unverified</p><p>VA-F048 Multiple Clipboards — unverified</p><p>VA-F049 Reset Editor Zoom — representative-match</p><p>VA-F050 Shorthand — unverified</p><p>VA-F051 Smart Select — different</p><p>VA-F052 Smart Suggestions — unverified</p><p>VA-F053 Sort Selected Lines — different</p><p>VA-F054 Suggestion Lists — unverified</p><p>VA-F055 Surround Selection — representative-match</p><p>VA-F056 Surround With — unverified</p><p>VA-F057 Column Indicator — unverified</p><p>VA-F058 Context Field — unverified</p><p>VA-F059 Definition Field — unverified</p><p>VA-F060 Enhanced Syntax Coloring — unverified</p><p>VA-F061 Local Symbols in Bold — unverified</p><p>VA-F062 Highlight Find Results — unverified</p><p>VA-F063 Highlight Matching Words — unverified</p><p>VA-F064 Highlight References to Symbol Under Cursor — unverified</p><p>VA-F065 Parameter Info — unverified</p><p>VA-F066 Print in Color — unverified</p><p>VA-F067 Quick Info — unverified</p><p>VA-F068 System Symbols in Italics — unverified</p><p>VA-F069 Convert Dot to -&gt; — different</p><p>VA-F070 Highlight Files in Output Window — unverified</p><p>VA-F071 Highlight Matching Braces and Parentheses — unverified</p><p>VA-F072 Highlight Mismatching Braces and Parentheses — unverified</p><p>VA-F073 Repair Case — unverified</p><p>VA-F074 Underline Spelling Errors — unverified</p><p>VA-F075 Underline Unknown Symbols — unverified</p><p>VA-F076 Code Inspection Settings — unverified</p><p>VA-F077 Code Issues in the Editor — unverified</p><p>VA-F078 Quick Fixes in the Editor — unverified</p><p>VA-F079 Quick Fixes in a Tool Window — unverified</p><p>VA-F080 VA Snippets — unverified</p><p>VA-F081 for Refactoring — unverified</p><p>VA-F082 for Smart Suggestions — unverified</p><p>VA-F083 for Surround With — unverified</p><p>VA-F084 with Shortcuts — unverified</p><p>VA-F085 Create from Selection — unverified</p><p>VA-F086 Environment Placeholders — unverified</p><p>VA-F087 Input Placeholders — unverified</p><p>VA-F088 Reserved Strings — unverified</p><p>VA-F089 Address Resolver — unverified</p><p>VA-F090 PDB Explorer — unverified</p><p>VA-F091 VA Memory View — unverified</p><p>VA-F092 VA Step Filter — unverified</p><p>VA-F093 VA Outline — unverified</p><p>VA-F094 VA View — unverified</p><p>VA-F095 Simple Link Patterns — unverified</p><p>VA-F096 Complex Link Patterns — unverified</p><p>VA-F097 Connect to FogBugz and GitHub — unverified</p><p>VA-F098 Preview Files — unverified</p><p>VA-F099 Open Hyperlinks in an External Browser — unverified</p><p>VA-F100 Custom Plug-ins — unverified</p><p>VA-F101 Context Menus — unverified</p><p>VA-F102 Custom File Extensions — unverified</p><p>VA-F103 Keyboard Shortcuts — unverified</p><p>VA-F104 Mouse — unverified</p><p>VA-F105 Multiple Platforms — unverified</p><p>VA-F106 Non-Microsoft Build Processes — unverified</p><p>VA-F107 Parse Concurrency — unverified</p><p>VA-F108 Options Dialog — unverified</p><p>제안 시간: 10분. 이번 배치 실제 소요: 1346초 · 2026-10-18T21:38:35.316232+09:00. 전체 요청은 미완료이며 98개 미검증이 남아 있습니다. XERJ: 사용 — 검색 후보가 부정확해 rg와 현재 소스를 대조했습니다. 문서 기반 부분 명세 108/108이며 전체 역분석 완료율과 다릅니다.</p></html>
