@@ -3,8 +3,12 @@
 !Sync.ps1
 !README.md
 !.gitignore
+!.github/
+!.github/workflows/
+!.github/workflows/reports-pages.yml
 !리포트/
 !리포트/**
+리포트/.site/
 !tools/
 !tools/affinity-cli/
 !tools/affinity-cli/**

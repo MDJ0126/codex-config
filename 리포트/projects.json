@@ -1,7 +1,7 @@
 {
   "codex-config": {
     "name": "Codex 설정",
-    "logo": null
+    "logo": "assets/logos/report-archive-v1.png"
   },
   "affinity-cli": {
     "name": "Affinity CLI",
@@ -18,5 +18,13 @@
   "enginemigrator": {
     "name": "EngineMigrator",
     "logo": "assets/logos/enginemigrator.png"
+  },
+  "codeassist": {
+    "name": "CodeAssist",
+    "logo": "assets/logos/codeassist.png"
+  },
+  "windowsfoldersize": {
+    "name": "WindowsFolderSize",
+    "logo": "assets/logos/windowsfoldersize.png"
   }
 }

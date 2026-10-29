@@ -1,0 +1,127 @@
+<p><strong>정정: 별도 프로필의 이전 실패 실행은 C++ DB 안내창 간섭으로 무효입니다. <a href="verification-095.html">4/4 정상 재검증 결과</a>를 확인하세요.</strong></p><meta charset="utf-8"><style>body{background:#202124;color:#eee;font:15px sans-serif;padding:24px}td,th{border:1px solid #777;padding:8px}pre{white-space:pre-wrap}a{color:#f5ce52}</style><h1>실제 결과 자동 비교 0.0.94</h1><p>일반 VS 설치는 0.0.88임을 확인했습니다. 기존 일반 VS를 유지하고 별도 CodeAssistAudit 프로필에 0.0.93을 설치한 후 0.0.94 패키지를 스테이징·실행했습니다. 두 프로필 결과를 혼합해 제품 전체 점수로 표시하지 않습니다.</p><p>비교기 자체 반례 검사 8/8 통과. 실제 입력 3/4개, 버퍼·커서·선택 결과 일치 2/3개(66.67%), Undo 포함 엄격 통과 1/4개(25%). 범위 이동 1개는 포커스 단계 차단으로 미검증입니다. 기능 108개 전체 일치율이 아닙니다.</p><p>제품 수정: 지원되지 않는 이동 명령 안내를 모달창에서 상태 표시줄+로그로 변경해 후속 입력 차단을 방지했습니다. VS2019/Modern 패키지 빌드 및 6개 바이너리·48개 키 등록 검증 통과. 모달 제거 수정의 실제 해당 경로 재검증은 남았습니다.</p><h2>scope-next · 미통과</h2><pre>{
+  &quot;id&quot;: &quot;scope-next&quot;,
+  &quot;physicalInput&quot;: false,
+  &quot;expected&quot;: {
+    &quot;text&quot;: &quot;void First() {}\r\nvoid Second() {}\r\n&quot;,
+    &quot;caret&quot;: 17,
+    &quot;selectionStart&quot;: 17,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;,
+    &quot;zoom&quot;: 100,
+    &quot;activeFile&quot;: &quot;C:\\Projects\\CodeAssist\\.local\\parity-runs\\20261018-015759-745\\VA\\epoch-18976\\scope-next.cpp&quot;
+  },
+  &quot;before&quot;: null,
+  &quot;after&quot;: null,
+  &quot;undo&quot;: null,
+  &quot;bufferCursorSelectionMatch&quot;: false,
+  &quot;undoRequired&quot;: false,
+  &quot;undoMatchesVA&quot;: false,
+  &quot;passed&quot;: false,
+  &quot;error&quot;: &quot;Editor does not have keyboard focus&quot;,
+  &quot;oracleFile&quot;: &quot;.local\\parity-runs\\20261018-015759-745\\VA.results.json&quot;
+}</pre><h2>pair-insert · 통과</h2><pre>{
+  &quot;id&quot;: &quot;pair-insert&quot;,
+  &quot;physicalInput&quot;: true,
+  &quot;expected&quot;: {
+    &quot;text&quot;: &quot;()&quot;,
+    &quot;caret&quot;: 1,
+    &quot;selectionStart&quot;: 1,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;,
+    &quot;zoom&quot;: 100,
+    &quot;activeFile&quot;: &quot;C:\\Projects\\CodeAssist\\.local\\parity-runs\\20261018-015759-745\\VA\\epoch-18976\\pair-insert.cpp&quot;
+  },
+  &quot;before&quot;: {
+    &quot;text&quot;: &quot;&quot;,
+    &quot;caret&quot;: 0,
+    &quot;selectionStart&quot;: 0,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;
+  },
+  &quot;after&quot;: {
+    &quot;text&quot;: &quot;()&quot;,
+    &quot;caret&quot;: 1,
+    &quot;selectionStart&quot;: 1,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;
+  },
+  &quot;undo&quot;: null,
+  &quot;bufferCursorSelectionMatch&quot;: true,
+  &quot;undoRequired&quot;: false,
+  &quot;undoMatchesVA&quot;: false,
+  &quot;passed&quot;: true,
+  &quot;error&quot;: null,
+  &quot;oracleFile&quot;: &quot;.local\\parity-runs\\20261018-015759-745\\VA.results.json&quot;
+}</pre><a href="validation/behavior-094-installed-retry/pair-insert-before.png">before 촬영</a> <a href="validation/behavior-094-installed-retry/pair-insert-after.png">after 촬영</a> <h2>smart-select · 미통과</h2><pre>{
+  &quot;id&quot;: &quot;smart-select&quot;,
+  &quot;physicalInput&quot;: true,
+  &quot;expected&quot;: {
+    &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+    &quot;caret&quot;: 30,
+    &quot;selectionStart&quot;: 16,
+    &quot;selectionLength&quot;: 14,
+    &quot;selectedText&quot;: &quot;int value = 1;&quot;,
+    &quot;zoom&quot;: 100,
+    &quot;activeFile&quot;: &quot;C:\\Projects\\CodeAssist\\.local\\parity-runs\\20261018-015759-745\\VA\\epoch-18976\\smart-select.cpp&quot;
+  },
+  &quot;before&quot;: {
+    &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+    &quot;caret&quot;: 25,
+    &quot;selectionStart&quot;: 20,
+    &quot;selectionLength&quot;: 5,
+    &quot;selectedText&quot;: &quot;value&quot;
+  },
+  &quot;after&quot;: {
+    &quot;text&quot;: &quot;void Sample() { int value = 1; }\r\n&quot;,
+    &quot;caret&quot;: 25,
+    &quot;selectionStart&quot;: 20,
+    &quot;selectionLength&quot;: 5,
+    &quot;selectedText&quot;: &quot;value&quot;
+  },
+  &quot;undo&quot;: null,
+  &quot;bufferCursorSelectionMatch&quot;: false,
+  &quot;undoRequired&quot;: false,
+  &quot;undoMatchesVA&quot;: false,
+  &quot;passed&quot;: false,
+  &quot;error&quot;: null,
+  &quot;oracleFile&quot;: &quot;.local\\parity-runs\\20261018-015759-745\\VA.results.json&quot;
+}</pre><a href="validation/behavior-094-installed-retry/smart-select-before.png">before 촬영</a> <a href="validation/behavior-094-installed-retry/smart-select-after.png">after 촬영</a> <h2>surround-word · 미통과</h2><pre>{
+  &quot;id&quot;: &quot;surround-word&quot;,
+  &quot;physicalInput&quot;: true,
+  &quot;expected&quot;: {
+    &quot;text&quot;: &quot;int(value);&quot;,
+    &quot;caret&quot;: 10,
+    &quot;selectionStart&quot;: 10,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;,
+    &quot;zoom&quot;: 100,
+    &quot;activeFile&quot;: &quot;C:\\Projects\\CodeAssist\\.local\\parity-runs\\20261018-015759-745\\VA\\epoch-18976\\surround-word.cpp&quot;
+  },
+  &quot;before&quot;: {
+    &quot;text&quot;: &quot;int value;&quot;,
+    &quot;caret&quot;: 9,
+    &quot;selectionStart&quot;: 4,
+    &quot;selectionLength&quot;: 5,
+    &quot;selectedText&quot;: &quot;value&quot;
+  },
+  &quot;after&quot;: {
+    &quot;text&quot;: &quot;int(value);&quot;,
+    &quot;caret&quot;: 10,
+    &quot;selectionStart&quot;: 10,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;
+  },
+  &quot;undo&quot;: {
+    &quot;text&quot;: &quot;int(value);&quot;,
+    &quot;caret&quot;: 10,
+    &quot;selectionStart&quot;: 10,
+    &quot;selectionLength&quot;: 0,
+    &quot;selectedText&quot;: &quot;&quot;
+  },
+  &quot;bufferCursorSelectionMatch&quot;: true,
+  &quot;undoRequired&quot;: true,
+  &quot;undoMatchesVA&quot;: false,
+  &quot;passed&quot;: false,
+  &quot;error&quot;: null,
+  &quot;oracleFile&quot;: &quot;.local\\parity-runs\\20261018-015759-745\\VA.results.json&quot;
+}</pre><a href="validation/behavior-094-installed-retry/surround-word-before.png">before 촬영</a> <a href="validation/behavior-094-installed-retry/surround-word-after.png">after 촬영</a> <a href="validation/behavior-094-installed-retry/surround-word-undo.png">undo 촬영</a> <h2>실행</h2><pre>tools/ShortcutProbe/RunBehavior.ps1 -TargetProcessId &lt;검사용 VS PID&gt;</pre><p>원본 VA 증거 SHA256 검증, 실제 편집기 포커스 확인, 동일 입력·선택 설정, OS 키 전송, 버퍼/커서/선택/Undo 비교, 단계별 촬영, 실패 시 비정상 종료를 구현했습니다. 사용자 소스를 수정하지 않고 생성된 검사 파일만 편집했습니다. 임시 바인딩 3개 원복 확인.</p><p>미완료: 선택 확장 무반응, 감싸기 Undo, 범위 이동 포커스, 이름 바꾸기 단축키. 기존 68.25% 임시 종합 지수는 이번 엄격 검사 결과로 상향하지 않습니다.</p>

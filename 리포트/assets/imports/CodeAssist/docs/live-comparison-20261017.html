@@ -1,0 +1,16 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>VA·CA 실제 대조</title><style>body{font:16px/1.65 Segoe UI,sans-serif;max-width:1150px;margin:36px auto;padding:20px;background:#15171c;color:#e8e9ed}a{color:#ffdc63}details{padding:12px;border-bottom:1px solid #40434a}summary{cursor:pointer}table{width:100%;border-collapse:collapse}td,th{padding:12px;text-align:left;border:1px solid #40434a}td:last-child,th:last-child{min-width:70px;white-space:nowrap}.note{color:#ffc85b}img{max-width:100%}</style>
+<h1>VA·CA 실제 대조 — 2026-10-17</h1><p>서로 다른 Visual Studio 프로세스에서 동일한 3파일 fixture를 사용해 직접 실행했습니다. 전체 108개 기능의 동등성이나 성능을 보장하는 결과가 아닙니다.</p>
+<p>이번 결과 집합 일치: 5/5 (100.0%). 실행 기능 범위: 4/108 (3.70%). 전체 유사도: 미확인.</p><table><tr><th>기능 / 입력</th><th>VA</th><th>CA</th><th>결과 집합</th></tr>
+<tr><td>Open File in Solution / blank</td><td>FixtureActor.cpp, FixtureActor.h, main.cpp</td><td>FixtureActor.cpp, FixtureActor.h, main.cpp</td><td>일치</td></tr>
+<tr><td>Open File in Solution / Fixture -cpp</td><td>FixtureActor.h</td><td>FixtureActor.h</td><td>일치</td></tr>
+<tr><td>Find Symbol in Solution / blank</td><td>ABaseActor, ABaseActor.GetHealth, ABaseActor.GetWorld, ABaseActor.Health, AFixtureActor, AFixtureActor.Select, AFixtureActor.Select, AFixtureActor.Tick, AFixtureActor.World, GENERATED_BODY, main, TObjectPtr, TObjectPtr.-&gt;, TObjectPtr.Value, UCLASS, UFUNCTION, UPROPERTY, UWorld, UWorld.SpawnActor</td><td>ABaseActor, AFixtureActor, GENERATED_BODY, ABaseActor.GetHealth, ABaseActor.GetWorld, ABaseActor.Health, main, TObjectPtr.-&gt;, AFixtureActor.Select, AFixtureActor.Select, UWorld.SpawnActor, AFixtureActor.Tick, TObjectPtr, UCLASS, UFUNCTION, UPROPERTY, UWorld, TObjectPtr.Value, AFixtureActor.World</td><td>일치</td></tr>
+</table><section><h2>추가 실행 대조</h2><p>메서드 목록 5개(오버로드 중복 포함), 도구 모음의 cpp→h 이동이 양쪽에서 일치했습니다. 메서드 목록 UI는 서로 다릅니다. Alt+O 키 경로는 이번 자동화에서 확인하지 못했습니다.</p><p><a href="all-108-review-20261017.html">108개 전체 문서 요구·현재 코드·차이·미검증 표</a></p><p>참조 필터·시그니처 변경 범위·캡슐화 참조 치환에 기능 차이가 있습니다. 전체 동기화율은 산정하지 않았습니다.</p></section><h2>실제 차이</h2><ul>
+<li>Open File: VA has Solution only; CA has no such toggle.</li>
+<li>Current observed Fuzzy state: VA selected, CA unselected; factory defaults unverified.</li>
+<li>File picker columns, button placement and selection icons differ.</li>
+<li>Symbol display punctuation: VA dot and -&gt;, CA :: and operator-&gt;; result order differs.</li>
+<li>CA file picker title Korean but buttons/column labels English under current mixed language settings.</li>
+</ul><h2>남은 검증</h2><p>나머지 104개 기능, 편집·Undo·참조 변경 정확성, C# 등 언어별 동작, 양 테마·공장 기본값, 시작/증분 인덱싱 성능을 실행 대조해야 합니다. 기존 108개 부분 구현 매핑은 완전 구현 인증이 아닙니다.</p><p><a href="va-documentation-comparison.html">공식 문서와 같은 목차의 CA 비교 명세</a> · <a data-unavailable-href="true" title="원본에 없거나 공개 웹 자료가 아닌 참조">원본 접근성 트리·결과 JSON</a></p>
+<img alt="실제 대조 화면" src="validation/pc-verification-1792205854023-1.jpg">
+<img alt="실제 대조 화면" src="validation/pc-verification-1792205854024-2.jpg">
+</html>

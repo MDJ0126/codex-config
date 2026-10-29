@@ -1,0 +1,1 @@
+Initial sandboxed headless Edge launch closed before page load. Edge log: DualEngine SiteList temporary JSON could not replace its permanent profile file (error -5) under the sandbox temp directory. No guide rendering was passed by that run. Retrying with an explicit workspace-local isolated profile and native process permission.

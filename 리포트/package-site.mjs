@@ -1,0 +1,10 @@
+import { cp, mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const output=path.join(root,'.site');
+await mkdir(output,{recursive:true});
+for(const entry of ['index.html','assets','reports','posts'])await cp(path.join(root,entry),path.join(output,entry),{recursive:true});
+await writeFile(path.join(output,'.nojekyll'),'');
+await writeFile(path.join(output,'404.html'),'<!doctype html><html lang="ko"><meta charset="utf-8"><title>보고서를 찾을 수 없습니다</title><h1>보고서를 찾을 수 없습니다</h1><a href="/codex-config/">보고서 목록</a></html>');
+console.log('Packaged report site in 리포트/.site; configuration, tools, migration manifests and original backups are excluded.');

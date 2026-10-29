@@ -26,7 +26,7 @@ function markdown(s) {
   }
   if(list)out+='</ul>';if(code)throw new Error('Unclosed code fence');return out;
 }
-const shell = (title, body, prefix='') => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} · 작업 기록실</title><link rel="stylesheet" href="${prefix}assets/style.css"></head><body><header><a class="brand" href="${prefix}index.html"><span class="mark">R</span> 보고서 <small>WORKSPACE</small></a><span class="edition">작업 결과 · 버전 기록</span></header>${body}<footer><span>보고서 아카이브</span><span>날짜 및 버전별 기록</span></footer></body></html>`;
+const shell = (title, body, prefix='') => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} · 작업 기록실</title><link rel="icon" type="image/png" href="${prefix}assets/logos/report-archive-v1.png"><link rel="stylesheet" href="${prefix}assets/style.css"></head><body><header><a class="brand" href="${prefix}index.html"><img class="archive-brand-logo" src="${prefix}assets/logos/report-archive-v1.png" alt="보고서 아카이브 로고"> 보고서 <small>WORKSPACE</small></a><span class="edition">작업 결과 · 버전 기록</span></header>${body}<footer><span>보고서 아카이브</span><span>날짜 및 버전별 기록</span></footer></body></html>`;
 await mkdir(path.join(root,'reports'),{recursive:true});
 const projects=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
 const types=['작업 결과','버그','수정사항','검토','설정'];
