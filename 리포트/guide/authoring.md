@@ -106,6 +106,7 @@ format: tracefolio-v1
 node 리포트/build.mjs
 node 리포트/verify.mjs
 node 리포트/verify-migration.mjs
+node 리포트/verify-editorial.mjs
 node --test 리포트/tests/*.test.mjs
 ```
 

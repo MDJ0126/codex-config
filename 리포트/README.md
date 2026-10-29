@@ -1,84 +1,40 @@
 # Tracefolio — Reports & Issues
 
-## 새 게시물 작성 기준
+프로젝트별 결과·버그·수정 기록을 같은 게시물 형식으로 관리합니다.
 
-작성 전 [AI 게시물 작성 가이드](guide/authoring.md)를 읽으세요. 사이트의 [작성 가이드](https://mdj0126.github.io/codex-config/guide/)와 같은 원문입니다. 결과·버그 템플릿과 schema.json을 guide 폴더에서 제공합니다. 새 글은 `format: tracefolio-v1` 및 명시적인 state, 공통 섹션 순서를 사용합니다. 형식이 맞지 않으면 빌드가 중단됩니다. 과거 글의 legacy-v1 예외는 편집 매니페스트에 등록된 기존 파일에만 허용됩니다.
+- 공개 사이트: https://mdj0126.github.io/codex-config/
+- 사람·AI 공통 작성 가이드: [guide/authoring.md](guide/authoring.md)
+- 웹 가이드: https://mdj0126.github.io/codex-config/guide/
+- 결과 템플릿: [guide/template-report.md](guide/template-report.md)
+- 버그 템플릿: [guide/template-bug.md](guide/template-bug.md)
+- 메타데이터 스키마: [guide/schema.json](guide/schema.json)
 
-공통 Markdown 렌더러는 표, 인용, 순서 목록, 코드 블록, 이미지 설명과 자동 목차를 지원합니다. raw HTML과 실행 가능한 URL은 활성화하지 않습니다. 기존 원문은 originals, 편집 전 Markdown은 editorial-originals에 보존하며 두 폴더 모두 Pages 패키지에서 제외됩니다. 기존 과거 글에 없던 현재 검증 결과를 새로 만들지 않습니다.
-
-## 프로젝트별 파일 구조
+## 프로젝트별 파일
 
 ```text
-리포트/
-  projects/
-    pixora/
-      posts/       Markdown 원본
-      reports/     생성된 HTML
-      assets/      프로젝트 로고·첨부파일·이전 자료
-      originals/   변경하지 않은 원문 백업 (웹 패키지 제외)
-    codeassist/
-    designdatatable/
-    enginemigrator/
-    windowsfoldersize/
-    codex-config/
-    affinity-cli/
-  assets/brand/    Tracefolio 공통 브랜드
-  assets/style.css
-  assets/app.js
-  index.html
+projects/<project>/posts/                Markdown 원본
+projects/<project>/reports/              생성된 HTML
+projects/<project>/assets/               로고·첨부·이전 자료
+projects/<project>/originals/            이전 원문 백업
+projects/<project>/editorial-originals/  공통 형식 편집 전 Markdown
+assets/brand/                           공통 브랜드
+index.html                              메인 목록
 ```
 
-`project` 값과 프로젝트 폴더 이름은 같아야 합니다. `layout.mjs`가 프로젝트 폴더에서 게시물을 수집하며 누락된 필수 메타데이터나 잘못된 위치는 빌드 오류가 됩니다. 과거 주소의 HTML은 이동 안내 파일이며 실제 보고서는 프로젝트 폴더 한 곳에서 관리합니다. 외부 주소는 그대로 유지합니다. 사이트의 표기는 Tracefolio이며 주황색 문서 보관함 심벌을 사용합니다.
+등록된 프로젝트 ID와 폴더·메타데이터의 project는 같아야 합니다. 원본과 편집 전 백업은 Pages 패키지에서 제외되지만 공개 Git 저장소에서는 읽을 수 있습니다. 예전 HTML 주소는 이동 안내로 유지합니다.
 
-외부 사이트: https://mdj0126.github.io/codex-config/
+## 작성·검증·배포
 
-main의 리포트 변경을 푸시하면 `.github/workflows/reports-pages.yml`이 빌드·링크·검색·원본 해시 검증 후 GitHub Pages로 자동 배포합니다. 설정 파일과 도구·이전 매니페스트·프로젝트별 원문 백업은 Pages 패키지에서 제외합니다. 공개 Git 저장소의 원문 백업은 별도로 읽을 수 있습니다.
+새 글은 가이드를 먼저 읽고 템플릿에서 시작합니다. format은 tracefolio-v1이며 작업 결과 → 변경 내용 → 검증 → 남은 사항 → 작업 시간 순서를 사용합니다. 본문에 H1 제목을 중복 작성하지 않습니다. 메타데이터·버그 필수 항목과 과거 예외 무단 사용은 빌드에서 확인합니다. 과거 글은 등록된 legacy-v1 목록으로만 허용합니다.
 
-`index.html`을 브라우저에서 열면 게시글 목록을 볼 수 있습니다. 별도의 설치나 서버 없이 파일로 열 수 있습니다. 공개 인터넷 배포는 별도 작업입니다.
-
-## 보고서 추가
-
-1. `projects/<project>/posts/YYYY-MM-DD-작업명-vN.N.N.md`를 새로 만듭니다. 기존 파일을 덮어쓰지 않습니다.
-2. 아래 메타데이터와 본문을 작성합니다.
-3. 저장소 루트에서 `node 리포트/build.mjs`를 실행합니다.
-4. `리포트/index.html`과 해당 보고서를 열어 확인하고 원본과 생성물을 함께 커밋합니다.
-
-```markdown
----
-title: 작업 결과 제목
-date: 2026-10-29T18:00:00+09:00
-version: v1.0.0
-status: 완료
-category: 개발
-project: pixora
-type: 작업 결과
-summary: 목록에 표시할 짧은 설명
----
-# 작업 결과 제목
-
-## 결과
-- 실제 완료한 내용
-
-## 검증 근거
-- 실행과 관찰 결과
-
-## 남은 사항
-- 미확인 항목 또는 없음
-
-## 작업 시간
-- 제안 시간: 시작 시 제시한 예상 시간
-- 실제로 완료된 시간: 실제 소요 시간 및 완료 시각과 시간대
-- XERJ: 사용 / 미사용 / 실패 — 사유
+```sh
+node 리포트/build.mjs
+node 리포트/verify.mjs
+node 리포트/verify-migration.mjs
+node 리포트/verify-editorial.mjs
+node --test 리포트/tests/*.test.mjs
 ```
 
-지원하는 Markdown은 제목 1~3단계, 문단, 불릿 목록, 굵게, 인라인 코드, 코드 블록입니다. HTML과 실행 가능한 링크를 렌더링하지 않습니다. 표 문법은 지원하지 않습니다. HTTPS/HTTP 링크와 assets/reports/posts 아래의 상대 링크·이미지는 지원하며 실행 가능한 URL과 raw HTML은 계속 차단합니다. 빌드는 Node.js 기본 모듈만 사용합니다. 외부 글꼴은 선택 사항이며 오프라인에서는 시스템 글꼴을 사용합니다.
+공통 렌더러는 표·코드·이미지 설명·인용·목록·목차를 지원하며 raw HTML과 실행 URL은 비활성 처리합니다. HTML·CSS를 게시물마다 별도로 만들지 않습니다. Marked 17.0.5는 vendor/marked에 라이선스와 함께 보관합니다.
 
-전체 게시물은 최신 작성일 순이며 검색과 분류 필터를 함께 사용할 수 있습니다. 원본 저장 버튼으로 Markdown을 내려받을 수 있습니다. `예제` 상태는 실제 작업 기록과 구분됩니다.
-
-## 프로젝트와 보고서 유형
-
-모든 결과 보고는 이 폴더에서 관리합니다. `project`와 `type`은 필수입니다. `project`는 projects.json의 ID를 사용하고 `type`은 작업 결과, 버그, 수정사항, 검토, 설정 중 하나입니다. category는 개발·QA 등 세부 분야입니다. 프로젝트, 유형, 검색을 동시에 적용할 수 있습니다.
-
-프로젝트 로고는 원본 프로젝트에서 가져와 assets/logos에 보관합니다. 출처는 assets/logos/sources.json에 기록하며 projects.json의 logo는 리포트 폴더를 기준으로 한 상대 경로입니다. 확인된 로고가 없으면 null로 두며 화면에는 프로젝트 첫 글자를 대체 표시합니다. 대체 표시는 공식 로고가 아닙니다. 처음 만든 디자인 예제 2개는 삭제했습니다. 제품의 실제 기능인 사용 예제 구현 보고서는 유지합니다.
-
-등록 후 `node 리포트/build.mjs`와 `node 리포트/verify.mjs`를 실행합니다. 등록하지 않은 프로젝트나 잘못된 유형은 빌드 오류로 처리합니다.
+검증 후 승인된 변경을 main에 푸시하면 GitHub Actions가 빌드·검사·포장·Pages 배포를 수행합니다. 푸시와 배포 성공을 구분하고 공개 URL까지 확인합니다. 모든 작업 결과는 이 사이트에 기록하고 채팅에는 핵심 결과와 HTML 링크를 안내합니다.
