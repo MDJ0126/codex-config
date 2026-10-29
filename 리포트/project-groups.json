@@ -1,6 +1,13 @@
 {
   "products": {
-    "name": "제품 프로젝트",
-    "projects": ["pixora", "turnroom", "designdatatable"]
+    "name": "턴룸",
+    "projects": [
+      "turnroom",
+      "pixora",
+      "designdatatable"
+    ],
+    "labels": {
+      "turnroom": "공통 · 통합 작업"
+    }
   }
 }
