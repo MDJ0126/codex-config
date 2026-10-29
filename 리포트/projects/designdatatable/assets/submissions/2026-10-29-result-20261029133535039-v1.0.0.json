@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "result",
+    "title": "누적 작업 커밋 정리 및 원격 푸시",
+    "summary": "기능·에셋과 문서·검증을 두 커밋으로 정리해 푸시하고 원격 해시 일치를 확인했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "31f1b8cc: 기능·에셋·예제·폴더 정리.\n6a43d106: 다국어 문서·한글 QA·자동화 도구.\n엔진 로그·생성 IDE 프로젝트·bin/obj·미검토 Raw 캡처는 제외했습니다. Git LFS는 사용하지 않았습니다.",
+    "verification": "git push 성공. git ls-remote 원격 해시와 로컬 HEAD 동일. 크기 제한 및 인증정보·개인 이메일 패턴 검사 통과. 추가 검사로 로컬 빌드·Raw 113개 제외. 이전 빌드·QA를 이번 실행으로 보고하지 않습니다.",
+    "remaining": "ProjectSettings/TimeManager.asset, SceneTemplateSettings.json은 관련성이 확인되지 않아 로컬에 보존했습니다. 마켓 제출은 수행하지 않았습니다.",
+    "outcome": "origin/codex/sample-and-workbook-improvements 푸시 완료. 최종 6a43d1061cee485494f2b22bcca345fbad4bb2fe.",
+    "proposedTime": "3–7분",
+    "actualTime": "5분 49초 · 2026-10-29 22:35:34 KST (프로젝트 푸시 완료)",
+    "xerjEvidence": "코드 검색 불필요 — Git 변경·원격 상태 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
