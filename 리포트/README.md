@@ -1,5 +1,9 @@
 # 작업 기록실
 
+외부 사이트: https://mdj0126.github.io/codex-config/
+
+main의 리포트 변경을 푸시하면 `.github/workflows/reports-pages.yml`이 빌드·링크·검색·원본 해시 검증 후 GitHub Pages로 자동 배포합니다. 설정 파일과 도구·이전 매니페스트·원문 백업은 Pages 패키지에서 제외합니다. 공개 Git 저장소의 원문 백업은 별도로 읽을 수 있습니다.
+
 `index.html`을 브라우저에서 열면 게시글 목록을 볼 수 있습니다. 별도의 설치나 서버 없이 파일로 열 수 있습니다. 공개 인터넷 배포는 별도 작업입니다.
 
 ## 보고서 추가

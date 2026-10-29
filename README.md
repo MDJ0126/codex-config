@@ -1,5 +1,9 @@
 # Codex 전역 지침
 
+## 외부 보고서 사이트
+
+**https://mdj0126.github.io/codex-config/** 에서 프로젝트별 작업 결과·버그·수정사항을 볼 수 있습니다. 원본은 `리포트/posts/`의 Markdown이며 main에 푸시하면 GitHub Actions가 빌드·검증·배포합니다. 원문 보존과 이전 내역은 `리포트/originals/`, `리포트/migration/`에 있으며 Pages 패키지에는 포함하지 않습니다. Git 저장소 자체는 공개이므로 저장소에 커밋한 원문도 공개됩니다.
+
 ## Affinity 전용 CLI
 
 품질 우선 디자인 자동화를 위한 CLI를 [tools/affinity-cli/](tools/affinity-cli/README.md)에 보관합니다. 외부 npm 의존성 없이 Node.js 22 이상에서 실행하며, PowerShell 래퍼는 Codex 번들 Node도 찾습니다.
