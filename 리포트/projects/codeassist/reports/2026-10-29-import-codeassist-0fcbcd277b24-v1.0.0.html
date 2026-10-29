@@ -1,1 +1,132 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>옵션 페이지 이동 재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-17T17:22:08.883Z <span class="badge">기존 기록 이전</span></div><h1>옵션 페이지 이동 재검증</h1><p><a class="report-link" href="../assets/imports/docs/options-retest-20261018.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/options-retest-20261018.html</li><li>원본 SHA-256: a2954a3c31c6f18eb5bb2abcc7b929baa8bd2cfa20c5d70298fab84f3d5eb33c</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-0fcbcd277b24-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>옵션 페이지 이동 재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>옵션 페이지 이동 재검증</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">옵션 페이지 이동 재검증 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-17T17:22:08.883Z">2026년 10월 18일 오전 2:22 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>옵션 페이지 이동 재검증</p>
+<h2 id="section-1">옵션 페이지 이동 재검증</h2>
+<p>VA: 이번 최신 실행. CA: 같은 작업 중 먼저 완료한 20261018-021621-OptionsRetest 실행을 사용했습니다. 17개 입력 명세가 동일한지 확인했습니다. 최신 CA 재실행은 시작되지 않았으며, 같은 실행 ID의 완전 대조로 보고하지 않습니다. CA 원본 링크는 해당 이전 실행 폴더로 연결했습니다.</p>
+<p>검증된 양쪽 페이지 17/17 (100.0%). 이 비율은 옵션 페이지 이동 검증률이며 전체 기능 동기화율이 아닙니다.</p>
+<p>VA 옵션은 WPF 창이며 외부 UIA가 본문을 노출하지 않았습니다. 내부 WPF 트리에서 표시 텍스트를 찾아 선택하고, 전환 후 표시된 제목으로 판정합니다. 재생성돼 끊어진 트리 객체는 성공 근거로 삼지 않습니다. 숨겨진 컨트롤을 제외하고 표시된 체크박스/라디오 버튼을 읽었습니다. 설정을 적용하거나 저장하지 않았습니다.</p>
+<p>아래 항목 개수 차이는 표시 UI의 차이이며, 개수만으로 기능 부재를 확정하지 않습니다. Checkbox/RadioButton 포함; 텍스트 입력/목록/설명문은 제외했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>페이지</th>
+<th>양쪽 이동 확인</th>
+<th>VA 토글/라디오</th>
+<th>CA 토글/라디오</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Goto</td>
+<td>True</td>
+<td>6  실제 표시 항목    Select s_ymbol on Goto = True    Prefer _implementation on Goto = False    Goto _Related = False    _Goto = True    _Solution = False    _Project = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-001-dialog.png">화면 원본</a></td>
+<td>3  실제 표시 항목    Alt + click: Go to definition = Off    Show symbol Quick Info = On    Context Bar = On  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-001-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Highlighting</td>
+<td>True</td>
+<td>11  실제 표시 항목    Ra_y lines = False    _Background color = False    _Thin frame = True    Highlight c_urrent line with: = True    Highlight _solution file paths in build output window (C/C++) = True    Highlight mism_atching { and } = True    Highlight _matching { and } = True    Highlight _results of Quick Find and Find in Files = True    Highlight matching words when caret is in _comments and strings = False    Highlight _write and read references to symbol under cursor = False    _Highlight write references using = False  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-002-dialog.png">화면 원본</a></td>
+<td>6  실제 표시 항목    Highlight references under caret = Off    Highlight current line = On    Highlight matching braces = On    Highlight mismatching braces = On    Highlight find results = On    Highlight output filenames = On  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-002-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Display</td>
+<td>True</td>
+<td>16  실제 표시 항목    _Use &#39;/&#39; in navigation bar for include paths = False    Use last active document context for miscellaneous files = True    Keep both original and enhanced expansions = True    Format enhanced expansion = True    Use enhanced macro expansion = True    Format do_xygen comments in Quick Info tooltips = True    _Show tooltips for braces and structural keywords = True    Show _comments from source files when available = True    Show _Quick Info tooltips for more symbols = True    _Display indicator after column = False    _Alphabetically = True    _Occurrence = False    _Bottom = False    _Top = True    Display VA _Navigation Bar: = True    S_witch to integrated main menu = False  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-008-dialog.png">화면 원본</a></td>
+<td>2  실제 표시 항목    Show symbol Quick Info = On    Show Context Bar above the editor = On  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-008-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>VA Hashtags</td>
+<td>True</td>
+<td>3  실제 표시 항목    _Display global commands in the context menu of the VA Hashtags tool window = True    Allow VA Hashtags that consist solely of the alpha _characters of hexadecimal values = False    _Allow hyphens in VA Hashtags = False  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-013-dialog.png">화면 원본</a></td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-013-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Editor</td>
+<td>True</td>
+<td>20  실제 표시 항목    Double effective rate of _key repeat = False    _Insert __ after m and Shift = False    Convert _dot to -&gt; if operator -&gt; is overloaded = True    _Convert dot to -&gt; in C/C++ = True    Insert a space _when toggling a line into a comment = True    With _VA Snippets = True    # = True    { = True    ( = True    * = True    / = True    _Surround Selection via character toggles = True    on _the same line = False    _on the next line = False    after a _blank line = True    I_nsert () and closing } ) ] &quot; = True    _Extend multi-line comments = False    _Format after paste = True    Display _paste menu with = True    _Repair case = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-045-dialog.png">화면 원본</a></td>
+<td>15  실제 표시 항목    Repair type name case = Off    Format after paste = Off    Extend multi-line comments = Off    Insert () and closing brackets and quotes = On    after a blank line = None    on the next line = None    on the same line = None    Surround Selection via character toggles = On    / = On    * = On    ( = On    { = On    Insert a space when toggling a line into a comment = On    Convert pointer dot to arrow = Off    Insert underscore after m and Shift = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-045-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Enhanced Listboxes</td>
+<td>True</td>
+<td>11  실제 표시 항목    Default _Intellisense = True    _Visual Assist = False    _Enter = True    _Additional characters = False    _Tab = True    _List non-inherited entries first = False    _Bold non-inherited members = True    _Prefer Acronym matches = True    Allo_w Acronyms and Shorthand = True    _Shrink as you type = True    _Display filtering toolbar when hovering = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-052-dialog.png">화면 원본</a></td>
+<td>7  실제 표시 항목    Suggestion lists = On    Acronym completion = On    Shorthand completion = On    Snippet suggestions = On    Accept with Tab = On    Accept with Enter = On    Use Visual Studio default completion colors = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-052-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Coloring</td>
+<td>True</td>
+<td>9  실제 표시 항목    _Show system symbols in italics = True    Show local symbols in _bold = True    VA _Navigation Bar = True    _Views = True    _Object Browser = True    _Listboxes = True    _Tooltips = True    Text E_ditors = True    _Enable Enhanced Syntax Coloring = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-060-dialog.png">화면 원본</a></td>
+<td>2  실제 표시 항목    Enable enhanced symbol coloring = On    Use Visual Studio default completion colors = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-060-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Underlining</td>
+<td>True</td>
+<td>2  실제 표시 항목    _Underline unrecognized symbols using = False    Underline _spelling errors in comments and strings using = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-074-dialog.png">화면 원본</a></td>
+<td>1  실제 표시 항목    Enable basic file diagnostics = On  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-074-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Project-Wide</td>
+<td>True</td>
+<td>5  실제 표시 항목    Confirm before _applying all listed quick fixes = True    Parse what is in the editor before you _save = True    Skip the _Unreal Engine project when including all projects = True    Show the _Stats tab = False    Show the VA Code Inspection tool window when a question needs an answer = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-076-dialog.png">화면 원본</a></td>
+<td>4  실제 표시 항목    Ask in the notification bar = None    Project-wide basic inspection = None    Per-file inspection = None    Disable inspections = None  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-076-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Per-File</td>
+<td>True</td>
+<td>5  실제 표시 항목    Enable _while debugging = False    Even when on _battery power = True    _Reparse automatically = True    _Show ticks in vertical scroll bar = True    _Underline/dim code issues = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-077-dialog.png">화면 원본</a></td>
+<td>1  실제 표시 항목    Enable per-file inspection = On  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-077-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Code Generation</td>
+<td>True</td>
+<td>3  실제 표시 항목    Insert _open brace on new line during Introduce Variable and Add Braces = True    _Include default parameter values in generated C/C++ implementations = True    _Maintain order in header and source files for generated C/C++ implementations = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-081-dialog.png">화면 원본</a></td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-081-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Debug Assistance</td>
+<td>True</td>
+<td>3  실제 표시 항목    _%APPDATA%\VisualAssist\ = True    $(_SolutionDir).va\ = False    _Enable debugger integration required by VA Step Filter for native C/C++ = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-092-dialog.png">화면 원본</a></td>
+<td>1  실제 표시 항목    Step filter enabled = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-092-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Source Links</td>
+<td>True</td>
+<td>8  실제 표시 항목    = True    = True    = False    = False    = False    = False    S_how action = True    _Enable Source Links = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-095-dialog.png">화면 원본</a></td>
+<td>2  실제 표시 항목    Enabled = On    Regular expression = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-095-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Projects and Files</td>
+<td>True</td>
+<td>6  실제 표시 항목    Display project nodes in _Rename dialog references lists = True    _Display project nodes in Find References results = True    Enumerate project references _thoroughly = True    if Solution is _not empty = False    if _Solution is empty = True    _Parse files without extensions as headers = False  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-102-dialog.png">화면 원본</a></td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-102-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Mouse</td>
+<td>True</td>
+<td>7  실제 표시 항목    _Display help content on hover in options dialog = True    Override Ctrl+Shift+_Wheel in text editor with = False    _Override Ctrl+Wheel in text editor with = False    Execute = False    Execute = True    Execute = True    Execute = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-104-dialog.png">화면 원본</a></td>
+<td>1  실제 표시 항목    Alt + click: Go to definition = Off  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-104-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>C/C++ Directories</td>
+<td>True</td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-106-dialog.png">화면 원본</a></td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-106-dialog.png">화면 원본</a></td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>True</td>
+<td>6  실제 표시 항목    _Use alternate directory for symbol database = False    Do not parse files excluded by .vscode\settings._json = False    _Parse all files when opening a project = True    _Watch for externally modified files and reparse when necessary = False    Limit the maximum _number of concurrent threads to = True    Enable _multithreaded parsing = True  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots/VA-feature-107-dialog.png">화면 원본</a></td>
+<td>0  실제 표시 항목  <a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021621-OptionsRetest/screenshots/CA-feature-107-dialog.png">화면 원본</a></td>
+</tr>
+</tbody></table>
+</div><p><a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-021854-OptionsVerified/screenshots.html">전체 촬영</a> · 검증 JSON</p>
+<p>전후 화면 34/68 · 전체 유사도 미확인 · 전체 기능 적용/경계 검증 미완료. 문서 부분 명세108/108(100%)은 전체 역분석 완료율이 아닙니다.</p>
+<p>제안 시간10분 · 실제 10분 10초 · 2026-10-18 02:21:52 KST</p>
+<p>XERJ: 사용 — ProductOptions 검색 및 현재 소스 대조.</p>
+<h2 id="section-2">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/options-retest-20261018.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>a2954a3c31c6f18eb5bb2abcc7b929baa8bd2cfa20c5d70298fab84f3d5eb33c</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-0fcbcd277b24-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">옵션 페이지 이동 재검증</a><a href="#section-2">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

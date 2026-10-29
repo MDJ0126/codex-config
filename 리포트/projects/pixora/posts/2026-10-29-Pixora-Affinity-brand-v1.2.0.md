@@ -7,8 +7,8 @@ project: pixora
 type: 수정사항
 category: 브랜드·Unity UI
 summary: 다른 프로젝트 로고와 비교해 보라 계열 로고를 Affinity에서 제작했습니다. README·제목줄·설정 화면에 같은 로고를 적용하고 언어 설정과 선택 팝업을 정리했습니다.
+format: legacy-v1
 ---
-# Pixora의 새로운 공통 로고
 
 ![Pixora 최종 가로형 로고](../assets/Pixora-v1.2.0/Pixora-Banner.png)
 

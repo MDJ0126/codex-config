@@ -12,11 +12,11 @@ const reports=entries.map(e=>e.reportPath);
 const posts=entries.map(e=>e.postPath);
 assert.equal(posts.length,reports.length);
 let links=0;
-for(const file of ['index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
+for(const file of ['index.html','guide/index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
  const html=await readFile(path.join(root,file),'utf8');
  assert.match(html,/<html lang="ko">/);assert.match(html,/name="viewport"/);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
-  const target=decodeURIComponent(match[1]);if(/^[a-z]+:/.test(target))continue;
+  const target=decodeURIComponent(match[1]).split(/[?#]/)[0];if(!target||/^[a-z]+:/.test(target))continue;
   const resolved=path.resolve(path.dirname(path.join(root,file)),target);
   assert.ok(resolved.startsWith(root+path.sep));await access(resolved);links++;
  }

@@ -6,22 +6,57 @@ status: 기존 기록 이전
 project: codeassist
 type: 검토
 category: 이전 기록
-summary: CodeAssist/docs/screenshot-analysis-20261018.html — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: 108개 화면 자동 수집·일괄 분석 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/docs/screenshot-analysis-20261018.html
+source_sha256: 792b2d689145589f95e2eb6c5a8142fff9ae63dac80a1ebf81cac116c82fd014
+record: archived
+format: legacy-v1
 ---
-# 108개 화면 자동 수집·일괄 분석
 
-[기존 보고서 원문 열기](../assets/imports/docs/screenshot-analysis-20261018.html)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: CodeAssist
-- 원래 위치: CodeAssist/docs/screenshot-analysis-20261018.html
-- 원본 SHA-256: 792b2d689145589f95e2eb6c5a8142fff9ae63dac80a1ebf81cac116c82fd014
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+108개 화면 자동 수집·일괄 분석
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+## 108개 화면 자동 수집·일괄 분석
+
+VA 108/108 · CA 108/108 제한 프로브 기록 완료. 전·후 화면 432/432장(100%), 추가 대화상자 162장, 총594장. 모든 이미지를 디코딩·크기·PID/항목/단계·빈 이미지 기준으로 검사했고, 108개를 12개씩 묶은 9개 모음 화면으로 검토했습니다. 오류·누락·빈 이미지 검출 0개.
+
+**100%는 촬영 수집률입니다. 전체 기능 유사도는 미확인입니다.** 같은 옵션 화면의 반복 촬영이나 대화상자 취소를 기능 통과로 계산하지 않았습니다.
+
+[108개 전·후·대화상자 원본 나란히 보기](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots.html) · [실행 결과 108개](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/comparison.html) · 분석 JSON · 이미지별 검증·후속 작업
+
+## 확인된 차이와 후속 작업
+
+| 우선순위 | 항목 | 확인 결과·원본 화면 | 후속 작업 |
+| --- | --- | --- | --- |
+| P0 | VA 옵션 페이지 이동 실패 | VA는 Coloring, CA는 Goto 페이지. UIA의 원본 페이지 선택 실패이며 해당 항목의 기능 대조 완료로 볼 수 없음.  [VA-feature-001-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-001-dialog.png) [CA-feature-001-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-001-dialog.png) | VA 네이티브 옵션 페이지 이동 어댑터를 보완하고 해당 페이지를 다시 대조. |
+| P1 | Coloring 구성 차이 | 공통 4종 화면 색상값은 일치. VA에 표시되는 Enum/Namespace 2종, 적용 대상 6개, 굵게/기울임 옵션이 CA의 해당 페이지에는 표시되지 않음.  [VA-feature-060-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-060-dialog.png) [CA-feature-060-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-060-dialog.png) | 해당 페이지 설정 UI와 실제 적용/저장 동작을 함께 확인·보완. |
+| P1 | 팝업 테마·구성 차이 | 정렬: VA 라디오 버튼·어두운 창, CA 체크박스·밝은 창. Snippets: VA 팝업 메뉴, CA 밝은 본문 대화상자.  [VA-feature-053-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-053-dialog.png) [CA-feature-053-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-053-dialog.png) [VA-feature-056-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-056-dialog.png) [CA-feature-056-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-056-dialog.png) | 공통 테마와 팝업 구성을 맞추고 키보드·취소·적용 동작을 재검증. |
+| P1 | 탐색기 진입 화면 차이 | VA Address Resolver/PDB Explorer는 도킹 탐색기, CA는 파일 선택 대화상자로 시작. 이후 파일 분석 동작은 미검증.  [VA-feature-089-after.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-089-after.png) [CA-feature-089-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-089-dialog.png) [VA-feature-090-after.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-090-after.png) [CA-feature-090-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-090-dialog.png) | 파일 선택 후 탐색기 결과·필터·찾기까지 검사하는 전용 시나리오 추가. |
+| P2 | 검색·리팩터링 배치 차이 | 검색창 열·버튼·글꼴과 파일 이름 변경 대화상자 구성이 다름.  [VA-feature-003-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-003-dialog.png) [CA-feature-003-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-003-dialog.png) [VA-feature-026-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/VA-feature-026-dialog.png) [CA-feature-026-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-026-dialog.png) | 동일 프로젝트 데이터로 결과 정확성을 확인한 뒤 표시 위치·열·버튼을 맞춤. |
+| P0 | 검사 입력 조건 | 컴파일 설정 없음·지원하지 않는 선택 구문·중단점에서 멈추지 않은 상태의 경고가 포함됨. 이것만으로 제품 결함을 확정할 수 없음.  [CA-feature-016-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-016-dialog.png) [CA-feature-027-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-027-dialog.png) [CA-feature-091-dialog.png](../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/screenshots/CA-feature-091-dialog.png) | 컴파일 데이터·완전 선언 선택·정지한 디버거를 준비한 시나리오로 재검증. |
+
+## 실제 측정
+
+Coloring의 공통 4색은 4/4 일치: 클래스 #FFD700, 변수 #BDB76B, 함수 #FF8000, 매크로 #BD63C5. PNG 색상 사각형 내부 5×5픽셀 최빈값으로 측정했습니다. 이것은 현재 화면 값이며 공장 초기값이라고 단정하지 않습니다. VA에만 해당 페이지에 보이는 Enum #B9771E, Namespace #B8D7A3도 기록했습니다.
+
+명령 결과: 기대값 일치 2개, 결과 차이 2개, 고정 기대값 없는 일치 4개, 양쪽 UI 관찰 12개, 추가 확인 88개. 창이 열린 것만으로 기능 완료를 인증하지 않습니다. 완전 기능 동등성 인증0/108은 제품 구현 기능이0개라는 의미가 아닙니다.
+
+## 다음 실행부터 자동 촬영
+
+테스트 도구0.7.1의 Run.ps1에 `-Screenshots`를 지정하면 전·후·취소 직전 촬영 및 이미지 검증·갤러리 생성을 실행합니다. 생성한 테스트 창의 HWND·PID를 확인하며 다른 앱이나 전체 모니터는 촬영하지 않습니다. 제품 CodeAssist0.0.86은 변경하지 않았습니다. [사용법](../assets/imports/tools/ParityRunner/README.md) · 테스트 설치 파일
+
+검증: 테스트 VSIX 빌드 성공(분석기 경고3개), 비교기 합성 검증12개 및 이미지 누락·빈 화면·잘못된 PID 검증3개 통과. 합성 검증과 실제 제품 실행 결과는 별개입니다.
+
+제안 시간:10분. 실제 작업·문서 정리: 15분 26초 · 2026-10-18 02:06:29 KST 완료. 기한 초과. 초기 외부 촬영 수집기의 권한 오류로 재시작했으며 실패 이력도 보존했습니다.
+
+문서 기반 부분 명세 확보108/108(100%) · 전체 역분석율 미확인 · VA 전체 동기화율 미확인. 전체 기능 검증과 위 후속 항목은 미완료입니다.
+
+XERJ: 사용 — 실행기 검색 후 현재 소스로 확인했습니다.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/docs/screenshot-analysis-20261018.html)
+
+- 원문 SHA-256: `792b2d689145589f95e2eb6c5a8142fff9ae63dac80a1ebf81cac116c82fd014`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

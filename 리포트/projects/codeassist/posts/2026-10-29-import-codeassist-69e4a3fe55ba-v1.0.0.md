@@ -6,22 +6,37 @@ status: 기존 기록 이전
 project: codeassist
 type: 검토
 category: 이전 기록
-summary: CodeAssist/docs/validation/automated-runner-20261018/20261018-001144-713/comparison.html — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: VA·CA 자동 실행 비교 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/docs/validation/automated-runner-20261018/20261018-001144-713/comparison.html
+source_sha256: 1dbd0b56dba86d2ae2f4f65b8baf728c3f5c4dfaa4fd7db38540e4a13366c668
+record: archived
+format: legacy-v1
 ---
-# VA·CA 자동 실행 비교
 
-[기존 보고서 원문 열기](../assets/imports/docs/validation/automated-runner-20261018/20261018-001144-713/comparison.html)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: CodeAssist
-- 원래 위치: CodeAssist/docs/validation/automated-runner-20261018/20261018-001144-713/comparison.html
-- 원본 SHA-256: 1dbd0b56dba86d2ae2f4f65b8baf728c3f5c4dfaa4fd7db38540e4a13366c668
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+VA·CA 자동 실행 비교
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+## VA·CA 자동 실행 비교
+
+Command-chain scenarios only. Scenario matches do not certify whole features, physical shortcuts, UI, themes, other languages or performance parity.
+
+전체 유사도 미확인 · 완전 기능 인증 0/108
+
+| 시나리오 | 기능 | 판정 | 양쪽 실행 | 소요 ms |
+| --- | --- | --- | --- | --- |
+| pair-insert | 46 | needs-review | {'VA': 'missing-evidence', 'CA': 'wrong-active-document'} | {'VA': None, 'CA': 2118} |
+| pair-delete | 46 | needs-review | {'VA': 'missing-evidence', 'CA': 'expectation-failed'} | {'VA': None, 'CA': 814} |
+| surround-word | 55 | needs-review | {'VA': 'missing-evidence', 'CA': 'observed'} | {'VA': None, 'CA': 894} |
+| comment-continuation | 43 | needs-review | {'VA': 'missing-evidence', 'CA': 'expectation-failed'} | {'VA': None, 'CA': 809} |
+| reset-zoom | 49 | needs-review | {'VA': 'missing-evidence', 'CA': 'observed'} | {'VA': None, 'CA': 621} |
+| smart-select | 51 | needs-review | {'VA': 'missing-evidence', 'CA': 'observed'} | {'VA': None, 'CA': 558} |
+| scope-next | 9 | needs-review | {'VA': 'missing-evidence', 'CA': 'observed'} | {'VA': None, 'CA': 573} |
+| scope-previous | 9 | needs-review | {'VA': 'missing-evidence', 'CA': 'observed'} | {'VA': None, 'CA': 707} |
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/docs/validation/automated-runner-20261018/20261018-001144-713/comparison.html)
+
+- 원문 SHA-256: `1dbd0b56dba86d2ae2f4f65b8baf728c3f5c4dfaa4fd7db38540e4a13366c668`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

@@ -1,1 +1,1217 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>VA·CA 자동 실행 비교 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">검토 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-17T17:04:26.385Z <span class="badge">기존 기록 이전</span></div><h1>VA·CA 자동 실행 비교</h1><p><a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/comparison.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/automated-runner-20261018/20261018-015759-745/comparison.html</li><li>원본 SHA-256: c35a5294fd11cd07ddc5f70d8b3d5237ebd9ee679c1ff103fd0d55eeeb7c8db7</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-d2190af40eb6-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>VA·CA 자동 실행 비교 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>VA·CA 자동 실행 비교</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">VA·CA 자동 실행 비교 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-17T17:04:26.385Z">2026년 10월 18일 오전 2:04 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>VA·CA 자동 실행 비교</p>
+<h2 id="section-1">VA·CA 자동 실행 비교</h2>
+<p>108개 항목의 제한된 자동 프로브입니다. 옵션 페이지 확인·대화상자 취소는 기능 검증 통과가 아닙니다. 명령 후보 실패는 원본 기능 부재를 뜻하지 않습니다. 전체 기능·단축키·테마·성능 유사도는 미확인입니다.</p>
+<p>전체 유사도 미확인 · 완전 기능 인증 0/108</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>시나리오</th>
+<th>기능 ID</th>
+<th>기능명</th>
+<th>검증 범위</th>
+<th>판정</th>
+<th>양쪽 실행</th>
+<th>UI 관찰</th>
+<th>호출 오류</th>
+<th>소요 ms</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>feature-001</td>
+<td>1</td>
+<td>Find by Context</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;wrong-active-document&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 4759, &#39;CA&#39;: 3940}</td>
+</tr>
+<tr>
+<td>feature-002</td>
+<td>2</td>
+<td>Find References</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2625, &#39;CA&#39;: 3443}</td>
+</tr>
+<tr>
+<td>feature-003</td>
+<td>3</td>
+<td>Find Symbol in Solution</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1911, &#39;CA&#39;: 1655}</td>
+</tr>
+<tr>
+<td>feature-004</td>
+<td>4</td>
+<td>GoTo Implementation</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2403, &#39;CA&#39;: 3100}</td>
+</tr>
+<tr>
+<td>feature-005</td>
+<td>5</td>
+<td>GoTo Member</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;no-observable-dialog-or-effect&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6358, &#39;CA&#39;: 1497}</td>
+</tr>
+<tr>
+<td>feature-006</td>
+<td>6</td>
+<td>GoTo Related</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;product-error-dialog&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;product-error-dialog&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1592, &#39;CA&#39;: 1929}</td>
+</tr>
+<tr>
+<td>feature-007</td>
+<td>7</td>
+<td>Highlight Current Line</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2520, &#39;CA&#39;: 1823}</td>
+</tr>
+<tr>
+<td>feature-008</td>
+<td>8</td>
+<td>List Methods in File</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2510, &#39;CA&#39;: 2472}</td>
+</tr>
+<tr>
+<td>scope-next</td>
+<td>9</td>
+<td>Move Scope</td>
+<td>editor-command-sample</td>
+<td>different</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1286, &#39;CA&#39;: 1055}</td>
+</tr>
+<tr>
+<td>feature-010</td>
+<td>10</td>
+<td>Navigate Back and Forward</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2673, &#39;CA&#39;: 2708}</td>
+</tr>
+<tr>
+<td>feature-011</td>
+<td>11</td>
+<td>Open Corresponding File</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2477, &#39;CA&#39;: 2778}</td>
+</tr>
+<tr>
+<td>feature-012</td>
+<td>12</td>
+<td>Open File in Solution</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1758, &#39;CA&#39;: 1826}</td>
+</tr>
+<tr>
+<td>feature-013</td>
+<td>13</td>
+<td>VA Hashtags</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;requested-page-not-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2691, &#39;CA&#39;: 3502}</td>
+</tr>
+<tr>
+<td>feature-014</td>
+<td>14</td>
+<td>VA Navigation Bar</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2418, &#39;CA&#39;: 2479}</td>
+</tr>
+<tr>
+<td>feature-015</td>
+<td>15</td>
+<td>Access to Refactoring Commands</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2482, &#39;CA&#39;: 1958}</td>
+</tr>
+<tr>
+<td>feature-016</td>
+<td>16</td>
+<td>Change Signature</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6380, &#39;CA&#39;: 1451}</td>
+</tr>
+<tr>
+<td>feature-017</td>
+<td>17</td>
+<td>Convert Between Pointer and Instance</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6297, &#39;CA&#39;: 1684}</td>
+</tr>
+<tr>
+<td>feature-018</td>
+<td>18</td>
+<td>Encapsulate Field</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6363, &#39;CA&#39;: 1559}</td>
+</tr>
+<tr>
+<td>feature-019</td>
+<td>19</td>
+<td>Extract Method</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1762, &#39;CA&#39;: 1507}</td>
+</tr>
+<tr>
+<td>feature-020</td>
+<td>20</td>
+<td>Introduce Variable</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;no-observable-dialog-or-effect&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;no-modal-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6396, &#39;CA&#39;: 6293}</td>
+</tr>
+<tr>
+<td>feature-021</td>
+<td>21</td>
+<td>Move Implementation to Header File</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;no-observable-dialog-or-effect&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;no-modal-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6406, &#39;CA&#39;: 6273}</td>
+</tr>
+<tr>
+<td>feature-022</td>
+<td>22</td>
+<td>Move Implementation to Source File</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;no-observable-dialog-or-effect&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;no-modal-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6305, &#39;CA&#39;: 6211}</td>
+</tr>
+<tr>
+<td>feature-023</td>
+<td>23</td>
+<td>Move Method Implementations to Source File</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6443, &#39;CA&#39;: 1517}</td>
+</tr>
+<tr>
+<td>feature-024</td>
+<td>24</td>
+<td>Move Selection to New File</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6347, &#39;CA&#39;: 3339}</td>
+</tr>
+<tr>
+<td>feature-025</td>
+<td>25</td>
+<td>Rename</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6336, &#39;CA&#39;: 1897}</td>
+</tr>
+<tr>
+<td>feature-026</td>
+<td>26</td>
+<td>Rename Files</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1791, &#39;CA&#39;: 1467}</td>
+</tr>
+<tr>
+<td>feature-027</td>
+<td>27</td>
+<td>Simplify Instance Declaration</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6226, &#39;CA&#39;: 1932}</td>
+</tr>
+<tr>
+<td>feature-028</td>
+<td>28</td>
+<td>Add Forward Declaration</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6314, &#39;CA&#39;: 1468}</td>
+</tr>
+<tr>
+<td>feature-029</td>
+<td>29</td>
+<td>Add Member</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6352, &#39;CA&#39;: 1443}</td>
+</tr>
+<tr>
+<td>feature-030</td>
+<td>30</td>
+<td>Add Missing Case Statements</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6426, &#39;CA&#39;: 1418}</td>
+</tr>
+<tr>
+<td>feature-031</td>
+<td>31</td>
+<td>Add Similar Member</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6344, &#39;CA&#39;: 1470}</td>
+</tr>
+<tr>
+<td>feature-032</td>
+<td>32</td>
+<td>Add Using Directive</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6307, &#39;CA&#39;: 1606}</td>
+</tr>
+<tr>
+<td>feature-033</td>
+<td>33</td>
+<td>Add include Directive</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6382, &#39;CA&#39;: 1427}</td>
+</tr>
+<tr>
+<td>feature-034</td>
+<td>34</td>
+<td>Add/Remove Braces</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6493, &#39;CA&#39;: 1424}</td>
+</tr>
+<tr>
+<td>feature-035</td>
+<td>35</td>
+<td>Create Declaration</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6366, &#39;CA&#39;: 1451}</td>
+</tr>
+<tr>
+<td>feature-036</td>
+<td>36</td>
+<td>Create File</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1714, &#39;CA&#39;: 2796}</td>
+</tr>
+<tr>
+<td>feature-037</td>
+<td>37</td>
+<td>Create from Usage</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;no-observable-dialog-or-effect&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;no-modal-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6276, &#39;CA&#39;: 6194}</td>
+</tr>
+<tr>
+<td>feature-038</td>
+<td>38</td>
+<td>Create Implementation</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6345, &#39;CA&#39;: 1453}</td>
+</tr>
+<tr>
+<td>feature-039</td>
+<td>39</td>
+<td>Create Method Implementations</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6518, &#39;CA&#39;: 1489}</td>
+</tr>
+<tr>
+<td>feature-040</td>
+<td>40</td>
+<td>Document Method</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;direct-command-effect&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;no-modal-observed&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6299, &#39;CA&#39;: 6200}</td>
+</tr>
+<tr>
+<td>feature-041</td>
+<td>41</td>
+<td>Implement Interface / Virtual Methods</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6289, &#39;CA&#39;: 1541}</td>
+</tr>
+<tr>
+<td>acronym</td>
+<td>42</td>
+<td>Acronyms</td>
+<td>editor-command-sample</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;no-op&#39;, &#39;CA&#39;: &#39;no-op&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1660, &#39;CA&#39;: 1664}</td>
+</tr>
+<tr>
+<td>comment-continuation</td>
+<td>43</td>
+<td>Auto-Extend Multi-Line Comments</td>
+<td>editor-command-sample</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;expectation-failed&#39;, &#39;CA&#39;: &#39;expectation-failed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1366, &#39;CA&#39;: 1244}</td>
+</tr>
+<tr>
+<td>completion</td>
+<td>44</td>
+<td>Enhanced Listboxes</td>
+<td>editor-command-sample</td>
+<td>unasserted-agreement</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1839, &#39;CA&#39;: 1555}</td>
+</tr>
+<tr>
+<td>feature-045</td>
+<td>45</td>
+<td>Format After Paste</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2595, &#39;CA&#39;: 2242}</td>
+</tr>
+<tr>
+<td>pair-insert</td>
+<td>46</td>
+<td>Insert () and Closing Brackets and Quotes</td>
+<td>editor-command-sample</td>
+<td>scenario-match</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1240, &#39;CA&#39;: 1106}</td>
+</tr>
+<tr>
+<td>feature-047</td>
+<td>47</td>
+<td>Insert _ After m and Shift</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2506, &#39;CA&#39;: 2545}</td>
+</tr>
+<tr>
+<td>feature-048</td>
+<td>48</td>
+<td>Multiple Clipboards</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;no-observable-dialog-or-effect&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6315, &#39;CA&#39;: 1437}</td>
+</tr>
+<tr>
+<td>reset-zoom</td>
+<td>49</td>
+<td>Reset Editor Zoom</td>
+<td>editor-command-sample</td>
+<td>scenario-match</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1251, &#39;CA&#39;: 1045}</td>
+</tr>
+<tr>
+<td>shorthand</td>
+<td>50</td>
+<td>Shorthand</td>
+<td>editor-command-sample</td>
+<td>unasserted-agreement</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1986, &#39;CA&#39;: 1582}</td>
+</tr>
+<tr>
+<td>smart-select</td>
+<td>51</td>
+<td>Smart Select</td>
+<td>editor-command-sample</td>
+<td>different</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1206, &#39;CA&#39;: 1074}</td>
+</tr>
+<tr>
+<td>feature-052</td>
+<td>52</td>
+<td>Smart Suggestions</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2406, &#39;CA&#39;: 2518}</td>
+</tr>
+<tr>
+<td>feature-053</td>
+<td>53</td>
+<td>Sort Selected Lines</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1689, &#39;CA&#39;: 1430}</td>
+</tr>
+<tr>
+<td>feature-054</td>
+<td>54</td>
+<td>Suggestion Lists</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2825, &#39;CA&#39;: 3058}</td>
+</tr>
+<tr>
+<td>surround-word</td>
+<td>55</td>
+<td>Surround Selection</td>
+<td>editor-command-sample</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;expectation-failed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1451, &#39;CA&#39;: 1244}</td>
+</tr>
+<tr>
+<td>feature-056</td>
+<td>56</td>
+<td>Surround With</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;popup-menu-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1709, &#39;CA&#39;: 1476}</td>
+</tr>
+<tr>
+<td>feature-057</td>
+<td>57</td>
+<td>Column Indicator</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2512, &#39;CA&#39;: 3471}</td>
+</tr>
+<tr>
+<td>feature-058</td>
+<td>58</td>
+<td>Context Field</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2414, &#39;CA&#39;: 1889}</td>
+</tr>
+<tr>
+<td>feature-059</td>
+<td>59</td>
+<td>Definition Field</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2965, &#39;CA&#39;: 2238}</td>
+</tr>
+<tr>
+<td>feature-060</td>
+<td>60</td>
+<td>Enhanced Syntax Coloring</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2492, &#39;CA&#39;: 2446}</td>
+</tr>
+<tr>
+<td>feature-061</td>
+<td>61</td>
+<td>Local Symbols in Bold</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2659, &#39;CA&#39;: 2406}</td>
+</tr>
+<tr>
+<td>feature-062</td>
+<td>62</td>
+<td>Highlight Find Results</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2453, &#39;CA&#39;: 3451}</td>
+</tr>
+<tr>
+<td>feature-063</td>
+<td>63</td>
+<td>Highlight Matching Words</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2548, &#39;CA&#39;: 2328}</td>
+</tr>
+<tr>
+<td>feature-064</td>
+<td>64</td>
+<td>Highlight References to Symbol Under Cursor</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2617, &#39;CA&#39;: 2379}</td>
+</tr>
+<tr>
+<td>feature-065</td>
+<td>65</td>
+<td>Parameter Info</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2450, &#39;CA&#39;: 2180}</td>
+</tr>
+<tr>
+<td>feature-066</td>
+<td>66</td>
+<td>Print in Color</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004004): 작업이 중단되었습니다. (예외가 발생한 HRESULT: 0x80004004 (E_ABORT))\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2080, &#39;CA&#39;: 1743}</td>
+</tr>
+<tr>
+<td>feature-067</td>
+<td>67</td>
+<td>Quick Info</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2751, &#39;CA&#39;: 3355}</td>
+</tr>
+<tr>
+<td>feature-068</td>
+<td>68</td>
+<td>System Symbols in Italics</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2453, &#39;CA&#39;: 2376}</td>
+</tr>
+<tr>
+<td>dot-to-arrow</td>
+<td>69</td>
+<td>Convert Dot to -&gt;</td>
+<td>editor-command-sample</td>
+<td>unasserted-agreement</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1234, &#39;CA&#39;: 1089}</td>
+</tr>
+<tr>
+<td>feature-070</td>
+<td>70</td>
+<td>Highlight Files in Output Window</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2786, &#39;CA&#39;: 3189}</td>
+</tr>
+<tr>
+<td>feature-071</td>
+<td>71</td>
+<td>Highlight Matching Braces and Parentheses</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2586, &#39;CA&#39;: 3286}</td>
+</tr>
+<tr>
+<td>feature-072</td>
+<td>72</td>
+<td>Highlight Mismatching Braces and Parentheses</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2611, &#39;CA&#39;: 1977}</td>
+</tr>
+<tr>
+<td>repair-case</td>
+<td>73</td>
+<td>Repair Case</td>
+<td>editor-command-sample</td>
+<td>unasserted-agreement</td>
+<td>{&#39;VA&#39;: &#39;observed&#39;, &#39;CA&#39;: &#39;observed&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1168, &#39;CA&#39;: 1057}</td>
+</tr>
+<tr>
+<td>feature-074</td>
+<td>74</td>
+<td>Underline Spelling Errors</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2393, &#39;CA&#39;: 2187}</td>
+</tr>
+<tr>
+<td>feature-075</td>
+<td>75</td>
+<td>Underline Unknown Symbols</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2456, &#39;CA&#39;: 2270}</td>
+</tr>
+<tr>
+<td>feature-076</td>
+<td>76</td>
+<td>Code Inspection Settings</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2568, &#39;CA&#39;: 3420}</td>
+</tr>
+<tr>
+<td>feature-077</td>
+<td>77</td>
+<td>Code Issues in the Editor</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2406, &#39;CA&#39;: 2306}</td>
+</tr>
+<tr>
+<td>feature-078</td>
+<td>78</td>
+<td>Quick Fixes in the Editor</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2537, &#39;CA&#39;: 2297}</td>
+</tr>
+<tr>
+<td>feature-079</td>
+<td>79</td>
+<td>Quick Fixes in a Tool Window</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2904, &#39;CA&#39;: 2256}</td>
+</tr>
+<tr>
+<td>feature-080</td>
+<td>80</td>
+<td>VA Snippets</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;popup-menu-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1622, &#39;CA&#39;: 1582}</td>
+</tr>
+<tr>
+<td>feature-081</td>
+<td>81</td>
+<td>for Refactoring</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2440, &#39;CA&#39;: 2612}</td>
+</tr>
+<tr>
+<td>feature-082</td>
+<td>82</td>
+<td>for Smart Suggestions</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2532, &#39;CA&#39;: 2205}</td>
+</tr>
+<tr>
+<td>feature-083</td>
+<td>83</td>
+<td>for Surround With</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;popup-menu-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1657, &#39;CA&#39;: 1495}</td>
+</tr>
+<tr>
+<td>feature-084</td>
+<td>84</td>
+<td>with Shortcuts</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2424, &#39;CA&#39;: 2449}</td>
+</tr>
+<tr>
+<td>feature-085</td>
+<td>85</td>
+<td>Create from Selection</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;dialog-closed-without-cancel-control&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6291, &#39;CA&#39;: 1669}</td>
+</tr>
+<tr>
+<td>feature-086</td>
+<td>86</td>
+<td>Environment Placeholders</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2825, &#39;CA&#39;: 3458}</td>
+</tr>
+<tr>
+<td>feature-087</td>
+<td>87</td>
+<td>Input Placeholders</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2516, &#39;CA&#39;: 4153}</td>
+</tr>
+<tr>
+<td>feature-088</td>
+<td>88</td>
+<td>Reserved Strings</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2473, &#39;CA&#39;: 4202}</td>
+</tr>
+<tr>
+<td>feature-089</td>
+<td>89</td>
+<td>Address Resolver</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 3296, &#39;CA&#39;: 2307}</td>
+</tr>
+<tr>
+<td>feature-090</td>
+<td>90</td>
+<td>PDB Explorer</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2476, &#39;CA&#39;: 2178}</td>
+</tr>
+<tr>
+<td>feature-091</td>
+<td>91</td>
+<td>VA Memory View</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;execution-error&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;no-modal-observed&#39;, &#39;CA&#39;: &#39;product-error-dialog&#39;}</td>
+<td>{&#39;VA&#39;: &#39;System.Runtime.InteropServices.COMException (0x80004005): COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.\r\n 위치: EnvDTE80.DTE2.ExecuteCommand(String CommandName, String CommandArgs)\r\n 위치: CodeAssist.ParityRunner.Runner.&lt;RunAsync&gt;d__10.MoveNext()&#39;, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 6247, &#39;CA&#39;: 1511}</td>
+</tr>
+<tr>
+<td>feature-092</td>
+<td>92</td>
+<td>VA Step Filter</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2358, &#39;CA&#39;: 3355}</td>
+</tr>
+<tr>
+<td>feature-093</td>
+<td>93</td>
+<td>VA Outline</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2836, &#39;CA&#39;: 2993}</td>
+</tr>
+<tr>
+<td>feature-094</td>
+<td>94</td>
+<td>VA View</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2417, &#39;CA&#39;: 1912}</td>
+</tr>
+<tr>
+<td>feature-095</td>
+<td>95</td>
+<td>Simple Link Patterns</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2498, &#39;CA&#39;: 3279}</td>
+</tr>
+<tr>
+<td>feature-096</td>
+<td>96</td>
+<td>Complex Link Patterns</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2610, &#39;CA&#39;: 2633}</td>
+</tr>
+<tr>
+<td>feature-097</td>
+<td>97</td>
+<td>Connect to FogBugz and GitHub</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2593, &#39;CA&#39;: 2416}</td>
+</tr>
+<tr>
+<td>feature-098</td>
+<td>98</td>
+<td>Preview Files</td>
+<td>dialog-cancel-or-direct-command</td>
+<td>ui-probe-only-not-functional-pass</td>
+<td>{&#39;VA&#39;: &#39;ui-cancel-scope-only&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-observed-and-cancelled&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 1642, &#39;CA&#39;: 2991}</td>
+</tr>
+<tr>
+<td>feature-099</td>
+<td>99</td>
+<td>Open Hyperlinks in an External Browser</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2786, &#39;CA&#39;: 3682}</td>
+</tr>
+<tr>
+<td>feature-100</td>
+<td>100</td>
+<td>Custom Plug-ins</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2381, &#39;CA&#39;: 3332}</td>
+</tr>
+<tr>
+<td>feature-101</td>
+<td>101</td>
+<td>Context Menus</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2432, &#39;CA&#39;: 2770}</td>
+</tr>
+<tr>
+<td>feature-102</td>
+<td>102</td>
+<td>Custom File Extensions</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2639, &#39;CA&#39;: 2567}</td>
+</tr>
+<tr>
+<td>feature-103</td>
+<td>103</td>
+<td>Keyboard Shortcuts</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2375, &#39;CA&#39;: 2710}</td>
+</tr>
+<tr>
+<td>feature-104</td>
+<td>104</td>
+<td>Mouse</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2522, &#39;CA&#39;: 2412}</td>
+</tr>
+<tr>
+<td>feature-105</td>
+<td>105</td>
+<td>Multiple Platforms</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2520, &#39;CA&#39;: 2418}</td>
+</tr>
+<tr>
+<td>feature-106</td>
+<td>106</td>
+<td>Non-Microsoft Build Processes</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2803, &#39;CA&#39;: 2410}</td>
+</tr>
+<tr>
+<td>feature-107</td>
+<td>107</td>
+<td>Parse Concurrency</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2429, &#39;CA&#39;: 3606}</td>
+</tr>
+<tr>
+<td>feature-108</td>
+<td>108</td>
+<td>Options Dialog</td>
+<td>options-page-only</td>
+<td>needs-review</td>
+<td>{&#39;VA&#39;: &#39;requested-page-not-observed&#39;, &#39;CA&#39;: &#39;ui-cancel-scope-only&#39;}</td>
+<td>{&#39;VA&#39;: &#39;dialog-closed-without-cancel-control&#39;, &#39;CA&#39;: &#39;dialog-observed-and-cancelled&#39;}</td>
+<td>{&#39;VA&#39;: None, &#39;CA&#39;: None}</td>
+<td>{&#39;VA&#39;: 2773, &#39;CA&#39;: 3012}</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-2">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/automated-runner-20261018/20261018-015759-745/comparison.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>c35a5294fd11cd07ddc5f70d8b3d5237ebd9ee679c1ff103fd0d55eeeb7c8db7</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-d2190af40eb6-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">VA·CA 자동 실행 비교</a><a href="#section-2">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

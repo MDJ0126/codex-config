@@ -1,1 +1,52 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>기존 보고서 230개 이전·외부 공개·원본 정리 완료 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><div><strong>Codex 설정</strong><div class="eyebrow">수정사항 / v1.1.0 · 보고서 관리</div></div></div><article><div class="article-meta">2026-10-29T20:53:41+09:00 <span class="badge">이전·공개·로컬 원본 정리 완료</span></div><h1>보고서 이전과 외부 공개 결과</h1><p>기존 프로젝트 보고서 230개를 중앙 아카이브로 이전하고 GitHub Pages 공개 배포를 완료했습니다. 원문 보존·해시·외부 접속을 확인한 뒤 기존 프로젝트의 보고서 파일을 삭제했습니다. 새 주황색 로고도 사이트에 적용했습니다.</p><h2>외부 사이트</h2><p><a class="report-link" href="https://mdj0126.github.io/codex-config/">프로젝트별 보고서 아카이브 열기</a></p><h2>이전 범위</h2><ul><li>CodeAssist 보고서 137개.</li><li>Design Data Table 보고서 90개.</li><li>EngineMigrator 보고서 2개.</li><li>WindowsFolderSize 보고서 1개.</li><li>보고서 원문과 연결 자료는 합계 4,211파일, 289,805,256바이트입니다. 사용자께서 전체 공개를 명시적으로 승인하셨습니다.</li><li>사용 설명서·제품 문서와 테스트 원자료·실행 로그는 원래 프로젝트에 남겼습니다. 보고서가 참조하는 문서·화면 이미지는 공개용 패키지에도 복사했습니다.</li><li>원문은 중앙 originals 폴더에 그대로 보존했습니다. 공개 웹용 HTML은 원래 없거나 공개 웹 파일이 아닌 로컬 참조를 비활성 표시합니다.</li></ul><h2>기존 프로젝트 정리</h2><ul><li>기존 위치의 보고서 230개가 모두 삭제됐음을 재확인했습니다.</li><li>남은 문서 20개에서 링크 160개를 중앙 외부 주소로 교체했습니다.</li><li>네 프로젝트 루트에 REPORTS.md를 추가했습니다.</li><li>CodeAssist 로컬 정리 커밋: 3aae598001a1da579202dc91a92889ce25fffc69.</li><li>EngineMigrator 로컬 정리 커밋: 7dc5f8cf6efb392f298863fa900ca22f948f1ece.</li><li>WindowsFolderSize 로컬 정리 커밋: 1c72014669f933d14d81584f0d0324ea5cb04d07.</li><li>Design Data Table 로컬 정리 커밋: b3411c5b3ad35271ac214dd2ecb77eff9f871c7d.</li><li>Design Data Table의 전날 생성된 빈 Git 잠금은 실행 중인 Git 프로세스가 없음을 확인한 뒤 시각이 붙은 백업 파일로 보존했습니다.</li><li>기존 프로젝트 원격 푸시는 아직 수행하지 않았습니다. 자동 승인 검토가 중앙 사이트 공개와 별도로 기존 프로젝트 원격 저장소 푸시 승인을 요구하여 추가 승인을 요청했습니다. 중앙 사이트의 공개·원격 보존은 이미 완료했습니다.</li></ul><h2>공개 배포와 검증</h2><ul><li>중앙 자료 최초 푸시 b5c8c61 이후, Git의 줄바꿈 변환으로 원문 해시 검사가 실패한 실제 Actions 로그를 확인했습니다.</li><li>.gitattributes에서 원문·이전 자료의 줄바꿈 자동 변환을 차단하고 파일을 다시 등록했습니다.</li><li>보완 커밋 da59b20의 Actions 실행 40868015923이 성공했습니다. Linux 빌드 환경에서도 원문 230개와 연결 자료 4,211개 해시 검증을 통과했습니다.</li><li>외부 메인 URL의 HTTP 200과 새 로고 참조를 확인했습니다.</li><li>실제 브라우저에서 메인 화면·주황색 로고를 확인했습니다. Pixora + 수정사항 + v1.1.2 검색 조합에서 1개의 올바른 글이 표시됐고 전체 초기화도 확인했습니다.</li><li>브라우저에서 이전한 CodeAssist progress-audit 보고서 상세 글을 열고, 원문 링크를 눌러 실제 표와 본문이 표시됨을 확인했습니다.</li><li>브라우저 콘솔 오류는 관찰되지 않았습니다. 이전된 모든 보고서의 화면과 기존 제품 테스트를 전수 재실행한 결과는 아닙니다.</li><li>로고 제작 도구는 built-in image_gen이며 PNG의 투명 배경·크기·해시를 검증했습니다. 제작 프롬프트와 결과는 별도 로고 보고서에 기록했습니다.</li></ul><h2>앞으로의 처리</h2><ul><li>모든 프로젝트 결과는 이 중앙 아카이브의 Markdown에 project와 type을 지정해 등록합니다.</li><li>main에 리포트 변경을 푸시하면 Actions가 검사·포장·배포합니다. 설정 파일과 CLI 도구는 Pages 배포 패키지에 포함되지 않습니다.</li><li>원문 백업은 Pages 패키지에서 제외하지만 중앙 Git 저장소가 공개이므로 저장소에서 읽을 수 있습니다.</li><li>이전 보고서의 과거 판단·실패·승인 대기 기록은 덮어쓰지 않고 이번 완료 버전을 추가했습니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 보고서 이전·공개 10~20분, 로고 2~4분.</li><li>시작 시각: 이전 2026-10-29 20:35:04 KST, 로고 20:43:59 KST.</li><li>실제로 완료된 시간: 이전·공개·로컬 원본 정리와 실제 브라우저 확인까지 18분 37초, 2026-10-29 20:53:41 KST. 최종 보고서 추가 푸시·배포 종료는 채팅에 별도 표시합니다.</li><li>기존 프로젝트 원격 푸시는 승인 대기이므로 완료 시각이 없습니다.</li><li>XERJ: 미사용 — 코드 검색 불필요. 문서·파일·원문 해시와 실제 브라우저로 검증했습니다.</li></ul></article><a class="source" href="../posts/2026-10-29-project-report-migration-v1.1.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>기존 보고서 230개 이전·외부 공개·원본 정리 완료 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>기존 보고서 230개 이전·외부 공개·원본 정리 완료</h1><span class="badge" data-state="">이전·공개·로컬 원본 정리 완료</span></div><p class="post-summary">보고서 230개와 연결 자료를 중앙 아카이브로 이전·공개했습니다. 원본 보고서 삭제, 링크 160개 교체, 전용 주황색 로고와 실제 브라우저 확인까지 완료했습니다.</p><div class="post-byline"><time datetime="2026-10-29T20:53:41+09:00">2026년 10월 29일 오후 8:53 KST</time><span>v1.1.0</span><span>보고서 관리</span></div><div class="post-body"><p>기존 프로젝트 보고서 230개를 중앙 아카이브로 이전하고 GitHub Pages 공개 배포를 완료했습니다. 원문 보존·해시·외부 접속을 확인한 뒤 기존 프로젝트의 보고서 파일을 삭제했습니다. 새 주황색 로고도 사이트에 적용했습니다.</p>
+<h2 id="section-1">외부 사이트</h2>
+<p><a class="report-link" href="https://mdj0126.github.io/codex-config/">프로젝트별 보고서 아카이브 열기</a></p>
+<h2 id="section-2">이전 범위</h2>
+<ul>
+<li>CodeAssist 보고서 137개.</li>
+<li>Design Data Table 보고서 90개.</li>
+<li>EngineMigrator 보고서 2개.</li>
+<li>WindowsFolderSize 보고서 1개.</li>
+<li>보고서 원문과 연결 자료는 합계 4,211파일, 289,805,256바이트입니다. 사용자께서 전체 공개를 명시적으로 승인하셨습니다.</li>
+<li>사용 설명서·제품 문서와 테스트 원자료·실행 로그는 원래 프로젝트에 남겼습니다. 보고서가 참조하는 문서·화면 이미지는 공개용 패키지에도 복사했습니다.</li>
+<li>원문은 중앙 originals 폴더에 그대로 보존했습니다. 공개 웹용 HTML은 원래 없거나 공개 웹 파일이 아닌 로컬 참조를 비활성 표시합니다.</li>
+</ul>
+<h2 id="section-3">기존 프로젝트 정리</h2>
+<ul>
+<li>기존 위치의 보고서 230개가 모두 삭제됐음을 재확인했습니다.</li>
+<li>남은 문서 20개에서 링크 160개를 중앙 외부 주소로 교체했습니다.</li>
+<li>네 프로젝트 루트에 REPORTS.md를 추가했습니다.</li>
+<li>CodeAssist 로컬 정리 커밋: 3aae598001a1da579202dc91a92889ce25fffc69.</li>
+<li>EngineMigrator 로컬 정리 커밋: 7dc5f8cf6efb392f298863fa900ca22f948f1ece.</li>
+<li>WindowsFolderSize 로컬 정리 커밋: 1c72014669f933d14d81584f0d0324ea5cb04d07.</li>
+<li>Design Data Table 로컬 정리 커밋: b3411c5b3ad35271ac214dd2ecb77eff9f871c7d.</li>
+<li>Design Data Table의 전날 생성된 빈 Git 잠금은 실행 중인 Git 프로세스가 없음을 확인한 뒤 시각이 붙은 백업 파일로 보존했습니다.</li>
+<li>기존 프로젝트 원격 푸시는 아직 수행하지 않았습니다. 자동 승인 검토가 중앙 사이트 공개와 별도로 기존 프로젝트 원격 저장소 푸시 승인을 요구하여 추가 승인을 요청했습니다. 중앙 사이트의 공개·원격 보존은 이미 완료했습니다.</li>
+</ul>
+<h2 id="section-4">공개 배포와 검증</h2>
+<ul>
+<li>중앙 자료 최초 푸시 b5c8c61 이후, Git의 줄바꿈 변환으로 원문 해시 검사가 실패한 실제 Actions 로그를 확인했습니다.</li>
+<li>.gitattributes에서 원문·이전 자료의 줄바꿈 자동 변환을 차단하고 파일을 다시 등록했습니다.</li>
+<li>보완 커밋 da59b20의 Actions 실행 40868015923이 성공했습니다. Linux 빌드 환경에서도 원문 230개와 연결 자료 4,211개 해시 검증을 통과했습니다.</li>
+<li>외부 메인 URL의 HTTP 200과 새 로고 참조를 확인했습니다.</li>
+<li>실제 브라우저에서 메인 화면·주황색 로고를 확인했습니다. Pixora + 수정사항 + v1.1.2 검색 조합에서 1개의 올바른 글이 표시됐고 전체 초기화도 확인했습니다.</li>
+<li>브라우저에서 이전한 CodeAssist progress-audit 보고서 상세 글을 열고, 원문 링크를 눌러 실제 표와 본문이 표시됨을 확인했습니다.</li>
+<li>브라우저 콘솔 오류는 관찰되지 않았습니다. 이전된 모든 보고서의 화면과 기존 제품 테스트를 전수 재실행한 결과는 아닙니다.</li>
+<li>로고 제작 도구는 built-in image_gen이며 PNG의 투명 배경·크기·해시를 검증했습니다. 제작 프롬프트와 결과는 별도 로고 보고서에 기록했습니다.</li>
+</ul>
+<h2 id="section-5">앞으로의 처리</h2>
+<ul>
+<li>모든 프로젝트 결과는 이 중앙 아카이브의 Markdown에 project와 type을 지정해 등록합니다.</li>
+<li>main에 리포트 변경을 푸시하면 Actions가 검사·포장·배포합니다. 설정 파일과 CLI 도구는 Pages 배포 패키지에 포함되지 않습니다.</li>
+<li>원문 백업은 Pages 패키지에서 제외하지만 중앙 Git 저장소가 공개이므로 저장소에서 읽을 수 있습니다.</li>
+<li>이전 보고서의 과거 판단·실패·승인 대기 기록은 덮어쓰지 않고 이번 완료 버전을 추가했습니다.</li>
+</ul>
+<h2 id="section-6">시간과 검색</h2>
+<ul>
+<li>제안 시간: 보고서 이전·공개 10<del>20분, 로고 2</del>4분.</li>
+<li>시작 시각: 이전 2026-10-29 20:35:04 KST, 로고 20:43:59 KST.</li>
+<li>실제로 완료된 시간: 이전·공개·로컬 원본 정리와 실제 브라우저 확인까지 18분 37초, 2026-10-29 20:53:41 KST. 최종 보고서 추가 푸시·배포 종료는 채팅에 별도 표시합니다.</li>
+<li>기존 프로젝트 원격 푸시는 승인 대기이므로 완료 시각이 없습니다.</li>
+<li>XERJ: 미사용 — 코드 검색 불필요. 문서·파일·원문 해시와 실제 브라우저로 검증했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-project-report-migration-v1.1.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">외부 사이트</a><a href="#section-2">이전 범위</a><a href="#section-3">기존 프로젝트 정리</a><a href="#section-4">공개 배포와 검증</a><a href="#section-5">앞으로의 처리</a><a href="#section-6">시간과 검색</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

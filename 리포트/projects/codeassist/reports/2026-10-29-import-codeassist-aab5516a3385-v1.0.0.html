@@ -1,1 +1,73 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>최신 멤버 추천 누락·혼입·중복 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-24T01:13:24.584Z <span class="badge">기존 기록 이전</span></div><h1>최신 멤버 추천 누락·혼입·중복 수정</h1><p><a class="report-link" href="../assets/imports/docs/validation/options-163/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/options-163/index.html</li><li>원본 SHA-256: b9e68ebaf3333c9d1ce21a3c040ef948ea4479923eb69f78a3fd1634f8f6c2c9</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-aab5516a3385-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>최신 멤버 추천 누락·혼입·중복 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>최신 멤버 추천 누락·혼입·중복 수정</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">최신 멤버 추천 누락·혼입·중복 수정 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-24T01:13:24.584Z">2026년 10월 24일 오전 10:13 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>VA·CA 최신 멤버 추천 수정165</p>
+<h2 id="section-1">최신 멤버 추천 누락·혼입·중복 수정</h2>
+<p>최종 설치0.0.165. Computer Use로 VA와 동일한 소스·입력을 대조했습니다.</p>
+<p><strong>이번 추천 동작 표본5/5개(100%) 일치</strong>: 후보 집합, 순서와 기본 선택, 색상 역할, Tab 후 전체 문서, 커서. <strong>선정 옵션 누적 On/Off 표본10/12개(83.33%)는 유지</strong>하며 이번 후보 수정으로 임의 증가시키지 않습니다. 제품 전체 동기화율이나 UI 전체 일치율이 아닙니다.</p>
+<h2 id="section-2">실행으로 확인한 원인과 수정</h2>
+<p>수정 전 CA162는 로컬 변수 probe의 타입을 정확히 CompletionProbe163으로 찾았지만 멤버 후보0개를 보고했습니다. 저장 인덱스만 조회하고 열린 파일의 최신 선언을 반영하지 않았습니다. 열린 문서의 최신 타입·멤버를 저장 데이터보다 우선하고, 최신 파일에서 없어진 멤버는 저장 데이터에서 제외했습니다. 상속과 오버로드도 유지합니다.</p>
+<p>중간 CA163은 최신 멤버2개를 얻었지만 비동기 컴파일러 결과가 일반 변수·텍스트·키워드와 중복 후보를 섞어11개가 됐습니다. LSP의 멤버 종류만 허용하고 같은 삽입 이름을 한 번 표시하도록 수정했습니다. 선언 위치를 최근 사용으로 오인해 순서가 뒤집히던 것도 제거했습니다. 최종 CA165 로그는 컴파일러 응답 전후 모두2개입니다.</p>
+<h2 id="section-3">같은 입력과 결과</h2>
+<p>동일 browser107.cpp에 ReadField와 ReadMethod를 가진 구조체를 사용했습니다. 양쪽에서 probe 뒤에 물리 period, Ctrl+Space, Tab을 입력했습니다. VA 프로필에 CA 확장이 없음을 CLR 모듈 검사로 확인했고 CA는 실제 로드 DLL이 설치 패키지와 같음을 검사했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>기준</th>
+<th>VA</th>
+<th>CA165</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>후보 집합</td>
+<td>ReadField, ReadMethod</td>
+<td>동일2개, 전역/중복 없음</td>
+</tr>
+<tr>
+<td>기본 선택</td>
+<td>ReadField 먼저</td>
+<td>동일</td>
+</tr>
+<tr>
+<td>색상 역할</td>
+<td>필드 카키색·함수 주황색</td>
+<td>동일 범주. JPEG 픽셀 RGB 일치 판정 아님</td>
+</tr>
+<tr>
+<td>Tab 전체 문서</td>
+<td>probe.ReadField 삽입</td>
+<td>전체 문자열 정확히 일치</td>
+</tr>
+<tr>
+<td>Tab 커서</td>
+<td>7행20열, 선택 없음</td>
+<td>정확히 일치</td>
+</tr>
+</tbody></table>
+</div><p>VA 기준 목록</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/va-list-reference.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA165 최종 목록</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/ca-list165-final.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>VA Tab</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/va-tab-reference.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA165 Tab</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/ca-tab165-final.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA162 수정 전 — 색상 미적용</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/ca-list-before.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA163 중간 실패 — 혼입·중복</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/options-163/ca-163-mixed.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<h2 id="section-4">통과하지 않은 차이</h2>
+<p>VA의 하단 필터 버튼은 CA 추천 창에 없고, 설명의 형식·강조 방식도 다릅니다. 최초 period 입력만으로 팝업이 유지되는지는 추가 검증이 필요합니다. Ctrl+Space의 동일 입력 결과만 이번 표본으로 통과했습니다. 새 프로젝트의 저장 인덱스0개 조건에서 제공자가 조기에 반환하는 것도 다음 수정 대상입니다. 아이콘은 CA 자체 배지를 유지했으며 모양 완전 일치로 채점하지 않았습니다.</p>
+<p>With Snippets는 VA의 기존 파일에 사용자 지정 SurroundWith= 항목이 없어 기본 괄호 기능으로 인과 검증할 수 없습니다. 이전에 요청한 사용자 스니펫 임시 수정 승인은 대기 중이며 원본 파일은 수정하지 않았습니다. 실제 키 홀드 반복률도 순간 키 입력 API만으로 통과시키지 않았습니다. 전체108개 최신 버전의 모든 동작·UI 인증은 계속 남아 있습니다.</p>
+<h2 id="section-5">자동 검사와 원복</h2>
+<p>새 회귀8개를 포함해448/448개(100%) 통과했습니다. 새 열린 타입, 빈 최신 파일의 오래된 멤버 제거, 상속·오버로드·외부 지역변수 제외, 약어/부분 검색 조합, LSP 전역 후보 제외를 검사합니다. VS2019 및 Modern 빌드 성공, 패키지 바이너리6개/단축키 등록48개 검사 통과. 테스트 소스는 양쪽 모두 원본 해시로 복원했고 미저장 문서는0개입니다.</p>
+<p>문서·도움말 기반 부분 명세108/108개(100%). 전체 역분석 완료율과는 다릅니다. REA 연결 도구는 없으며 이번에는 설치 VA 실제 실행·소스·로그를 사용했습니다. XERJ는 DoubleKeyRepeat 검색에 사용했고 오래된 결과는 rg로 현재 소스를 확인했습니다.</p>
+<p>수치·범위 JSON · 후보 수 실제 로그 · 448개 테스트 · 최종 설치 · 로드 DLL · VA 격리 · VA 전체 문서·커서 · CA 전체 문서·커서</p>
+<p>제안 시간20~30분. 수정·설치·실행 대조·원복 기록까지24분41초, 2026-10-24 10:12:34 KST. 전체 목표는 진행 중입니다.</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/options-163/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>b9e68ebaf3333c9d1ce21a3c040ef948ea4479923eb69f78a3fd1634f8f6c2c9</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-aab5516a3385-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">최신 멤버 추천 누락·혼입·중복 수정</a><a href="#section-2">실행으로 확인한 원인과 수정</a><a href="#section-3">같은 입력과 결과</a><a href="#section-4">통과하지 않은 차이</a><a href="#section-5">자동 검사와 원복</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

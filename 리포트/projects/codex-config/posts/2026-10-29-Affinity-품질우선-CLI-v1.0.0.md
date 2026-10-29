@@ -7,8 +7,8 @@ project: codex-config
 type: 설정
 category: 설정
 summary: 품질과 Affinity 우선 지침 푸시 및 MCP 기반 CLI 개발 경로 확인
+format: legacy-v1
 ---
-# Affinity 품질 우선 지침과 전용 CLI 개발 가능성
 
 - 작성 시각: 2026-10-29 18:50:18 KST (Asia/Seoul)
 - 버전: v1.0.0

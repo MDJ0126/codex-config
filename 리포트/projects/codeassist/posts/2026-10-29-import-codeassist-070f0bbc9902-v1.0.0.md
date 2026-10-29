@@ -6,22 +6,28 @@ status: 기존 기록 이전
 project: codeassist
 type: 작업 결과
 category: 이전 기록
-summary: CodeAssist/docs/validation/computer-use-popup-coordinates.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Computer Use 팝업 좌표 관찰 기록 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/docs/validation/computer-use-popup-coordinates.md
+source_sha256: 3405c07f02fe6d72a63556ff83515e145107d0a9b020d700d9648e9ca4ba593f
+record: archived
+format: legacy-v1
 ---
-# Computer Use 팝업 좌표 관찰 기록
 
-[기존 보고서 원문 열기](../assets/imports/docs/validation/computer-use-popup-coordinates.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: CodeAssist
-- 원래 위치: CodeAssist/docs/validation/computer-use-popup-coordinates.md
-- 원본 SHA-256: 3405c07f02fe6d72a63556ff83515e145107d0a9b020d700d9648e9ca4ba593f
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+2026-10-23, computer-use 26.1016.51333, node_repl @oai/sky 실행 근거.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+- 부모 화면 `screenshot-0`은 1190×845, 도구 메뉴의 bounded `screenshot-1`은 338×420이었습니다.
+- 팝업 screenshotId를 지정하고 부모 기준 (680,338)을 주면 request497에서 bounds 338×420 밖이라는 오류가 반환됐습니다. 따라서 이 런타임에서는 선택한 bounded 캡처의 내부 좌표가 입력 경계를 결정합니다. 과거의 “팝업 screenshotId도 항상 부모 좌표” 가정은 폐기합니다.
+- 오류 후 새로 관찰한 메뉴 캡처에서 `(70,313)`을 선택하자 테마 하위 메뉴가 열렸습니다(request499).
+- 다시 반환된 하위 메뉴 캡처 219×148의 `(70,13)`을 선택하자 실제 Light가 적용됐습니다(request500/501). `(70,57)`로 Dark 복구도 확인했습니다.
+- 좌표와 screenshotId는 해당 최신 관찰에서만 사용합니다. 메뉴 종류·DPI·행 위치는 다시 관찰해야 합니다. VA 도구 메뉴 높이는 393이고 CA는 420이라 Theme 행 위치도 다릅니다.
+- API 문서의 window-relative 설명만으로 모든 bounded 팝업의 런타임 좌표를 추정하지 않습니다. 오류의 실제 bounds와 성공 후 화면을 근거로 합니다.
+- 키 입력은 screenshotId를 받지 않습니다. 팝업을 열었다는 사실만으로 실제 키 수신을 가정하지 말고 결과를 확인합니다.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/docs/validation/computer-use-popup-coordinates.md)
+
+- 원문 SHA-256: `3405c07f02fe6d72a63556ff83515e145107d0a9b020d700d9648e9ca4ba593f`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

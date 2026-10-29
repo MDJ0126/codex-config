@@ -7,8 +7,8 @@ project: codex-config
 type: 수정사항
 category: 디자인
 summary: 녹색·파란색·회색·노란색 프로젝트 로고와 구분되는 주황색 문서 보관함 심벌을 제작하고 사이트에 적용했습니다.
+format: legacy-v1
 ---
-# 보고서 아카이브 전용 로고
 
 ![주황색 보고서 아카이브 로고](../../../assets/brand/tracefolio-mark.png)
 

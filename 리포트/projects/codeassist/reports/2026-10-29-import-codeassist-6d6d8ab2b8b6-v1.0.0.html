@@ -1,1 +1,61 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA 0.0.114 — 실제 참조 새로 고침·결과 복제 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T05:00:02.669Z <span class="badge">기존 기록 이전</span></div><h1>CA 0.0.114 — 실제 참조 새로 고침·결과 복제</h1><p><a class="report-link" href="../assets/imports/docs/validation/references-114/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/references-114/index.html</li><li>원본 SHA-256: 919209ea995ea4770509f1a9b0d620ad6522036141dff5a49865dd594f752793</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-6d6d8ab2b8b6-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA 0.0.114 — 실제 참조 새로 고침·결과 복제 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>CA 0.0.114 — 실제 참조 새로 고침·결과 복제</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">CA 0.0.114 — 실제 참조 새로 고침·결과 복제 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T05:00:02.669Z">2026년 10월 23일 오후 2:00 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>0.0.114 참조 새로 고침·복제</p>
+<h2 id="section-1">CA 0.0.114 — 실제 참조 새로 고침·결과 복제</h2>
+<h2 id="section-2">수정한 버튼</h2>
+<p>다음·이전 버튼 옆에 직접 그린 새로 고침 화살표와 겹친 창 복제 아이콘을 추가했습니다. 새로 고침은 원래 검색 문서·위치·심볼을 유지한 실제 재검색입니다. 복제 버튼은 해당 창의 결과 배열·필터·검색 콜백을 별도로 보존합니다. 재검색 실패는 이전 결과를 새 통과로 바꾸지 않고 오류로 표시하도록 구현했습니다. 실패 분기는 이번 실행에서 검증하지 않았습니다.</p>
+<h2 id="section-3">실제 동일 입력 대조</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검사</th>
+<th>VA</th>
+<th>CA 0.0.114</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>main 필터 상태에서 복제 버튼 클릭</td>
+<td>main·표시 한 행 유지</td>
+<td>main·표시 한 행 유지</td>
+</tr>
+<tr>
+<td>같은 문서에 호출 하나 추가 후 새로 고침</td>
+<td>전체 2→3, 표시 1→2행</td>
+<td>전체 2→3, 표시 1→2행</td>
+</tr>
+</tbody></table>
+</div><p>VA 복제 — 검색어·결과 유지</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/references-114/va-clone.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA 복제 — 해당 창 상태 유지</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/references-114/ca-clone.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>VA 실제 변경 후 새로 고침</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/references-114/va-refresh.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<p>CA 실제 변경 후 새로 고침</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/references-114/ca-refresh.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<h2 id="section-4">복제 탭 독립성</h2>
+<p>CA 복제 탭을 새로 고친 뒤 원본 탭으로 전환했습니다. 복제는 2/3, 원본은 기존 1/2를 유지했습니다. 이 독립성 확인은 CA 단독 추가 검사이며 VA와 비교한 표본 수에는 더하지 않았습니다.</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/references-114/ca-original-independent.jpg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<h2 id="section-5">환경 및 복구</h2>
+<p>VA 10.9.2630.0 / CA 0.0.114 / VS 17.14.37531.7. 동일한 저장 코드임을 두 편집기 본문으로 확인했습니다. 검사 후 양쪽 원본 본문·저장 상태·디스크 SHA256 8A9D8AD69A16FB6813230BE6B2DB5A5717D5DEB55B426B092465777AF2884188을 확인했습니다. 새로 고친 복제 결과는 시험 당시 스냅샷이며 원본 복구 이후의 현재 참조 결과로 해석하지 않습니다.</p>
+<h2 id="section-6">남은 차이</h2>
+<ul>
+<li><p>상속·오버라이드 참조 표시와 전체 프로젝트 표시 버튼은 아직 없습니다.</p>
+</li>
+<li><p>숨김 참조·종류 필터와 전체 의미 분석 동등성은 미완료입니다.</p>
+</li>
+<li><p>검색 위치 변경·실패 처리 분기, 다른 복제 진입 경로, 여러 VS 버전의 생명주기 검증이 남았습니다.</p>
+</li>
+<li><p>이번 복제·새로 고침 표본으로 전체 VA-F002나 전체 제품 통과를 선언하지 않습니다.</p>
+</li>
+</ul>
+<p>VS2019·Modern 빌드 성공, Core 317/317(100%) 통과, 검사 프로필 바이너리 6/6 해시 일치.</p>
+<p>계산 데이터 · 시험 코드 · VA 실행 본문 · CA 실행 본문 · 설치 해시 · 테스트 로그</p>
+<p>XERJ: 사용 — 참조 명령·결과 창·컴파일러 재검색 경로를 검색하고 현재 소스를 확인했습니다. 전체 목표는 진행 중입니다.</p>
+<h2 id="section-7">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-114/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>919209ea995ea4770509f1a9b0d620ad6522036141dff5a49865dd594f752793</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-6d6d8ab2b8b6-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">CA 0.0.114 — 실제 참조 새로 고침·결과 복제</a><a href="#section-2">수정한 버튼</a><a href="#section-3">실제 동일 입력 대조</a><a href="#section-4">복제 탭 독립성</a><a href="#section-5">환경 및 복구</a><a href="#section-6">남은 차이</a><a href="#section-7">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

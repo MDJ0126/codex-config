@@ -6,22 +6,59 @@ status: 기존 기록 이전
 project: windowsfoldersize
 type: 버그
 category: 이전 기록
-summary: WindowsFolderSize/docs/security-validation.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Installer security remediation — 1.0.1 candidate — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/docs/security-validation.md
+source_sha256: 11e3bc89cf864666a0de0626470bede2459a9a1a8ede6fe6229f14d582928ea1
+record: archived
+format: legacy-v1
 ---
-# Installer security remediation — 1.0.1 candidate
 
-[기존 보고서 원문 열기](../assets/imports/docs/security-validation.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: WindowsFolderSize
-- 원래 위치: WindowsFolderSize/docs/security-validation.md
-- 원본 SHA-256: 11e3bc89cf864666a0de0626470bede2459a9a1a8ede6fe6229f14d582928ea1
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+## Confirmed incident
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+Microsoft Defender detected the public 1.0.0 self-extracting setup executable as `Trojan:Win32/Bearfoos.B!ml` on 2026-10-24 (KST). That release is held as a draft. A false-positive determination has **not** been obtained; do not allowlist the old executable or disable protection.
+
+The original installer SHA-256 was `e8cf362d3bfdb36e8e0b26b4618f238225ddb9f2a84fe7d433506ae90e6b0eab`.
+
+## Design changes
+
+- Replace the custom self-extracting EXE with a standard WiX 6.0.2 / Windows Installer MSI.
+- Windows Installer owns file installation, product registration, rollback and removal. The package does not copy an uninstaller into Temp, create a RunOnce cleanup command, or force-terminate the broker.
+- Install code to administrator-protected Program Files; keep mutable symbols/logs in the invoking user's Local AppData. Machine-wide COM registration no longer points at a user-writable DLL.
+- Use Windows Restart Manager, without `RmForceShutdown`, for the explicit optional Explorer restart. No `TerminateProcess` import is needed by the new maintenance utility.
+- Register a non-visible broker lifecycle window so Restart Manager can request a normal shutdown.
+- Do not change Defender settings, exclusions, signatures, trust stores, or detection decisions. No packing, obfuscation, or certificate trust bypass was added.
+
+## Validation performed
+
+| Check | Result |
+| --- | --- |
+| Defender custom scan of original broker/extension files | No threats found |
+| Defender custom scan of the 1.0.1 MSI | No threats found; exit 0 |
+| Windows Installer administrative extraction of production MSI | Exit 0 |
+| Standard WiX ICE validation of production MSI | Exit 0 |
+| Actual install of a separate per-user regression MSI with the same payload binaries | Exit 0 |
+| Installed broker versus production payload hash | Equal |
+| Resumable scan, cancellation, exact fixture bytes/files/directories | Passed |
+| Native shell property canonicalization and COM/exported Size formatters | Passed |
+| Monotonic progress and dot animation frames | Passed |
+| Repeated file changes, retained completed size, final updates and deletion | Passed |
+| Actual regression MSI uninstall while its broker was running | MSI log: removal completed successfully, engine return 0 |
+| Regression folder, startup value, product registration after uninstall | Absent; MSI product state -1 |
+
+The disposable per-user regression package changes installation scope/registry root; it is not the production per-machine package. Production ICE validation was run without suppressing ICEs. Neither package required an antivirus exception. Defender signatures during these checks: **1.461.161.0**; real-time protection remained enabled.
+
+## Remaining limits
+
+- The production per-machine install/elevation path has not been executed in this session.
+- Computer Use was used to inspect File Explorer, but an unrelated Windows cryptographic-key permission prompt blocked further UI input. The prompt was not approved or bypassed. Actual on-screen folder-size acceptance and the optional Explorer-restart UI remain unverified for this candidate.
+- Microsoft submission was attempted through the official portal; both available customer/developer paths required account authentication. No submission was completed. The login page was left for a later manual handoff; no authentication dialog was automated.
+- These local test results are not a Microsoft false-positive decision and do not guarantee the absence of future detections on other devices. The candidate remains unpublished pending remaining acceptance checks.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/docs/security-validation.md)
+
+- 원문 SHA-256: `11e3bc89cf864666a0de0626470bede2459a9a1a8ede6fe6229f14d582928ea1`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

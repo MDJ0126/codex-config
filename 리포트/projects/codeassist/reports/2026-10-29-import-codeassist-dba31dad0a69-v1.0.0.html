@@ -1,1 +1,554 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>0.0.90 UI·기능 자동 점검 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-18T03:08:33.364Z <span class="badge">기존 기록 이전</span></div><h1>0.0.90 UI·기능 자동 점검</h1><p><a class="report-link" href="../assets/imports/docs/debug-0.0.90.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/debug-0.0.90.html</li><li>원본 SHA-256: b1b38d9e36bff72a4eb7d2332f77c7cd3ea17278de56be2a0580cab330f9c64a</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-dba31dad0a69-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>0.0.90 UI·기능 자동 점검 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>0.0.90 UI·기능 자동 점검</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">0.0.90 UI·기능 자동 점검 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-18T03:08:33.364Z">2026년 10월 18일 오후 12:08 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>CodeAssist 0.0.90 UI·기능 자동 점검</p>
+<h2 id="section-1">0.0.90 UI·기능 자동 점검</h2>
+<p><strong>UI 픽셀 유사도 74.03% · 비교 가능한 26/66개 분류(39.39%)</strong>. 이전 74.02%와 수치 차이는 0.01%p뿐이며 전체 UI가 크게 같아졌다는 의미가 아닙니다.</p>
+<p>최신 CA 전체 카탈로그 108개 + 추가 14개 = <strong>122/122 시나리오 실행</strong>. 옵션 <strong>17/17 페이지 관찰</strong>. 팝업 열기·취소는 기능 검증 통과가 아닙니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검증</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>코드·회귀 테스트</td>
+<td>272/272 통과(100%) · VA 동기화율과 별도</td>
+</tr>
+<tr>
+<td>기존 명시적 기대값 검사</td>
+<td>4/5 일치(80%) · 주석 이어쓰기 꺼짐 상태에서 기대 불일치</td>
+</tr>
+<tr>
+<td>설정을 켠 실제 편집 재검사</td>
+<td>2/3 일치(66.67%) · 주석 이어쓰기, 점→화살표 통과 / 타입 대소문자 교정 실패</td>
+</tr>
+<tr>
+<td>보조 다크·라이트 검사</td>
+<td>영어 4페이지 × 2테마 = 8개 독립 WPF 렌더·열린 뷰 리소스 전환 통과. 실제 IDE 테마 조작은 아님.</td>
+</tr>
+<tr>
+<td>배포 패키지</td>
+<td>VS2019·최신 계열 빌드 2/2. 최신 계열 포함 바이너리 6개 일치, 키 바인딩 등록 24개 확인. 물리 키 입력 검증과 별도.</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-2">수정 전후: 멤버 목록</h2>
+<p>함수·필드 종류를 목록에 전달해 색상과 아이콘을 적용하고, 열 제목을 심볼·정의로 수정했습니다. 함수 서명은 선언 경계에서 끊어 뒤의 세미콜론·중괄호가 붙지 않도록 수정했습니다.</p>
+<p>0.0.89 실제 VS</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/member-before.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/member-before.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/member-before.png)</figcaption></figure></p>
+<p>0.0.90 실제 VS</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/CA-feature-005-dialog.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/CA-feature-005-dialog.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/CA-feature-005-dialog.png)</figcaption></figure></p>
+<h2 id="section-3">전체 대조·원본 근거</h2>
+<p><a class="report-link" href="../assets/imports/docs/ui-comparison-0.0.90.html">108개 VA·CA 대조 갤러리</a> · 122개 원본 실행 기록 · 검사별 판정 · 설정 통제 후 기대값·실제값 · 272개 테스트 TRX</p>
+<h2 id="section-4">VA·CA 옵션 구성 조사 — 17페이지</h2>
+<p>실제로 읽은 체크박스·라디오·입력 컨트롤 이름입니다. 한국어 번역을 영어로 정규화했습니다. 문구 차이·다른 컨트롤 종류도 불일치로 잡히므로 아래 목록만으로 미구현 개수를 단정하지 않습니다. 기존 VA 실화면과 최신 CA 실화면 기준입니다.</p>
+<p>Goto · VA 명명 컨트롤 6 / CA 4</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Goto</p>
+</li>
+<li><p>Goto Related</p>
+</li>
+<li><p>Prefer implementation on Goto</p>
+</li>
+<li><p>Project</p>
+</li>
+<li><p>Select symbol on Goto</p>
+</li>
+<li><p>Solution</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Alt + click: Go to definition</p>
+</li>
+<li><p>Context Bar</p>
+</li>
+<li><p>Search settings</p>
+</li>
+<li><p>Show symbol Quick Info</p>
+</li>
+</ul>
+<p>Highlighting · VA 명명 컨트롤 11 / CA 7</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Background color</p>
+</li>
+<li><p>Highlight current line with:</p>
+</li>
+<li><p>Highlight matching words when caret is in comments and strings</p>
+</li>
+<li><p>Highlight matching { and }</p>
+</li>
+<li><p>Highlight mismatching { and }</p>
+</li>
+<li><p>Highlight results of Quick Find and Find in Files</p>
+</li>
+<li><p>Highlight solution file paths in build output window (C/C++)</p>
+</li>
+<li><p>Highlight write and read references to symbol under cursor</p>
+</li>
+<li><p>Highlight write references using</p>
+</li>
+<li><p>Ray lines</p>
+</li>
+<li><p>Thin frame</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Highlight current line</p>
+</li>
+<li><p>Highlight find results</p>
+</li>
+<li><p>Highlight matching braces</p>
+</li>
+<li><p>Highlight mismatching braces</p>
+</li>
+<li><p>Highlight output filenames</p>
+</li>
+<li><p>Highlight references under caret</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>Display · VA 명명 컨트롤 16 / CA 6</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Alphabetically</p>
+</li>
+<li><p>Bottom</p>
+</li>
+<li><p>Display VA Navigation Bar:</p>
+</li>
+<li><p>Display indicator after column</p>
+</li>
+<li><p>Format doxygen comments in Quick Info tooltips</p>
+</li>
+<li><p>Format enhanced expansion</p>
+</li>
+<li><p>Keep both original and enhanced expansions</p>
+</li>
+<li><p>Occurrence</p>
+</li>
+<li><p>Show Quick Info tooltips for more symbols</p>
+</li>
+<li><p>Show comments from source files when available</p>
+</li>
+<li><p>Show tooltips for braces and structural keywords</p>
+</li>
+<li><p>Switch to integrated main menu</p>
+</li>
+<li><p>Top</p>
+</li>
+<li><p>Use &#39;/&#39; in navigation bar for include paths</p>
+</li>
+<li><p>Use enhanced macro expansion</p>
+</li>
+<li><p>Use last active document context for miscellaneous files</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Alphabetically</p>
+</li>
+<li><p>Display VA Navigation Bar</p>
+</li>
+<li><p>Occurrence</p>
+</li>
+<li><p>Search settings</p>
+</li>
+<li><p>Show column indicator</p>
+</li>
+<li><p>Show symbol Quick Info</p>
+</li>
+</ul>
+<p>VA Hashtags · VA 명명 컨트롤 3 / CA 1</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Allow VA Hashtags that consist solely of the alpha characters of hexadecimal values</p>
+</li>
+<li><p>Allow hyphens in VA Hashtags</p>
+</li>
+<li><p>Display global commands in the context menu of the VA Hashtags tool window</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li>Search settings</li>
+</ul>
+<p>Editor · VA 명명 컨트롤 20 / CA 16</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><h2 id="section-5"></h2>
+</li>
+<li><p>(</p>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><p>/</p>
+</li>
+<li><p>Convert dot to -&gt; if operator -&gt; is overloaded</p>
+</li>
+<li><p>Convert dot to -&gt; in C/C++</p>
+</li>
+<li><p>Display paste menu with</p>
+</li>
+<li><p>Double effective rate of key repeat</p>
+</li>
+<li><p>Extend multi-line comments</p>
+</li>
+<li><p>Format after paste</p>
+</li>
+<li><p>Insert after m and Shift</p>
+</li>
+<li><p>Insert () and closing } ) ] &quot;</p>
+</li>
+<li><p>Insert a space when toggling a line into a comment</p>
+</li>
+<li><p>Repair case</p>
+</li>
+<li><p>Surround Selection via character toggles</p>
+</li>
+<li><p>With VA Snippets</p>
+</li>
+<li><p>after a blank line</p>
+</li>
+<li><p>on the next line</p>
+</li>
+<li><p>on the same line</p>
+</li>
+<li><p>{</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>(</p>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><p>/</p>
+</li>
+<li><p>Convert pointer dot to arrow</p>
+</li>
+<li><p>Extend multi-line comments</p>
+</li>
+<li><p>Format after paste</p>
+</li>
+<li><p>Insert () and closing brackets and quotes</p>
+</li>
+<li><p>Insert a space when toggling a line into a comment</p>
+</li>
+<li><p>Insert underscore after m and Shift</p>
+</li>
+<li><p>Repair type name case</p>
+</li>
+<li><p>Search settings</p>
+</li>
+<li><p>Surround Selection via character toggles</p>
+</li>
+<li><p>after a blank line</p>
+</li>
+<li><p>on the next line</p>
+</li>
+<li><p>on the same line</p>
+</li>
+<li><p>{</p>
+</li>
+</ul>
+<p>Enhanced Listboxes · VA 명명 컨트롤 11 / CA 8</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Additional characters</p>
+</li>
+<li><p>Allow Acronyms and Shorthand</p>
+</li>
+<li><p>Bold non-inherited members</p>
+</li>
+<li><p>Default Intellisense</p>
+</li>
+<li><p>Display filtering toolbar when hovering</p>
+</li>
+<li><p>Enter</p>
+</li>
+<li><p>List non-inherited entries first</p>
+</li>
+<li><p>Prefer Acronym matches</p>
+</li>
+<li><p>Shrink as you type</p>
+</li>
+<li><p>Tab</p>
+</li>
+<li><p>Visual Assist</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Accept with Enter</p>
+</li>
+<li><p>Accept with Tab</p>
+</li>
+<li><p>Acronym completion</p>
+</li>
+<li><p>Search settings</p>
+</li>
+<li><p>Shorthand completion</p>
+</li>
+<li><p>Snippet suggestions</p>
+</li>
+<li><p>Suggestion lists</p>
+</li>
+<li><p>Use Visual Studio default completion colors</p>
+</li>
+</ul>
+<p>Coloring · VA 명명 컨트롤 9 / CA 5</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Enable Enhanced Syntax Coloring</p>
+</li>
+<li><p>Listboxes</p>
+</li>
+<li><p>Object Browser</p>
+</li>
+<li><p>Show local symbols in bold</p>
+</li>
+<li><p>Show system symbols in italics</p>
+</li>
+<li><p>Text Editors</p>
+</li>
+<li><p>Tooltips</p>
+</li>
+<li><p>VA Navigation Bar</p>
+</li>
+<li><p>Views</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Enable enhanced symbol coloring</p>
+</li>
+<li><p>Local symbols in bold</p>
+</li>
+<li><p>Search settings</p>
+</li>
+<li><p>System symbols in italics</p>
+</li>
+<li><p>Use Visual Studio default completion colors</p>
+</li>
+</ul>
+<p>Underlining · VA 명명 컨트롤 2 / CA 2</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Underline spelling errors in comments and strings using</p>
+</li>
+<li><p>Underline unrecognized symbols using</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Enable basic file diagnostics</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>Project-Wide · VA 명명 컨트롤 5 / CA 5</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Confirm before applying all listed quick fixes</p>
+</li>
+<li><p>Parse what is in the editor before you save</p>
+</li>
+<li><p>Show the Stats tab</p>
+</li>
+<li><p>Show the VA Code Inspection tool window when a question needs an answer</p>
+</li>
+<li><p>Skip the Unreal Engine project when including all projects</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Ask in the notification bar</p>
+</li>
+<li><p>Disable inspections</p>
+</li>
+<li><p>Per-file inspection</p>
+</li>
+<li><p>Project-wide basic inspection</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>Per-File · VA 명명 컨트롤 5 / CA 2</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Enable while debugging</p>
+</li>
+<li><p>Even when on battery power</p>
+</li>
+<li><p>Reparse automatically</p>
+</li>
+<li><p>Show ticks in vertical scroll bar</p>
+</li>
+<li><p>Underline/dim code issues</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Enable per-file inspection</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>Code Generation · VA 명명 컨트롤 3 / CA 1</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Include default parameter values in generated C/C++ implementations</p>
+</li>
+<li><p>Insert open brace on new line during Introduce Variable and Add Braces</p>
+</li>
+<li><p>Maintain order in header and source files for generated C/C++ implementations</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li>Search settings</li>
+</ul>
+<p>Debug Assistance · VA 명명 컨트롤 3 / CA 2</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>$(SolutionDir).va\</p>
+</li>
+<li><p>%APPDATA%\VisualAssist\</p>
+</li>
+<li><p>Enable debugger integration required by VA Step Filter for native C/C++</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Search settings</p>
+</li>
+<li><p>Step filter enabled</p>
+</li>
+</ul>
+<p>Source Links · VA 명명 컨트롤 2 / CA 3</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Enable Source Links</p>
+</li>
+<li><p>Show action</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Enable</p>
+</li>
+<li><p>Regular expression</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>Projects and Files · VA 명명 컨트롤 6 / CA 1</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Display project nodes in Find References results</p>
+</li>
+<li><p>Display project nodes in Rename dialog references lists</p>
+</li>
+<li><p>Enumerate project references thoroughly</p>
+</li>
+<li><p>Parse files without extensions as headers</p>
+</li>
+<li><p>if Solution is empty</p>
+</li>
+<li><p>if Solution is not empty</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li>Search settings</li>
+</ul>
+<p>Mouse · VA 명명 컨트롤 4 / CA 2</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Display help content on hover in options dialog</p>
+</li>
+<li><p>Execute</p>
+</li>
+<li><p>Override Ctrl+Shift+Wheel in text editor with</p>
+</li>
+<li><p>Override Ctrl+Wheel in text editor with</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li><p>Alt + click: Go to definition</p>
+</li>
+<li><p>Search settings</p>
+</li>
+</ul>
+<p>C/C++ Directories · VA 명명 컨트롤 0 / CA 1</p>
+<p><strong>VA</strong></p>
+<p><strong>CA</strong></p>
+<ul>
+<li>Search settings</li>
+</ul>
+<p>Performance · VA 명명 컨트롤 6 / CA 1</p>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>Do not parse files excluded by .vscode\settings.json</p>
+</li>
+<li><p>Enable multithreaded parsing</p>
+</li>
+<li><p>Limit the maximum number of concurrent threads to</p>
+</li>
+<li><p>Parse all files when opening a project</p>
+</li>
+<li><p>Use alternate directory for symbol database</p>
+</li>
+<li><p>Watch for externally modified files and reparse when necessary</p>
+</li>
+</ul>
+<p><strong>CA</strong></p>
+<ul>
+<li>Search settings</li>
+</ul>
+<h2 id="section-6">보조 테마 렌더</h2>
+<p>Coloring</p>
+<p>영어 Dark · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-0-Dark.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-0-Dark.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-0-Dark.png)</figcaption></figure></p>
+<p>영어 Light · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-0-Light.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-0-Light.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-0-Light.png)</figcaption></figure></p>
+<p>Display</p>
+<p>영어 Dark · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-1-Dark.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-1-Dark.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-1-Dark.png)</figcaption></figure></p>
+<p>영어 Light · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-1-Light.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-1-Light.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-1-Light.png)</figcaption></figure></p>
+<p>Goto</p>
+<p>영어 Dark · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-2-Dark.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-2-Dark.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-2-Dark.png)</figcaption></figure></p>
+<p>영어 Light · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-2-Light.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-2-Light.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-2-Light.png)</figcaption></figure></p>
+<p>Enhanced Listboxes</p>
+<p>영어 Dark · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-3-Dark.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-3-Dark.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-3-Dark.png)</figcaption></figure></p>
+<p>영어 Light · 독립 WPF</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/debug-0.0.90/preview-3-Light.png" alt="참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-3-Light.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/debug-0.0.90/preview-3-Light.png)</figcaption></figure></p>
+<h2 id="section-7">미완료·제한</h2>
+<p>타입 대소문자 자동 교정은 켠 상태에서도 실패했습니다. Display·Quick Info 등 VA의 세부 옵션, 리팩터링 전용 동작, 물리 단축키, 모든 자동완성·툴바·테마 상태의 동등성은 아직 완료하지 않았습니다. 최신 전체 기능 동기화율을 산출할 근거는 부족합니다.</p>
+<p>자동 승인 검토가 일반 VS 프로필에서 추가 VA fixture 실행을 거부했습니다. 일반 VS·Unreal 프로젝트에 영향을 줄 위험이 사유였습니다. 우회하지 않고 기존 검증 VA 화면을 사용했습니다. 일반 VS는 기존 버전이며 최신 0.0.90은 Exp에만 적용했습니다.</p>
+<p>최신 계열 설치 파일 · VS2019 설치 파일</p>
+<p>제안 시간: 10분 · 실제 소요: 8분 46초 · 2026-10-18 11:41:04 KST. XERJ 사용 — 현재 소스·실행 근거 확인.</p>
+<p><a class="report-link" href="../assets/imports/docs/similarity-audit-0.0.90.html">레이아웃·디자인·기능·단축키 재분석: 픽셀 점수와 구분</a></p>
+<p><a class="report-link" href="../assets/imports/docs/similarity-audit-0.0.90.html">레이아웃·디자인·기능·단축키 재분석: 픽셀 점수와 구분</a></p>
+<h2 id="section-8">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/debug-0.0.90.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>b1b38d9e36bff72a4eb7d2332f77c7cd3ea17278de56be2a0580cab330f9c64a</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-dba31dad0a69-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">0.0.90 UI·기능 자동 점검</a><a href="#section-2">수정 전후: 멤버 목록</a><a href="#section-3">전체 대조·원본 근거</a><a href="#section-4">VA·CA 옵션 구성 조사 — 17페이지</a><a href="#section-5"></a><a href="#section-6">보조 테마 렌더</a><a href="#section-7">미완료·제한</a><a href="#section-8">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

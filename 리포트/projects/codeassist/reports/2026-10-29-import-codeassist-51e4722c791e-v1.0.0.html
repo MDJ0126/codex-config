@@ -1,1 +1,1077 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA0.0.100 — 실제 블록 선택 차이 수정·재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T06:33:02.164Z <span class="badge">기존 기록 이전</span></div><h1>CA0.0.100 — 실제 블록 선택 차이 수정·재검증</h1><p><a class="report-link" href="../assets/imports/docs/validation/live-109/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/live-109/index.html</li><li>원본 SHA-256: 33f2a738d67418332720566f0a5964b11580935a101e765c6af8ecb1725a3304</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-51e4722c791e-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA0.0.100 — 실제 블록 선택 차이 수정·재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>CA0.0.100 — 실제 블록 선택 차이 수정·재검증</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">CA0.0.100 — 실제 블록 선택 차이 수정·재검증 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T06:33:02.164Z">2026년 10월 23일 오후 3:33 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>VA·CA 실제 대조 — 현재0.0.99 / 탐색0.0.98</p>
+<h2 id="section-1">CA0.0.100 — 실제 블록 선택 차이 수정·재검증</h2>
+<p>갱신 2026-10-23T10:46:47.864752+09:00</p>
+<p>현재 검사 프로필 설치는0.0.100입니다. 목표는 계속 진행 중입니다. 이번 결과는 같은 C++클래스에서 Alt+]·Alt+[를 실제 입력한 두 대표 시나리오이며 전체 제품 동기화율이 아닙니다.</p>
+<h2 id="section-2">확인된 수정 결과</h2>
+<p>수정 전CA0.0.99는 클래스 이름 안에서 블록 확장을 하면 파일 전체를 선택했습니다. VA는 클래스 선언과 본문 끝 줄바꿈까지 선택했습니다. 타입 선언 헤더·본문을 함께 인식하도록 수정한 후 같은 입력으로 대조했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>실제 키</th>
+<th>VA</th>
+<th>CA0.0.100</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt+]</td>
+<td>1행1열→8행1열, 클래스 선언과 줄바꿈</td>
+<td>동일 문자열·양끝 위치</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>Alt+[</td>
+<td>1행7열, 선택 없음</td>
+<td>동일 문자열·양끝 위치</td>
+<td>일치</td>
+</tr>
+</tbody></table>
+</div><p><strong>2/2개·100% 일치.</strong> 사전 상태는 양쪽 모두1행7열, 빈 선택임을 읽기 전용 DTE관찰로 확인했습니다. 파일 SHA256도 양쪽 동일합니다. 첫 VA시도는 시작 위치가 달라 비교에서 제외하고 재시도 증거만 사용했습니다.</p>
+<h2 id="section-3">원본과 수정 후 실제 화면</h2>
+<p>VA: 실제 블록 확장</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg)</figcaption></figure></p>
+<p>CA0.0.100: 실제 블록 확장</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-246-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-246-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-246-1.jpg)</figcaption></figure></p>
+<h2 id="section-4">수정 전 차이</h2>
+<p>VA: 클래스만 선택</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-235-1.jpg)</figcaption></figure></p>
+<p>CA0.0.99: 파일 전체 선택 — 불일치</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-227-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-227-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-227-1.jpg)</figcaption></figure></p>
+<h2 id="section-5">검증 범위와 남은 작업</h2>
+<ul>
+<li><p>VS2019·Modern 빌드 통과, 실제 검사 프로필 설치 바이너리6/6개 일치.</p>
+</li>
+<li><p>회귀292/292개 통과. 신규4개는 선언 경계·중첩 블록·문자열 오인 방지·축소 복원을 검사합니다.</p>
+</li>
+<li><p>캠페인 대표 실제 키 대조는5/22조합·22.73%입니다. 이전 버전의 Alt+M·비블록 선택 근거를 포함하며 모든 키가 현재 버전에서 재검증됐다는 뜻이 아닙니다.</p>
+</li>
+<li><p>문서 기반 부분 명세108/108개·100%. 전체 역분석 완료나 전체 기능 동등성 인증과 구분합니다.</p>
+</li>
+<li><p>다른 블록·여러 언어·설정 조합, 나머지 단축키, UI색상·누락 옵션이 남아 있습니다. 전체 목표는 미완료입니다.</p>
+</li>
+</ul>
+<p>정확한 전후 문자열·판정 · 현재 설치 확인 · 회귀 테스트 · 설치 패키지 검증</p>
+<p>제안 시간10분. 실제 이번 묶음 9.0분, 기록 시각2026-10-23T10:46:47.864752+09:00. 사용 — CppSelection 후보를 검색하고 현재 소스·실제 입력 결과로 확인</p>
+<hr>
+<p>이전 회차 기록·108개 전체 기준표 펼치기</p>
+<p><strong>이전 차단 기록 — 현재 해제됨</strong></p>
+<p>2026-10-23T01:45:27.599723+09:00 확인: Windows 보안 창(PickerHost PID29376)이 세 차례 연속 점검에서 남아 있습니다. 검사 프로세스 두 개는 실행 중입니다. 보안 창을 사용자가 직접 처리한 뒤 재개 요청을 주시면 실제 UI·키 검증을 이어갑니다. 전체 완료가 아닙니다.</p>
+<h2 id="section-6">입력 검증 재개 — 선택 확장·축소 실제 대조</h2>
+<p>갱신 2026-10-23T10:37:06.795389+09:00</p>
+<p>사용자가 보안 창을 처리하고 최소화된 검사 창을 복원했습니다. 현재 목표는 active입니다. 아래 과거 차단 기록은 이력이며 현재 차단 상태가 아닙니다.</p>
+<h2 id="section-7">결과: 두 대표 시나리오2/2개·100% 일치</h2>
+<p>VA검사 프로필의 키가 기본 VS명령에 잡혀 있음을 설정 화면에서 확인했습니다. CodeAssistBackgroundVA의 텍스트 편집기 범위에 VA확장·축소 명령을 배정하고 읽기 전용 API로 등록을 확인했습니다. 일반VS프로필은 변경하지 않았습니다.</p>
+<p>동일한 C++파일1행7열에서 실제 키를 입력했습니다. 화면의 확대/축소100% 텍스트를 선택 문자열로 사용하지 않고, 읽기 전용 DTE관찰로 실제 문자열·양끝 위치를 확인했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>키</th>
+<th>VA 결과</th>
+<th>CA0.0.99 결과</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt+Shift+]</td>
+<td>ParityActor109 선택: 1행7열→1행21열</td>
+<td>ParityActor109 선택: 1행7열→1행21열</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>Alt+Shift+[</td>
+<td>선택 없음: 1행7열→1행7열</td>
+<td>선택 없음: 1행7열→1행7열</td>
+<td>일치</td>
+</tr>
+</tbody></table>
+</div><p>한 식별자의 두 시나리오 일치입니다. SmartSelect의 전체 경계 조건이나108개 전체 기능 완료로 계산하지 않습니다. 이전 Alt+M을 포함한 캠페인 대표 키 관찰은3/22조합·13.64%이며, Alt+M은 이전 버전 실행 근거입니다.</p>
+<h2 id="section-8">확장 실제 화면</h2>
+<p>VA: 배정 정렬 후 실제 확장</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-216-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-216-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-216-1.jpg)</figcaption></figure></p>
+<p>CA0.0.99: 실제 확장</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-224-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-224-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-224-1.jpg)</figcaption></figure></p>
+<h2 id="section-9">축소 실제 화면</h2>
+<p>VA: 실제 축소</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-217-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-217-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-217-1.jpg)</figcaption></figure></p>
+<p>CA0.0.99: 실제 축소</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-225-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-225-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-225-1.jpg)</figcaption></figure></p>
+<p>판정과 범위 · VA확인된 키 배정 · VA확장 문자열 · CA확장 문자열 · VA축소 문자열 · CA축소 문자열</p>
+<p>검사 프로필의 두 키는 다음 반복 검사에 사용하도록 유지했습니다. 목표는 계속 진행 중이며, 다음에는 블록 선택과 다른 실제 키 동작을 검사합니다. XERJ검색 사용 후 현재 소스로 확인했습니다.</p>
+<p>제안 시간: 첫 결과10분 이내. 최초 확인된 결과는 키 충돌 확인이며, 배정 정렬 후 두 시나리오 확인까지 수행했습니다. 이번 재개 시작2026-10-23 10:21:30 KST, 기록 시각2026-10-23T10:37:06.795389+09:00. 전체 목표는 미완료입니다.</p>
+<hr>
+<h2 id="section-10">아래는 과거 진행 기록입니다</h2>
+<h2 id="section-11">검사기 명령 탐색 추가 검증</h2>
+<p>갱신 2026-10-23T01:44:44.811379+09:00</p>
+<p>Windows 보안 창 PID29376이 계속 남아 있어 입력 검사는 대기 중입니다. 검사기 보완·조회 검증을 제품 기능 일치로 계산하지 않았습니다.</p>
+<p>읽기 전용으로 실제 VA에 네 명령 이름을 조회한 결과 **4/4개·100%**가 확인됐습니다. 이는 이름 조회 성공률입니다. 제품 기능 동기화율이 아닙니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>조회한 기존 이름</th>
+<th>실제 반환 이름</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VAssistX.SmartSelectExtend</td>
+<td>VisualAssist.SmartSelectExtend</td>
+</tr>
+<tr>
+<td>VAssistX.SmartSelectShrink</td>
+<td>VisualAssist.SmartSelectShrink</td>
+</tr>
+<tr>
+<td>VAssistX.SmartSelectExtendBlock</td>
+<td>VisualAssist.SmartSelectExtendBlock</td>
+</tr>
+<tr>
+<td>VAssistX.SmartSelectShrinkBlock</td>
+<td>VisualAssist.SmartSelectShrinkBlock</td>
+</tr>
+</tbody></table>
+</div><p>DTE 자체가 기존 이름의 조회를 새 이름으로 반환하므로 기존 이름으로 실행하면 항상 실패한다고 단정할 수 없습니다. 확인된 문제는 기존 접두어만 수집하던 명령 목록의 누락입니다.</p>
+<ul>
+<li><p>실제 등록 조회 경로 검증7/7개 통과.</p>
+</li>
+<li><p>BackgroundVerifier111 및 ParityRunner 빌드 성공.</p>
+</li>
+<li><p>검사기 후보는 실제 명령 실행·프로필 배포 검증 전입니다.</p>
+</li>
+<li><p>제품 기능 추가 통과0개. 기존 물리 키 판정과 전체 미검증 범위를 그대로 유지합니다.</p>
+</li>
+</ul>
+<p>이번 결과 · VA실제 읽기 전용 조회 · 등록 조회 검증 · 백그라운드 검사기 빌드</p>
+<p>상태 점검 제안1분 이내. 이번 재개2026-10-23 01:40:51 KST. 보안 창 확인 후 독립적인 검사기 보완을 진행했습니다. 전체 목표는 미완료이며 사용자 보안 창 처리 후 입력 검증을 재개합니다.</p>
+<hr>
+<h2 id="section-12">실제 선택 단축키 대조·검사기 보완</h2>
+<p>갱신 2026-10-23T01:40:11.339275+09:00</p>
+<p>전체 목표는 진행 중입니다. 새 Windows 보안 창(PID29376)이 입력을 차단하여 사용자 직접 처리를 요청했습니다. 원인 미확정 차이를 제품 실패나 통과로 계산하지 않습니다.</p>
+<h2 id="section-13">같은 입력에서 관찰한 차이</h2>
+<p>같은 파일의1행7열에서 Alt+Shift+]를 입력했습니다. VA는 클래스 선언 전체, CA0.0.99는 클래스 이름을 선택했습니다. 화면뿐 아니라 읽기 전용 DTE 관찰기로 실제 선택 문자열·양끝 위치를 확인했습니다. 관찰기는 입력·편집·명령 실행·화면 활성화를 하지 않습니다.</p>
+<p>VA: 클래스 선언 전체 선택</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-156-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-156-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-156-1.jpg)</figcaption></figure></p>
+<p>CA0.0.99: 클래스 이름 선택</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-164-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-164-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-164-1.jpg)</figcaption></figure></p>
+<p>다만 VA의 실제 명령 등록을 읽으니 비블록 확장·축소에는 키 배정이 없고 블록 확장·축소에만 Alt+] / Alt+[가 있었습니다. CA에는 네 조합이 배정되어 있습니다. 따라서 동일 명령이 실행됐다고 볼 수 없어 <strong>기능 판정은 보류</strong>합니다. 등록이 없는 키가 어떤 경로로 블록 선택에 도달했는지는 아직 확정하지 않았습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>원본 명령</th>
+<th>실제 VA 배정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VisualAssist.SmartSelectExtend</td>
+<td>배정 없음</td>
+</tr>
+<tr>
+<td>VisualAssist.SmartSelectShrink</td>
+<td>배정 없음</td>
+</tr>
+<tr>
+<td>VisualAssist.SmartSelectExtendBlock</td>
+<td>텍스트 편집기::Alt+]</td>
+</tr>
+<tr>
+<td>VisualAssist.SmartSelectShrinkBlock</td>
+<td>텍스트 편집기::Alt+[</td>
+</tr>
+</tbody></table>
+</div><p>공식 문서상 기본 조합은 <a class="report-link" href="https://www.wholetomato.com/documentation/configuration/keyboard-shortcuts">VA Keyboard Shortcuts</a>와 대조했습니다. 문서 기본값과 현재 검사 프로필의 배정값을 구분합니다.</p>
+<h2 id="section-14">자동 검사기 수정</h2>
+<p>실제 설치 명령 이름은 VisualAssist.*입니다. 기존 검사기는 VAssistX.*를 기준으로 탐색하여 새 이름을 누락할 수 있었습니다. 두 접두어만 같은 정확한 명령 이름으로 해석하도록 보완했습니다. 다른 확장의 유사 이름·누락·모호한 결과는 거절합니다.</p>
+<ul>
+<li><p>명령 해석 회귀6/6 통과.</p>
+</li>
+<li><p>실제 저장된 VA명령4/4개의 이름 해석 통과.</p>
+</li>
+<li><p>검사기 빌드 성공. 새 검사기 명령을 VS에서 실행한 것으로 계산하지 않습니다.</p>
+</li>
+<li><p>BackgroundWorker의 목록 수집도 두 접두어를 인식합니다. 다른 레거시 직접 실행 경로는 추가 점검이 필요합니다.</p>
+</li>
+</ul>
+<p>이번 물리 키 양쪽 입력 시도는 이전 Alt+M을 포함해 **2/22개·9.09%**입니다. 이전 목록 열기 관찰만 일치1/22개·4.55%로 유지하며, 새 판정보류를 일치로 더하지 않습니다. 전체 제품 동기화율이 아닙니다.</p>
+<p>이번 판정·원시 결과 · VA실제 선택·키 배정 · CA실제 선택·키 배정 · 실제 목록 이름 해석 · 검사기 빌드</p>
+<p>제안 시간10~15분. 시작2026-10-23 01:27:39 KST. 이번 결과 기록2026-10-23T01:40:11.339275+09:00. 화면 실행 검증은 보안 창 처리 후 계속합니다. XERJ검색 사용, 오래된 검색 결과는 현재 소스로 보완했습니다.</p>
+<hr>
+<h2 id="section-15">현재 검사 설치: CA0.0.99 — 옵션 배치 수정·실행 확인</h2>
+<p>갱신 2026-10-23T01:26:51.255445+09:00</p>
+<p>전체 목표는 진행 중입니다. 아래 원본과 수정 화면을 대조했습니다. 이후의0.0.98 탐색 기록은 해당 버전의 실행 증거로 보존했으며0.0.99의 새 통과로 계산하지 않습니다.</p>
+<h2 id="section-16">이번 결과</h2>
+<ul>
+<li><p>두 옵션 페이지에 한정한 구조 체크 <strong>9/14항목,64.29%</strong>. 모든 UI의 유사도가 아닙니다.</p>
+</li>
+<li><p>CA입력 검증·종속 항목·취소 동작 <strong>4/4개,100%</strong>. VA기능 일치율이 아닙니다.</p>
+</li>
+<li><p>현재 설치 바이너리6/6 일치, VS2019·Modern 빌드 통과, 회귀288/288통과.</p>
+</li>
+<li><p>원본VA프로세스21064는 옵션 종료 시점에 충돌 이벤트를 남겼습니다. 원인은 미확인입니다. 새 검사 프로세스52636으로 재시작했습니다.</p>
+</li>
+<li><p>저장된 환경 설정은 변경하지 않았습니다. 검사 입력값은 취소했습니다.</p>
+</li>
+</ul>
+<h2 id="section-17">Editor — 원본과 현재 설치</h2>
+<p>VA 현재 Editor</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-126-2.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-126-2.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-126-2.jpg)</figcaption></figure></p>
+<p>CA0.0.99 Editor: 유효 숫자10 복원 후</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-147-2.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-147-2.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-147-2.jpg)</figcaption></figure></p>
+<h2 id="section-18">Suggestions — 원본과 현재 설치</h2>
+<p>VA 현재 Suggestions</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-127-2.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-127-2.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-127-2.jpg)</figcaption></figure></p>
+<p>CA0.0.99 Suggestions: 지원 설정 그룹 재배치</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-148-2.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-148-2.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-148-2.jpg)</figcaption></figure></p>
+<h2 id="section-19">구조 체크: 각1점</h2>
+<p>누락 항목은 불일치로 계산했습니다. 같은 틀과 일부 설정 배치를 맞췄다는 의미이며, 모든 옵션 동등성으로 해석하지 않습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>구조 기준</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>외곽 크기890×675</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>왼쪽 검색·트리 / 오른쪽 본문 배치</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>상단 섹션 제목 위치·활성 제목 강조</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>Editor 기본 체크박스 순서</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>클립보드 수 같은 줄 증감 입력</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>메서드 괄호 공백 같은 줄 증감 입력</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>닫는 괄호3개 라디오 그룹·들여쓰기</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>Suggestions 추천 그룹과 C++완성 그룹 분리</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>하단 오른쪽 저장·취소 배치</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>붙여넣기 메뉴 활성화 체크박스</td>
+<td>차이 / 미구현</td>
+</tr>
+<tr>
+<td>둘러싸기 # / 스니펫 항목</td>
+<td>차이 / 미구현</td>
+</tr>
+<tr>
+<td>연산자 오버로드 변환 하위 옵션</td>
+<td>차이 / 미구현</td>
+</tr>
+<tr>
+<td>키 반복 속도 옵션</td>
+<td>차이 / 미구현</td>
+</tr>
+<tr>
+<td>Suggestions 전체 항목·스니펫 편집 버튼</td>
+<td>차이 / 미구현</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-20">실제 CA동작 검사</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검사</th>
+<th>결과</th>
+<th>실행 증거</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>범위 밖 클립보드 수0 → Save 비활성</td>
+<td>확인</td>
+<td>관찰138</td>
+</tr>
+<tr>
+<td>10으로 복원 → Save 활성</td>
+<td>확인</td>
+<td>관찰147</td>
+</tr>
+<tr>
+<td>추천 목록 끄기 → Smart 하위 항목 비활성</td>
+<td>확인</td>
+<td>관찰149</td>
+</tr>
+<tr>
+<td>Escape 취소 → 옵션 닫힘</td>
+<td>확인</td>
+<td>관찰150</td>
+</tr>
+</tbody></table>
+</div><p>이번 구조·동작 원시 결과 · 실제 설치 확인 · 회귀 검사 · VA프로세스 충돌 이벤트</p>
+<p>제안 시간10~15분. 시작2026-10-23 01:13:48 KST, 이번 기록 완료2026-10-23T01:26:51.255445+09:00. 전체 목표는 미완료입니다.</p>
+<hr>
+<h2 id="section-21">아래는 직전0.0.98 검사 기록입니다</h2>
+<h2 id="section-22">VA·CA 실제 화면·탐색 대조 — CA0.0.98</h2>
+<p>갱신 2026-10-23T01:13:21.621784+09:00</p>
+<p>지속 목표는 진행 중입니다. Computer Use 연결 복구와 검사 프로필 최신 설치를 확인했습니다. Windows 보안 창은 종료되어 검사를 재개했습니다. 전체108개 검증 완료를 뜻하지 않습니다.</p>
+<h2 id="section-23">현재 확인한 결과</h2>
+<ul>
+<li><p>메서드 목록 네 항목의 실제 도착 위치: <strong>4/4, 100%</strong> 일치.</p>
+</li>
+<li><p>이 목록에 한정한 자체 UI 체크: <strong>8/9, 88.89%</strong>. 글자색·선택 강조색 차이가 남아 있습니다. 전체 UI 유사도 점수가 아닙니다.</p>
+</li>
+<li><p>실제 키 입력 관찰: Alt+M <strong>1/22, 4.55%</strong>. 나머지 키는 이번 실행에서 통과 처리하지 않았습니다.</p>
+</li>
+<li><p>설치 바이너리 <strong>6/6</strong> 일치. VS2019·Modern 빌드 통과. 실제 IDE 대조는 VS2022입니다.</p>
+</li>
+<li><p>회귀 테스트 <strong>288/288</strong> 통과. 이를 VA 기능 일치 점수에 합산하지 않습니다.</p>
+</li>
+<li><p>문서 기반 부분 명세 <strong>108/108, 100%</strong>. 전체 역분석 완료율이 아닙니다.</p>
+</li>
+</ul>
+<h2 id="section-24">실제 선택 결과</h2>
+<p>동일한 C++ 파일 SHA256 8a9d8ad69a16fb6813230be6b2db5a5717d5deb55b426b092465777af2884188를 사용했습니다. 행·문자 위치는 선택 후 안정된 상태에서 다시 관찰했습니다. VA와 CA의 실제 실행 결과만 대조했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>VA 행:문자</th>
+<th>CA0.0.98 행:문자</th>
+<th>판정</th>
+<th>실행 근거</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GetHealth</td>
+<td>5:15</td>
+<td>5:15</td>
+<td>일치</td>
+<td>VA · CA</td>
+</tr>
+<tr>
+<td>Tick</td>
+<td>6:11</td>
+<td>6:11</td>
+<td>일치</td>
+<td>VA · CA</td>
+</tr>
+<tr>
+<td>ParityActor109</td>
+<td>1:21</td>
+<td>1:21</td>
+<td>일치</td>
+<td>VA · CA</td>
+</tr>
+<tr>
+<td>main</td>
+<td>9:9</td>
+<td>9:9</td>
+<td>일치</td>
+<td>VA · CA</td>
+</tr>
+</tbody></table>
+</div><p>이전 CA0.0.97의 클래스 선택은 2행2열이었고, VA의 실제 선택은1행21열이었습니다. 0.0.98에서 식별자 끝으로 수정하고 재검증했습니다.</p>
+<h2 id="section-25">실제 목록: 이름·아이콘과 남은 색상 차이</h2>
+<p>VA 원본: 기본 글자색·선택 글자색</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-092-3.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-092-3.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-092-3.jpg)</figcaption></figure></p>
+<p>CA0.0.98: 심볼 색상은 표시되나 원본과 세부 차이</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-120-2.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-120-2.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-120-2.jpg)</figcaption></figure></p>
+<h2 id="section-26">클래스 이동 수정 후</h2>
+<p>VA: 1행21열</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-100-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-100-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-100-1.jpg)</figcaption></figure></p>
+<p>CA0.0.98: 1행21열</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-111-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-111-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-111-1.jpg)</figcaption></figure></p>
+<h2 id="section-27">Tick 이동 대조</h2>
+<p>VA: 6행11열</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-093-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-093-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-093-1.jpg)</figcaption></figure></p>
+<p>CA0.0.98: 6행11열</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-121-1.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-121-1.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-121-1.jpg)</figcaption></figure></p>
+<h2 id="section-28">한정된 UI 판정표</h2>
+<p>각 항목 동일 가중치1점, 위치·크기 허용8px. 전체 제품 점수로 사용하지 않습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt+M으로 작은 목록 열기</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>왼쪽 탐색 막대 앵커: 기존 촬영 차이 6×3px</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>너비: VA 299px / CA 300px</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>높이: VA 74px / CA 82px, 허용 8px</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>클래스 포함 4개 항목</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>표시 이름·서명·순서 4/4</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>클래스/함수 아이콘 종류</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>기본 글자색·선택 강조색</td>
+<td>차이</td>
+</tr>
+<tr>
+<td>접근성 이름에 실제 표시 이름 노출</td>
+<td>일치</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-29">아직 다른 Editor 옵션 구성</h2>
+<p>VA Editor</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-025-5.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-025-5.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-025-5.jpg)</figcaption></figure></p>
+<p>CA0.0.95 관찰: 이후 옵션 소스 미수정, 최신 화면 재확인 필요</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-021-5.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-021-5.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-021-5.jpg)</figcaption></figure></p>
+<h2 id="section-30">아직 다른 Suggestions 옵션 구성</h2>
+<p>VA Suggestions</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-018-5.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-018-5.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-018-5.jpg)</figcaption></figure></p>
+<p>CA0.0.95 관찰: 이후 옵션 소스 미수정, 최신 화면 재확인 필요</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/live-109/computer-use/request-023-5.jpg" alt="참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-023-5.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/live-109/computer-use/request-023-5.jpg)</figcaption></figure></p>
+<h2 id="section-31">108개 전체 범위</h2>
+<p>현재 회차에서 모든 조건을 인증한 기능은 **0/108(0%)**입니다. 이는 미구현률이 아니라 전체 조건 검증 완료 개수입니다. 한 목록의4개 이동 일치를108개 전체 일치율로 바꾸지 않습니다. 과거17/108 기록도 현재 버전 점수로 재사용하지 않습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>기능</th>
+<th>현재 회차</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VA-F001</td>
+<td>Find by Context</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F002</td>
+<td>Find References</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F003</td>
+<td>Find Symbol in Solution</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F004</td>
+<td>GoTo Implementation</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F005</td>
+<td>GoTo Member</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F006</td>
+<td>GoTo Related</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F007</td>
+<td>Highlight Current Line</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F008</td>
+<td>List Methods in File</td>
+<td>부분 실행: 목록4항목 실제 탐색 일치; 전체 경계·설정 조건 미검증</td>
+</tr>
+<tr>
+<td>VA-F009</td>
+<td>Move Scope</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F010</td>
+<td>Navigate Back and Forward</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F011</td>
+<td>Open Corresponding File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F012</td>
+<td>Open File in Solution</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F013</td>
+<td>VA Hashtags</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F014</td>
+<td>VA Navigation Bar</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F015</td>
+<td>Access to Refactoring Commands</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F016</td>
+<td>Change Signature</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F017</td>
+<td>Convert Between Pointer and Instance</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F018</td>
+<td>Encapsulate Field</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F019</td>
+<td>Extract Method</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F020</td>
+<td>Introduce Variable</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F021</td>
+<td>Move Implementation to Header File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F022</td>
+<td>Move Implementation to Source File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F023</td>
+<td>Move Method Implementations to Source File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F024</td>
+<td>Move Selection to New File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F025</td>
+<td>Rename</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F026</td>
+<td>Rename Files</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F027</td>
+<td>Simplify Instance Declaration</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F028</td>
+<td>Add Forward Declaration</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F029</td>
+<td>Add Member</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F030</td>
+<td>Add Missing Case Statements</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F031</td>
+<td>Add Similar Member</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F032</td>
+<td>Add Using Directive</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F033</td>
+<td>Add include Directive</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F034</td>
+<td>Add/Remove Braces</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F035</td>
+<td>Create Declaration</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F036</td>
+<td>Create File</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F037</td>
+<td>Create from Usage</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F038</td>
+<td>Create Implementation</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F039</td>
+<td>Create Method Implementations</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F040</td>
+<td>Document Method</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F041</td>
+<td>Implement Interface / Virtual Methods</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F042</td>
+<td>Acronyms</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F043</td>
+<td>Auto-Extend Multi-Line Comments</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F044</td>
+<td>Enhanced Listboxes</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F045</td>
+<td>Format After Paste</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F046</td>
+<td>Insert () and Closing Brackets and Quotes</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F047</td>
+<td>Insert _ After m and Shift</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F048</td>
+<td>Multiple Clipboards</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F049</td>
+<td>Reset Editor Zoom</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F050</td>
+<td>Shorthand</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F051</td>
+<td>Smart Select</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F052</td>
+<td>Smart Suggestions</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F053</td>
+<td>Sort Selected Lines</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F054</td>
+<td>Suggestion Lists</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F055</td>
+<td>Surround Selection</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F056</td>
+<td>Surround With</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F057</td>
+<td>Column Indicator</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F058</td>
+<td>Context Field</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F059</td>
+<td>Definition Field</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F060</td>
+<td>Enhanced Syntax Coloring</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F061</td>
+<td>Local Symbols in Bold</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F062</td>
+<td>Highlight Find Results</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F063</td>
+<td>Highlight Matching Words</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F064</td>
+<td>Highlight References to Symbol Under Cursor</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F065</td>
+<td>Parameter Info</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F066</td>
+<td>Print in Color</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F067</td>
+<td>Quick Info</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F068</td>
+<td>System Symbols in Italics</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F069</td>
+<td>Convert Dot to -&gt;</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F070</td>
+<td>Highlight Files in Output Window</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F071</td>
+<td>Highlight Matching Braces and Parentheses</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F072</td>
+<td>Highlight Mismatching Braces and Parentheses</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F073</td>
+<td>Repair Case</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F074</td>
+<td>Underline Spelling Errors</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F075</td>
+<td>Underline Unknown Symbols</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F076</td>
+<td>Code Inspection Settings</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F077</td>
+<td>Code Issues in the Editor</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F078</td>
+<td>Quick Fixes in the Editor</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F079</td>
+<td>Quick Fixes in a Tool Window</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F080</td>
+<td>VA Snippets</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F081</td>
+<td>for Refactoring</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F082</td>
+<td>for Smart Suggestions</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F083</td>
+<td>for Surround With</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F084</td>
+<td>with Shortcuts</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F085</td>
+<td>Create from Selection</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F086</td>
+<td>Environment Placeholders</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F087</td>
+<td>Input Placeholders</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F088</td>
+<td>Reserved Strings</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F089</td>
+<td>Address Resolver</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F090</td>
+<td>PDB Explorer</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F091</td>
+<td>VA Memory View</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F092</td>
+<td>VA Step Filter</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F093</td>
+<td>VA Outline</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F094</td>
+<td>VA View</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F095</td>
+<td>Simple Link Patterns</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F096</td>
+<td>Complex Link Patterns</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F097</td>
+<td>Connect to FogBugz and GitHub</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F098</td>
+<td>Preview Files</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F099</td>
+<td>Open Hyperlinks in an External Browser</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F100</td>
+<td>Custom Plug-ins</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F101</td>
+<td>Context Menus</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F102</td>
+<td>Custom File Extensions</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F103</td>
+<td>Keyboard Shortcuts</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F104</td>
+<td>Mouse</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F105</td>
+<td>Multiple Platforms</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F106</td>
+<td>Non-Microsoft Build Processes</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F107</td>
+<td>Parse Concurrency</td>
+<td>현재 회차 실행 미완료</td>
+</tr>
+<tr>
+<td>VA-F108</td>
+<td>Options Dialog</td>
+<td>부분 관찰: Editor/Suggestions 구성 차이; 모든 페이지·저장 검증 필요</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-32">다음 반복 검증</h2>
+<ul>
+<li><p>목록 기본 글자색·선택 강조색을 원본과 맞추고 다크/라이트 테마를 대조합니다.</p>
+</li>
+<li><p>Editor/Suggestions 옵션 그룹·항목·위치를 맞추고 실제 토글 적용을 검사합니다.</p>
+</li>
+<li><p>다른 기능 시나리오·물리 단축키를 확대합니다. 실패·미판정·미실행·무반응을 통과로 계산하지 않습니다.</p>
+</li>
+</ul>
+<p><a class="report-link" href="../assets/imports/docs/validation/live-parity-goal.md">100%에 최대한 가까워질 때까지 반복 검증하는 지속 목표</a></p>
+<p>기계 판독 결과 · 현재 설치 검증 · 현재 회귀 테스트 · <a class="report-link" href="../assets/imports/docs/validation/live-109/index-before-098.html">이전 비교 기록</a> · 원본 촬영 해시</p>
+<p>사용 — DocumentMemberMenu 검색은 신규 파일을 누락하여 현재 파일 직접 읽기로 보완; 검색 결과를 실행 증거로 취급하지 않음</p>
+<p>이번 재개 시작2026-10-23 01:00:16 KST. 최초 상태 점검 예상1분 이내였고, 보안 창 종료 확인 후 설치·실행 검증으로 이어졌습니다. 전체 목표는 미완료입니다. 이 기록의 갱신 시각은 위와 같습니다.</p>
+<h2 id="section-33">0.0.101 아이콘 설치·실행 대조</h2>
+<p>검사 프로필 설치 바이너리 6/6 일치. VA·CA 숫자 조절 동일 클릭 2/2 일치. 전체 동등성으로 확대하지 않음.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/icons-101/index.html">실제 양쪽 촬영·차이·동작 결과</a></p>
+<h2 id="section-34">0.0.102 메서드 이동 선택 범위 수정</h2>
+<p>실제 Alt+M 이후 동일 키 입력: VA/CA GetHealth 선택 5:6→5:15 일치. 전체 검증 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/method-102/index.html">현재 실행 근거·VA 종료 기록 정정</a></p>
+<h2 id="section-35">0.0.104 팝업 선택 상태 수정</h2>
+<p>이전 행 강조 제거·현재 행 테마 전경색 적용. 동일 항목 Enter 선택 범위 VA 일치. 전체 목표 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/popup-104/index.html">최신 실제 촬영 및 남은 차이</a></p>
+<h2 id="section-36">0.0.106 클립보드 옵션·메뉴</h2>
+<p>누락 토글 연결 및 중앙 기본 창을 커서 옆 테마 메뉴로 변경. VA 실제 메뉴와 촬영 대조, 세부 차이 남음.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/clipboard-106/index.html">최신 촬영·실행 결과</a></p>
+<h2 id="section-37">0.0.107 클립보드 메뉴 대조</h2>
+<p>항목 클릭 본문·커서 일치. 취소는 시작 선택 조건이 달라 제외. 전체 목표 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/clipboard-107/index.html">현재 실행 근거·차이</a></p>
+<h2 id="section-38">0.0.107 동일 조건 취소·라이트 테마</h2>
+<p>새 취소 검사 1/1 일치. 실제 라이트 선택 배경은 VA 연한 파랑 / CA 회색으로 미일치. 양쪽 다크 복구.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/cancel-light-107/index.html">실행 상태·원본 촬영</a></p>
+<h2 id="section-39">0.0.108 공통 메뉴 선택 팔레트 수정</h2>
+<p>2개 사용처 수정·설치, 다크 메뉴 및 WPF 라이트 렌더 확인. 실제 IDE 라이트 재검증 미완료.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/theme-108/index.html">현재 근거·남은 검증</a></p>
+<h2 id="section-40">0.0.108 실제 라이트 재검증 완료</h2>
+<p>2/2 팝업 촬영. 선택 배경 기준 1/2 일치, 메서드 채움·라이트 코드 대비 차이 발견. 양쪽 다크 복구.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/theme-live-108/index.html">현재 실행 촬영·남은 차이</a></p>
+<h2 id="section-41">0.0.109 기본 팔레트 대비·테마 이벤트</h2>
+<p>라이트 가독성·다크 복귀·메서드 흰 선택 배경 실제 확인. 301/301 Core 통과. 전체 검증 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/contrast-109/index.html">현재 실행 대조·남은 차이</a></p>
+<h2 id="section-42">0.0.110 참조 찾기 실제 대조</h2>
+<p>같은 단축키·참조 2개 위치·호출 이동 선택 범위 일치. 대표 2/2이며 전체 기능 인증 아님. 결과 UI·아이콘 개선.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-110/index.html">실제 촬영·남은 차이</a></p>
+<h2 id="section-43">0.0.110 같은 줄 참조 경계 검사</h2>
+<p>호출 이동 2/2 일치. 숨겨진 참조·필터·배치 차이는 남음. 시험 코드 양쪽 원상 복구.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/reference-boundaries-110/index.html">실제 촬영 및 계산 근거</a></p>
+<h2 id="section-44">0.0.112 참조 필터·벡터 이동 버튼</h2>
+<p>필터 두 입력 실제 2/2 일치. 클래스 문맥 포함 수정, 하단 도킹 적용. 전체 필터·탭 그룹·전역 함수 문맥 차이 남음.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-112/index.html">현재 촬영·실행 근거</a></p>
+<h2 id="section-45">0.0.113 함수 문맥·검색어 강조·하단 탭 그룹</h2>
+<p>안정된 필터·열기 표본 2/2 일치. 현재 참조 영역 배치 3/3 일치. 라이트 촬영 후 다크 복구, 전체 목표 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-113/index.html">최신 촬영·실행 근거</a></p>
+<h2 id="section-46">0.0.114 참조 새로 고침·복제</h2>
+<p>실제 코드 변경 후 참조 2→3·표시 1→2 양쪽 일치. 복제 필터 보존 포함 2/2 표본. 전체 목표 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-114/index.html">최신 실제 촬영·복구 근거</a></p>
+<h2 id="section-47">0.0.115 검색 위치 추적·오류·메뉴 복제</h2>
+<p>줄 삽입 후 새로 고침 위치 대조 1/1. CA 추가 오류·복구·메뉴 확인 별도 3/3. 원본 복구, XERJ 코드 인덱스 재구축.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/references-115/index.html">실제 실행 및 제외 근거</a></p>
+<h2 id="section-48">0.0.116 참조 상태·캐시 리팩토링</h2>
+<p>실행 대조 4/4. 순수 필터·준비 비용·할당 전후 측정과 실제 캐시 갱신·복제 독립성 확인. 전체 목표 진행 중.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/refactor-116/index.html">측정·촬영·검증 한계</a></p>
+<h2 id="section-49">화면 비점유 검사기 추가</h2>
+<p>현재 0.0.116 자체 검사 5/6 통과·1 미확인. Core 325/325. 새 VA 대조는 0건이며 이전 실제 대조와 구분합니다.</p>
+<p><a class="report-link" href="../assets/imports/docs/validation/read-only-116/index.html">108개 기준 목록·현재 자체 검사</a></p>
+<h2 id="section-50">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/live-109/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>33f2a738d67418332720566f0a5964b11580935a101e765c6af8ecb1725a3304</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-51e4722c791e-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">CA0.0.100 — 실제 블록 선택 차이 수정·재검증</a><a href="#section-2">확인된 수정 결과</a><a href="#section-3">원본과 수정 후 실제 화면</a><a href="#section-4">수정 전 차이</a><a href="#section-5">검증 범위와 남은 작업</a><a href="#section-6">입력 검증 재개 — 선택 확장·축소 실제 대조</a><a href="#section-7">결과: 두 대표 시나리오2/2개·100% 일치</a><a href="#section-8">확장 실제 화면</a><a href="#section-9">축소 실제 화면</a><a href="#section-10">아래는 과거 진행 기록입니다</a><a href="#section-11">검사기 명령 탐색 추가 검증</a><a href="#section-12">실제 선택 단축키 대조·검사기 보완</a><a href="#section-13">같은 입력에서 관찰한 차이</a><a href="#section-14">자동 검사기 수정</a><a href="#section-15">현재 검사 설치: CA0.0.99 — 옵션 배치 수정·실행 확인</a><a href="#section-16">이번 결과</a><a href="#section-17">Editor — 원본과 현재 설치</a><a href="#section-18">Suggestions — 원본과 현재 설치</a><a href="#section-19">구조 체크: 각1점</a><a href="#section-20">실제 CA동작 검사</a><a href="#section-21">아래는 직전0.0.98 검사 기록입니다</a><a href="#section-22">VA·CA 실제 화면·탐색 대조 — CA0.0.98</a><a href="#section-23">현재 확인한 결과</a><a href="#section-24">실제 선택 결과</a><a href="#section-25">실제 목록: 이름·아이콘과 남은 색상 차이</a><a href="#section-26">클래스 이동 수정 후</a><a href="#section-27">Tick 이동 대조</a><a href="#section-28">한정된 UI 판정표</a><a href="#section-29">아직 다른 Editor 옵션 구성</a><a href="#section-30">아직 다른 Suggestions 옵션 구성</a><a href="#section-31">108개 전체 범위</a><a href="#section-32">다음 반복 검증</a><a href="#section-33">0.0.101 아이콘 설치·실행 대조</a><a href="#section-34">0.0.102 메서드 이동 선택 범위 수정</a><a href="#section-35">0.0.104 팝업 선택 상태 수정</a><a href="#section-36">0.0.106 클립보드 옵션·메뉴</a><a href="#section-37">0.0.107 클립보드 메뉴 대조</a><a href="#section-38">0.0.107 동일 조건 취소·라이트 테마</a><a href="#section-39">0.0.108 공통 메뉴 선택 팔레트 수정</a><a href="#section-40">0.0.108 실제 라이트 재검증 완료</a><a href="#section-41">0.0.109 기본 팔레트 대비·테마 이벤트</a><a href="#section-42">0.0.110 참조 찾기 실제 대조</a><a href="#section-43">0.0.110 같은 줄 참조 경계 검사</a><a href="#section-44">0.0.112 참조 필터·벡터 이동 버튼</a><a href="#section-45">0.0.113 함수 문맥·검색어 강조·하단 탭 그룹</a><a href="#section-46">0.0.114 참조 새로 고침·복제</a><a href="#section-47">0.0.115 검색 위치 추적·오류·메뉴 복제</a><a href="#section-48">0.0.116 참조 상태·캐시 리팩토링</a><a href="#section-49">화면 비점유 검사기 추가</a><a href="#section-50">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

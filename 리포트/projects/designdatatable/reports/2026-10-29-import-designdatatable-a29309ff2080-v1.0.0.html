@@ -1,1 +1,70 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Reviewed distribution examples — 2026-10-26 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-26T07:52:31.320Z <span class="badge">기존 기록 이전</span></div><h1>Reviewed distribution examples — 2026-10-26</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-26/store-samples/Verification.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-26/store-samples/Verification.md</li><li>원본 SHA-256: 3f40ae4645e8c83663b5910cae78c84783c38a787f2d32a321e8127ddb0f8170</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-a29309ff2080-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Reviewed distribution examples — 2026-10-26 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Reviewed distribution examples — 2026-10-26</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">Reviewed distribution examples — 2026-10-26 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-26T07:52:31.320Z">2026년 10월 26일 오후 4:52 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<h2 id="section-1">Callout lines outside the body</h2>
+<p>The first gallery row contains accent/border callout presets. Their bundled DrawingML definitions intentionally place leader lines beyond the body rectangle. For example, accentBorderCallout1 has default x adjustments -8333 and -38333 (relative to 100000), with an endpoint at y=112500. The 150x95 body therefore has a complete path bounding box wider/taller than 150x95. This is valid geometry.</p>
+<p>The original compact gallery placed neighboring leader lines across adjacent example areas. The fixture builder now uses actual evaluated path bounds to position each example inside a 243x150 tile, with a separate 32-pixel label row. Shape geometry and adjustment definitions remain unchanged. Every one of the 187 presets and five custom examples was checked for complete-path containment; callouts are not clipped to hide their leaders.</p>
+<h2 id="section-2">Individual file review</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Published file</th>
+<th>Findings and changes</th>
+<th>Review</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ClosedShapeGradientsUi.xlsx</td>
+<td>The original drawing-only fixture had narrow text wrapping, especially on arrows. Added a Guide, enlarged/centered shapes, and placed readable names below them. All 13 geometry and gradient definitions remain.</td>
+<td>Guide preview, production gradient/path raster preview, import/recalculate/edit/save/reopen.</td>
+</tr>
+<tr>
+<td>EmptyStringCoercion.xlsx</td>
+<td>Error results and blank-looking formulas were unexplained. Added a Guide listing the intentional #VALUE! cases and blank-versus-empty-text behavior. Original inputs/formulas remain.</td>
+<td>Guide preview, target calculation/display results, error whitelist, save/reopen.</td>
+</tr>
+<tr>
+<td>GeneralSections.xlsx</td>
+<td>Two unexplained cells were not a useful standalone example. Added a Guide explaining numeric storage, red negative sections and TEXT. Kept original -12.5 and formula.</td>
+<td>Verified (12.5), red number-color directive, positive input change to 4.25, saved TEXT result.</td>
+</tr>
+<tr>
+<td>LocaleDefaultCalendar.xlsx</td>
+<td>Date serials had no display format and the second data row was hidden by a retained filter. Added Guide, yyyy-mm-dd display and cleared initial row filtering. Both dates are visible.</td>
+<td>Independently verified serials as 2024-02-03 and 2567-02-03; target formatter and row state checked.</td>
+</tr>
+<tr>
+<td>ShapeCatalog.xlsx</td>
+<td>Added the complete catalog to the distribution and fixed tile spacing to account for external leader lines.</td>
+<td>All nine sheets and 192 drawings inspected through production geometry output; bounds and save/reopen checked.</td>
+</tr>
+<tr>
+<td>ChartGallery.xlsx</td>
+<td>Added seven native editable chart types with source tables beside them: column, line, area, pie, doughnut, radar and scatter. Explicit scatter axis format avoids milli-prefix labels.</td>
+<td>All seven rendered; target parser supports every chart, series and source binding. Changing Column!B6 to 1500 updates the chart and survives save/reopen.</td>
+</tr>
+</tbody></table>
+</div><p>All six files contain 24 worksheets. Each sheet was inspected through software rendering and/or the target reader/raster output. These are not native Unity screenshots. The original four files in Assets/Editor/StoreAuditSamples were preserved; original and published checksums are recorded in PublishedSamples.json.</p>
+<h2 id="section-3">Executed verification</h2>
+<ul>
+<li>Final build: zero warnings, zero errors.</li>
+<li><code>--store-samples</code>: 692 successful assertions, all six files.</li>
+<li><code>--geometry-catalog</code>: 1331 successful assertions, 1122 preset/aspect-ratio evaluations.</li>
+<li>ReviewStoreSamples.py: six package/XML audits, no errors. Internal relationships, cell/style indices, documented error cells and original source checksums checked.</li>
+<li>Charts are source-cell references, not static images. A synthetic-data note is included.</li>
+<li>BuildLocalizedDocs.py updated the nine language guides with links and descriptions of the six examples.</li>
+</ul>
+<p>The artifact import renderer calculates empty-text arithmetic and General-section TEXT differently from the target application. It was used to inspect the authored Guide sheets and native chart layouts. Formula correctness and final cell previews use the actual application calculation/display code; original cached results and formulas were not overwritten with the artifact renderer&#39;s results. PackageAudit.json records this limitation.</p>
+<h2 id="section-4">Distribution archive</h2>
+<p>The examples reside inside Assets/DesignDataTable/Sample/StoreAuditSamples, the existing package export scope. The reviewed archive is output/release/DesignDataTable-samples-reviewed-20261026.unitypackage.</p>
+<p>A separate hidden Unity export was attempted in an owned temporary project. Licensing IPC reconnects failed and the log reported the missing com.unity.editor.headless entitlement. Only that owned batch-mode process was stopped after verifying its exact project path; the user&#39;s editor and licensing clients were not stopped. No computer-use tools were called during this task.</p>
+<p>The deliverable was assembled from source using the standard GUID/asset/asset.meta/pathname Unity package structure, matching an existing native-export archive layout. VerifyRelease.py passed: 457 unique GUID entries, exact source and metadata byte matches, all expected source assets present, external UGUI GUID dependencies resolved, no development caches or overlong paths. The JSON records the archive SHA256.</p>
+<p>Native Unity re-import and interactive UI are <strong>not verified</strong>. ScreenshotManifest.json retains historical hashes and 13 pending captures; VerifyLocalizedDocs.py consequently reports the pending/stale screenshots, not a documentation pass. No user screen capture was taken and no source hash was rewritten to imply recapture.</p>
+<p>XERJ MCP index designdatatable-code-v3-docs was used for package/menu, drawing, calculation and formatting code discovery, with current source reads and rg fallbacks. No Git commit or remote push was performed.</p>
+<h2 id="section-5">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-26/store-samples/Verification.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>3f40ae4645e8c83663b5910cae78c84783c38a787f2d32a321e8127ddb0f8170</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-a29309ff2080-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">Callout lines outside the body</a><a href="#section-2">Individual file review</a><a href="#section-3">Executed verification</a><a href="#section-4">Distribution archive</a><a href="#section-5">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

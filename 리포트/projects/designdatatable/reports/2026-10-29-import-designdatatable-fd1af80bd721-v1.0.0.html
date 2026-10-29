@@ -1,1 +1,187 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>원본 검색·코드 주석과 간격 정리 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-29T03:46:49.073Z <span class="badge">기존 기록 이전</span></div><h1>원본 검색·코드 주석과 간격 정리</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/table-search-code-docs/Report.ko.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-29/table-search-code-docs/Report.ko.html</li><li>원본 SHA-256: e59c9c1256f0dc99b37348ea4ca7c63c1cd60f5cfbd486afc6a04fd559a6904b</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-fd1af80bd721-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>원본 검색·코드 주석과 간격 정리 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>원본 검색·코드 주석과 간격 정리</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">원본 검색·코드 주석과 간격 정리 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-29T03:46:49.073Z">2026년 10월 29일 오후 12:46 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>원본 검색·코드 문서 정리</p>
+<h2 id="section-1">원본 검색·코드 주석과 간격 정리</h2>
+<p>EnumGear 검색에 원본 XLSX 시트 링크가 함께 표시됩니다. 여러 데이터 테이블을 한 원본 파일에 두는 구조를 유지합니다.</p>
+<p><figure><img class="report-image" src="../assets/imports/Assets/DesignDataTable/Documentation/images/guide-search-source.png" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></p>
+<h2 id="section-2">생성 코드 예시</h2>
+<pre><code>        /// &lt;summary&gt;
+        /// Loads rows through the configured asynchronous binary provider.
+        /// &lt;/summary&gt;
+        public async System.Threading.Tasks.Task LoadAsync()
+        {
+            _datas = await DataLoader.ReadBinaryDictionaryAsync&lt;EnumGear&gt;(Name, Key);
+        }
+
+        /// &lt;summary&gt;
+        /// Replaces loaded rows by decoding the supplied binary bytes using this table&#39;s key.
+        /// &lt;/summary&gt;
+        public void Load(byte[] bytes)
+        {
+            _datas = DataLoader.ReadBinaryDictionary&lt;EnumGear&gt;(bytes, Key);
+        }
+
+        /// &lt;summary&gt;
+        /// Loads binary bytes from an asset and rejects a missing asset.
+        /// &lt;/summary&gt;
+        public void Load(UnityEngine.TextAsset asset)
+        {
+            if (asset == null)
+            {
+                throw new System.ArgumentNullException(nameof(asset));
+            }
+
+            Load(asset.bytes);
+        }
+
+        /// &lt;summary&gt;
+        /// Releases loaded rows so the next access reads the table again.
+        /// &lt;/summary&gt;
+</code></pre>
+<h2 id="section-3">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>소유CSharp파일</td>
+<td>448</td>
+</tr>
+<tr>
+<td>문서대상선언</td>
+<td>5156</td>
+</tr>
+<tr>
+<td>XML요약누락</td>
+<td>0</td>
+</tr>
+<tr>
+<td>재생성테이블</td>
+<td>24</td>
+</tr>
+<tr>
+<td>바이너리변경</td>
+<td>0</td>
+</tr>
+<tr>
+<td>검색및연결검사</td>
+<td>41</td>
+</tr>
+<tr>
+<td>갱신생성코드파일</td>
+<td>54</td>
+</tr>
+</tbody></table>
+</div><p>XML 문서 생성 컴파일 및 Windows 예제 플레이어 빌드: 오류·경고 0개.</p>
+<h2 id="section-4">검색·재생성 검사</h2>
+<ul>
+<li><p>Generated API update preserves binary data: SampleCharacter</p>
+</li>
+<li><p>Generated API update preserves binary data: SampleShopProduct</p>
+</li>
+<li><p>Generated API update preserves binary data: SampleDropItem</p>
+</li>
+<li><p>Generated API update preserves binary data: SampleSkill</p>
+</li>
+<li><p>Generated API update preserves binary data: MiniGameBalance</p>
+</li>
+<li><p>Generated API update preserves binary data: EnumGear</p>
+</li>
+<li><p>Generated API update preserves binary data: EnumEnemies</p>
+</li>
+<li><p>Generated API update preserves binary data: ThreeDSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: CanyonSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: SkyboundSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: DefenseSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: GolfSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: BowlingSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: WarehouseSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: DroneSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: MarbleSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: LanderSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: CourierSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: PotionSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: RhythmSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: BlocksSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: PinballSettings</p>
+</li>
+<li><p>Generated API update preserves binary data: ExampleEquipment</p>
+</li>
+<li><p>Generated API update preserves binary data: ExampleEnemies</p>
+</li>
+<li><p>Two searchable sheet links share one original XLSX</p>
+</li>
+<li><p>Original main object remains TextAsset</p>
+</li>
+<li><p>Project name search returns original workbook: EnumGear</p>
+</li>
+<li><p>Project name search returns original workbook: enumgear</p>
+</li>
+<li><p>Project name search returns original workbook: EnumEnemies</p>
+</li>
+<li><p>Project name search returns original workbook: EnumAdventure</p>
+</li>
+<li><p>Search result accepts registered target: EnumEnemies</p>
+</li>
+<li><p>Search result resolves exact source/sheet: EnumEnemies</p>
+</li>
+<li><p>Search-only object excluded from player data</p>
+</li>
+<li><p>Search result accepts registered target: EnumGear</p>
+</li>
+<li><p>Search result resolves exact source/sheet: EnumGear</p>
+</li>
+<li><p>Search-only object excluded from player data</p>
+</li>
+<li><p>Search link identity survives reimport</p>
+</li>
+<li><p>Detach one worksheet registration</p>
+</li>
+<li><p>Only detached table search link disappears</p>
+</li>
+<li><p>Detached table no longer matches original workbook</p>
+</li>
+<li><p>Import/search/detach checks preserve original XLSX bytes</p>
+</li>
+</ul>
+<h2 id="section-5">범위</h2>
+<ul>
+<li><p>비표시 실제 Unity ProjectBrowser·Inspector를 캡처했습니다. OS 화면 조작은 하지 않았습니다.</p>
+</li>
+<li><p>원본 검색은 XLSX 내부의 등록 테이블 이름에 적용합니다. 별도 원본 엑셀을 복제하지 않습니다.</p>
+</li>
+<li><p>클래스·메서드·생성자·속성·공개 필드 등의 XML 요약을 확인했습니다. 로컬 함수는 CS1587 경고를 피하기 위해 일반 주석을 사용합니다.</p>
+</li>
+<li><p>주석·공백 처리 단계에서는 에디터/입력 심볼을 켜고 끈 실행 토큰을 대조했습니다. 검색 기능과 생성 템플릿의 의도된 변경은 별도입니다.</p>
+</li>
+<li><p>Windows 예제 플레이어 빌드가 성공했습니다. 이번에 모든 게임을 다시 수동 플레이했다는 의미는 아닙니다.</p>
+</li>
+<li><p>일부 기존 설명과 워크북에서 제공된 설명은 보존했습니다. 모든 주석을 사람이 독립적으로 검수했다고 주장하지 않습니다.</p>
+</li>
+</ul>
+<p>상세 근거: CodeAudit/Audit.json / Native/Results.json / Native-Final / PlayerBuild/Result.txt / Docs/LocalizedDocs.json</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/table-search-code-docs/Report.ko.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>e59c9c1256f0dc99b37348ea4ca7c63c1cd60f5cfbd486afc6a04fd559a6904b</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-fd1af80bd721-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">원본 검색·코드 주석과 간격 정리</a><a href="#section-2">생성 코드 예시</a><a href="#section-3">검증</a><a href="#section-4">검색·재생성 검사</a><a href="#section-5">범위</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

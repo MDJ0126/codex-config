@@ -6,22 +6,26 @@ status: 기존 기록 이전
 project: designdatatable
 type: 작업 결과
 category: 이전 기록
-summary: DesignDataTable/Docs/Testing/2026-10-26/taskbar-immediate-hover/Verification.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Immediate custom thumbnail; card-only peek — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/Docs/Testing/2026-10-26/taskbar-immediate-hover/Verification.md
+source_sha256: 3f3597024b79ef664cc1341c1e8a2a3bc394d425e9a317c4641b6a6c90ba496d
+record: archived
+format: legacy-v1
 ---
-# Immediate custom thumbnail; card-only peek
 
-[기존 보고서 원문 열기](../assets/imports/Docs/Testing/2026-10-26/taskbar-immediate-hover/Verification.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: Design Data Table
-- 원래 위치: DesignDataTable/Docs/Testing/2026-10-26/taskbar-immediate-hover/Verification.md
-- 원본 SHA-256: 3f3597024b79ef664cc1341c1e8a2a3bc394d425e9a317c4641b6a6c90ba496d
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+The taskbar thumbnail opens immediately and does not expire while the entry or card is hovered. The full-size document only peeks while the card itself is hovered, with no dwell delay. Leaving the card immediately restores native window visibility/input/stacking, while returning to the taskbar entry retains the card. Leaving both dismisses the card after the existing 160ms transit gap. The previous 400ms re-open cooldown was removed. Click-to-restore and close confirmation remain in place.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+Validation: build passed, zero warnings/errors. 52 hover assertions cover immediate thumbnail, no peek on entry, immediate peek on card, no expiry at long elapsed times, return-to-tab behavior, cancel, placement, input filtering, ABI and native rectangle matching. 153 existing overflow assertions passed. Nine language guide sections updated; English remains default. git diff --check passed.
+
+Actual UI interaction and screenshot recapture were not performed because the user prohibited computer use. Documentation validation remains failing solely for existing pending captures and changed source hashes; these are not passing UI verification. Historical screenshot/source hashes were preserved. No temporary runtime diagnostic probe was added for this change.
+
+XERJ: project MCP search for WorkbookHoverTiming followed by direct inspection of current sources.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/Docs/Testing/2026-10-26/taskbar-immediate-hover/Verification.md)
+
+- 원문 SHA-256: `3f3597024b79ef664cc1341c1e8a2a3bc394d425e9a317c4641b6a6c90ba496d`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

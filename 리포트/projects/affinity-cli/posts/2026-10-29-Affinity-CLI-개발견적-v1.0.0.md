@@ -7,8 +7,8 @@ project: affinity-cli
 type: 검토
 category: 도구검토
 summary: 평소 에이전트 작업에 맞춘 CLI와 전역 지침 연동의 조건부 개발 견적
+format: legacy-v1
 ---
-# Affinity 전용 CLI 개발 범위와 예상 시간
 
 - 작성 시각: 2026-10-29 18:54:56 KST (Asia/Seoul)
 - 버전: v1.0.0

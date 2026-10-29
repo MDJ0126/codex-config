@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tracefolio v1 front matter",
+  "type": "object",
+  "required": [
+    "title",
+    "date",
+    "version",
+    "status",
+    "state",
+    "project",
+    "type",
+    "category",
+    "summary",
+    "format"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "complete",
+        "partial",
+        "progress",
+        "verification",
+        "blocked",
+        "archived"
+      ]
+    },
+    "project": {
+      "enum": [
+        "codex-config",
+        "affinity-cli",
+        "pixora",
+        "designdatatable",
+        "enginemigrator",
+        "codeassist",
+        "windowsfoldersize"
+      ]
+    },
+    "type": {
+      "enum": [
+        "작업 결과",
+        "버그",
+        "수정사항",
+        "검토",
+        "설정"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "format": {
+      "const": "tracefolio-v1"
+    }
+  }
+}

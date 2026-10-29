@@ -6,22 +6,35 @@ status: 기존 기록 이전
 project: designdatatable
 type: 작업 결과
 category: 이전 기록
-summary: DesignDataTable/Docs/Testing/2026-10-26/preview-fade-clock/Verification.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Fade runtime diagnosis and bitmap content correction — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/Docs/Testing/2026-10-26/preview-fade-clock/Verification.md
+source_sha256: f13db169355b936de33f38aa26c215f45bef9dbd7803f89d26d5b9e2ce9db6c3
+record: archived
+format: legacy-v1
 ---
-# Fade runtime diagnosis and bitmap content correction
 
-[기존 보고서 원문 열기](../assets/imports/Docs/Testing/2026-10-26/preview-fade-clock/Verification.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: Design Data Table
-- 원래 위치: DesignDataTable/Docs/Testing/2026-10-26/preview-fade-clock/Verification.md
-- 원본 SHA-256: f13db169355b936de33f38aa26c215f45bef9dbd7803f89d26d5b9e2ce9db6c3
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+The user confirmed that the first bitmap implementation did not animate correctly, then observed black followed by the original card after the clock fix. These observations are accepted as runtime evidence.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+Confirmed source defect: the animation lived in EditorWindow.Update while the real window remained hidden until completion. Unity 6000.0 documents Update as running on visible windows. It now subscribes directly to EditorApplication.update and unsubscribes on disable.
+
+Actual Unity logs after that change confirmed begin -> midpoint -> complete. The user's black-frame observation showed that a successful PrintWindow call did not establish valid captured Unity GPU content. This path is removed from PreviewFade.
+
+The fade frame is now composed from the same card background/border/accent colors, existing status-icon texture and pre-minimize document snapshot. Non-readable source textures are read through a temporary RenderTexture, not a hidden-window screenshot. The complete BGRA buffer is uploaded to an offscreen GDI bitmap and its title/close glyphs are drawn before the separate overlay is faded. Real Unity/document window alpha, group restore and minimize code are unchanged.
+
+Native error stages are recorded as taskbar.fade.prepare.<phase>.<code>; successful begin/midpoint/complete events contain no document contents or paths. No screen capture or UI control tools were used.
+
+Unity 6000.0 reference:
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EditorWindow.Update.html
+
+Actual visual confirmation of the newly composed frame remains pending. Existing historical screenshot/source hashes are unchanged.
+
+Validation after frame correction: build passed with zero warnings/errors; 88 hover assertions and 153 taskbar assertions passed. The new offscreen GDI test verified bitmap upload, readback, BGR channels and top-down orientation without creating or showing a window. Native visual confirmation remains pending.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/Docs/Testing/2026-10-26/preview-fade-clock/Verification.md)
+
+- 원문 SHA-256: `f13db169355b936de33f38aa26c215f45bef9dbd7803f89d26d5b9e2ce9db6c3`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

@@ -1,1 +1,90 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>아이콘 소스 감사 — 현재 0.0.121 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">검토 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T06:41:13.461Z <span class="badge">기존 기록 이전</span></div><h1>아이콘 소스 감사 — 현재 0.0.121</h1><p><a class="report-link" href="../assets/imports/docs/validation/icon-source-audit-121/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/icon-source-audit-121/index.html</li><li>원본 SHA-256: 3ff6bf3c13913aa36a2a459e8dc6a52a8ef82a3c383a56d37df7eefb542a5af0</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-82442c2ceb9f-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>아이콘 소스 감사 — 현재 0.0.121 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>아이콘 소스 감사 — 현재 0.0.121</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">아이콘 소스 감사 — 현재 0.0.121 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T06:41:13.461Z">2026년 10월 23일 오후 3:41 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>아이콘 소스 감사</p>
+<h2 id="section-1">아이콘 소스 감사 — 현재 0.0.121</h2>
+<p>SVG 원본 13개에서 text 노드는 0개입니다. WPF 공통 아이콘에는 12개 명시 경로가 있습니다. 정적 호출 중 Forward는 기본 오른쪽 화살표 경로를 사용합니다. 이 사실만으로 표시 오류라고 판단하지 않았습니다.</p>
+<p>닫기 버튼의 ×, 대응 파일 버튼의 문자 초기값은 실제 Content에서 Path 아이콘으로 교체됩니다. 문자열 검색만으로 텍스트 대체 아이콘이 화면에 남았다고 판정하지 않았습니다.</p>
+<p>아래는 원본 SVG 미리보기이며 실제 VS 화면 캡처가 아닙니다. 동적 이름·DPI·테마·VA 배치는 미검증입니다. 소스 검사로 새 제품 동등성 통과를 추가하지 않았습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>원본</th>
+<th>text 노드</th>
+<th>에셋 미리보기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BananaIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/BananaIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>CorrespondingIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/CorrespondingIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>FileIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/FileIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>NextIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/NextIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>PreviousIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/PreviousIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>ReferencesIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/ReferencesIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>SkipIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/SkipIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>SnippetIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/SnippetIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>SpellIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/SpellIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>SymbolIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/SymbolIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>ThreadIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/ThreadIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>toolbar-strip.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/toolbar-strip.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+<tr>
+<td>WelcomeIcon.svg</td>
+<td>0</td>
+<td><figure><img class="report-image" src="../assets/imports/CodeAssist.Extension/Resources/Toolbar/WelcomeIcon.svg" alt="참고 화면" loading="lazy"><figcaption>참고 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>호출 위치·원본 해시</p>
+<h2 id="section-2">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/icon-source-audit-121/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>3ff6bf3c13913aa36a2a459e8dc6a52a8ef82a3c383a56d37df7eefb542a5af0</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-82442c2ceb9f-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">아이콘 소스 감사 — 현재 0.0.121</a><a href="#section-2">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

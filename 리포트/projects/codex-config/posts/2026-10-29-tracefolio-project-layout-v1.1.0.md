@@ -7,8 +7,8 @@ project: codex-config
 type: 수정사항
 category: 보고서 관리
 summary: 프로젝트별 원본·HTML·첨부자료 폴더를 적용하고 Tracefolio 브랜딩을 공개했습니다. 기존 공유 링크 이동과 실제 화면·이미지 로드를 확인했습니다.
+format: legacy-v1
 ---
-# Tracefolio — Reports & Issues
 
 프로젝트별 파일 구조 변경과 Tracefolio 이름·헤더·색상 적용, GitHub Pages 배포를 완료했습니다. 기존 주황색 문서 보관함 심벌에 워드마크를 조합했습니다.
 

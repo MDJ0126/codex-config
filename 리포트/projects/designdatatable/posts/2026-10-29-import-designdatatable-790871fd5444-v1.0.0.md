@@ -6,22 +6,30 @@ status: 기존 기록 이전
 project: designdatatable
 type: 작업 결과
 category: 이전 기록
-summary: DesignDataTable/Docs/Testing/2026-10-19/DrawingPreview.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Image and shape preview — 2026-10-19 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/Docs/Testing/2026-10-19/DrawingPreview.md
+source_sha256: 3bdb77dce0419fe9744d8ae028fe8ebe3d1fb693937e410c992048546b936f39
+record: archived
+format: legacy-v1
 ---
-# Image and shape preview — 2026-10-19
 
-[기존 보고서 원문 열기](../assets/imports/Docs/Testing/2026-10-19/DrawingPreview.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: Design Data Table
-- 원래 위치: DesignDataTable/Docs/Testing/2026-10-19/DrawingPreview.md
-- 원본 SHA-256: 3bdb77dce0419fe9744d8ae028fe8ebe3d1fb693937e410c992048546b936f39
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+The saved-original viewer now reads embedded PNG/JPEG images and basic DrawingML rectangles, rounded rectangles, ellipses, triangles, diamonds, straight connectors and text boxes. Drawing anchors, stacking order relative to charts, image crop, flip, rotation, explicit/theme colors, opacity, line width and basic text are used for simplified read-only display. It is not Excel-identical rendering. Custom/grouped shapes, SmartArt and unsupported image formats receive placeholders; legacy/unreadable drawing information receives a warning. The data ribbon shows the object count.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+Viewing never writes or reconstructs media/drawing parts. Existing safe-save logic retains source media, drawing XML and relationships byte-for-byte, including unsupported grouped shapes. Complex structural saves remain blocked and object-containing workbooks are backed up. Preservation does not depend on whether an object can be displayed.
+
+Embedded image limits: 8MB each, 8192 maximum dimension, 16M pixels each, 64MB compressed bytes per workbook and 16M decoded pixels per viewer. Image data is shared by package key, loaded into native textures only when visible, and released on reload/close. PNG chunk CRC and dimensions are checked before decode. External image URLs are never fetched. Data-only table loading skips object payloads.
+
+Verification: 10,680 assertions passed. Fixtures include chart, image, seven supported shape/text types, custom star and grouped shape, Unicode text, fill/line colors, alpha, rotation, reflection and font size. Read leaves original bytes unchanged; data-save comparison retains drawing/media and the summary sheet exactly. Native Unity: 144 checks passed, including PNG and JPEG decoding, all-object detection, unsupported markers and shape bounds/content, plus preceding chart/preservation and three-scene tests. The initial native run exposed a bad CRC in the old test PNG; the test image was corrected and PNG CRC validation added. Failed history is retained. The final data-only-loading and placeholder-bound refinement passed the complete C# suite after the native run.
+
+Actual interactive UI layout, clipping, image appearance and shape geometry have not been visually verified. Shapes/text and theme effects are approximations; editing objects and external/complex geometry rendering are not supported. See drawing-preview/unity-session.jsonl and summary.json.
+
+Final complete native run includes a JPEG relationship/dimensions fixture and successful native JPEG decoding. It also includes the final data-only loading optimization and placeholder bounds.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/Docs/Testing/2026-10-19/DrawingPreview.md)
+
+- 원문 SHA-256: `3bdb77dce0419fe9744d8ae028fe8ebe3d1fb693937e410c992048546b936f39`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

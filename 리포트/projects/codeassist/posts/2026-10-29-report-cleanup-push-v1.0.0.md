@@ -7,8 +7,8 @@ project: codeassist
 type: 수정사항
 category: 보고서 관리
 summary: 기존 보고서의 중앙 이전에 따른 삭제·링크 변경 커밋을 사용자 승인 후 원격 main에 반영했습니다.
+format: legacy-v1
 ---
-# CodeAssist 보고서 정리 원격 반영
 
 - 기존 보고서 137개는 중앙 Tracefolio에 원문과 해시를 보존한 후 로컬 프로젝트에서 삭제했습니다.
 - 중앙 링크와 관련 문서 정리 커밋 3aae598001a1da579202dc91a92889ce25fffc69만 지정해 origin의 main으로 푸시했습니다. 다른 로컬 작업의 커밋을 HEAD 전체로 푸시하지 않았습니다.

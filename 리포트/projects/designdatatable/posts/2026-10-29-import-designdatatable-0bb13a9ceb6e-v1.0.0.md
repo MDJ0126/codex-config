@@ -6,22 +6,32 @@ status: 기존 기록 이전
 project: designdatatable
 type: 작업 결과
 category: 이전 기록
-summary: DesignDataTable/Docs/Testing/2026-10-26/preview-bitmap-fade/Verification.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Bitmap-only custom-card fade — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/Docs/Testing/2026-10-26/preview-bitmap-fade/Verification.md
+source_sha256: 7eef213dd538bc25d5939462befa08394a1679b213213b9d82fc03de674fbc48
+record: archived
+format: legacy-v1
 ---
-# Bitmap-only custom-card fade
 
-[기존 보고서 원문 열기](../assets/imports/Docs/Testing/2026-10-26/preview-bitmap-fade/Verification.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: Design Data Table
-- 원래 위치: DesignDataTable/Docs/Testing/2026-10-26/preview-bitmap-fade/Verification.md
-- 원본 SHA-256: 7eef213dd538bc25d5939462befa08394a1679b213213b9d82fc03de674fbc48
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+The requested 120ms fade-in is restored without SetAlpha or SetLayeredWindowAttributes on Unity/document windows. A temporary, ownerless STATIC bitmap overlay is created with WS_EX_LAYERED, WS_EX_NOACTIVATE, WS_EX_TOOLWINDOW and WS_EX_TRANSPARENT. PrintWindow captures only the already prepared custom-card HWND. UpdateLayeredWindow changes SourceConstantAlpha on that separate overlay. Once fully opaque, the real prepared card is shown before the bitmap overlay is disposed. All bitmap/DC/window resources are released on completion, cancellation, retarget or domain reload. Failed overlay preparation falls back to showing the original card.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+The normal card design and border-only hover remain. Immediate visible retargets discard the old overlay and show the new original card without starting another fade. No document-window show/minimize/group code was changed by this implementation; the previous selected-only restore/owner-detachment fixes remain.
+
+Validation: build passed with zero warnings/errors. Hover suite passed 85 assertions and taskbar overflow suite passed 153 assertions. Covered fade endpoints/midpoint, Win32 blend ABI, initial dwell, immediate retarget, card-only peek, selected-only raise ordering, restore hit areas and existing taskbar behavior. Source search confirms there are no SetAlpha/SetLayeredWindowAttributes calls in the window implementation.
+
+Actual overlay bitmap capture, composited fade appearance and native per-window behavior remain unverified without user testing. No computer use was performed. No native screenshot was recaptured; historical image/source hashes were preserved. Nine localized descriptions were regenerated; documentation verification found only existing pending/stale screenshot requirements.
+
+Primary API references consulted:
+https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-updatelayeredwindow
+https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-blendfunction
+
+XERJ located WorkbookHoverPreview; current code and native thumbnail implementation were read before editing.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/Docs/Testing/2026-10-26/preview-bitmap-fade/Verification.md)
+
+- 원문 SHA-256: `7eef213dd538bc25d5939462befa08394a1679b213213b9d82fc03de674fbc48`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

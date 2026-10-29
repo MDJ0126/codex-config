@@ -1,1 +1,152 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Formula implementation progress · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-22T01:29:44.345Z <span class="badge">기존 기록 이전</span></div><h1>Formula implementation progress</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-20/FormulaImplementationProgress.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-20/FormulaImplementationProgress.md</li><li>원본 SHA-256: d7b387998a2e1ad13d6cbe3af0e00b8ad6b2a79d9aac458cc90167de892e8738</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-e382db0ebb33-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Formula implementation progress · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Formula implementation progress</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">Formula implementation progress — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-22T01:29:44.345Z">2026년 10월 22일 오전 10:29 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>Source counts only. Native Excel, UI and release acceptance remain separate.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Family</th>
+<th align="right">Source implemented</th>
+<th align="right">Percent</th>
+<th align="right">Verified</th>
+<th align="right">Pending</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date_time</td>
+<td align="right">14/14</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>dynamic_arrays</td>
+<td align="right">1/1</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>financial</td>
+<td align="right">5/5</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>logical</td>
+<td align="right">3/3</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>math</td>
+<td align="right">21/21</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>references</td>
+<td align="right">3/3</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>statistics</td>
+<td align="right">11/11</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>text</td>
+<td align="right">11/11</td>
+<td align="right">100.0%</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+</div><p>Total: 69/69 (100.0%). Verified: 0/69.</p>
+<h2 id="section-1">Pending names</h2>
+<h2 id="section-2">Implemented source limits</h2>
+<ul>
+<li>CEILING: Finite scalar/elementwise arrays; legacy sign directions and MATH optional significance/mode; explicit omission unsupported; decimal/overflow/coercion native fidelity unverified.</li>
+<li>CEILING.MATH: Finite scalar/elementwise arrays; optional significance/mode when not supplied, and explicit final mode omission uses default 0. Explicit middle significance omission remains unsupported; decimal/overflow/coercion/native execution unverified.</li>
+<li>FLOOR: Finite scalar/elementwise arrays; legacy sign directions and MATH optional significance/mode; explicit omission unsupported; decimal/overflow/coercion native fidelity unverified.</li>
+<li>FLOOR.MATH: Finite scalar/elementwise arrays; optional significance/mode when not supplied, and explicit final mode omission uses default 0. Explicit middle significance omission remains unsupported; decimal/overflow/coercion/native execution unverified.</li>
+<li>MROUND: Finite scalar and elementwise arrays; opposite signs NUM, zero returns zero, nearest multiple with half away from zero. Decimal midpoint and native precision unverified.</li>
+<li>TRUNC: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>QUOTIENT: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>SUMSQ: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>EXP: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>LN: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>LOG: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>LOG10: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>SIN: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>COS: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>TAN: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>ASIN: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>ACOS: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>ATAN: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>ATAN2: Finite numeric scalar/elementwise arrays; ASIN/ACOS bounded to -1..1, ATAN2 uses Excel x,y order and excludes -pi endpoint. Large-angle and native precision unverified.</li>
+<li>DEGREES: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>RADIANS: Finite numeric inputs and existing elementwise array broadcasting; TRUNC digits restricted to integer -15..15; native precision/coercion not verified.</li>
+<li>STDEV: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>STDEV.S: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>STDEV.P: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>VAR: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>VAR.S: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>VAR.P: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>PERCENTILE: Inclusive sorted-data interpolation with scalar/array percentile arguments; quartile indices truncate; source-error data and unions guarded; native floating-point boundaries unverified.</li>
+<li>PERCENTILE.INC: Inclusive sorted-data interpolation with scalar/array percentile arguments; quartile indices truncate; source-error data and unions guarded; native floating-point boundaries unverified.</li>
+<li>QUARTILE: Inclusive sorted-data interpolation with scalar/array percentile arguments; quartile indices truncate; source-error data and unions guarded; native floating-point boundaries unverified.</li>
+<li>QUARTILE.INC: Inclusive sorted-data interpolation with scalar/array percentile arguments; quartile indices truncate; source-error data and unions guarded; native floating-point boundaries unverified.</li>
+<li>RANK: Finite numeric aggregates with direct/reference coercion distinction; source errors in reference areas guarded unsupported; RANK aliases RANK.EQ; native precision/coercion unverified.</li>
+<li>NOW: Local clock snapshot shared with TODAY per calculation instance, 1900/1904 serial conversion. Manual workbook recalculation API, View menu and F9 grid shortcut added. Automatic date formatting, volatile timing consistency across spill/cache/display phases and native behavior remain unverified.</li>
+<li>TIME: Finite scalar/elementwise arrays, TIME nonnegative truncated components 0..32767 and daily wrap; component numeric serials and invariant clock/English AMPM text. Locale/date text and native fractional-second fidelity unverified.</li>
+<li>HOUR: Finite scalar/elementwise arrays, TIME nonnegative truncated components 0..32767 and daily wrap; component numeric serials and invariant clock/English AMPM text. Locale/date text and native fractional-second fidelity unverified.</li>
+<li>MINUTE: Finite scalar/elementwise arrays, TIME nonnegative truncated components 0..32767 and daily wrap; component numeric serials and invariant clock/English AMPM text. Locale/date text and native fractional-second fidelity unverified.</li>
+<li>SECOND: Finite scalar/elementwise arrays, TIME nonnegative truncated components 0..32767 and daily wrap; component numeric serials and invariant clock/English AMPM text. Locale/date text and native fractional-second fidelity unverified.</li>
+<li>WEEKDAY: Numeric serial/elementwise arrays. WEEKDAY return types 1,2,3,11..17; WEEKNUM 1,2,11..17,21; ISO rollover and optional default. Pre-March-1900 week numbers unsupported; locale/fractional/native fidelity unverified.</li>
+<li>WEEKNUM: Numeric serial/elementwise arrays. WEEKDAY return types 1,2,3,11..17; WEEKNUM 1,2,11..17,21; ISO rollover and optional default. Pre-March-1900 week numbers unsupported; locale/fractional/native fidelity unverified.</li>
+<li>ISOWEEKNUM: Numeric serial/elementwise arrays. WEEKDAY return types 1,2,3,11..17; WEEKNUM 1,2,11..17,21; ISO rollover and optional default. Pre-March-1900 week numbers unsupported; locale/fractional/native fidelity unverified.</li>
+<li>EDATE: Serial/ISO date text, month truncation, end-day clamp, 1900/1904 date-system paths and elementwise arrays. 1900 serial zero unsupported; phantom leap day/locale/native coercion unverified.</li>
+<li>EOMONTH: Serial/ISO date text, month truncation, end-day clamp, 1900/1904 date-system paths and elementwise arrays. 1900 serial zero unsupported; phantom leap day/locale/native coercion unverified.</li>
+<li>DAYS: Numeric subtraction retains fractions per official remarks; ISO/English-month date text removes time, elementwise arrays, range checks. Other locale text unsupported; native coercion/boundaries unverified.</li>
+<li>NETWORKDAYS: Saturday/Sunday exclusion, inclusive signed NETWORKDAYS, WORKDAY binary search, deduplicated weekday holidays, date-array broadcasting. 100k holidays/10k outputs. Before March1900 unsupported; native text/coercion/limits unverified.</li>
+<li>WORKDAY: Saturday/Sunday exclusion, inclusive signed NETWORKDAYS, WORKDAY binary search, deduplicated weekday holidays, date-array broadcasting. 100k holidays/10k outputs. Before March1900 unsupported; native text/coercion/limits unverified.</li>
+<li>YEARFRAC: Bases 0..4, integer truncation, sorted dates, scalar/elementwise arrays, actual-year/leap and mean-year paths. 30/360 February-end and early1900 unsupported. Cross-year/locale/native edge semantics unverified.</li>
+<li>TEXT: Existing numeric/date/time/fraction formatter with strict success result, elementwise arrays, General/@ and empty format, color ignored. Locale directives and unsupported grammar retain cache. Native rounding/text-section semantics unverified. Fourth text sections and named color directives now supported as text output; indexed palette colors now resolve through workbook context; rich-text precedence remains unsupported/unverified.</li>
+<li>EXACT: Scalar/elementwise arrays; ordinal exact comparison; ASCII 0..31 cleaning; bounded repeat; Unicode scalar conversion. UNICHAR fractional codes/XML-unsafe controls guarded until ST_Xstring integration; native version boundaries unverified.</li>
+<li>FIND: Scalar/elementwise BMP text; FIND ordinal, SEARCH culture-invariant case-insensitive wildcard regex with 4096-pattern/100ms guard, REPLACE bounded insertion/removal. Surrogate inputs guarded pending compatibility-version handling; native locale/empty-text boundaries unverified.</li>
+<li>SEARCH: Scalar/elementwise BMP text; FIND ordinal, SEARCH culture-invariant case-insensitive wildcard regex with 4096-pattern/100ms guard, REPLACE bounded insertion/removal. Surrogate inputs guarded pending compatibility-version handling; native locale/empty-text boundaries unverified.</li>
+<li>REPLACE: Scalar/elementwise BMP text; FIND ordinal, SEARCH culture-invariant case-insensitive wildcard regex with 4096-pattern/100ms guard, REPLACE bounded insertion/removal. Surrogate inputs guarded pending compatibility-version handling; native locale/empty-text boundaries unverified.</li>
+<li>REPT: Scalar/elementwise arrays; ordinal exact comparison; ASCII 0..31 cleaning; bounded repeat; Unicode scalar conversion. UNICHAR fractional codes/XML-unsafe controls guarded until ST_Xstring integration; native version boundaries unverified.</li>
+<li>CLEAN: Scalar/elementwise arrays; ordinal exact comparison; ASCII 0..31 cleaning; bounded repeat; Unicode scalar conversion. UNICHAR fractional codes/XML-unsafe controls guarded until ST_Xstring integration; native version boundaries unverified.</li>
+<li>CHAR: ASCII scalar/elementwise arrays, CHAR truncated 1..255, CODE first character; extended Windows current-culture ANSI/Mac10000 runtime encoding paths. Missing providers/multibyte/surrogates unsupported; native OS charset fidelity unverified.</li>
+<li>CODE: ASCII scalar/elementwise arrays, CHAR truncated 1..255, CODE first character; extended Windows current-culture ANSI/Mac10000 runtime encoding paths. Missing providers/multibyte/surrogates unsupported; native OS charset fidelity unverified.</li>
+<li>UNICHAR: Integer Unicode scalar codes supported, including XML-unsafe controls through cell ST_Xstring escaping. Partial surrogates produce #N/A; fractional code points guarded. Chart cache unsafe-text refresh retained; native behavior unverified.</li>
+<li>UNICODE: Scalar/elementwise first Unicode code point; validates complete UTF-16 input and returns VALUE for an unpaired surrogate anywhere. Native coercion/error precedence and execution remain unverified.</li>
+<li>IFS: IFS/SWITCH scalar and bounded broadcast arrays via conditional engine; XOR parity aggregate with reference unions. Native evaluation order, recursion and omitted argument coercion unverified.</li>
+<li>SWITCH: IFS/SWITCH scalar and bounded broadcast arrays via conditional engine; XOR parity aggregate with reference unions. Native evaluation order, recursion and omitted argument coercion unverified.</li>
+<li>XOR: IFS/SWITCH scalar and bounded broadcast arrays via conditional engine; XOR parity aggregate with reference unions. Native evaluation order, recursion and omitted argument coercion unverified.</li>
+<li>ADDRESS: A1/R1C1, absolute modes 1..4, optional defaults, sheet name quoting/apostrophe escaping, elementwise arrays; empty sheet text unsupported; native fractional/coercion/quoting fidelity unverified.</li>
+<li>INDIRECT: Scalar A1/range/whole-reference and defined names, absolute/relative R1C1 rectangles, caller context, boundaries. External/structured/array-text references unsupported; native volatility/coercion unverified.</li>
+<li>OFFSET: Single contiguous worksheet reference, signed scalar offsets, optional positive height/width, reference identity and dynamic-array projection; negative dimensions/array offsets unsupported. Native coercion/recalc/structural fidelity unverified.</li>
+<li>PMT: Finite scalar/elementwise arrays, zero-rate branch, optional fv/pv/type defaults, omitted payment with other value, type 0 or 1, tiny-rate series. Native precision/domain/underflow fidelity unverified.</li>
+<li>FV: Finite scalar/elementwise arrays, zero-rate branch, optional fv/pv/type defaults, omitted payment with other value, type 0 or 1, tiny-rate series. Native precision/domain/underflow fidelity unverified.</li>
+<li>PV: Finite scalar/elementwise arrays, zero-rate branch, optional fv/pv/type defaults, omitted payment with other value, type 0 or 1, tiny-rate series. Native precision/domain/underflow fidelity unverified.</li>
+<li>NPV: Scalar or up to 10000 rate positions; ordered numeric cash flows, area100k/total1m and rate-count times flow-count &lt;=1m. Rate worksheet errors localized. Cash-flow error ranges remain unsupported; native fidelity unverified.</li>
+<li>IRR: Ordered numeric cash flows including zero; ignores text/bools/blanks; scale-normalized Horner Newton, 20 iterations, 100k entries, guess default .1 and &gt;-1. Error ranges unsupported; native root selection/convergence unverified.</li>
+<li>EXPAND: Scalar/matrix expansion, omitted rows/columns, scalar padding default NA, worksheet errors retained, output 100000 cells. Fractional dimensions/native evaluation fidelity unverified.</li>
+</ul>
+<h2 id="section-3">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-20/FormulaImplementationProgress.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>d7b387998a2e1ad13d6cbe3af0e00b8ad6b2a79d9aac458cc90167de892e8738</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-e382db0ebb33-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">Pending names</a><a href="#section-2">Implemented source limits</a><a href="#section-3">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

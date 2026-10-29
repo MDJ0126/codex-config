@@ -1,1 +1,245 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>게임 데이터 문제 목록 TC 및 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-29T10:14:34.560Z <span class="badge">기존 기록 이전</span></div><h1>게임 데이터 문제 목록 TC 및 결과</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/problem-list/TC-%EA%B2%B0%EA%B3%BC.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-29/problem-list/TC-결과.md</li><li>원본 SHA-256: ef8491d94444fd603483fe5dd41bf011ef15e185f9482be6e54f81a46004f9bc</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-ce008633abb7-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>게임 데이터 문제 목록 TC 및 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>게임 데이터 문제 목록 TC 및 결과</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">게임 데이터 문제 목록 TC 및 결과 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-29T10:14:34.560Z">2026년 10월 29일 오후 7:14 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>실행: Unity 6000.0.83f1, 분리된 검증 프로젝트. 사용자 원본 파일은 저장하지 않고 메모리 사본을 변경했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>번호</th>
+<th>검증 항목</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TC-01</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-02</td>
+<td>중복 Id 두 위치와 byte 범위 초과 한 위치를 정확히 집계</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-03</td>
+<td>검증 메시지의 서식 인수를 실제 값으로 치환</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-04</td>
+<td>오류 코드·셀 주소 정확성</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-05</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-06</td>
+<td>값 수정 후 이전 오류가 제거됨</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-07</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-08</td>
+<td>빈 번역 한 셀은 경고 한 건</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-09</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-10</td>
+<td>같은 번역 키 오류를 일반 오류로 중복 집계하지 않음</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-11</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-12</td>
+<td>잘못된 Enum 정의도 목록에 포함</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-13</td>
+<td>스냅샷 검사 완료</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-14</td>
+<td>삭제된 등록 시트 오류</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-15</td>
+<td>한 번의 검사 작업 예산을 지킴</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-16</td>
+<td>표시 10,000건 제한과 전체 11,000건 카운트 구분</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-17</td>
+<td>ExitGUI는 재전달하고 실제 오류 설명은 유지</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-18</td>
+<td>게임 테이블 두 시트의 오류를 파일 전체에서 집계</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-19</td>
+<td>실제 하단 개수 버튼 클릭으로 목록 펼침</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-20</td>
+<td>오류 항목으로 다른 시트·셀 이동</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-21</td>
+<td>문제 이동이 Dirty 상태를 바꾸지 않음</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-22</td>
+<td>오류 필터로 오류 행 숨김</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-23</td>
+<td>오류 코드 검색</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-24</td>
+<td>현재 시트 필터</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-25</td>
+<td>실제 필터 버튼 클릭</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-26</td>
+<td>검색창에 연속 입력</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-27</td>
+<td>문제 검색 입력이 셀 편집으로 넘어가지 않음</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-28</td>
+<td>실제 드래그로 문제 목록 높이 변경</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-29</td>
+<td>닫기 버튼으로 간편 보기 복귀</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-30</td>
+<td>접은 뒤 다시 펼치기</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-31</td>
+<td>선택한 로그 Ctrl+C 복사</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-32</td>
+<td>Enum 시트 삭제 시 기존 테이블 타입 오류 표시</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-33</td>
+<td>로컬라이징 오류와 빈 번역 경고를 구분</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-34</td>
+<td>문제 목록 실제 언어별 렌더: ko</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-35</td>
+<td>문제 목록 실제 언어별 렌더: en</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-36</td>
+<td>문제 목록 실제 언어별 렌더: ja</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-37</td>
+<td>문제 목록 실제 언어별 렌더: zh-Hans</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-38</td>
+<td>문제 목록 실제 언어별 렌더: zh-Hant</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-39</td>
+<td>문제 목록 실제 언어별 렌더: es</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-40</td>
+<td>문제 목록 실제 언어별 렌더: fr</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-41</td>
+<td>문제 목록 실제 언어별 렌더: de</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>TC-42</td>
+<td>문제 목록 실제 언어별 렌더: pt-BR</td>
+<td>통과</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-1">발견하여 수정한 문제</h2>
+<ul>
+<li>등록 원본 GUID가 유효하지 않을 때 빈 경로 비교 예외: 원본 경로 존재 여부를 먼저 확인합니다.</li>
+<li>검증 설명의 {0} 자리표시자가 보이던 문제: 지역화된 서식 인수를 적용합니다.</li>
+<li>오류 목록 검색 입력이 셀로 전달될 가능성: 검색 포커스와 키 입력 경로를 분리하고 실제 연속 입력으로 확인했습니다.</li>
+<li>GUI 흐름 종료 예외가 일반 실패처럼 표시되던 경로: 직접·래핑된 ExitGUIException을 다시 전달합니다. 중첩 예외 단위 검증을 수행했습니다.</li>
+</ul>
+<h2 id="section-2">검증 범위와 한계</h2>
+<ul>
+<li>오류 수정 후 재검사, 중복 Id 두 위치, 숫자 범위, 잘못된 Enum·삭제된 Enum, 번역 중복 키·빈 번역을 검사했습니다.</li>
+<li>11,000개 오류의 전체 건수 및 10,000개 표시 제한, 분할 실행을 검사했습니다. 실제 사용자 ArcadeText 파일의 프레임 시간 측정은 이번 범위가 아닙니다.</li>
+<li>9개 언어의 실제 패널을 캡처했습니다. 영어·한국어 주요 화면을 직접 육안 검토했습니다. 나머지는 렌더 캡처와 레이아웃 증거를 보관했습니다.</li>
+<li>ExitGUI 원인 경로는 소스 및 중첩 예외 실행으로 검증했습니다. 모든 팝업을 수동 클릭한 것으로 보고하지 않습니다.</li>
+<li>최초 실패 기록 Error.txt와 SupplementError.txt는 역사 증거이며 최종 성공 결과는 Results.json/Complete.txt입니다.</li>
+</ul>
+<h2 id="section-3">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/problem-list/TC-결과.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>ef8491d94444fd603483fe5dd41bf011ef15e185f9482be6e54f81a46004f9bc</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-ce008633abb7-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">발견하여 수정한 문제</a><a href="#section-2">검증 범위와 한계</a><a href="#section-3">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

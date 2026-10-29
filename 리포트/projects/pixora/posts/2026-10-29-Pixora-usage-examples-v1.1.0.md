@@ -7,8 +7,8 @@ project: pixora
 type: 작업 결과
 category: Unity 개발
 summary: 최소화·최대화·복원·닫기와 창 이동·리사이즈를 실제 확인했습니다. 여섯 사용 예제 씬, 시작 설정, 9개 언어 UI·문서·코드 주석 전환을 추가했습니다.
+format: legacy-v1
 ---
-# Pixora 사용 예제와 창 프레임 결과
 
 **Studio의 최소화·최대화·복원·닫기를 구현하고 실제 Windows Unity 창에서 확인했습니다.** 여섯 사용 예제 씬, 다섯 단계 가이드, 시작 설정 팝업과 9개 언어 지원도 구현·실행 검증했습니다. GitHub main에 코드를 반영했습니다.
 

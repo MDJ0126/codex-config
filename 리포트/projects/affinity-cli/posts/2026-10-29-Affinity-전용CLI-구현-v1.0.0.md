@@ -7,8 +7,8 @@ project: affinity-cli
 type: 작업 결과
 category: 개발
 summary: CLI·테스트·예제를 설정 저장소에 보관하고 전역 지침 연동 및 원격 푸시 완료
+format: legacy-v1
 ---
-# Affinity 전용 CLI 구현·보관 및 전역 지침 연동
 
 - 작성 시각: 2026-10-29 19:53:51 KST (Asia/Seoul)
 - 버전: v1.0.0

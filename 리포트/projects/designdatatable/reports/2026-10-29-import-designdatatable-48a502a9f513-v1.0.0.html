@@ -1,1 +1,34 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>원본 Excel/CSV 게임 데이터 등록 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-19T08:36:05.772Z <span class="badge">기존 기록 이전</span></div><h1>원본 Excel/CSV 게임 데이터 등록</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-19/WorkbookRegistration.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-19/WorkbookRegistration.md</li><li>원본 SHA-256: 016a443962359a2baade7d2fb501101e3bd8594ca08c3439f557680e1c780ac9</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-48a502a9f513-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>원본 Excel/CSV 게임 데이터 등록 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>원본 Excel/CSV 게임 데이터 등록</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">원본 Excel/CSV 게임 데이터 등록 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-19T08:36:05.772Z">2026년 10월 19일 오후 5:36 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>등록은 원본 파일을 게임 데이터 원본으로 지정하는 기능입니다. 별도의 편집 사본으로 갈라놓지 않습니다. 앞선 사본 방식은 폐기했습니다.</p>
+<h2 id="section-1">동작</h2>
+<ol>
+<li>일반 XLSX/CSV 뷰어에서 선택한 시트의 <strong>게임 데이터로 등록</strong>을 누릅니다.</li>
+<li>논리 테이블 이름, 첫 행 제목 사용 여부, 자료형·필드 이름, 수식 값 가져오기 여부를 확인합니다.</li>
+<li>원본 파일의 선택 시트에 이름·자료형 두 행과 Id 열을 구성합니다. 기본값은 원래 모든 행을 데이터로 보존합니다. 제목 옵션을 선택하면 첫 행은 열 이름으로 사용합니다.</li>
+<li>등록한 원본에서 게임 데이터 편집·저장을 수행합니다. 등록 상태는 원본 GUID와 시트로 구분합니다. 원본 파일명과 논리 테이블 이름이 달라도 동작합니다.</li>
+<li>등록한 원본이 Unity에 다시 임포트되면 원본을 읽어 C# 및 바이너리를 갱신합니다. 잘못된 데이터면 오류를 표시하고 유효한 바이너리를 새 오류 데이터로 덮어쓰지 않습니다.</li>
+</ol>
+<p>프로젝트 Assets 안의 원본 파일을 등록합니다. 프로젝트 밖에서 연 파일은 먼저 Assets 안에 두어야 합니다. 생성물만 <code>Assets/DesignDataTable/Generated/Code</code>와 <code>Generated/Binary</code>에 모읍니다. 등록 전 원본은 <code>Tools/RegistrationBackups</code>에 백업하며, 등록 도중 실패하면 원본 복원과 이번 생성물 정리를 시도합니다.</p>
+<h2 id="section-2">여러 시트</h2>
+<p>선택 시트만 갱신하며 다른 시트 XML은 바이트 단위로 유지합니다. 한 XLSX의 여러 시트를 각각 등록할 수 있고, 시트별 메타데이터를 분리합니다. 파일을 다시 열 때는 여러 시트를 선택할 수 있는 뷰어를 사용하고 등록된 시트의 편집 버튼으로 이동합니다. 등록 해제나 생성 데이터 삭제에서 원본을 삭제하지 않도록 보호했습니다.</p>
+<p>원본을 직접 수정하는 동작이며, 등록한 시트의 기존 서식 전체를 보존하는 기능은 아닙니다. 시트 간 수식 참조의 구조 변경까지 완전한 Excel 호환으로 검증하지 않았습니다. 지원되지 않는 수식은 저장된 계산값으로 가져오거나 오류를 해결해야 합니다.</p>
+<h2 id="section-3">검증 근거</h2>
+<ul>
+<li>전체 소스 컴파일 및 <strong>9,608개 회귀 검증 통과</strong>.</li>
+<li>원본의 게임 데이터 스키마 구성, 동일 원본으로 다시 저장, 파일명과 다른 테이블 이름, 외부 원본 변경을 읽어 바이너리 재생성, 중복 등록 거부를 실제 Unity에서 확인했습니다. 최신 <strong>100개 통과, 오류 0개, 샘플 씬 3개 완료</strong>. 실행 기록（원문의 비공개·미보존 참조）.</li>
+<li>독립적으로 만든 다중 시트 XLSX에서 선택한 시트 변환, 다른 시트 XML의 바이트 보존, 재저장, 두 등록 시트의 독립 데이터·메타데이터를 검증했습니다. 변환 테스트（원문의 비공개·미보존 참조）.</li>
+<li>이전 테스트 폴더를 재사용한 첫 실행은 남아 있던 이전 사본 파일과 현재 레지스트리 불일치로 실패했습니다. 새 격리 프로젝트로 재검증하여 통과했으며 실패 기록도 보존했습니다.</li>
+<li>9개 언어 UI·HTML 가이드 및 기본 영어 PDF를 원본 직접 등록 방식으로 갱신했습니다. PDF 7페이지를 렌더링해 배치를 확인했습니다.</li>
+<li>마우스 클릭과 실제 팝업 배치는 미검증입니다. Unity API 실행 검증을 UI 실사용 통과로 보고하지 않습니다.</li>
+</ul>
+<p>XERJ: 미사용 — 연결 도구가 없어 rg로 현재 소스를 확인했습니다.
+동일 원본 파일을 공유하는 두 시트가 정리 과정에서도 구분되는 것과, 등록 삭제 후 원본 파일이 남는 것도 Unity에서 확인했습니다.</p>
+<h2 id="section-4">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-19/WorkbookRegistration.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>016a443962359a2baade7d2fb501101e3bd8594ca08c3439f557680e1c780ac9</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-48a502a9f513-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">동작</a><a href="#section-2">여러 시트</a><a href="#section-3">검증 근거</a><a href="#section-4">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

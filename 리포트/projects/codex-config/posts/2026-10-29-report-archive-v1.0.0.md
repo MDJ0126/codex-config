@@ -7,8 +7,8 @@ project: codex-config
 type: 작업 결과
 category: 시스템
 summary: HTML 결과 보고 규칙과 Markdown 원본, 날짜·버전별 아카이브를 도입했습니다.
+format: legacy-v1
 ---
-# 보고서가 모이는 하나의 작업 기록실
 
 결과를 읽기 쉽게 제출하고, 이전의 판단과 근거까지 다시 찾을 수 있도록 보고서 관리 구조를 만들었습니다.
 

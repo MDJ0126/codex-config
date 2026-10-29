@@ -6,22 +6,72 @@ status: 기존 기록 이전
 project: codeassist
 type: 작업 결과
 category: 이전 기록
-summary: CodeAssist/docs/verification-current.html — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: 현재 설치본 1차 검증 — 2026-10-16 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/docs/verification-current.html
+source_sha256: 406323d4655e72eabe273315d9d73f70f187b4a8a10bfd6db685a199b20f43de
+record: archived
+format: legacy-v1
 ---
-# 현재 설치본 1차 검증 — 2026-10-16
 
-[기존 보고서 원문 열기](../assets/imports/docs/verification-current.html)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: CodeAssist
-- 원래 위치: CodeAssist/docs/verification-current.html
-- 원본 SHA-256: 406323d4655e72eabe273315d9d73f70f187b4a8a10bfd6db685a199b20f43de
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+14:12 시작. 설치 CodeAssist 0.0.76과 VA 10.9.2630.0. 전체108개 완료 검증이 아닌 제한 시간 내 점검입니다.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+## 실제 설치 VA와 대조
+
+일반 프로필은 VA 활성·CodeAssist 비활성, 실험 프로필은 CodeAssist 활성·VA 미설치로 분리해 두 프로세스를 실행했습니다. 사용자가 두 모니터에 배치했습니다. 실험 프로필 CodeAssist 바이너리6개도 패키지와 일치합니다.
+
+같은 VAParityFixture에서 VA 기본 심볼 찾기는 Solution only 상태로 솔루션 심볼19개와 색상이 있는 Symbol/Definition 열을 제공합니다. CodeAssist 빈 검색어 목록은 엔진 심볼도 포함하며 이름·경로 목록으로 표시합니다. 기본 범위와 표시 방식이 다릅니다. VA에 같은 검색어를 입력해 이동·응답 시간을 비교하는 단계는 완료하지 못했습니다.
+
+[VA 실제 목록](../assets/imports/docs/validation/pc-verification-1792129041786-2.jpg) · [CodeAssist 실제 목록](../assets/imports/docs/validation/pc-verification-1792129206489-1.jpg) · [CodeAssist Select 오버로드4개](../assets/imports/docs/validation/pc-verification-1792129276135-1.jpg)
+
+## CodeAssist 실제 IDE 검사
+
+독립 검사9건: 통과7건, 실패1건, 판정 보류1건. 이 비율을 제품 전체 구현률이나 VA 유사도로 환산하지 않습니다.
+
+| 검사 | 결과 | 근거 |
+| --- | --- | --- |
+| 파일 찾기 창 열기 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792127878086-1.jpg) |
+| 준비 완료 후 main.cpp 검색 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792127924153-1.jpg) |
+| 검색 결과 더블클릭으로 파일 열기 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792127943418-1.jpg) |
+| Select 선언·구현 오버로드 4개 표시 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128007499-1.jpg) |
+| int Select 구현 14행 이동 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128025204-1.jpg) |
+| 도구 모음 대응 파일 cpp→h 전환 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128101112-1.jpg) |
+| 설정 창 열기·한국어 토글 표시 | pass | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128119413-2.jpg) |
+| Select(int)의 Context Bar 정의 설명 | fail | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128025204-1.jpg) |
+| Alt+O 단축키 전환 | inconclusive | [화면 근거](../assets/imports/docs/validation/pc-verification-1792128043910-1.jpg) |
+
+확인된 결함: int AFixtureActor::Select(int Value) 구현14행에서 Context Bar가 Select(const ANSICHAR*, const WIDECHAR* wide)를 표시합니다. 앞서 Welcome에서 main 검색이 비었던 현상은 이후 C++ 문서 활성화·준비 완료 상태에서는 재현되지 않았습니다. 초기화 원인은 미확인입니다.
+
+## 추가 검사
+
+- 현재 소스 회귀247/247 통과
+
+- 생성 C++6/6 실제 clang 문법 검사 통과
+
+- 일반·실험 설치본 바이너리 각6개 패키지와 일치
+
+- 등록된 키 바인딩24개 확인. 실제 단축키 작동 통과 수가 아닙니다.
+
+- HTML14페이지·로컬 링크434개 검증 통과
+
+- 설치 어셈블리 화면5종 오프라인 렌더 검사 통과. 실제 토글 적용 검증과 구분합니다.
+
+- 20초 유휴 CPU·메모리 샘플 저장. 입력·시작 성능 또는 VA보다 빠르다는 근거가 아닙니다.
+
+## 명확한 미구현·제한
+
+ProductOptions.cs의 Enhanced Listboxes·Goto·Projects and Files·C/C++ Directories·Checker Sets 등은 설명 중심이며 VA와 같은 전체 옵션 편집 기능을 제공하지 않습니다. 로컬 AI 연결·부동 빠른 작업 툴바·GPU 전용 분석도 미구현으로 표시돼 있습니다. 따라서 문서 기반100% 구현도 아닙니다.
+
+**원본 유사도: 미측정. 부분 코드 대응 장부:108/108개. 완전 구현 검증:0/108개. VA 완전 동등성 검증:0/108개(0%). 문서 기반 부분 명세:108/108개(100%). 전체 역분석 완료율:미확인.**
+
+미완료: 원본과 같은 검색어·설정의 전체 대조, 추천 확정·Undo, 세부 옵션, 리팩터링 안전성, 시작·입력 성능.
+
+검증 원자료 · [인계](../assets/imports/docs/handoff.html)
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/docs/verification-current.html)
+
+- 원문 SHA-256: `406323d4655e72eabe273315d9d73f70f187b4a8a10bfd6db685a199b20f43de`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

@@ -7,8 +7,8 @@ project: affinity-cli
 type: 수정사항
 category: 도구 연결
 summary: 실제 Affinity 서버가 이전 MCP 프로토콜을 거부하는 문제와 문서 조회 세션의 preamble 선행 누락을 수정했습니다.
+format: legacy-v1
 ---
-# 실제 Affinity 연결 복구
 
 Affinity 서버가 초기화에 Unsupported protocol version을 반환한 것을 확인했습니다. 초기화 프로토콜을 2025-11-25로 바꾼 뒤 doctor·status에서 연결 성공과 Affinity 3.3.1.4940 Win32 버전을 확인했습니다. docs 명령도 동일 연결에서 preamble을 먼저 읽도록 수정해 문서 조회의 선행 조건 오류를 해결했습니다.
 

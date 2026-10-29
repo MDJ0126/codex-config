@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {renderMarkdown} from '../render.mjs';
+import {validatePost} from '../standards.mjs';
+import {readFile} from 'node:fs/promises';
+const meta={format:'tracefolio-v1',state:'complete',date:'2026-10-29T21:20:00+09:00',summary:'확인한 결과',type:'작업 결과'};
+const body='## 작업 결과\n결과\n## 변경 내용\n변경\n## 검증\n검사\n## 남은 사항\n없음\n## 작업 시간\n제안 시간: 1분\n실제로 완료된 시간: 1분 KST\nXERJ: 미사용';
+test('article schema rejects missing sections and unknown legacy bypass',()=>{validatePost(meta,body,'valid.md');assert.throws(()=>validatePost(meta,body.replace('## 검증','## 기타'),'bad.md'));assert.throws(()=>validatePost({...meta,format:'legacy-v1'},body,'new.md'));});
+test('bug schema requires observations and cause field',()=>{assert.throws(()=>validatePost({...meta,type:'버그'},body,'bug.md'));validatePost({...meta,type:'버그'},body+'\n재현 조건\n기대 동작\n실제 동작\n원인: 미확인','bug.md');});
+test('code containing a markdown H1 does not become an article title',()=>{validatePost(meta,body+'\n```markdown\n# code example\n```','code.md');});
+test('tables, code, images and heading anchors render as article content',()=>{const r=renderMarkdown('## 근거\n\n|검사|결과|\n|---|---|\n|A|통과|\n\n```js\nconst a = 1;\n```\n\n![실제 화면](../assets/a.png)');assert.match(r.html,/<table>/);assert.match(r.html,/<pre><code/);assert.match(r.html,/<figcaption>실제 화면/);assert.equal(r.toc[0].id,'section-1');});
+test('raw HTML and executable URLs never become active content',()=>{const {html}=renderMarkdown('<script>alert(1)</script>\n\n[x](javascript:alert)\n\n![x](data:bad)');assert.ok(!html.includes('<script>'));assert.ok(!html.includes('href="javascript:'));assert.ok(!html.includes('src="data:'));});
+test('both downloadable templates satisfy the documented schema',async()=>{for(const name of ['template-report.md','template-bug.md']){const raw=await readFile(new URL('../guide/'+name,import.meta.url),'utf8');const match=/^---\n([\s\S]*?)\n---\n([\s\S]*)$/.exec(raw);const m=Object.fromEntries(match[1].split('\n').map(l=>{const i=l.indexOf(':');return[l.slice(0,i),l.slice(i+1).trim()];}));validatePost(m,match[2],name);}});

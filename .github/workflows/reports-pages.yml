@@ -25,6 +25,8 @@ jobs:
       - run: node 리포트/build.mjs
       - run: node 리포트/verify.mjs
       - run: node 리포트/verify-migration.mjs
+      - run: node 리포트/verify-editorial.mjs
+      - run: node --test 리포트/tests/*.test.mjs
       - run: node 리포트/package-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

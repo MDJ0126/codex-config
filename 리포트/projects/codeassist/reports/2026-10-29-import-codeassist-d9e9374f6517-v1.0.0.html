@@ -1,1 +1,111 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA0.0.151 색상 선택기 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T22:14:18.759Z <span class="badge">기존 기록 이전</span></div><h1>CA0.0.151 색상 선택기</h1><p><a class="report-link" href="../assets/imports/docs/validation/options-151/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/options-151/index.html</li><li>원본 SHA-256: b3c8e3d853360b62aabd45e3d2bb2a5ae2549765231377194b6b0333a32a83a8</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-d9e9374f6517-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CA0.0.151 색상 선택기 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>CA0.0.151 색상 선택기</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">CA0.0.151 색상 선택기 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T22:14:18.759Z">2026년 10월 24일 오전 7:14 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>색상 선택기 수정·검증151</p>
+<h2 id="section-1">CA0.0.151 색상 선택기</h2>
+<p>실제 설치·CLR 모듈 확인. 기록 2026-10-24T07:14:18+09:00.</p>
+<p><strong>이 선택기의 배치·구조 체크9/10(90%)</strong>, 동일 가중치10기준. 제품 전체 UI 유사도가 아닙니다. <strong>이번 실제 조작7/10(70%)</strong>. 통과하지 못한3개를 아래에 그대로 남깁니다. 선정 옵션 대조 근거10/12(83.33%)는 기존 범위이며 이번 검사로 전체 인증하지 않았습니다.</p>
+<h2 id="section-2">수정</h2>
+<p>VA 참고 Palette/Web/System,8×8칸·사용자 슬롯16개, Hex·미리보기·HSV·RGB와 OK/Cancel을 구현했습니다. Web/System 왼쪽 정렬, 테마 배경, RGB 막대도 수정했습니다. 한국어·영어 문자열은 기존 XML 언어표에 추가했습니다. VS2019/Modern 빌드 및 코드 테스트427/427 통과.</p>
+<h2 id="section-3">남은 실제 동작</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Palette popup opens</th>
+<th>pass</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web tab switches</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>System tab switches</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Custom slot opens from fresh palette</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Hex E65AA0 updates RGB230/90/160</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Mouse slider sets Red127 / Hex7F5AA0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>OK + options Save persists enum/custom slot</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Right click after tab roundtrip</td>
+<td>not-passed: popup closed once; cause unconfirmed</td>
+</tr>
+<tr>
+<td>Keyboard Tab focus on slider</td>
+<td>unverified: focused element did not confirm movement</td>
+</tr>
+<tr>
+<td>Reopen swatch after saved selection</td>
+<td>not-passed: hover/click did not reopen; cause unconfirmed</td>
+</tr>
+</tbody></table>
+</div><p>탭을 돌린 뒤 우클릭한 한 번은 팝업이 닫혔고, 새로 연 팔레트에서는 열렸습니다. 저장 후 다시 클릭했을 때도 팝업이 열리지 않았습니다. 앱/입력 도구 원인은 미확인입니다. 키보드 포커스도 통과 처리하지 않았습니다. 150에서 확인한 취소 동작은 새151 통과로 합산하지 않았습니다.</p>
+<h2 id="section-4">배치 채점</h2>
+<ul>
+<li><p>Palette/Web/System order: 일치</p>
+</li>
+<li><p>8x8 swatch grid: 일치</p>
+</li>
+<li><p>16 custom slots: 일치</p>
+</li>
+<li><p>Popup screenshot outer dimensions within4px: 차이 있음</p>
+</li>
+<li><p>Named-color swatches left, names right: 일치</p>
+</li>
+<li><p>Custom editor250x308: 일치</p>
+</li>
+<li><p>Hex and Preview top row: 일치</p>
+</li>
+<li><p>Hue/Saturation/Brightness order: 일치</p>
+</li>
+<li><p>RGB ramps with numeric fields: 일치</p>
+</li>
+<li><p>OK/Cancel bottom row: 일치</p>
+</li>
+</ul>
+<p>VA 팔레트 캡처210×238, CA200×228로 외곽 차이가 남습니다. 사용자 편집기는 양쪽250×308입니다. 내부 구조를 평가했으며 픽셀 점수로 레이아웃을 대신하지 않았습니다. 라이트 테마의 실제 실행은 이번에 검증하지 않았습니다.</p>
+<h2 id="section-5">저장·복원</h2>
+<p>슬라이더로 만든 #7F5AA0이 enum과 사용자 슬롯에 저장됐고 코드 편집기 화면도 촬영했습니다. 원복 화면 입력이 적용되지 않아, 저장된 검사 CA만 종료하고 원래 enum/namespace/사용자 팔레트 값만 설정 파일에서 복원 후 재실행했습니다. 시험 선택값을 남겨두지 않았습니다. 종료 요청의 지연도 있었으며 원인은 미확인입니다.</p>
+<p>판정JSON · 427테스트 · 호환빌드 · 설치해시 · 실행DLL · 실제저장값 · 복원값</p>
+<p>VA-palette (210, 238)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/VA-palette.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/VA-palette.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/VA-palette.jpg)</figcaption></figure></p>
+<p>CA-palette-151 (200, 228)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-palette-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-palette-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-palette-151.jpg)</figcaption></figure></p>
+<p>VA-web (210, 238)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/VA-web.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/VA-web.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/VA-web.jpg)</figcaption></figure></p>
+<p>CA-web-151 (200, 228)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-web-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-web-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-web-151.jpg)</figcaption></figure></p>
+<p>VA-system (210, 238)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/VA-system.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/VA-system.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/VA-system.jpg)</figcaption></figure></p>
+<p>CA-system-151 (200, 228)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-system-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-system-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-system-151.jpg)</figcaption></figure></p>
+<p>VA-custom (250, 308)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/VA-custom.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/VA-custom.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/VA-custom.jpg)</figcaption></figure></p>
+<p>CA-custom-151 (250, 308)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-custom-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-custom-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-custom-151.jpg)</figcaption></figure></p>
+<p>CA-slider-151 (250, 308)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-slider-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-slider-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-slider-151.jpg)</figcaption></figure></p>
+<p>CA-editor-151 (1190, 845)</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-151/CA-editor-151.jpg" alt="참고 화면](../assets/imports/docs/validation/options-151/CA-editor-151.jpg)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-151/CA-editor-151.jpg)</figcaption></figure></p>
+<p>문서·도움말 기반 부분 명세108/108(100%). 전체 역분석 완료율이 아닙니다. XERJ 사용: ColorChoice 검색·현재소스 확인.</p>
+<p>제안20~30분. 이번 기록까지 30.1분. 전체 목표 미완료, 발견된 차이를 계속 수정합니다.</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/options-151/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>b3c8e3d853360b62aabd45e3d2bb2a5ae2549765231377194b6b0333a32a83a8</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-d9e9374f6517-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">CA0.0.151 색상 선택기</a><a href="#section-2">수정</a><a href="#section-3">남은 실제 동작</a><a href="#section-4">배치 채점</a><a href="#section-5">저장·복원</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -7,8 +7,8 @@ project: codex-config
 type: 수정사항
 category: 보고서 관리
 summary: 보고서·첨부자료·원문을 프로젝트별 하위 폴더로 통합하고 사이트 이름을 Tracefolio로 정리했습니다. 기존 공유 주소는 이동 안내로 유지합니다.
+format: legacy-v1
 ---
-# Tracefolio — Reports & Issues
 
 보고서와 이슈의 근거를 프로젝트별로 이어서 남긴다는 의미로 Tracefolio라는 이름을 적용했습니다. 주황색 문서 보관함 심벌은 유지하고 헤더의 워드마크·설명·강조색을 새 이름에 맞췄습니다. 이름의 상표 등록 여부나 독점 사용 가능성을 검증한 것은 아닙니다.
 

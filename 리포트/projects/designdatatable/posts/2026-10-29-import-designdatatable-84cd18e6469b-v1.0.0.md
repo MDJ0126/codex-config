@@ -6,22 +6,28 @@ status: 기존 기록 이전
 project: designdatatable
 type: 작업 결과
 category: 이전 기록
-summary: DesignDataTable/Docs/Testing/2026-10-19/ChartPreview.md — 기존 보고서 원문과 첨부자료를 중앙 아카이브로 이전했습니다.
+summary: Chart preview — 2026-10-19 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.
+source: ../assets/imports/Docs/Testing/2026-10-19/ChartPreview.md
+source_sha256: 27f736ca15a4f4ae85f332a80b28f996cecb1eb2104c18e6133176ac6cf1c8a6
+record: archived
+format: legacy-v1
 ---
-# Chart preview — 2026-10-19
 
-[기존 보고서 원문 열기](../assets/imports/Docs/Testing/2026-10-19/ChartPreview.md)
+> 보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.
 
-## 이전 기록
-- 프로젝트: Design Data Table
-- 원래 위치: DesignDataTable/Docs/Testing/2026-10-19/ChartPreview.md
-- 원본 SHA-256: 27f736ca15a4f4ae85f332a80b28f996cecb1eb2104c18e6133176ac6cf1c8a6
-- 날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.
-- 이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.
-- 원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.
-- 원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.
+Basic bar (vertical/horizontal), line and single-series pie charts are displayed as simplified read-only previews in the original workbook viewer. Drawing anchors, offsets, sizes, titles, series names, literal/cached numeric values and direct one-dimensional cross-sheet references are read. Saved worksheet values take precedence over cached values. Original XML and parts remain unchanged by viewing.
 
-## 시간과 검색
-- 제안 시간: 전체 이전 작업 10~20분.
-- 실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.
-- XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.
+Combination, 3D, stacked, logarithmic, unavailable/oversized-data or other unsupported chart types show an explicit card at the chart position. Corrupt chart parts retain an unsupported marker where possible and raise a visible sheet warning without blocking cell viewing. Chart-only worksheets are included. Preview limits are 100 charts per sheet, 12 series, 200 points and 8 MB per chart/drawing XML part. No chart editing, Excel theme/style equivalence or formula recalculation is claimed.
+
+Entry points: View > Saved original / Chart preview, and the chart-count button in the data ribbon when charts are detected. Previews reflect the saved original, not unsaved table edits. Viewer status shows chart count and read warnings. User-facing messages and HTML guidance cover all nine supported languages.
+
+Verification: 10,541 assertions passed. Tests cover basic/unsupported variants, Unicode titles, anchors/EMU size, current cell values, cross-sheet values, negative literal data, unavailable/bad references, combination-chart fallback, XML external-entity isolation, and all preceding preservation checks. Isolated Unity: 138 checks passed, including native chart detection, cross-sheet values, bounds and unchanged chart/summary/image parts.
+
+Actual interactive UI appearance, scrolling, clipping and mouse operation are not visually verified. This is a simplified renderer, not a claim of Excel-identical charts. The final viewport-bound adjustment was compiled/regression-tested separately after the native run.
+
+## 원문과 편집 이력
+
+[보존된 원문 열기](../assets/imports/Docs/Testing/2026-10-19/ChartPreview.md)
+
+- 원문 SHA-256: `27f736ca15a4f4ae85f332a80b28f996cecb1eb2104c18e6133176ac6cf1c8a6`
+- 표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.

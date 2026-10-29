@@ -1,1 +1,1011 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>1.0.1 판매본 대비 2.0.0 변경 내역 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-22T07:28:24.870Z <span class="badge">기존 기록 이전</span></div><h1>1.0.1 판매본 대비 2.0.0 변경 내역</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-22/published-1.0.1/report-before-final-ui.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-22/published-1.0.1/report-before-final-ui.md</li><li>원본 SHA-256: 729240d9ccc4fbba8cff296db66358282a3e87dea844a978c06286f02f1a7c54</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-3492f3b10ddf-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>1.0.1 판매본 대비 2.0.0 변경 내역 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>1.0.1 판매본 대비 2.0.0 변경 내역</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">1.0.1 판매본 대비 2.0.0 변경 내역 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-22T07:28:24.870Z">2026년 10월 22일 오후 4:28 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>비교 기준은 Publisher Portal의 기존 업로드(Unity 2021.3.19f1, 2024-09-16 15:53 UTC, 783KB)를 2026-10-22에 직접 다운로드한 실제 판매 패키지입니다. 페이지의 버전은 1.0.1입니다. 파일명이 새 초안 이름을 사용하더라도 내부 업로드 정보와 157개 경로는 기존 판매본입니다.</p>
+<p>판매본 SHA-256: <code>9afb44c6817cadeb36e7f75947c635666b529de6c5d0d72d82cff2b8445cfcae</code></p>
+<p>현재 작업 폴더와 asset 내용 단위로 대조했습니다. <code>.meta</code>와 폴더 항목을 제외한 판매본 156개, 현재 383개 중 <strong>추가 240개 / 삭제 13개 / 내용 변경 29개 / 동일 114개</strong>입니다. 이 수치는 기능 개수가 아니라 파일 내용 비교이며, 이름 변경은 추가+삭제로 나타날 수 있습니다. UI 캡처를 반영한 패키지 재내보내기와 최종 업로드는 별도 단계입니다.</p>
+<h2 id="section-1">새로 추가되거나 확장된 기능</h2>
+<ul>
+<li><strong>문서 편집 기반:</strong> 기존 JSON 기반 테이블 편집에 더해 XLSX 원본 직접 읽기/쓰기, 여러 워크시트, 일반 문서와 등록 게임 테이블의 통합 편집 경로가 추가되었습니다.</li>
+<li><strong>작업 공간:</strong> 리본, 파일별 창, 문서 탐색과 검색, 하단 문서 작업 표시줄, 최소화·복원, 창 위치/크기 저장이 추가되었습니다.</li>
+<li><strong>선택·입력:</strong> 범위와 비연속 선택, 복사/잘라내기/붙여넣기 및 선택하여 붙여넣기, 채우기, 셀·행·열 편집 작업이 확장되었습니다.</li>
+<li><strong>검색:</strong> 기존 소문자 부분 일치 검색에서 찾기/바꾸기, 와일드카드, 대소문자/셀 전체 조건을 지원하는 흐름으로 확장되었습니다.</li>
+<li><strong>시트 구성:</strong> 행·열 삽입/삭제, 크기와 숨김, 정렬·필터, 틀 고정, 병합 셀 편집 작업이 추가되었습니다. 지원 제한은 안내서를 따릅니다.</li>
+<li><strong>계산:</strong> 지원 수식 계산, 시트 간 및 상대/절대 참조, 정의된 이름, 의존성 계산과 동적 배열의 문서화된 하위 집합이 추가되었습니다.</li>
+<li><strong>서식:</strong> 글꼴·정렬·채우기·테두리·표시 형식, 조건부 서식과 데이터 유효성 검사 흐름이 추가되었습니다.</li>
+<li><strong>시각 개체:</strong> 지원 범위의 차트·이미지·도형 미리보기 및 개체 편집 도구가 추가되었습니다.</li>
+<li><strong>복구·진단:</strong> 기존 Unity Undo/Redo에서 문서 편집 세션, 초안·백업, 제한된 복구, 작업 로그·진단·버그 보고서와 선택형 AI 컨텍스트 내보내기로 확장되었습니다.</li>
+<li><strong>게임 데이터 연계:</strong> XLSX 시트 등록, 스키마·타입·ID 검사, 원본/생성 경로 구성, ScriptableObject 데이터 내보내기가 추가되었습니다. C#·바이너리 생성 자체는 기존 기능입니다.</li>
+<li><strong>언어·안내:</strong> 9개 언어 UI 및 오프라인 HTML 안내서, 지원/미지원 범위 문서, 브랜드 아이콘 및 샘플 원본 구성과 Third-Party Notices가 추가되었습니다.</li>
+</ul>
+<h2 id="section-2">기존에도 있던 기능 — 신규로 표시하지 않음</h2>
+<p>CSV 가져오기/내보내기(TableInfo.cs와 DataTableEditor.cs), 암호화 및 바이너리 저장(DataLoader.cs), 타입이 있는 C# 클래스 생성(TableCreator.cs), partial 데이터 확장(기존 DataSource.txt), ID 기반 조회와 테마는 판매본에 존재합니다. Undo/Redo와 단순 검색도 기존 DataTableEditor.cs/FindPopup.cs에서 확인됩니다. 기존 게임/상점 예제 씬도 포함되어 있어 예제의 존재 자체를 신규로 설명하지 않습니다.</p>
+<h2 id="section-3">검증 한계 및 업그레이드 주의</h2>
+<p>파일 비교와 소스 확인은 수행했지만 기존 Unity 2021.3 프로젝트에서 2.0.0으로 올리는 실제 마이그레이션 실행은 미검증입니다. 업데이트 전에 프로젝트와 원본 파일을 백업해야 합니다. 완전한 Excel 호환, macOS, IL2CPP 또는 모든 대화형 경로 검증을 의미하지 않습니다. 현재 문서 스크린샷 중 일부는 재촬영이 남아 있습니다.</p>
+<h2 id="section-4">현재 기능 117개와 판매본 경로 근거</h2>
+<p>아래는 기능별 근거 파일의 판매본 포함 여부입니다. 새 파일 경로라는 사실만으로 해당 기능 전체가 신규라고 단정하지 않습니다. 세부 호환성은 안내서 및 테스트 기록을 참조합니다.</p>
+<h3 id="section-5">E1.01 XLSX 파일 직접 읽기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookReader.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-6">E1.02 CSV 파일 직접 읽기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookReader.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-7">E1.03 일반 문서와 등록된 게임 테이블의 편집 경로 구분</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-8">E1.04 여러 시트 탐색</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-9">E1.05 시트 추가</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-10">E1.06 시트 이름 변경</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-11">E1.07 시트 삭제</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-12">E1.08 원본 저장과 다른 이름 저장</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-13">E1.09 새 XLSX 문서 생성</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-14">E1.10 메인 색상·작업 환경 설정 저장</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkspaceSettings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-15">E1.11 표시 언어 설정·언어 테이블</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Localization/SettingsLocalization.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-16">E2.01 셀·범위 값 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-17">E2.02 인라인 및 수식 입력 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-18">E2.03 사각 범위 마우스 선택</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-19">E2.04 떨어진 선택 셀의 간격 보존 복사·붙여넣기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-20">E2.05 떨어진 셀 잘라내기 및 원본 비우기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-21">E2.06 외부 TSV 표 붙여넣기 경로</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-22">E2.07 일반 참조 수식 이동</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-23">E2.08 연속 값·수식 자동 채우기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-24">E2.09 여러 선택 셀에 일괄 입력</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-25">E2.10 선택 셀 내용 빈칸으로 지우기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-26">E2.11 Tab·Shift-Tab·Ctrl/Command 키 입력 경로</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-27">E2.12 Esc로 복사 상태 해제</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-28">E2.13 구조화 참조·상대 이름을 포함한 모든 잘라내기 참조 변환</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillClipboard.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-29">E2.14 복사·잘라내기 점선 표시 경로</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-30">E3.01 행·열 선택 및 우클릭 구조 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-31">E3.02 여러 행·열 삽입·삭제</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-32">E3.03 열 너비 변경</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-33">E3.04 행 높이 변경</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-34">E3.05 선택 행·열 자동 맞춤</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-35">E3.06 여러 열 숨기기·다시 표시</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-36">E3.07 여러 행 숨기기·다시 표시</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-37">E3.08 행·열 틀 고정</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-38">E3.09 행·열 경계 드래그 처리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-39">E4.01 오름차순·내림차순 정렬</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-40">E4.02 여러 열 값 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-41">E4.03 조건 조합 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-42">E4.04 상위·하위 개수/퍼센트 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-43">E4.05 날짜 그룹 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-44">E4.06 지원된 셀·글자 색 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-45">E4.07 패턴·그라데이션 색 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFillColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookGradientFill.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookGradientGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFillPaint.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFillFormat.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookFillControls.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFillReading.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFillPaint.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableStyleColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-46">E4.08 테이블 스타일·시스템 팔레트·아이콘 기반 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableStyleColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookIconFilters.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/DataTablePreferences.cs — 판매본에 같은 경로 있음 — 내용 변경; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColors.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkspaceSettings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-47">E4.09 대체 달력과 전체 로케일 필터</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-48">E5.01 산술 연산과 기존 집계 함수</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-49">E5.02 조건·논리·오류 처리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-50">E5.03 기본·고급 조회 함수 경로</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-51">E5.04 배열 상수와 브로드캐스팅</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-52">E5.05 동적 배열 유출 영역 계산</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-53">E5.06 유출 영역 저장·재배치</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillStorage.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-54">E5.07 유출 영역 클립보드 처리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillClipboard.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-55">E5.08 SEQUENCE/FILTER/SORT/UNIQUE/SORTBY</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-56">E5.09 TRANSPOSE/TAKE/DROP/CHOOSE 계열</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-57">E5.10 VSTACK/HSTACK/TOCOL/TOROW</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-58">E5.11 TEXTJOIN/TEXTBEFORE/TEXTAFTER</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-59">E5.12 TEXTSPLIT/WRAPROWS/WRAPCOLS</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-60">E5.13 LET 지역 바인딩</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationBindings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-61">E5.14 수식 도움말 및 9개 언어 설명</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-62">E5.15 정의된 이름 관리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookNames.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-63">E5.16 LAMBDA 및 사용자 정의 함수 값</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookNames.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-64">E5.17 상대·동적·구조화 이름과 전체 의존성 호환</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationBindings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookNamePopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookNames.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookNamePopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-65">E5.18 기존 수식 함수의 미지원 인수·모드 해소</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambdaArrays.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-66">E5.19 현재 카탈로그 밖 수식 지원 범위 확정·구현</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambdaArrays.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLookups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Documentation/FormulaSupportScope.json — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Tools/Reporting/formula_scope.py — 기준 커밋에 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookXmlText.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-67">E6.01 글꼴·크기·굵게·기울임</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-68">E6.02 글자색·배경색</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-69">E6.03 기본 테두리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-70">E6.04 가로·세로 맞춤 및 자동 줄바꿈</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-71">E6.05 지원 숫자·날짜·분수 표시 형식</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-72">E6.06 셀 병합·병합 해제</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-73">E6.07 지원 조건부 서식 작성·수정·삭제·순서 변경</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-74">E6.08 조건부 색조·데이터 막대 표시</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDataBars.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorScales.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-75">E6.09 조건부 차등 서식 전체 속성</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookTextDecoration.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBorderFormat.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookBorderGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookAlignmentFormat.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookAlignmentControls.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookAlignmentFormat.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookAlignmentControls.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookFontMetadataControls.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFormats.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookConditionalPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookReader.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookReader.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPackage.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillStorage.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-76">E6.10 상대·혼합 참조 및 퇴화 임계값의 조건부 서식</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorScales.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDataBars.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookColorScaleEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookConditionalPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookScaleFormula.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFormats.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-77">E6.11 x14 데이터 막대와 아이콘 집합</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookIconSets.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookIconGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookExtendedIcons.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookIconEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookIconPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookExtendedDataBars.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDataBarEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-78">E6.12 전체 로케일·혼합 표시 형식</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-79">E7.01 지원 이미지·도형 읽기 및 표시 모델</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-80">E7.02 이미지·도형 삽입과 텍스트 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-81">E7.03 지원 개체 이동·크기·삭제</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-82">E7.04 개체 복사·잘라내기·붙여넣기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-83">E7.05 그룹 내부 개체 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-84">E7.06 그룹 내부 개체 복사·관계 재연결</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-85">E7.07 반전된 부모 그룹 좌표 처리</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawingGroups.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-86">E7.08 지원 2D 차트 종류 읽기·표시</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-87">E7.09 차트 삽입과 데이터 범위 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-88">E7.10 차트 계열·포인트 색과 투명도 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-89">E7.11 산점도 범위·로그 축 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-90">E7.12 막대·꺾은선 혼합 차트와 누적 배치</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-91">E7.13 혼합 차트 보조 축 범위·로그·방향 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-92">E7.14 혼합 차트 꺾은선 기본 축·보조 축 전환</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-93">E7.15 회전된 부모 그룹·일반 아핀/전단 변환</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawingAffine.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-94">E7.16 그룹 생성·해제 및 그룹 내부 차트</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawingAffine.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-95">E7.17 복잡한·3D·부드러운 곡선 차트</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPackage.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookNames.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookStockDates.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartMath.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-96">E7.18 계열별 차트 종류·축 자유 변경</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartSeriesLayers.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-97">E7.19 전체 개체 스타일·부모 확장 메타데이터 편집</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-98">E7.20 외부 데이터의 표시·숨김 완전 지원</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDebugPopup.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-99">E8.01 원본 ZIP 항목 보관 구조</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPackage.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-100">E8.02 셀 편집 시 기존 XML 병합</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-101">E8.03 지원되지 않는 변경 차단</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-102">E8.04 원본 백업 저장</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-103">E8.05 CSV 인코딩·BOM·구분자 저장 유지</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-104">E8.06 전체 실제 문서의 개체·관계·스타일 편집 보존</h3>
+<h3 id="section-105">E9.01 실행 취소·다시 실행</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-106">E9.02 실패한 편집의 상태 롤백</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-107">E9.03 변경 이력 저장·복구</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-108">E9.04 입력 중 초안 복구</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRecovery.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-109">E9.05 복구 저널 저장·로드</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookRecovery.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-110">E9.06 원본 외부 변경 충돌 검사</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-111">E9.07 임시 파일 후 원자적 원본 교체</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-112">E9.08 도메인 리로드 직렬화 경로</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-113">E9.09 복구 정리 실패 안내 보관</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-114">E10.01 작업·오류 진단 이벤트 기록</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-115">E10.02 로그 파일 크기·보관 기간 제한</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-116">E10.03 버그 리포트 작성 UI</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookBugReportWindow.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-117">E10.04 리포트 ZIP 내보내기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-118">E10.05 로그 기록 켜기·끄기</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-119">E10.06 AI용 구조화 디버그 컨텍스트</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-120">E10.07 게임 테이블 AI 디버그 컨텍스트</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h3 id="section-121">E10.08 민감 셀 내용 기본 제외·수동 공유</h3>
+<ul>
+<li>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs — 판매본에 같은 경로 없음; 현재 파일 존재: True</li>
+</ul>
+<h2 id="section-122">전체 파일 변경 목록</h2>
+<h3 id="section-123">추가 (240)</h3>
+<ul>
+<li><code>Assets/DesignDataTable/.xerjignore</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.de.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.en.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.es.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.fr.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.ja.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.ko.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.pt-BR.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.zh-Hans.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/index.zh-Hant.html</code></li>
+<li><code>Assets/DesignDataTable/Docs/style.css</code></li>
+<li><code>Assets/DesignDataTable/Documentation/AutomationCLI.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/FormulaSupportScope.json</code></li>
+<li><code>Assets/DesignDataTable/Documentation/README.md</code></li>
+<li><code>Assets/DesignDataTable/Documentation/ScreenshotManifest.json</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.de.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.en.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.en.pdf</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.es.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.fr.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.ja.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.ko.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.pt-BR.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.zh-Hans.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/UserGuide.zh-Hant.html</code></li>
+<li><code>Assets/DesignDataTable/Documentation/Verification.md</code></li>
+<li><code>Assets/DesignDataTable/Documentation/guide.css</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/01-shop-scene.png</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/02-game-scene.png</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/clipboard-range-paste-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/clipboard-sparse-paste-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/closed-shape-gradient-controls-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/closed-shape-gradient-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/embedded-number-literals-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/empty-text-coercion-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/formula-bar-game-fixed.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/formula-bar-viewer-fixed.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/general-section-format-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/index-zero-axis-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/locale-calendar-month-preview.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/logical-text-coercion-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/ribbon-screen-tip-copy.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/selection-add-mode-ui.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/unified-game-data-tools.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/unified-game-home.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/unified-general-home.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/window-motion-minimized.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/images/window-motion-restored.jpg</code></li>
+<li><code>Assets/DesignDataTable/Documentation/index.html</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/Csv.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/Csv16.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/DesignDataTableLogo.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/RibbonAtlas.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/RibbonAtlasWhite.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/Workbook.png</code></li>
+<li><code>Assets/DesignDataTable/Editor/Icons/Workbook16.png</code></li>
+<li><code>Assets/DesignDataTable/Generated/Binary/SampleCharacter.bytes</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleCharacter.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleCharacterTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleDropItem.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleDropItemTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleShopProduct.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleShopProductTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleSkill.cs</code></li>
+<li><code>Assets/DesignDataTable/Generated/Code/SampleSkillTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scripts/DataExtensions/SampleSkill.Extension.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/CellClipboardSnapshot.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/CellSelectionSet.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/ClipboardBorderAnimation.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/ClipboardOutlineState.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/ColumnAutoFit.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/CsvCodec.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/DimensionResizeBatch.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/FormulaEngine.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/FormulaReferenceToggle.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/FormulaText.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/HeaderSelectionSet.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Localization/AdvancedLanguageTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Localization/EditorLanguageTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Localization/RibbonHelpLanguageTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Localization/SettingsLanguageTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Localization/SettingsLocalization.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/PasteSpecial.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/QuickFormula.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/ScriptableObjectExport.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SelectionSpecial.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SelectionSummary.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SelectionTraversal.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SheetAddress.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SheetNavigation.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SheetViewport.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/SheetVisibility.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Sources/ScriptableObjectSource.txt</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableAutoFill.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableClipboard.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableCut.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableDiagnostics.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableExport.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableFilters.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableImport.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TablePaths.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableRowLayout.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableSearch.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableStructure.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableWorkbook.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/ColumnFilterPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/FindReplacePopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/FormulaHelpPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/PasteSpecialPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/RibbonHelp.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbon.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbonIcons.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/SpreadsheetScreenTip.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/TableDiagnosticsPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WindowPlacement.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookAlignmentControls.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookBorderGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookBugReportWindow.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookChartPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookConditionalPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookControls.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDebugPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookFillControls.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookFontMetadataControls.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookGradientGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookIconGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookIconPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookInteractionMetrics.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookMinimizedShelf.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookNamePopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookPolygonGUI.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookRegistrationPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookRenderCache.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarLayout.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarMenu.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookTextDecoration.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerChrome.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGameTools.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerObjects.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRecovery.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkbookWindowTheme.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/WorkspaceFileMenu.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookAlignmentFormat.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookAssets.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookAutomation.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookBorderFormat.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationArrays.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationBindings.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLambdaArrays.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationLookups.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationSubtotal.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookChartMath.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookChartSeriesLayers.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookCharts.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookColorScaleEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookColorScales.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookColors.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalFormats.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookConditionalNumberFormat.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookConversion.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDataBarEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDataBars.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawingAffine.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawingGroups.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookExtendedDataBars.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookExtendedIcons.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFilePaths.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFillColors.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFillFormat.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFillPaint.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFillReading.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookFrameGeometry.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookGameMode.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookGradientFill.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookHealth.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookIconEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookIconFilters.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookIconSets.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookNames.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGesture.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookObjects.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookPackage.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookReader.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookRecovery.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookRegistration.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookScaleFormula.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookSearch.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookSharedFormulas.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookSourceImporter.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillClipboard.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookSpillStorage.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookStockCharts.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookStockDates.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookStructure.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookTableStyleColors.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkbookXmlText.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/WorkspaceSettings.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/ddt_cli.py</code></li>
+<li><code>Assets/DesignDataTable/Tables/SampleCharacter.xlsx</code></li>
+<li><code>Assets/DesignDataTable/Tables/SampleDropItem.xlsx</code></li>
+<li><code>Assets/DesignDataTable/Tables/SampleShopProduct.xlsx</code></li>
+<li><code>Assets/DesignDataTable/Tables/SampleSkill.xlsx</code></li>
+<li><code>Assets/DesignDataTable/Third-Party Notices.txt</code></li>
+</ul>
+<h3 id="section-124">내용 변경 (29)</h3>
+<ul>
+<li><code>Assets/DesignDataTable/DataTableSetupGuide.pdf</code></li>
+<li><code>Assets/DesignDataTable/Resources/TableManagement.asset</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Characters/Enemy1.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Characters/Enemy2.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Characters/Enemy3.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Characters/Enemy4.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Characters/Player.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Resources/Prefabs/Projectiles/AxeProjectile.prefab</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scenes/Example - Game.unity</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scenes/Example - UI (Shop).unity</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scripts/Objects/Character/CharacterManager.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scripts/Objects/HUD/HUDManager.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scripts/Objects/HUD/HpBar.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Scripts/Objects/Projectile/ProjectileManager.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/StaticResources/Game/Background/Background.mat</code></li>
+<li><code>Assets/DesignDataTable/Scripts/DataLoader.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableCreator.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableInfo/Column.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableInfo/Row.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableInfo/TableInfo.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/TableManagementEditorExtension.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Utils.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/AboutPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/DataTableEditor.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/DataTablePreferences.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/FindPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/SelectPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/Editor/Window/ValueInputPopup.cs</code></li>
+<li><code>Assets/DesignDataTable/Scripts/TableManagement.cs</code></li>
+</ul>
+<h3 id="section-125">삭제 (13)</h3>
+<ul>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleCharacter/SampleCharacter.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleCharacter/SampleCharacter.json</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleCharacter/SampleCharacterTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleDropItem/SampleDropItem.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleDropItem/SampleDropItem.json</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleDropItem/SampleDropItemTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleShopProduct/SampleShopProduct.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleShopProduct/SampleShopProduct.json</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleShopProduct/SampleShopProductTable.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleSkill/SampleSkill.Extension.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleSkill/SampleSkill.cs</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleSkill/SampleSkill.json</code></li>
+<li><code>Assets/DesignDataTable/Sample/Tables/SampleSkill/SampleSkillTable.cs</code></li>
+</ul>
+<h2 id="section-126">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-22/published-1.0.1/report-before-final-ui.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>729240d9ccc4fbba8cff296db66358282a3e87dea844a978c06286f02f1a7c54</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-3492f3b10ddf-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">새로 추가되거나 확장된 기능</a><a href="#section-2">기존에도 있던 기능 — 신규로 표시하지 않음</a><a href="#section-3">검증 한계 및 업그레이드 주의</a><a href="#section-4">현재 기능 117개와 판매본 경로 근거</a><a href="#section-122">전체 파일 변경 목록</a><a href="#section-126">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

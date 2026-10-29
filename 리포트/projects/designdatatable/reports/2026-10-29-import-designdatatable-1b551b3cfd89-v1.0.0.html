@@ -1,1 +1,1717 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>표 생성 QA 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-28T18:41:02.099Z <span class="badge">기존 기록 이전</span></div><h1>표 생성 QA 결과</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/table-creation-qa/History/Before-Korean-TCs-2026-10-29/QA-Report.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-29/table-creation-qa/History/Before-Korean-TCs-2026-10-29/QA-Report.html</li><li>원본 SHA-256: c2e276aceaf08211bb4667300141c111c908e5c1ebfd01928176c5312606f673</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-1b551b3cfd89-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>표 생성 QA 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>표 생성 QA 결과</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">표 생성 QA 결과 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-28T18:41:02.099Z">2026년 10월 29일 오전 3:41 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>2026-10-29 · Windows / Unity 6000.0.83f1 · 격리 실행 · 사용자 화면 조작 없음</p>
+<p><strong>250</strong>TC 통과 / 전체 250</p>
+<p><strong>0</strong>남은 실패</p>
+<p><strong>8</strong>수정한 문제군</p>
+<p><strong>3271</strong>네이티브 모델 검증 항목</p>
+<p>일반 파일·Excel 표·게임 등록·Summary·Enum·로컬라이징·저장·CLI·Play 잠금을 기능·경계·거부 조건으로 검사했습니다. TC 수와 내부 검증 항목 수는 별개입니다.</p>
+<p>TC 결과 CSV · 상세 JSON·소스 해시 · 현재 사용자 문서</p>
+<h2 id="section-1">수정 사항</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>문제</th>
+<th>수정</th>
+<th>회귀 TC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BUG-01</td>
+<td><strong>큰 정수 코드 정밀도</strong> Int64를 넘는 정수 텍스트를 double로 추론해 값이 반올림될 수 있었습니다.</td>
+<td>정수 텍스트가 Int64를 넘으면 string으로 보존합니다.</td>
+<td>Long integer precision</td>
+</tr>
+<tr>
+<td>BUG-02</td>
+<td><strong>Summary 스키마 검사</strong> 대소문자 중복 및 생성 코드 예약 컬럼 이름 경고가 저장 검사와 일치하지 않았습니다.</td>
+<td>대소문자 무시 중복과 Read/Write/ToString을 검사합니다.</td>
+<td>Case-insensitive duplicate column names</td>
+</tr>
+<tr>
+<td>BUG-03</td>
+<td><strong>등록 API의 정의 시트 보호</strong> 글로벌 Enum 파일과 관리 Summary를 직접 게임 데이터로 등록할 수 있었습니다.</td>
+<td>API에서 정의·Summary·차트·없는 시트를 거부하고 메뉴에서도 Enum 정의를 제외합니다.</td>
+<td>Global provider cannot become game data</td>
+</tr>
+<tr>
+<td>BUG-04</td>
+<td><strong>글로벌 Enum 확장자</strong> CSV 경로에 XLSX 바이트를 쓴 뒤 디코딩 오류가 발생했습니다.</td>
+<td>파일 생성 전에 .xlsx 확장자를 검사합니다.</td>
+<td>Provider template rejects unsupported extension</td>
+</tr>
+<tr>
+<td>BUG-05</td>
+<td><strong>잘못된 헤더의 즉시 경고</strong> 예약어·잘못된 이름·중복 헤더가 데이터 셀의 형식 경고만큼 일관되게 표시되지 않았습니다.</td>
+<td>헤더·타입·데이터에 스키마 경고를 적용하고 9개 언어 메시지를 추가했습니다.</td>
+<td>Duplicate header case</td>
+</tr>
+<tr>
+<td>BUG-06</td>
+<td><strong>Summary 이름 충돌</strong> 사용자 시트 summary가 있으면 관리 Summary 생성이 실패했습니다.</td>
+<td>대소문자 무시 이름 비교로 고유 관리 시트를 만듭니다.</td>
+<td>Occupied lowercase summary name</td>
+</tr>
+<tr>
+<td>BUG-07</td>
+<td><strong>Enum 이름 충돌</strong> Element 뒤 element를 추가할 수 있어 유효하지 않은 정의를 만들었습니다.</td>
+<td>추가 단계에서 대소문자 무시 중복을 거부합니다.</td>
+<td>Duplicate Enum identifier ignores case</td>
+</tr>
+<tr>
+<td>BUG-08</td>
+<td><strong>CLI 입력 오류와 잘못된 예약</strong> 잘못된 JSON·객체 형식에서 traceback이 발생하고 잘못된 timeout도 요청을 예약했습니다.</td>
+<td>구조화된 입력 오류, 양수·유한 timeout 및 크기 선검사, UTF-8 입출력을 적용했습니다.</td>
+<td>Negative timeout does not enqueue</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-2">검사 범위</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>영역</th>
+<th>TC</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>File creation</td>
+<td>23</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Excel table</td>
+<td>34</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Conversion</td>
+<td>19</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>19</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Local enums</td>
+<td>19</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Global enums</td>
+<td>9</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>2</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Registration</td>
+<td>12</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Localization</td>
+<td>3</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Grid warnings</td>
+<td>8</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Worksheet names</td>
+<td>9</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Deterministic combinations</td>
+<td>24</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Global integration</td>
+<td>6</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Existing regression</td>
+<td>6</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Structured-reference regression</td>
+<td>4</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Spreadsheet regression</td>
+<td>1</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td>19</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI input preflight</td>
+<td>14</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Play-mode protections</td>
+<td>6</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Generated runtime</td>
+<td>13</td>
+<td>PASS</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-3">새 경고 화면</h2>
+<p>예약 컬럼 이름 Read와 정의되지 않은 Enum 값을 넣은 실제 영어 Unity 화면입니다. 원본 샘플 파일을 저장한 상태가 아니라 캡처용 편집 상태입니다.</p>
+<h2 id="section-4">TC 상세</h2>
+<p>전체 영역File creationExcel tableConversionSummaryLocal enumsGlobal enumsPersistenceRegistrationLocalizationGrid warningsWorksheet namesDeterministic combinationsGlobal integrationExisting regressionStructured-reference regressionSpreadsheet regressionCLICLI input preflightPlay-mode protectionsGenerated runtime250 / 250</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>영역·TC·절차</th>
+<th>기대 결과</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TC-001</td>
+<td><strong>game / Plain</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / Plain  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-002</td>
+<td><strong>game / with spaces</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / with spaces  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-003</td>
+<td><strong>game / 한국어</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / 한국어  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-004</td>
+<td><strong>game / 日本語</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / 日本語  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-005</td>
+<td><strong>game / éèç</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / éèç  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-006</td>
+<td><strong>game / 001</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: game / 001  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-007</td>
+<td><strong>xlsx / Plain</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / Plain  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-008</td>
+<td><strong>xlsx / with spaces</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / with spaces  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-009</td>
+<td><strong>xlsx / 한국어</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / 한국어  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-010</td>
+<td><strong>xlsx / 日本語</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / 日本語  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-011</td>
+<td><strong>xlsx / éèç</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / éèç  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-012</td>
+<td><strong>xlsx / 001</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: xlsx / 001  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-013</td>
+<td><strong>csv / Plain</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / Plain  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-014</td>
+<td><strong>csv / with spaces</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / with spaces  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-015</td>
+<td><strong>csv / 한국어</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / 한국어  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-016</td>
+<td><strong>csv / 日本語</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / 日本語  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-017</td>
+<td><strong>csv / éèç</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / éèç  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-018</td>
+<td><strong>csv / 001</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: csv / 001  원시 실행 결과</td>
+<td>File opens; game has Id:int and mandatory Summary; ordinary files stay blank.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-019</td>
+<td><strong>Unsupported extension xls</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: Unsupported extension xls  원시 실행 결과</td>
+<td>Reject without creating file.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-020</td>
+<td><strong>Unsupported extension txt</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: Unsupported extension txt  원시 실행 결과</td>
+<td>Reject without creating file.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-021</td>
+<td><strong>Unsupported extension json</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: Unsupported extension json  원시 실행 결과</td>
+<td>Reject without creating file.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-022</td>
+<td><strong>Unsupported extension xlsm</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: Unsupported extension xlsm  원시 실행 결과</td>
+<td>Reject without creating file.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-023</td>
+<td><strong>Assets prefix and parent traversal</strong> File creation  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC 전용 경로·파일명·확장자를 준비합니다. 2. WorkbookNewSource.Create를 실행합니다. 3. 생성 결과를 읽거나 거부 전후 파일 바이트를 비교합니다. 개별 조건: Assets prefix and parent traversal  원시 실행 결과</td>
+<td>Sibling AssetsOther and ../ are rejected.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-024</td>
+<td><strong>Create named table: Inventory</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Create named table: Inventory  원시 실행 결과</td>
+<td>Structured table survives save and reopening with data unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-025</td>
+<td><strong>Create named table: Inventory_2</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Create named table: Inventory_2  원시 실행 결과</td>
+<td>Structured table survives save and reopening with data unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-026</td>
+<td><strong>Create named table: 한글표</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Create named table: 한글표  원시 실행 결과</td>
+<td>Structured table survives save and reopening with data unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-027</td>
+<td><strong>Create named table: Éléments</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Create named table: Éléments  원시 실행 결과</td>
+<td>Structured table survives save and reopening with data unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-028</td>
+<td><strong>Create named table: 255 chars</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Create named table: 255 chars  원시 실행 결과</td>
+<td>Structured table survives save and reopening with data unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-029</td>
+<td><strong>Reject table name: 1Bad</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: 1Bad  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-030</td>
+<td><strong>Reject table name: A1</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: A1  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-031</td>
+<td><strong>Reject table name: R1C1</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: R1C1  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-032</td>
+<td><strong>Reject table name: R</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: R  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-033</td>
+<td><strong>Reject table name: C</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: C  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-034</td>
+<td><strong>Reject table name: has space</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: has space  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-035</td>
+<td><strong>Reject table name: has/slash</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: has/slash  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-036</td>
+<td><strong>Reject table name: A_x0001_</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: A_x0001_  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-037</td>
+<td><strong>Reject table name: 256 chars</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject table name: 256 chars  원시 실행 결과</td>
+<td>Reject without changing cells or table count.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-038</td>
+<td><strong>Reject range -1,0,1,0</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range -1,0,1,0  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-039</td>
+<td><strong>Reject range 0,-1,1,0</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,-1,1,0  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-040</td>
+<td><strong>Reject range 0,0,0,0</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,0,0,0  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-041</td>
+<td><strong>Reject range 2,0,1,0</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 2,0,1,0  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-042</td>
+<td><strong>Reject range 0,2,1,1</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,2,1,1  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-043</td>
+<td><strong>Reject range 0,0,1048576,0</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,0,1048576,0  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-044</td>
+<td><strong>Reject range 0,0,1,16384</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,0,1,16384  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-045</td>
+<td><strong>Reject range 0,0,1000,100</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Reject range 0,0,1000,100  원시 실행 결과</td>
+<td>No partial table metadata or cell edits.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-046</td>
+<td><strong>Blank and duplicate headers</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Blank and duplicate headers  원시 실행 결과</td>
+<td>Blank headers filled; duplicates deduplicated case-insensitively.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-047</td>
+<td><strong>Duplicate name across sheets</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Duplicate name across sheets  원시 실행 결과</td>
+<td>Workbook-wide case-insensitive names; no partial second table.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-048</td>
+<td><strong>Overlapping table</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Overlapping table  원시 실행 결과</td>
+<td>Existing table remains unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-049</td>
+<td><strong>Merged header range</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Merged header range  원시 실행 결과</td>
+<td>Merged cells prevent table creation without data loss.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-050</td>
+<td><strong>Formula header</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Formula header  원시 실행 결과</td>
+<td>Formula headers rejected without losing formula.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-051</td>
+<td><strong>Long header</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Long header  원시 실행 결과</td>
+<td>256 character header rejected.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-052</td>
+<td><strong>Undo redo create</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Undo redo create  원시 실행 결과</td>
+<td>Single undo removes table; redo restores table and cells.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-053</td>
+<td><strong>Two nonoverlapping tables then convert one to range</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Two nonoverlapping tables then convert one to range  원시 실행 결과</td>
+<td>Only selected table metadata removed; data and second table preserved.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-054</td>
+<td><strong>CSV table creation</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: CSV table creation  원시 실행 결과</td>
+<td>CSV rejects structural metadata rather than silently discarding it.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-055</td>
+<td><strong>Infer 2147483647</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 2147483647  원시 실행 결과</td>
+<td>Infer Int without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-056</td>
+<td><strong>Infer 2147483648</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 2147483648  원시 실행 결과</td>
+<td>Infer Long without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-057</td>
+<td><strong>Infer 9223372036854775807</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 9223372036854775807  원시 실행 결과</td>
+<td>Infer Long without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-058</td>
+<td><strong>Infer 9223372036854775808</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 9223372036854775808  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-059</td>
+<td><strong>Infer 1.5</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 1.5  원시 실행 결과</td>
+<td>Infer Double without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-060</td>
+<td><strong>Infer 1e3</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 1e3  원시 실행 결과</td>
+<td>Infer Double without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-061</td>
+<td><strong>Infer 001</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 001  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-062</td>
+<td><strong>Infer -001</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer -001  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-063</td>
+<td><strong>Infer true</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer true  원시 실행 결과</td>
+<td>Infer Bool without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-064</td>
+<td><strong>Infer FALSE</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer FALSE  원시 실행 결과</td>
+<td>Infer Bool without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-065</td>
+<td><strong>Infer NaN</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer NaN  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-066</td>
+<td><strong>Infer Infinity</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer Infinity  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-067</td>
+<td><strong>Infer 2026-10-29</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 2026-10-29  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-068</td>
+<td><strong>Infer</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-069</td>
+<td><strong>Infer 한글</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Infer 한글  원시 실행 결과</td>
+<td>Infer String without changing source text.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-070</td>
+<td><strong>Blank sheet and header-only sheet</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Blank sheet and header-only sheet  원시 실행 결과</td>
+<td>Both rejected; no invented data rows.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-071</td>
+<td><strong>Duplicate reserved and Unicode headers</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Duplicate reserved and Unicode headers  원시 실행 결과</td>
+<td>All fields survive with valid unique generated names.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-072</td>
+<td><strong>Long integer precision</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Long integer precision  원시 실행 결과</td>
+<td>Integers beyond Int64 remain exact text rather than rounded double.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-073</td>
+<td><strong>Required Summary idempotence</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Required Summary idempotence  원시 실행 결과</td>
+<td>Already compliant save/reopen stays clean.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-074</td>
+<td><strong>Source header/type add</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Source header/type add  원시 실행 결과</td>
+<td>New header receives string and matching Summary row.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-075</td>
+<td><strong>Add from Summary</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Add from Summary  원시 실행 결과</td>
+<td>New Summary row creates source column at matching position.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-076</td>
+<td><strong>Rename data sheet</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Rename data sheet  원시 실행 결과</td>
+<td>Summary target names update and persist.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-077</td>
+<td><strong>Cannot delete mandatory Summary</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Cannot delete mandatory Summary  원시 실행 결과</td>
+<td>Rejected operation preserves workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-078</td>
+<td><strong>Corrupt Summary header</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Corrupt Summary header  원시 실행 결과</td>
+<td>Save rejected and disk bytes remain intact.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-079</td>
+<td><strong>Invalid duplicate/type/identifier Power:int</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Invalid duplicate/type/identifier Power:int  원시 실행 결과</td>
+<td>Warning and rejected save leave disk unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-080</td>
+<td><strong>Invalid duplicate/type/identifier Broken:nonsense</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Invalid duplicate/type/identifier Broken:nonsense  원시 실행 결과</td>
+<td>Warning and rejected save leave disk unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-081</td>
+<td><strong>Invalid duplicate/type/identifier class:int</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Invalid duplicate/type/identifier class:int  원시 실행 결과</td>
+<td>Warning and rejected save leave disk unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-082</td>
+<td><strong>Invalid duplicate/type/identifier Id:string</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Invalid duplicate/type/identifier Id:string  원시 실행 결과</td>
+<td>Warning and rejected save leave disk unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-083</td>
+<td><strong>Occupied Summary name</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Occupied Summary name  원시 실행 결과</td>
+<td>User sheet named Summary is preserved; managed Summary gets unique name.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-084</td>
+<td><strong>Required Summary rename and undo</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Required Summary rename and undo  원시 실행 결과</td>
+<td>Managed Summary detected by headers after display-name change.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-085</td>
+<td><strong>New second data sheet</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: New second data sheet  원시 실행 결과</td>
+<td>Both table schemas present in one Summary.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-086</td>
+<td><strong>Case-insensitive duplicate column names</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Case-insensitive duplicate column names  원시 실행 결과</td>
+<td>C# member names differing only by case are rejected consistently before saving.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-087</td>
+<td><strong>Create Rarity</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Create Rarity  원시 실행 결과</td>
+<td>One consolidated definition sheet; popup contains Local type.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-088</td>
+<td><strong>Create Element</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Create Element  원시 실행 결과</td>
+<td>One consolidated definition sheet; popup contains Local type.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-089</td>
+<td><strong>Create EnemyRole</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Create EnemyRole  원시 실행 결과</td>
+<td>One consolidated definition sheet; popup contains Local type.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-090</td>
+<td><strong>Create Local</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Create Local  원시 실행 결과</td>
+<td>One consolidated definition sheet; popup contains Local type.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-091</td>
+<td><strong>Reject reserved Enum name int</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Reject reserved Enum name int  원시 실행 결과</td>
+<td>Reject without creating Enum data.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-092</td>
+<td><strong>Reject reserved Enum name class</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Reject reserved Enum name class  원시 실행 결과</td>
+<td>Reject without creating Enum data.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-093</td>
+<td><strong>Reject reserved Enum name 1Bad</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Reject reserved Enum name 1Bad  원시 실행 결과</td>
+<td>Reject without creating Enum data.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-094</td>
+<td><strong>Reject reserved Enum name Has Space</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Reject reserved Enum name Has Space  원시 실행 결과</td>
+<td>Reject without creating Enum data.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-095</td>
+<td><strong>Automatic values and explicit values</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Automatic values and explicit values  원시 실행 결과</td>
+<td>Omitted numbers start at zero, explicit number sets next automatic value; blank cells do not consume a number.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-096</td>
+<td><strong>Missing definition warnings</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Missing definition warnings  원시 실행 결과</td>
+<td>Deleting an Enum definition marks dependent cells; Undo clears warnings.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-097</td>
+<td><strong>Invalid Enum member warning</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid Enum member warning  원시 실행 결과</td>
+<td>Popup values are valid; unknown text and undefined numbers warn.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-098</td>
+<td><strong>Create provider Shared</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Create provider Shared  원시 실행 결과</td>
+<td>Provider namespace and definitions survive save/reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-099</td>
+<td><strong>Create provider CommonEnums</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Create provider CommonEnums  원시 실행 결과</td>
+<td>Provider namespace and definitions survive save/reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-100</td>
+<td><strong>Reject namespace Local</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject namespace Local  원시 실행 결과</td>
+<td>Invalid or reserved namespaces rejected without edit.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-101</td>
+<td><strong>Reject namespace local</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject namespace local  원시 실행 결과</td>
+<td>Invalid or reserved namespaces rejected without edit.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-102</td>
+<td><strong>Reject namespace class</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject namespace class  원시 실행 결과</td>
+<td>Invalid or reserved namespaces rejected without edit.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-103</td>
+<td><strong>Reject namespace Bad Space</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject namespace Bad Space  원시 실행 결과</td>
+<td>Invalid or reserved namespaces rejected without edit.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-104</td>
+<td><strong>Reject namespace</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject namespace  원시 실행 결과</td>
+<td>Invalid or reserved namespaces rejected without edit.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-105</td>
+<td><strong>Stale edit revision</strong> Persistence  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Stale edit revision  원시 실행 결과</td>
+<td>Two sessions cannot silently overwrite the other&#39;s saved changes.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-106</td>
+<td><strong>Undo redo type plus Summary</strong> Persistence  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Undo redo type plus Summary  원시 실행 결과</td>
+<td>One transaction restores source type and Summary together.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-107</td>
+<td><strong>Native XLSX register / code / binary / Summary / style</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Native XLSX register / code / binary / Summary / style  원시 실행 결과</td>
+<td>Original source identity preserved; code and matching encrypted binary created; Summary mandatory and header blue.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-108</td>
+<td><strong>Duplicate same-sheet registration</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Duplicate same-sheet registration  원시 실행 결과</td>
+<td>Reject without changing source or generating second registration.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-109</td>
+<td><strong>Two tables in one workbook</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Two tables in one workbook  원시 실행 결과</td>
+<td>Both sheets independently registered, styled, generated and represented in Summary.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-110</td>
+<td><strong>Generated table name conflict</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Generated table name conflict  원시 실행 결과</td>
+<td>Existing table outputs untouched; second source unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-111</td>
+<td><strong>External original rejected</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: External original rejected  원시 실행 결과</td>
+<td>No external source mutation or output publication.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-112</td>
+<td><strong>Global provider cannot become game data</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Global provider cannot become game data  원시 실행 결과</td>
+<td>Definition source remains unchanged and no registration is created.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-113</td>
+<td><strong>Managed Summary cannot become game data</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Managed Summary cannot become game data  원시 실행 결과</td>
+<td>Summary content and managed identity stay unchanged.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-114</td>
+<td><strong>Local Enum definition cannot become game data</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Local Enum definition cannot become game data  원시 실행 결과</td>
+<td>Enum definition sheet remains intact.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-115</td>
+<td><strong>Nonexistent target sheet</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Nonexistent target sheet  원시 실행 결과</td>
+<td>Reject before mutation; no fallback to first worksheet.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-116</td>
+<td><strong>Existing output file collision</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Existing output file collision  원시 실행 결과</td>
+<td>Preflight rejects and retains source plus existing file.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-117</td>
+<td><strong>Unregister keeps source and outputs</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Unregister keeps source and outputs  원시 실행 결과</td>
+<td>Registration removed; editable workbook and generated artifacts retained.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-118</td>
+<td><strong>Failed generation rollback</strong> Registration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 격리 프로젝트 Assets에 TC 전용 원본을 만들고 임포트합니다. 2. 제목의 등록·충돌·실패·해제 경로를 호출합니다. 3. 등록 상태, 원본 바이트, 생성 코드·바이너리를 기대 결과와 비교합니다. 개별 조건: Failed generation rollback  원시 실행 결과</td>
+<td>Local namespace conflict after source rewrite restores original source, table registry and table outputs.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-119</td>
+<td><strong>Template has horizontal language columns</strong> Localization  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Template has horizontal language columns  원시 실행 결과</td>
+<td>Id/korea/english/france header and keys in rows; no type row.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-120</td>
+<td><strong>Game-data sheet cannot become localization</strong> Localization  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Game-data sheet cannot become localization  원시 실행 결과</td>
+<td>Existing source and game registration remain intact.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-121</td>
+<td><strong>Provider template rejects unsupported extension</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Provider template rejects unsupported extension  원시 실행 결과</td>
+<td>Global provider creation requires XLSX; no CSV rewrite.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-122</td>
+<td><strong>Existing template destination protected</strong> Global enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Existing template destination protected  원시 실행 결과</td>
+<td>Provider template cannot overwrite existing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-123</td>
+<td><strong>Existing template destination protected</strong> Localization  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Existing template destination protected  원시 실행 결과</td>
+<td>Localization template cannot overwrite existing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-124</td>
+<td><strong>Invalid schema column Read</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column Read  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-125</td>
+<td><strong>Invalid schema column Write</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column Write  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-126</td>
+<td><strong>Invalid schema column ToString</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column ToString  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-127</td>
+<td><strong>Invalid schema column class</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column class  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-128</td>
+<td><strong>Invalid schema column Bad Name</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column Bad Name  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-129</td>
+<td><strong>Invalid schema column 1Bad</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column 1Bad  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-130</td>
+<td><strong>Invalid schema column</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Invalid schema column  원시 실행 결과</td>
+<td>Column header/type/data cells visibly warn before save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-131</td>
+<td><strong>Duplicate header case</strong> Grid warnings  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 게임 데이터 스키마를 준비합니다. 2. 제목의 잘못된 컬럼 이름을 적용합니다. 3. 헤더·타입·데이터 셀의 validation 결과를 확인합니다. 개별 조건: Duplicate header case  원시 실행 결과</td>
+<td>Both ambiguous columns warn.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-132</td>
+<td><strong>Reserved generated member Read</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Reserved generated member Read  원시 실행 결과</td>
+<td>Summary warning matches generated schema rejection.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-133</td>
+<td><strong>Reserved generated member Write</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Reserved generated member Write  원시 실행 결과</td>
+<td>Summary warning matches generated schema rejection.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-134</td>
+<td><strong>Reserved generated member ToString</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Reserved generated member ToString  원시 실행 결과</td>
+<td>Summary warning matches generated schema rejection.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-135</td>
+<td><strong>Exact 100000-cell table range</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Exact 100000-cell table range  원시 실행 결과</td>
+<td>Maximum supported area accepted; metadata and headers survive save.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-136</td>
+<td><strong>Occupied lowercase summary name</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Occupied lowercase summary name  원시 실행 결과</td>
+<td>Case-insensitive existing sheet preserved; unique managed Summary created.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-137</td>
+<td><strong>Formula-dependent reorder rejected safely</strong> Summary  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id:int 데이터와 관리 Summary를 준비합니다. 2. 제목에 명시한 이름·행·타입·시트를 변경합니다. 3. 동기화·경고·Undo 또는 저장 거부/재열기를 기대 결과와 대조합니다. 개별 조건: Formula-dependent reorder rejected safely  원시 실행 결과</td>
+<td>Source columns and formula remain unchanged; save blocks; Undo recovers.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-138</td>
+<td><strong>Body formula preserved through table creation</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Body formula preserved through table creation  원시 실행 결과</td>
+<td>Formula remains a formula after create/save/reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-139</td>
+<td><strong>Default names skip occupied names</strong> Excel table  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. TC별 새 XLSX·범위·헤더·기존 구조를 준비합니다. 2. 제목 조건의 CreateTable 또는 ConvertTableToRange를 호출합니다. 3. 기대 결과에 따라 표 메타데이터·값·재열기 또는 거부 시 상태 보존을 확인합니다. 개별 조건: Default names skip occupied names  원시 실행 결과</td>
+<td>Auto-generated names unique workbook-wide.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-140</td>
+<td><strong>Mixed oversized integer and decimal</strong> Conversion  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 제목의 원본 텍스트·헤더·수식을 준비합니다. 2. Convert 또는 Infer를 호출합니다. 3. 추론 타입과 보존된 값 또는 거부 결과를 확인합니다. 개별 조건: Mixed oversized integer and decimal  원시 실행 결과</td>
+<td>Text preserved for entire column to avoid rounding integer identifiers.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-141</td>
+<td><strong>Invalid definition A = 1|B = 1</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition A = 1|B = 1  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-142</td>
+<td><strong>Invalid definition A|a</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition A|a  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-143</td>
+<td><strong>Invalid definition class</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition class  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-144</td>
+<td><strong>Invalid definition A = 2147483648</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition A = 2147483648  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-145</td>
+<td><strong>Invalid definition A = -2147483649</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition A = -2147483649  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-146</td>
+<td><strong>Invalid definition A = no</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition A = no  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-147</td>
+<td><strong>Invalid definition =1+1</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Invalid definition =1+1  원시 실행 결과</td>
+<td>Discover rejects invalid names, duplicate values, overflow and formulas.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-148</td>
+<td><strong>Duplicate Enum identifier ignores case</strong> Local enums  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 새 게임 문서에 Enum 정의를 준비합니다. 2. 제목의 이름·멤버·번호 조건을 적용합니다. 3. 타입 목록·발견 결과·값 경고·저장/거부 상태를 확인합니다. 개별 조건: Duplicate Enum identifier ignores case  원시 실행 결과</td>
+<td>Adding second case-variant name rejected without metadata changes.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-149</td>
+<td><strong>Reject</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-150</td>
+<td><strong>Reject Has/Slash</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject Has/Slash  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-151</td>
+<td><strong>Reject Has:Colon</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject Has:Colon  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-152</td>
+<td><strong>Reject Has?Question</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject Has?Question  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-153</td>
+<td><strong>Reject Has*Star</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject Has*Star  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-154</td>
+<td><strong>Reject Has[Bracket]</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject Has[Bracket]  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-155</td>
+<td><strong>Reject 32 characters</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Reject 32 characters  원시 실행 결과</td>
+<td>Invalid Excel sheet name rejected without editing workbook.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-156</td>
+<td><strong>Valid 31-character Unicode name</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Valid 31-character Unicode name  원시 실행 결과</td>
+<td>Maximum-length name accepted and survives reopening.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-157</td>
+<td><strong>Case-insensitive duplicate</strong> Worksheet names  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Case-insensitive duplicate  원시 실행 결과</td>
+<td>Existing data sheet not replaced by case variant.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-158</td>
+<td><strong>Summary reorder permutation 1</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 1  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-159</td>
+<td><strong>Summary reorder permutation 2</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 2  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-160</td>
+<td><strong>Summary reorder permutation 3</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 3  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-161</td>
+<td><strong>Summary reorder permutation 4</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 4  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-162</td>
+<td><strong>Summary reorder permutation 5</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 5  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-163</td>
+<td><strong>Summary reorder permutation 6</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 6  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-164</td>
+<td><strong>Summary reorder permutation 7</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 7  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-165</td>
+<td><strong>Summary reorder permutation 8</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 8  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-166</td>
+<td><strong>Summary reorder permutation 9</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 9  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-167</td>
+<td><strong>Summary reorder permutation 10</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 10  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-168</td>
+<td><strong>Summary reorder permutation 11</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 11  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-169</td>
+<td><strong>Summary reorder permutation 12</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 12  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-170</td>
+<td><strong>Summary reorder permutation 13</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 13  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-171</td>
+<td><strong>Summary reorder permutation 14</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 14  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-172</td>
+<td><strong>Summary reorder permutation 15</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 15  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-173</td>
+<td><strong>Summary reorder permutation 16</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 16  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-174</td>
+<td><strong>Summary reorder permutation 17</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 17  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-175</td>
+<td><strong>Summary reorder permutation 18</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 18  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-176</td>
+<td><strong>Summary reorder permutation 19</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 19  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-177</td>
+<td><strong>Summary reorder permutation 20</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 20  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-178</td>
+<td><strong>Summary reorder permutation 21</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 21  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-179</td>
+<td><strong>Summary reorder permutation 22</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 22  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-180</td>
+<td><strong>Summary reorder permutation 23</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 23  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-181</td>
+<td><strong>Summary reorder permutation 24</strong> Deterministic combinations  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. Id,A,B,C,D와 식별 가능한 값 101,202,303,404를 만듭니다. 2. 제목의 순열 번호로 A/B/C/D의 가능한 24개 순서를 각각 적용합니다. 3. 저장·재열기 후 필드 이름별 값과 바이너리 생성을 확인합니다. 개별 조건: Summary reorder permutation 24  원시 실행 결과</td>
+<td>Column identity and values survive arbitrary schema reorder, save and reopen.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-182</td>
+<td><strong>One provider used by two registered consumers</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: One provider used by two registered consumers  원시 실행 결과</td>
+<td>Both consumers use the same C# Enum type and valid generated binaries.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-183</td>
+<td><strong>Provider asset rename preserves GUID link</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: Provider asset rename preserves GUID link  원시 실행 결과</td>
+<td>Consumer still resolves shared type and member after file move.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-184</td>
+<td><strong>Definition sheet rename preserves stable type</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: Definition sheet rename preserves stable type  원시 실행 결과</td>
+<td>Display-name change keeps type ID and consumer data valid.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-185</td>
+<td><strong>Used definition cannot be removed</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: Used definition cannot be removed  원시 실행 결과</td>
+<td>Provider validation rejects before saving and consumers stay valid.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-186</td>
+<td><strong>Disconnect then Undo</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: Disconnect then Undo  원시 실행 결과</td>
+<td>Dependent values warn; save is blocked; Undo restores type resolution.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-187</td>
+<td><strong>Missing provider file and restoration</strong> Global integration  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    1. 고유 GUID의 실제 제공 파일과 소비 게임 테이블을 만듭니다. 2. 제목의 연결·이동·이름 변경·삭제·복원 동작을 실행합니다. 3. 타입 식별자·바이너리·경고와 원본 보존을 비교합니다. 개별 조건: Missing provider file and restoration  원시 실행 결과</td>
+<td>Missing source warns without losing cells; restoring it clears warning.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-188</td>
+<td><strong>Source creation</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Source creation  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-189</td>
+<td><strong>Workbook conversion</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Workbook conversion  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-190</td>
+<td><strong>Summary and global schema</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Summary and global schema  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-191</td>
+<td><strong>Custom enums compatibility</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Custom enums compatibility  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-192</td>
+<td><strong>Consolidated enums</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Consolidated enums  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-193</td>
+<td><strong>Cell value validation</strong> Existing regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    Cell value validation  원시 실행 결과</td>
+<td>Existing documented assertions pass on current native Unity sources.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-194</td>
+<td><strong>clipboard.cross-sheet-whole-table</strong> Structured-reference regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    clipboard.cross-sheet-whole-table  원시 실행 결과</td>
+<td>Existing structured-reference, formula and name-preservation checks pass.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-195</td>
+<td><strong>table.convert-calculated-column</strong> Structured-reference regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    table.convert-calculated-column  원시 실행 결과</td>
+<td>Existing structured-reference, formula and name-preservation checks pass.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-196</td>
+<td><strong>table.convert-defined-names</strong> Structured-reference regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    table.convert-defined-names  원시 실행 결과</td>
+<td>Existing structured-reference, formula and name-preservation checks pass.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-197</td>
+<td><strong>table.convert-cell-references</strong> Structured-reference regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    table.convert-cell-references  원시 실행 결과</td>
+<td>Existing structured-reference, formula and name-preservation checks pass.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>TC-198</td>
+<td><strong>General spreadsheet editing</strong> Spreadsheet regression  조건·절차·근거    Fresh isolated fixture; saved source captured before rejection checks.    General spreadsheet editing  원시 실행 결과</td>
+<td>Existing search, edit, style and worksheet operations remain correct.</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-001</td>
+<td><strong>Discover CLI operations</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Discover CLI operations  원시 실행 결과</td>
+<td>Five supported operations returned as JSON</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-002</td>
+<td><strong>Inspect saved source</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Inspect saved source  원시 실행 결과</td>
+<td>Versioned schema, sheet names and matching revision</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-003</td>
+<td><strong>Constants/formula/Unicode/multiline write</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Constants/formula/Unicode/multiline write  원시 실행 결과</td>
+<td>Saved read returns SUM=5 and original Unicode text</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-004</td>
+<td><strong>Stale revision rejects</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Stale revision rejects  원시 실행 결과</td>
+<td>No disk overwrite</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-005</td>
+<td><strong>Mixed valid/invalid write is atomic</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Mixed valid/invalid write is atomic  원시 실행 결과</td>
+<td>No partial disk writes</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-006</td>
+<td><strong>Duplicate write target</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Duplicate write target  원시 실행 결과</td>
+<td>Reject repeated cell address</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-007</td>
+<td><strong>Unknown sheet</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Unknown sheet  원시 실행 결과</td>
+<td>Stable sheet-not-found response</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-008</td>
+<td><strong>Invalid read dimensions</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Invalid read dimensions  원시 실행 결과</td>
+<td>invalid-range response</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-009</td>
+<td><strong>Read limit exceeded</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Read limit exceeded  원시 실행 결과</td>
+<td>More than 10000 cells rejected</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-010</td>
+<td><strong>Exact 10000-cell read</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Exact 10000-cell read  원시 실행 결과</td>
+<td>Boundary read accepted</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-011</td>
+<td><strong>Project path escape</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Project path escape  원시 실행 결과</td>
+<td>Outside-project source rejected</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-012</td>
+<td><strong>Unknown operation</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Unknown operation  원시 실행 결과</td>
+<td>unsupported-operation response</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-013</td>
+<td><strong>Registered source inspect and binary validation</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Registered source inspect and binary validation  원시 실행 결과</td>
+<td>Game mode detected and generated binary matches</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-014</td>
+<td><strong>Invalid typed game write</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Invalid typed game write  원시 실행 결과</td>
+<td>Validation rejects without mutation</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-015</td>
+<td><strong>Valid game write republishes binary</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Valid game write republishes binary  원시 실행 결과</td>
+<td>Source and generated binary remain consistent</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-016</td>
+<td><strong>Unsaved editor draft conflict</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Unsaved editor draft conflict  원시 실행 결과</td>
+<td>CLI refuses to overwrite an open draft</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-017</td>
+<td><strong>Malformed JSON</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Malformed JSON  원시 실행 결과</td>
+<td>Structured rejection without Python traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-018</td>
+<td><strong>Non-object JSON</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Non-object JSON  원시 실행 결과</td>
+<td>Structured invalid-request rejection</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>CLI-019</td>
+<td><strong>Negative timeout does not enqueue</strong> CLI  조건·절차·근거    Isolated running Unity; fixture workbook; no desktop input    Negative timeout does not enqueue  원시 실행 결과</td>
+<td>Reject before writing queue file</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-001</td>
+<td><strong>Non-object or missing operation: null</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-002</td>
+<td><strong>Non-object or missing operation: []</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-003</td>
+<td><strong>Non-object or missing operation: 123</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-004</td>
+<td><strong>Non-object or missing operation: &quot;text&quot;</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-005</td>
+<td><strong>Non-object or missing operation: {&quot;path&quot;:&quot;x&quot;}</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-006</td>
+<td><strong>Non-object or missing operation: {&quot;operation&quot;:&quot;&quot;}</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-007</td>
+<td><strong>Non-object or missing operation: {&quot;operation&quot;:123}</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-request; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-008</td>
+<td><strong>Invalid timeout 0</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-timeout; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-009</td>
+<td><strong>Invalid timeout -1</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-timeout; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-010</td>
+<td><strong>Invalid timeout nan</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-timeout; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-011</td>
+<td><strong>Invalid timeout inf</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-timeout; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-012</td>
+<td><strong>Invalid timeout -inf</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>invalid-timeout; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-013</td>
+<td><strong>Oversized write payload</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>request-too-large; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PRE-014</td>
+<td><strong>Missing request file</strong> CLI input preflight  조건·절차·근거    Valid isolated project; Unity need not run    Submit invalid input and compare queue directory before/after  원시 실행 결과</td>
+<td>request-read-failed; no queued request; no traceback</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-001</td>
+<td><strong>Registered source save blocked</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Registered source save blocked  원시 실행 결과</td>
+<td>Source bytes unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-002</td>
+<td><strong>Registration blocked in Play</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Registration blocked in Play  원시 실행 결과</td>
+<td>CanRegister false and Register rejects</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-003</td>
+<td><strong>Global provider save blocked</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Global provider save blocked  원시 실행 결과</td>
+<td>Provider bytes unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-004</td>
+<td><strong>Viewer loaded during Play is locked</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Viewer loaded during Play is locked  원시 실행 결과</td>
+<td>PlayReadOnly true and Editable false without presenting a window</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-005</td>
+<td><strong>Direct automation write respects Play lock</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Direct automation write respects Play lock  원시 실행 결과</td>
+<td>API write rejected before source mutation</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PLAY-006</td>
+<td><strong>Ordinary spreadsheet remains editable</strong> Play-mode protections  조건·절차·근거    Isolated Unity 6000.0.83f1 Windows; actual Play mode; no desktop input    Ordinary spreadsheet remains editable  원시 실행 결과</td>
+<td>Unregistered temporary workbook can save in Play</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-001</td>
+<td><strong>QA66be83435709</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-002</td>
+<td><strong>QA8ae116d0856b</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-003</td>
+<td><strong>QA21269110ce01</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-004</td>
+<td><strong>QA3355fe16a6a7</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-005</td>
+<td><strong>QAf0b0cfce50b0</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-006</td>
+<td><strong>QA27be24202e3f</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-007</td>
+<td><strong>QA60a4c98df264</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-008</td>
+<td><strong>QA9b33174864e2</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-009</td>
+<td><strong>QA555b44704268</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-010</td>
+<td><strong>QA2cc3f8100115</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-011</td>
+<td><strong>QA58d4d6c87d02</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-012</td>
+<td><strong>QAd014944008cf</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>RUN-013</td>
+<td><strong>QA96f1a2e7f49e</strong> Generated runtime  조건·절차·근거    Fresh generated QA table compiled in isolated native Unity    Load generated C# table, query every Id, compare every typed property to saved source  원시 실행 결과</td>
+<td>Generated Load/GetData and all properties equal original typed source; binary and source unchanged</td>
+<td>PASS</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-5">검증 한계</h2>
+<ul>
+<li><p>유한한 기능·경계·거부 조건 TC입니다. 가능한 모든 XLSX 바이트 조합이나 모든 기능의 완전성을 증명하지 않습니다.</p>
+</li>
+<li><p>사용자 데스크톱 입력·마우스 포커스·메뉴 클릭의 수동 인수 검사는 수행하지 않았습니다.</p>
+</li>
+<li><p>Windows Unity 6000.0.83f1만 검증했습니다. macOS/Linux/다른 Unity 버전 및 Excel·Google Sheets 간 픽셀·계산 완전 동등성은 미검증입니다.</p>
+</li>
+<li><p>강제 프로세스 종료·디스크 용량 부족·실제 전원 차단을 주입하지 않았습니다. 생성 충돌과 중간 생성 실패의 롤백은 검사했습니다.</p>
+</li>
+<li><p>네이티브 UI 캡처는 영어입니다. 9개 언어 문서 렌더링은 별도로 검사했으며 모든 언어의 Unity UI 배치는 인증하지 않았습니다.</p>
+</li>
+<li><p>시간과 출력 바이트는 일부 호출의 관측값이며 토큰 절감률·대규모 처리량 벤치마크는 아닙니다.</p>
+</li>
+</ul>
+<p>초기 실패와 TC 하네스 오류 로그를 보존했습니다. CSV 거부 예외 및 Local이라는 유효 Enum 이름에 대한 초기 기대 조건 2건은 TC 오류로 정정했으며 제품 버그 집계에서 제외했습니다. 하네스의 컴파일 정정도 제품 버그로 계산하지 않았습니다.</p>
+<p>XERJ: 실패 — 서버 미기동으로 rg 사용. 스토어 업로드·Git 푸시는 수행하지 않았습니다.</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-29/table-creation-qa/History/Before-Korean-TCs-2026-10-29/QA-Report.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>c2e276aceaf08211bb4667300141c111c908e5c1ebfd01928176c5312606f673</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-1b551b3cfd89-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">수정 사항</a><a href="#section-2">검사 범위</a><a href="#section-3">새 경고 화면</a><a href="#section-4">TC 상세</a><a href="#section-5">검증 한계</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

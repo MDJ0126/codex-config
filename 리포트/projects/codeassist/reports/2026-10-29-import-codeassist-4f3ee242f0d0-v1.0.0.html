@@ -1,1 +1,88 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CodeAssist 0.0.132 — 색상 수정 묶음 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T12:27:28.012Z <span class="badge">기존 기록 이전</span></div><h1>CodeAssist 0.0.132 — 색상 수정 묶음</h1><p><a class="report-link" href="../assets/imports/docs/validation/color-fixes-131/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/color-fixes-131/index.html</li><li>원본 SHA-256: 075cbdf42ae5444aad38f0e47cfdb7fc375e13458da2765119d804ecfbe51b18</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-4f3ee242f0d0-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>CodeAssist 0.0.132 — 색상 수정 묶음 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>CodeAssist 0.0.132 — 색상 수정 묶음</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">CodeAssist 0.0.132 — 색상 수정 묶음 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T12:27:28.012Z">2026년 10월 23일 오후 9:27 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>CA 0.0.132 색상 수정·자동 검사</p>
+<h2 id="section-1">CodeAssist 0.0.132 — 색상 수정 묶음</h2>
+<p>전체 완수 아님. 자동 회귀 통과를 VA 동등성 통과로 계산하지 않았습니다.</p>
+<h2 id="section-2">이번 수정</h2>
+<ul>
+<li><p>탐색 목록: 고정 역할 색상 대신 사용자 지정 심볼 색상을 사용합니다.</p>
+</li>
+<li><p>참조 창: 프로젝트·파일명에 함수 색상을 적용하던 오류를 제거했습니다. 알려진 심볼 종류를 사용하고, 열려 있는 창에도 설정 저장을 반영합니다.</p>
+</li>
+<li><p>열거형: 함수 호출의 쉼표를 가짜 멤버로 읽는 오류와 중괄호 초기화식의 누락을 수정했습니다. 공백이 있는 중첩 네임스페이스도 처리합니다.</p>
+</li>
+</ul>
+<p>개체 브라우저의 LiteTreeView32 색상 적용 실패는 남아 있습니다. 표준 TreeView 클래스명만 바꾸어 해결된 것으로 처리하지 않았습니다.</p>
+<h2 id="section-3">검사 결과와 범위</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>기준</th>
+<th>결과</th>
+<th>한계</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>현재 코어 자동 회귀</td>
+<td>378/378 · 100%</td>
+<td>VA 동기화율 아님</td>
+</tr>
+<tr>
+<td>설치된 132 코어 실행</td>
+<td>19/19 · 100%</td>
+<td>색상 계산·파서; 실제 VS 화면 입력 아님</td>
+</tr>
+<tr>
+<td>VS2019 / Modern 빌드</td>
+<td>2/2 · 100%</td>
+<td>스레딩 분석 경고 존재; VS2019 실행 검증 아님</td>
+</tr>
+<tr>
+<td>패키지·설치 파일 대조</td>
+<td>6/6 바이너리 일치</td>
+<td>실제 로드 모듈도 별도 확인</td>
+</tr>
+<tr>
+<td>최근 옵션 VA 실제 대조</td>
+<td>일치 1/12 · 8.33%</td>
+<td>130 보관 결과: 실패 1, 미검증 10. 132 새 통과 아님</td>
+</tr>
+<tr>
+<td>동일 옵션 검사 진행률</td>
+<td>2/12 · 16.67%</td>
+<td>일치율과 다름</td>
+</tr>
+<tr>
+<td>UI 항목 구비</td>
+<td>32/32 · 100%</td>
+<td>130 표본; 레이아웃·디자인 점수 아님</td>
+</tr>
+<tr>
+<td>문서 부분 명세 확보</td>
+<td>108/108 · 100%</td>
+<td>전체 역분석·구현 완료 아님</td>
+</tr>
+<tr>
+<td>전체 기능 완전 동등성 인증</td>
+<td>0/108 · 0%</td>
+<td>구현률이 0%라는 뜻이 아님. 전체 제품 동기화율 미산출</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-4">보관된 동일 코드 화면 — 130, 이번 통과 수에 미포함</h2>
+<p>네임스페이스·열거형의 켜짐 상태 참고입니다. 꺼짐 및 복원까지 확인한 증거가 아니므로 새 옵션 통과로 계산하지 않았습니다.</p>
+<p>VA</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/color-fixes-131/va-palette-on.png" alt="VA 동일 색상 테스트 코드" loading="lazy"><figcaption>VA 동일 색상 테스트 코드</figcaption></figure></p>
+<p>CA 130</p>
+<p><figure><img class="report-image" src="../assets/imports/docs/validation/color-fixes-131/ca130-palette-on.png" alt="CA130 동일 색상 테스트 코드" loading="lazy"><figcaption>CA130 동일 색상 테스트 코드</figcaption></figure></p>
+<h2 id="section-5">실행 근거</h2>
+<p>378개 회귀 검사 · 설치본 19개 검사 · 두 대상 빌드 · 패키지 · 설치 해시 · 실제 CLR 로드 · 집계 JSON·시간</p>
+<p>설치 파일은 installers/0.0.132/에 보관합니다. 다른 창이 검사 화면을 가린 뒤에는 화면 입력을 수행하지 않았습니다. 관련 없는 창 화면은 이 보고서에 싣지 않았습니다.</p>
+<p>XERJ: 사용 — 후보 검색 후 현재 소스 확인. REA: 설치본 해시가 일치하는 VA의 읽기 전용 Ghidra 분석 근거 확보.</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/color-fixes-131/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>075cbdf42ae5444aad38f0e47cfdb7fc375e13458da2765119d804ecfbe51b18</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-4f3ee242f0d0-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">CodeAssist 0.0.132 — 색상 수정 묶음</a><a href="#section-2">이번 수정</a><a href="#section-3">검사 결과와 범위</a><a href="#section-4">보관된 동일 코드 화면 — 130, 이번 통과 수에 미포함</a><a href="#section-5">실행 근거</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,1 +1,122 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>추천 색상 누락 수정 및 실제 입력 재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">버그 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-23T21:21:25.547Z <span class="badge">기존 기록 이전</span></div><h1>추천 색상 누락 수정 및 실제 입력 재검증</h1><p><a class="report-link" href="../assets/imports/docs/validation/options-148/index.html">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/options-148/index.html</li><li>원본 SHA-256: dd6154a008681cb18b66d38dbefb6ce6fb5cd5d2c3ebcb97b951e8cabffffa8f</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-eff47cbc48ae-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>추천 색상 누락 수정 및 실제 입력 재검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>추천 색상 누락 수정 및 실제 입력 재검증</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">추천 색상 누락 수정 및 실제 입력 재검증 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-23T21:21:25.547Z">2026년 10월 24일 오전 6:21 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>VA·CA 추천 색상 수정 / CA 0.0.149</p>
+<h2 id="section-1">추천 색상 누락 수정 및 실제 입력 재검증</h2>
+<p>검사 CA <strong>0.0.149</strong> · 2026-10-24T06:21:25+09:00</p>
+<p><strong>이번 표본 3/3개(100%) 일치</strong>: 동일 Value 후보의 색상 On·Off, Tab 삽입 전체 코드와 커서. 제품 전체 100%라는 뜻은 아닙니다. 선정 12옵션의 대조 근거 확보는 <strong>8/12개(66.67%)</strong>, 선정 출력 On/Off 확보는 **7/12개(58.33%)**이며 버전별 기존 근거와 이번 근거를 구분합니다.</p>
+<h2 id="section-2">원인·수정</h2>
+<p>수정 전 실행 로그는 receiver=pointer, type=빈 값, candidates=0이었습니다. 지역 변수 타입을 멤버 연산자 뒤에서 조회하는 호출 위치를 수정했습니다. operator-&gt; 반환 타입도 따라가도록 했습니다. 수정 후 실제 로그는 type=Target148, candidates=1이며 CA 후보에 변수 색상이 적용됩니다. 빈 접두어 후보 한 개는 Ctrl+Space로 바로 삽입하지 않고 목록을 유지하며 Tab으로 확정합니다.</p>
+<p>현대 VS 후보 복사 시 IconSource 대신 공개 IconMoniker·보조 아이콘·Suffix를 보존하도록 수정했습니다. 이 부분의 혼합 후보 화면은 별도 실측이 남아 있습니다. <a class="report-link" href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.language.intellisense.completion3.iconsource?view=visualstudiosdk-2022">SDK 근거</a>.</p>
+<h2 id="section-3">검증 근거</h2>
+<ul>
+<li><p>전체 코드 테스트 <strong>414/414(100%)</strong>. 일반 C++ 지역 변수 . / -&gt; 및 재귀 operator-&gt;, raw pointer 중단, 순환 중단을 포함합니다.</p>
+</li>
+<li><p>VS2019·Modern 두 패키지 빌드, 설치 바이너리 6개 해시 일치, 실행 CLR 모듈 확인.</p>
+</li>
+<li><p>같은 프로젝트 포함 소스, 같은 Value 후보, Ctrl+Space 목록, 실제 Tab. 양쪽 최종 코드·선택/커서 JSON이 정확히 같습니다.</p>
+</li>
+<li><p>이전 툴팁 추가 행·목록 레이아웃·설명 차이는 통과 처리하지 않았습니다.</p>
+</li>
+</ul>
+<p>414 테스트 · 호환 빌드 · 설치 해시 · 실행 DLL · 수정 전 실행 로그 · 수정 후 로그 · VA Tab · CA Tab · 판정 JSON</p>
+<h2 id="section-4">12옵션 상태</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>현재 증거·한계</th>
+<th>근거 버전</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Views</td>
+<td>선정 On/Off 출력 일치</td>
+<td>138</td>
+</tr>
+<tr>
+<td>Object Browser</td>
+<td>선정 On/Off 출력 일치</td>
+<td>138</td>
+</tr>
+<tr>
+<td>Text Editors</td>
+<td>선정 기본 색상 On/Off 일치</td>
+<td>142</td>
+</tr>
+<tr>
+<td>Navigation Bar</td>
+<td>선정 전경색 On/Off 일치</td>
+<td>145/146</td>
+</tr>
+<tr>
+<td>Hash surround</td>
+<td>전체 코드·선택 On/Off 일치</td>
+<td>140/146</td>
+</tr>
+<tr>
+<td>Overloaded arrow</td>
+<td>변환 On/Off 일치, Undo 단계 수 다름</td>
+<td>147 / 설치146</td>
+</tr>
+<tr>
+<td>Listboxes</td>
+<td>이번 Value 색상 On/Off·Tab 결과 일치, 레이아웃·설명 차이</td>
+<td>현재149</td>
+</tr>
+<tr>
+<td>Tooltips</td>
+<td>함수에 추가 CA 행 차이 남음</td>
+<td>141 / Off 타입147</td>
+</tr>
+<tr>
+<td>Enum custom color</td>
+<td>기본 색상 관찰만 확보, 사용자 지정값 입력·재시작 미검증</td>
+<td>142</td>
+</tr>
+<tr>
+<td>Namespace custom color</td>
+<td>기본 색상 관찰만 확보, 사용자 지정값 입력·재시작 미검증</td>
+<td>142</td>
+</tr>
+<tr>
+<td>With Snippets</td>
+<td>CA 단일 후보 On/Off, VA 사용자 파일 시험 승인 대기</td>
+<td>146</td>
+</tr>
+<tr>
+<td>Double key repeat</td>
+<td>개별 키 진단만, 실제 홀드 속도·원인 미검증</td>
+<td>146</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-5">대조 화면</h2>
+<p>va-on</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/va-on.png" alt="참고 화면](../assets/imports/docs/validation/options-148/va-on.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/va-on.png)</figcaption></figure></p>
+<p>ca-on-149</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/ca-on-149.png" alt="참고 화면](../assets/imports/docs/validation/options-148/ca-on-149.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/ca-on-149.png)</figcaption></figure></p>
+<p>va-off</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/va-off.png" alt="참고 화면](../assets/imports/docs/validation/options-148/va-off.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/va-off.png)</figcaption></figure></p>
+<p>ca-off-149</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/ca-off-149.png" alt="참고 화면](../assets/imports/docs/validation/options-148/ca-off-149.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/ca-off-149.png)</figcaption></figure></p>
+<p>va-tab</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/va-tab.png" alt="참고 화면](../assets/imports/docs/validation/options-148/va-tab.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/va-tab.png)</figcaption></figure></p>
+<p>ca-tab-149</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/ca-tab-149.png" alt="참고 화면](../assets/imports/docs/validation/options-148/ca-tab-149.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/ca-tab-149.png)</figcaption></figure></p>
+<p>ca-before-147</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/ca-before-147.png" alt="참고 화면](../assets/imports/docs/validation/options-148/ca-before-147.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/ca-before-147.png)</figcaption></figure></p>
+<p>va-restored</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/va-restored.png" alt="참고 화면](../assets/imports/docs/validation/options-148/va-restored.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/va-restored.png)</figcaption></figure></p>
+<p>ca-restored</p>
+<p>[<figure><img class="report-image" src="../assets/imports/docs/validation/options-148/ca-restored.png" alt="참고 화면](../assets/imports/docs/validation/options-148/ca-restored.png)" loading="lazy"><figcaption>참고 화면](../assets/imports/docs/validation/options-148/ca-restored.png)</figcaption></figure></p>
+<h2 id="section-6">복원·남은 작업</h2>
+<p>두 시험 소스는 원본 해시로 복원했고 문서 저장 상태를 확인했습니다. CA Listboxes=true, DotToArrow=false 등 기존 설정 복원. VA는 저장 후 종료되어 검사 프로필만 복구했고 재시작 후 Listboxes=true를 확인했습니다. 툴팁 중복 행, 사용자 지정 enum/namespace 색상, VA 사용자 스니펫, 실제 키 홀드 및 전체 UI/108항목 완전 동등성은 계속 진행합니다.</p>
+<p>문서·설치 도움말 기반 부분 명세:108/108(100%). 전체 역분석 완료율 및 제품 전체 동기화율과 구분합니다. XERJ 사용: 반환 타입 검색 후 소스·로그·실행 확인.</p>
+<p>제안 시간20~30분. 이번 기록까지 실제 22.7분. 전체 목표 미완료.</p>
+<h2 id="section-7">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/options-148/index.html">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>dd6154a008681cb18b66d38dbefb6ce6fb5cd5d2c3ebcb97b951e8cabffffa8f</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-eff47cbc48ae-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">추천 색상 누락 수정 및 실제 입력 재검증</a><a href="#section-2">원인·수정</a><a href="#section-3">검증 근거</a><a href="#section-4">12옵션 상태</a><a href="#section-5">대조 화면</a><a href="#section-6">복원·남은 작업</a><a href="#section-7">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

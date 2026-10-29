@@ -7,8 +7,8 @@ project: enginemigrator
 type: 버그
 category: QA
 summary: 이전 배포본에서 문제를 재현하고 8종을 수정했습니다. 독립 QA 18개·기존 회귀 403개와 실제 입력 읽기 전용 검사를 확인했습니다.
+format: legacy-v1
 ---
-# EngineMigrator QA 결과
 
 ## 핵심 상태
 - QA 수정·검증 완료 · 로컬 배포 예정.

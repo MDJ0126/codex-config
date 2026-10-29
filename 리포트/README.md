@@ -1,5 +1,11 @@
 # Tracefolio — Reports & Issues
 
+## 새 게시물 작성 기준
+
+작성 전 [AI 게시물 작성 가이드](guide/authoring.md)를 읽으세요. 사이트의 [작성 가이드](https://mdj0126.github.io/codex-config/guide/)와 같은 원문입니다. 결과·버그 템플릿과 schema.json을 guide 폴더에서 제공합니다. 새 글은 `format: tracefolio-v1` 및 명시적인 state, 공통 섹션 순서를 사용합니다. 형식이 맞지 않으면 빌드가 중단됩니다. 과거 글의 legacy-v1 예외는 편집 매니페스트에 등록된 기존 파일에만 허용됩니다.
+
+공통 Markdown 렌더러는 표, 인용, 순서 목록, 코드 블록, 이미지 설명과 자동 목차를 지원합니다. raw HTML과 실행 가능한 URL은 활성화하지 않습니다. 기존 원문은 originals, 편집 전 Markdown은 editorial-originals에 보존하며 두 폴더 모두 Pages 패키지에서 제외됩니다. 기존 과거 글에 없던 현재 검증 결과를 새로 만들지 않습니다.
+
 ## 프로젝트별 파일 구조
 
 ```text

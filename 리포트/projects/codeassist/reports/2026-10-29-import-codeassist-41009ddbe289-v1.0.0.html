@@ -1,1 +1,77 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>검증 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><div><strong>CodeAssist</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-14T16:20:42.720Z <span class="badge">기존 기록 이전</span></div><h1>검증 결과</h1><p><a class="report-link" href="../assets/imports/docs/validation/README.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: CodeAssist</li><li>원래 위치: CodeAssist/docs/validation/README.md</li><li>원본 SHA-256: 5223cd15d6b651585ea20d14e11b453d31ea041b978bc3c493fa157e998fde69</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-codeassist-41009ddbe289-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>검증 결과 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>검증 결과</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">검증 결과 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-14T16:20:42.720Z">2026년 10월 15일 오전 1:20 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>검증일: 2026-10-14 (Asia/Seoul).</p>
+<h2 id="section-1">자동 검증</h2>
+<ul>
+<li>Visual Studio 2022 MSBuild Release 빌드: Core, Indexing, Tests, Worker, Extension 및 VSIX 생성 성공.</li>
+<li>xUnit: <strong>85개 통과, 실패 0개, 건너뜀 0개</strong>. 주석 태그·include·선택 복원·클립보드·TPL·스니펫 날짜/시간에 더해 LSP UTF-8 프레이밍, 잘못된 응답 범위, UTF-16 이름 변경 edit 및 겹침 거부를 검증했습니다.</li>
+<li>최종 VSIX: 0.0.49 매니페스트, JSON 런타임을 포함한 Release 바이너리 6개 해시 및 VSCT 단축키 등록 24개를 패키지 도구로 검증합니다. 실제 최신 결과는 패키지 검증 기록（원문의 비공개·미보존 참조）에 보존합니다.</li>
+<li>실제 clangd 19.1.5: 오버로드 정의 분리·상속 멤버 완성·의미 참조·세 파일 이름 변경 계획과 주석/문자열 보존. 원자료（원문의 비공개·미보존 참조）. 닫힌 선언 헤더가 빠졌던 첫 검증 실패도 확인했으며, 열린 문서 및 직접 include의 동기화를 추가했습니다. 전체 UE 코드베이스 범위의 검증을 대신하지 않습니다.</li>
+<li>실제 별도 worker: 120개 헤더·2,400개 클래스·19,200개 함수의 합성 입력을 3회 분석. 매회 내부 처리와 심볼 identity 21,600개 및 파일 목록이 일치했습니다.</li>
+<li>캐시 v5의 scope·시그니처·파일 목록 roundtrip, 오래된 결과 게시 차단, 지역 shadowing, 어휘 마스킹, 타입 모호성, 구성 fingerprint, 작업자 실패 fallback을 회귀 테스트로 확인했습니다.</li>
+</ul>
+<p>제한된 실행 환경에서는 testhost 연결이 90초 뒤 시간 초과되었습니다. 제한 밖에서 같은 테스트를 실행해 실제 결과를 확인했습니다. VS 편집기 뷰·키 입력은 이 테스트에 포함되지 않습니다.</p>
+<h2 id="section-2">작업자 측정</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>실행</th>
+<th align="right">내부 처리</th>
+<th align="right">별도 작업자</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td align="right">337ms</td>
+<td align="right">980ms</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="right">289ms</td>
+<td align="right">735ms</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="right">264ms</td>
+<td align="right">662ms</td>
+</tr>
+</tbody></table>
+</div><p>중앙값은 내부 289ms, 작업자 735ms입니다. 작업자 시간에는 프로세스 시작, 분석, 캐시 저장·읽기 및 조회 테이블 생성이 포함됩니다. VA와 비교한 결과나 Unreal 대형 프로젝트의 UI 성능 측정은 아닙니다. 이 입력에서는 작업자 비용이 커 기본값을 내부 처리로 유지했습니다. 원자료: index-benchmark.json（원문의 비공개·미보존 참조）.</p>
+<p>재현:</p>
+<pre><code class="language-powershell">&amp; &#39;C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe&#39; CodeAssist.sln /restore /t:Rebuild /p:Configuration=Release /v:minimal /nologo
+dotnet vstest CodeAssist.Core.Tests/bin/Release/net8.0/CodeAssist.Core.Tests.dll
+dotnet run --project tools/IndexBenchmark -c Release -- CodeAssist.Worker/bin/Release/CodeAssist.Worker.exe docs/validation/index-benchmark.json
+./tools/VerifyPackage.ps1
+</code></pre>
+<p>중간 VSIX 매니페스트에 이전 버전이 남아 있는 사례를 실제로 확인해 Rebuild 후 패키지 안의 버전을 검증했습니다. 릴리스 시 소스 매니페스트만 확인하지 말고 위 패키지 검증을 수행합니다.</p>
+<h2 id="section-3">Visual Studio에서 남은 확인</h2>
+<p>별도 <code>CodeAssistVerify</code> 프로필에서 실제 메뉴 29개와 인덱스 준비 상태를 확인했습니다. CodeAssist 파일 검색에 <code>\ui-fixture main.cpp:6</code>을 입력한 뒤 Enter로 <code>main.cpp</code> 6행 1열에 이동했습니다. CodeAssist 실행 기록（원문의 비공개·미보존 참조）. 명시 재분석 명령을 추가하기 전의 실행 결과이며, 나머지 명령과 모든 키 라우팅의 검증을 대신하지 않습니다.</p>
+<p>VA 원본은 비교 솔루션에서 실제 실행했습니다. 파일 검색 결과 10개와 행 이동 결과를 실행 기록（원문의 비공개·미보존 참조）에 저장했습니다. 이 결과를 CodeAssist 확장 UI 실행 검증으로 대신하지 않습니다.</p>
+<p>현재 VS 프로필에서 <code>Alt+↓</code>는 VA ScopeNext 대신 VS 기본 선택 행 이동을 실행했습니다. <code>Ctrl+Z</code>로 비교 파일을 복구하고 변경 표시가 사라진 것을 확인했습니다. 단축키 충돌 기록（원문의 비공개·미보존 참조）. 전체 통합을 허용해도 기존 사용자 키 배치와의 충돌이 모두 해소되는 것은 아닙니다.</p>
+<p>아래는 아직 실행하지 않은 확인 항목입니다. 빌드와 Core 테스트 통과를 실사용 결과로 대신하지 않습니다.</p>
+<ol>
+<li>문서를 두 뷰로 연 뒤 한 뷰만 닫았을 때 추적을 유지하고, 마지막 뷰를 닫으면 추적·예약 작업을 정리하는지 확인합니다.</li>
+<li>후보 선택 후 연속 입력·Backspace로 목록이 바뀔 때 Tab/Enter 확정 항목을 확인합니다.</li>
+<li>키보드 사용자 설정 또는 함께 설치된 VA가 키를 선점하는지 확인합니다.</li>
+<li>파일·심볼 창의 검색, 위/아래·Enter·Esc, 대응 파일과 메서드 이동을 확인합니다.</li>
+<li>Rename·Quick Actions를 지원하는 C++ 문맥과 지원하지 않는 문맥에서 호출·가용성 안내를 확인합니다.</li>
+<li>실제 Unreal 프로젝트에서 엔진 공용 캐시 재사용, 첫 v5 재생성, 상태 표시줄 진행 및 메모리·입력 지연을 측정합니다.</li>
+</ol>
+<h2 id="section-4">REA 연결 검증 — 2026-10-15</h2>
+<p>공식 <code>morluto/rea</code> 저장소의 역분석 스킬과 npm <code>rea-agents</code> 6.5.0을 설치했습니다. 기존 Ghidra 12.1.4 및 JDK 21을 재사용하며, 프로젝트 내부 Node 패키지 경로로 Codex stdio MCP를 등록했습니다. 기존 Codex 설정은 setup이 백업했습니다.</p>
+<p>등록 설정 그대로 MCP 서버를 실행해 initialize 및 tools/list에 성공했고 도구 207개를 확인했습니다. 실제 MCP 응답 목록（원문의 비공개·미보존 참조）. 현재 대화의 도구 목록에 자동 추가된 것은 아니며, 앱 재연결 후 세션 노출은 별도 확인합니다. CLI에서도 같은 REA 패키지를 호출할 수 있습니다.</p>
+<p>REA가 설치된 <code>VaOptKeyBinds.17.dll</code>을 읽고 정적 관리 어셈블리 분석 Evidence를 반환했습니다. 원자료（원문의 비공개·미보존 참조）. 이는 대상 실행·C# 복원·네이티브 디컴파일 완료를 의미하지 않습니다. 처음의 잘못된 DLL 경로 호출은 실패했고, 실제 파일명을 확인하여 재호출했습니다. Ghidra 제공자 점검 통과도 VA 전체 네이티브 분석 완료와 구분합니다.</p>
+<p>다음 순서는 UnrealTestProject에서 CPU 비용의 실제 측정, 시작 시 캐시 재분석 경로의 확인, 그리고 단축키별 원본 동작 비교입니다. CPU 100%의 원인은 아직 확정하지 않았습니다.</p>
+<h2 id="section-5">성능 수정·명령 대응표·패키지 검증 — 2026-10-15</h2>
+<p>실제 <code>C:\Projects\UnrealTestProject</code>의 EngineAssociation은 5.5입니다. 설치된 UE 5.5를 사용해 프로젝트 입력 4개·선택 엔진 입력 3,962개·컴파일 구성 18개를 확인했습니다. 처리 단계 및 CPU 시간 원자료（원문의 비공개·미보존 참조）. 마지막 측정에서 프로젝트 분석 53ms, 프로젝트 캐시 읽기 3ms, 선택 엔진 입력 열거 1,448ms, 입력 fingerprint 166ms, 같은 입력 재확인 1,539ms, 구성된 헤더 후보 생성 37ms였습니다. 반복 실행의 디스크 캐시 영향을 포함하며 이 수치를 수정 전후 전체 VS 시작 속도 개선률로 해석하지 않습니다.</p>
+<p>코드상 엔진 캐시 존재와 무관하게 실행되던 BuildEngine·Save를 수정했습니다. 엔진 버전별 캐시가 로드되고 해당 프로젝트에서 사용하는 입력 경로·크기·수정 시각이 같으면 재분석·저장을 건너뜁니다. 입력 추가·삭제·변경 및 무시 폴더 처리의 회귀 테스트를 통과했습니다. 새 입력 기록이 없는 최초 실행에서는 한 번 분석합니다. 수정 시각과 크기가 함께 보존된 내용 변경은 이 메타데이터 검사로 감지하지 못합니다.</p>
+<p>include root 정규화도 파일/타깃마다 반복하던 구조에서 한 번 계산한 고유 경로 목록으로 변경했습니다. 기능을 비활성화하는 수정은 하지 않았습니다. 실행 중인 VS의 프로파일·첫 엔진 분석·캐시 읽기 비용·입력 지연과 사용자가 관찰한 CPU 100%의 실제 원인 확정은 아직 남아 있습니다. 헤드리스 측정을 실제 VS UI 측정으로 대신하지 않습니다.</p>
+<p>현재 명령 대응표（원문의 비공개·미보존 참조）에 30개 메뉴 명령·24개 키 등록과 제한을 보존했습니다. REA의 VA 단축키 멤버 및 CIL Evidence（원문의 비공개·미보존 참조）도 추가했습니다. 현재 75개 테스트가 통과하며 패키지 0.0.49의 바이너리 6개·키 등록 24개가 Release 빌드와 일치합니다. VA 전용 리팩터링·코드 생성 및 모든 단축키의 원본 UI 비교는 완료되지 않았습니다.</p>
+<h2 id="section-6">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/docs/validation/README.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>5223cd15d6b651585ea20d14e11b453d31ea041b978bc3c493fa157e998fde69</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-41009ddbe289-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">자동 검증</a><a href="#section-2">작업자 측정</a><a href="#section-3">Visual Studio에서 남은 확인</a><a href="#section-4">REA 연결 검증 — 2026-10-15</a><a href="#section-5">성능 수정·명령 대응표·패키지 검증 — 2026-10-15</a><a href="#section-6">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

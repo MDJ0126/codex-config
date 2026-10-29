@@ -7,8 +7,8 @@ project: enginemigrator
 type: 작업 결과
 category: 개발
 summary: 플러그인 후보 목록과 네·아니오 직접 선택, 변경 감지, 코드 사전 진단, 값 타입 조건식 변환을 배포했습니다.
+format: legacy-v1
 ---
-# EngineMigrator 업그레이드 결과
 
 ## 현재 상태
 - 이번 업그레이드의 구현·빌드·필수 엔진 없는 검사와 로컬 배포본 생성은 완료했습니다.

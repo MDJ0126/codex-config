@@ -1,1 +1,61 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>내보내기 / 변환 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><span class="edition">작업 결과 · 버전 기록</span></header><main class="detail"><a class="back" href="../../../index.html">← 모든 기록</a><div class="project-heading"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><div><strong>Design Data Table</strong><div class="eyebrow">작업 결과 / v1.0.0 · 이전 기록</div></div></div><article><div class="article-meta">2026-10-19T09:10:46.689Z <span class="badge">기존 기록 이전</span></div><h1>내보내기 / 변환</h1><p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-19/DataExport.md">기존 보고서 원문 열기</a></p><h2>이전 기록</h2><ul><li>프로젝트: Design Data Table</li><li>원래 위치: DesignDataTable/Docs/Testing/2026-10-19/DataExport.md</li><li>원본 SHA-256: 59121d8314fe63bb72e35d4157c435ee33afc3c55bfaf16cdb3bdf1d1f1f0205</li><li>날짜는 원본 파일의 최종 수정 시각입니다. 실제 작업 완료 시각은 원문을 기준으로 확인하십시오.</li><li>이전 게시물 버전 v1.0.0은 아카이브 등록 버전이며 제품 버전과 다릅니다.</li><li>원문은 originals 폴더에 바이트 단위로 보존했습니다. 공개 HTML은 열 수 없는 로컬 참조를 비활성 표시할 수 있습니다.</li><li>원문에 기록된 테스트를 이번 이전 작업에서 재실행한 것은 아닙니다.</li></ul><h2>시간과 검색</h2><ul><li>제안 시간: 전체 이전 작업 10~20분.</li><li>실제로 완료된 시간: 개별 이전 파일의 복사와 해시 검증을 수행했습니다. 전체 이전 완료 시각은 최종 이전 보고서에서 기록합니다.</li><li>XERJ: 미사용 — 문서·첨부파일 이전으로 코드 검색 불필요.</li></ul></article><a class="source" href="../posts/2026-10-29-import-designdatatable-1ff594e8b0bd-v1.0.0.md" download>↓ Markdown 원본 저장</a></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>내보내기 / 변환 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>내보내기 / 변환</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">내보내기 / 변환 — 당시 작업 내용과 검증 범위를 원문 기준으로 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-19T09:10:46.689Z">2026년 10월 19일 오후 6:10 KST</time><span>v1.0.0</span><span>이전 기록</span></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><blockquote>
+<p>보관 기록입니다. 아래 결과는 원문 작성 시점의 내용이며, 이번 편집에서 제품 테스트를 다시 실행하지 않았습니다.</p>
+</blockquote>
+<p>게임 데이터 편집기의 기존 CSV 내보내기 버튼을 <strong>내보내기 / 변환</strong> 메뉴로 바꿨습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>형식</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>XLSX</td>
+<td>이름·자료형 두 행, 원문 수식, 편집 메타데이터</td>
+</tr>
+<tr>
+<td>원본 CSV</td>
+<td>기존 이름·자료형 두 행과 원문 수식 형식 유지</td>
+</tr>
+<tr>
+<td>TSV</td>
+<td>열 이름 한 행과 계산된 값. 탭·따옴표·여러 줄 셀 인용 처리</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>테이블 이름, 열 이름·자료형, 자료형에 맞는 계산된 행 데이터</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>테이블·열 자료형·계산된 행 데이터. XML 문자 이스케이프</td>
+</tr>
+<tr>
+<td>ScriptableObject</td>
+<td>텍스트 템플릿 기반 코드와 실제 행 데이터를 가진 <code>.asset</code></td>
+</tr>
+</tbody></table>
+</div><p>원본 테이블은 내보내기 과정에서 변경하지 않습니다. 내보내기로 등록 원본을 덮어쓰는 경로는 거부하며, 원본 변경에는 저장을 사용합니다. JSON/ScriptableObject는 빈 숫자·논리값·날짜를 런타임 자료형 기본값으로 내보냅니다. JSON의 Int64는 정수 리터럴이므로 JavaScript Number로 읽는 소비자는 정밀도 처리에 주의해야 합니다.</p>
+<h2 id="section-1">ScriptableObject 템플릿과 데이터 삽입</h2>
+<ul>
+<li>템플릿: <code>Assets/DesignDataTable/Scripts/Editor/Sources/ScriptableObjectSource.txt</code></li>
+<li>코드: <code>Assets/DesignDataTable/Generated/Code/DataAssets/&lt;테이블 이름&gt;DataAsset.cs</code></li>
+<li>에셋: 내보내기 창에서 Assets 안의 <code>.asset</code> 경로를 선택합니다.</li>
+<li>사용: 생성된 에셋의 <code>Rows</code>를 읽습니다. 각 행은 열 이름에 대응하는 자료형 필드를 가집니다.</li>
+</ul>
+<p>템플릿은 <code>/*TABLE_NAME*/</code>, <code>/*CLASS_NAME*/</code>, <code>/*ROW_CLASS*/</code>, <code>/*FIELDS*/</code>, <code>/*SCHEMA_ID*/</code> 치환자를 사용합니다. DateTime은 Unity 직렬화를 위해 ISO 문자열 필드에 저장하고 DateTime 속성을 노출합니다. 템플릿과 스키마가 바뀌면 새 코드의 스키마 식별자와 일치하는 컴파일이 끝난 뒤 데이터를 삽입합니다. 작업은 Library 아래 파일로 남겨 도메인 리로드 후에도 이어갑니다.</p>
+<p>기존 같은 형식 에셋은 갱신하며, 다른 형식의 에셋이나 사용자 스크립트는 임의 덮어쓰지 않습니다. 같은 에셋에 대한 대기 중 요청은 최신 요청으로 대체합니다. 데이터 삽입 오류나 컴파일 실패는 오류를 기록하고 작업 파일을 <code>.failed</code>로 남깁니다. ScriptableObject를 원본으로 역변환하거나 자동 동기화하는 기능은 이번 범위가 아닙니다.</p>
+<h2 id="section-2">검증</h2>
+<ul>
+<li>전체 소스 컴파일 및 <strong>10,208개 회귀 검증 통과</strong>.</li>
+<li>JSON 한글·제어 문자·Int64·논리값·날짜, TSV 여러 줄/탭, XML 특수 문자, 계산값과 원본 수식 불변, 잘못된 내보내기 시 기존 파일 보존을 확인했습니다.</li>
+<li>Unity에서 템플릿의 실제 컴파일, <code>.asset</code> 생성과 모든 지원 자료형의 행 삽입, DateTime 접근자, 기존 에셋 갱신, 빈 테이블 재내보내기 시 이전 행 제거를 검증했습니다. <strong>129개 통과, 오류 0개, 샘플 씬 3개 완료</strong>. 실행 기록（원문의 비공개·미보존 참조）.</li>
+<li>9개 언어 UI·가이드와 영어 PDF를 갱신했습니다. 실제 메뉴 클릭과 팝업 배치는 별도 미검증입니다.</li>
+</ul>
+<p>XERJ: 미사용 — 연결 도구가 없어 rg로 현재 소스를 확인했습니다.</p>
+<h2 id="section-3">원문과 편집 이력</h2>
+<p><a class="report-link" href="../assets/imports/Docs/Testing/2026-10-19/DataExport.md">보존된 원문 열기</a></p>
+<ul>
+<li>원문 SHA-256: <code>59121d8314fe63bb72e35d4157c435ee33afc3c55bfaf16cdb3bdf1d1f1f0205</code></li>
+<li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-designdatatable-1ff594e8b0bd-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">ScriptableObject 템플릿과 데이터 삽입</a><a href="#section-2">검증</a><a href="#section-3">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
