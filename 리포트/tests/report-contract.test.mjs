@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateReport,toMarkdown,parseIssueBody,issueBody,WORKFLOW} from '../assets/report-contract.mjs';
+import {matchesRecord} from '../assets/filter-core.mjs';
+const projects={pixora:{name:'Pixora'}},base={schemaVersion:2,project:'pixora',kind:'bug',title:'경계 입력 오류',summary:'조건과 관찰 결과',outcome:'입력 경계를 확인했습니다.',environment:'실제 버전',steps:'입력을 실행',expected:'기대값',actual:'관찰값',workflow:'new'};
+test('human JSON and AI JSON use the same normalized contract',()=>{const r=validateReport(base,projects);assert.deepEqual(validateReport(parseIssueBody(issueBody(r)),projects),r);assert.match(toMarkdown(r),/format: tracefolio-v2/);assert.match(toMarkdown(r),/원인\n\n미확인/);});
+test('all five stages exist and resolved/closed require evidence',()=>{assert.equal(WORKFLOW.length,5);for(const[id]of WORKFLOW){if(['resolved','closed'].includes(id))assert.throws(()=>validateReport({...base,workflow:id},projects));else assert.equal(validateReport({...base,workflow:id},projects).workflow,id);}assert.equal(validateReport({...base,workflow:'resolved',changes:'수정',verification:'같은 조건 통과'},projects).workflow,'resolved');});
+test('invalid project, invalid status and front matter injection are rejected',()=>{for(const patch of [{project:'../escape'},{workflow:'unknown'},{title:'x\nproject: other'},{kind:'unknown'}])assert.throws(()=>validateReport({...base,...patch},projects));});
+test('complete result requires verification; missing actual time is not invented',()=>{assert.throws(()=>validateReport({...base,kind:'result',state:'complete'},projects));const r=validateReport({...base,kind:'result',state:'complete',verification:'실행 근거'},projects);assert.match(toMarkdown(r),/제품 작업의 완료 시간은 기록되지 않았습니다/);});
+test('project, group, stage and search combine without treating archive as resolved',()=>{const row={project:'pixora',group:'bug',type:'버그',stage:'resolved',search:'tf-1 경계 오류'};assert.ok(matchesRecord(row,{project:'pixora',group:'bug',stage:'resolved',query:'tf-1'}));assert.ok(!matchesRecord({...row,stage:'unclassified'},{stage:'resolved'}));assert.ok(!matchesRecord(row,{group:'result'}));});

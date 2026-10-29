@@ -1,3 +1,4 @@
+import {matchesRecord} from './assets/filter-core.mjs';
 import {postFiles} from './layout.mjs';
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
@@ -12,7 +13,7 @@ const reports=entries.map(e=>e.reportPath);
 const posts=entries.map(e=>e.postPath);
 assert.equal(posts.length,reports.length);
 let links=0;
-for(const file of ['index.html','guide/index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
+for(const file of ['index.html','write/index.html','guide/index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
  const html=await readFile(path.join(root,file),'utf8');
  assert.match(html,/<html lang="ko">/);assert.match(html,/name="viewport"/);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
@@ -21,21 +22,13 @@ for(const file of ['index.html','guide/index.html',...reports,...(await readdir(
   assert.ok(resolved.startsWith(root+path.sep));await access(resolved);links++;
  }
 }
-const elements=[...index.matchAll(/data-search="([^"]*)" data-project="([^"]*)" data-type="([^"]*)"/g)].map(m=>({dataset:{search:m[1],project:m[2],type:m[3]},hidden:false}));
-const buttons=[...index.matchAll(/data-filter="([^"]*)"/g)].map(m=>({dataset:{filter:m[1]},classList:{toggle(){}},setAttribute(){},addEventListener(event,fn){this.click=fn;}}));
-const projectButtons=[...index.matchAll(/data-project-filter="([^"]*)"/g)].map(m=>({dataset:{projectFilter:m[1]},classList:{toggle(){}},setAttribute(){},addEventListener(event,fn){this.click=fn;}}));
-const search={value:'',addEventListener(event,fn){this.input=fn;}};const count={};const empty={};
-const document={querySelectorAll:s=>s==='[data-filter]'?buttons:s==='[data-project-filter]'?projectButtons:elements,querySelector:s=>({'#search':search,'#count':count,'#empty':empty}[s])};
-vm.runInNewContext(await readFile(path.join(root,'assets/app.js'),'utf8'),{document});
-search.value='없는검색결과';search.input();assert.ok(elements.every(e=>e.hidden));assert.equal(empty.hidden,false);
-search.value='';search.input();assert.equal(elements.filter(e=>!e.hidden).length,posts.length);
-
-const visible=()=>elements.filter(e=>!e.hidden);
-for(const b of projectButtons){b.click();assert.equal(visible().length,elements.filter(e=>b.dataset.projectFilter==='전체'||e.dataset.project===b.dataset.projectFilter).length);}
-projectButtons[0].click();
-for(const b of buttons){b.click();assert.equal(visible().length,elements.filter(e=>b.dataset.filter==='전체'||e.dataset.type===b.dataset.filter).length);}
-const pixora=projectButtons.find(b=>b.dataset.projectFilter==='pixora');pixora.click();buttons.find(b=>b.dataset.filter==='수정사항').click();search.value='v1.1.2';search.input();assert.equal(visible().length,1);assert.equal(visible()[0].dataset.project,'pixora');assert.equal(visible()[0].dataset.type,'수정사항');
-projectButtons[0].click();buttons[0].click();search.value='';search.input();assert.equal(visible().length,posts.length);
+const elements=[...index.matchAll(/data-search="([^"]*)" data-project="([^"]*)" data-type="([^"]*)" data-group="([^"]*)" data-stage="([^"]*)"/g)].map(m=>({search:m[1],project:m[2],type:m[3],group:m[4],stage:m[5]}));
+assert.ok(elements.length>0);
+assert.equal(elements.filter(e=>matchesRecord(e,{query:'없는검색결과'})).length,0);
+for(const project of Object.keys(registry))assert.equal(elements.filter(e=>matchesRecord(e,{project})).length,elements.filter(e=>e.project===project).length);
+for(const group of ['result','bug'])assert.equal(elements.filter(e=>matchesRecord(e,{group})).length,elements.filter(e=>e.group===group).length);
+assert.equal(elements.filter(e=>matchesRecord(e,{project:'pixora',type:'수정사항',query:'v1.1.2'})).length,1);
+for(const stage of ['new','review','in_progress','resolved','closed','unclassified'])assert.equal(elements.filter(e=>matchesRecord(e,{group:'bug',stage})).length,elements.filter(e=>e.group==='bug'&&e.stage===stage).length);
 assert.ok(!index.includes('design-example'));
 const projects=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
 for(const p of Object.values(projects)){if(p.logo){const data=await readFile(path.join(root,p.logo));assert.equal(data.subarray(1,4).toString(),'PNG');assert.ok(data.length>100);}}

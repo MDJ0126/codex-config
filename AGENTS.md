@@ -36,7 +36,9 @@
 
 # Tracefolio 결과 보고서 형식과 기록 관리
 
-- 새 글 작성 전 `리포트/guide/authoring.md`를 반드시 읽고 결과·버그 템플릿을 사용한다. 공개 가이드는 `https://mdj0126.github.io/codex-config/guide/`, AI용 원문은 같은 경로의 `authoring.md`이다. 새 글은 `format: tracefolio-v1`, 명시적 `state`와 공통 H2 순서(작업 결과 → 변경 내용 → 검증 → 남은 사항 → 작업 시간)를 지킨다. 본문 H1은 쓰지 않는다. 과거 편집 예외 `legacy-v1`을 새 글의 검사 우회 수단으로 사용하지 않는다.
+- 새 보고서는 사람·AI 공통 JSON 계약 v2를 사용한다. 사람은 사이트 write 폼, AI는 guide/template-result.json 또는 template-bug.json을 채워 create-report.mjs --input으로 생성하거나 같은 JSON을 GitHub Issues에 등록한다. 원본 JSON 없이 v2 Markdown을 직접 작성하지 않는다. 분류는 프로젝트 → 결과 보고서/버그 보고서이며 버그 workflow는 new(접수), review(검토), in_progress(진행), resolved(해결), closed(종료)다. 해결·종료에는 수정 내용과 검증 근거가 필수다. 구체적인 절차는 리포트/guide/workflow.md를 읽는다.
+
+- 새 글 작성 전 `리포트/guide/authoring.md`를 반드시 읽고 결과·버그 템플릿을 사용한다. 공개 가이드는 `https://mdj0126.github.io/codex-config/guide/`, AI용 원문은 같은 경로의 `authoring.md`이다. 기존 v1 문서는 호환을 유지하며 새 글의 생성 형식은 `format: tracefolio-v2`, 명시적 `state`와 공통 H2 순서(작업 결과 → 변경 내용 → 검증 → 남은 사항 → 작업 시간)를 지킨다. 본문 H1은 쓰지 않는다. 과거 편집 예외 `legacy-v1`을 새 글의 검사 우회 수단으로 사용하지 않는다.
 
 - 모든 최종 결과 보고는 디자인된 HTML 파일로 작성하여 제출한다. 채팅에는 핵심 상태와 해당 HTML 링크를 함께 제공한다.
 - 앞으로 모든 프로젝트의 작업 결과·버그 보고·수정사항·검토 결과는 이 아카이브에 등록한다. 채팅만으로 결과 보고를 끝내지 않는다. 작업이 실패·보류된 경우에도 실제 상태와 남은 사항을 기록한다.

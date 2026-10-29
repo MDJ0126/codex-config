@@ -1,0 +1,47 @@
+name: Register and update Tracefolio report
+on:
+  issues:
+    types: [opened, edited, closed, reopened]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: report-pages
+  cancel-in-progress: false
+jobs:
+  register:
+    if: contains(github.event.issue.body, '<!-- tracefolio:v2 -->')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node 리포트/sync-issue.mjs
+      - run: node 리포트/build.mjs
+      - run: node 리포트/verify.mjs
+      - run: node 리포트/verify-migration.mjs
+      - run: node 리포트/verify-editorial.mjs
+      - run: node --test 리포트/tests/*.test.mjs
+      - name: Preserve validated report
+        run: |
+          git config user.name 'Tracefolio'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- 리포트
+          if ! git diff --cached --quiet; then
+            git commit -m 'Synchronize Tracefolio report from GitHub Issues'
+            git push origin HEAD:main
+          fi
+      - run: node 리포트/package-site.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: 리포트/.site
+      - id: deployment
+        uses: actions/deploy-pages@v4

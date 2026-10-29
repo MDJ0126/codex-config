@@ -1,9 +1,12 @@
-const buttons=[...document.querySelectorAll('[data-filter]')];
-const projectButtons=[...document.querySelectorAll('[data-project-filter]')];
-const records=[...document.querySelectorAll('.record')];
-let type='전체',project='전체';
-function update(){const query=document.querySelector('#search').value.trim().toLowerCase();let count=0;for(const row of records){const show=(type==='전체'||row.dataset.type===type)&&(project==='전체'||row.dataset.project===project)&&row.dataset.search.includes(query);row.hidden=!show;if(show)count++;}document.querySelector('#count').textContent=`${count}개의 기록`;document.querySelector('#empty').hidden=count!==0;}
+import {matchesRecord} from './filter-core.mjs';
+const buttons=[...document.querySelectorAll('[data-filter]')],projectButtons=[...document.querySelectorAll('[data-project-filter]')],groupButtons=[...document.querySelectorAll('[data-group-filter]')],stageButtons=[...document.querySelectorAll('[data-stage-filter]')],records=[...document.querySelectorAll('.record')];
+const filters={type:'전체',project:'전체',group:'all',stage:'all',query:''};
 function select(group,button){for(const b of group){b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));}}
-for(const button of buttons)button.addEventListener('click',()=>{type=button.dataset.filter;select(buttons,button);update();});
-for(const button of projectButtons)button.addEventListener('click',()=>{project=button.dataset.projectFilter;select(projectButtons,button);update();});
+function update(){filters.query=document.querySelector('#search').value;let count=0;for(const row of records){row.hidden=!matchesRecord(row.dataset,filters);if(!row.hidden)count++;}document.querySelector('#count').textContent=`${count}개의 기록`;document.querySelector('#empty').hidden=count!==0;for(const node of document.querySelectorAll('[data-stage-count]'))node.textContent=records.filter(r=>r.dataset.group==='bug'&&r.dataset.stage===node.dataset.stageCount&&matchesRecord(r.dataset,{...filters,group:'bug',stage:'all',type:'전체'})).length;}
+for(const b of buttons)b.addEventListener('click',()=>{filters.type=b.dataset.filter;select(buttons,b);update();});
+for(const b of projectButtons)b.addEventListener('click',()=>{filters.project=b.dataset.projectFilter;select(projectButtons,b);update();});
+for(const b of groupButtons)b.addEventListener('click',()=>{filters.group=b.dataset.groupFilter;filters.stage='all';filters.type='전체';select(groupButtons,b);select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter==='all'));select(buttons,buttons[0]);update();});
+for(const b of stageButtons)b.addEventListener('click',()=>{filters.stage=b.dataset.stageFilter;if(filters.stage!=='all'){filters.group='bug';filters.type='버그';select(groupButtons,groupButtons.find(x=>x.dataset.groupFilter==='bug'));select(buttons,buttons.find(x=>x.dataset.filter==='버그'));}select(stageButtons,b);update();});
 document.querySelector('#search').addEventListener('input',update);
+document.querySelector('#reset-filters').addEventListener('click',()=>{Object.assign(filters,{type:'전체',project:'전체',group:'all',stage:'all',query:''});document.querySelector('#search').value='';for(const list of [buttons,projectButtons,groupButtons])select(list,list[0]);select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter==='all'));update();});
+update();
