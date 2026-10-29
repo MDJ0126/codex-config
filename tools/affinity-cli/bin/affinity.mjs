@@ -125,7 +125,7 @@ export async function execute(argv) {
       server:initialization.serverInfo, protocol:initialization.protocolVersion,
       tools:(await affinity.tools()).map(t=>t.name), runtimeValidation:'Use status and an actual test job to verify SDK operations.' };
     if (command === 'tools') return { tools:await affinity.tools() };
-    if (command === 'docs') return { response:await affinity.docs(args[0] ?? 'preamble') };
+    if (command === 'docs') { await affinity.preamble(); return { response:await affinity.docs(args[0] ?? 'preamble') }; }
     if (command === 'call') {
       if (args[0] === 'execute_script') await affinity.preamble();
       return { response:await affinity.call(args[0], suppliedArgs) };

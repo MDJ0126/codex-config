@@ -76,7 +76,7 @@ export class McpClient {
     try {
       if (this.transport === 'sse') await this.openSse();
       const result = await this.request('initialize', {
-        protocolVersion: '2024-11-05', capabilities: {},
+        protocolVersion: '2025-11-25', capabilities: {},
         clientInfo: { name: 'codex-affinity-cli', version: '1.0.0' }
       });
       if (!result?.protocolVersion || !result?.serverInfo) fail('PROTOCOL', 'Invalid MCP initialize response');

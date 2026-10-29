@@ -39,3 +39,11 @@
 - https://sdk.affinity.studio/latest/js/
 - https://www.affinity.studio/features/scripting
 - https://claude.com/marketplace/connectors/affinity-106b90
+
+## 2026-10-29 실제 연결 추가 검증
+
+- 실제 Affinity 3.3.1.4940 Win32가 이전 MCP 프로토콜을 거부하여 초기화 버전을 2025-11-25로 수정했습니다. doctor·status 실제 연결이 통과했습니다.
+- docs 명령은 같은 연결에서 preamble을 선행 조회하도록 수정했습니다.
+- 실제 Pixora 벡터 문서 생성·색상 변경·문자 이동·spread 렌더링을 확인했습니다. UI에서 .af 저장과 PNG 내보내기를 확인했습니다.
+- 회귀 테스트 22개 통과. SDK 파일 저장·내보내기 및 포커스 비간섭은 이번에 검증하지 않았습니다.
+
