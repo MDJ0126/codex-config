@@ -1,0 +1,65 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>DataTable과 공유할 창 기반 및 Pixora 다중 창 구조 검토 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><span class="edition">작업 결과 · 버전 기록</span></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>Pixora</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>DataTable과 공유할 창 기반 및 Pixora 다중 창 구조 검토</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">두 제품의 독립 판매를 유지하면서 창 프레임과 최소화 목록을 공통화하는 구조를 제안했습니다. 코드는 통합하지 않았습니다.</p><div class="post-byline"><time datetime="2026-10-29T13:28:34.206Z">2026년 10월 29일 오후 10:28 KST</time><span>v1.0.0</span><span>검토</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>소스를 대조한 구조 검토를 완료했습니다. 개발·통합 테스트 환경은 함께 두고, 배포는 공통 창 기반·DataTable·Pixora로 나누는 방향을 권합니다. 이번 작업은 검토이며 실제 패키지 분리·다중 창 구현은 수행하지 않았습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">권장 구성</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>구성</th>
+<th>역할</th>
+<th>단독 사용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>공통 Editor 기반</td>
+<td>제목줄·이동·크기 조절·최소화 목록·복원·테마·창 등록</td>
+<td>각 제품과 함께 제공</td>
+</tr>
+<tr>
+<td>DataTable</td>
+<td>테이블 편집·검증·데이터 기능</td>
+<td>공통 기반만 있으면 실행</td>
+</tr>
+<tr>
+<td>Pixora</td>
+<td>이미지·3D·Sprite·톤 보정</td>
+<td>공통 기반만 있으면 실행</td>
+</tr>
+<tr>
+<td>선택 연동</td>
+<td>양쪽이 있을 때 Sprite·프로필 참조를 데이터와 연결</td>
+<td>두 제품 동시 설치 때만 활성</td>
+</tr>
+</tbody></table>
+</div><p>공통 기반은 같은 이름의 패키지 한 벌로 관리하고 버전을 맞춰 테스트합니다. 각 판매물에 서로 다른 공통 코드를 복사해 넣는 방식은 피하는 편이 좋습니다. 두 제품은 서로를 필수 의존성으로 두지 않습니다. Unity 패키지 매니페스트는 고유 이름·버전·의존성을 표현하므로 이 분리에 적합합니다. 실제 배포 경로와 설치 방식은 판매 채널에 맞춰 별도 검증해야 합니다. <a class="report-link" href="https://docs.unity.com/en-us/engine/6000.0/manual/packages-list/cus-pkg-development/upm-manifest-pkg">Unity 6000.0 공식 문서</a></p>
+<h3 id="section-5">Pixora 다중 창</h3>
+<p>새 창·현재 작업 복제·열린 창 목록을 제공합니다. 새 창은 초기 상태, 복제는 입력 에셋 참조를 유지하되 변환 설정은 독립 복사합니다. 창마다 고유 ID, 입력·프로필·배치 목록·카메라·재생 위치·줌·출력 위치·창 좌표를 보관합니다. 출력 경로 충돌도 구분해야 합니다. 공통 테마·표시 언어는 전역으로 공유할 수 있지만 예제 주석 언어처럼 제품별 의미가 있는 설정은 제품 소유로 둡니다.</p>
+<p>공통 최소화 목록은 같은 Unity 에디터 프로젝트에서 두 제품의 창을 함께 표시하고 제품 필터·썸네일·복원·닫기를 제공합니다. 최소화는 창을 파괴하지 않아 입력과 Undo 상태를 유지하는 방향입니다. 사용자가 앞서 요청한 본창 최소화 버튼 제외 정책은 유지할 수 있습니다. 목록 등록과 제목줄 최소화 버튼 표시는 별도 옵션으로 두면 됩니다.</p>
+<h3 id="section-6">적용 순서</h3>
+<ol>
+<li>공통 스타일·제목줄·창 등록 계약부터 분리합니다.</li>
+<li>DataTable 목록을 제품 독립적인 창 등록 구조로 바꾸되 기존 동작을 유지합니다.</li>
+<li>Pixora를 창 ID별 상태 저장으로 변경하고 새 창·복제를 추가합니다.</li>
+<li>한 제품만 설치한 환경 두 종류와 동시 설치 환경을 각각 검사합니다.</li>
+<li>마지막으로 두 제품 사이 데이터 연동을 추가합니다.</li>
+</ol>
+<h2 id="section-7">검증</h2>
+<p>현재 소스를 읽어 다음 사실을 확인했습니다. 실행·통합 테스트는 수행하지 않았습니다.</p>
+<ul>
+<li>PixoraWindow.Open은 기존 standalone 창 하나를 찾아 복원하는 방식입니다.</li>
+<li>PixoraWindowChrome.Open도 같은 타입의 기존 창을 먼저 재사용합니다.</li>
+<li>StoreStudioSession은 studioSettings·studioCapture·studioSource 등 단일 세션 값에 저장합니다. 다중 창에서는 창별 저장으로 바꿔야 합니다.</li>
+<li>PixoraWindowFrame.FindWindow는 현재 프로세스와 제목이 일치하는 Windows 창이 정확히 하나일 때만 선택합니다. 같은 제목의 다중 창에는 별도 식별이 필요합니다.</li>
+<li>WorkbookMinimizedShelf.Entry.window와 activeWindow는 WorkbookViewer 타입입니다. 공통 목록으로 재사용하려면 제품 전용 의존성을 분리해야 합니다.</li>
+<li>관련 원본: PixoraWindow.cs, PixoraWindow.Ribbon.cs, PixoraWindowChrome.cs, PixoraWindowFrame.cs, DataTable의 WorkbookMinimizedShelf.cs와 WorkbookNativeWindow.cs.</li>
+</ul>
+<h2 id="section-8">남은 사항</h2>
+<p>실제 공통 패키지 추출, Pixora 다중 창 구현, 버전 호환·독립 설치·동시 설치·도메인 리로드·에디터 재시작·닫기·복원 검증은 후속 작업입니다. 서로 다른 Unity 프로젝트/프로세스 사이의 통합 목록은 별도 IPC가 필요한 범위이며 이번 권장안은 같은 Unity 프로젝트 안의 동시 설치를 기준으로 합니다. Unity 내부 창 API·Windows 전용 처리의 타 버전/OS 호환성은 미확인입니다.</p>
+<h2 id="section-9">작업 시간</h2>
+<ul>
+<li>제안 시간: 2~4분. 코드 대조와 구조 제안·HTML 검토 보고서 작성.</li>
+<li>실제로 완료된 시간: 검토 시작 2026-10-29 22:26:18 KST. 검토·초안 생성 2026-10-29T22:28:34+09:00, 2분 15초. 공개 배포 확인은 후속 단계입니다.</li>
+<li>XERJ: 실패 — Xerj.ps1 Status에서 XERJ node is not running을 확인해 rg와 현재 소스를 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-result-20261029132834206-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-7">검증</a><a href="#section-8">남은 사항</a><a href="#section-9">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
