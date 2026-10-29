@@ -1,0 +1,25 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>DataTable 기준 공통 UI 템플릿을 두 제품에 적용 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=e36d7dae3830"><link rel="stylesheet" href="../../../assets/theme.css?v=e36d7dae3830"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">턴</span><span>턴룸 › 공통 · 통합 작업</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>DataTable 기준 공통 UI 템플릿을 두 제품에 적용</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">제목줄·탭·리본·글자·아이콘을 하나의 템플릿 에셋으로 통합했습니다. 기존 DataTable 기본 스타일 대조와 실시간 갱신 등 78개 실행 검증을 통과했으며 실제 화면 비교는 보류 상태입니다.</p><div class="post-byline"><time datetime="2026-10-29T17:29:23.353Z">2026년 10월 30일 오전 2:29 KST</time><span>v1.0.0</span><span>수정사항</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>구현·독립 컴파일·비GUI 실행 검증·프로젝트 푸시를 완료했습니다. Tools &gt; TurnRoom &gt; UI Template에서 공통 에셋을 편집하면 열린 DataTable과 Pixora 창에 반영됩니다. 실제 운영체제 창의 시각 검증은 사용자 요청에 따라 보류했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>기존 DataTable의 제목줄 34, 탭 30, 리본 91, 본문 글자 12, 리본 글자 11, 리본 아이콘 26, 빠른 실행 아이콘 18을 공통 기본값으로 지정했습니다. 서로 달랐던 Pixora 크기를 이 기준에 연결했습니다.</p>
+<p>Common에 DefaultUITemplate.asset, 공통 UI Toolkit 부품 생성 함수, IMGUI 치수 API와 변경 알림을 추가했습니다. 열린 패널은 연결 동안만 변경을 구독하며 분리 시 해제합니다. DataTable의 기존 IMGUI 엔진은 유지하고 같은 에셋을 읽도록 연결했습니다.</p>
+<p>라이트·다크 팔레트와 선택 가능한 공통 강조색을 한 곳에서 관리합니다. 강조색 덮어쓰기를 끄면 기존 제품·문서 색상을 유지합니다. 기존 창 목록·최소화·제품별 상태 계약을 유지했습니다. 문서 셀 글꼴과 제품별 콘텐츠 구성은 공통 창 템플릿의 범위와 구분합니다.</p>
+<p>README, 공통 확장 안내, Pixora 개발 문서와 9개 언어 오프라인 가이드를 갱신했습니다. 제품별 패키지는 같은 Common GUID와 기본 템플릿을 포함하도록 기존 내보내기 구조를 유지합니다.</p>
+<p><a class="report-link" href="https://github.com/MDJ0126/TurnRoom/commit/642531a5f0a344fdef748780bf053d70ba668fa2">코드 변경 커밋</a></p>
+<h2 id="section-4">검증</h2>
+<p>Unity 6000.0.83f1의 숨겨진 배치 프로젝트에서 실제 UI Toolkit Panel.ValidateLayout을 실행해 78개 검증을 통과했습니다. 검증용 스타일 초기화는 배치 환경에서만 수행했습니다.</p>
+<p>Pixora 라이트·다크의 실제 레이아웃 치수, 창 폭 960·1280·1600의 제목줄·최대화·닫기 버튼 경계, 기존 DataTable 수식줄과 그리드 시작 위치, 공통 에셋 실제 로딩을 확인했습니다.</p>
+<p>변경 전 커밋 a8b46988836e313cdda19f8cf3d6825b37bb3fce의 원본 스타일을 같은 GUISkin으로 실행했습니다. 기본/대화상자 각각 7개 스타일의 치수·간격과 8개 상태의 글자색·배경 텍스처 전체 픽셀 배열을 대조했습니다. 기본값의 일치를 확인했습니다. 운영체제 화면 픽셀 비교를 의미하지 않습니다.</p>
+<p>템플릿을 변경해 Pixora 제목줄·탭·리본·본문과 DataTable 글자·그리드 위치·보조 창 강조색이 함께 갱신되고 기본값으로 복원되는 것을 확인했습니다. 제품 전용 USS 없이 공통 부품을 구성하는 테스트와 패널 분리도 통과했습니다.</p>
+<p>각 제품과 Common만 있는 별도 프로젝트에서 단독 컴파일을 모두 통과했습니다. Pixora 9개 가이드·54개 장·54개 코드 예제의 언어 이동 검사, 개발 문서 10개 장·5개 이미지 링크 검사와 Git 공백 검사를 통과했습니다. 이번 작업에서 DataTable 전체 데이터 처리 회귀 테스트를 다시 실행하지는 않았습니다.</p>
+<p><a class="report-link" href="../assets/ui-template-verification-20261030.json">숫자와 검증 항목 JSON</a></p>
+<h2 id="section-5">남은 사항</h2>
+<p>사용자께서 화면 조작을 보류하셨으므로 실제 네이티브 창의 시각 비교, 라이트·다크의 글꼴 래스터 품질, 모든 언어의 잘림, 최소화·복원 애니메이션과 9개 언어 화면 재캡처는 미확인입니다. 기존 ScreenshotManifest의 캡처·소스 해시는 재캡처 없이 갱신하지 않았습니다. 기존 화면을 최신 검증 화면으로 표시하지 않았으며 사용자 제공 화면은 공개하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 40–70분</li>
+<li>실제로 완료된 시간: 구현·검증·프로젝트 푸시: 49분 7초. 시작 2026-10-30 01:40:14 KST, 완료 2026-10-30 02:29:22 KST. 보고서 생성·배포 확인 시간은 별도이며 최종 채팅에 전체 소요 시간을 기록합니다.</li>
+<li>XERJ: 사용 — Tools/Search/Xerj.ps1 Status와 WorkbookRibbon, WorkbookWindowTheme 검색을 실행하고 반환 후보를 현재 소스로 대조했습니다. USS와 기타 누락 범위는 rg로 확인했습니다. 자동 인덱스 갱신은 활성으로 간주하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-result-20261029172923353-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
