@@ -1,3 +1,4 @@
+import {chooseStage} from './stage-state.mjs';
 import {matchesRecord} from './filter-core.mjs';
 const buttons=[...document.querySelectorAll('[data-filter]')],projectButtons=[...document.querySelectorAll('[data-project-filter]')],groupButtons=[...document.querySelectorAll('[data-group-filter]')],stageButtons=[...document.querySelectorAll('[data-stage-filter]')],records=[...document.querySelectorAll('.record')];
 const filters={type:'전체',project:'전체',group:'all',stage:'all',query:''};
@@ -6,7 +7,7 @@ function update(){filters.query=document.querySelector('#search').value;let coun
 for(const b of buttons)b.addEventListener('click',()=>{filters.type=b.dataset.filter;select(buttons,b);update();});
 for(const b of projectButtons)b.addEventListener('click',()=>{filters.project=b.dataset.projectFilter;select(projectButtons,b);update();});
 for(const b of groupButtons)b.addEventListener('click',()=>{filters.group=b.dataset.groupFilter;filters.stage='all';filters.type='전체';select(groupButtons,b);select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter==='all'));select(buttons,buttons[0]);update();});
-for(const b of stageButtons)b.addEventListener('click',()=>{filters.stage=b.dataset.stageFilter;if(filters.stage!=='all'){filters.group='bug';filters.type='버그';select(groupButtons,groupButtons.find(x=>x.dataset.groupFilter==='bug'));select(buttons,buttons.find(x=>x.dataset.filter==='버그'));}select(stageButtons,b);update();});
+for(const b of stageButtons)b.addEventListener('click',()=>{Object.assign(filters,chooseStage(filters,b.dataset.stageFilter));select(groupButtons,groupButtons.find(x=>x.dataset.groupFilter===filters.group));select(buttons,buttons.find(x=>x.dataset.filter===filters.type));select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter===filters.stage));update();});
 document.querySelector('#search').addEventListener('input',update);
 document.querySelector('#reset-filters').addEventListener('click',()=>{Object.assign(filters,{type:'전체',project:'전체',group:'all',stage:'all',query:''});document.querySelector('#search').value='';for(const list of [buttons,projectButtons,groupButtons])select(list,list[0]);select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter==='all'));update();});
 update();
