@@ -4,7 +4,15 @@ import path from 'node:path';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Deliberately restricted Markdown: raw HTML and executable URLs are never rendered.
-function inline(s) { return esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>'); }
+function inline(s) {
+ const tokens=[];
+ s=String(s).replace(/(!?)\[([^\]]+)\]\(([^()\s]+)\)/g, (match,image,label,url)=>{
+  if(!/^(https?:\/\/|(?:\.\.\/)*(?:assets|reports|posts)\/)/i.test(url)||/[\u0000-\u0020\\]/.test(url))return match;
+  const html=image?`<img class="report-image" src="${esc(url)}" alt="${esc(label)}" loading="lazy">`:`<a class="report-link" href="${esc(url)}">${esc(label)}</a>`;
+  return `\u0000${tokens.push(html)-1}\u0000`;
+ });
+ return esc(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/\u0000(\d+)\u0000/g,(_,i)=>tokens[Number(i)]);
+}
 function markdown(s) {
   let out = '', list = false, code = false, buffer = [];
   for (const line of s.split(/\r?\n/)) {
