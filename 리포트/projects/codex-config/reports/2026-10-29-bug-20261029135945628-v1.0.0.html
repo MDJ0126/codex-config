@@ -1,0 +1,26 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Affinity CLI 사이드바 대체 로고의 가로 늘어남 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css"><link rel="stylesheet" href="../../../assets/theme.css"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>Affinity CLI 사이드바 대체 로고의 가로 늘어남 수정</h1><span class="badge" data-state="verification">해결</span></div><p class="post-summary">프로젝트 이름의 flex 확장 규칙이 대체 로고에도 적용되던 CSS를 수정하여 정사각형 표시를 유지합니다.</p><div class="detail-workflow"><span data-stage="new" class=""><img class="stage-icon" src="../../../assets/workflow/new.svg" alt="" width="40" height="40" aria-hidden="true">접수</span><i>→</i><span data-stage="review" class=""><img class="stage-icon" src="../../../assets/workflow/review.svg" alt="" width="40" height="40" aria-hidden="true">검토</span><i>→</i><span data-stage="in_progress" class=""><img class="stage-icon" src="../../../assets/workflow/in_progress.svg" alt="" width="40" height="40" aria-hidden="true">진행</span><i>→</i><span data-stage="resolved" class="current"><img class="stage-icon" src="../../../assets/workflow/resolved.svg" alt="" width="40" height="40" aria-hidden="true">해결</span><i>→</i><span data-stage="closed" class=""><img class="stage-icon" src="../../../assets/workflow/closed.svg" alt="" width="40" height="40" aria-hidden="true">종료</span></div><div class="post-byline"><time datetime="2026-10-29T13:59:45.628Z">2026년 10월 29일 오후 10:59 KST</time><span>v1.0.0</span><span>버그 추적</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>이름 텍스트만 남은 공간을 채우도록 선택자를 제한했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>Tracefolio 프로젝트 사이드바, Affinity CLI logo:null</p>
+<h3 id="section-4">재현 순서</h3>
+<p>메인 보드의 Affinity CLI 항목을 확인합니다.</p>
+<h3 id="section-5">기대 동작</h3>
+<p>대체 로고는 다른 로고와 같은 정사각형 크기로 표시되어야 합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>대체 로고 span에도 flex:1이 적용되어 가로로 늘어났습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>style.css의 .project-sidebar button span 선택자가 이름과 .project-fallback 모두에 flex:1을 적용했습니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<p>선택자를 .project-sidebar button&gt;span:not(.project-fallback)으로 제한했습니다. 로고 원본이 등록되지 않은 상태는 그대로 표시합니다.</p>
+<h2 id="section-9">검증</h2>
+<p>현재 소스에서 원인 선택자와 logo:null을 확인했습니다. 빌드·링크 검사 후 공개 브라우저에서 실제 너비와 높이를 대조합니다. 공개 화면 최종 확인은 최종 안내에 기록합니다.</p>
+<h2 id="section-10">남은 사항</h2>
+<p>Affinity CLI의 확인된 공식 프로젝트 로고는 아직 등록되지 않았습니다.</p>
+<h2 id="section-11">작업 시간</h2>
+<ul>
+<li>제안 시간: 3–5분</li>
+<li>실제로 완료된 시간: 시작 2026-10-29 22:59:24 KST. 수정·기록 시각 2026-10-29T13:59:45.553Z UTC. 공개 검증·배포 시각은 최종 안내에 기록합니다.</li>
+<li>XERJ: 미사용 — 도구 미제공으로 CSS와 프로젝트 등록 정보를 직접 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-bug-20261029135945628-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-9">검증</a><a href="#section-10">남은 사항</a><a href="#section-11">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

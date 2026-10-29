@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "bug",
+    "title": "Affinity CLI 사이드바 대체 로고의 가로 늘어남 수정",
+    "summary": "프로젝트 이름의 flex 확장 규칙이 대체 로고에도 적용되던 CSS를 수정하여 정사각형 표시를 유지합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "Tracefolio 프로젝트 사이드바, Affinity CLI logo:null",
+    "steps": "메인 보드의 Affinity CLI 항목을 확인합니다.",
+    "expected": "대체 로고는 다른 로고와 같은 정사각형 크기로 표시되어야 합니다.",
+    "actual": "대체 로고 span에도 flex:1이 적용되어 가로로 늘어났습니다.",
+    "cause": "style.css의 .project-sidebar button span 선택자가 이름과 .project-fallback 모두에 flex:1을 적용했습니다.",
+    "changes": "선택자를 .project-sidebar button>span:not(.project-fallback)으로 제한했습니다. 로고 원본이 등록되지 않은 상태는 그대로 표시합니다.",
+    "verification": "현재 소스에서 원인 선택자와 logo:null을 확인했습니다. 빌드·링크 검사 후 공개 브라우저에서 실제 너비와 높이를 대조합니다. 공개 화면 최종 확인은 최종 안내에 기록합니다.",
+    "remaining": "Affinity CLI의 확인된 공식 프로젝트 로고는 아직 등록되지 않았습니다.",
+    "outcome": "이름 텍스트만 남은 공간을 채우도록 선택자를 제한했습니다.",
+    "proposedTime": "3–5분",
+    "actualTime": "시작 2026-10-29 22:59:24 KST. 수정·기록 시각 2026-10-29T13:59:45.553Z UTC. 공개 검증·배포 시각은 최종 안내에 기록합니다.",
+    "xerjEvidence": "도구 미제공으로 CSS와 프로젝트 등록 정보를 직접 대조했습니다.",
+    "priority": "normal",
+    "severity": "minor",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  }
+}
