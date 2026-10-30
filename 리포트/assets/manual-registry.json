@@ -1,5 +1,284 @@
 [
   {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030143042176-v1.0.5.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-combat-coop-prototype-20261030143042176-v1.0.5.md",
+    "date": "2026-10-30T14:30:42.176Z",
+    "version": "v1.0.5",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "기록 2026-10-30 23:30:04 KST. 시작2026-10-30 22:20:41 KST.",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030141433043-v1.0.4.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "보병/근접/전차/좀비 실제 Windows4개 실행에서 모델/리그/크기/포탑 통과. 소총 전방1.1575m와 헬멧 상단1.975m 검증, 실제 수정 화면과 Web에서 쓰러진 보병 자세를 확인했습니다. 무텍스처 장비1메시·전차5메시로 제작했고 실패 캡처를 보존했습니다."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 Web 전투·협동 전체 시나리오 통과"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T13:34:36.470Z",
+          "summary": "전투 서버 도메인10개 실제 검사 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과.",
+              "evidence": "server/test/combat.test.ts 실제 node --test 결과",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-10-30T13:39:11.464Z",
+          "summary": "실제 PostGIS 전투 영속·롤백과 WebSocket 동기화 통과",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과.",
+              "evidence": "docs/qa/combat/postgres.json; server/test/combat-postgres.test.ts; combat-transport.test.ts 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-10-30T13:56:17.996Z",
+          "summary": "실제 모델 화면 검토 실패·축 변환 수정",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Windows 모델 로딩/크기/리그 검사는 통과했지만 실제 렌더 캡처에서 소총 세로 방향과 헬멧 부착 오류를 확인했습니다. GameObject 루트의 회전 초기화 대신 FBX 하위 모델 변환을 보존하는 컨테이너로 수정하고 무기 전방 축/헬멧 높이 검사를 추가해 재QA합니다. 이 판정을 모델 로딩 성공으로 덮지 않습니다.",
+              "evidence": "docs/qa/combat/attempt-model-01/*.png; CombatPresentation.CombatAsset; CombatRuntimeVerification",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-10-30T14:14:29.665Z",
+          "summary": "수정된 Blender 모델·축·실제 파괴 자세 확인",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "보병/근접/전차/좀비 실제 Windows4개 실행에서 모델/리그/크기/포탑 통과. 소총 전방1.1575m와 헬멧 상단1.975m 검증, 실제 수정 화면과 Web에서 쓰러진 보병 자세를 확인했습니다. 무텍스처 장비1메시·전차5메시로 제작했고 실패 캡처를 보존했습니다.",
+              "evidence": "docs/qa/combat/runtime/*.json; *.png; attempt-web-01/failed.png; art/combat-export.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-10-30T14:14:29.667Z",
+          "summary": "Web 보급·모드 통과, 포커스 사격에 따른 기대값 불일치 조사",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "실제 Web 보급/중복 거부와 군사·좀비 선택은 통과했습니다. 소총 처치 후 탄약 기대값 검사가 실패했습니다. 읽기 전용 DB에서 탄약76·적 HP0·공격 영수증4개를 확인했고, 테스트의 중앙 포커스 클릭도 좌클릭 사격 조건에 들어가는 코드를 대조했습니다. 포커스를 비공격 HUD 영역으로 옮겨 새 QA 상태에서 재검증합니다.",
+              "evidence": "docs/qa/combat/attempt-web-01; server/tools/combat-qa-probe.ts; browser-combat.ts open",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-10-30T14:30:04.026Z",
+          "summary": "포커스 위치를 옮긴 뒤 포인터가 HUD에 남아 사격하지 않은 테스트 입력 오류를 실제 탄약80/적 HP100 화면으로 확인했습",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "포커스 위치를 옮긴 뒤 포인터가 HUD에 남아 사격하지 않은 테스트 입력 오류를 실제 탄약80/적 HP100 화면으로 확인했습니다. 클릭 없이 포인터만 조준 위치로 옮겨 재QA했습니다.",
+              "evidence": "docs/qa/combat/attempt-web-02",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "step",
+          "at": "2026-10-30T14:30:04.028Z",
+          "summary": "실제 Web에서 선택 보급·모드 전환·소총 탄약/처치·전차 로켓3발 파괴·돌격대/좀비 근접 처치·아군 동행/대기/지원 사격 처",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Web에서 선택 보급·모드 전환·소총 탄약/처치·전차 로켓3발 파괴·돌격대/좀비 근접 처치·아군 동행/대기/지원 사격 처치·엔진 오류0을 확인했습니다.",
+              "evidence": "docs/qa/combat/browser/combat.json; browser/*.png",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-10-30T14:30:04.028Z",
+          "summary": "최신 Windows 실행에서 CombatTankVisual 필드 초기화의 MaterialPropertyBlock 생성 예외를",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "최신 Windows 실행에서 CombatTankVisual 필드 초기화의 MaterialPropertyBlock 생성 예외를 실제 로그로 확인했습니다. Awake로 옮기고 QA가 예외 로그도 실패 처리하도록 수정했으며 재빌드/재QA 중입니다.",
+              "evidence": "docs/qa/combat/attempt-runtime-03; .runtime/combat-qa/*-runtime.log",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/designdatatable/reports/2026-10-30-manual-ddt-context-design-20261030-20261030142605909-v1.0.1.html",
     "postPath": "projects/designdatatable/posts/2026-10-30-manual-ddt-context-design-20261030-20261030142605909-v1.0.1.md",
     "date": "2026-10-30T14:26:05.909Z",
@@ -178,6 +457,234 @@
         }
       ],
       "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030141433043-v1.0.4.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-combat-coop-prototype-20261030141433043-v1.0.4.md",
+    "date": "2026-10-30T14:14:33.043Z",
+    "version": "v1.0.4",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "진행 중이며 완료 시각 아님",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030135618431-v1.0.3.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "보병/근접/전차/좀비 실제 Windows4개 실행에서 모델/리그/크기/포탑 통과. 소총 전방1.1575m와 헬멧 상단1.975m 검증, 실제 수정 화면과 Web에서 쓰러진 보병 자세를 확인했습니다. 무텍스처 장비1메시·전차5메시로 제작했고 실패 캡처를 보존했습니다."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T13:34:36.470Z",
+          "summary": "전투 서버 도메인10개 실제 검사 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과.",
+              "evidence": "server/test/combat.test.ts 실제 node --test 결과",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-10-30T13:39:11.464Z",
+          "summary": "실제 PostGIS 전투 영속·롤백과 WebSocket 동기화 통과",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과.",
+              "evidence": "docs/qa/combat/postgres.json; server/test/combat-postgres.test.ts; combat-transport.test.ts 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-10-30T13:56:17.996Z",
+          "summary": "실제 모델 화면 검토 실패·축 변환 수정",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Windows 모델 로딩/크기/리그 검사는 통과했지만 실제 렌더 캡처에서 소총 세로 방향과 헬멧 부착 오류를 확인했습니다. GameObject 루트의 회전 초기화 대신 FBX 하위 모델 변환을 보존하는 컨테이너로 수정하고 무기 전방 축/헬멧 높이 검사를 추가해 재QA합니다. 이 판정을 모델 로딩 성공으로 덮지 않습니다.",
+              "evidence": "docs/qa/combat/attempt-model-01/*.png; CombatPresentation.CombatAsset; CombatRuntimeVerification",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-10-30T14:14:29.665Z",
+          "summary": "수정된 Blender 모델·축·실제 파괴 자세 확인",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "보병/근접/전차/좀비 실제 Windows4개 실행에서 모델/리그/크기/포탑 통과. 소총 전방1.1575m와 헬멧 상단1.975m 검증, 실제 수정 화면과 Web에서 쓰러진 보병 자세를 확인했습니다. 무텍스처 장비1메시·전차5메시로 제작했고 실패 캡처를 보존했습니다.",
+              "evidence": "docs/qa/combat/runtime/*.json; *.png; attempt-web-01/failed.png; art/combat-export.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-10-30T14:14:29.667Z",
+          "summary": "Web 보급·모드 통과, 포커스 사격에 따른 기대값 불일치 조사",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "실제 Web 보급/중복 거부와 군사·좀비 선택은 통과했습니다. 소총 처치 후 탄약 기대값 검사가 실패했습니다. 읽기 전용 DB에서 탄약76·적 HP0·공격 영수증4개를 확인했고, 테스트의 중앙 포커스 클릭도 좌클릭 사격 조건에 들어가는 코드를 대조했습니다. 포커스를 비공격 HUD 영역으로 옮겨 새 QA 상태에서 재검증합니다.",
+              "evidence": "docs/qa/combat/attempt-web-01; server/tools/combat-qa-probe.ts; browser-combat.ts open",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
     }
   },
   {
@@ -406,6 +913,198 @@
     }
   },
   {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030135618431-v1.0.3.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-combat-coop-prototype-20261030135618431-v1.0.3.md",
+    "date": "2026-10-30T13:56:18.431Z",
+    "version": "v1.0.3",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "진행 중이며 완료 시각 아님",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133911838-v1.0.2.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T13:34:36.470Z",
+          "summary": "전투 서버 도메인10개 실제 검사 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과.",
+              "evidence": "server/test/combat.test.ts 실제 node --test 결과",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-10-30T13:39:11.464Z",
+          "summary": "실제 PostGIS 전투 영속·롤백과 WebSocket 동기화 통과",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과.",
+              "evidence": "docs/qa/combat/postgres.json; server/test/combat-postgres.test.ts; combat-transport.test.ts 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-10-30T13:56:17.996Z",
+          "summary": "실제 모델 화면 검토 실패·축 변환 수정",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Windows 모델 로딩/크기/리그 검사는 통과했지만 실제 렌더 캡처에서 소총 세로 방향과 헬멧 부착 오류를 확인했습니다. GameObject 루트의 회전 초기화 대신 FBX 하위 모델 변환을 보존하는 컨테이너로 수정하고 무기 전방 축/헬멧 높이 검사를 추가해 재QA합니다. 이 판정을 모델 로딩 성공으로 덮지 않습니다.",
+              "evidence": "docs/qa/combat/attempt-model-01/*.png; CombatPresentation.CombatAsset; CombatRuntimeVerification",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030134522069-v1.0.0.html",
     "postPath": "projects/turnroom/posts/2026-10-30-manual-20261030134522069-v1.0.0.md",
     "date": "2026-10-30T13:45:22.069Z",
@@ -493,6 +1192,475 @@
         "T01",
         "T02",
         "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133911838-v1.0.2.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-combat-coop-prototype-20261030133911838-v1.0.2.md",
+    "date": "2026-10-30T13:39:11.838Z",
+    "version": "v1.0.2",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "진행 중이며 완료 시각 아님",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133437204-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T13:34:36.470Z",
+          "summary": "전투 서버 도메인10개 실제 검사 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과.",
+              "evidence": "server/test/combat.test.ts 실제 node --test 결과",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-10-30T13:39:11.464Z",
+          "summary": "실제 PostGIS 전투 영속·롤백과 WebSocket 동기화 통과",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 DB에서 동시 중복 공격1회·탄약/적 체력/지원병 소유 복원·영수증 재시작·후기 저장 실패의 SQL/메모리 롤백 통과. 기존 포함 전체48개 검사와 추가 실제 WebSocket 전투/지원·좀비 월드 격리1개 통과.",
+              "evidence": "docs/qa/combat/postgres.json; server/test/combat-postgres.test.ts; combat-transport.test.ts 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133437204-v1.0.1.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-combat-coop-prototype-20261030133437204-v1.0.1.md",
+    "date": "2026-10-30T13:34:37.204Z",
+    "version": "v1.0.1",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "진행 중이며 완료 시각 아님",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "projects/last37n/reports/2026-10-30-manual-20261030132542303-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T13:34:36.470Z",
+          "summary": "전투 서버 도메인10개 실제 검사 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "군사/좀비 분리와 유효 위치·시작점 제외, 선택 보급, 사거리/조준/건물 LOS/탄약/쿨다운/중복, 전차 장갑/로켓, 근접·피로, 무력화/복구, 안전구역·아군 소유/지원·월드 격리10개 검사 및 TypeScript 통과.",
+              "evidence": "server/test/combat.test.ts 실제 node --test 결과",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030132542303-v1.0.0.html",
+    "postPath": "projects/last37n/posts/2026-10-30-manual-20261030132542303-v1.0.0.md",
+    "date": "2026-10-30T13:25:42.303Z",
+    "version": "v1.0.0",
+    "project": "last37n",
+    "kind": "manual",
+    "manualId": "combat-coop-prototype",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "last37n",
+      "kind": "manual",
+      "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+      "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전투·협동·모델·웹 UI·QA·보고 진행 중",
+      "outcome": "진행 중",
+      "proposedTime": "90~150분. 시작2026-10-30 22:20:41 KST.",
+      "actualTime": "진행 중이며 완료 시각 아님",
+      "xerjEvidence": "XERJ 도구 미제공. rg와 현재 소스/실제 실행으로 검증합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "combat-coop-prototype",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "북한군 보병·근접 돌격대·탱크, 별도 좀비 모드, 아군 동행/대기/공격 지원을 실제 웹에서 구현·검증합니다.",
+      "completionCriteria": "서버 기준 이동/피해·탄약·쿨다운·LOS·안전구역·월드 격리·공격 영수증과 저장을 검증하고, 실제 웹에서 교전·탱크·좀비·아군 지원/명령을 실행합니다. 경량 에셋·12MiB 전송 예산·기존 회귀/부하·실제 화면 보고와 외부 배포를 확인합니다. 미정 밸런스는 provisional 설정으로 분리합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "서버 전투·세력·모드",
+          "action": "기본 전장과 좀비 월드, 보병·근접 돌격·탱크·좀비·아군 상태와 서버 권위 공격/이동을 구현합니다.",
+          "expected": "표적·거리·LOS·쿨다운·탄약·안전구역이 검증되고 모드별 적이 분리됩니다.",
+          "qa": "실제 도메인 재현과 타입 검사·전투 규칙 테스트",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "협동·영속성·프로토콜",
+          "action": "아군 동행/대기/지원과 월드 상태 저장·재시작·공격 중복 방지를 구현합니다.",
+          "expected": "아군 소유/명령·지원 공격과 DB 재시작/롤백·월드 격리가 유지됩니다.",
+          "qa": "실제 PostGIS·WebSocket과 중복/실패/복구 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Blender 경량 전투 에셋",
+          "action": "탱크·화기·근접 장비·군복/좀비 표현과 공격 애니메이션을 제작합니다.",
+          "expected": "역할과 공격/이동/파괴 상태가 구분되는 편집 가능한 원본/게임 에셋이 존재합니다.",
+          "qa": "Blender 출력·Unity 로딩과 실제 게임 화면 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "웹 전투 조작·협동 UI",
+          "action": "보급 장비, 조준/공격, 모드 선택, 동행/대기 UI와 효과를 연결합니다.",
+          "expected": "실제 웹에서 적 교전·모드 선택·아군 명령이 서버 결과대로 표시됩니다.",
+          "qa": "실제 브라우저 입력·NPC 지원·탱크/좀비 장면과 UI 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·성능·로컬 적용",
+          "action": "기존 생존/거래·멀티플레이와 전투 회귀·동시 부하·12MiB 예산을 검증하고 반영합니다.",
+          "expected": "실제 기능과 안전/저장·웹 예산이 통과하고 성능 한계가 측정됩니다.",
+          "qa": "서버 전체 검사·실제 Web/Windows·100명 및 활성 전투·압축 예산 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "최종 보고·배포",
+          "action": "실제 화면·구현/제약·시간·메뉴얼과 보고서를 기록·게시합니다.",
+          "expected": "실제 외부 보고서·완료 메뉴얼과 전체 현재 버전 QA가 확인됩니다.",
+          "qa": "공식 v2 생성·전체 링크/필터·모바일/데스크톱·배포/HTTP 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06"
       ],
       "scopeChange": "",
       "qaRuns": [],
