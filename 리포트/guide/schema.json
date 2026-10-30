@@ -29,7 +29,8 @@
     "kind": {
       "enum": [
         "result",
-        "bug"
+        "bug",
+        "discussion"
       ]
     },
     "title": {
@@ -132,6 +133,35 @@
     "xerjEvidence": {
       "type": "string",
       "maxLength": 5000
+    },
+    "topic": {
+      "enum": [
+        "qa",
+        "gap",
+        "proposal",
+        "feature"
+      ]
+    },
+    "discussionState": {
+      "enum": [
+        "open",
+        "considering",
+        "accepted",
+        "deferred",
+        "implemented"
+      ]
+    },
+    "relatedReport": {
+      "type": "string",
+      "maxLength": 5000
+    },
+    "replyTo": {
+      "type": "string",
+      "maxLength": 5000
+    },
+    "decision": {
+      "type": "string",
+      "maxLength": 5000
     }
   },
   "allOf": [
@@ -173,6 +203,24 @@
         "required": [
           "changes",
           "verification"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discussion"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "topic",
+          "discussionState"
         ]
       }
     }

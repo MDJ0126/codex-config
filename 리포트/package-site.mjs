@@ -7,7 +7,7 @@ if(path.relative(root,output)!=='.site')throw new Error('Invalid output path');
 try{if((await lstat(output)).isSymbolicLink())throw new Error('Output must not be a symlink');}catch(e){if(e.code!=='ENOENT')throw e;}
 await rm(output,{recursive:true,force:true});
 await mkdir(output,{recursive:true});
-for(const entry of ['index.html','assets','reports','guide','write'])await cp(path.join(root,entry),path.join(output,entry),{recursive:true});
+for(const entry of ['index.html','assets','reports','guide','write','discussions'])await cp(path.join(root,entry),path.join(output,entry),{recursive:true});
 const projects=JSON.parse(await (await import('node:fs/promises')).readFile(path.join(root,'projects.json'),'utf8'));
 for(const id of Object.keys(projects)){for(const entry of ['posts','reports','assets']){const from=path.join(root,'projects',id,entry);try{await cp(from,path.join(output,'projects',id,entry),{recursive:true});}catch(e){if(e.code!=='ENOENT')throw e;}}}
 await writeFile(path.join(output,'.nojekyll'),'');

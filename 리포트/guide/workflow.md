@@ -66,3 +66,18 @@ AI도 접수 저장소를 사용할 때는 GitHub 이슈 본문에 <!-- tracefol
 사이드바의 턴룸 아래 공통·통합 작업(turnroom), Pixora(pixora), Design Data Table(designdatatable)을 소항목으로 관리합니다. 상위 항목은 세 제품의 글을 합쳐 보여주며, 소항목은 해당 제품만 보여줍니다. 묶음 정의는 project-groups.json에서 관리합니다.
 
 사람은 작성 폼의 턴룸 그룹에서 소항목을 고릅니다. AI는 기존 JSON project에 해당 소항목 ID를 기록합니다. 상위 묶음 ID인 products 또는 collection:products를 보고서 project로 쓰지 않습니다. 프로젝트별 폴더·원본·이전 링크는 유지합니다. 소항목에서 결과·버그 분류와 버그 5단계를 함께 필터링할 수 있습니다.
+
+
+## QA 토론 · 개선 제안 · 새 기능 요청
+
+보고서 상세의 **토론 시작**은 프로젝트와 원본 보고서를 자동 연결합니다. **QA 토론** 메뉴에서는 프로젝트·종류·논의 상태·검색으로 글을 찾고 원본 QA와 함께 다시 읽을 수 있습니다. 작성은 사이트 폼 또는 [토론 JSON 템플릿](template-discussion.json)과 같은 create-report.mjs --input 절차를 사용합니다. GitHub에서 최종 등록해야 공개 사이트에 반영되며 로그인 전의 미리보기·초안 저장은 등록이 아닙니다.
+
+- kind: discussion, type: 토론. 결과·버그 수에는 섞지 않고 QA 토론 목록에 표시합니다.
+- topic: qa(QA 토론), gap(부족한 점), proposal(개선 제안), feature(새 기능 요청).
+- discussionState: open(논의 중), considering(검토 중), accepted(채택), deferred(보류), implemented(반영 완료).
+- relatedReport: 같은 프로젝트의 실제 HTML 경로입니다. 예: projects/프로젝트ID/reports/파일.html. qa 종류에는 필수이며 다른 제안은 독립 글로도 작성할 수 있습니다.
+- replyTo: 후속 글을 쓸 때 원본 토론의 HTML 경로를 기록합니다. 같은 프로젝트·같은 QA의 토론만 연결하며 순환 참조를 허용하지 않습니다.
+- outcome에는 관찰 사실과 논의할 질문, verification에는 QA 근거·실제 화면, changes에는 제안·대안·기대 효과, decision에는 결정 이유·담당자·후속 작업, remaining에는 열린 질문을 기록합니다. 제안과 검증된 사실을 구분합니다.
+- 채택·보류·반영 완료에는 decision이 필수이며, 반영 완료에는 verification도 필수입니다. 승인받지 않은 제안을 채택·구현 완료로 표시하지 않습니다.
+
+토론의 H2는 **토론 내용 → QA 근거와 맥락 → 제안 및 대안 → 결정과 후속 작업 → 작업 시간**입니다. JSON 원본·Markdown·생성 HTML은 기존과 같이 프로젝트별 assets/submissions, posts, reports에 보존합니다. GitHub로 등록한 글의 수정 이력은 버전별로 보존하고 목록에는 같은 이슈의 최신 글만 표시합니다. **후속 글 쓰기**는 별도 글을 남겨 결론·보류 이유·새 제안의 맥락을 이어갑니다. GitHub 댓글은 토론 글의 외부 링크에서 볼 수 있으며 사이트에 자동 복제하지 않습니다.
