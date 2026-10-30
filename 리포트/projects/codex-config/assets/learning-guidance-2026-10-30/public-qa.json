@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-30T10:18:20.701Z",
+  "checks": [
+    {
+      "file": "guide/execution.html",
+      "status": 200,
+      "contentVerified": true
+    },
+    {
+      "file": "guide/index.html",
+      "status": 200,
+      "contentVerified": true
+    },
+    {
+      "file": "guide/authoring.md",
+      "status": 200,
+      "contentVerified": true
+    },
+    {
+      "file": "projects/codex-config/assets/learning-guidance-2026-10-30/instruction-review.json",
+      "status": 200,
+      "contentVerified": true
+    }
+  ],
+  "sha256": "c56f554c3619a893f82df664b88907787bfa0f21c6469bc7c07c2f0b6cf487b0",
+  "kind": "문서·지침 공개 내용 검사; UI 기능 수정 없음"
+}
