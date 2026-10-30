@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "initialStartedAt": "2026-10-30T13:54:43+09:00",
+  "handoffAt": "2026-10-30T14:07:17.6140225+09:00",
+  "verifiedAt": "2026-10-30T14:22:19.362692+09:00",
+  "nativeCases": [
+    {
+      "id": "settings-gear",
+      "passed": true,
+      "observed": "Actual click opened and focused Pixora Setup",
+      "actualMouseInput": true
+    },
+    {
+      "id": "command-search",
+      "passed": true,
+      "observed": "Typed Korean settings query, observed filtered menu, selected settings and focused Setup",
+      "actualMouseInput": true
+    },
+    {
+      "id": "quick-new",
+      "passed": true,
+      "observed": "Actual quick button created a second Studio with a different native title and ID",
+      "actualMouseInput": true
+    },
+    {
+      "id": "quick-duplicate",
+      "passed": true,
+      "observed": "Actual quick button created a separate Studio; both retained 2D conversion",
+      "actualMouseInput": true
+    },
+    {
+      "id": "quick-save",
+      "passed": true,
+      "observed": "Actual quick button opened Save profile modal; Escape cancelled",
+      "actualMouseInput": true
+    },
+    {
+      "id": "quick-refresh",
+      "passed": true,
+      "observed": "Actual quick button refreshed visible preview without an exception",
+      "actualMouseInput": true
+    },
+    {
+      "id": "close",
+      "passed": true,
+      "observed": "Actual close control removed the created Studio; original remained",
+      "actualMouseInput": true
+    },
+    {
+      "id": "maximize-restore",
+      "passed": true,
+      "observed": "Actual clicks changed 1280x820 at80,100 to1920x1032 at0,0 and exactly back",
+      "actualMouseInput": true
+    },
+    {
+      "id": "minimize-restore",
+      "passed": true,
+      "observed": "Actual minimize hid Studio; actual common list click restored visible 1280x820 foreground Studio",
+      "actualMouseInput": true
+    },
+    {
+      "id": "theme",
+      "passed": true,
+      "observed": "Actual tab theme button toggled resolved light/dark classes and actual captures",
+      "actualMouseInput": true
+    }
+  ],
+  "panelAssertions": 108,
+  "defaultBaselineRetained": true,
+  "standaloneBuildsPassed": true,
+  "languageLayouts": 9,
+  "actualCaptureCount": 24,
+  "dataTableHistoricalDocErrors": 206,
+  "newCaptureErrors": 0,
+  "limitations": [
+    "Windows / Unity6000.0.83f1 only; other OS/high DPI unverified",
+    "VM HTML validation is not browser rendering",
+    "Existing DataTable historical capture/source mismatches are retained",
+    "Template panel result nativeScreenVerified=false retained; actual clicks and captures recorded separately"
+  ],
+  "xerj": "Status and Search DocumentChrome SettingsButton executed; index candidates used with current source and runtime evidence. Newly added file not yet indexed, supplemented by direct source read."
+}
