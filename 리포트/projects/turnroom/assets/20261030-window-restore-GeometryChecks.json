@@ -1,0 +1,23 @@
+{
+    "passed": true,
+    "completedAt": "2026-10-30T13:30:34.2581796+09:00",
+    "error": "",
+    "checks": [
+        "Disconnected monitor coordinate is unreachable",
+        "Connected second monitor is reachable",
+        "Negative-origin monitor is supported",
+        "Visible body with inaccessible title is rejected",
+        "Ten-pixel edge sliver is insufficient",
+        "Reachable 120-pixel title is preserved",
+        "Normal position is preserved",
+        "Right offscreen coordinate recovers without resize",
+        "Negative offscreen coordinates recover",
+        "Nearest second monitor target is respected",
+        "Bottom offscreen coordinate recovers",
+        "Negative-origin recovery respects work area",
+        "Oversized window keeps reachable title",
+        "Valid position is unchanged",
+        "Visible actual Studio requires no move",
+        "Actual Studio geometry remains unchanged"
+    ]
+}

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "scope": "Explicit restoration of offscreen tool windows; not a claim that historical documentation hashes are all current",
+  "startedAt": "2026-10-30T13:18:33.9332702+09:00",
+  "verifiedAt": "2026-10-30T13:33:40.429394+09:00",
+  "environment": "Windows / Unity 6000.0.83f1",
+  "initialObservedUserWindows": [
+    {
+      "title": "Pixora Studio",
+      "x": 2153,
+      "y": 161,
+      "width": 1280,
+      "height": 820
+    },
+    {
+      "title": "PinballSettings.xlsx",
+      "x": 2152,
+      "y": 90,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "title": "MiniGameBalance.xlsx",
+      "x": 2150,
+      "y": 78,
+      "width": 1600,
+      "height": 900
+    }
+  ],
+  "userRestoreAfter": {
+    "pixoraX": 640,
+    "pinballX": 320,
+    "miniGameX": 320,
+    "sizesPreserved": true,
+    "selectedForeground": true,
+    "onlySelectedWindowMoved": true
+  },
+  "actualUI": {
+    "userShelfRestoreWindows": 3,
+    "userMinimizeRestore": true,
+    "standaloneOffscreenPositiveAndNegative": true,
+    "standaloneValidSecondMonitorPreserved": true,
+    "standaloneMinimizeRestore": true
+  },
+  "geometryAssertions": 16,
+  "monitorObservation": "Initial PowerShell Screen observation exposed one 1920x1080 screen. Later native enumeration in the standalone Unity exposed two 1920x1080 monitors at x=0 and x=1920. Validation uses each process/current native work areas, not a hardcoded monitor count. The first standalone assertion incorrectly expected x=640 and was corrected after native monitor enumeration showed x=2560 was within the second work area.",
+  "documentation": {
+    "languagesPerProduct": 9,
+    "newCaptureErrors": 0,
+    "preExistingDataTableErrors": 206,
+    "pixoraVmCheckPassed": true,
+    "scope": "New capture and source hashes verified; historical general UI capture hashes retained unchanged."
+  },
+  "method": "Guarded Win32 SendInput / PrintWindow fallback; @oai/sky package was actually checked and unavailable (ERR_MODULE_NOT_FOUND).",
+  "xerj": "Actual Status and Search for RestoreToolWindow minimized shelf; returned WorkbookMinimizedShelf and bridge candidates, validated against current source."
+}
