@@ -1,0 +1,47 @@
+{
+  "unity": "6000.0.83f1",
+  "templateVersion": "1.2.0",
+  "heldShelfSelections": 36,
+  "heldDurationsMs": [
+    60,
+    140,
+    350
+  ],
+  "bodySelections": 16,
+  "negativeTests": 2,
+  "focusChecksPassed": true,
+  "windowControls": {
+    "minimized": true,
+    "passed": true,
+    "maximized": true,
+    "listRestored": true,
+    "restored": true
+  },
+  "sharedLayoutChecks": 108,
+  "consumer12": {
+    "passed": true,
+    "phase": 6
+  },
+  "metaGuids": 3409,
+  "duplicateGuids": 0,
+  "missingMetas": 0,
+  "affinity": {
+    "version": "3.3.1.4940",
+    "nativeSource": "Assets/TurnRoom/Templete/Development/Art/TurnRoom-Icons-Color.af",
+    "bytes": 650099,
+    "layerKind": "original raster atlas; not vector reconstruction",
+    "sdkEdit": "PERMISSION_DENIED; actual GUI open and native Save As used"
+  },
+  "localizedDocs": {
+    "freshEditorCaptures": 24,
+    "DDTGuideCurrentImages": 39,
+    "DDTGuideErrors": 238,
+    "affectedNewSharedChromeAndRestoreErrors": 0,
+    "completeGuideValidationPassed": false
+  },
+  "limitations": [
+    "Other operating systems and display scaling not tested",
+    "Prior unrelated guide screenshots remain stale; hashes not forged",
+    "No new Pixora Undo/Redo feature; existing artwork catalog is shared"
+  ]
+}
