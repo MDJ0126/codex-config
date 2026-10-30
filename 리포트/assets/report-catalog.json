@@ -1,5 +1,35 @@
 [
   {
+    "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+    "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-taskbar-flicker-recurrence-20261030140343997-v1.0.1.html",
+    "date": "2026-10-30T14:03:43.997Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록 선택 중 전체 창 깜박임 재발 경로 수정",
+    "summary": "기존 공개 접관·교차 포커스 보고를 대조해 클릭 전 취소와 순차 재정렬을 수정했습니다. 실제 깜박임 제거는 검증 중입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-bug-20261030140342741-v1.0.0.html",
+    "date": "2026-10-30T14:03:42.741Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+    "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030134522069-v1.0.0.html",
+    "date": "2026-10-30T13:45:22.069Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora 기본 강조색 블랙 적용",
     "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
     "project": "pixora",

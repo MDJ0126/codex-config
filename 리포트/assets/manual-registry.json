@@ -1,5 +1,230 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-taskbar-flicker-recurrence-20261030140343997-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-10-30-manual-taskbar-flicker-recurrence-20261030140343997-v1.0.1.md",
+    "date": "2026-10-30T14:03:43.997Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "taskbar-flicker-recurrence",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+      "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자 화면 제어 보류가 유지됩니다. 실제 목록/오버플로/썸네일 클릭, 양방향 교차 선택, 비선택 창 SHOW/HIDE와 중간 프레임·미저장 문서 유지 검증이 남았습니다. 새로운 실제 화면을 캡처하지 않았으며 과거 화면으로 최종 결과를 대신하지 않았습니다. 기존 해결 보고는 덮어쓰지 않고 이번 재발 보고를 검증 중으로 남깁니다.",
+      "outcome": "클릭 전 미리보기 접관, 중복 활성화 감소, 공통 배치 재정렬 구현. 기존 검사 포함198개 무창 검사 통과. 전체 시각 검증은 미완료.",
+      "proposedTime": "15~30분",
+      "actualTime": "28.9분 · 구현/무창 회귀 및3cfedb3e 푸시 확인 2026-10-30 23:03:33 KST. 최종 네이티브/화면 검증은 사용자 제어 보류로 미완료.",
+      "xerjEvidence": "XERJ RestoreFocus 검색 후 현재 공통/호스트 소스와 공개 버그 기록을 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "taskbar-flicker-recurrence",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "목록 선택 중 불필요한 숨김/표시와 순차 전체 창 재정렬을 제거한다.",
+      "completionCriteria": "과거 공개 보고서·현재 코드·회귀 결과 대조, 선택한 창과 다른 창 상태 보존, 실제 네이티브/화면 검증은 제어 재개 후 수행.",
+      "previousManual": "projects/turnroom/reports/2026-10-30-manual-20261030134522069-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "기존 재발 기록 대조",
+          "action": "이전 접관 안정성과 교차 선택 버그를 현재 경로와 비교한다.",
+          "expected": "이미 수정한 경로와 재발 우회 경로 구분",
+          "qa": "공개 HTML 및 실제 소스/읽기 전용 이벤트 관찰",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 이전 보고·현재 경로 대조 및198개 무창 회귀 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "공통 선택과 접관 수정",
+          "action": "미리보기 클릭 취소 순서와 공통 창 재정렬을 수정한다.",
+          "expected": "취소 후 재표시와 순차 중간 화면 감소",
+          "qa": "가짜 lease·선택 정책·원래 창 순서/최소화 회귀",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 이전 보고·현재 경로 대조 및198개 무창 회귀 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증과 보고",
+          "action": "무창 회귀 및 패키지/보고서를 검증한다.",
+          "expected": "실행한 범위와 미검증 네이티브 상태 구분",
+          "qa": "컴파일/회귀·실제 화면은 사용자 제어 재개 후 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "컴퓨터 제어 중단 지시가 유지돼 실제 네이티브 클릭·중간 프레임 검증을 수행하지 않았습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "regression",
+          "at": "2026-10-30T23:03:33.287852+09:00",
+          "summary": "과거 기록/현재 경로 대조와198개 회귀; 네이티브 시각 검증 보류",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 이전 보고·현재 경로 대조 및198개 무창 회귀 통과.",
+              "evidence": "Artifacts/FlickerRecurrence; 이전 공개 보고서 HTTP200",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 이전 보고·현재 경로 대조 및198개 무창 회귀 통과.",
+              "evidence": "Artifacts/FlickerRecurrence; 이전 공개 보고서 HTTP200",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "컴퓨터 제어 중단 지시가 유지돼 실제 네이티브 클릭·중간 프레임 검증을 수행하지 않았습니다.",
+              "evidence": "Artifacts/FlickerRecurrence; 이전 공개 보고서 HTTP200",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030134522069-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-10-30-manual-20261030134522069-v1.0.0.md",
+    "date": "2026-10-30T13:45:22.069Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "taskbar-flicker-recurrence",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+      "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "과거 접관 보고와 교차 포커스 보고의 공개 HTML 확인, 현재 클릭 전 취소·순차 재정렬 경로 확인.",
+      "proposedTime": "15~30분",
+      "actualTime": "2026-10-30 22:34:41 KST 시작 · 진행 중",
+      "xerjEvidence": "XERJ RestoreFocus 검색 후 현재 공통/호스트 소스와 공개 버그 기록을 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "taskbar-flicker-recurrence",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "목록 선택 중 불필요한 숨김/표시와 순차 전체 창 재정렬을 제거한다.",
+      "completionCriteria": "과거 공개 보고서·현재 코드·회귀 결과 대조, 선택한 창과 다른 창 상태 보존, 실제 네이티브/화면 검증은 제어 재개 후 수행.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "기존 재발 기록 대조",
+          "action": "이전 접관 안정성과 교차 선택 버그를 현재 경로와 비교한다.",
+          "expected": "이미 수정한 경로와 재발 우회 경로 구분",
+          "qa": "공개 HTML 및 실제 소스/읽기 전용 이벤트 관찰",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "공통 선택과 접관 수정",
+          "action": "미리보기 클릭 취소 순서와 공통 창 재정렬을 수정한다.",
+          "expected": "취소 후 재표시와 순차 중간 화면 감소",
+          "qa": "가짜 lease·선택 정책·원래 창 순서/최소화 회귀",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증과 보고",
+          "action": "무창 회귀 및 패키지/보고서를 검증한다.",
+          "expected": "실행한 범위와 미검증 네이티브 상태 구분",
+          "qa": "컴파일/회귀·실제 화면은 사용자 제어 재개 후 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/pixora/reports/2026-10-30-manual-pixora-black-accent-20261030132417600-v1.0.2.html",
     "postPath": "projects/pixora/posts/2026-10-30-manual-pixora-black-accent-20261030132417600-v1.0.2.md",
     "date": "2026-10-30T13:24:17.600Z",
