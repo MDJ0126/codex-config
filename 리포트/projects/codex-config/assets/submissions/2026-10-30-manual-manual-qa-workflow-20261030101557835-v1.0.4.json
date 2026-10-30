@@ -1,0 +1,494 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "작업 메뉴얼 기반 순차 실행·반복 QA 도입",
+    "summary": "이번 사이트 작업을10개 순서로 진행합니다. 전체 요구사항을 보존하고 작업별 QA·수정·최종 검증을 통해 완료합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "T12 커밋·푸시·공개 가이드 확인이 남았습니다.",
+    "outcome": "검증된 교훈을 작업마다 축적하고 중복 지침을 통합하는 규칙을 추가합니다.",
+    "proposedTime": "이번 후속 작업5~10분",
+    "actualTime": "후속 시작2026-10-30 19:13:33 KST · 진행 중",
+    "xerjEvidence": "지침·문서 수정으로 코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "manual-qa-workflow",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "앞으로 모든 프로젝트가 작업 시작 메뉴얼·순차 실행·반복 QA·최종 근거를 같은 사이트와 계약으로 관리하도록 만듭니다.",
+    "completionCriteria": "작성 폼·보드·프로젝트 계획·CLI·전역 지침을 적용하고 필수 검사 및 실제 공개 화면을 확인합니다. 모든 작업과 현재 수정 버전 전체 최종 QA가 통과해야 합니다.",
+    "previousManual": "projects/codex-config/reports/2026-10-30-manual-manual-qa-workflow-20261030101512347-v1.0.3.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "요구사항·현재 계약 확인",
+        "action": "기존 보고서·토론 계약과 전역 지침을 대조하고 요청 범위를 고정합니다.",
+        "expected": "최초30 이하·후속 소수·순차 실행·QA 반복·사이트·전역 지침 범위가 명시됩니다.",
+        "qa": "현재 소스·가이드·설치 지침 해시와 공식 지침 적용 문서를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "현재 구조와 동일한 전역 지침 해시·공식 AGENTS 적용 문서를 확인했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "메뉴얼 검증 계약 구현",
+        "action": "작업 순서·의존관계·수정 버전·QA 이력과 완료 차단 규칙을 구현합니다.",
+        "expected": "31개 최초 계획·6개 후속 선택·미검증 완료·실패 이력 삭제가 거부됩니다.",
+        "qa": "의미 있는 반례와 정상 완료·전체 최종 QA를 단위 검사합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "수정 버전 계약·최신 부모 차단·의존성 무효화 반례가 통과했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "생성·갱신·회차 CLI",
+        "action": "공통 JSON으로 메뉴얼을 생성하고 새 버전·후속 회차를 보존하는 CLI를 구성합니다.",
+        "expected": "이전 원본과 실패 이력이 보존되며 최신 버전에서 갱신됩니다.",
+        "qa": "격리 저장소에서 생성·갱신·이력 삭제 거부·남은 작업 보존을 실행합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "격리 fixture에 초기 폴더를 생성하고 CLI 생성·갱신·낡은 부모 차단·GitHub2회 접수·원본 보존을 실제 검증했습니다."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "사람·AI 공통 작성 폼",
+        "action": "작업 추가·QA 입력·이전 메뉴얼 불러오기·후속 선택 양식을 만듭니다.",
+        "expected": "사람과 AI가 동일 JSON·검사를 사용하고 작성 중 내용을 복원합니다.",
+        "qa": "실제 브라우저에서 초기 작성·30개 한도·작업 순서·QA 근거 필수를 확인합니다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 Chrome에서 신규 입력·기존 버전·후속5개·전체10개 보존·초안복원·QA근거필수·30개상한을 확인했습니다."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "메뉴얼 보드와 연결 화면",
+        "action": "프로젝트별 진행·다음 작업·전체 작업·이번 회차·QA 이력을 보여줍니다.",
+        "expected": "보고서·QA 토론·메뉴얼의 역할과 왕복 링크가 구분됩니다.",
+        "qa": "데스크톱·390px 화면·필터·글 연결·반복 이력을 브라우저에서 확인합니다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "프로젝트9개 필터·상태·빈 검색·연결·390px·라이트/다크·공통H2앵커를 검증했습니다."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "기존 토론의 프로젝트 시작 계획",
+        "action": "12개 토론을 근거로 각 프로젝트의 필요한 시작 작업만 계획합니다.",
+        "expected": "프로젝트별 계획은 준비 상태이며 실행하지 않은 QA는0건입니다.",
+        "qa": "토론 연결·작업 수·의존 순서·임의 완료/채택 없음·중복 계획 여부를 대조합니다.",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "기존12개 토론을9개 준비 메뉴얼로 연결했습니다. 작업은3~5개, 전부pending·qaRuns0입니다."
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "가이드와 전역 지침 적용",
+        "action": "작업 시작·순차 실행·실패 수정·소수 후속·최종 QA 규칙을 문서와 AGENTS에 반영합니다.",
+        "expected": "설치된 전역 지침과 저장소가 일치하고 가이드가 같은 규칙을 설명합니다.",
+        "qa": "설치본·저장소 해시와 diff·Sync.ps1 실행 결과·생성된 가이드의 링크를 확인합니다. 공개 링크는 T09에서 재확인합니다.",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "설치 AGENTS와 저장소 해시 일치 및 Sync Push 성공을 확인했습니다. 가이드 링크도 통과했습니다."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "통합·회귀·브라우저 QA",
+        "action": "전체 변경을 실행 검증하고 실패를 수정한 뒤 해당 QA와 회귀를 다시 수행합니다.",
+        "expected": "필수 검사와 실제 화면 확인이 통과하며 실패 기록도 보존됩니다.",
+        "qa": "단위·격리 접수·HTML/링크·이전 기록 해시·브라우저 검사를 실행합니다.",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "단위37개·브라우저39개·336개HTML원본·12307로컬링크·이전230원문/4211첨부 해시 검사가 통과했습니다."
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "첫 공개 배포 검증",
+        "action": "메뉴얼·폼·계획·가이드를 커밋·푸시하고 Pages 기능을 확인합니다.",
+        "expected": "Actions 배포와 외부 사이트에서 실제 작성·조회가 확인됩니다.",
+        "qa": "공개 메뉴얼·폼·보고서·토론 연결·압축 이미지 해시를 대조합니다.",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "충돌 생성파일을 양쪽 원본에서 재빌드해 LAST37N 보고서를 보존하고 첫배포의 공개 조회·폼 입력을 확인했습니다."
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "title": "최종 QA·완료 버전",
+        "action": "남은 작업을 확인하고 전체 현재 수정 버전의 최종 QA와 완료 기록을 남깁니다.",
+        "expected": "모든 작업에 결과·QA 근거가 있고 전체 최종 QA가 통과합니다.",
+        "qa": "완료 전 반례 거부와 현재 작업10개의 최종 QA 결과를 확인하고 완료 버전을 게시합니다.",
+        "dependsOn": [
+          "T09"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "전체 현재 버전의 단위·격리 접수·링크·보존 해시·브라우저 회귀 QA를 재실행하고 후속 회차1개 선택·전체10개 보존을 확인했습니다. 완료 버전을 생성해 게시합니다."
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "title": "검증된 교훈 반영·중복 통합 지침",
+        "action": "기존 전역 지침을 비교해 검증된 공통 교훈 반영 기준과 중복 통합·사용자 조건 보존 규칙을 추가합니다.",
+        "expected": "매 작업 후 교훈 검토·전역/프로젝트 범위 구분·중복 통합·기존 사용자 지시 보존이 명시됩니다.",
+        "qa": "변경 전후 지침을 대조해 조건·예외 누락이 없는지, 동일 문장 중복과 문서 분량을 확인합니다.",
+        "dependsOn": [
+          "T10"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "공통 교훈의 전역 반영·기존 전체 지침과 의미 대조·중복 통합·사용자 조건 보존 규칙을 추가하고 기존 지침 모든 문장 보존·동일 문장 중복0개를 확인했습니다."
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "title": "가이드·전역 설치본 동기화와 게시",
+        "action": "가이드와 설치 AGENTS에 반영하고 문서·링크·동기화를 확인한 뒤 승인된 저장소에 푸시·게시합니다.",
+        "expected": "전역 설치본/저장소 해시가 같고 공개 가이드·결과 보고가 열립니다.",
+        "qa": "Sync.ps1 Push·해시·빌드·로컬 링크 검사·GitHub Actions와 공개 URL을 확인합니다.",
+        "dependsOn": [
+          "T11"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T11",
+      "T12"
+    ],
+    "scopeChange": "사용자의 새 요청으로 검증된 교훈의 전역 반영·중복 통합 절차를 두 작업으로 추가합니다. 완료된10개와 기존 QA는 그대로 보존합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T09:20:25.652Z",
+        "summary": "현재 구조·요구 범위 검토 결과 기록",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 구조와 동일한 전역 지침 해시·공식 AGENTS 적용 문서를 확인했습니다.",
+            "evidence": "현재 파일과 설치 AGENTS SHA256 일치·공식 AGENTS.md 문서 직접 확인",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-30T09:20:25.652Z",
+        "summary": "최초 계약 검사: 5개 중4개 통과·1개 실패",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "테스트가 Markdown 표의 ---를 front matter 종료로 오인해 QA 반복 기록 이후를 읽지 못했습니다.",
+            "evidence": "node --test 리포트/tests/manual.test.mjs 첫 실행 출력: Missing/out-of-order section QA 반복 기록",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-10-30T09:20:25.652Z",
+        "summary": "검사기 구분자 해석 수정 후 계약 검사5/5 통과",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "front matter만 정규식으로 분리해 실제 전체 본문을 검사하도록 고친 뒤5개 검사가 통과했습니다.",
+            "evidence": "node --test 리포트/tests/manual.test.mjs 재실행: tests5 pass5 fail0",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-10-30T09:37:30.180Z",
+        "summary": "격리 접수 검사 최초 실행의 실패 기록을 보존합니다. 이 시각은 결과 기록 시각입니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "격리 테스트 준비에서 projects 폴더를 만들지 않아 ENOENT scandir projects가 발생했습니다. 제품 코드의 성공으로 기록하지 않았습니다.",
+            "evidence": "node --test 리포트/tests/manual-intake.test.mjs 최초 실행 출력: tests1 fail1 ENOENT projects",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "regression",
+        "at": "2026-10-30T09:37:30.180Z",
+        "summary": "수정 후 계약·CLI·폼·사이트·전역지침·첫 배포를 재검증했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "수정 버전 계약·최신 부모 차단·의존성 무효화 반례가 통과했습니다.",
+            "evidence": "node --test 리포트/tests/*.test.mjs:37/37 pass; manual.test.mjs 6개 계약 검사",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "격리 fixture에 초기 폴더를 생성하고 CLI 생성·갱신·낡은 부모 차단·GitHub2회 접수·원본 보존을 실제 검증했습니다.",
+            "evidence": "manual-intake.test.mjs 재실행1/1 및 전체37/37 pass; 실제 이전 Markdown 동일 바이트 대조",
+            "dependencies": {
+              "T02": 2
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Chrome에서 신규 입력·기존 버전·후속5개·전체10개 보존·초안복원·QA근거필수·30개상한을 확인했습니다.",
+            "evidence": "assets/manual-workflow-2026-10-30/browser-qa.json:39checks errors0",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "프로젝트9개 필터·상태·빈 검색·연결·390px·라이트/다크·공통H2앵커를 검증했습니다.",
+            "evidence": "browser-qa.json:39checks; public-first-qa.json:14checks",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존12개 토론을9개 준비 메뉴얼로 연결했습니다. 작업은3~5개, 전부pending·qaRuns0입니다.",
+            "evidence": "프로젝트별 JSON·원본 토론 연결 공통 검사 및 browser-qa.json 준비9개 표시",
+            "dependencies": {
+              "T05": 1
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "설치 AGENTS와 저장소 해시 일치 및 Sync Push 성공을 확인했습니다. 가이드 링크도 통과했습니다.",
+            "evidence": "SHA256 B60976B1E63B7BB4843B4A855008A7C49E16E5BCE338CCBA99EA35BC0D90622F; Sync.ps1 Push success 7a9deea; public-first-qa.json",
+            "dependencies": {
+              "T06": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "단위37개·브라우저39개·336개HTML원본·12307로컬링크·이전230원문/4211첨부 해시 검사가 통과했습니다.",
+            "evidence": "node --test:37/37; verify.mjs; verify-migration.mjs; verify-editorial.mjs; browser-qa.json",
+            "dependencies": {
+              "T07": 2
+            }
+          },
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "충돌 생성파일을 양쪽 원본에서 재빌드해 LAST37N 보고서를 보존하고 첫배포의 공개 조회·폼 입력을 확인했습니다.",
+            "evidence": "GitHub Actions41034433333 success(7a9deea); public-first-qa.json 14checks errors0",
+            "dependencies": {
+              "T08": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "final",
+        "at": "2026-10-30T09:40:05.955Z",
+        "summary": "전체10개 현재 작업 버전 최종 QA. 후속 회차는 T10 한 개만 선택하고 전체 작업과 실패2건은 보존합니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 구조와 동일한 전역 지침 해시·공식 AGENTS 적용 문서를 확인했습니다.",
+            "evidence": "현재 파일과 설치 AGENTS SHA256 일치·공식 AGENTS.md 문서 직접 확인",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "수정 버전 계약·최신 부모 차단·의존성 무효화 반례가 통과했습니다.",
+            "evidence": "node --test 리포트/tests/*.test.mjs:37/37 pass; manual.test.mjs 6개 계약 검사",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "격리 fixture에 초기 폴더를 생성하고 CLI 생성·갱신·낡은 부모 차단·GitHub2회 접수·원본 보존을 실제 검증했습니다.",
+            "evidence": "manual-intake.test.mjs 재실행1/1 및 전체37/37 pass; 실제 이전 Markdown 동일 바이트 대조",
+            "dependencies": {
+              "T02": 2
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Chrome에서 신규 입력·기존 버전·후속5개·전체10개 보존·초안복원·QA근거필수·30개상한을 확인했습니다.",
+            "evidence": "assets/manual-workflow-2026-10-30/browser-qa.json:39checks errors0",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "프로젝트9개 필터·상태·빈 검색·연결·390px·라이트/다크·공통H2앵커를 검증했습니다.",
+            "evidence": "browser-qa.json:39checks; public-first-qa.json:14checks",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존12개 토론을9개 준비 메뉴얼로 연결했습니다. 작업은3~5개, 전부pending·qaRuns0입니다.",
+            "evidence": "프로젝트별 JSON·원본 토론 연결 공통 검사 및 browser-qa.json 준비9개 표시",
+            "dependencies": {
+              "T05": 1
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "설치 AGENTS와 저장소 해시 일치 및 Sync Push 성공을 확인했습니다. 가이드 링크도 통과했습니다.",
+            "evidence": "SHA256 B60976B1E63B7BB4843B4A855008A7C49E16E5BCE338CCBA99EA35BC0D90622F; Sync.ps1 Push success 7a9deea; public-first-qa.json",
+            "dependencies": {
+              "T06": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "단위37개·브라우저39개·336개HTML원본·12307로컬링크·이전230원문/4211첨부 해시 검사가 통과했습니다.",
+            "evidence": "node --test:37/37; verify.mjs; verify-migration.mjs; verify-editorial.mjs; browser-qa.json",
+            "dependencies": {
+              "T07": 2
+            }
+          },
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "충돌 생성파일을 양쪽 원본에서 재빌드해 LAST37N 보고서를 보존하고 첫배포의 공개 조회·폼 입력을 확인했습니다.",
+            "evidence": "GitHub Actions41034433333 success(7a9deea); public-first-qa.json 14checks errors0",
+            "dependencies": {
+              "T08": 1
+            }
+          },
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "전체 현재 버전의 단위·격리 접수·링크·보존 해시·브라우저 회귀 QA를 재실행하고 후속 회차1개 선택·전체10개 보존을 확인했습니다. 완료 버전을 생성해 게시합니다.",
+            "evidence": "전체37개 단위/격리 검사 통과·브라우저39checks errors0·verify 링크/해시 통과·첫공개14checks errors0",
+            "dependencies": {
+              "T09": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-10-30T10:15:57.675Z",
+        "summary": "교훈 반영 규칙과 기존 조건 보존 검사",
+        "results": [
+          {
+            "taskId": "T11",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공통 교훈의 전역 반영·기존 전체 지침과 의미 대조·중복 통합·사용자 조건 보존 규칙을 추가하고 기존 지침 모든 문장 보존·동일 문장 중복0개를 확인했습니다.",
+            "evidence": "assets/learning-guidance-2026-10-30/instruction-review.json; 기존 모든 비어있지 않은 줄 보존·정규화 중복0·설치본/저장소 해시 일치",
+            "dependencies": {
+              "T10": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
