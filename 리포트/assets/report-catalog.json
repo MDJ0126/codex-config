@@ -1,5 +1,115 @@
 [
   {
+    "title": "성문 복합 부재 중복과 거리 간판 벽 투과 수정",
+    "summary": "실제 게임 캡처에서 성문 주변 부재가 창문 상자로 생성되어 문루를 가리고 간판이 건물 벽 너머 보이는 문제를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030200231800-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.800Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WebGL 월드 ID 입력이 단축키로 처리되는 문제 수정",
+    "summary": "실제 브라우저에서 입력한 월드 대신 기본 suwon-2에 접속하고 배낭이 열린 현상을 확인했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030200231591-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.591Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시·반파/화재 적용 및 실제 서버 테스트",
+    "summary": "실제 OSM 수원 윤곽을 보존하고 성문·행궁/거리 표현과 월드별 허구의 피해를 추가했습니다. 로컬 게임 적용·89개 서버 검사·100명90초·실제 두 브라우저를 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030200231363-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.363Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030200119444-v1.0.7.html",
+    "date": "2026-10-30T20:01:19.444Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030195747833-v1.0.6.html",
+    "date": "2026-10-30T19:57:47.833Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030194947621-v1.0.5.html",
+    "date": "2026-10-30T19:49:47.621Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030194020268-v1.0.4.html",
+    "date": "2026-10-30T19:40:20.268Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030193450000-v1.0.3.html",
+    "date": "2026-10-30T19:34:50.000Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030192418327-v1.0.2.html",
+    "date": "2026-10-30T19:24:18.327Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030191930382-v1.0.1.html",
+    "date": "2026-10-30T19:19:30.382Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030191728675-v1.0.0.html",
+    "date": "2026-10-30T19:17:28.675Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "수원 TPS 확장 · 최종 검증과 배포 완료 확인",
     "summary": "피난민 구조·생존·한국어 이름/말풍선, 필수 장비12종과 이동/무기 행동10클립의 구현·적용·실제 검증 및 외부 보고서/완료 메뉴얼 반영을 확인했습니다.",
     "project": "last37n",
