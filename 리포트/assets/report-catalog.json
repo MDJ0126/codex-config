@@ -1,5 +1,45 @@
 [
   {
+    "title": "공통 입력 행 정렬 수정 · 실행 메뉴얼",
+    "summary": "벡터 축·자산 선택·숫자·슬라이더의 실제 배치를 대조해 모체에서 정렬합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-field-row-alignment-20261030114700183-v1.0.1.html",
+    "date": "2026-10-30T11:47:00.183Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DataTable 원본 컨트롤을 공통 모체로 이동·대조",
+    "summary": "체크박스와 색상 필드의 기존 그리기 코드를 공통 모체에 위임했습니다. 제품의 기존 입력 처리와 업무 로직은 유지했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030114630534-v1.0.0.html",
+    "date": "2026-10-30T11:46:30.534Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 3D 입력 정렬과 다국어 실행 화면 갱신",
+    "summary": "제품별 중복 크기 규칙을 제거하고 공통 필드·선택기 스타일을 적용했습니다. 9개 언어 가이드에 3D 실제 화면을 추가했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-10-30-result-20261030114630378-v1.0.0.html",
+    "date": "2026-10-30T11:46:30.378Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 입력 행과 내부 선택기 디자인 수정",
+    "summary": "26px 행과 라벨 중심을 모체에서 맞추고 체크박스·자산 선택기·스포이트를 공통 디자인으로 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-bug-20261030114630223-v1.0.0.html",
+    "date": "2026-10-30T11:46:30.223Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "개발 중간 보고 1 · 실제 수원 TPS·DB·멀티플레이와 Web 기동",
     "summary": "PostGIS 저장·실제 수원 지형·Windows 생존/NPC·3클라이언트 복구·Web 기동을 검증했습니다. 브라우저 입력 및 지속 부하 검증은 진행 중입니다.",
     "project": "last37n",
@@ -166,6 +206,16 @@
     "reportPath": "projects/codex-config/reports/2026-10-30-result-20261030094704960-v1.0.0.html",
     "date": "2026-10-30T09:47:04.960Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 입력 행 정렬 수정 · 실행 메뉴얼",
+    "summary": "벡터 축·자산 선택·숫자·슬라이더의 실제 배치를 대조해 모체에서 정렬합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030094631537-v1.0.0.html",
+    "date": "2026-10-30T09:46:31.537Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
