@@ -1,0 +1,51 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>6시간 경량화3차: 동일100명 장면19→53FPS와 반복 전환 재질 누적 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/theme.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/discussions.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/manuals.css?v=7522138be84f"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">L</span><span>LAST37N · 수원 생존 샌드박스</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>6시간 경량화3차: 동일100명 장면19→53FPS와 반복 전환 재질 누적 수정</h1><span class="badge" data-state="progress">진행 중</span></div><p class="post-summary">기존 캐릭터를 유지한 재질 묶음·거리LOD와 WebAssembly 설정을 실제100명 장면에서 비교했습니다.</p><div class="post-byline"><time datetime="2026-10-30T23:39:25.329Z">2026년 10월 31일 오전 8:39 KST</time><span>v1.0.0</span><span>작업 결과</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>전체8단계 중5단계 검증 완료 상태에서6단계 런타임/장시간 회귀를 진행하고 있습니다. 기본 게임에는 아직 최종 후보를 적용하지 않았습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>같은100개 신원/좌표, 같은 카메라/1440x900,9개 비활성 군사 유닛·3개 대기 구조대상과 시간 조건을 고정한 뒤 원본/개선 후보를 연속 측정했습니다. 실제 Unity 웹 관찰자1개와99개 WebSocket 피어이며100개 Unity 클라이언트 실행과 구분합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>측정</th>
+<th align="right">원본 후보</th>
+<th align="right">개선 후보</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3회10초 평균 브라우저 rAF FPS</td>
+<td align="right">19.35</td>
+<td align="right">52.99</td>
+</tr>
+<tr>
+<td>프레임당 WebGL 호출</td>
+<td align="right">7236</td>
+<td align="right">약1776</td>
+</tr>
+<tr>
+<td>Unity3초 렌더 표본 FPS</td>
+<td align="right">19.26</td>
+<td align="right">53.07</td>
+</tr>
+<tr>
+<td>Unity 추적 할당</td>
+<td align="right">114.7MB</td>
+<td align="right">81.6MB</td>
+</tr>
+</tbody></table>
+</div><p><figure><img class="report-image" src="../assets/2026-10-31-lightweight-p3-crowd.webp" alt="실제 개선 Web 후보의100명 접속 장면" loading="lazy"><figcaption>실제 개선 Web 후보의100명 접속 장면</figcaption></figure></p>
+<p>기존 캐릭터/뼈대/근거리 장비와14개 애니메이션을 유지했습니다. 단색 재질을 런타임 팔레트로 묶고 먼 캐릭터에는 같은 원본에서 Blender로 파생한 메시를 사용합니다. 근거리 원본 복귀와 히스테리시스가 있으며 화면 밖 애니메이션·먼 그림자·보조광·중복 처리 비용을 줄였습니다. 이름표와 말풍선은 가까운 사람/대화를 우선해 개수를 제한하며 원격 플레이어 자체와 채팅 기록은 유지합니다.</p>
+<p>현대 브라우저용 WebAssembly2023 기능을 확인하고 적용했습니다. 실제 Edge156/ANGLE D3D11/GTX970에서 검증한 표본이며 모바일·밀집 전투 성능 보장은 아닙니다. Unity 공식 기능/호환 안내: <a class="report-link" href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerSettings.WebGL-wasm2023.html">https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerSettings.WebGL-wasm2023.html</a> .</p>
+<p>현재 수정 후보는 초기6746062/실제 패키지6747936bytes로 출발 기준과 마지막 적용 상한 이하입니다. 캐릭터 원본FBX는 보존했으며 새로운 대형 필수 다운로드를 추가하지 않았습니다.</p>
+<h2 id="section-4">검증</h2>
+<p>고정 비교의 실제 좌표/신원 일치와 각3개10초 표본, 실제GPU 문자열, Unity 할당량을 JSON으로 보존했습니다. 이전 표본은 구조 이벤트 만료 시간이 달라질 수 있어 탐색 기록으로 유지하고 최종 비교는 고정 조건에서 다시 실행했습니다.14클립1852704정점의 팔레트 변형 오차0, 재질구간14→5, 거리LOD의252개 실루엣 비교 최저0.981441/평균0.990232·근거리복귀·메시캐시10개 상한을 통과했습니다. 최초 실루엣 검사는 원본 전체를 담지 못한 투영 오류를 발견해 동일 전체 bounds로 교정했고 실패 기록과0.9 판정 기준은 유지했습니다.</p>
+<p>첫 실제10분 반복 전환은99회 월드 전환/100개 표본에서 재질843→1293개로 증가해 실패했습니다. 메시1295개는 유지됐습니다. 해당 청크의 수역 영역5개마다 새 재질을 만들던 소스와 실행량을 확인했고 색별 공유/소유 재질 정리를 구현했습니다. 실제 Unity1002호출에서 서로 다른 두 색의 재질2개만 생성되는 검사를 통과했습니다. 수정 후보의 동일10분 재시험은 현재 진행 중이며 아직 통과로 보고하지 않습니다.</p>
+<p>빌드 전후 코드·원본 자산 핑거프린트를 대조하는 입력 변경 차단도 실제 후보에서 통과했습니다. 편집기 자동 메타/씬 저장은 별도 범위입니다. 근거 docs/qa/lightweight/crowd-control-*, character-palette.json, character-lod-verification.json, runtime-soak/result.json, geographic-materials.json, runtime-build-inputs.json.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>반복 전환 재질 누적 수정의 전체10분 재검증, 현재 후보의 모든 행동/장비/채팅 회귀, 실제 기본 게임 적용과 최종 보고가 남았습니다. 제안6시간 범위 안에서 계속 진행합니다. 교훈: 재질 소유/공유와 실루엣 프레이밍은 검증된 프로젝트별 근거로 남기며 일반 규칙은 기존 전역 지침과 중복 여부를 검토 중입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 6시간 예산. 시작2026-10-31 05:16:01 KST·종료 예산11:16:01 KST.</li>
+<li>실제로 완료된 시간: 중간 기록 203분24초 경과, 2026-10-31 08:39:24 KST. 전체 완료 시각이 아닙니다.</li>
+<li>XERJ: 미사용 — XERJ 도구 미제공 확인 후 rg·현재 소스/실제 실행/해시로 대체했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-result-20261030233925329-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=last37n&topic=qa&relatedReport=projects%2Flast37n%2Freports%2F2026-10-30-result-20261030233925329-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=last37n">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=last37n">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
