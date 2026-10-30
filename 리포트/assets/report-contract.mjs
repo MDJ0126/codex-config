@@ -1,4 +1,5 @@
 import {validateDiscussion,DISCUSSION_STATES,TOPICS} from './discussion-contract.mjs';
+import {validateManual,manualMarkdown} from './manual-contract.mjs';
 export const WORKFLOW=[['new','접수'],['review','검토'],['in_progress','진행'],['resolved','해결'],['closed','종료']];
 export const PRIORITY=[['low','낮음'],['normal','보통'],['high','높음'],['urgent','긴급']];
 export const SEVERITY=[['minor','경미'],['normal','보통'],['major','주요'],['critical','치명']];
@@ -7,7 +8,7 @@ const fields=['title','summary','reporter','assignee','environment','steps','exp
 export function validateReport(input,projects){
  if(!input||input.schemaVersion!==2)throw new Error('schemaVersion은 2여야 합니다.');
  if(!Object.hasOwn(projects,input.project))throw new Error('등록된 프로젝트를 선택하세요.');
- if(!['result','bug','discussion'].includes(input.kind))throw new Error('결과·버그·토론 중 하나를 선택하세요.');
+ if(!['result','bug','discussion','manual'].includes(input.kind))throw new Error('결과·버그·토론·작업 메뉴얼 중 하나를 선택하세요.');
  const r={schemaVersion:2,project:input.project,kind:input.kind};
  for(const key of fields){r[key]=String(input[key]??'').trim();if(r[key].length>(['title','summary'].includes(key)?180:5000))throw new Error(`${key} 입력이 너무 깁니다.`);}
  for(const key of ['title','summary','outcome'])if(!r[key])throw new Error(`${key} 항목을 입력하세요.`);
@@ -22,6 +23,8 @@ export function validateReport(input,projects){
   for(const key of ['environment','steps','expected','actual'])if(!r[key])throw new Error(`버그의 ${key} 항목을 입력하세요.`);
   if(['resolved','closed'].includes(r.workflow)&&(!r.changes||!r.verification))throw new Error('해결·종료 단계에는 수정 내용과 검증 근거가 필요합니다.');
   r.state=r.workflow==='closed'?'complete':r.workflow==='resolved'?'verification':'progress';
+ }else if(r.kind==='manual'){
+  validateManual(input,r);
  }else if(r.kind==='discussion'){
   validateDiscussion(input,r);
  }else{
@@ -30,17 +33,18 @@ export function validateReport(input,projects){
   if(r.state==='complete'&&!r.verification)throw new Error('완료된 결과에는 검증 근거가 필요합니다.');
  }
  if(/(?:ghp_[a-zA-Z0-9]{20,}|github_pat_[a-zA-Z0-9_]{25,}|-----BEGIN .*PRIVATE KEY)/.test(JSON.stringify(r)))throw new Error('인증정보로 보이는 내용은 공개 보고서에 포함할 수 없습니다.');
- if(JSON.stringify(r).length>35000)throw new Error('보고서 전체 내용은 35,000자 이내로 작성하세요.');
+ if(JSON.stringify(r).length>(r.kind==='manual'?55000:35000))throw new Error('전체 내용 제한을 초과했습니다. 이전 기록을 보존하고 후속 버전으로 이어가세요.');
  return r;
 }
 export function issueBody(r){return '<!-- tracefolio:v2 -->\n\n이 보고서는 Tracefolio 공통 작성 양식으로 등록되었습니다. 단계 변경은 아래 JSON의 workflow를 수정합니다.\n\n```json\n'+JSON.stringify(r,null,2)+'\n```';}
 export function parseIssueBody(body){
  if(!String(body).includes('<!-- tracefolio:v2 -->'))return null;
  const match=/^```json[ \t]*\r?\n([\s\S]*?)^```[ \t]*$/m.exec(body);if(!match)throw new Error('Tracefolio JSON 블록이 없습니다.');
- if(match[1].length>40000)throw new Error('보고서 크기 제한을 초과했습니다.');return JSON.parse(match[1]);
+ if(match[1].length>62000)throw new Error('보고서 크기 제한을 초과했습니다.');return JSON.parse(match[1]);
 }
 const missing='기록되지 않았습니다.';
 export function toMarkdown(r,{date=new Date().toISOString(),version='v1.0.0',issueNumber,issueURL,payloadPath}={}){
+ if(r.kind==='manual')return manualMarkdown(r,{date,version,issueNumber,issueURL,payloadPath});
  if(r.kind==='discussion'){
   const label=DISCUSSION_STATES.find(([id])=>id===r.discussionState)[1];
   const lines=['---',`title: ${r.title}`,`date: ${date}`,`version: ${version}`,`status: ${label}`,`state: ${r.state}`,`project: ${r.project}`,'type: 토론','report_kind: discussion',`category: ${TOPICS.find(([id])=>id===r.topic)[1]}`,`summary: ${r.summary}`,'format: tracefolio-v2',`priority: ${r.priority}`,`topic: ${r.topic}`,`discussion_state: ${r.discussionState}`,`reporter: ${r.reporter||'미기록'}`,`assignee: ${r.assignee||'미지정'}`];

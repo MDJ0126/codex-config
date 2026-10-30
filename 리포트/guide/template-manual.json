@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "project": "codex-config",
+  "kind": "manual",
+  "title": "실제 요청을 순차 실행할 작업 메뉴얼",
+  "summary": "목표와 완료 기준을 확정하고 작업별 QA를 반복합니다.",
+  "outcome": "실행 전 계획입니다.",
+  "manualId": "replace-with-task-id",
+  "phase": "initial",
+  "round": 1,
+  "execution": "sequential",
+  "manualState": "planned",
+  "goal": "사용자가 요청한 목표로 변경",
+  "completionCriteria": "구체적인 전체 완료 기준으로 변경",
+  "previousManual": "",
+  "relatedDiscussions": [],
+  "scopeChange": "",
+  "focusTasks": [
+    "T01"
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "order": 1,
+      "title": "실제 작업 제목으로 변경",
+      "action": "구현·실행할 구체적인 절차",
+      "expected": "관찰 가능한 완료 기준",
+      "qa": "실제 원본과 결과를 비교할 QA 절차",
+      "dependsOn": [],
+      "revision": 1,
+      "status": "pending",
+      "result": ""
+    }
+  ],
+  "qaRuns": [],
+  "remaining": "작업·QA 미실행",
+  "proposedTime": "확인한 범위의 예상 시간",
+  "actualTime": "실행 전",
+  "xerjUsage": "미사용",
+  "xerjEvidence": "실행 전"
+}

@@ -1,0 +1,77 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../assets/theme-init.js"></script><title>작업 시작·반복 QA 메뉴얼 · Tracefolio</title><link rel="icon" type="image/png" href="../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../assets/style.css?v=b4856b6e3ac8"><link rel="stylesheet" href="../assets/theme.css?v=b4856b6e3ac8"><link rel="stylesheet" href="../assets/discussions.css?v=b4856b6e3ac8"><link rel="stylesheet" href="../assets/manuals.css?v=b4856b6e3ac8"><script defer src="../assets/theme.js"></script></head><body><header><a class="brand" href="../index.html"><img class="archive-brand-logo" src="../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../manuals/index.html">작업 메뉴얼</a><a href="../discussions/index.html">QA 토론</a><a href="../guide/index.html">작성 가이드</a><a class="header-write" href="../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail guide-page"><article><h1 id="section-1">작업 시작과 반복 QA 메뉴얼</h1>
+<p>작업은 <strong>목표 → 순차 작업 → 작업별 QA → 수정·재검증 → 전체 최종 QA</strong>로 진행합니다. 처음에는 필요한 작업을 최대30개까지 정리합니다.30개를 채우는 것이 목표가 아닙니다. 이후에는 남은 작업 중1~5개를 골라 반복하며, 전체 미완료 목록은 보존합니다.</p>
+<p><a class="report-link" href="../manuals/index.html">작업 메뉴얼 목록</a> · <a class="report-link" href="../write/index.html?kind=manual">새 메뉴얼 작성</a> · <a class="report-link" href="template-manual.json">공통 JSON 템플릿</a> · <a class="report-link" href="index.html">보고서 작성 기준</a></p>
+<h2 id="section-2">1. 시작 전에 정할 내용</h2>
+<ol>
+<li>요청 범위, 관련 프로젝트와 기존 QA·토론을 읽습니다. 현재 소스·설정·실행 결과로 출발 상태를 확인합니다.</li>
+<li>예상 소요 시간을 범위로 제시하고 시작 시각을 기록합니다. 확인하지 않은 내용은 미확인으로 표시합니다.</li>
+<li>목표와 전체 완료 기준을 정합니다. 구현·설치·실행·배포 중 필요한 범위를 구분합니다.</li>
+<li>하나의 메뉴얼에 순차 작업을1<del>30개 등록합니다. 작은 작업은1</del>3개로 충분합니다.</li>
+<li>각 작업에 실행 절차, 기대 결과, 반복할 QA 절차, 선행 작업, 담당·차단 사유를 기록합니다. 실행하지 않은 작업은 대기입니다.</li>
+</ol>
+<h2 id="section-3">2. 순차 실행 규칙</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>단계</th>
+<th>실행과 기록</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>작업 선택</td>
+<td>첫 미완료 작업부터 시작합니다. 선행 작업이 끝나지 않은 다음 작업을 진행으로 바꾸지 않습니다.</td>
+</tr>
+<tr>
+<td>실행</td>
+<td>구현·수정 후 실제 결과를 기록합니다. 계획 등록은 실행 완료가 아닙니다.</td>
+</tr>
+<tr>
+<td>작업 QA</td>
+<td>현재 작업 버전과 선행 작업 버전에서 정한 QA를 실행합니다. 기대값·실제값·로그 또는 화면을 비교합니다.</td>
+</tr>
+<tr>
+<td>실패 처리</td>
+<td>실패·차단 결과를 그대로 보존합니다. 원인을 검증하고 수정 후 새 QA를 추가합니다.</td>
+</tr>
+<tr>
+<td>회귀 QA</td>
+<td>수정의 영향을 받는 동작을 다시 확인합니다. 작업 내용·의존성 변경은 수정 버전을 올리고 영향 작업을 재QA합니다.</td>
+</tr>
+<tr>
+<td>완료</td>
+<td>해당 작업의 실제 결과와 현재 버전 QA 통과 근거가 있을 때만 완료합니다.</td>
+</tr>
+</tbody></table>
+</div><p>작업 상태는 대기 → 진행 → QA 대기 → 완료이며, 진행할 수 없는 항목은 차단입니다. 메뉴얼 상태는 준비·작업 중·QA 중·차단·완료입니다. 이는 버그 보고서의 접수·검토·진행·해결·종료와 별개입니다.</p>
+<h2 id="section-4">3. 소수 작업으로 반복하기</h2>
+<p>첫 계획 이후에는 최신 메뉴얼에서 <strong>남은 작업으로 소수 후속 회차 만들기</strong>를 누릅니다. 다음 회차 번호가 생성되고 첫 미완료 작업 최대5개가 선택됩니다. 전체 작업·이전 완료·실패 기록은 유지합니다. 필요하면 선택을 조정하되 선행 순서는 지킵니다.</p>
+<ul>
+<li>이번 회차의 대상은1~5개입니다. 나머지 작업을 삭제해 완료율을 높이지 않습니다.</li>
+<li>실패한 QA를 지우거나 기존 판정을 통과로 고치지 않습니다. 수정 후 실행한 QA를 새 ID로 추가합니다.</li>
+<li>절차·기대값·QA·순서·의존성을 변경하면 작업 revision을 올리고 scopeChange에 이유를 적습니다. 기존 통과는 변경된 작업과 그 영향을 받는 작업을 보증하지 않습니다.</li>
+<li>차단되면 이유, 필요한 자료·접근 권한, 즉시 가능한 대체 작업을 기록합니다. 실제 제한 없이 임의로 중단하지 않습니다.</li>
+<li>부분 구현은 전체 완료가 아닙니다. 이번 회차를 마쳤어도 원래 목록의 미완료 작업은 다음 회차로 이어갑니다.</li>
+</ul>
+<h2 id="section-5">4. 전체 최종 QA와 종료</h2>
+<p>모든 작업이 완료되면 QA 종류를 <strong>전체 최종 QA</strong>로 선택하고 모든 작업의 현재 버전을 검사합니다. 전부 통과하고 결과·근거가 있어야 메뉴얼을 완료로 등록할 수 있습니다. 한 항목이라도 실패·미실행·차단이면 완료하지 않고 수정·재검증합니다.</p>
+<p>실제 프로젝트 화면을 캡처·압축하여 결과 보고서에 첨부합니다. 문서 작업처럼 실행 화면이 없는 경우 사유를 기록합니다. 빌드·링크·필터·모바일·테마 등 변경 범위에 맞는 QA를 수행하고, 공개 게시가 포함되면 푸시와 배포·외부 URL 확인을 구분합니다.</p>
+<p>이 메뉴얼은 증거의 필수 항목과 순서를 검사합니다. 작성자가 올린 실행 근거의 진위를 자동으로 증명하거나, 등록만으로 다른 프로젝트를 실행하는 기능은 아닙니다. AI는 실제 도구로 실행·검증을 계속하고 그 결과를 갱신해야 합니다.</p>
+<h2 id="section-6">5. 사람이 쓰는 방법</h2>
+<p>작성 폼에서 작업 메뉴얼을 고릅니다. 목표·완료 기준과 작업별 절차를 입력합니다. QA는 실제 실행 후 <strong>QA 결과 기록</strong>에서 대상 작업·판정·시각·실제 관찰·근거를 입력합니다. 이전 버전의 QA는 읽기 전용이며 새 기록으로 이어집니다. 검사·미리보기 후 GitHub에서 제출하면 공통 검사와 배포를 거칩니다. 임시저장은 현재 브라우저의 초안입니다.</p>
+<p>토론 글의 <strong>이 논의로 작업 시작</strong>으로 들어오면 같은 프로젝트와 토론이 연결됩니다. 다른 프로젝트의 토론을 섞지 않습니다.</p>
+<h2 id="section-7">6. AI가 쓰는 방법</h2>
+<p>template-manual.json을 실제 작업으로 채웁니다. 원본 JSON 없이 Markdown을 직접 작성하지 않습니다. 작업·QA를 실행한 뒤 최신 JSON을 복사하여 갱신하고, 기존 Markdown·HTML을 덮어쓰지 않습니다.</p>
+<pre><code class="language-sh">node 리포트/create-report.mjs --input manual.json --dry-run
+node 리포트/create-report.mjs --input manual.json
+node 리포트/update-manual.mjs --from projects/프로젝트/posts/최신파일.md --input updated-manual.json --dry-run
+node 리포트/update-manual.mjs --from projects/프로젝트/posts/최신파일.md --input updated-manual.json
+node 리포트/build.mjs
+node 리포트/verify.mjs
+node --test 리포트/tests/*.test.mjs
+</code></pre>
+<p>같은 회차의 갱신은 round를 유지합니다. 다음 회차는 round를1 올리고 phase를 followup으로, focusTasks를 미완료 작업1~5개의 ID로 설정합니다. tasks에는 원래 전체 목록을 유지합니다. update-manual은 이전 메뉴얼 연결과 새 버전 파일을 만듭니다. GitHub 접수에서도 같은 JSON 계약을 사용합니다.</p>
+<p>qaRuns는 id·kind(step/regression/final)·실제 at·summary·results를 기록합니다. 각 결과는 taskId·revision·verdict·actual·evidence·dependencies를 포함합니다. dependencies에는 QA 당시 확인한 선행 작업 ID와 revision을 기록합니다. final QA는 후속 회차의5개 제한과 관계없이 전체 작업을 검사합니다.</p>
+<h2 id="section-8">7. 앞으로 적용할 기준</h2>
+<p>전역 AGENTS.md에도 이 절차를 기록합니다. Codex의 지침은 작업 시작 시 로드되므로 이미 실행 중인 다른 대화가 즉시 새 지침을 읽었다고 간주하지 않습니다. 기존 작업은 해당 메뉴얼을 직접 읽고 이어갑니다. 근거: <a class="report-link" href="https://developers.openai.com/codex/guides/agents-md">OpenAI의 AGENTS.md 공식 안내</a>.</p>
+<p>최종 보고에는 HTML 링크, 실제 화면과 확인 내용, 남은 사항, 제안 시간, 실제 소요·완료 시각·시간대, XERJ 사용 여부를 기록합니다.</p>
+<a href="template-manual.json" download>작업 메뉴얼 JSON 템플릿</a></article></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

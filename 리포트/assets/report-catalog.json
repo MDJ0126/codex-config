@@ -1,5 +1,105 @@
 [
   {
+    "title": "MOA · 모아 · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "moa",
+    "reportPath": "projects/moa/reports/2026-10-30-manual-20261030092940515-v1.0.0.html",
+    "date": "2026-10-30T09:29:40.515Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "턴룸 · TurnRoom · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030092940337-v1.0.0.html",
+    "date": "2026-10-30T09:29:40.337Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WindowsFolderSize · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-10-30-manual-20261030092940164-v1.0.0.html",
+    "date": "2026-10-30T09:29:40.164Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "CodeAssist · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 2개를 4개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "codeassist",
+    "reportPath": "projects/codeassist/reports/2026-10-30-manual-20261030092939993-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.993Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "EngineMigrator · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "enginemigrator",
+    "reportPath": "projects/enginemigrator/reports/2026-10-30-manual-20261030092939819-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.819Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 3개를 5개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-manual-20261030092939642-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.642Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-10-30-manual-20261030092939469-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.469Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity CLI · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "affinity-cli",
+    "reportPath": "projects/affinity-cli/reports/2026-10-30-manual-20261030092939297-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.297Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Codex 설정 · 기존 QA 논의의 순차 작업 계획",
+    "summary": "기존 논의 1개를 3개 순차 작업으로 정리했습니다. 실행·QA 전 준비 상태입니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-10-30-manual-20261030092939111-v1.0.0.html",
+    "date": "2026-10-30T09:29:39.111Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "작업 메뉴얼 기반 순차 실행·반복 QA 도입",
+    "summary": "이번 사이트 작업을10개 순서로 진행합니다. 전체 요구사항을 보존하고 작업별 QA·수정·최종 검증을 통해 완료합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-10-30-manual-20261030092027832-v1.0.0.html",
+    "date": "2026-10-30T09:20:27.832Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "기존 프로젝트 글308건 검토와 필요한 토론12건 등록",
     "summary": "9개 프로젝트의 원문308건을 대조해 새 토론12건을 연결했습니다. 해결·중복 항목은 제외했고 전부 논의 중입니다. 기존 토론1건과 함께 총13건을 볼 수 있습니다.",
     "project": "codex-config",

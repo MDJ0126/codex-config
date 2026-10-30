@@ -13,7 +13,7 @@ const reports=entries.map(e=>e.reportPath);
 const posts=entries.map(e=>e.postPath);
 assert.equal(posts.length,reports.length);
 let links=0;
-for(const file of ['index.html','discussions/index.html','write/index.html','guide/index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
+for(const file of ['index.html','discussions/index.html','manuals/index.html','guide/execution.html','write/index.html','guide/index.html',...reports,...(await readdir(path.join(root,'reports'))).filter(f=>f.endsWith('.html')).map(f=>`reports/${f}`)]){
  const html=await readFile(path.join(root,file),'utf8');
  assert.match(html,/<html lang="ko">/);assert.match(html,/name="viewport"/);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
