@@ -1,14 +1,16 @@
 [
   {
     "post": "projects/pixora/posts/2026-10-29-setup-reference-v1.0.0.md",
-    "sourceSha256": "af42ee87c08846caeb34d05d68b5695e272cf10dc47b1c5766c0e2be5c2262a2",
+    "sourceSha256": "90c85c5f90ffb147339a91142a469b957158d05531aa379c1a8bde76b2b21fcb",
     "workflow": "resolved",
     "reason": "실제 Unity 설정 창과 테마·분류 이동 및 2,376개 회귀 검증 기록.",
     "evidence": [
       "2,376/2,376 통과"
     ],
     "reviewedAt": "2026-10-30T06:34:20.398Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "af42ee87c08846caeb34d05d68b5695e272cf10dc47b1c5766c0e2be5c2262a2",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-1b551b3cfd89-v1.0.0.md",
@@ -19,7 +21,9 @@
       "**0**남은 실패"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "84f803d5cf4b64e99c6c19168b7d0af74afc322e0aad763beaba49857db35bf6",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-24c53802c2a7-v1.0.0.md",
@@ -30,7 +34,9 @@
       "Actual UI checks after recompilation:"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "fca5aec2fd8aec22800cb5427444d1f103790b5949c298e7a18adf5ebfec3f6a",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-420d48d6e6d7-v1.0.0.md",
@@ -41,7 +47,9 @@
       "The user manually retried and confirmed successful operation"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "afb7365da5356eda9c6dcff3b57a3818a696bec3cf6faa7c08d08531d6418b6b",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-568ddf775439-v1.0.0.md",
@@ -52,7 +60,9 @@
       "713 assertions passed"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "2e55b59fbf1477a72dc5864b9ec95771af921290ee9efa9028ec45f3564fb937",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-cbf798596cf1-v1.0.0.md",
@@ -63,7 +73,9 @@
       "**0**남은 실패"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "90c8dfb0dc071bb791c29c277308866f8b9233885bc83aa280bf43eb9316808e",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-cd40b74d528a-v1.0.0.md",
@@ -74,7 +86,9 @@
       "실제 Play 모드의 등록·저장·직접 API 보호 6개 TC 통과."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "e913fa97a9d5d8b6f876c2ccd1ec49a95626c4ba8dc837d165adda26829b6a09",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ce008633abb7-v1.0.0.md",
@@ -85,7 +99,9 @@
       "값 수정 후 이전 오류가 제거됨"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "ead30c8fb193a5a013a32809f47ec873a73abbbcba6d06fb9eb743335b000f4d",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ebacb4d14dc5-v1.0.0.md",
@@ -96,7 +112,9 @@
       "같은 조건과 한글·F2·즉시 Enter 조합을 다시 검사해 통과했습니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "54bb6579af183d5c58cdccefcf0ca6553f2949b49087ec361052157e21e66fcb",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ebf169fe452b-v1.0.0.md",
@@ -107,7 +125,9 @@
       "All 25 active guide images were newly captured"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "a88d213c1c1bfef49a9836f8a6937e304024c505d697559e2ab325f92cb22584",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/enginemigrator/posts/2026-10-29-EngineMigrator-QA-v1.0.0.md",
@@ -118,7 +138,9 @@
       "기존 엔진 없는 회귀 검사 403개가 통과했습니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "c60c532d5bf512e2ad71748977ca8d00bdd6009208b64c8d53876869a0b74466",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/enginemigrator/posts/2026-10-29-EngineMigrator-QA-v1.0.1.md",
@@ -129,7 +151,9 @@
       "QA 수정·검증·로컬 배포 완료."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "749d9577ac6f0ec95c621a020075a4306903fc43be24286d332a0627d5f49505",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/enginemigrator/posts/2026-10-29-import-enginemigrator-a678a73d064c-v1.0.0.md",
@@ -140,7 +164,9 @@
       "수정 후 독립 QA 18개와 기존 회귀 403개를 검사했습니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "509578dbf72f118745ab21d3776769fa06ed631637c3daa93de63f6cd58eaad4",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-04d10456fa5e-v1.0.0.md",
@@ -151,7 +177,9 @@
       "차이 1/108 · 미검증 101/108"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "67951dc6b6c8060d481c9f1edc9aa3625b2f03e99a1ad85001a6950c9778e924",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-07e8ad75eb11-v1.0.0.md",
@@ -162,7 +190,9 @@
       "차이 1/108 · 미검증 103/108"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "acd3b77edb9e0897f3c9e4b01bd51d722a6db265352e6b4c4ee0039a1936082c",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-0f1006310106-v1.0.0.md",
@@ -173,7 +203,9 @@
       "Enum/Namespace 색상, 적용 대상 옵션 및 다른 기능별 팝업 배치는 남았습니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "452d296097d696767c7618ebde7ef9d66369868cf1158c6b19de529480de3547",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-0fcbcd277b24-v1.0.0.md",
@@ -184,7 +216,9 @@
       "최신 CA 재실행은 시작되지 않았으며"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "d8a435df15561c5c8e89f55e21de1a683791437efc834313f84296df306ba83a",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-19eb63555565-v1.0.0.md",
@@ -195,7 +229,9 @@
       "선정 옵션 누적 동작 표본10/12개(83.33%)"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "0c07a400fb08f2ce21fb378ed85792d809fa65cca979708f6e13ca2fdf2ca107",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-2c7193b10292-v1.0.0.md",
@@ -206,7 +242,9 @@
       "남은 2/2개 구성 보완 완료"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "abdac133897998d0aac801e01e53e55b84847c3c83de08ad11584cdcb75bb77d",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-346cef36f2c6-v1.0.0.md",
@@ -217,7 +255,9 @@
       "실행 중 VS에는 새 DLL을 적용하지 않았으며"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "502e799a2fc57683b723ffcbac9426226da2f68650d00fea6604cbb58add15ff",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-4855acdf178d-v1.0.0.md",
@@ -228,7 +268,9 @@
       "전체 목표는 진행 중입니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "57005d9aa8862336ea28756160bd5ab31b192ce9447737788cc34f252eca4559",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-4f3ee242f0d0-v1.0.0.md",
@@ -239,7 +281,9 @@
       "개체 브라우저의 LiteTreeView32 색상 적용 실패는 남아 있습니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "b4c39b04c5a324f4fbf0cb35e8200ba904fe7c12cb90c94229163c43a576f990",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-51e4722c791e-v1.0.0.md",
@@ -250,7 +294,9 @@
       "**2/2개·100% 일치.**"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "0e6a05f4bd00ead5d0f2ee907c076c6eacd8e8c6d0c8d7c247310f8f5b399ce6",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-5b1f534e75c5-v1.0.0.md",
@@ -261,7 +307,9 @@
       "선택 길이16/기대14로 실패"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "4364a376d661df3cd766396ee50d02b2a9a146658bc615e756d5fe0595dd2da3",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-6d05f54d7154-v1.0.0.md",
@@ -272,7 +320,9 @@
       "Physical Tab focus moves to Hue | 미판정"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "913181aefa4e2af732ecda7c8a5beaae7e401936bd1e8a62635e1d2ba2de1d15",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-89dd5082710e-v1.0.0.md",
@@ -283,7 +333,9 @@
       "Quick Info 세부 옵션·탐색 표시줄 상하 위치 등은 미구현."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "1900f443b56935ffb59610a2e37e44680db3dab830a3bab544d614c4db735c40",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-8feefea3d79d-v1.0.0.md",
@@ -294,7 +346,9 @@
       "설정 통제 검사 | 4/4 기대 결과 일치"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "23df6a57b172ddf0b67d85305900c678acca1b68c7945ca33205787cd9824601",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-98b850a15aa0-v1.0.0.md",
@@ -305,7 +359,9 @@
       "108개 고정 분모 집계표 열기"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "0d611ef72fe42f984ca3e48d7ebaa02307992ba3cbab8d318b93ee3982a031e0",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-aab5516a3385-v1.0.0.md",
@@ -316,7 +372,9 @@
       "다음 수정 대상입니다."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "8a6e5a7370744c5e575a94bd22793995a36f1f46258521e6015a391d6d355fbb",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-b4a9e6b7de33-v1.0.0.md",
@@ -327,7 +385,9 @@
       "실제 생성물 MSVC 컴파일·실행: 통과."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "2718af7167001433b9ff18427deb8e92f29bac96e614ea8ccb413e9f86b62c40",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bcad3c290fb3-v1.0.0.md",
@@ -338,7 +398,9 @@
       "차이 1/108 · 미검증 103/108"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "c44d2372a9225f5a8e15fe9b20c9e6ea20c4cb29e0d431969b1d50938181cf29",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bf7ec6d20668-v1.0.0.md",
@@ -349,7 +411,9 @@
       "108개 전체 실행 미완료."
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "cf73db39456b56080602de348b7d82757d2c7fa732b2bc04aca37ae8e45a68fd",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bfa4f1c90438-v1.0.0.md",
@@ -360,7 +424,9 @@
       "차이 1/108 · 미검증 101/108"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "5f909aa43f6631b8378061d07c0ed2be23a91a20cfb7ecad059808835cbd1476",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-c2f8d36dcedb-v1.0.0.md",
@@ -371,7 +437,9 @@
       "최종 이동 클릭은 보안 창으로 차단되어 미검증"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "517db849c5e66147bbe7fb798f391efd3f7394ca17cce52c29e84f9eb5b16ba6",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-c4145d5140e4-v1.0.0.md",
@@ -382,7 +450,9 @@
       "이번 관측 툴팁 결함 해결 **100% (3/3)**"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "6df240588d8d3cadffa7ec39d5c0f057fd26eb6ebceeac9a78ffb0bb5a6bffb6",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-dba31dad0a69-v1.0.0.md",
@@ -393,7 +463,9 @@
       "타입 대소문자 교정 실패"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "16b0f7122dfc1357f202d73954a8e28f6665fdd825af7487ac83970472a6b6bf",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/codeassist/posts/2026-10-29-import-codeassist-eff47cbc48ae-v1.0.0.md",
@@ -404,7 +476,9 @@
       "**이번 표본 3/3개(100%) 일치**"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "20cb13b3991f9cec0a2abc70cd8224e23499a52232df0df1b5dde2da3f39f8ee",
+    "sourceHashNormalization": "LF"
   },
   {
     "post": "projects/windowsfoldersize/posts/2026-10-29-import-windowsfoldersize-b70ea328ef17-v1.0.0.md",
@@ -415,6 +489,8 @@
       "The production per-machine install/elevation path has not been executed"
     ],
     "reviewedAt": "2026-10-30T06:34:20.399Z",
-    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님.",
+    "observedRawSha256": "d60f72396cc6c2e7e520fda15d671fc2818f1e3fa0661ee60be52c5b87a5fb2a",
+    "sourceHashNormalization": "LF"
   }
 ]

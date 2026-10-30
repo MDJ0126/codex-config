@@ -9,7 +9,7 @@ test('all 38 historical stage decisions retain source bytes and exact evidence',
  const decisions=JSON.parse(await readFile(new URL('migration/workflow-review-2026-10-30.json',root),'utf8'));
  assert.equal(decisions.length,38);
  assert.equal(new Set(decisions.map(d=>d.post)).size,38);
- for(const d of decisions){const raw=await readFile(new URL(d.post,root),'utf8');const meta=historicalWorkflow({type:'버그'},raw,d.post,decisions);assert.equal(meta.workflow,d.workflow);assert.throws(()=>historicalWorkflow({type:'버그'},raw+'changed',d.post,decisions));}
+ for(const d of decisions){const raw=await readFile(new URL(d.post,root),'utf8');const meta=historicalWorkflow({type:'버그'},raw,d.post,decisions);assert.equal(meta.workflow,d.workflow);assert.equal(historicalWorkflow({type:'버그'},raw.replace(/\r\n/g,'\n'),d.post,decisions).workflow,d.workflow);assert.equal(historicalWorkflow({type:'버그'},raw.replace(/\r\n/g,'\n').replace(/\n/g,'\r\n'),d.post,decisions).workflow,d.workflow);assert.throws(()=>historicalWorkflow({type:'버그'},raw+'changed',d.post,decisions));}
 });
 test('project, collection and search scope keep bug total equal to every stage',()=>{
  const rows=[{project:'pixora',collection:'products',group:'bug',type:'버그',stage:'review',search:'pixora 검색'}, {project:'turnroom',collection:'products',group:'bug',type:'버그',stage:'resolved',search:'turnroom 검색'}, {project:'codex-config',collection:'',group:'bug',type:'버그',stage:'closed',search:'codex'}, {project:'pixora',collection:'products',group:'result',type:'수정사항',stage:'none',search:'pixora 검색'}];
