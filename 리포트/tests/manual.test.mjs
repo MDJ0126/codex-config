@@ -32,3 +32,7 @@ test('followup cannot drop remaining tasks or erase QA failures',()=>{
  const next=validateReport({...old,phase:'followup',round:2,focusTasks:['T01'],previousManual:previous},projects);validateManualLinks(next,catalog);
  assert.throws(()=>validateManualLinks({...next,tasks:[next.tasks[0]]},catalog));assert.throws(()=>validateManualLinks({...next,qaRuns:[]},catalog));
 });
+test('new updates reject stale parent versions while historical rendering stays valid',()=>{
+ const old=validateReport(base,projects),a='projects/codex-config/reports/a.html',b='projects/codex-config/reports/b.html',catalog=[{project:'codex-config',kind:'manual',manual_id:old.manualId,round:1,reportPath:a,date:'2026-10-30T00:00:00Z',version:'v1.0.0',manual:old},{project:'codex-config',kind:'manual',manual_id:old.manualId,round:1,reportPath:b,date:'2026-10-30T00:01:00Z',version:'v1.0.1',manual:{...old,previousManual:a}}];
+ assert.throws(()=>validateManualLinks({...old,previousManual:a},catalog),/최신/);validateManualLinks({...old,previousManual:b},catalog);validateManualLinks({project:'codex-config',report_kind:'manual',reportPath:b,manual:{...old,previousManual:a}},catalog);
+});
