@@ -1,0 +1,32 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Excel 왕복 승인 기준과 미지원 수식·개체의 표시 범위 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/theme.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/discussions.css?v=a7e76d2df569"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">토론</span></div><div class="post-title-row"><h1>Excel 왕복 승인 기준과 미지원 수식·개체의 표시 범위</h1><span class="badge" data-state="progress">논의 중</span></div><p class="post-summary">내부 보존 검사와 실제 Excel 왕복 승인을 구분하고, 수식·개체 지원 한계를 사용자가 이해하기 쉽게 알릴 기준을 제안합니다.</p><div class="post-byline"><time datetime="2026-10-30T08:00:02.981Z">2026년 10월 30일 오후 5:00 KST</time><span>v1.0.0</span><span>개선 제안</span></div><div class="post-body"><h2 id="section-1">토론 내용</h2>
+<p>구현 목록과 패키지 보존 검증이 있어도 실제 Excel에서 열기·수정·저장·재열기까지 승인됐다는 뜻은 아닙니다. 지원되지 않는 수식 범위나 개체가 있을 때 표시·거부·보존 정책을 어떤 수준으로 안내할지 정하면 좋겠습니다.</p>
+<h2 id="section-2">QA 근거와 맥락</h2>
+<p>검토 방식: 보존된 글의 본문·제한·후속 기록을 대조했습니다. 제품 실행·재현·수정 검증을 새로 수행한 것이 아닙니다.</p>
+<p><a class="report-link" href="../reports/2026-10-29-import-designdatatable-07a78230a6ec-v1.0.0.html">미완료 영역 세부 구현 현황</a></p>
+<blockquote>
+<p>E8.06.S03 실제 Excel 왕복 보존 승인 (remaining)</p>
+</blockquote>
+<p><a class="report-link" href="../reports/2026-10-29-import-designdatatable-ab5a797b2898-v1.0.0.html">DrawingML geometry verification — 2026-10-26</a></p>
+<blockquote>
+<p>No full native Excel/Google round-trip visual comparison was executed.</p>
+</blockquote>
+<p><a class="report-link" href="../reports/2026-10-29-import-designdatatable-c4696c7fc6f7-v1.0.0.html">조건 연결 수식 보강 및 검증</a></p>
+<blockquote>
+<p>현재 COUNTIF/SUMIFS 계열은 이런 분리 범위를 지원하지 않아, 해당 잘라내기가 검증에서 거부됩니다.</p>
+</blockquote>
+<h2 id="section-3">제안 및 대안</h2>
+<ol>
+<li>수식 결과·표시·개체 관계·변경하지 않은 XML 보존을 별도 합격 항목으로 둡니다.</li>
+<li>기본 XLSX·개체 포함·복잡 수식의 작은 고정 문서 집합으로 실제 왕복을 확인합니다.</li>
+<li>미지원 항목의 저장 차단과 원본 보존을 명확히 안내하고, 지원을 넓힐 항목은 사용자 빈도로 우선순위를 정합니다.</li>
+</ol>
+<h2 id="section-4">결정과 후속 작업</h2>
+<p>아직 결정되지 않았습니다.</p>
+<p>왕복 검증 문서와 Excel 버전, 허용할 표시 차이, 지원 확대 우선순위를 정해야 합니다. 과거 제한이 현재에도 동일한지는 재실행 전 미확인이며, 제품 전체 호환성을 이번에 판정하지 않습니다.</p>
+<h2 id="section-5">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 기존 글 검토·필요 논의 등록 20~35분의 공통 작업입니다.</li>
+<li>실제로 완료된 시간: 논의 글 작성 2026-10-30 17:00:02 KST. 개별 제품 구현·QA 완료 시각이 아니며 전체 검토 시간은 별도 결과 보고서에 기록합니다.</li>
+<li>XERJ: 미사용 — 문서와 후속 보고서 대조 작업으로 제품 코드 검색 불필요</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-discussion-20261030080002981-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>관련 QA · 후속 논의 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-29-import-designdatatable-07a78230a6ec-v1.0.0.html&replyTo=projects%2Fdesigndatatable%2Freports%2F2026-10-30-discussion-20261030080002981-v1.0.0.html">후속 글 쓰기</a></div><div class="discussion-context"><span class="discussion-tag">개선 제안</span><span class="discussion-tag" data-discussion-state="open">논의 중</span><a href="../../../projects/designdatatable/reports/2026-10-29-import-designdatatable-07a78230a6ec-v1.0.0.html">원본 QA: 미완료 영역 세부 구현 현황 ↗</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">토론 내용</a><a href="#section-2">QA 근거와 맥락</a><a href="#section-3">제안 및 대안</a><a href="#section-4">결정과 후속 작업</a><a href="#section-5">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

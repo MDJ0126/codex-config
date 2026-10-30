@@ -1,0 +1,29 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>과거 보고서 음수 소요 시간의 정정·검사 기준 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/theme.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/discussions.css?v=a7e76d2df569"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">토론</span></div><div class="post-title-row"><h1>과거 보고서 음수 소요 시간의 정정·검사 기준</h1><span class="badge" data-state="progress">논의 중</span></div><p class="post-summary">기존 Affinity CLI 글2건에서 음수 소요 시간을 확인했습니다. 원문은 보존하면서 시간 계산의 정정 근거와 새 글 등록 검사를 어떻게 둘지 논의합니다.</p><div class="post-byline"><time datetime="2026-10-30T08:03:48.893Z">2026년 10월 30일 오후 5:03 KST</time><span>v1.0.0</span><span>부족한 점</span></div><div class="post-body"><h2 id="section-1">토론 내용</h2>
+<p>과거 원문2건에 음수 소요 시간이 기록돼 있어 정상적인 경과 시간으로 읽을 수 없습니다. 본문에 시작·종료 시각도 있으므로 두 시각의 차이와 작업 범위를 확인해 정정 이력을 남길 필요가 있습니다. 전체 작업 완료와 일부 단계 완료가 섞였는지 여부는 미확인입니다.</p>
+<h2 id="section-2">QA 근거와 맥락</h2>
+<p>검토한 원문:</p>
+<p><a class="report-link" href="../../../projects/affinity-cli/reports/2026-10-29-Affinity-%EC%A0%84%EC%9A%A9CLI-%EA%B5%AC%ED%98%84-v1.0.0.html">Affinity 전용 CLI 구현·보관 및 전역 지침 연동</a></p>
+<blockquote>
+<p>실제로 완료된 시간: 구현·자동 검증·전역 적용·원격 보관과 보고서 원본 작성까지 -524 분 -19 초.</p>
+</blockquote>
+<p><a class="report-link" href="../../../projects/affinity-cli/reports/2026-10-29-Affinity-CLI-%EA%B0%9C%EB%B0%9C%EA%B2%AC%EC%A0%81-v1.0.0.html">Affinity 전용 CLI 개발 범위와 예상 시간</a></p>
+<blockquote>
+<p>실제 소요 시간: 상태 확인·견적·보고서 원본 작성까지 -32368 초</p>
+</blockquote>
+<p>문서 원문의 값과 두 시각을 확인한 것이며 제품 실행 시간을 새로 측정하지 않았습니다.</p>
+<h2 id="section-3">제안 및 대안</h2>
+<ol>
+<li>원문·버전은 그대로 보존하고 정정 근거와 새 버전을 연결합니다.</li>
+<li>시작·종료 시각의 시간대와 완료 범위를 대조한 후 실제 경과 시간을 계산합니다.</li>
+<li>신규 보고서에 음수 경과나 종료가 시작보다 앞선 시각이 있으면 등록 전 확인하도록 제안합니다. 자유 서술을 임의 숫자로 대체하지 않습니다.</li>
+</ol>
+<h2 id="section-4">결정과 후속 작업</h2>
+<p>아직 결정되지 않았습니다.</p>
+<p>부분 단계와 전체 완료의 경계가 확정되기 전에는 계산한 값을 실제 작업 총시간으로 단정하지 않습니다. 이번 작업에서는 과거 원문을 덮어쓰거나 시간 검사를 구현하지 않았습니다.</p>
+<h2 id="section-5">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 기존 글 검토·논의 등록 20~35분 공통 작업</li>
+<li>실제로 완료된 시간: 2026-10-30 17:03:48 KST · 제안 기록, 제품 구현 완료 시각 아님</li>
+<li>XERJ: 미사용 — 문서 기록의 시간 값 대조로 제품 코드 검색 불필요</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-discussion-20261030080348893-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>관련 QA · 후속 논의 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=codex-config&topic=qa&relatedReport=projects%2Fcodex-config%2Freports%2F2026-10-29-tracefolio-authoring-standard-v1.1.0.html&replyTo=projects%2Fcodex-config%2Freports%2F2026-10-30-discussion-20261030080348893-v1.0.0.html">후속 글 쓰기</a></div><div class="discussion-context"><span class="discussion-tag">부족한 점</span><span class="discussion-tag" data-discussion-state="open">논의 중</span><a href="../../../projects/codex-config/reports/2026-10-29-tracefolio-authoring-standard-v1.1.0.html">원본 QA: 기존 게시물 정리·AI 작성 가이드 공개 확인 ↗</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=codex-config">이 프로젝트의 모든 토론 보기 →</a></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">토론 내용</a><a href="#section-2">QA 근거와 맥락</a><a href="#section-3">제안 및 대안</a><a href="#section-4">결정과 후속 작업</a><a href="#section-5">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

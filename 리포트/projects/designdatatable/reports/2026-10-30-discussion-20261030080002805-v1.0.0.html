@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>BlankEnum과 도형 스타일 회귀 실패를 어떻게 판정할까요? · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/theme.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/discussions.css?v=a7e76d2df569"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">토론</span></div><div class="post-title-row"><h1>BlankEnum과 도형 스타일 회귀 실패를 어떻게 판정할까요?</h1><span class="badge" data-state="progress">논의 중</span></div><p class="post-summary">원본·통합본에서 같게 재현된 세 검증 항목을 테스트 입력 문제와 제품 결함으로 나눠 조사하고 재검증 기준을 정합니다.</p><div class="post-byline"><time datetime="2026-10-30T08:00:02.805Z">2026년 10월 30일 오후 5:00 KST</time><span>v1.0.0</span><span>QA 토론</span></div><div class="post-body"><h2 id="section-1">토론 내용</h2>
+<p>해당 보고서는 원본과 통합본에서 같은 실패를 확인했고, 런타임 환경 항목은 별도 재실행으로 보정했습니다. 따라서 이를 통합으로 새로 생긴 결함이나 전체 해결로 단정하지 않고, 남은 세 항목의 정확한 기대값을 합의하는 토론이 필요합니다.</p>
+<h2 id="section-2">QA 근거와 맥락</h2>
+<p>검토 방식: 보존된 글의 본문·제한·후속 기록을 대조했습니다. 제품 실행·재현·수정 검증을 새로 수행한 것이 아닙니다.</p>
+<p><a class="report-link" href="../reports/2026-10-29-bug-20261029145649921-v1.0.0.html">기존 DataTable 회귀 검증 3종의 실패 재현</a></p>
+<blockquote>
+<p>두 도형 스타일 실패의 상세 원인은 미확인입니다.</p>
+</blockquote>
+<p><a class="report-link" href="../reports/2026-10-29-bug-20261029145649921-v1.0.0.html">기존 DataTable 회귀 검증 3종의 실패 재현</a></p>
+<blockquote>
+<p>남은 기존 실패는 WorkbookChecks의 BlankEnum 정의 누락, object.six-line-end-styles, object.basic-shape-style입니다.</p>
+</blockquote>
+<h2 id="section-3">제안 및 대안</h2>
+<ol>
+<li>BlankEnum은 유효한 Enum 정의가 있는 입력과 없는 입력을 나눠 거부가 정상인지 확인합니다.</li>
+<li>두 도형 항목은 원본 XLSX 스타일·실제 읽은 값·기대값을 나란히 기록합니다.</li>
+<li>동일 고정 입력과 소스 버전으로 재실행한 뒤 테스트 기준 정정과 제품 수정을 분리합니다.</li>
+</ol>
+<h2 id="section-4">결정과 후속 작업</h2>
+<p>아직 결정되지 않았습니다.</p>
+<p>두 도형 실패의 현재 재현 여부와 원인은 아직 미확인입니다. 후속 글에서 동일 이름의 통과 근거를 찾기 전에는 해결로 바꾸지 않으며, 이번 작업에서 제품·테스트 기대값을 변경하지 않습니다.</p>
+<h2 id="section-5">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 기존 글 검토·필요 논의 등록 20~35분의 공통 작업입니다.</li>
+<li>실제로 완료된 시간: 논의 글 작성 2026-10-30 17:00:02 KST. 개별 제품 구현·QA 완료 시각이 아니며 전체 검토 시간은 별도 결과 보고서에 기록합니다.</li>
+<li>XERJ: 미사용 — 문서와 후속 보고서 대조 작업으로 제품 코드 검색 불필요</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-discussion-20261030080002805-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>관련 QA · 후속 논의 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-29-bug-20261029145649921-v1.0.0.html&replyTo=projects%2Fdesigndatatable%2Freports%2F2026-10-30-discussion-20261030080002805-v1.0.0.html">후속 글 쓰기</a></div><div class="discussion-context"><span class="discussion-tag">QA 토론</span><span class="discussion-tag" data-discussion-state="open">논의 중</span><a href="../../../projects/designdatatable/reports/2026-10-29-bug-20261029145649921-v1.0.0.html">원본 QA: 기존 DataTable 회귀 검증 3종의 실패 재현 ↗</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">토론 내용</a><a href="#section-2">QA 근거와 맥락</a><a href="#section-3">제안 및 대안</a><a href="#section-4">결정과 후속 작업</a><a href="#section-5">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

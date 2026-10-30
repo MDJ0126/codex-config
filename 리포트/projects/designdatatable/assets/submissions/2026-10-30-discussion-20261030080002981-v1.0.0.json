@@ -1,0 +1,33 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "discussion",
+    "title": "Excel 왕복 승인 기준과 미지원 수식·개체의 표시 범위",
+    "summary": "내부 보존 검사와 실제 Excel 왕복 승인을 구분하고, 수식·개체 지원 한계를 사용자가 이해하기 쉽게 알릴 기준을 제안합니다.",
+    "reporter": "Codex · 기존 보고서 검토",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "1. 수식 결과·표시·개체 관계·변경하지 않은 XML 보존을 별도 합격 항목으로 둡니다.\n2. 기본 XLSX·개체 포함·복잡 수식의 작은 고정 문서 집합으로 실제 왕복을 확인합니다.\n3. 미지원 항목의 저장 차단과 원본 보존을 명확히 안내하고, 지원을 넓힐 항목은 사용자 빈도로 우선순위를 정합니다.",
+    "verification": "검토 방식: 보존된 글의 본문·제한·후속 기록을 대조했습니다. 제품 실행·재현·수정 검증을 새로 수행한 것이 아닙니다.\n\n[미완료 영역 세부 구현 현황](../reports/2026-10-29-import-designdatatable-07a78230a6ec-v1.0.0.html)\n\n> E8.06.S03 실제 Excel 왕복 보존 승인 (remaining)\n\n[DrawingML geometry verification — 2026-10-26](../reports/2026-10-29-import-designdatatable-ab5a797b2898-v1.0.0.html)\n\n> No full native Excel/Google round-trip visual comparison was executed.\n\n[조건 연결 수식 보강 및 검증](../reports/2026-10-29-import-designdatatable-c4696c7fc6f7-v1.0.0.html)\n\n> 현재 COUNTIF/SUMIFS 계열은 이런 분리 범위를 지원하지 않아, 해당 잘라내기가 검증에서 거부됩니다.",
+    "remaining": "왕복 검증 문서와 Excel 버전, 허용할 표시 차이, 지원 확대 우선순위를 정해야 합니다. 과거 제한이 현재에도 동일한지는 재실행 전 미확인이며, 제품 전체 호환성을 이번에 판정하지 않습니다.",
+    "outcome": "구현 목록과 패키지 보존 검증이 있어도 실제 Excel에서 열기·수정·저장·재열기까지 승인됐다는 뜻은 아닙니다. 지원되지 않는 수식 범위나 개체가 있을 때 표시·거부·보존 정책을 어떤 수준으로 안내할지 정하면 좋겠습니다.",
+    "proposedTime": "전체 기존 글 검토·필요 논의 등록 20~35분의 공통 작업입니다.",
+    "actualTime": "논의 글 작성 2026-10-30 17:00:02 KST. 개별 제품 구현·QA 완료 시각이 아니며 전체 검토 시간은 별도 결과 보고서에 기록합니다.",
+    "xerjEvidence": "문서와 후속 보고서 대조 작업으로 제품 코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "토론",
+    "topic": "proposal",
+    "discussionState": "open",
+    "relatedReport": "projects/designdatatable/reports/2026-10-29-import-designdatatable-07a78230a6ec-v1.0.0.html",
+    "replyTo": "",
+    "decision": "",
+    "state": "progress"
+  }
+}

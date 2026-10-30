@@ -1,0 +1,33 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "discussion",
+    "title": "DataTable 문서 검증 오류 206건의 재촬영·정리 순서",
+    "summary": "누적 문서 검증 오류206건을 현재 제품 오류와 구분하고, 사용 중인 안내 화면부터 재촬영·대조할 우선순위와 완료 기준을 정합니다.",
+    "reporter": "Codex · 기존 보고서 검토",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "1. 실제 가이드가 참조하는 이미지와 보관 전용 이미지를 먼저 나눕니다.\n2. 현행 기능·주요 언어·사용 빈도를 기준으로 재촬영 순서를 정합니다.\n3. 캡처 시각·언어·소스 해시·실제 확인 범위를 함께 기록하고, 재촬영 없이 해시만 덮어 통과시키지 않습니다.",
+    "verification": "최신 후속 기록: [DataTable 모체 상속·공통 툴팁 연결 검증](../reports/2026-10-30-result-20261030074601296-v1.0.0.html)\n\n> 기존 문서의 206개 소스·이미지 해시 불일치에 대한 전체 재촬영·대조가 남아 있습니다.\n\n검토 방식: 보존된 글의 본문·제한·후속 기록을 대조했습니다. 제품 실행·재현·수정 검증을 새로 수행한 것이 아닙니다.\n\n[TurnRoom 이전의 DataTable 원본 대조 검증](../reports/2026-10-29-result-20261029145650024-v1.0.0.html)\n\n> 기존 캡처와 소스 해시의 불일치가 남아 있습니다.\n\n[문서 제목줄 조립과 배치 계산을 TurnRoom 공통 기반으로 통합](../../../projects/turnroom/reports/2026-10-30-result-20261030052851578-v1.0.0.html)\n\n> 과거 캡처/소스 해시 불일치 206건은 남아 실패합니다.",
+    "remaining": "가이드에 실제 쓰이는 화면의 우선순위, 언어별 확인 범위, 역사적 이미지 보관 방식을 정해야 합니다. 이번 검토에서 캡처를 다시 촬영하거나 206건의 검증 오류를 수정하지 않았습니다.",
+    "outcome": "후속 공통 UI 보고서에서도 과거 캡처·소스 해시 불일치 206건을 별도로 남기고 새 제목줄·복원 캡처만 통과로 구분했습니다. 기능 QA 통과와 문서 전체 통과를 섞지 않고, 어떤 화면부터 최신 근거로 바꿀지 결정할 필요가 있습니다.",
+    "proposedTime": "전체 기존 글 검토·필요 논의 등록 20~35분의 공통 작업입니다.",
+    "actualTime": "논의 글 작성 2026-10-30 17:00:02 KST. 개별 제품 구현·QA 완료 시각이 아니며 전체 검토 시간은 별도 결과 보고서에 기록합니다.",
+    "xerjEvidence": "문서와 후속 보고서 대조 작업으로 제품 코드 검색 불필요",
+    "priority": "high",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "토론",
+    "topic": "gap",
+    "discussionState": "open",
+    "relatedReport": "projects/designdatatable/reports/2026-10-30-result-20261030074601296-v1.0.0.html",
+    "replyTo": "",
+    "decision": "",
+    "state": "progress"
+  }
+}
