@@ -1,5 +1,228 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-original-icons-window-focus-20261030094307316-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-10-30-manual-original-icons-window-focus-20261030094307316-v1.0.1.md",
+    "date": "2026-10-30T09:43:07.316Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "original-icons-window-focus",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "원본 아이콘 공유와 창 선택 회귀 수정 · 실행 메뉴얼",
+      "summary": "진행 중 받은 새 메뉴얼 지침에 따라 이미 수행한 근거와 남은 공개 검증을 기록합니다.",
+      "reporter": "Codex",
+      "assignee": "Codex",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "다른 OS·고DPI·물리적 모니터 연결 변경은 미확인입니다. 과거 DataTable 전체 가이드 불일치 238건은 별도 남아 있습니다. 이번 변경의 26개 새 캡처 기록은 현재 소스와 일치합니다.",
+      "outcome": "원본 공유·창 선택 수정·패키지 설치 검증과 공개 보고서/8개 이미지 외부 200 확인을 마쳤습니다.",
+      "proposedTime": "40~80분",
+      "actualTime": "2026-10-30 17:16:52 KST 시작 → 2026-10-30 18:43:07 KST 최종 실제 창 회귀 및 보고서/이미지 공개 확인 완료, 86.3분. 이 메뉴얼 종료본의 배포는 다음 단계로 별도 확인합니다.",
+      "xerjEvidence": "Tools/Search/Xerj.ps1 Status 및 Search PreserveVisiblePeer 호출. 후보를 현재 WindowFocus/WindowFrame/WorkbookNativeWindow 소스와 네이티브 실행 기록으로 확인했습니다.",
+      "priority": "high",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "original-icons-window-focus",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "기존 DataTable 원본 아이콘·그리기를 공유하고 Pixora/DataTable 교차 선택 시 창 내려감을 수정한다.",
+      "completionCriteria": "원본 바이트·GUID 및 공통 그리기 확인, 실제 누름 전후 재현·회귀 QA, 1.2 설치와 설정 보존, 영향 화면 캡처·다국어 가이드 빌드·HTML 보고 배포 확인. 과거 전체 가이드 불일치는 숨기지 않고 별도 남긴다.",
+      "previousManual": "projects/turnroom/reports/2026-10-30-manual-20261030093737544-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원본 아이콘 모체 연결",
+          "action": "원본 아틀라스를 이동하고 GUID를 유지하며 두 UI에 공통 렌더러를 연결한다.",
+          "expected": "원본 바이트·GUID 동일, 동일 Paint 사용",
+          "qa": "IconProvenance와 실제 갤러리/두 제품 화면을 대조한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "원본 보존, Affinity 네이티브 원본 저장, 실제 갤러리 확인"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "창 선택 수정과 실제 입력 QA",
+          "action": "수정 전후 동일한 실제 held mouse 입력으로 네이티브 Z 순서를 비교한다.",
+          "expected": "동료 창 앞 유지, 직접 본체 선택과 뒤 창은 보존",
+          "qa": "36회 목록·16회 본문·2개 반대 조건 및 최대화·목록 복원 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "수정 전 실패/후 성공, 모든 해당 조건 통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "패키지·상속·설정 보존",
+          "action": "1.2 패키지 내보내기 후 실제 소비자 프로젝트에 설치한다.",
+          "expected": "공통 배치·상속 정상, 설정 보존, Development 미포함",
+          "qa": "108개 배치 및 소비자 import/migration 검사, 패키지 소스 대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "108 통과, 소비자 phase6 통과, 패키지 세 개 소스 일치"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "화면·가이드·공개 보고",
+          "action": "실제 화면을 갱신하고 가이드 빌드·보고서 v2 생성·사이트 검증 후 공개한다.",
+          "expected": "영향 캡처 소스 일치, 외부 HTML·이미지 링크 정상",
+          "qa": "26개 소스 해시, 9개 가이드 빌드, 사이트 검사와 Pages 배포/URL 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "26개 영향 캡처 소스 일치, 9개 가이드 빌드, HTML/링크/필터 검사, 보고서 5개·실제 이미지 8개 외부 200, Actions 41035016811 성공."
+        }
+      ],
+      "focusTasks": [
+        "T04"
+      ],
+      "scopeChange": "새 메뉴얼 지침이 작업 도중 도착하여 현재 증거와 남은 작업을 기록합니다. 과거 QA를 실행 전 계획으로 소급하지 않습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T18:37:25.356189+09:00",
+          "summary": "이미 실행한 해당 근거를 현재 소스/패키지와 재대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 보존, Affinity 네이티브 원본 저장, 실제 갤러리 확인",
+              "evidence": "TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-10-30T18:37:25.356189+09:00",
+          "summary": "이미 실행한 해당 근거를 현재 소스/패키지와 재대조",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "수정 전 실패/후 성공, 모든 해당 조건 통과",
+              "evidence": "TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-10-30T18:37:25.356189+09:00",
+          "summary": "이미 실행한 해당 근거를 현재 소스/패키지와 재대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "108 통과, 소비자 phase6 통과, 패키지 세 개 소스 일치",
+              "evidence": "TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-10-30T18:43:07.171457+09:00",
+          "summary": "영향 문서와 공개 주소 실제 응답 확인",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "26개 영향 캡처 소스 일치, 9개 가이드 빌드, HTML/링크/필터 검사, 보고서 5개·실제 이미지 8개 외부 200, Actions 41035016811 성공.",
+              "evidence": "Actions 41035016811 success · 새 보고서 5개 및 실제 화면 8개 HTTP HEAD 200",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "final",
+          "at": "2026-10-30T18:43:07.171457+09:00",
+          "summary": "현재 네 작업 버전의 전체 최종 QA · 실패한 과거 가이드는 별도 명시",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 보존, Affinity 네이티브 원본 저장, 실제 갤러리 확인",
+              "evidence": "TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "수정 전 실패/후 성공, 모든 해당 조건 통과 · 최종 네이티브 본문 16회와 반대 조건 2개 재실행 통과",
+              "evidence": "TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "108 통과, 소비자 phase6 통과, 패키지 세 개 소스 일치",
+              "evidence": "TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "26개 영향 캡처 소스 일치, 9개 가이드 빌드, HTML/링크/필터 검사, 보고서 5개·실제 이미지 8개 외부 200, Actions 41035016811 성공.",
+              "evidence": "TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030093737544-v1.0.0.html",
     "postPath": "projects/turnroom/posts/2026-10-30-manual-20261030093737544-v1.0.0.md",
     "date": "2026-10-30T09:37:37.544Z",
