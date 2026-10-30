@@ -1,5 +1,115 @@
 [
   {
+    "title": "공용 리그 행동 FBX 바인딩·빈 이동 상태 예외 수정",
+    "summary": "원본 키프레임·Unity 곡선 경로와 실행 예외를 대조해 리그 부모 계층과 미지정 중첩 상태 처리를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030185520988-v1.0.0.html",
+    "date": "2026-10-30T18:55:20.988Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Web 한국어 이름·채팅 입력 손실 수정",
+    "summary": "실제 Web 입력에서 ?만 전송된 실패를 확인하고 HTML 입력/조합 Enter·Unity 키보드 포커스를 연결했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030185520833-v1.0.0.html",
+    "date": "2026-10-30T18:55:20.833Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030185441628-v1.0.14.html",
+    "date": "2026-10-30T18:54:41.628Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 TPS 생존 확장 · 구조·채팅·장비12종·행동10종",
+    "summary": "동네 파밍·선택 구조·피로/스트레스·한국어 이름/말풍선, 필수 군복/생존 장비12종, 점프·숙이기·넘기·오르기와 무기 행동10클립을 실제 게임에 연결했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030185416169-v1.0.0.html",
+    "date": "2026-10-30T18:54:16.169Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030184201999-v1.0.13.html",
+    "date": "2026-10-30T18:42:01.999Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030183736235-v1.0.12.html",
+    "date": "2026-10-30T18:37:36.235Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030183259357-v1.0.11.html",
+    "date": "2026-10-30T18:32:59.357Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030182412657-v1.0.10.html",
+    "date": "2026-10-30T18:24:12.657Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030181841256-v1.0.9.html",
+    "date": "2026-10-30T18:18:41.256Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030181008180-v1.0.8.html",
+    "date": "2026-10-30T18:10:08.180Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030174605603-v1.0.7.html",
+    "date": "2026-10-30T17:46:05.603Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "구조·생존·주변 채팅 중간 보고 · 실제 웹20개 검사 통과",
     "summary": "18개 동네 파밍 장소, 선택 구조·호위·인계, 주기 생존/피로/스트레스, 한국어 주변 채팅·이름표/말풍선을 구현했습니다.",
     "project": "last37n",
