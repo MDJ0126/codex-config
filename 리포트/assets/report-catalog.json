@@ -1,5 +1,85 @@
 [
   {
+    "title": "반복 캐릭터 빌드의 참조 없는 AvatarMask 누적 수정",
+    "summary": "실제 자산 참조 그래프에서32객체 중10개의 미참조 마스크를 확인해 제거하고 반복 생성 파일을 고정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030211946330-v1.0.0.html",
+    "date": "2026-10-30T21:19:46.330Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 경량화1차: 용량 증가 차단과6.78MB 검증 후보",
+    "summary": "초기11,095,729→6,775,800바이트 후보를 실제 게임에서 검증했습니다. 마지막 적용 용량도 증가할 수 없도록 고정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030211946118-v1.0.0.html",
+    "date": "2026-10-30T21:19:46.118Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030211626816-v1.0.5.html",
+    "date": "2026-10-30T21:16:26.816Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030205224247-v1.0.4.html",
+    "date": "2026-10-30T20:52:24.247Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030205140623-v1.0.3.html",
+    "date": "2026-10-30T20:51:40.623Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030203509080-v1.0.2.html",
+    "date": "2026-10-30T20:35:09.080Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030202458216-v1.0.1.html",
+    "date": "2026-10-30T20:24:58.216Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030201855189-v1.0.0.html",
+    "date": "2026-10-30T20:18:55.189Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "수원 도시 최종 전달·화재 상세 실행 화면",
     "summary": "최종 전달 기록에 불꽃과 연기가 직접 보이는 실제 게임 상세 장면을 추가합니다.",
     "project": "last37n",

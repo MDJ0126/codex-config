@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "last37n",
+    "kind": "bug",
+    "title": "반복 캐릭터 빌드의 참조 없는 AvatarMask 누적 수정",
+    "summary": "실제 자산 참조 그래프에서32객체 중10개의 미참조 마스크를 확인해 제거하고 반복 생성 파일을 고정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "Unity6000.0.83f1, Generic 캐릭터·상체행동 마스크, Windows/Web.",
+    "steps": "컨트롤러의 모든 하위 자산과 직렬화 참조 도달 그래프를 비교하고 CharacterAssets.Prepare를 반복 실행합니다.",
+    "expected": "실제로 사용하는 마스크1개와 같은 행동 그래프를 유지하며 반복 빌드가 불필요한 자산을 추가하지 않습니다.",
+    "actual": "기존 컨트롤러에 마스크11개가 있었고 그중10개는 현재 컨트롤러에서 도달할 수 없었습니다. 실제 분석 보고서는 컨트롤러에102792bytes를 기록했습니다.",
+    "cause": "SurvivalActionAssets.Configure가 매번 새 AvatarMask를 AddObjectToAsset로 추가하지만 이전 레이어 제거 후 그 마스크를 제거하지 않았습니다. 현재 소스와 실제 SerializedObject 참조 그래프가 이를 확인했습니다.",
+    "changes": "현재 컨트롤러에서 도달할 수 없는 허용 하위 자산만 정리합니다. 예상하지 못한 자산은 자동 삭제하지 않고 실패 처리합니다. 입력/출력 파일 SHA와 대상이 일치하는 경우 캐릭터 재생성을 건너뛰는 캐시를 추가했습니다.",
+    "verification": "첫 감사32객체/도달22/미참조10/마스크11에서 정리 후22/22/0/1을 확인했습니다. 상태12·BlendTree2·StateMachine2는 유지했습니다. 원본14클립73444본자세·원본FBX·반복Prepare 파일동일, Native23 및 실제 Web14행동 검사/오류0을 통과했습니다. 실패한 모션 압축 판정도 별도로 보존했습니다. docs/qa/lightweight/attempts/character-compression-01.json, character-compression.json 및 web-actions/result.json이 근거입니다.",
+    "remaining": "전역 지침의 근거/실행 검증과 중복되는 프로젝트별 상세 해결이므로 이 버그만으로 새 전역 규칙을 추가하지 않았습니다.",
+    "outcome": "마스크11→1·자산32→22·미참조10→0을 확인했습니다.14클립/실제 행동을 유지하고 반복Prepare의 컨트롤러/프리팹 바이트 동일을 검증했습니다.",
+    "proposedTime": "6시간 예산. 시작2026-10-31 05:16:01 KST, 종료 예산11:16:01 KST.",
+    "actualTime": "중간 기록 63분45초 경과, 2026-10-31 06:19:45 KST. 전체 작업은 진행 중이며 완료 시각이 아닙니다.",
+    "xerjEvidence": "XERJ 도구 미제공 확인 후 rg·현재 소스/실제 실행·해시로 대체했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  }
+}
