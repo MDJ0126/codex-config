@@ -1,5 +1,35 @@
 [
   {
+    "title": "Blender 설치와 리깅 생존자·걷기·달리기·수색 애니메이션 적용",
+    "summary": "Blender 5.2.3 LTS 설치·CLI 실행을 확인하고 기본 도형 캐릭터를 교체했습니다. 실제 게임 서버 이동과 4개 모션, 수색 후 아이템 증가를 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030090740781-v1.0.0.html",
+    "date": "2026-10-30T09:07:40.781Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Blender 캐릭터 제작·애니메이션 연동 가능 범위 확인",
+    "summary": "일반 설치 경로와 등록 프로그램에서 Blender를 찾지 못했습니다. 설치·실행이 확인되면 Python 배치 제작과 Unity Humanoid 연동을 진행할 수 있습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030083409887-v1.0.0.html",
+    "date": "2026-10-30T08:34:09.887Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "지도 중심 화면을 Unity TPS 생존 프로토타입으로 전환",
+    "summary": "3인칭 캐릭터·추적 카메라·WASD 서버 이동·3D 거리를 구현했습니다. 빌드와 수색·배낭은 실행 확인했으며 수동 이동 검증은 Esc 중단으로 남았습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030082914773-v1.0.0.html",
+    "date": "2026-10-30T08:29:14.773Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "기존 프로젝트 글308건 검토와 필요한 토론12건 등록",
     "summary": "9개 프로젝트의 원문308건을 대조해 새 토론12건을 연결했습니다. 해결·중복 항목은 제외했고 전부 논의 중입니다. 기존 토론1건과 함께 총13건을 볼 수 있습니다.",
     "project": "codex-config",
@@ -20,6 +50,16 @@
     "replyTo": "",
     "topic": "gap",
     "discussionState": "open"
+  },
+  {
+    "title": "Unity 6000.0.83f1 기반 수원 생존게임 첫 로컬 프로토타입",
+    "summary": "Unity Windows 빌드와 서버 접속·이동·수색을 실제 실행했습니다. 서버 테스트 7개가 통과했으며 DB 연결과 브라우저 지원은 후속 단계입니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030080116048-v1.0.0.html",
+    "date": "2026-10-30T08:01:16.048Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
   },
   {
     "title": "선택형 모델의 실측 품질·메모리·GGUF 호환성 기준",
