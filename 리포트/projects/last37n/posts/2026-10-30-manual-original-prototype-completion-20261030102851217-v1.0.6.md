@@ -1,0 +1,113 @@
+---
+title: 최초 기획 잔여 범위 전체 구현·실행·반복 QA 메뉴얼
+date: 2026-10-30T10:28:51.217Z
+version: v1.0.6
+status: 작업 중
+state: progress
+project: last37n
+type: 작업 메뉴얼
+report_kind: manual
+category: 순차 작업 · 반복 QA
+summary: DB·생존·실제 수원 공간·멀티 월드·브라우저·100명 검증까지 전체 범위를 유지하고 순차 실행합니다.
+format: tracefolio-v2
+priority: normal
+manual_id: original-prototype-completion
+round: 2
+manual_state: active
+payload: ../assets/submissions/2026-10-30-manual-original-prototype-completion-20261030102851217-v1.0.6.json
+---
+
+## 목표와 완료 기준
+
+수원 기반 Unity TPS 생존 샌드박스의 최초 프로토타입 잔여 요구사항을 로컬 환경에서 구현·적용·실행 검증합니다. 전투·세력·차량 등 명시된 후속 확장은 제외합니다.
+
+완료 기준: 설정 기반 생존·수색·NPC·중립 제한, 실제 수원 원본 공간과 검증된 시작점, PostgreSQL/PostGIS 원자 저장·복원, 독립 월드·주변 채팅·재접속, Windows와 실제 브라우저 플레이, 100명 동시 접속 부하와 전체 회귀 QA, 실행 문서와 실제 화면을 포함한 외부 보고서 배포가 모두 확인되어야 합니다.
+
+후속 2회차 · 순차 진행 · 전체 12개 · 이번 실행 T05, T06, T07
+
+## 순차 작업 메뉴얼
+
+| 순서 | 작업 | 실행 절차 | 완료 기준 | QA 절차 | 상태 |
+| --- | --- | --- | --- | --- | --- |
+| T01 | 기준점과 전체 실행 범위 보존 | 현재 소스를 로컬 Git 기준점으로 보존하고 최초 기획·기존 검토·실행 메뉴얼 지침을 대조합니다. | 복원 가능한 기준 커밋과 원래 전체 범위를 유지한 유효 메뉴얼이 존재합니다. | 기준 커밋을 실제 조회하고 JSON 계약 검사를 실행합니다. | 완료 |
+| T02 | PostgreSQL·PostGIS 설치와 공간 쿼리 | 프로젝트 전용 바이너리·DB·앱 계정을 구성하고 PostGIS를 활성화합니다. | 실제 앱 접속·좌표 변환이 성공하며 앱 계정은 슈퍼유저가 아닙니다. | db-doctor.ts를 실행해 버전·ST_Transform·계정 권한을 확인합니다. | 완료 |
+| T03 | 생존·휴식·수색·NPC·월드 재고 규칙 | 미정 수치를 provisional 설정으로 분리하고 활력·고갈 효과·거래·대사·월드별 물자를 구현합니다. | 수치 변화와 행동 제한, 무게·재고·거래·중립 제한이 서버에서 일관되게 판정됩니다. | 고정 시간·재현 가능한 난수로 정상/경계/실패·중복·월드 분리 테스트를 실행합니다. | 완료 |
+| T04 | 트랜잭션 저장·중복 방지·복원 | PostGIS 저장소를 서버에 연결하고 기존 JSON 상태를 보존·이관합니다. | 아이템·재고·영수증이 함께 커밋/롤백되며 재시작과 재시도에도 보존됩니다. | 실제 DB에서 실패 유도·동일 ID 재전송·서버 재시작·공간 거리·동시 요청을 검증합니다. | 완료 |
+| T05 | 수원 원본 지리 데이터와 안전한 시작점 | 라이선스를 확인한 실제 수원 경계·도로·건물을 확보하고 출처를 기록합니다. | 가상 격자가 아닌 원본 좌표가 사용되고 시작점이 범위·건물·중립/위험 조건을 통과합니다. | 원본 OSM 식별자·좌표와 결과를 대조하고 폴리곤·충돌·스폰 테스트를 실행합니다. | 완료 |
+| T06 | Unity 실제 공간과 생존 플레이 흐름 | 지리 형상·건물·수색 장소·캠프를 표시하고 생존·상점·치료·휴식·채팅 UI를 연결합니다. | 탐색→수색→소비/회복→캠프 거래/치료가 실제 TPS에서 동작합니다. | Windows 빌드 후 실제 서버 연동 플레이·조작·모션·HUD를 실행 검증하고 실제 화면을 캡처합니다. | 완료 |
+| T07 | 멀티 월드·접속 관리·관심 영역 | 월드별 100명 상한과 NPC/아이템 상태 분리, 재접속·주변 채팅·근처 플레이어 동기화를 완성합니다. | 월드 간 상태가 섞이지 않고 연결 교체·이탈·복원·관심 영역이 정확합니다. | 서로 다른 세션·두 월드에서 실제 클라이언트와 네트워크 통합 QA를 수행합니다. | 진행 |
+| T08 | Unity Web 모듈과 브라우저 통신 | 동일 Unity 버전의 Web 빌드 환경과 WebSocket JS 연결 계층을 설치·구현합니다. | 실제 Web 빌드가 생성되고 네트워크·저장·맵 경로가 브라우저 제약에 맞습니다. | Web 빌드·자바스크립트 메시지·세션 복원 테스트를 실행합니다. | 대기 |
+| T09 | 실제 브라우저 플레이와 상호 운용 | 로컬 HTTP 환경에서 Web 클라이언트를 실행하고 Windows 클라이언트와 같은 월드에 접속합니다. | 브라우저 이동·수색·채팅·접속 복원과 서로의 상태가 실제 화면에서 확인됩니다. | 실제 브라우저 렌더·입력·연결 복구·동시 Windows 접속을 검증합니다. | 대기 |
+| T10 | 100명 부하와 장애 회귀 검증 | 월드별 부하와 지연/연결 종료/재시작 시나리오를 실행하고 발견 문제를 수정합니다. | 100명 동시 입력·상태 갱신이 검증되고 지연·오류·복원 결과가 측정됩니다. | 100개 실제 WebSocket 클라이언트로 위치·채팅·거래·월드 격리·재접속을 검사하고 재QA합니다. | 대기 |
+| T11 | 재현 가능한 실행 도구와 문서 | 로컬 설치·기동·중지·복원·빌드 도구와 README 구현 현황을 최종 결과에 맞춥니다. | 다음 실행에서 소스와 설명을 따라 Windows/브라우저/DB를 기동할 수 있습니다. | 문서의 명령을 실제 실행하고 라이선스·설정·비밀정보 제외·결과 화면을 확인합니다. | 대기 |
+| T12 | 전체 최종 QA와 아카이브 배포 | 전체 현재 revision을 함께 회귀 QA하고 실제 화면·시간·남은 제한을 보고합니다. | 모든 현재 작업 QA와 전체 final QA가 통과하고 보고서 외부 URL도 확인됩니다. | 전체 자동 검사·Windows/브라우저 실행·DB 복원·100명 결과를 재검증하고 Pages 배포 및 링크를 확인합니다. | 대기 |
+
+## QA 반복 기록
+
+### Q01 · step · 2026-10-30T09:35:20.375Z
+
+기준점과 메뉴얼 전체 범위 검사
+
+- T01 r1 · pass: 기준 커밋 존재, 최초 검토 보고서 및 전체 12개 실행/QA 기준 보존, JSON 계약 검사 성공 · 근거: git rev-list --max-parents=0 HEAD; validateReport(manual, project registry)
+### Q02 · step · 2026-10-30T09:35:20.551Z
+
+실제 DB 설치·공간 연산·권한 검사
+
+- T02 r1 · pass: PostGIS 좌표 변환이 POINT를 반환하고 app_is_superuser=false입니다. · 근거: node server/tools/db-doctor.ts; 로컬 증거 docs/qa/database-install.json (원문에는 로컬 경로가 있어 공개 첨부하지 않음)
+### Q03 · step · 2026-10-30T09:40:35.721Z
+
+현재 생존·수색·NPC 도메인 QA
+
+- T03 r1 · pass: node --test server/test/game.test.ts: 16개 통과, 실패 0. 서버/DB 통합 QA를 이 결과에 포함하지 않습니다. · 근거: 현재 server/test/game.test.ts 실제 실행 결과와 server/src/game.ts 및 config/content 파일 대조
+### Q04 · step · 2026-10-30T09:50:58.646Z
+
+실제 DB 저장·오류·재시도·이관 QA
+
+- T04 r1 · pass: TypeScript 검사 성공, 현재 전체 27개 테스트 통과. 실제 PostgreSQL WebSocket 프로세스 재시작과 JSON 백업 동일성·원문 토큰 제외를 확인했습니다. 초기 TypeScript 검사에서 미사용 자체 WebSocket 파일의 TS2345가 있었고 표준 ws 교체 후 해당 파일 제거·재검사를 수행했습니다. · 근거: node --test server/test/*.test.ts; pnpm -C server exec tsc --noEmit; docs/qa/postgres-transactions.json; docs/qa/database-runtime.json
+### Q05 · regression · 2026-10-30T09:50:59.352Z
+
+DB 연결 이후 생존·거래 회귀 QA
+
+- T03 r1 · pass: 전체 27개 테스트 실행에 현재 생존·수색·NPC 도메인 16개가 포함되어 모두 통과했습니다. · 근거: server/test/game.test.ts 및 동일 전체 회귀 실행 결과
+### Q06 · step · 2026-10-30T09:52:38.221Z
+
+수원 경계 원본 첫 요청 실패
+
+- T05 r1 · fail: Overpass 주 서버가 HTTP 502를 반환했고 모든 query worker가 사용 중이며 queue가 가득 찼다고 응답했습니다. 지리 데이터는 아직 확보하지 못했습니다. · 근거: node server/tools/overpass.ts 실제 HTTP 502 응답. 공식 공개 인스턴스 목록과 이용 제한을 확인한 대체 접근을 진행합니다.
+### Q07 · step · 2026-10-30T10:13:11.265Z
+
+실제 수원 원본 전환 중 회귀 실패와 수정 기록
+
+- T05 r1 · fail: 가상 블록 좌표를 전제한 이동 테스트 2개와 구 렌더러 잔여 코드의 Unity 컴파일 오류를 실제 실행으로 확인했습니다. 테스트 경로를 실제 개방 도로로 바꾸고 잔여 코드를 제거한 뒤 서버 29개 통과 및 Windows 빌드 성공을 재확인했습니다. 물가·제한 영역을 추가 추출하여 최종 공간 QA를 진행합니다. · 근거: node --test server/test/*.test.ts: 29 pass, 0 fail; .runtime/build-windows.log exit 0 after initial compile failure
+### Q08 · step · 2026-10-30T10:14:50.526Z
+
+원본 대안 확보·공간 최종 QA 및 회귀 통과
+
+- T05 r1 · pass: 수원 행정 경계·도로·건물·물가·접근 제한 및 보행 다리를 서버에서 실제 조회하고 검사했습니다. 시작 후보·수색 장소·NPC 모두 수원 내부의 개방 보행 도로 위이며 건물/물가/제한 영역을 피합니다. 원본은 공식 체크섬과 일치하고 파생 데이터 출처·임시 높이를 기록했습니다. 전체 34 tests pass, 0 fail, 0 skipped 및 tsc 통과. · 근거: server/world-data/suwon/provenance.json; server/test/geography.test.ts 5개; docs/qa/geography-runtime.json; 실제 node --test server/test/*.test.ts
+### Q09 · step · 2026-10-30T10:16:33.370Z
+
+공간 HTTP 실행 근거 시각 정정 및 재검증
+
+- T05 r1 · pass: Q08 작성 직전 제한된 셸의 로컬 HTTP 요청은 소켓 접근 거부로 실패했으므로 그 시점의 HTTP 완료 표현은 조급했습니다. 허용된 환경에서 10:15:05Z 실제 재요청하여 PG health와 건물579·도로454·영역5의 원본 기반 구역 응답을 확인하고 docs/qa/geography-runtime.json을 실제 응답으로 갱신했습니다. 공간 5개 및 전체34개 테스트도 모두 실제 통과했습니다. · 근거: docs/qa/geography-runtime.json checkedAt 2026-10-30T10:15:05.2399785Z
+### Q10 · step · 2026-10-30T10:28:51.058Z
+
+실제 클라이언트 첫 회차 실패 보존
+
+- T06 r1 · fail: 실제 캡처에서 건물 벽이 검게 나왔으며 앞뒤 삼각형의 법선 상쇄를 코드로 확인했습니다. 첫 market 실행은 이동 완료 null 처리 차이로 검사기가 timeout되어 실패했습니다. batchmode의 자체 ScreenCapture 파일도 생성되지 않았습니다. 실패 JSON과 실제 화면을 보존했습니다. · 근거: docs/qa/attempt-01/market.json 및 market-initial.png; .runtime/client-qa/market.log 이력
+### Q11 · step · 2026-10-30T10:28:51.059Z
+
+Unity 실제 TPS·생존·NPC 재QA와 상점 HUD 확인
+
+- T06 r1 · pass: 법선·이동 완료 검사 수정 후 실제 Windows 플레이어 market/merchant/medic/guard/survivor 다섯 시나리오가 모두 종료 코드0 및 passed=true입니다. 걷기2.42m·달리기6.57m, 수색·동일요청재시도·소비·휴식·채팅·구매·판매·치료·대화를 DB 연결 서버 상태로 검증했습니다. 비표시 Windows 데스크톱에서 실제 상점 HUD PNG를 생성하고 직접 열어 한글·재고·가격·대화·생존 바 표시를 확인했습니다. · 근거: docs/qa/runtime/*.json; merchant-dialogue-hud.png; tools/verify-windows.ps1; tools/verify-offscreen.ps1
+
+## 남은 작업과 다음 반복
+
+T07 월드 선택·자동 재접속·재시도 UI와 실제 멀티플레이를 진행합니다. Web 모듈은 공식 서명 확인 및 다운로드 완료, 자동 설치 실행에서 Windows 권한 상승 필요 오류를 확인했으며 T08에서 처리합니다.
+
+이전 회차: [메뉴얼 열기](../../../projects/last37n/reports/2026-10-30-manual-original-prototype-completion-20261030101633490-v1.0.5.html)
+
+## 작업 시간
+
+- 제안 시간: 전체 잔여 범위 4~10시간, 최초 DB·생존 실행 단계 30~60분 예상으로 18:17에 안내했습니다.
+- 실제로 완료된 시간: 전체 작업 시작 2026-10-30 18:17:30 KST(Asia/Seoul). 진행 중이며 완료 시각이 아닙니다.
+- XERJ: 미사용 — XERJ MCP/검색 스크립트가 제공되지 않아 rg와 현재 코드·설정·실행 결과를 대조합니다.

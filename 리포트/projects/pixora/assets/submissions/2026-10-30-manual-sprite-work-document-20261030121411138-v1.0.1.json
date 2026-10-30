@@ -1,0 +1,151 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "다시 편집 가능한 스프라이트 작업 원본 저장",
+    "summary": "PNG와 별도로 이미지·설정·촬영 원본을 저장하고 다시 열어 재출력합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "보고서 공개 배포와 외부 HTML/이미지 확인",
+    "outcome": "구현·실제 입력·전체 재출력 및 패키지 가져오기 검증 통과. 코드 푸시 완료, 공개 보고서 확인 중.",
+    "proposedTime": "20~40분",
+    "actualTime": "23.3분 · 구현/실행 검증 및 코드 푸시 확인 2026-10-30 21:14:09 KST. 공개 배포 확인은 후속 메뉴얼에 기록.",
+    "xerjEvidence": "XERJ SaveProfile 검색을 사용하고 현재 세션·프로필·내보내기 소스를 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "sprite-work-document",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "독립된 Pixora 작업 원본을 저장하고 다시 열어 수정·재출력한다.",
+    "completionCriteria": "실제 2D·3D 저장/다시열기/재출력 대조, 이미지·팔레트 복사 독립성 및 자동 동반 저장 확인, 문서와 실제 실행 화면·HTML 보고서.",
+    "previousManual": "projects/pixora/reports/2026-10-30-manual-20261030115248925-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "작업 원본 저장 구현",
+        "action": "독립 이미지/팔레트와 전체 세션을 저장하는 버전 있는 에셋 구현",
+        "expected": "입력·톤·그리드·촬영·애니메이션 설정 보존",
+        "qa": "재로드 및 원본 변경 후 저장 사본 독립성 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "20개 저장/재열기 검사, 2D/3D 전체 PNG 동일성, 실제 버튼 및 별도 프로세스/패키지 가져오기 통과."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "창 및 내보내기 연결",
+        "action": "저장/열기/복사와 결과 동반 저장 연결",
+        "expected": "원본 더블클릭으로 별도 창 복구",
+        "qa": "실제 UI 조작과 2D/3D 재출력 픽셀 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "20개 저장/재열기 검사, 2D/3D 전체 PNG 동일성, 실제 버튼 및 별도 프로세스/패키지 가져오기 통과."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서와 결과 보고",
+        "action": "9언어 설명과 실제 화면·HTML 공개 보고",
+        "expected": "현재 동작과 제한이 명확한 보고",
+        "qa": "가이드 빌드·링크 및 외부 보고서 검증",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "현재 가이드와 문서 검사 통과. 공개 배포 확인 중."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T21:05:32+09:00",
+        "summary": "작업 원본 저장/열기와 초기 개발 문서 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "20개 원본·설정·다중창 저장 검사 통과",
+            "evidence": "TurnRoom Artifacts/SpriteWorkQA 및 Artifacts/LocalizedGuideVerification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 열기/저장과2D/3D 재출력 동일성 확인",
+            "evidence": "TurnRoom Artifacts/SpriteWorkQA 및 Artifacts/LocalizedGuideVerification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존 개발 문서 이미지의 상위 폴더 상대 경로가 한 단계 잘못되어 링크 검사 실패",
+            "evidence": "TurnRoom Artifacts/SpriteWorkQA 및 Artifacts/LocalizedGuideVerification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-10-30T21:14:09.232193+09:00",
+        "summary": "경로 수정 후 문서·배포 패키지 회귀",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 패키지 실제 설치 후 디스크 읽기/참조 검사 통과",
+            "evidence": "TurnRoom Artifacts/SpriteWorkQA 및 Artifacts/LocalizedGuideVerification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "9언어108개 장/90코드와 개발 문서11장/7이미지 링크 통과; 공개 배포는 진행 중",
+            "evidence": "TurnRoom Artifacts/SpriteWorkQA 및 Artifacts/LocalizedGuideVerification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

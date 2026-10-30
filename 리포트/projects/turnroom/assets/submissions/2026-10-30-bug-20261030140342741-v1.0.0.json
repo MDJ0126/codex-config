@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "bug",
+    "title": "최소화 목록 선택 중 전체 창 깜박임 재발 경로 수정",
+    "summary": "기존 공개 접관·교차 포커스 보고를 대조해 클릭 전 취소와 순차 재정렬을 수정했습니다. 실제 깜박임 제거는 검증 중입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Windows · Unity6000.0.83f1 · Templete1.2.4/API1",
+    "steps": "사용자 관찰: 최소화 목록에서 다른 창을 선택하면 모든 창이 깜박입니다. 이번 회차는 컴퓨터 제어 보류 상태여서 같은 네이티브 클릭을 자동 재현하지 않았습니다.",
+    "expected": "선택한 창만 필요한 복원을 수행하며 다른 창을 숨기거나 중간 순서로 반복 노출하지 않습니다.",
+    "actual": "사용자가 기존 문제의 재발을 확인했습니다. 소스 대조에서 MouseDown의 StopHover가 접관 전에 peek을 취소하는 경로와 이전 창을 개별 SetWindowPos로 재배치하는 경로를 확인했습니다.",
+    "cause": "확인된 코드 경로: 미리보기 접관 이전의 hover 취소가 기존 접관 우회로 이어지고, 그룹 선택은 개별 창 재정렬을 수행했습니다. 이 두 동작을 수정했습니다. 실제 화면 깜박임 전체의 최종 근본 원인으로 확정하지는 않았습니다.",
+    "changes": "[이전 접관 안정성 보고](https://mdj0126.github.io/codex-config/projects/designdatatable/reports/2026-10-29-import-designdatatable-f732f2e880b8-v1.0.0.html)와 [교차 선택 보고](https://mdj0126.github.io/codex-config/projects/turnroom/reports/2026-10-29-bug-20261029183833461-v1.0.0.html)의 공개 HTML을 직접 조회(HTTP200)하고 보존 원문과 현재 소스를 비교했습니다. 이전 접관 보고는 실제 Windows 클릭 시 깜박임이 미검증임을 명시하고 있었습니다.\n\n기본 목록과 오버플로 목록 모두 MouseDown 취소보다 먼저 활성 peek을 접관합니다. 닫기·가운데/오른쪽 클릭·일반 선택은 기존 경로를 유지합니다. 이미 표시된 창은 불필요한 managed Focus→재정렬→native 활성화를 반복하지 않고 필요한 활성화만 수행합니다.\n\nIWindowFocusBatchHost와 공통 RestackNativePeers를 추가했습니다. 현재 호스트는 선택 창 앞뒤를 개별 갱신하지 않고 Begin/Defer/EndDeferWindowPos 배치로 처리합니다. 이미 앞에 있는 창과 숨김·최소화·무관한 창은 복원하지 않습니다. API1을 유지하고 양 제품의 최소 모체를1.2.4로 갱신했습니다.\n\n교훈은 프로젝트 AGENTS에 반영했습니다: 최종 visible 상태만으로 클릭 중 깜박임을 통과 처리하지 않고 SHOW/HIDE 및 중간 프레임을 확인합니다. 전역은 기존 증거·실제 실행 검증 규칙과 중복되어 변경 없음입니다.",
+    "verification": "기존 미리보기/접관/타이밍/핸들·화면 경계 검사151개와 신규 회귀47개, 총198개가 무창 Unity에서 통과했습니다. 실제 shelf 접관 메서드를 가짜 lease로 호출하여 Commit1회/Cancel0회를 확인했고, 그룹 선택이 단일 배치 호스트 호출을 사용하며 최소화 창을 제외함을 확인했습니다. 1~32개 그룹의 계획, 이미 보이는 창 무변경, 중복·무관한 핸들 제외를 검사했습니다. 실제 Win32 배치 자체와 픽셀 깜박임은 실행 검증하지 않았습니다.\n\n읽기 전용으로 기존 Unity 프로세스의 창 메타데이터 이벤트를30초 관찰했지만 해당 구간에 이벤트가 없었습니다. 이것은 재현 또는 깜박임 없음의 증거가 아닙니다. 마우스·키보드·전면 창 변경·화면 캡처를 수행하지 않았습니다.\n\n[Microsoft EndDeferWindowPos 문서](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-enddeferwindowpos)의 단일 화면 갱신 주기 일괄 변경 계약을 대조했습니다. 패키지는 이번 수정 파일의 해시만 검증했으며, 동시에 수정 중인 무관한 워크북 파일을 포함하거나 푸시하지 않았습니다.",
+    "remaining": "사용자 화면 제어 보류가 유지됩니다. 실제 목록/오버플로/썸네일 클릭, 양방향 교차 선택, 비선택 창 SHOW/HIDE와 중간 프레임·미저장 문서 유지 검증이 남았습니다. 새로운 실제 화면을 캡처하지 않았으며 과거 화면으로 최종 결과를 대신하지 않았습니다. 기존 해결 보고는 덮어쓰지 않고 이번 재발 보고를 검증 중으로 남깁니다.",
+    "outcome": "클릭 전 미리보기 접관, 중복 활성화 감소, 공통 배치 재정렬 구현. 기존 검사 포함198개 무창 검사 통과. 전체 시각 검증은 미완료.",
+    "proposedTime": "15~30분",
+    "actualTime": "28.9분 · 구현/무창 회귀 및3cfedb3e 푸시 확인 2026-10-30 23:03:33 KST. 최종 네이티브/화면 검증은 사용자 제어 보류로 미완료.",
+    "xerjEvidence": "XERJ RestoreFocus 검색 후 공통 포커스/목록/네이티브 소스 및 공개 과거 보고를 대조.",
+    "priority": "high",
+    "severity": "major",
+    "xerjUsage": "사용",
+    "type": "버그",
+    "workflow": "in_progress",
+    "state": "progress"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora 기본 강조색 블랙 적용",
+    "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 제목줄·선택 상태·팝업의 라이트/다크 화면 확인은 사용자 제어 보류로 남아 있습니다. 설치용 패키지 갱신과 별도 검사 결과는 저장소 Artifacts/BlackAccent에 기록합니다.",
+    "outcome": "코드와 기본값/사용자 지정 검사 통과. 실제 화면 검증 보류.",
+    "proposedTime": "2~5분",
+    "actualTime": "7.1분 · 코드/무창 값 검사 완료 2026-10-30 22:11:46 KST. 최종 화면 확인은 사용자 제어 보류로 미완료.",
+    "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-black-accent",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "제목줄·선택·기본 버튼과 선택기 팝업에 중성 블랙 기본 강조색을 적용한다.",
+    "completionCriteria": "기본값 RGB24/24/24와 공통 사용자 지정 유지 확인, 최종 화면은 제어 보류 해제 후 확인.",
+    "previousManual": "projects/pixora/reports/2026-10-30-manual-20261030130849009-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "블랙 강조색 연결과 검증",
+        "action": "Pixora 제품 기본 강조색과 팝업 공급자를 연결하고 기존 테마 선택과 DataTable 경로는 유지한다.",
+        "expected": "기본 강조색#181818, 명시적 공통 사용자 지정 유지",
+        "qa": "무창 컴파일·기본값/사용자 지정 검사 후 실제 화면 확인",
+        "dependsOn": [],
+        "status": "blocked",
+        "revision": 1,
+        "result": "기본 블랙/사용자 지정 검사 통과. 사용자 화면 제어 중단 지시에 따라 실제 화면 확인은 보류."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T22:11:46.232042+09:00",
+        "summary": "코드·값 확인 완료, 실제 화면은 사용자 요청으로 보류",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "무창 컴파일/기본값과 사용자 지정 검사 통과. 실제 UI 색상 캡처 미실행.",
+            "evidence": "Artifacts/BlackAccent/Verification.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}

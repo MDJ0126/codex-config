@@ -1,0 +1,131 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "공통 입력 행 정렬 수정 · 실행 메뉴얼",
+    "summary": "벡터 축·자산 선택·숫자·슬라이더의 실제 배치를 대조해 모체에서 정렬합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공개 보고서 배포·외부 링크 확인",
+    "outcome": "구현과 실제 Unity 회귀 및 패키지 가져오기 통과. 공개 보고서 배포 확인 중.",
+    "proposedTime": "20~40분",
+    "actualTime": "121.2분 · 구현/실행 검증 시각 2026-10-30 20:46:21 KST. 공개 배포 확인은 후속 메뉴얼에 기록.",
+    "xerjEvidence": "XERJ Vector3Field 검색 결과에 해당 Pixora 소스가 누락되어 rg로 대체하고 현재 소스를 직접 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "field-row-alignment",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "Pixora 3D 패널의 라벨·입력·선택 버튼 행 높이와 세로 중심을 공통 템플릿에서 맞춘다.",
+    "completionCriteria": "실제 변경 전후 UI 배치 수치·화면 대조, 3D와 2D·설정 및 테마 회귀, 영향 가이드 갱신과 HTML 보고서 공개 확인.",
+    "previousManual": "projects/turnroom/reports/2026-10-30-manual-20261030094631537-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 배치 재현과 원인 확인",
+        "action": "기존 UI의 실제 계층과 라벨/입력/선택기 bounds를 기록한다.",
+        "expected": "불일치의 소스와 실제 수치 확인",
+        "qa": "3D UI 스크린샷 및 각 필드 worldBound 비교",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "변경 전후 실제 bounds·화면과 현재 회귀 결과 확인."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "공통 필드 행 정렬과 회귀",
+        "action": "모체의 필드별 행/내부 요소 규칙을 정의하고 제품별 중복을 제거한다.",
+        "expected": "행 높이·라벨/입력 중심 일치, XYZ/선택기 정상",
+        "qa": "벡터·Float/Int·Object·Slider·Toggle·Popup 검사 및 2D/설정/두 테마 회귀",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "변경 전후 실제 bounds·화면과 현재 회귀 결과 확인."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서와 공개 결과 검증",
+        "action": "영향 화면과 설명을 갱신하고 JSON v2 보고서를 등록한다.",
+        "expected": "현재 소스 기록·다국어 빌드·외부 HTML/이미지 정상",
+        "qa": "소스 해시 대조, 가이드 빌드, 사이트 검사와 실제 외부 URL 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자 추가 지적에 따라 T02를 revision2로 확대: 내부 체크박스·선택기·스포이트 디자인과 실제 입력 완료 경로를 포함.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T19:00:00+09:00",
+        "summary": "기존 행 및 첫 수정 확인·내부 페이스 미수정 보존",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 bounds와 화면 기록",
+            "evidence": "TurnRoom 저장소 Artifacts/FieldAlignmentQA",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "행 수정 후에도 내부 네이티브 검은 페이스 잔존",
+            "evidence": "TurnRoom 저장소 Artifacts/FieldAlignmentQA",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-10-30T20:46:21.253326+09:00",
+        "summary": "현재 소스 실제 UI와 패키지 검증",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "22상태1192 정렬,13 원본 픽셀,실제 입력/선택 완료,최대화/최소화 복원 및 별도 패키지 가져오기 통과",
+            "evidence": "TurnRoom 저장소 Artifacts/FieldAlignmentQA",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
