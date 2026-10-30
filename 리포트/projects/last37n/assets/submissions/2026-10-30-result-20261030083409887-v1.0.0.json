@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "last37n",
+    "kind": "result",
+    "title": "Blender 캐릭터 제작·애니메이션 연동 가능 범위 확인",
+    "summary": "일반 설치 경로와 등록 프로그램에서 Blender를 찾지 못했습니다. 설치·실행이 확인되면 Python 배치 제작과 Unity Humanoid 연동을 진행할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "프로젝트 파일은 변경하지 않았습니다. Blender PATH, 일반 Windows 설치 경로, 제거 프로그램 레지스트리와 일부 Steam 경로, 제공 도구 목록을 확인했습니다.",
+    "verification": "확인한 위치에서 blender.exe와 Blender 등록 항목을 찾지 못했습니다. Blender MCP도 제공되지 않았습니다. 다른 위치의 포터블 설치 여부는 미확인입니다. Blender 공식 CLI 문서의 background/Python 실행과 Unity 6000.0 공식 Humanoid 모델·Avatar·애니메이션 문서를 확인했습니다. 이 PC의 Blender 실행·출력 품질은 검증하지 않았습니다. 실행 대상이 없어 새 게임 화면은 캡처하지 않았습니다.",
+    "remaining": "Blender 설치 또는 실행 파일 경로 확인이 필요합니다. 모델 품질은 도구 연결만으로 보장되지 않으므로, 라이선스가 확인된 리깅 모델과 모션을 기반으로 민간인 의상·배낭·재질을 수정하고 Idle/Walk/Run 및 방향 전환 블렌딩을 Unity 실제 화면에서 검증하는 접근을 제안합니다. 외부 아카이브 등록은 앞선 게시 작업의 승인·동기화 문제로 미완료입니다.",
+    "outcome": "Blender로 모델·리깅·애니메이션을 제작 또는 수정하고 Unity에 연결하는 개발 방식을 확인했습니다. 현재 캐릭터 개선 작업 자체는 아직 시작하지 않았습니다.",
+    "proposedTime": "환경 확인 약 1~3분",
+    "actualTime": "환경 확인 시작 2026-10-30 17:32:58 KST, 종료 2026-10-30 17:34:09 KST. 경과 72초. 캐릭터 개선은 미착수입니다.",
+    "xerjEvidence": "도구 제공 목록에서 XERJ를 확인하지 못했습니다. 이번에는 실행 파일·설치 등록 상태와 에셋 목록만 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "검토",
+    "state": "complete"
+  }
+}

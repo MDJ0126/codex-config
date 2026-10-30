@@ -1,0 +1,38 @@
+{
+    "unity": "6000.0.83f1",
+    "passed": true,
+    "stages": [
+        {
+            "stage": "idle",
+            "clips": "Idle:1.00",
+            "animatorSpeed": 0.0,
+            "displacementMeters": 0.0,
+            "skinnedMeshes": 5,
+            "bones": 79
+        },
+        {
+            "stage": "walk",
+            "clips": "Idle:0.00, Walk:1.00",
+            "animatorSpeed": 1.6999866962432862,
+            "displacementMeters": 2.658799886703491,
+            "skinnedMeshes": 5,
+            "bones": 79
+        },
+        {
+            "stage": "run",
+            "clips": "Walk:0.00, Run:1.00",
+            "animatorSpeed": 4.499960899353027,
+            "displacementMeters": 6.947999954223633,
+            "skinnedMeshes": 5,
+            "bones": 79
+        },
+        {
+            "stage": "interact",
+            "clips": "Interact:1.00",
+            "animatorSpeed": 0.000868665985763073,
+            "displacementMeters": 0.0,
+            "skinnedMeshes": 5,
+            "bones": 79
+        }
+    ]
+}
