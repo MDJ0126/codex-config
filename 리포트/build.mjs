@@ -1,3 +1,4 @@
+import {historicalWorkflow} from './legacy-workflow.mjs';
 import {projectMembership} from './project-tree.mjs';
 import {createHash} from 'node:crypto';
 import {stageIcon} from './stage-icons.mjs';
@@ -21,11 +22,12 @@ const memberships=projectMembership(projectGroups,projects);
 const types=['작업 결과','버그','수정사항','검토','설정'];
 const projectIcon=(id,prefix='')=>{const p=projects[id];return p.logo?`<img class="project-logo" src="${prefix}${esc(p.logo)}" alt="${esc(p.name)} 로고">`:`<span class="project-fallback" aria-label="로고 미등록">${esc(p.name.slice(0,1))}</span>`;};
 const legacyFiles=new Set(JSON.parse(await readFile(path.join(root,'migration/editorial-2026-10-29.json'),'utf8')).map(e=>e.post));
+const workflowReviews=JSON.parse(await readFile(path.join(root,'migration/workflow-review-2026-10-30.json'),'utf8'));
 const posts=[];
 for(const {file,projectId,postPath,reportPath} of await postFiles(root,projects)){
  const raw=await readFile(path.join(root,postPath),'utf8');
  const match=/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/.exec(raw);if(!match)throw new Error(`Missing metadata: ${file}`);
- const meta=Object.fromEntries(match[1].split(/\r?\n/).map(l=>{const i=l.indexOf(':');if(i<1)throw new Error(`Invalid metadata: ${file}`);return [l.slice(0,i).trim(),l.slice(i+1).trim()];}));
+ let meta=Object.fromEntries(match[1].split(/\r?\n/).map(l=>{const i=l.indexOf(':');if(i<1)throw new Error(`Invalid metadata: ${file}`);return [l.slice(0,i).trim(),l.slice(i+1).trim()];}));
  for(const key of ['title','date','version','status','category','summary','project','type'])if(!meta[key])throw new Error(`Missing ${key}: ${file}`);
  if(!/^\d{4}-\d{2}-\d{2}T/.test(meta.date)||!Number.isFinite(Date.parse(meta.date)))throw new Error(`Invalid date: ${file}`);
  if(meta.project!==projectId)throw new Error(`Project folder mismatch: ${postPath}`);
@@ -39,6 +41,7 @@ for(const {file,projectId,postPath,reportPath} of await postFiles(root,projects)
   const canonical=toMarkdown(shared,{date:meta.date,version:meta.version,issueNumber:meta.issue?Number(meta.issue):undefined,issueURL:meta.issue_url,payloadPath:meta.payload});
   if(raw.replace(/\r\n/g,'\n')!==canonical)throw new Error('Markdown must be generated from the shared report contract: '+postPath);
  }
+ meta=historicalWorkflow(meta,raw,postPath,workflowReviews);
  const html=file.replace(/\.md$/,'.html');posts.push({...meta,file,html,postPath,reportPath});
  await mkdir(path.dirname(path.join(root,reportPath)),{recursive:true});
  validatePost(meta,match[2],postPath,{legacyAllowed:legacyFiles.has(postPath)});
@@ -47,7 +50,7 @@ for(const {file,projectId,postPath,reportPath} of await postFiles(root,projects)
  if(archived)articleBody=articleBody.replace(/^> 보관 기록입니다\.[^\n]*\n+/, '');
  const content=renderMarkdown(articleBody,{bodyMode:true});
  const date=new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'long',timeStyle:'short'}).format(new Date(meta.date));
- const postBody=`<main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project">${projectIcon(meta.project,'../../../')}<span>${memberships[meta.project]?esc(projectGroups[memberships[meta.project]].name)+' › ':''}${esc(projectGroups[memberships[meta.project]]?.labels?.[meta.project]||projects[meta.project].name)}</span><span class="post-kind">${esc(meta.type)}</span></div><div class="post-title-row"><h1>${esc(meta.title)}</h1><span class="badge" data-state="${esc(meta.state||'')}">${esc(meta.status)}</span></div><p class="post-summary">${esc(archived?'원문에 기록된 작업 내용과 당시 검증 범위를 정리한 보관 기록입니다.':meta.summary)}</p>${meta.type==='버그'?`<div class="detail-workflow">${WORKFLOW.map(([id,name])=>`<span data-stage="${id}" class="${meta.workflow===id?'current':''}">${stageIcon(id,'../../../')}${name}</span>`).join('<i>→</i>')}${!meta.workflow?'<small>과거 기록 · 단계 미지정</small>':''}</div>`:''}<div class="post-byline"><time datetime="${esc(meta.date)}">${esc(date)} KST</time><span>${esc(meta.version)}</span><span>${esc(meta.category)}</span></div>${archived?'<div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div>':''}<div class="post-body">${content.html}</div><div class="post-actions"><a class="source" href="../posts/${encodeURIComponent(file)}" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차">${content.toc.filter(h=>h.depth===2).map(h=>`<a href="#${h.id}">${h.label}</a>`).join('')}</nav><p>${archived?'원문을 보존한 과거 기록입니다.':'프로젝트별 작업 결과와 근거를 기록합니다.'}</p></aside></main>`;
+ const postBody=`<main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project">${projectIcon(meta.project,'../../../')}<span>${memberships[meta.project]?esc(projectGroups[memberships[meta.project]].name)+' › ':''}${esc(projectGroups[memberships[meta.project]]?.labels?.[meta.project]||projects[meta.project].name)}</span><span class="post-kind">${esc(meta.type)}</span></div><div class="post-title-row"><h1>${esc(meta.title)}</h1><span class="badge" data-state="${esc(meta.state||'')}">${esc(meta.status)}</span></div><p class="post-summary">${esc(archived?'원문에 기록된 작업 내용과 당시 검증 범위를 정리한 보관 기록입니다.':meta.summary)}</p>${meta.type==='버그'?`<div class="detail-workflow">${WORKFLOW.map(([id,name])=>`<span data-stage="${id}" class="${meta.workflow===id?'current':''}">${stageIcon(id,'../../../')}${name}</span>`).join('<i>→</i>')}${!meta.workflow?'<small>과거 기록 · 단계 미지정</small>':''}</div>`:''}${meta.workflowReview?`<div class="archive-notice">과거 단계 검토: ${esc(meta.workflowReview.reason)}<br>${esc(meta.workflowReview.scope)}</div>`:''}<div class="post-byline"><time datetime="${esc(meta.date)}">${esc(date)} KST</time><span>${esc(meta.version)}</span><span>${esc(meta.category)}</span></div>${archived?'<div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div>':''}<div class="post-body">${content.html}</div><div class="post-actions"><a class="source" href="../posts/${encodeURIComponent(file)}" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차">${content.toc.filter(h=>h.depth===2).map(h=>`<a href="#${h.id}">${h.label}</a>`).join('')}</nav><p>${archived?'원문을 보존한 과거 기록입니다.':'프로젝트별 작업 결과와 근거를 기록합니다.'}</p></aside></main>`;
  await writeFile(path.join(root,reportPath),shell(meta.title,postBody,'../../../'));
 }
 posts.sort((a,b)=>Date.parse(b.date)-Date.parse(a.date)||b.version.localeCompare(a.version,undefined,{numeric:true}));

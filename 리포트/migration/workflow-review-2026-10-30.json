@@ -1,0 +1,420 @@
+[
+  {
+    "post": "projects/pixora/posts/2026-10-29-setup-reference-v1.0.0.md",
+    "sourceSha256": "af42ee87c08846caeb34d05d68b5695e272cf10dc47b1c5766c0e2be5c2262a2",
+    "workflow": "resolved",
+    "reason": "실제 Unity 설정 창과 테마·분류 이동 및 2,376개 회귀 검증 기록.",
+    "evidence": [
+      "2,376/2,376 통과"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.398Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-1b551b3cfd89-v1.0.0.md",
+    "sourceSha256": "84f803d5cf4b64e99c6c19168b7d0af74afc322e0aad763beaba49857db35bf6",
+    "workflow": "resolved",
+    "reason": "수정한 8개 문제군과 TC 250개 통과, 남은 실패 0건이 기록됨.",
+    "evidence": [
+      "**0**남은 실패"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-24c53802c2a7-v1.0.0.md",
+    "sourceSha256": "fca5aec2fd8aec22800cb5427444d1f103790b5949c298e7a18adf5ebfec3f6a",
+    "workflow": "resolved",
+    "reason": "선택한 객체 전달 수정 후 더블클릭·리본 경로의 실제 UI 확인 기록.",
+    "evidence": [
+      "Actual UI checks after recompilation:"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-420d48d6e6d7-v1.0.0.md",
+    "sourceSha256": "afb7365da5356eda9c6dcff3b57a3818a696bec3cf6faa7c08d08531d6418b6b",
+    "workflow": "resolved",
+    "reason": "수정 후 런타임 검사와 사용자 재시도 성공 확인 기록.",
+    "evidence": [
+      "The user manually retried and confirmed successful operation"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-568ddf775439-v1.0.0.md",
+    "sourceSha256": "2e55b59fbf1477a72dc5864b9ec95771af921290ee9efa9028ec45f3564fb937",
+    "workflow": "resolved",
+    "reason": "외곽선 수정과 713개 reader/edit/save/reopen 검증 기록. 네이티브 재촬영 제한은 유지.",
+    "evidence": [
+      "713 assertions passed"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-cbf798596cf1-v1.0.0.md",
+    "sourceSha256": "90c8dfb0dc071bb791c29c277308866f8b9233885bc83aa280bf43eb9316808e",
+    "workflow": "resolved",
+    "reason": "표 생성 문제군 수정 및 250개 TC 통과, 남은 실패 0건.",
+    "evidence": [
+      "**0**남은 실패"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-cd40b74d528a-v1.0.0.md",
+    "sourceSha256": "e913fa97a9d5d8b6f876c2ccd1ec49a95626c4ba8dc837d165adda26829b6a09",
+    "workflow": "resolved",
+    "reason": "반복 조회 수정 후 동일 조건 측정과 Play 보호 회귀 통과.",
+    "evidence": [
+      "실제 Play 모드의 등록·저장·직접 API 보호 6개 TC 통과."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ce008633abb7-v1.0.0.md",
+    "sourceSha256": "ead30c8fb193a5a013a32809f47ec873a73abbbcba6d06fb9eb743335b000f4d",
+    "workflow": "resolved",
+    "reason": "문제 목록의 오류 갱신·중복 집계 방지 등 TC 통과 기록.",
+    "evidence": [
+      "값 수정 후 이전 오류가 제거됨"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ebacb4d14dc5-v1.0.0.md",
+    "sourceSha256": "54bb6579af183d5c58cdccefcf0ca6553f2949b49087ec361052157e21e66fcb",
+    "workflow": "resolved",
+    "reason": "입력 손실 수정 후 같은 조건·한글·F2·즉시 Enter 재검사 통과.",
+    "evidence": [
+      "같은 조건과 한글·F2·즉시 Enter 조합을 다시 검사해 통과했습니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/designdatatable/posts/2026-10-29-import-designdatatable-ebf169fe452b-v1.0.0.md",
+    "sourceSha256": "a88d213c1c1bfef49a9836f8a6937e304024c505d697559e2ab325f92cb22584",
+    "workflow": "resolved",
+    "reason": "문서·스토어 산출물과 새 Unity 캡처 제공 기록 기준. 외부 제출 여부와 구분.",
+    "evidence": [
+      "All 25 active guide images were newly captured"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/enginemigrator/posts/2026-10-29-EngineMigrator-QA-v1.0.0.md",
+    "sourceSha256": "c60c532d5bf512e2ad71748977ca8d00bdd6009208b64c8d53876869a0b74466",
+    "workflow": "resolved",
+    "reason": "8종 수정 후 독립 QA18개와 회귀403개 통과. 로컬 배포 예정은 종료 근거 아님.",
+    "evidence": [
+      "기존 엔진 없는 회귀 검사 403개가 통과했습니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/enginemigrator/posts/2026-10-29-EngineMigrator-QA-v1.0.1.md",
+    "sourceSha256": "749d9577ac6f0ec95c621a020075a4306903fc43be24286d332a0627d5f49505",
+    "workflow": "resolved",
+    "reason": "8종 수정·QA 통과 및 로컬 배포 기록. 전체 엔진 포팅 인증과 구분.",
+    "evidence": [
+      "QA 수정·검증·로컬 배포 완료."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/enginemigrator/posts/2026-10-29-import-enginemigrator-a678a73d064c-v1.0.0.md",
+    "sourceSha256": "509578dbf72f118745ab21d3776769fa06ed631637c3daa93de63f6cd58eaad4",
+    "workflow": "resolved",
+    "reason": "8종 수정 후 독립 QA18개·회귀403개 검사를 기록. 전체 제품 미완료 제한 유지.",
+    "evidence": [
+      "수정 후 독립 QA 18개와 기존 회귀 403개를 검사했습니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-04d10456fa5e-v1.0.0.md",
+    "sourceSha256": "67951dc6b6c8060d481c9f1edc9aa3625b2f03e99a1ad85001a6950c9778e924",
+    "workflow": "review",
+    "reason": "차이 1건·미검증101건이 기록된 대조 검토 상태.",
+    "evidence": [
+      "차이 1/108 · 미검증 101/108"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-07e8ad75eb11-v1.0.0.md",
+    "sourceSha256": "acd3b77edb9e0897f3c9e4b01bd51d722a6db265352e6b4c4ee0039a1936082c",
+    "workflow": "review",
+    "reason": "차이 1건·미검증103건이 기록된 대조 검토 상태.",
+    "evidence": [
+      "차이 1/108 · 미검증 103/108"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-0f1006310106-v1.0.0.md",
+    "sourceSha256": "452d296097d696767c7618ebde7ef9d66369868cf1158c6b19de529480de3547",
+    "workflow": "in_progress",
+    "reason": "레이아웃 일부 수정 후 색상·옵션·팝업 배치 작업이 남음.",
+    "evidence": [
+      "Enum/Namespace 색상, 적용 대상 옵션 및 다른 기능별 팝업 배치는 남았습니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-0fcbcd277b24-v1.0.0.md",
+    "sourceSha256": "d8a435df15561c5c8e89f55e21de1a683791437efc834313f84296df306ba83a",
+    "workflow": "review",
+    "reason": "옵션 이동 17개는 확인했지만 최신 CA 재실행은 미실행인 비교 검토 기록.",
+    "evidence": [
+      "최신 CA 재실행은 시작되지 않았으며"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-19eb63555565-v1.0.0.md",
+    "sourceSha256": "0c07a400fb08f2ce21fb378ed85792d809fa65cca979708f6e13ca2fdf2ca107",
+    "workflow": "in_progress",
+    "reason": "선정 옵션 표본10/12의 누적 진행 기록. 제품 전체 완료와 구분.",
+    "evidence": [
+      "선정 옵션 누적 동작 표본10/12개(83.33%)"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-2c7193b10292-v1.0.0.md",
+    "sourceSha256": "abdac133897998d0aac801e01e53e55b84847c3c83de08ad11584cdcb75bb77d",
+    "workflow": "resolved",
+    "reason": "해당 Display·Source Links 구성 보완과 회귀·WPF 이벤트 검사 완료 기록.",
+    "evidence": [
+      "남은 2/2개 구성 보완 완료"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-346cef36f2c6-v1.0.0.md",
+    "sourceSha256": "502e799a2fc57683b723ffcbac9426226da2f68650d00fea6604cbb58add15ff",
+    "workflow": "review",
+    "reason": "수정 패키지 빌드 후 실제 실행 DLL 미적용과 명령 수신 미확인 항목이 남음.",
+    "evidence": [
+      "실행 중 VS에는 새 DLL을 적용하지 않았으며"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-4855acdf178d-v1.0.0.md",
+    "sourceSha256": "57005d9aa8862336ea28756160bd5ab31b192ce9447737788cc34f252eca4559",
+    "workflow": "in_progress",
+    "reason": "옵션 배치 수정 후 전체 목표 진행 중임을 명시.",
+    "evidence": [
+      "전체 목표는 진행 중입니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-4f3ee242f0d0-v1.0.0.md",
+    "sourceSha256": "b4c39b04c5a324f4fbf0cb35e8200ba904fe7c12cb90c94229163c43a576f990",
+    "workflow": "in_progress",
+    "reason": "색상 일부 수정 후 개체 브라우저 적용 실패가 남음.",
+    "evidence": [
+      "개체 브라우저의 LiteTreeView32 색상 적용 실패는 남아 있습니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-51e4722c791e-v1.0.0.md",
+    "sourceSha256": "0e6a05f4bd00ead5d0f2ee907c076c6eacd8e8c6d0c8d7c247310f8f5b399ce6",
+    "workflow": "resolved",
+    "reason": "클래스 블록 확장·축소 수정 후 같은 입력 결과2/2 일치. 보고된 결함 범위 기준.",
+    "evidence": [
+      "**2/2개·100% 일치.**"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-5b1f534e75c5-v1.0.0.md",
+    "sourceSha256": "4364a376d661df3cd766396ee50d02b2a9a146658bc615e756d5fe0595dd2da3",
+    "workflow": "in_progress",
+    "reason": "CRLF 등 수정했으나 Smart Select 통제 검사 실패가 남음.",
+    "evidence": [
+      "선택 길이16/기대14로 실패"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-6d05f54d7154-v1.0.0.md",
+    "sourceSha256": "913181aefa4e2af732ecda7c8a5beaae7e401936bd1e8a62635e1d2ba2de1d15",
+    "workflow": "review",
+    "reason": "색상 팝업 9/10 확인, 물리 Tab 포커스 미판정이 남음.",
+    "evidence": [
+      "Physical Tab focus moves to Hue | 미판정"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-89dd5082710e-v1.0.0.md",
+    "sourceSha256": "1900f443b56935ffb59610a2e37e44680db3dab830a3bab544d614c4db735c40",
+    "workflow": "in_progress",
+    "reason": "Display 일부 수정 후 Quick Info·탐색 표시줄 위치 미구현이 남음.",
+    "evidence": [
+      "Quick Info 세부 옵션·탐색 표시줄 상하 위치 등은 미구현."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-8feefea3d79d-v1.0.0.md",
+    "sourceSha256": "23df6a57b172ddf0b67d85305900c678acca1b68c7945ca33205787cd9824601",
+    "workflow": "resolved",
+    "reason": "해당 Smart Select·Surround 수정과 설정 통제 검사4/4 일치. 전체 제품 목표는 별도.",
+    "evidence": [
+      "설정 통제 검사 | 4/4 기대 결과 일치"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-98b850a15aa0-v1.0.0.md",
+    "sourceSha256": "0d611ef72fe42f984ca3e48d7ebaa02307992ba3cbab8d318b93ee3982a031e0",
+    "workflow": "review",
+    "reason": "집계표 링크만 있는 기록으로 해결 근거 부족. 검토로 분류하고 종료하지 않음.",
+    "evidence": [
+      "108개 고정 분모 집계표 열기"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-aab5516a3385-v1.0.0.md",
+    "sourceSha256": "8a6e5a7370744c5e575a94bd22793995a36f1f46258521e6015a391d6d355fbb",
+    "workflow": "in_progress",
+    "reason": "추천 누락·혼입 수정 후 빈 인덱스 조건의 다음 수정 대상이 남음.",
+    "evidence": [
+      "다음 수정 대상입니다."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-b4a9e6b7de33-v1.0.0.md",
+    "sourceSha256": "2718af7167001433b9ff18427deb8e92f29bac96e614ea8ccb413e9f86b62c40",
+    "workflow": "resolved",
+    "reason": "setter 자기 대입 수정 후 실제 생성물 컴파일·실행 통과 기록.",
+    "evidence": [
+      "실제 생성물 MSVC 컴파일·실행: 통과."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bcad3c290fb3-v1.0.0.md",
+    "sourceSha256": "c44d2372a9225f5a8e15fe9b20c9e6ea20c4cb29e0d431969b1d50938181cf29",
+    "workflow": "review",
+    "reason": "차이1건·미검증103건을 명시한 검토 기록.",
+    "evidence": [
+      "차이 1/108 · 미검증 103/108"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bf7ec6d20668-v1.0.0.md",
+    "sourceSha256": "cf73db39456b56080602de348b7d82757d2c7fa732b2bc04aca37ae8e45a68fd",
+    "workflow": "review",
+    "reason": "사용자 요청으로 중단된 미완료 대조 기록. 현재 실행 중으로 간주하지 않음.",
+    "evidence": [
+      "108개 전체 실행 미완료."
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-bfa4f1c90438-v1.0.0.md",
+    "sourceSha256": "5f909aa43f6631b8378061d07c0ed2be23a91a20cfb7ecad059808835cbd1476",
+    "workflow": "review",
+    "reason": "차이1건·미검증101건을 명시한 검토 기록.",
+    "evidence": [
+      "차이 1/108 · 미검증 101/108"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-c2f8d36dcedb-v1.0.0.md",
+    "sourceSha256": "517db849c5e66147bbe7fb798f391efd3f7394ca17cce52c29e84f9eb5b16ba6",
+    "workflow": "review",
+    "reason": "수정 후 최종 이동 검증이 보안 창으로 차단되어 검증 미완료.",
+    "evidence": [
+      "최종 이동 클릭은 보안 창으로 차단되어 미검증"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-c4145d5140e4-v1.0.0.md",
+    "sourceSha256": "6df240588d8d3cadffa7ec39d5c0f057fd26eb6ebceeac9a78ffb0bb5a6bffb6",
+    "workflow": "resolved",
+    "reason": "관측한 툴팁 결함3종 해결과 실행 로그·실제 화면 근거. 다른 옵션 범위는 유지.",
+    "evidence": [
+      "이번 관측 툴팁 결함 해결 **100% (3/3)**"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-dba31dad0a69-v1.0.0.md",
+    "sourceSha256": "16b0f7122dfc1357f202d73954a8e28f6665fdd825af7487ac83970472a6b6bf",
+    "workflow": "in_progress",
+    "reason": "타입 대소문자 교정 실패 등 남은 차이를 기록한 수정 진행 상태.",
+    "evidence": [
+      "타입 대소문자 교정 실패"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/codeassist/posts/2026-10-29-import-codeassist-eff47cbc48ae-v1.0.0.md",
+    "sourceSha256": "20cb13b3991f9cec0a2abc70cd8224e23499a52232df0df1b5dde2da3f39f8ee",
+    "workflow": "resolved",
+    "reason": "추천 색상 결함 수정 후 동일 후보 On/Off·Tab 실제입력3/3 일치. 전체 동등성은 별도.",
+    "evidence": [
+      "**이번 표본 3/3개(100%) 일치**"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  },
+  {
+    "post": "projects/windowsfoldersize/posts/2026-10-29-import-windowsfoldersize-b70ea328ef17-v1.0.0.md",
+    "sourceSha256": "d60f72396cc6c2e7e520fda15d671fc2818f1e3fa0661ee60be52c5b87a5fb2a",
+    "workflow": "review",
+    "reason": "MSI 개선·검사 후 production 설치·실제 화면 승인 검증이 남음.",
+    "evidence": [
+      "The production per-machine install/elevation path has not been executed"
+    ],
+    "reviewedAt": "2026-10-30T06:34:20.399Z",
+    "scope": "당시 보고서의 해당 작업 범위. 현재 제품 재실행 또는 전체 완수 판정이 아님."
+  }
+]
