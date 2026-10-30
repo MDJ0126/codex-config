@@ -1,0 +1,173 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "TurnRoom 선택 개체 전용 디자인 탭",
+    "summary": "표 프리셋과 도형·차트·그림 전용 탭의 표시 및 동작을 구현하고 실제 Unity에서 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "T03: guide-window-restore.png의 현재 공통 창 복원 장면 재촬영 및 전체 가이드 해시 재검증.",
+    "outcome": "요청 UI 구현·실행 검증 완료. 기존 복원 문서 이미지 1장 때문에 전체 문서 QA는 완료하지 않았습니다.",
+    "proposedTime": "20–35분",
+    "actualTime": "구현·실행 검증: 2026-10-30 23:24 KST까지 완료. 전체 문서 QA는 미완료.",
+    "xerjEvidence": "XERJ contextual table design ribbon 검색과 현재 소스 대조. 누락 API는 rg로 보완.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "ddt-context-design-20261030",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "선택한 표와 개체에 맞는 디자인 도구를 쉽게 사용합니다.",
+    "completionCriteria": "표 스타일 갤러리·선택 상태별 탭 전환·저장/Undo를 검증하고 실제 Unity 캡처 및 9개 언어 가이드를 갱신합니다.",
+    "previousManual": "projects/designdatatable/reports/2026-10-30-manual-20261030135658141-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "선택 컨텍스트와 표 디자인 구현",
+        "action": "표 스타일 저장 API와 프리셋·옵션 UI, 도형·차트·그림 탭 전환을 구현합니다.",
+        "expected": "선택 진입·해제에 맞는 탭 및 표 프리셋이 표시됩니다.",
+        "qa": "빌드, 선택 조건과 6개 프리셋·밴드 옵션·Undo·저장 재열기 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "49개 신규·33개 잠금 검증과 39개 네이티브 캡처를 보존했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 Unity 동작과 회귀 QA",
+        "action": "분리 프로젝트에서 실제 렌더·버튼 입력·다중 표와 개체 선택을 검사합니다.",
+        "expected": "변경된 기능이 실제 화면에서 보이고 선택·저장이 작동합니다.",
+        "qa": "실행 소스 일치 확인 후 네이티브 캡처와 연속 스타일 적용·Undo/Redo",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "49개 신규·33개 잠금 검증과 39개 네이티브 캡처를 보존했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "가이드와 결과 정리",
+        "action": "실제 캡처를 압축하고 9개 언어 가이드와 Manifest 및 v2 결과 보고서를 갱신합니다.",
+        "expected": "새 스크린샷과 기능 설명·검증 근거가 함께 제공됩니다.",
+        "qa": "가이드 빌드·해시·HTML 링크와 보고서 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "9개 언어 HTML 및 39개 화면 갱신. 기존 복원 이미지 1장 미검증."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T14:05:00Z",
+        "summary": "최초 QA 실패를 보존합니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "색상 기대값의 6/8자리 표현 불일치. 실제 XML은 정상. 이후 기대값을 수정했습니다.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/ContextDesignEvidence/History",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-30T14:21:20Z",
+        "summary": "최종 구현 및 실제 입력 재검증.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "표 스타일·옵션·Undo/Redo·저장·수식/다른 표·입력 초안 보존 확인.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/ContextDesignEvidence/Checks.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-10-30T14:21:50Z",
+        "summary": "실제 Unity 전용 탭과 회귀 QA.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "신규 49개 및 Play 잠금 33개 통과. 실제 개체 클릭과 9개 언어 표 렌더.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/TC-결과.md",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-10-30T14:26:05.597097+00:00",
+        "summary": "구현은 통과했으나 전체 가이드의 기존 복원 이미지 1장은 미검증입니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 소스로 네이티브 동작 확인.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/ContextDesignEvidence/Complete.txt",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 실행 결과와 소스 일치를 확인.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/Publication.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "9개 언어 HTML·39개 캡처·브라우저144개는 통과. 기존 복원 이미지 1장의 소스 해시가 오래돼 전체 검사 실패.",
+            "evidence": "Docs/Testing/2026-10-30/context-design/LocalizedDocs.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

@@ -1,5 +1,35 @@
 [
   {
+    "title": "TurnRoom 선택 개체 전용 디자인 탭",
+    "summary": "표 프리셋과 도형·차트·그림 전용 탭의 표시 및 동작을 구현하고 실제 Unity에서 검증합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-manual-ddt-context-design-20261030-20261030142605909-v1.0.1.html",
+    "date": "2026-10-30T14:26:05.909Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 표·도형·차트·그림 전용 디자인 탭",
+    "summary": "표 스타일 6개와 옵션, 자동 활성 탭, 차트 디자인·서식 분리 및 개체 도구 그룹을 구현했습니다. 기존 복원 가이드 이미지 1장은 검증 대기입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030142442394-v1.0.0.html",
+    "date": "2026-10-30T14:24:42.394Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 선택 개체 전용 디자인 탭",
+    "summary": "표 프리셋과 도형·차트·그림 전용 탭의 표시 및 동작을 구현하고 실제 Unity에서 검증합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-manual-20261030135658141-v1.0.0.html",
+    "date": "2026-10-30T13:56:58.141Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "작업 교훈의 전역 지침 반영·중복 통합 규칙 적용",
     "summary": "작업마다 검증된 공통 교훈을 전역 지침에 반영하고 의미 중복은 통합하도록 설정했습니다. 기존 사용자 조건·예외·검증 의무는 보존합니다.",
     "project": "codex-config",
