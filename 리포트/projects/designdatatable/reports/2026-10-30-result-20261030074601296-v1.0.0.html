@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>DataTable 모체 상속·공통 툴팁 연결 검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/theme.css?v=a7e76d2df569"><link rel="stylesheet" href="../../../assets/discussions.css?v=a7e76d2df569"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>DataTable 모체 상속·공통 툴팁 연결 검증</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">판매 중인 DataTable의 기본 외형과 편집 엔진을 유지하면서 제목줄 조립과 툴팁 카드를 Templete 모체로 연결했습니다. 기존 문서 해시 불일치 206건은 별도로 남아 있습니다.</p><div class="post-byline"><time datetime="2026-10-30T07:46:01.296Z">2026년 10월 30일 오후 4:46 KST</time><span>v1.0.0</span><span>수정사항</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>공통 모체 연결과 실행 검증은 완료했습니다. 기존 DataTable의 제목줄·게임 데이터 강조색·툴팁 카드 형태를 유지했습니다.</p>
+<p><figure><img class="report-image" src="../assets/20261030-templete-header.webp" alt="실제 DataTable: 기존 제목줄과 Templete로 추출한 카드 툴팁" loading="lazy"><figcaption>실제 DataTable: 기존 제목줄과 Templete로 추출한 카드 툴팁</figcaption></figure></p>
+<p>문서 전체 검증은 기존 소스·이미지 해시 불일치 206건 때문에 통과 상태가 아닙니다. 이번 교체한 공통 제목줄·복원 캡처에는 검사 오류가 없습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>WorkbookViewer는 ToolWindow → TemplateWindow를 상속하며, 제품의 저장·Undo·Redo·문서 표시·검색·창 제어 명령을 모체의 DrawTemplateHeader 슬롯으로 전달합니다. 기존 IMGUI 편집 엔진과 기본 배치 값은 유지했습니다.</p>
+<p>SpreadsheetScreenTip의 카드 렌더러를 Templete.Runtime.TipCard로 추출했습니다. DataTable의 번역·호버 지연·설명·단축키 처리는 기존 코드가 담당하고, 같은 카드 렌더러를 Pixora와 개발 갤러리도 사용합니다.</p>
+<p>9개 가이드의 공통 모체·설정 설명을 갱신하고 실제 제목줄과 창 복원 캡처를 교체했습니다. 과거 매니페스트와 이미지는 Before에 보존했습니다.</p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>기존 DataTable 스타일·기본 치수·공통 값 반영을 대조한 108개 Unity 실행 검사가 통과했습니다.</li>
+<li>DataTable ↔ Pixora 교차 클릭 8회, Pixora 실제 최소화 후 공통 목록 클릭 복원과 복원 상태 조회를 확인했습니다.</li>
+<li>DataTable 단독 구성과 양방향 패키지 설치, 최종 패키지 재설치·모체 상속을 확인했습니다.</li>
+<li>원본 개발 프로젝트의 DataTable·공통·Pixora 어셈블리가 16:21 KST에 새로 컴파일됐고 기존 창을 유지했습니다.</li>
+<li>문서 검사: 9개 언어·현재 이미지 39개, 기존 소스/이미지 해시 오류 206건. 새 공통 제목줄·복원 캡처 오류 0건. 전체 통과로 보고하지 않습니다.</li>
+</ul>
+<p><a class="report-link" href="https://github.com/MDJ0126/TurnRoom/blob/e791f141aef5a82d08175ebf0791475f46bafc50/Artifacts/TempleteQA/DataTableGuides.json">문서 검사 원문</a> · <a class="report-link" href="https://github.com/MDJ0126/TurnRoom/blob/e791f141aef5a82d08175ebf0791475f46bafc50/Artifacts/TempleteQA/Layout108.json">기본 스타일 대조</a></p>
+<p>새 캡처의 소스 해시는 CRLF를 LF로 정규화한 뒤 실제 작업 폴더와 Git blob 양쪽에서 대조해 오류 0건을 확인했습니다. 기존 206건의 원본 해시를 갱신해 통과시키지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>기존 문서의 206개 소스·이미지 해시 불일치에 대한 전체 재촬영·대조가 남아 있습니다. 원본 해시를 현재 값으로 덮어 통과시키지 않았습니다. 다른 OS·Unity 버전과 스토어 게시 업데이트는 미실행입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 90–150분. 세 프로젝트를 함께 수행한 통합 작업의 시작 시 제안 시간입니다.</li>
+<li>실제로 완료된 시간: 통합 구현·검증·프로젝트 푸시·보고서 작성: 2시간 24분 39초. 시작 2026-10-30 14:32:14 KST, 결과 기록 완료 2026-10-30 16:56:54 KST (UTC+09:00). 보고서 공개 게시 확인은 이 기록 생성 이후 별도로 수행합니다.</li>
+<li>XERJ: 사용 — SpreadsheetScreenTip 검색 후보를 활용했습니다. Templete 새 인덱스는 frozen mapping identity 오류로 갱신에 실패해 현재 모체 소스는 rg와 실제 실행으로 대조했습니다. 자동 갱신 활성 여부는 검증하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-30-result-20261030074601296-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-30-result-20261030074601296-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

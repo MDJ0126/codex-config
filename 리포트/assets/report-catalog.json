@@ -1,5 +1,35 @@
 [
   {
+    "title": "Templete를 두 제품의 UI 모체로 분리",
+    "summary": "Pixora·DesignDataTable과 같은 선상에 Templete를 두고 실제 공통 창 모체, 버전 보호와 개발 전용 갤러리를 구성했습니다. 소비자 패키지의 개발 UI 제외와 설치 순서를 검증했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-result-20261030074601414-v1.0.0.html",
+    "date": "2026-10-30T07:46:01.414Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DataTable 모체 상속·공통 툴팁 연결 검증",
+    "summary": "판매 중인 DataTable의 기본 외형과 편집 엔진을 유지하면서 제목줄 조립과 툴팁 카드를 Templete 모체로 연결했습니다. 기존 문서 해시 불일치 206건은 별도로 남아 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030074601296-v1.0.0.html",
+    "date": "2026-10-30T07:46:01.296Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 실제 예제 씬 10개와 단계별 재생",
+    "summary": "기존 설명 창을 유지하면서 Game 뷰 안에서 다섯 단계를 진행하는 실제 예제 씬 10개를 구성하고, 새 출력과 언어·방향·장비 선택을 실행 검증했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-10-30-result-20261030074601177-v1.0.0.html",
+    "date": "2026-10-30T07:46:01.177Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "QA 결과에 연결되는 토론·개선 제안 공간과 후속 글 작성 기능",
     "summary": "QA 보고서에서 토론을 시작하고 부족한 점·개선 제안·새 기능을 별도 글로 남길 수 있습니다. 프로젝트·상태·검색으로 다시 찾고 원본 QA와 결정 이력을 함께 확인합니다.",
     "project": "codex-config",
