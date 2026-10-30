@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora 기본 강조색 블랙 적용",
+    "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "최종 실제 화면/상호작용 검증은 사용자 화면 제어 보류로 남았습니다. 현재 코드와 설치용 패키지는 반영됐습니다. 과거 초록색 캡처를 새 결과로 제시하지 않았습니다.",
+    "outcome": "공통 색상 설정과 패키지1.2.3 구현·무창 검사 통과. 실제 화면은 사용자 보류.",
+    "proposedTime": "2~5분",
+    "actualTime": "19.6분 · 코드/검증/공통화 반영 2026-10-30 22:24:14 KST. 제안2~5분을 초과했습니다. 공통화 범위 반영과 패키지·보고 동기화가 추가됐으며 최종 화면 검증은 미완료입니다.",
+    "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-black-accent",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "Templete 기본 색상 한 곳에서 이를 사용하는 도구 UI의 강조색을 관리한다.",
+    "completionCriteria": "기본 블랙/공통 설정 전파/사용자 지정/패키지 검증 및 제어 재개 후 실제 화면 확인.",
+    "previousManual": "projects/pixora/reports/2026-10-30-manual-pixora-black-accent-20261030131146980-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 색상 설정과 모체 연결",
+        "action": "Templete 기본색 설정과 모체·기본 스타일·팝업·툴팁을 연결한다.",
+        "expected": "한 설정에서 블랙 기본값 및 전파·사용자 지정 반영",
+        "qa": "무창 기본값/공통 전파/패키지 검사와 실제 화면 확인",
+        "dependsOn": [],
+        "status": "blocked",
+        "revision": 2,
+        "result": "공통 설정 전파·패키지 검사 통과. 실제 화면은 사용자 제어 중단으로 보류."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "사용자가 색상 변경 기능을 공통 기능으로 명시했습니다. 제품 색상 상수에서 모체 기본 설정·기본 바인딩·창 목록·팝업·툴팁 연결로 확대합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T22:11:46.232042+09:00",
+        "summary": "코드·값 확인 완료, 실제 화면은 사용자 요청으로 보류",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "무창 컴파일/기본값과 사용자 지정 검사 통과. 실제 UI 색상 캡처 미실행.",
+            "evidence": "Artifacts/BlackAccent/Verification.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-10-30T22:24:14.484626+09:00",
+        "summary": "공통화2차 구현과 패키지 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "blocked",
+            "actual": "기본색 변경 시 Pixora·일반 제목줄·컨텍스트 강조색 전파 검사 및1.2.3 패키지 검사 통과. 실제 화면 보류.",
+            "evidence": "Artifacts/BlackAccent/CommonVerification.json; CommonPackageAudit.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}

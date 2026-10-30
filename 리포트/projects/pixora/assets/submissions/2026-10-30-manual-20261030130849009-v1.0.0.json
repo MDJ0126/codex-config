@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora 기본 강조색 블랙 적용",
+    "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "무창 값 검사와 최종 화면 확인",
+    "outcome": "강조색 공급자 변경, 무창 컴파일·값 검사 진행.",
+    "proposedTime": "2~5분",
+    "actualTime": "2026-10-30 22:04:41 KST 시작 · 진행 중",
+    "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-black-accent",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "제목줄·선택·기본 버튼과 선택기 팝업에 중성 블랙 기본 강조색을 적용한다.",
+    "completionCriteria": "기본값 RGB24/24/24와 공통 사용자 지정 유지 확인, 최종 화면은 제어 보류 해제 후 확인.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "블랙 강조색 연결과 검증",
+        "action": "Pixora 제품 기본 강조색과 팝업 공급자를 연결하고 기존 테마 선택과 DataTable 경로는 유지한다.",
+        "expected": "기본 강조색#181818, 명시적 공통 사용자 지정 유지",
+        "qa": "무창 컴파일·기본값/사용자 지정 검사 후 실제 화면 확인",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

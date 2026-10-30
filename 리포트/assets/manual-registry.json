@@ -1,5 +1,102 @@
 [
   {
+    "reportPath": "projects/pixora/reports/2026-10-30-manual-pixora-black-accent-20261030132417600-v1.0.2.html",
+    "postPath": "projects/pixora/posts/2026-10-30-manual-pixora-black-accent-20261030132417600-v1.0.2.md",
+    "date": "2026-10-30T13:24:17.600Z",
+    "version": "v1.0.2",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixora-black-accent",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "Pixora 기본 강조색 블랙 적용",
+      "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "최종 실제 화면/상호작용 검증은 사용자 화면 제어 보류로 남았습니다. 현재 코드와 설치용 패키지는 반영됐습니다. 과거 초록색 캡처를 새 결과로 제시하지 않았습니다.",
+      "outcome": "공통 색상 설정과 패키지1.2.3 구현·무창 검사 통과. 실제 화면은 사용자 보류.",
+      "proposedTime": "2~5분",
+      "actualTime": "19.6분 · 코드/검증/공통화 반영 2026-10-30 22:24:14 KST. 제안2~5분을 초과했습니다. 공통화 범위 반영과 패키지·보고 동기화가 추가됐으며 최종 화면 검증은 미완료입니다.",
+      "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixora-black-accent",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "Templete 기본 색상 한 곳에서 이를 사용하는 도구 UI의 강조색을 관리한다.",
+      "completionCriteria": "기본 블랙/공통 설정 전파/사용자 지정/패키지 검증 및 제어 재개 후 실제 화면 확인.",
+      "previousManual": "projects/pixora/reports/2026-10-30-manual-pixora-black-accent-20261030131146980-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 색상 설정과 모체 연결",
+          "action": "Templete 기본색 설정과 모체·기본 스타일·팝업·툴팁을 연결한다.",
+          "expected": "한 설정에서 블랙 기본값 및 전파·사용자 지정 반영",
+          "qa": "무창 기본값/공통 전파/패키지 검사와 실제 화면 확인",
+          "dependsOn": [],
+          "status": "blocked",
+          "revision": 2,
+          "result": "공통 설정 전파·패키지 검사 통과. 실제 화면은 사용자 제어 중단으로 보류."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자가 색상 변경 기능을 공통 기능으로 명시했습니다. 제품 색상 상수에서 모체 기본 설정·기본 바인딩·창 목록·팝업·툴팁 연결로 확대합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T22:11:46.232042+09:00",
+          "summary": "코드·값 확인 완료, 실제 화면은 사용자 요청으로 보류",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "무창 컴파일/기본값과 사용자 지정 검사 통과. 실제 UI 색상 캡처 미실행.",
+              "evidence": "Artifacts/BlackAccent/Verification.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-10-30T22:24:14.484626+09:00",
+          "summary": "공통화2차 구현과 패키지 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "기본색 변경 시 Pixora·일반 제목줄·컨텍스트 강조색 전파 검사 및1.2.3 패키지 검사 통과. 실제 화면 보류.",
+              "evidence": "Artifacts/BlackAccent/CommonVerification.json; CommonPackageAudit.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
     "reportPath": "projects/last37n/reports/2026-10-30-manual-web-initial-payload-20261030131241984-v1.0.2.html",
     "postPath": "projects/last37n/posts/2026-10-30-manual-web-initial-payload-20261030131241984-v1.0.2.md",
     "date": "2026-10-30T13:12:41.984Z",
@@ -154,6 +251,151 @@
         }
       ],
       "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-10-30-manual-pixora-black-accent-20261030131146980-v1.0.1.html",
+    "postPath": "projects/pixora/posts/2026-10-30-manual-pixora-black-accent-20261030131146980-v1.0.1.md",
+    "date": "2026-10-30T13:11:46.980Z",
+    "version": "v1.0.1",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixora-black-accent",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "Pixora 기본 강조색 블랙 적용",
+      "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 제목줄·선택 상태·팝업의 라이트/다크 화면 확인은 사용자 제어 보류로 남아 있습니다. 설치용 패키지 갱신과 별도 검사 결과는 저장소 Artifacts/BlackAccent에 기록합니다.",
+      "outcome": "코드와 기본값/사용자 지정 검사 통과. 실제 화면 검증 보류.",
+      "proposedTime": "2~5분",
+      "actualTime": "7.1분 · 코드/무창 값 검사 완료 2026-10-30 22:11:46 KST. 최종 화면 확인은 사용자 제어 보류로 미완료.",
+      "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixora-black-accent",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "제목줄·선택·기본 버튼과 선택기 팝업에 중성 블랙 기본 강조색을 적용한다.",
+      "completionCriteria": "기본값 RGB24/24/24와 공통 사용자 지정 유지 확인, 최종 화면은 제어 보류 해제 후 확인.",
+      "previousManual": "projects/pixora/reports/2026-10-30-manual-20261030130849009-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "블랙 강조색 연결과 검증",
+          "action": "Pixora 제품 기본 강조색과 팝업 공급자를 연결하고 기존 테마 선택과 DataTable 경로는 유지한다.",
+          "expected": "기본 강조색#181818, 명시적 공통 사용자 지정 유지",
+          "qa": "무창 컴파일·기본값/사용자 지정 검사 후 실제 화면 확인",
+          "dependsOn": [],
+          "status": "blocked",
+          "revision": 1,
+          "result": "기본 블랙/사용자 지정 검사 통과. 사용자 화면 제어 중단 지시에 따라 실제 화면 확인은 보류."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-30T22:11:46.232042+09:00",
+          "summary": "코드·값 확인 완료, 실제 화면은 사용자 요청으로 보류",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "무창 컴파일/기본값과 사용자 지정 검사 통과. 실제 UI 색상 캡처 미실행.",
+              "evidence": "Artifacts/BlackAccent/Verification.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-10-30-manual-20261030130849009-v1.0.0.html",
+    "postPath": "projects/pixora/posts/2026-10-30-manual-20261030130849009-v1.0.0.md",
+    "date": "2026-10-30T13:08:49.009Z",
+    "version": "v1.0.0",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixora-black-accent",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "Pixora 기본 강조색 블랙 적용",
+      "summary": "초록색 강조색을 블랙으로 바꾸고 라이트/다크 선택은 유지합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "무창 값 검사와 최종 화면 확인",
+      "outcome": "강조색 공급자 변경, 무창 컴파일·값 검사 진행.",
+      "proposedTime": "2~5분",
+      "actualTime": "2026-10-30 22:04:41 KST 시작 · 진행 중",
+      "xerjEvidence": "XERJ LightTheme 검색 후 사용자 정정에 따라 강조색 경로를 현재 소스로 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixora-black-accent",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "제목줄·선택·기본 버튼과 선택기 팝업에 중성 블랙 기본 강조색을 적용한다.",
+      "completionCriteria": "기본값 RGB24/24/24와 공통 사용자 지정 유지 확인, 최종 화면은 제어 보류 해제 후 확인.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "블랙 강조색 연결과 검증",
+          "action": "Pixora 제품 기본 강조색과 팝업 공급자를 연결하고 기존 테마 선택과 DataTable 경로는 유지한다.",
+          "expected": "기본 강조색#181818, 명시적 공통 사용자 지정 유지",
+          "qa": "무창 컴파일·기본값/사용자 지정 검사 후 실제 화면 확인",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
     }
   },
   {
