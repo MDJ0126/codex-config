@@ -1,0 +1,78 @@
+---
+title: 원본 아이콘 공유와 창 선택 회귀 수정 · 실행 메뉴얼
+date: 2026-10-30T09:43:07.316Z
+version: v1.0.1
+status: 완료
+state: complete
+project: turnroom
+type: 작업 메뉴얼
+report_kind: manual
+category: 순차 작업 · 반복 QA
+summary: 진행 중 받은 새 메뉴얼 지침에 따라 이미 수행한 근거와 남은 공개 검증을 기록합니다.
+format: tracefolio-v2
+priority: high
+manual_id: original-icons-window-focus
+round: 1
+manual_state: complete
+payload: ../assets/submissions/2026-10-30-manual-original-icons-window-focus-20261030094307316-v1.0.1.json
+---
+
+## 목표와 완료 기준
+
+기존 DataTable 원본 아이콘·그리기를 공유하고 Pixora/DataTable 교차 선택 시 창 내려감을 수정한다.
+
+완료 기준: 원본 바이트·GUID 및 공통 그리기 확인, 실제 누름 전후 재현·회귀 QA, 1.2 설치와 설정 보존, 영향 화면 캡처·다국어 가이드 빌드·HTML 보고 배포 확인. 과거 전체 가이드 불일치는 숨기지 않고 별도 남긴다.
+
+최초 1회차 · 순차 진행 · 전체 4개 · 이번 실행 T04
+
+## 순차 작업 메뉴얼
+
+| 순서 | 작업 | 실행 절차 | 완료 기준 | QA 절차 | 상태 |
+| --- | --- | --- | --- | --- | --- |
+| T01 | 원본 아이콘 모체 연결 | 원본 아틀라스를 이동하고 GUID를 유지하며 두 UI에 공통 렌더러를 연결한다. | 원본 바이트·GUID 동일, 동일 Paint 사용 | IconProvenance와 실제 갤러리/두 제품 화면을 대조한다. | 완료 |
+| T02 | 창 선택 수정과 실제 입력 QA | 수정 전후 동일한 실제 held mouse 입력으로 네이티브 Z 순서를 비교한다. | 동료 창 앞 유지, 직접 본체 선택과 뒤 창은 보존 | 36회 목록·16회 본문·2개 반대 조건 및 최대화·목록 복원 검사 | 완료 |
+| T03 | 패키지·상속·설정 보존 | 1.2 패키지 내보내기 후 실제 소비자 프로젝트에 설치한다. | 공통 배치·상속 정상, 설정 보존, Development 미포함 | 108개 배치 및 소비자 import/migration 검사, 패키지 소스 대조 | 완료 |
+| T04 | 화면·가이드·공개 보고 | 실제 화면을 갱신하고 가이드 빌드·보고서 v2 생성·사이트 검증 후 공개한다. | 영향 캡처 소스 일치, 외부 HTML·이미지 링크 정상 | 26개 소스 해시, 9개 가이드 빌드, 사이트 검사와 Pages 배포/URL 확인 | 완료 |
+
+## QA 반복 기록
+
+### Q01 · step · 2026-10-30T18:37:25.356189+09:00
+
+이미 실행한 해당 근거를 현재 소스/패키지와 재대조
+
+- T01 r1 · pass: 원본 보존, Affinity 네이티브 원본 저장, 실제 갤러리 확인 · 근거: TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/
+### Q02 · step · 2026-10-30T18:37:25.356189+09:00
+
+이미 실행한 해당 근거를 현재 소스/패키지와 재대조
+
+- T02 r1 · pass: 수정 전 실패/후 성공, 모든 해당 조건 통과 · 근거: TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/
+### Q03 · step · 2026-10-30T18:37:25.356189+09:00
+
+이미 실행한 해당 근거를 현재 소스/패키지와 재대조
+
+- T03 r1 · pass: 108 통과, 소비자 phase6 통과, 패키지 세 개 소스 일치 · 근거: TurnRoom f9a70ee0 · Artifacts/OriginalIconQA/
+### Q04 · step · 2026-10-30T18:43:07.171457+09:00
+
+영향 문서와 공개 주소 실제 응답 확인
+
+- T04 r1 · pass: 26개 영향 캡처 소스 일치, 9개 가이드 빌드, HTML/링크/필터 검사, 보고서 5개·실제 이미지 8개 외부 200, Actions 41035016811 성공. · 근거: Actions 41035016811 success · 새 보고서 5개 및 실제 화면 8개 HTTP HEAD 200
+### Q05 · final · 2026-10-30T18:43:07.171457+09:00
+
+현재 네 작업 버전의 전체 최종 QA · 실패한 과거 가이드는 별도 명시
+
+- T01 r1 · pass: 원본 보존, Affinity 네이티브 원본 저장, 실제 갤러리 확인 · 근거: TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답
+- T02 r1 · pass: 수정 전 실패/후 성공, 모든 해당 조건 통과 · 최종 네이티브 본문 16회와 반대 조건 2개 재실행 통과 · 근거: TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답
+- T03 r1 · pass: 108 통과, 소비자 phase6 통과, 패키지 세 개 소스 일치 · 근거: TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답
+- T04 r1 · pass: 26개 영향 캡처 소스 일치, 9개 가이드 빌드, HTML/링크/필터 검사, 보고서 5개·실제 이미지 8개 외부 200, Actions 41035016811 성공. · 근거: TurnRoom f9a70ee0/acaf52b9 · Artifacts/OriginalIconQA/FinalMatrix.json, IconProvenance.json, Layout108.json, Consumer12-FinalPackageConsumer.json, PackageAudit.json 및 공개 URL 실제 응답
+
+## 남은 작업과 다음 반복
+
+다른 OS·고DPI·물리적 모니터 연결 변경은 미확인입니다. 과거 DataTable 전체 가이드 불일치 238건은 별도 남아 있습니다. 이번 변경의 26개 새 캡처 기록은 현재 소스와 일치합니다.
+
+이전 회차: [메뉴얼 열기](../../../projects/turnroom/reports/2026-10-30-manual-20261030093737544-v1.0.0.html)
+
+## 작업 시간
+
+- 제안 시간: 40~80분
+- 실제로 완료된 시간: 2026-10-30 17:16:52 KST 시작 → 2026-10-30 18:43:07 KST 최종 실제 창 회귀 및 보고서/이미지 공개 확인 완료, 86.3분. 이 메뉴얼 종료본의 배포는 다음 단계로 별도 확인합니다.
+- XERJ: 사용 — Tools/Search/Xerj.ps1 Status 및 Search PreserveVisiblePeer 호출. 후보를 현재 WindowFocus/WindowFrame/WorkbookNativeWindow 소스와 네이티브 실행 기록으로 확인했습니다.

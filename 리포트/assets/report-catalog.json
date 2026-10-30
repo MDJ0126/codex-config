@@ -1,10 +1,30 @@
 [
   {
+    "title": "원본 아이콘 공유와 창 선택 회귀 수정 · 실행 메뉴얼",
+    "summary": "진행 중 받은 새 메뉴얼 지침에 따라 이미 수행한 근거와 남은 공개 검증을 기록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-original-icons-window-focus-20261030094307316-v1.0.1.html",
+    "date": "2026-10-30T09:43:07.316Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "작업 메뉴얼 기반 순차 실행·반복 QA 도입",
     "summary": "이번 사이트 작업을10개 순서로 진행합니다. 전체 요구사항을 보존하고 작업별 QA·수정·최종 검증을 통해 완료합니다.",
     "project": "codex-config",
     "reportPath": "projects/codex-config/reports/2026-10-30-manual-manual-qa-workflow-20261030094006151-v1.0.2.html",
     "date": "2026-10-30T09:40:06.151Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "원본 아이콘 공유와 창 선택 회귀 수정 · 실행 메뉴얼",
+    "summary": "진행 중 받은 새 메뉴얼 지침에 따라 이미 수행한 근거와 남은 공개 검증을 기록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030093737544-v1.0.0.html",
+    "date": "2026-10-30T09:37:37.544Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -16,6 +36,46 @@
     "reportPath": "projects/codex-config/reports/2026-10-30-manual-manual-qa-workflow-20261030093730352-v1.0.1.html",
     "date": "2026-10-30T09:37:30.352Z",
     "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DataTable 아이콘 원본을 보존하고 공통 창 제어에 연결",
+    "summary": "판매 중 제품의 그림·GUID를 유지하면서 Pixora와 공통 모체를 공유하도록 연결했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030093726018-v1.0.0.html",
+    "date": "2026-10-30T09:37:26.018Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora의 개별 벡터 아이콘을 DataTable 원본 카탈로그로 교체",
+    "summary": "원본 아이콘과 공통 창 제어를 사용하고 라이트·다크 실제 화면을 다시 캡처했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-10-30-result-20261030093725834-v1.0.0.html",
+    "date": "2026-10-30T09:37:25.834Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "하단 창 목록을 누르는 동안 다른 제품 창이 Unity 뒤로 내려가는 문제 수정",
+    "summary": "실제 140ms 누름으로 수정 전 재현하고, 누름 중 앞 창 그룹을 보존해 수정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-bug-20261030093725676-v1.0.0.html",
+    "date": "2026-10-30T09:37:25.676Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DataTable 원본 아이콘과 창 제어 렌더러를 Templete로 통합",
+    "summary": "별도 벡터 대체를 제거하고 DataTable 원본 아틀라스·GUID·그리기 규칙을 공유했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-30-result-20261030093725521-v1.0.0.html",
+    "date": "2026-10-30T09:37:25.521Z",
+    "kind": "result",
     "relatedReport": "",
     "replyTo": ""
   },
