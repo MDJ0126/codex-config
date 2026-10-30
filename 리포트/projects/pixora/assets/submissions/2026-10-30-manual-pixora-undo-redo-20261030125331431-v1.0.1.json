@@ -1,0 +1,173 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora 창별 언두·리두 연결",
+    "summary": "공통 이력 모체와 원본 아이콘으로 편집 취소/재실행을 제공합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자의 “나 컴쓴다 제어 ㄴㄴ” 지시 이후 마우스·키보드·창 포커스 및 표시 중인 Unity QA 명령을 중단했습니다. 최종 네이티브 Ctrl+Z→Ctrl+Y 반복, 두 버튼 클릭, 교차 창과 두 테마 화면 재확인이 남았습니다. 제품 가이드의 기존 캡처 해시는 유지하고 재확인 대기로 표시했습니다. 전체 GUI QA 통과나 버그 해결 완료로 등록하지 않았습니다.",
+    "outcome": "이력 구현과61상태/최종16개 헤드리스 검사·패키지 검증 통과. 최종 네이티브/화면 검증은 명시적 사용자 보류.",
+    "proposedTime": "20~40분",
+    "actualTime": "30.7분 · 구현/백그라운드 검증 및 코드 푸시 2026-10-30 21:53:28 KST. 최종 네이티브 입력·현재 화면 검증은 사용자 제어 보류로 미완료.",
+    "xerjEvidence": "XERJ Undo 검색 후 현재 Pixora 및 DataTable 소스를 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-undo-redo",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "Pixora에서 실제 설정 변경을 창별로 취소·재실행하고 미리보기에 반영한다.",
+    "completionCriteria": "기본 입력·색상/톤·프로필·촬영/애니메이션·원본 저장 후 이력·다중 창·키보드/버튼 실행 검증, 현재 UI 문서 및 공개 HTML.",
+    "previousManual": "projects/pixora/reports/2026-10-30-manual-20261030122602743-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 이력과 Pixora 상태 연결",
+        "action": "공통 이력 저장소와 창별 디자인 스냅샷을 연결한다.",
+        "expected": "변경/새 분기/창 분리/저장 시 참조 보존",
+        "qa": "다양한 필드·모드·프로필 취소/재실행 및 원본 저장 회귀",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "창별 상태 이력과 저장/도메인 재로드/참조 유지 검증 통과."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "버튼·단축키 실제 실행",
+        "action": "DataTable 원본 Undo/Redo 아이콘과 단축키를 연결한다.",
+        "expected": "버튼·Ctrl+Z/Y가 해당 창에서만 동작",
+        "qa": "실제 Unity 마우스/키보드와 두 테마·도메인 재로드",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "blocked",
+        "revision": 1,
+        "result": "사용자가 컴퓨터 제어 중단을 지시했습니다. 최종 포커스 수정 후 네이티브 연속 입력·두 버튼·양 테마 화면 확인이 남았습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서와 공개 보고",
+        "action": "다국어 가이드·현재 화면·패키지·HTML을 검증한다.",
+        "expected": "실제 범위와 제한이 기록된 공개 결과",
+        "qa": "가이드/패키지 검사 및 외부 HTML/이미지 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "가이드/패키지 검사 완료, 기존 실제 캡처를 새 코드 캡처로 바꾸지 않았으며 공개 보고서를 준비했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T21:28:51+09:00",
+        "summary": "초기 이전 창의 빈 역직렬화 기준 처리 실패",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "새 기준 객체의 capture가 null인 경우 비교 중 예외. InitialFailure.json 보존.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-10-30T21:33:54+09:00",
+        "summary": "상태 처리 보정 후61항목 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "팔레트/톤/프레임/저장 및 다중 창61개 상태 검사 통과.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-10-30T21:36:10+09:00",
+        "summary": "연속 네이티브 단축키 경로 실패 보존",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Ctrl+Z 후 Ctrl+Y가 명시적 포커스 전에는 값에 반영되지 않음. NativeInitialFailure/NativePending 보존.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-10-30T21:53:28.384992+09:00",
+        "summary": "최종 헤드리스/직렬화 검증 및 사용자 화면 제어 보류",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 코드의 별도 헤드리스16항목·도메인 재로드·패키지 소스 대조 통과.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "포커스 지연 복원 구현 후 합성 이벤트 검사 통과. 네이티브 입력/화면 검증은 사용자 요청으로 보류.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "가이드 텍스트와 패키지는 검사했으나 최종 화면 재캡처·전체 최종 QA는 미실행.",
+            "evidence": "TurnRoom Artifacts/HistoryQA",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}

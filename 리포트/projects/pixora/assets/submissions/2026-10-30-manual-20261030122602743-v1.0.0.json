@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora 창별 언두·리두 연결",
+    "summary": "공통 이력 모체와 원본 아이콘으로 편집 취소/재실행을 제공합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "Pixora 이력/명령 연결 부재를 현재 소스로 확인.",
+    "proposedTime": "20~40분",
+    "actualTime": "2026-10-30 21:22:46 KST 시작 · 진행 중",
+    "xerjEvidence": "XERJ Undo 검색 후 현재 Pixora 및 DataTable 소스를 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-undo-redo",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Pixora에서 실제 설정 변경을 창별로 취소·재실행하고 미리보기에 반영한다.",
+    "completionCriteria": "기본 입력·색상/톤·프로필·촬영/애니메이션·원본 저장 후 이력·다중 창·키보드/버튼 실행 검증, 현재 UI 문서 및 공개 HTML.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 이력과 Pixora 상태 연결",
+        "action": "공통 이력 저장소와 창별 디자인 스냅샷을 연결한다.",
+        "expected": "변경/새 분기/창 분리/저장 시 참조 보존",
+        "qa": "다양한 필드·모드·프로필 취소/재실행 및 원본 저장 회귀",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "버튼·단축키 실제 실행",
+        "action": "DataTable 원본 Undo/Redo 아이콘과 단축키를 연결한다.",
+        "expected": "버튼·Ctrl+Z/Y가 해당 창에서만 동작",
+        "qa": "실제 Unity 마우스/키보드와 두 테마·도메인 재로드",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서와 공개 보고",
+        "action": "다국어 가이드·현재 화면·패키지·HTML을 검증한다.",
+        "expected": "실제 범위와 제한이 기록된 공개 결과",
+        "qa": "가이드/패키지 검사 및 외부 HTML/이미지 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
