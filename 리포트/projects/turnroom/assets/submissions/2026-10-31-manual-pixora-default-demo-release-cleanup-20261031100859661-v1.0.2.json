@@ -1,0 +1,199 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixora 기본 데모·폴더 및 배포 제외 수정",
+    "summary": "고객용 샘플과 개발 검증 자료를 분리하고 실제 배포 파일을 다시 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "파일 보존 및 대조 완료. 바탕화면 삭제는 수행하지 않음.",
+    "outcome": "TurnRoom-IconSource-20261030-1749, TurnRoom-IconWork-20261031 두 바탕화면 폴더는 삭제해도 됩니다. 원본 3개를 프로젝트 ArtSources/Templete/DesktopIconArchive-20261031 아래에 보존했습니다. 실제 삭제는 하지 않았습니다.",
+    "proposedTime": "이번 후속 작업 1~3분; 최초 작업 시간은 이전 버전에 보존.",
+    "actualTime": "2026-10-31 19:07:19 KST 시작. 파일 보존·해시 검증 완료 19:07:39 KST(20초). 보고서 기록 시각 19:08:56 KST. 공개 배포 확인은 별도 진행.",
+    "xerjEvidence": "코드 검색 불필요 — 파일 목록·바이트·SHA-256 대조 작업입니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-default-demo-release-cleanup",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "Pixora 기본 데모와 Samples 루트를 최신 소재로 정리하고 개발 지침을 배포에서 제외한다.",
+    "completionCriteria": "기본 데모·저장 작업 예제·10개 씬 최신 연결, 개발 자료 제외 패키지 및 깨끗한 설치·실행 검증과 HTML 보고",
+    "previousManual": "projects/turnroom/reports/2026-10-31-manual-pixora-default-demo-release-cleanup-20261031090143618-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기본 데모와 개발 자료 분리",
+        "action": "최신 이미지·모델·클립과 저장 작업 예제를 연결하고 기존 로봇 검증 자료의 GUID를 보존해 개발 폴더로 옮긴다.",
+        "expected": "Samples 기본 위치에 예전 데모가 없고 모든 기본 로딩이 최신 소재",
+        "qa": "실제 Studio 로드·작업 예제 재열기·의존성 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "최신 기본 데모·Works 2개와 10개 씬 연결을 독립 Unity에서 검증했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "배포 재생성·설치 검증",
+        "action": "파일 단위 배포 제외 필터를 적용해 패키지를 다시 만들고 깨끗한 프로젝트에서 설치·실행한다.",
+        "expected": "개발 AGENTS·Development·옛 데모 제외, 최신 씬·원본 포함",
+        "qa": "실제 unitypackage pathname·해시 대조 및 Unity 재설치 실행",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Pixora 단독 새 설치와 Samples 제거 본체 실행 통과. 최종 tar에서 개발 AGENTS·Development·옛 로봇·긴 경로 없음."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "기록과 푸시",
+        "action": "변경·실패·실제 화면과 작업 시간을 HTML 아카이브에 기록한다.",
+        "expected": "푸시·보고 공개·링크 검증",
+        "qa": "명시적 스테이징·HTML 빌드·외부 응답 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "21dc3048 프로젝트 푸시, 8b4ca04 전역 지침 및 dd57492 보고서 푸시. Actions 41186855034 성공, 실제 HTML과 WebP HTTP 200."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "추가 아이콘 작업 폴더 보존·대조",
+        "action": "지정된 바탕화면 폴더의 파일을 프로젝트 안에 보존하고 전체 SHA-256을 대조한다.",
+        "expected": "원본 3개 보존 및 해시 일치 후 삭제 가능 여부 판정",
+        "qa": "모든 파일 크기 및 SHA-256 일치, 현재 제품 파일과 차이 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "PNG 2개와 SVG 1개 보존, 모두 동일 해시. 바탕화면 삭제 가능, 실제 삭제는 미수행."
+      }
+    ],
+    "focusTasks": [
+      "T04"
+    ],
+    "scopeChange": "사용자가 추가로 지정한 바탕화면 아이콘 폴더 2개의 삭제 가능 여부를 확인하기 위해 T04를 추가했습니다. 기존 작업과 QA 이력은 유지합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-10-31T18:01:43.300612+09:00",
+        "summary": "독립 Unity 실행·최종 패키지 감사·프로젝트 푸시·HTML 외부 배포 근거를 최종 대조했습니다. 기록 이전 실패와 남은 심사 항목은 결과 보고서에 보존합니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최신 기본 데모·Works 2개와 10개 씬 연결을 독립 Unity에서 검증했습니다.",
+            "evidence": "실제 Studio 캡처 및 fresh-install.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Pixora 단독 새 설치와 Samples 제거 본체 실행 통과. 최종 tar에서 개발 AGENTS·Development·옛 로봇·긴 경로 없음.",
+            "evidence": "package-audit.json 및 core-without-samples.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "21dc3048 프로젝트 푸시, 8b4ca04 전역 지침 및 dd57492 보고서 푸시. Actions 41186855034 성공, 실제 HTML과 WebP HTTP 200.",
+            "evidence": "520개 보고서와 19467 링크 검증, GitHub Actions 성공 및 외부 URL 응답",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-31T19:08:56.585548+09:00",
+        "summary": "추가 지정한 아이콘 파일 3개 보존과 대조 결과",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "PNG 2개와 SVG 1개 보존, 모두 동일 해시. 바탕화면 삭제 가능, 실제 삭제는 미수행.",
+            "evidence": "ArtSources/Templete/DesktopIconArchive-20261031/verification.json의 파일 3개 해시 일치",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-10-31T19:08:56.585548+09:00",
+        "summary": "기존 완료 근거를 유지하고 추가 파일 보존 결과를 최종 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최신 기본 데모·Works 2개와 10개 씬 연결을 독립 Unity에서 검증했습니다.",
+            "evidence": "실제 Studio 캡처 및 fresh-install.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Pixora 단독 새 설치와 Samples 제거 본체 실행 통과. 최종 tar에서 개발 AGENTS·Development·옛 로봇·긴 경로 없음.",
+            "evidence": "package-audit.json 및 core-without-samples.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "21dc3048 프로젝트 푸시, 8b4ca04 전역 지침 및 dd57492 보고서 푸시. Actions 41186855034 성공, 실제 HTML과 WebP HTTP 200.",
+            "evidence": "520개 보고서와 19467 링크 검증, GitHub Actions 성공 및 외부 URL 응답",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "PNG 2개와 SVG 1개 보존, 모두 동일 해시. 바탕화면 삭제 가능, 실제 삭제는 미수행.",
+            "evidence": "ArtSources/Templete/DesktopIconArchive-20261031/verification.json의 파일 3개 해시 일치",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

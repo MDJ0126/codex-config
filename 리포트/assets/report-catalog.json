@@ -1,5 +1,25 @@
 [
   {
+    "title": "Pixora 기본 데모·폴더 및 배포 제외 수정",
+    "summary": "고객용 샘플과 개발 검증 자료를 분리하고 실제 배포 파일을 다시 검증합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-pixora-default-demo-release-cleanup-20261031100859661-v1.0.2.html",
+    "date": "2026-10-31T10:08:59.661Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "바탕화면 아이콘 작업 폴더 2개 삭제 가능 여부 확인",
+    "summary": "아이콘 PNG 두 개와 SVG 한 개를 프로젝트 안에 보존하고 SHA-256 일치를 확인하여 바탕화면 폴더 삭제가 가능함을 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-result-20261031100859442-v1.0.0.html",
+    "date": "2026-10-31T10:08:59.442Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "LAST37N 플레이 품질 재작업: 실제 Affinity·Blender 원본과 적용 검증",
     "summary": "기본8788에 UI·캐릭터/장비·상가·낮밤·관통/상호작용 개선을 적용했습니다. 전체 배포6732743바이트로 상한을 낮췄습니다.",
     "project": "last37n",
