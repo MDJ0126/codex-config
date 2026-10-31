@@ -1,0 +1,148 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Windows API 실제 입력 QA — 입력·단축키·삽입 메뉴 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/theme.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/discussions.css?v=7522138be84f"><link rel="stylesheet" href="../../../assets/manuals.css?v=7522138be84f"><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Windows API 실제 입력 QA — 입력·단축키·삽입 메뉴 수정</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">실제 Windows 키·마우스로 입력·저장·IME·Unity 충돌·리본을 검증하고 결함을 수정했습니다. 종료 원인과 일부 전환·전체 키 전수 검증은 남았습니다.</p><div class="post-byline"><time datetime="2026-10-31T03:32:54.327Z">2026년 10월 31일 오후 12:32 KST</time><span>v1.0.0</span><span>수정사항</span></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>실제 입력·저장·IME·F4·반복 편집·리본/도형 QA 및 수정 후 재검사를 수행했습니다. 전체 QA 완료 판정은 보류합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>재현 문제</th>
+<th>검증한 원인과 수정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>빈 셀 클릭 실패</td>
+<td>재로드된 빈 도형 대기 문자열을 활성 상태로 오판. null/empty를 함께 검사</td>
+</tr>
+<tr>
+<td>일반 입력 무시</td>
+<td>그리드 클릭 후 Unity 텍스트 편집 플래그 잔류. 포커스와 편집 상태 함께 해제</td>
+</tr>
+<tr>
+<td>첫 글자 중복</td>
+<td>물리 KeyDown과 문자 이벤트에 fallback 문자를 중복 삽입. 실제 문자 이벤트만 삽입</td>
+</tr>
+<tr>
+<td>일부 단축키 무시</td>
+<td>실제 KeyDown은 오지만 ShortcutManager 명령 콜백이 오지 않는 실행 증거. 같은 창 전용 처리 경로로 연결</td>
+</tr>
+<tr>
+<td>Return/Escape 등록 경고</td>
+<td>Unity가 해당 attribute 키를 거부. 등록 대상에서 제외하고 네이티브 처리 유지</td>
+</tr>
+<tr>
+<td>삽입 탭 도형/그림/차트 누락</td>
+<td>명령 등록이 Copy 실행 람다 안에 중첩. 리본 등록 단계로 이동</td>
+</tr>
+</tbody></table>
+</div><p>9개 언어의 단축키 문서와 검증 범위 안내를 갱신했습니다.</p>
+<h2 id="section-4">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>실제 테스트</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>셀 클릭·연속 abcd·물리 키 ABCD</td>
+<td>수정 후 통과</td>
+</tr>
+<tr>
+<td>한글 Unicode·실제 한국어 IME rksk → 가나</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>Enter·Tab 확정/이동·Undo/Redo</td>
+<td>통과</td>
+</tr>
+<tr>
+<td>Ctrl+S 저장·닫기·재열기</td>
+<td>값 유지 확인</td>
+</tr>
+<tr>
+<td>편집 중 Ctrl+W → 파일명 표시·Esc 취소·저장 버튼</td>
+<td>취소 시 입력 유지, 저장 후 재열기 확인</td>
+</tr>
+<tr>
+<td>Ctrl+D·Ctrl+Z 반복</td>
+<td>10회 통과</td>
+</tr>
+<tr>
+<td>F2·F4 참조 전환</td>
+<td>$B$1 → B$1 → $B1 → B1 통과</td>
+</tr>
+<tr>
+<td>Workbook Ctrl+P·Ctrl+Shift+P</td>
+<td>Play/Pause 미실행, 인쇄 미지원 안내·셀 서식 창 표시</td>
+</tr>
+<tr>
+<td>Unity GameView Ctrl+P</td>
+<td>재생·중지 통과</td>
+</tr>
+<tr>
+<td>게임 데이터 Play 중 입력</td>
+<td>읽기 전용 상태·변경 차단</td>
+</tr>
+<tr>
+<td>개별 창 최소화·선반 미리보기·복원</td>
+<td>해당 창만 상태 변경</td>
+</tr>
+<tr>
+<td>ArcadeText PageDown/PageUp</td>
+<td>실제 입력 20회 관찰, 멈춤·시간초과 없음</td>
+</tr>
+<tr>
+<td>A9 표 선택·표 디자인 탭</td>
+<td>표시 통과</td>
+</tr>
+<tr>
+<td>삽입 탭·도형 갤러리·도형 배치·Undo</td>
+<td>수정 후 통과</td>
+</tr>
+<tr>
+<td>최종 모델 회귀</td>
+<td>단축키2100·수식64·표68·삽입51·툴팁684 = 2967개 통과</td>
+</tr>
+<tr>
+<td>최종 빌드</td>
+<td>오류0·기존 Templete XML 주석 경고8</td>
+</tr>
+</tbody></table>
+</div><p>실제 Win32 SendInput/마우스와 PrintWindow로 확인했습니다. 관찰기는 상태를 읽었으며 키 이벤트를 모의 생성하지 않았습니다. 테스트는 분리한 QA 프로젝트와 복사한 파일에서 수행했습니다. 전체186개 카탈로그 항목이나 모든 Excel 기능·키보드 배열을 통과했다는 의미는 아닙니다.</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/ime-composition-native.webp" alt="물리 키로 한글 조합 중인 실제 화면" loading="lazy"><figcaption>물리 키로 한글 조합 중인 실제 화면</figcaption></figure></p>
+<p>물리 키로 한글 조합 중인 실제 화면</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/unsaved-close-dialog.webp" alt="파일명·경로가 표시된 실제 저장 확인창" loading="lazy"><figcaption>파일명·경로가 표시된 실제 저장 확인창</figcaption></figure></p>
+<p>파일명·경로가 표시된 실제 저장 확인창</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/f4-native-reference.webp" alt="F4 및 참조 셀 강조" loading="lazy"><figcaption>F4 및 참조 셀 강조</figcaption></figure></p>
+<p>F4 및 참조 셀 강조</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/insert-tab-fixed.webp" alt="수정 후 실제 삽입 리본" loading="lazy"><figcaption>수정 후 실제 삽입 리본</figcaption></figure></p>
+<p>수정 후 실제 삽입 리본</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/shape-gallery-native.webp" alt="실제 도형 목록" loading="lazy"><figcaption>실제 도형 목록</figcaption></figure></p>
+<p>실제 도형 목록</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/inserted-shape-native.webp" alt="도형 배치 및 도형 서식 탭" loading="lazy"><figcaption>도형 배치 및 도형 서식 탭</figcaption></figure></p>
+<p>도형 배치 및 도형 서식 탭</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/table-context-a9-native.webp" alt="표 셀 선택 시 표 디자인 탭" loading="lazy"><figcaption>표 셀 선택 시 표 디자인 탭</figcaption></figure></p>
+<p>표 셀 선택 시 표 디자인 탭</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/keyboard-settings-settled.webp" alt="단축키 설정과 검증 범위 안내" loading="lazy"><figcaption>단축키 설정과 검증 범위 안내</figcaption></figure></p>
+<p>단축키 설정과 검증 범위 안내</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/game-play-locked.webp" alt="Play 중 게임 데이터 잠금" loading="lazy"><figcaption>Play 중 게임 데이터 잠금</figcaption></figure></p>
+<p>Play 중 게임 데이터 잠금</p>
+<p><figure><img class="report-image" src="../assets/native-qa-20261031/hover-card-settled.webp" alt="최소화 목록의 실제 미리보기" loading="lazy"><figcaption>최소화 목록의 실제 미리보기</figcaption></figure></p>
+<p>최소화 목록의 실제 미리보기</p>
+<p>재시작 후 실제 Unity SceneView 개체 복제(1→2)와 ProjectBrowser 파일 복제(1→2)가 통과했습니다. 근거: scene-real-duplicate-selected.json, project-real-duplicate.json.</p>
+<h2 id="section-5">남은 사항</h2>
+<ul>
+<li>최초 Scene/Project 검사는 GameView 포커스 때문에 미통과로 보존했습니다. 재시작 후 실제 SceneView·ProjectBrowser 창에서 Ctrl+D를 다시 실행하여 각각 개체1→2, 파일1→2 복제를 확인했습니다.</li>
+<li>격리 QA Unity는 Game 탭 더블클릭 뒤 종료되었습니다. 직전 로그에 Maximized serialized file backup not found가 있으며 종료 원인은 미확인입니다. 재시작 후 Scene/Project 입력 검사는 통과했습니다. 종료 원인 자체는 미확인으로 보존합니다.</li>
+<li>ArcadeText 관찰값은 테스트 도구 지연을 포함하므로 FPS나 렌더 성능 수치로 해석하지 않습니다.</li>
+<li>표 프리셋은 선택됐지만 기존 직접 셀 채우기 색상이 우선하여 보라색이 유지됩니다. 이 사용성 문제는 남았습니다.</li>
+<li>다른 앱/모든 키 조합·모든 28개 워크북·애니메이션 중간 프레임 전수 검증은 완료하지 않았습니다.</li>
+<li>교훈 검토: 실제 키 이벤트와 관찰 지연을 분리해 기록했습니다. 기존 전역 실제 실행·증거 규칙과 중복되므로 전역 지침 변경 없음.</li>
+</ul>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 30~50분</li>
+<li>실제로 완료된 시간: 2026-10-31 11:53:44 KST 시작 → 12:35:08 KST 핵심 검증·보고서 작성, 41분24초. 배포 확인은 별도이며 전체 전수 QA 완료 판정은 보류합니다.</li>
+<li>XERJ: 사용 — XERJ로 단축키/포커스 후보를 찾고 현재 소스 및 실제 이벤트 로그와 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031033254327-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031033254327-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
