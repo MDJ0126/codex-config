@@ -1,0 +1,618 @@
+[
+  {
+    "id": "T01",
+    "title": "기준 버전·전체 탭 대조 목록",
+    "verdict": "pass",
+    "finding": "원래27개 작업을 유지했습니다. 공식 XLSX SHA와4926개 레코드(명령명 있는4800행)·빈 명령명을 제외한2243개 고유 명령·빈 탭명을 제외한58개 탭/메뉴 묶음을 재계산했습니다. 58개는 기능 케이스 수가 아니며 컨텍스트 메뉴·구형 항목도 포함합니다. 2024-03-18 명령 목록을2026년 설치판 전체와 동일시하지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-fa65d2941fc390.webp",
+        "caption": "홈 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows 어두운 테마 / 웹 / 구형 Windows; 분류: 탭 화면. 환경별 원본을 분리해 보존. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-home.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T02",
+    "title": "삽입 탭",
+    "verdict": "fail",
+    "finding": "원본은 표·피벗·그림·도형·아이콘·SmartArt·3D·차트·스파크라인·슬라이서·링크·텍스트·기호 등을 표시합니다. 현재는 Tables/Shapes/Pictures/Objects/Chart의5개 진입점입니다. 피벗·SmartArt·3D·스파크라인·슬라이서 등의 원본 진입 구성이 없어 전체 일치 실패입니다. 삽입 엔진51검사는 통과했지만 미구현 기능의 실제 실행은 통과로 계산하지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-b44e68d3ffbc77.webp",
+        "caption": "삽입 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows 어두운 테마; 분류: 탭 화면. 표·그림·도형·차트·스파크라인·필터·텍스트 그룹이 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T03",
+    "title": "홈 탭",
+    "verdict": "fail",
+    "finding": "클립보드·글꼴·맞춤·표시 형식·스타일·셀·편집 그룹을 확인했습니다. 실제 셀 J10에 ABCD 입력→Enter로 J11 이동→Undo로 빈값/Dirty False→Redo로 값 복원→Ctrl+S로 Dirty False를 확인했습니다. 원본의 AutoSum/Fill/Sort & Filter 등 홈 리본 전체 구성과는 다릅니다. 글꼴·한글·다중 셀의 전 조합 반복은 미실행입니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-fa65d2941fc390.webp",
+        "caption": "홈 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows 어두운 테마 / 웹 / 구형 Windows; 분류: 탭 화면. 환경별 원본을 분리해 보존. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-b583365d3f4224.webp",
+        "caption": "홈 — Microsoft 제공 원본 이미지. 범위: Windows 어두운 테마 / 웹 / 구형 Windows; 분류: 탭 화면. 환경별 원본을 분리해 보존. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/show-the-ribbon"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-home.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T04",
+    "title": "파일 메뉴",
+    "verdict": "fail",
+    "finding": "파일 메뉴를 실제 열고 별도 팝업 창을 촬영했습니다. 새 문서/열기/복사 저장/복구/새로 고침을 표시합니다. 원본은 보호 메뉴 부분 자료이며 전체 Backstage 원본은 아닙니다. 현재 File에는 Info/Print/Account 등의 Excel Backstage 구성이 없습니다. 실제 닫기 취소·저장 실패 엔진332검사는 통과했지만 모든 파일 대화상자 클릭 반복은 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-d8311372683111.webp",
+        "caption": "파일 — Microsoft 제공 원본 이미지. 범위: Windows / 보호 메뉴; 분류: 부분. 파일 전체 화면은 추가 확보 필요. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/restrict-changes-to-files-in-excel"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-file-menu.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T05",
+    "title": "페이지 레이아웃 탭",
+    "verdict": "fail",
+    "finding": "원본의 테마·여백·방향·용지 크기·인쇄 영역·나누기·배경·인쇄 제목·배율과 대조했습니다. 실제 현재 탭은 페이지 설정/인쇄 미지원 안내뿐입니다. 소스 SpreadsheetRibbon.Draw의 tab==2 분기도 안내 후 반환합니다. 기능 없음에 따른 실패이며 차단이 아닙니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-090aa7e173a847.webp",
+        "caption": "페이지 레이아웃 — Microsoft 제공 원본 이미지. 범위: Windows / 빌드 미확인; 분류: 부분. 테마·페이지 설정·배율. 오른쪽 그룹은 잘려 있음. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/fit-to-one-page-in-excel"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-page-layout.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T06",
+    "title": "수식 탭",
+    "verdict": "fail",
+    "finding": "현재는 이름 관리자·이름 참조·재계산3개입니다. 원본 함수 라이브러리의 함수 삽입·자동 합계·재무/논리/텍스트/날짜/찾기/수학 그룹이 없습니다. 수식 참조 엔진64검사는 통과했습니다. 수식 엔진 지원과 함수 라이브러리 리본 지원을 혼동하지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-be0b71b7ec7530.webp",
+        "caption": "수식 — Microsoft 제공 원본 이미지. 범위: Windows / 빌드 미확인; 분류: 부분. 함수 라이브러리 그룹만 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/using-functions-and-nested-functions-in-excel-formulas"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-formulas.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T07",
+    "title": "데이터 탭",
+    "verdict": "fail",
+    "finding": "현재는 외부 차트 원본 연결·필터입니다. 원본의 Get Data/CSV/Web/Query/Refresh 등과 다르며 Power Query 동등 기능이 아닙니다. 원본은 Get & Transform/Queries 부분 자료입니다. 전체 정렬·중복 제거·데이터 유효성·연결 오류 반복 테스트는 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-221cd8803c005c.webp",
+        "caption": "데이터 — Microsoft 제공 원본 이미지. 범위: Windows / 문서에서 Excel 2016으로 설명; 분류: 부분. 가져오기·연결 그룹. 탭 전체 아님. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/about-power-query-in-excel"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-data.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T08",
+    "title": "검토 탭",
+    "verdict": "fail",
+    "finding": "검토 탭을 실제 클릭했으나 리본 본문이 비어 있습니다. 원본의 맞춤법·메모·노트·접근성·보호 등을 제공하는 화면이 아닙니다. UI 부재를 확인한 실패이며 존재하지 않는 기능의 클릭을 실행했다고 기록하지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-af47cc4057d588.webp",
+        "caption": "검토 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: 웹 / 별도 Windows 부분 자료; 분류: 탭 화면. 웹 검토 탭과 Windows 보호 그룹을 혼동하지 않음. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5190624/review-tab-options-greyed-out-in-excel-365-files-w"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-review.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T09",
+    "title": "보기 탭",
+    "verdict": "fail",
+    "finding": "현재 Show in Project/Worksheets/View가 표시됩니다. 원본은 통합문서 보기·표시·확대/축소·틀 고정 등의 구성을 가집니다. 현재 리본 구성이 다릅니다. View 하위 기능의 틀 고정·배율·다중 창 전 조합은 미실행으로 남깁니다. 추가: 현재 WorkbookViewer.cs:986의 주소 상자는 GUI.Label로 표시돼 주소 직접 입력 이동은 제공하지 않습니다. 실제 입력 시도와 셀 직접 선택 재QA를 구분해 기록했습니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-38bde9ca1a7bc0.webp",
+        "caption": "보기 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows / 커뮤니티 2023년 게시물; 분류: 부분. 이전·변경 후 그룹 일부의 원본 비교. 정확한 빌드는 미확인. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/discussions/excelgeneral/view-ribbon-tab-checkboxes-no-longer-aligned/3989915"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-023b02c01e3863.webp",
+        "caption": "보기 — Microsoft 제공 원본 이미지. 범위: Windows / 커뮤니티 2023년 게시물; 분류: 부분. 이전·변경 후 그룹 일부의 원본 비교. 정확한 빌드는 미확인. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-gb/excel/get-started/freeze-panes-to-lock-rows-and-columns"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-view.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T10",
+    "title": "그리기 탭",
+    "verdict": "fail",
+    "finding": "그리기 탭과 펜/획 편집 UI가 현재 탭 목록에 없습니다. 도형 서식 탭이 있다는 사실을 Draw 잉크 지원으로 계산하지 않습니다. 원본은 Microsoft Q&A의 부분 화면으로 범위가 제한됩니다. 해당 잉크 기능은 실행할 수 있는 UI가 없어 기능 부재로 실패입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-8d1770b6a8c9db.webp",
+        "caption": "그리기 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows Excel 실물 화면 사진 / 2020년 자료; 분류: 부분. 사진에 모아레가 있으며 Excel 표시 확인. PowerPoint 자료는 제외. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5070058/cant-exit-the-drawing-tool-in-excel"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-home.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T11",
+    "title": "자동화 탭",
+    "verdict": "fail",
+    "finding": "Office Scripts 자동화 탭·스크립트 녹화/갤러리 UI가 없습니다. 별도의 자체 CLI/MCP/API를 Office Scripts 탭 구현으로 계산하지 않습니다. 배치 API 전체 회귀 검사는 이번에 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-0f31b8fcecf427.webp",
+        "caption": "자동화 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Excel 팀 블로그 / 2024년 게시물; 분류: 탭 화면. 기록·스크립트·흐름 그룹이 보임. 정확한 앱 빌드 미확인. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/automate-tasks-with-office-scripts-in-excel-for-windows-and-mac/4216151"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-home.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T12",
+    "title": "개발 도구·추가 기능 탭",
+    "verdict": "fail",
+    "finding": "개발 도구 탭·VBA/ActiveX/폼 컨트롤/추가 기능 리본 진입점이 없습니다. 원본 Developer 자료는 컨트롤 부분이고 Insert 원본에는 Add-ins 영역이 보입니다. 원본 패키지 보존과 실제 VBA/추가 기능 실행 지원은 별개이며 후자를 통과로 처리하지 않습니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-8734469cdbcc68.webp",
+        "caption": "개발 도구 — Microsoft 제공 원본 이미지. 범위: Windows / 빌드 미확인; 분류: 부분. 컨트롤 그룹과 삽입 메뉴만 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/form-controls"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-b44e68d3ffbc77.webp",
+        "caption": "삽입 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows 어두운 테마; 분류: 탭 화면. 표·그림·도형·차트·스파크라인·필터·텍스트 그룹이 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T13",
+    "title": "도움말 탭",
+    "verdict": "not_run",
+    "finding": "현재 도움말 탭을 클릭해 디버거/AI 컨텍스트·버그 보고·수식 도움말 항목을 확인했습니다. 첨부 원본은 Help 탭 이름만 보이는 전체 Excel 화면입니다. Help 본문 원본은 확보하지 못했으므로 내용의 이미지 대조와 모든 언어별 링크 실행은 미실행입니다. 탭 이름만으로 본문 일치 통과를 주지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-fa65d2941fc390.webp",
+        "caption": "Excel 원본 전체 화면의 탭 표시 참고만 가능합니다. Help 본문 화면은 아닙니다. 도움말 내용의 대조 통과 근거로 사용하지 않습니다. 정확한 빌드 미확인.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-help.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T14",
+    "title": "표 디자인",
+    "verdict": "fail",
+    "finding": "실제 표 안 A2 클릭→Table Design, 표 밖 J10 클릭→Home, 재진입→Table Design을 확인했고 선택만으로 Dirty가 생기지 않았습니다. Orange 프리셋 클릭→Dirty True, Ctrl+Z→원래 스타일/Dirty False도 확인했습니다. 표 모델68검사 통과. 원본에는 요약 행·머리글/필터 버튼·외부 데이터·크기 조절 등 현재 없는 리본 요소가 있어 전체 일치는 실패입니다.",
+    "referenceCount": 1,
+    "currentCount": 4,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-a006f775941643.webp",
+        "caption": "표 디자인 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 탭 화면. 한 원본의 위쪽은 Table Design, 아래쪽은 PivotTable Analyze. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/where-are-the-table-tools"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-table.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-table-outside-shot.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 표 밖 J10 선택: Table Design 숨김, Dirty False."
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-table-orange-shot.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 실제 Orange 스타일 클릭: 적용 및 Dirty True."
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-table-undo-shot.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. Ctrl+Z: 기존 스타일과 Dirty False 복원."
+      }
+    ]
+  },
+  {
+    "id": "T15",
+    "title": "도형 서식",
+    "verdict": "fail",
+    "finding": "도형을 실제 클릭해 Shape Format을 확인했습니다. 현재 도형 변경·채우기·윤곽선·텍스트·크기/위치·개체 관리가 표시됩니다. 원본의 Shape Styles/WordArt/Arrange 구성과 현재 리본은 다릅니다. 도형 전체 교체 엔진584검사를2회 통과했습니다. 각 GUI 도형 범주·취소 전 조합은 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-d3c12abf1be4c0.webp",
+        "caption": "도형 서식 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows / 커뮤니티 2024년 게시물; 분류: 부분. 도형 스타일·WordArt·배치 일부. 오른쪽 잘림. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-shape.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T16",
+    "title": "그림 서식",
+    "verdict": "fail",
+    "finding": "그림을 실제 클릭해 Picture Format을 확인했습니다. 현재 투명도·자르기·크기/위치·개체 관리가 표시됩니다. 원본의 배경 제거·수정·색·아트 효과·그림 스타일·테두리·효과 등의 진입 구성이 없습니다. 여러 PNG/JPEG·자르기·화질·다시 열기 전체 매트릭스는 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-8f6a1195d0b727.webp",
+        "caption": "그림 서식 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows / 커뮤니티 2023년·2026년 게시물; 분류: 탭 화면. 그림 선택 상태와 조정·스타일·배치·크기. 빌드 미확인. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5267157/where-are-microsoft-365-excel-picture-format-tools"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-picture.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T17",
+    "title": "차트 디자인·서식",
+    "verdict": "fail",
+    "finding": "실제 차트 클릭으로 Chart Design/Chart Format 두 전용 탭을 확인하고 두 리본을 촬영했습니다. 현재 차트 삽입/종류/계열 색/크기/관리 중심으로, 원본의 차트 스타일·빠른 레이아웃·행열 전환·데이터 선택·이동·세부 서식 전체를 갖추지 않았습니다. 여러 계열·축·오류값 전체 매트릭스는 미실행입니다.",
+    "referenceCount": 2,
+    "currentCount": 2,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-ed1f576bd1e820.webp",
+        "caption": "차트 디자인 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows / 커뮤니티 2025년 게시물; 분류: 부분. 차트 스타일과 데이터 그룹. 왼쪽 그룹 잘림. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5423242/chart-design-not-available-i-have-tried-everything"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-7db3b2c52a86d2.webp",
+        "caption": "차트 서식 — Microsoft 제공 원본 이미지. 범위: Office 공통 문서의 Excel 명시 그림; 분류: 부분. 현재 선택·도형 스타일 그룹. 탭 전체 아님. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/office/graphics-visuals/change-the-shape-fill-outline-or-effects-of-chart-elements"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-chart.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-chart-format.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 차트 서식 탭을 직접 선택했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T18",
+    "title": "피벗 테이블·피벗 차트",
+    "verdict": "fail",
+    "finding": "원본에는 PivotTable Analyze/Design 전용 리본이 보입니다. 현재 삽입 및 전용 탭 생성 소스에는 피벗 생성/필드/캐시/집계/피벗 차트 분석 진입이 없습니다. 피벗 모델을 만들고 계산한 것으로 기록하지 않습니다. 일반 차트 지원을 피벗 차트 지원으로 계산하지 않습니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-a006f775941643.webp",
+        "caption": "피벗 테이블 분석 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 탭 화면. 원본 아래쪽 PivotTable Analyze 전체 리본. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/where-are-the-table-tools"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-dab46976558dc5.webp",
+        "caption": "피벗 테이블 디자인 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 부분. 스타일 갤러리와 옵션 그룹만 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/design-the-layout-and-format-of-a-pivottable"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T19",
+    "title": "슬라이서·시간 표시 막대",
+    "verdict": "fail",
+    "finding": "슬라이서·시간 표시 막대 생성 진입과 전용 탭이 없습니다. 슬라이서 원본은 필터 개체 화면이며 전용 디자인 탭 전체 원본이 아닙니다. 시간 표시 막대 원본은 스타일 갤러리 부분입니다. 실제 연결·필터·저장 테스트는 기능 부재 때문에 실행하지 않았고 동등 구현 판정은 실패입니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-d8020853219008.webp",
+        "caption": "슬라이서 서식 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows / 출처가 Version 2108 Build 14326.20238을 명시; 분류: 기능 화면만. 슬라이서 객체·삽입 필터는 확인. 서식 탭 확보로 세지 않음. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/545181/slicer-in-excel-on-o365-has-disappeared"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-52a00383cdd46f.webp",
+        "caption": "시간 표시 막대 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 부분. Timeline Styles 그룹만 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/create-a-pivottable-timeline-to-filter-dates"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T20",
+    "title": "스파크라인",
+    "verdict": "fail",
+    "finding": "스파크라인 삽입·스타일·축·그룹 전용 탭이 현재 없습니다. 일반 차트 막대를 스파크라인 지원으로 대신 계산하지 않습니다. 원본 자료는 스타일/축 부분 이미지입니다. 스파크라인 기능 부재로 실패입니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-454b87d94b594f.webp",
+        "caption": "스파크라인 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 부분. 스타일 및 축 그룹. 탭 전체 아님. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/analyze-trends-in-data-using-sparklines"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-0418497f2ff916.webp",
+        "caption": "스파크라인 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 부분. 스타일 및 축 그룹. 탭 전체 아님. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/analyze-trends-in-data-using-sparklines"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T21",
+    "title": "SmartArt·그래픽·3D 모델",
+    "verdict": "fail",
+    "finding": "SmartArt·SVG Graphics·3D Model의 전용 모델/탭 진입이 없습니다. 도형/비트맵 그림으로 읽는 기능과 전용 객체 편집은 구분합니다. SmartArt Design·Graphics Format 원본 부분 자료를 붙입니다. 3D 추가 자료는 PowerPoint 화면이므로 Excel 원본으로 사용하지 않았고, Excel3D/SmartArt Format 전체 화면은 자료 부족으로 남깁니다. 기능 부재로 대조 실패입니다.",
+    "referenceCount": 2,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-d9d51c977005f2.webp",
+        "caption": "SmartArt 디자인 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows Excel / 커뮤니티 2024년 게시물; 분류: 부분. 레이아웃·색상·스타일 일부가 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on"
+      },
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-e634f469d4e0d1.webp",
+        "caption": "Microsoft 365 공용 Graphics Format의 Arrange/Size 부분 자료. 정확한 앱·빌드 미확인으로 Excel 전체 탭 원본이라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-au/office/graphics-visuals/edit-svg-images-in-microsoft-365"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T22",
+    "title": "기타 전용 탭",
+    "verdict": "fail",
+    "finding": "기타 전용 항목은 원래 공식 목록에 있는 머리글/바닥글 등을 뜻하며 새로운 기능 케이스를 추가한 것이 아닙니다. 머리글/바닥글 전용 리본이 없고 현재 페이지 설정도 미지원 안내입니다. 나머지 구형 탭·컨텍스트 메뉴58묶음을 별도의58개 필수 케이스로 부풀리지 않습니다. 기타 전체 실행은 미실행입니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-764b201ec1e175.webp",
+        "caption": "머리글·바닥글 — Microsoft 제공 원본 이미지. 범위: Windows / 공식 지원 문서; 분류: 부분. 머리글·바닥글 요소와 옵션 그룹만 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://support.microsoft.com/en-us/excel/headers-and-footers-in-a-worksheet"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-page-layout.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T23",
+    "title": "게임 데이터 전용 리본",
+    "verdict": "not_run",
+    "finding": "게임 데이터와 Game Table 전용 탭의 실제 화면을 확인했습니다. Excel에 게임 데이터 탭 원본은 없으므로 Excel 스크린샷을 꾸며 붙이지 않습니다. 게임 값 유효성331·저장/닫기 엔진 검사는 통과했습니다. 등록/해제/Play 잠금·좁은 창·라이트/다크 전 조합 클릭은 이번에 미실행이므로 이 작업 전체는 통과가 아닙니다.",
+    "referenceCount": 0,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-game.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T24",
+    "title": "Enum 전용 도구",
+    "verdict": "not_run",
+    "finding": "Enums 시트와 Enum Tools 탭을 실제 클릭·촬영했고 Enum 통합31검사를 통과했습니다. Excel에 이 제품의 로컬/글로벌 Enum 전용 탭 원본은 없습니다. 숫자 생략/중복/범위 검증은 엔진 근거와 연결하되 모든 팝업·외부 연결/해제·생성 코드의 실제 게임 실행까지는 이번에 미실행입니다.",
+    "referenceCount": 0,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-enum-tools.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T25",
+    "title": "로컬라이징·Summary 도구",
+    "verdict": "not_run",
+    "finding": "Localization Data와 Summary Tools 탭을 실제 클릭·촬영했습니다. Summary 스키마31·ArcadeText 캐시1064검사를 실제 Unity에서 통과했습니다. 이 제품의 GetString/자동 Summary 도구는 Excel 원본 기능이 아닙니다. 모든 언어/대체 언어·GUI 양방향 변경·Undo/재열기 전체 매트릭스는 이번에 미실행입니다.",
+    "referenceCount": 0,
+    "currentCount": 2,
+    "visualEvidence": [
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-localization.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-summary-tools.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. Summary 시트의 전용 탭을 직접 선택했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T26",
+    "title": "탭별 실제 화면 대조",
+    "verdict": "fail",
+    "finding": "케이스별 원본/실제 화면을 붙이는 표시 기능을 추가했습니다. 원본은 Windows/Web/구형/부분 메뉴가 섞여 있고 정확한 설치 빌드는 미확인입니다. 현재는 Unity6000.0.83f1·영어·Windows API 캡처입니다. 원래 완료 기준의 동일 버전/언어/넓이/테마 전체 매트릭스는 충족하지 않아 실패이며 캡처 파일 존재만으로 통과하지 않습니다.",
+    "referenceCount": 1,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "reference",
+        "image": "../assets/parity-qa-20261031/ref-b44e68d3ffbc77.webp",
+        "caption": "삽입 — Microsoft 커뮤니티/Q&A의 실제 첨부 화면. 범위: Windows 어두운 테마; 분류: 탭 화면. 표·그림·도형·차트·스파크라인·필터·텍스트 그룹이 보임. 정확한 캡처 빌드 미확인; 현재 TurnRoom과 같은 버전·테마라고 간주하지 않습니다.",
+        "source": "https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/"
+      },
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-insert.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  },
+  {
+    "id": "T27",
+    "title": "최종 회귀 QA·가이드·결과 보고",
+    "verdict": "not_run",
+    "finding": "실제 키보드 입력·Enter 이동·Undo/Redo·Ctrl+S 및 Dirty 상태를 검증했습니다. 실제 Unity 엔진16묶음3550단언도 통과했습니다. 첫 주소 상자 입력 시도는 주소 이동이 아니라 셀을 바꿨고 원복을 확인한 뒤 셀 직접 선택으로 재QA했습니다. 대용량 UI 스크롤 평균/p95/최대 지연·모든 창 닫기·최소화/복원 전체 반복은 이번에 미실행이므로 전체 최종 QA 통과가 아닙니다.",
+    "referenceCount": 0,
+    "currentCount": 1,
+    "visualEvidence": [
+      {
+        "role": "current",
+        "image": "../assets/parity-qa-20261031/parity-live-direct-input.webp",
+        "caption": "Unity 6000.0.83f1 / Windows / 영어 UI / 2026-10-31 실제 Windows API 캡처. 현재 선택된 리본/개체 상태를 확인합니다. 없는 기능은 이 화면의 진입점 부재와 전용 탭 생성 소스를 함께 확인했습니다."
+      }
+    ]
+  }
+]

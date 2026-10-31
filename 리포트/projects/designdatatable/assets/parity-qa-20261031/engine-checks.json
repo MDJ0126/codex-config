@@ -1,0 +1,105 @@
+{
+  "utc": "2026-10-31T04:52:38.8122954Z",
+  "unity": "6000.0.83f1",
+  "nativeKeyboardExecuted": false,
+  "suiteCount": 16,
+  "assertions": 3550,
+  "results": [
+    {
+      "name": "편집 초안 지연 저장",
+      "passed": true,
+      "assertions": 4,
+      "milliseconds": 118
+    },
+    {
+      "name": "닫기 취소 저장실패 80회",
+      "passed": true,
+      "assertions": 332,
+      "milliseconds": 1054
+    },
+    {
+      "name": "ArcadeText 캐시",
+      "passed": true,
+      "assertions": 1064,
+      "milliseconds": 332
+    },
+    {
+      "name": "저장 실패와 재시도",
+      "passed": true,
+      "assertions": 24,
+      "milliseconds": 1241
+    },
+    {
+      "name": "줄바꿈 Unicode 저장",
+      "passed": true,
+      "assertions": 69,
+      "milliseconds": 569
+    },
+    {
+      "name": "잘못된 복구 상태 보존",
+      "passed": true,
+      "assertions": 174,
+      "milliseconds": 340
+    },
+    {
+      "name": "Undo Redo 원자성",
+      "passed": true,
+      "assertions": 84,
+      "milliseconds": 223
+    },
+    {
+      "name": "진단 데이터 보존",
+      "passed": true,
+      "assertions": 55,
+      "milliseconds": 663
+    },
+    {
+      "name": "수식 참조",
+      "passed": true,
+      "assertions": 64,
+      "milliseconds": 118
+    },
+    {
+      "name": "게임 값 유효성",
+      "passed": true,
+      "assertions": 331,
+      "milliseconds": 260
+    },
+    {
+      "name": "스키마 Summary",
+      "passed": true,
+      "assertions": 31,
+      "milliseconds": 1125
+    },
+    {
+      "name": "Enum 통합",
+      "passed": true,
+      "assertions": 31,
+      "milliseconds": 773
+    },
+    {
+      "name": "표 디자인 모델",
+      "passed": true,
+      "assertions": 68,
+      "milliseconds": 156
+    },
+    {
+      "name": "삽입 모델",
+      "passed": true,
+      "assertions": 51,
+      "milliseconds": 793
+    },
+    {
+      "name": "도형 전체 교체 1회",
+      "passed": true,
+      "assertions": 584,
+      "milliseconds": 3402
+    },
+    {
+      "name": "도형 전체 교체 반복",
+      "passed": true,
+      "assertions": 584,
+      "milliseconds": 3235
+    }
+  ]
+}

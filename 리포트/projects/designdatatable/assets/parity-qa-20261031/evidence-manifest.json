@@ -1,0 +1,630 @@
+{
+  "createdUtc": "2026-10-31T04:59:11.993179+00:00",
+  "qualification": "Real original reference images and actual native Unity captures. No generated/fake UI. Exact Excel source build not verified. Lossless WebP pixels independently compared.",
+  "images": [
+    {
+      "file": "ref-fa65d2941fc390.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/fa65d2941fc390.png",
+      "originalBytes": 140901,
+      "bytes": 86222,
+      "originalSha256": "fa65d2941fc390d4e518d7b151cb8cde7aa69a6aa4407af647323a8504335ddf",
+      "sha256": "a0599a216a4a88145fe3d9c11a7e7b2264d6f8dbc98f5de023dc6dd9fc573394",
+      "size": [
+        945,
+        499
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-home.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-home.png",
+      "originalBytes": 92356,
+      "bytes": 45126,
+      "originalSha256": "0563f7bc4198c22ae83ba82d4a50b8a50ed4a03ca28ceebda73c68b10b6ca2be",
+      "sha256": "7f19bd7c890276a7ffbdd78c9f43795c0c8a6179dfd1c6e8735a3db69196288d",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-b44e68d3ffbc77.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/b44e68d3ffbc77.png",
+      "originalBytes": 91512,
+      "bytes": 58706,
+      "originalSha256": "b44e68d3ffbc77fa77a5e2b2e73ad546ea44ab65fcbcf4b5501b5218d1f5dd3e",
+      "sha256": "7fe3506d490ac8ec09d32227e7d89f938fa0d111f3eb973f2d28254443f424ca",
+      "size": [
+        922,
+        294
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-insert.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-insert.png",
+      "originalBytes": 79515,
+      "bytes": 38258,
+      "originalSha256": "7f33d1943eea32e9bcbb47f3840b00d065483a3eaa1baa3bd56b405de35f1c8f",
+      "sha256": "149fdcb6b36b50657ee3c61861c7396b7f114d899e1316ad89f2c0978c7208d1",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-b583365d3f4224.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/b583365d3f4224.png",
+      "originalBytes": 29379,
+      "bytes": 12908,
+      "originalSha256": "b583365d3f42248fabba729ad10d644fe952d7e8504f1800430ac6473e9755ff",
+      "sha256": "e58e7682951b386d75bf8b10658a51269532ad909f00a3a7bec82b29aac48319",
+      "size": [
+        998,
+        193
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-d8311372683111.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/d8311372683111.png",
+      "originalBytes": 39790,
+      "bytes": 12734,
+      "originalSha256": "d8311372683111a4f4dba878be988778ee3f315ea7175d18fb117037d2be3f29",
+      "sha256": "8ef86e18a32a31d36037240a419c74fd0f81d7b25070fa5e7ab66a59edbfaf72",
+      "size": [
+        570,
+        521
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-file-menu.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-file-menu.png",
+      "originalBytes": 29863,
+      "bytes": 16014,
+      "originalSha256": "3056a5d97ec9b26b8ace82053ea6828ca638a1e43d58e25694bc5d2ccaa612fb",
+      "sha256": "21b69581d8d90db8f292c7c6242c10886970385bb60aee48cedef4f494334a9d",
+      "size": [
+        290,
+        496
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-090aa7e173a847.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/090aa7e173a847.png",
+      "originalBytes": 12947,
+      "bytes": 6196,
+      "originalSha256": "090aa7e173a847e30e217b3af73b926301598ca5273a50e664092ff1f8bd836d",
+      "sha256": "84631dfb50be41f9a30edb009f26d37ea36372d59f91ed1979a0f77804d4cfd2",
+      "size": [
+        639,
+        162
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-page-layout.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-page-layout.png",
+      "originalBytes": 78721,
+      "bytes": 37560,
+      "originalSha256": "acb1f611ac0d3b6d8f49afbc1be62f24abf4483680117828776ff9ddc3d89507",
+      "sha256": "38faf1d5547070c8b7179e4ad538cc3d749c3a9a2d6672763e79f553a92b7133",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-be0b71b7ec7530.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/be0b71b7ec7530.png",
+      "originalBytes": 12719,
+      "bytes": 12556,
+      "originalSha256": "be0b71b7ec7530c0c4fd1432632266942a7c8f478df6e39031cbb54e3e780743",
+      "sha256": "f26412ddbc11e9e8a0c2025845a1eb64129798e1b6945a14c3bca61ffe73c4fa",
+      "size": [
+        520,
+        122
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-formulas.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-formulas.png",
+      "originalBytes": 80835,
+      "bytes": 38632,
+      "originalSha256": "f69c012c0aebdff06930ab18bad97386b180d16dcb4e40ced50fde614f49e312",
+      "sha256": "1b9a3e13e7fc7d2472a12ab766ebaa7a4b64bce4d8918b19732c1de962e6b65e",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-221cd8803c005c.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/221cd8803c005c.png",
+      "originalBytes": 50986,
+      "bytes": 29028,
+      "originalSha256": "221cd8803c005cbb62be1c8a6ad487e42dc9afb85918c278b6a6e86f66b63588",
+      "sha256": "e7fe0302ef9682e3c817fcfc652d6588834940f5fa999087405c7f5c5452e7e6",
+      "size": [
+        625,
+        157
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-data.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-data.png",
+      "originalBytes": 77820,
+      "bytes": 36838,
+      "originalSha256": "c4867dae59eb83e9894969d7051a42e32ff9d5bb02da0c30f25daf9b2ee1d5cd",
+      "sha256": "e3f62f8fe11961bd0bf4f2649dc7e83861b3b7bd650e5bed6369217f555a9fc9",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-af47cc4057d588.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/af47cc4057d588.png",
+      "originalBytes": 22395,
+      "bytes": 16686,
+      "originalSha256": "af47cc4057d58845bbbc552b2cc0664e71903c7da658ac70cc2fa705a701c577",
+      "sha256": "becb11c36f20e5ece715ae61204229252866fea047b7b455032507851c75bea2",
+      "size": [
+        1921,
+        240
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-review.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-review.png",
+      "originalBytes": 72122,
+      "bytes": 33960,
+      "originalSha256": "19906da04b1f0949724b0c5662f52fad4f5dc6b336124a0422bb5eef813dd543",
+      "sha256": "9b5132a4645e5b9ec7abdb52a1518a5d5d7b82c626512f4a65db0beca1edcce4",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-38bde9ca1a7bc0.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/38bde9ca1a7bc0.png",
+      "originalBytes": 48527,
+      "bytes": 29634,
+      "originalSha256": "38bde9ca1a7bc049f8871fc167748759a931b0d2ee20ab03a1f36d57e335efba",
+      "sha256": "a6eed9db36ae0ce0956678d8c156467a6ee89698795c857c27d17fb545a7bf8e",
+      "size": [
+        647,
+        255
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-023b02c01e3863.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/023b02c01e3863.png",
+      "originalBytes": 19258,
+      "bytes": 6838,
+      "originalSha256": "023b02c01e386358f228ddc9ecc45d12a57c8551a373a9a556d003d4addf8d0e",
+      "sha256": "6f1b8017d6b19f24cd62233571a4bb12ca28696a296108338da2fc81d993af0a",
+      "size": [
+        364,
+        277
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-view.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-view.png",
+      "originalBytes": 76352,
+      "bytes": 35752,
+      "originalSha256": "6b93456f124392d588d7db761059fb1663ffe67bafb5ed0f0987ab403288c42c",
+      "sha256": "e844a0a44c289296cceacd85514877fc5ec6ef5afce5a98732b5823fe1ab00ce",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-8d1770b6a8c9db.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/8d1770b6a8c9db.jpeg",
+      "originalBytes": 117457,
+      "bytes": 253124,
+      "originalSha256": "8d1770b6a8c9db54962f883e6bebf95fba4facf388b50d43bb6b319cafc6207b",
+      "sha256": "3d44c71cb83289964f0bdcc5c8e08799ae2530c39d362442dd01e50a7c25c4cf",
+      "size": [
+        524,
+        397
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-0f31b8fcecf427.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/0f31b8fcecf427.png",
+      "originalBytes": 42926,
+      "bytes": 25646,
+      "originalSha256": "0f31b8fcecf427a8cdd198756039b2e8c76e2b1f8afe1fd2bece71ed031f31e2",
+      "sha256": "c009c7f0735b724624d9db7b124a8e8be04715793f5f7b7909bac467a802048c",
+      "size": [
+        999,
+        146
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-8734469cdbcc68.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/8734469cdbcc68.png",
+      "originalBytes": 38095,
+      "bytes": 18384,
+      "originalSha256": "8734469cdbcc68e9d0631b6740245d7abb954acb55e24baea2b6b8f5bd05e4fc",
+      "sha256": "9261b50c11251f0b5ad677661725fdc6c6b0cf676bfa9812d8b95f0fc6c181dd",
+      "size": [
+        245,
+        214
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-help.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-help.png",
+      "originalBytes": 77164,
+      "bytes": 35996,
+      "originalSha256": "fb5ddfb5e522bd9787bd44b4fcf9b3134574658f5273c4e483bc465419a6ac81",
+      "sha256": "1f8f56db2ada5f7d982b873e7f4f29fb4f5ca4bacb829c1603c2acd745badf0a",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-a006f775941643.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/a006f775941643.png",
+      "originalBytes": 130800,
+      "bytes": 77944,
+      "originalSha256": "a006f775941643e82bf8a3cc9d8b317ee2939c5f8d3924262905a1c2b2dab60a",
+      "sha256": "8d33088e35add2eb2d8b891703a2e4670727dadf9c766f70e0a4b6c6326b41f8",
+      "size": [
+        936,
+        480
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-table.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-table.png",
+      "originalBytes": 85305,
+      "bytes": 33520,
+      "originalSha256": "cd2660469996003272838d1422152f2372a080bd2fb9e223aee20be64305eb5d",
+      "sha256": "b28c6c168691948604150f0b0365770b61ab2f5613b40c6e1aaee6aa99d8ca75",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-table-outside-shot.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-table-outside-shot.png",
+      "originalBytes": 87237,
+      "bytes": 35432,
+      "originalSha256": "662cadb4bd8b5e94329900d2cde23785c59350fee142c184f583c5ab97b82b25",
+      "sha256": "5a55ac644194ab4d1f2c2dd69cb7d10d440ecd3f5b18ae4177c3b78ec7ed9a2d",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-table-orange-shot.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-table-orange-shot.png",
+      "originalBytes": 86216,
+      "bytes": 34344,
+      "originalSha256": "bf918aa17fc08a8901cdc1dda5705bf9a30849e22618b4721c6dcb8571857256",
+      "sha256": "36a0bfe18e48a8369c3113200a14a6aafac55ce82a4425be5b5ba0ee196140a5",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-table-undo-shot.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-table-undo-shot.png",
+      "originalBytes": 88281,
+      "bytes": 34960,
+      "originalSha256": "42e6645822555b9aa3a622844229525ac0802623a18da3948ad71136431c7ff4",
+      "sha256": "3cc952fb2f83ca327a64dd5f7e07ce3656d8cdbbc2fa6335e9b585c418581ad9",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-d3c12abf1be4c0.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/d3c12abf1be4c0.png",
+      "originalBytes": 13191,
+      "bytes": 8208,
+      "originalSha256": "d3c12abf1be4c0931a2701bc7c536d5103c89aa1e046ca4224953a91015a756b",
+      "sha256": "36d6b2f7599a98776099f11866c658d114f602128c446ca232504a606853b993",
+      "size": [
+        697,
+        620
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-shape.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-shape.png",
+      "originalBytes": 78499,
+      "bytes": 30266,
+      "originalSha256": "c8aa97181d168a9a21fdc6f347272c3bf7301193bb4a110e4d77e33e394bd783",
+      "sha256": "381b532dde077cde1cfa22875f3cf87688eddb9f2e608d211c972b7e4d05791b",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-8f6a1195d0b727.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/8f6a1195d0b727.png",
+      "originalBytes": 26159,
+      "bytes": 17912,
+      "originalSha256": "8f6a1195d0b7276e25b2678f1f248caff5bb48ce4b35769e69c2b68579ae42fd",
+      "sha256": "33595db4a5248c227c9a97c8622eca3b7b48b9fdcd62d5549a11647afae1f379",
+      "size": [
+        1863,
+        312
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-picture.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-picture.png",
+      "originalBytes": 85311,
+      "bytes": 38916,
+      "originalSha256": "5fe358a7ad0c03f611b8818dca54ba904212d3e43f1d6d9e9c0da33282290eca",
+      "sha256": "eb4119bd0b622204d0bc09efef9ababba00ac36e5a20af16aafa59852198078b",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-ed1f576bd1e820.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/ed1f576bd1e820.png",
+      "originalBytes": 54555,
+      "bytes": 44072,
+      "originalSha256": "ed1f576bd1e8208358879c63386d1f188964b93953740628041cebef076abd07",
+      "sha256": "8ae8075ed1d15fd659bcb874843410a010c56377480e513e56f89144df9a3107",
+      "size": [
+        996,
+        829
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-7db3b2c52a86d2.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/7db3b2c52a86d2.gif",
+      "originalBytes": 3362,
+      "bytes": 2056,
+      "originalSha256": "7db3b2c52a86d29ef029cb83e239dde182641672b7ade9d6ec68cece65c7d02d",
+      "sha256": "33e20f817c27c550a3cc7e335fbeccfe4a3f4bce0a2c22fe63d0d49981c63acd",
+      "size": [
+        152,
+        85
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-chart.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-chart.png",
+      "originalBytes": 82847,
+      "bytes": 32520,
+      "originalSha256": "89c49b73acf7189ec20078706ff47c3c492e2549436eeb1d37b63586224dd885",
+      "sha256": "616e97f2a5d59d39e7b42afb691e329875809ba7e697c6771c2e630a85087779",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-chart-format.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-chart-format.png",
+      "originalBytes": 81870,
+      "bytes": 32172,
+      "originalSha256": "aa8ce561321aeac0ad5e8921f81d22af601dab60e036643fdc9834b451ba0c43",
+      "sha256": "e6fafca651c11c8960e8d85d9153bda0ca4e02955ff566623d0aa0f1e3aab9d4",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-dab46976558dc5.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/dab46976558dc5.jpeg",
+      "originalBytes": 81208,
+      "bytes": 111932,
+      "originalSha256": "dab46976558dc5996c15404369e5b13bb4a226246d49f4b8ffc3095393321175",
+      "sha256": "5d26d2de8a2855db8ce0e64561acca025821a92e96fc86acfa81d723025c0fb7",
+      "size": [
+        1831,
+        333
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-d8020853219008.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/d8020853219008.png",
+      "originalBytes": 9933,
+      "bytes": 2830,
+      "originalSha256": "d802085321900853c491771041b380ef74d241eb0388e66afbe8195a44fcc81e",
+      "sha256": "5a4660bcb5a4b7baab9e14fa6eb22b6dd96a805ed9d1bac58aaa1c40adb97d15",
+      "size": [
+        266,
+        360
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-52a00383cdd46f.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/52a00383cdd46f.png",
+      "originalBytes": 2118,
+      "bytes": 756,
+      "originalSha256": "52a00383cdd46f276e116b8a513e044ebfb4daed74419103b7b2e46c713e89cc",
+      "sha256": "c8cc7ed42c19cef1b5a3bd4d55dc04e62265f1e4cc253bbfc384df44a135a3d7",
+      "size": [
+        281,
+        95
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-454b87d94b594f.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/454b87d94b594f.png",
+      "originalBytes": 1093,
+      "bytes": 684,
+      "originalSha256": "454b87d94b594f3a8820fa87a9188337c7ac20563291d1abfe30d3d7496a9e68",
+      "sha256": "31a05575113a7abcd32294c9d966045c51b0a0cce16b30c1b3f05d7130f41ce1",
+      "size": [
+        270,
+        93
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-0418497f2ff916.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/0418497f2ff916.png",
+      "originalBytes": 5828,
+      "bytes": 4126,
+      "originalSha256": "0418497f2ff9167dfa14b76f59fc68cd0ca8ad7ee6bdd06a895af407a489d431",
+      "sha256": "0839c05d6e986be12ccd225ac3386dde8eec6270a2ddc6fbe34c2c30e4e054e5",
+      "size": [
+        241,
+        477
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-d9d51c977005f2.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/d9d51c977005f2.png",
+      "originalBytes": 72063,
+      "bytes": 63718,
+      "originalSha256": "d9d51c977005f267784313dfd6d6409b3c9a0a5d25fe12cddd118483e488cc5f",
+      "sha256": "5a93152aa8322ef65e13e9f67d201fa7e684559bee71fd560e4b37c389245698",
+      "size": [
+        788,
+        606
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-e634f469d4e0d1.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/e634f469d4e0d1.png",
+      "originalBytes": 5554,
+      "bytes": 4970,
+      "originalSha256": "e634f469d4e0d13a5adf50095731cbaccec7e9d16f33e9ae48e18926f2bb7d85",
+      "sha256": "cc996bb3c5528d2d8edac7398272b036f8d08a431da7f607bdab3df0ff1dc8ef",
+      "size": [
+        665,
+        189
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "ref-764b201ec1e175.webp",
+      "source": "Docs/Testing/2026-10-31/excel-ribbon-parity/Reference/Screenshots/originals/764b201ec1e175.png",
+      "originalBytes": 3943,
+      "bytes": 2786,
+      "originalSha256": "764b201ec1e175262d66c88effc332bee10c72b829d57e086f391002557ff86e",
+      "sha256": "4c054e853ad0c5afbc5bc6510bee9bbb056d2d7b97aa4a27a491111046faa97f",
+      "size": [
+        431,
+        99
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-game.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-game.png",
+      "originalBytes": 85836,
+      "bytes": 42660,
+      "originalSha256": "757037495fd21426da73a4e9dbed331f9120b38fa2e92566922080f3f4f24a87",
+      "sha256": "d53db5ee82222382660f5e9d656b5daeced83a61eca8c18fd66018acd69895f2",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-enum-tools.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-enum-tools.png",
+      "originalBytes": 85164,
+      "bytes": 45496,
+      "originalSha256": "78b3ec0616897792967ed7230f6c1981c873b3fe58fb73de38a4cf51b7361716",
+      "sha256": "3a1c249ffe24144f8c9fc73275487108d2811fb96a8637ec5173cd7b09ccde40",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-localization.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-localization.png",
+      "originalBytes": 150449,
+      "bytes": 79836,
+      "originalSha256": "8dbb24b6b83c231dfe1222aa2d18fca0dd5ad0ac0dc901bea52b5e88882b0ebb",
+      "sha256": "450b21b9fab75327695fb47007f8d996ce1c4f8c8da25b71d57fd777a23aa3c6",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-summary-tools.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-summary-tools.png",
+      "originalBytes": 81168,
+      "bytes": 32452,
+      "originalSha256": "e18d3ae47c51e3e5bd79f399698496528b114cc2a235af9c01704b16b35a91e2",
+      "sha256": "5ea9625b4419a428222678e7960ab1d0170c91e59289ee9bee680944368ae55e",
+      "size": [
+        1100,
+        720
+      ],
+      "losslessPixelEquality": true
+    },
+    {
+      "file": "parity-live-direct-input.webp",
+      "source": "WorkFiles/Temp/ExcelKeyboardQA/Evidence/Native/parity-live-direct-input.png",
+      "originalBytes": 86524,
+      "bytes": 35184,
+      "originalSha256": "b814a74094de1eab3af82869baa7291343ef8019b85e310e9467b13847bdd6d1",
+      "sha256": "f69a2805300f0bc148f45fdfa097c26c154a8edd615437172b77a95b5d10b756",
+      "size": [
+        1400,
+        850
+      ],
+      "losslessPixelEquality": true
+    }
+  ]
+}

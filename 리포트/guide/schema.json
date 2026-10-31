@@ -223,6 +223,41 @@
           "revision": {
             "type": "integer",
             "minimum": 1
+          },
+          "visualEvidence": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "required": [
+                "role",
+                "image",
+                "caption"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "enum": [
+                    "reference",
+                    "current"
+                  ]
+                },
+                "image": {
+                  "type": "string",
+                  "pattern": "^\\.\\./assets/[a-zA-Z0-9_/-]+\\.(png|webp|jpg|jpeg|gif)$"
+                },
+                "caption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 700
+                },
+                "source": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                }
+              }
+            }
           }
         }
       }

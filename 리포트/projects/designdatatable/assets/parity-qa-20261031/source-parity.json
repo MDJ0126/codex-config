@@ -1,0 +1,1694 @@
+[
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/DataLoader.cs",
+    "sha256": "7fe8c9c6ceed5e54bb62536ed36aedfc94bede843746ae17d4c20936ef72b6a0",
+    "qaSha256": "7fe8c9c6ceed5e54bb62536ed36aedfc94bede843746ae17d4c20936ef72b6a0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/IData.cs",
+    "sha256": "024f4202cdc9503d87b737b9d6bc1f228f2aaf3aa8f6624d282c995a98c1e685",
+    "qaSha256": "024f4202cdc9503d87b737b9d6bc1f228f2aaf3aa8f6624d282c995a98c1e685",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/ITable.cs",
+    "sha256": "570631cf00ad7256db22b99270adcd53213e1126cf18cc21528f06bb87b1fe8f",
+    "qaSha256": "570631cf00ad7256db22b99270adcd53213e1126cf18cc21528f06bb87b1fe8f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/LocalizationData.cs",
+    "sha256": "12b9ed39d3e86c3efe893bc7ba1c691c3738137c8d20fb66038e7c9d95218c2e",
+    "qaSha256": "12b9ed39d3e86c3efe893bc7ba1c691c3738137c8d20fb66038e7c9d95218c2e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Singleton.cs",
+    "sha256": "310cadeef365a78aef33935171d6aba48edb309fce0a2e7080b86cfad2f360d8",
+    "qaSha256": "310cadeef365a78aef33935171d6aba48edb309fce0a2e7080b86cfad2f360d8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/TableBinaryDelivery.cs",
+    "sha256": "71496d54e147b3850c8238eaf1c8cba58292c5936e46f5bae67b587eeba42cf5",
+    "qaSha256": "71496d54e147b3850c8238eaf1c8cba58292c5936e46f5bae67b587eeba42cf5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/TableManagement.cs",
+    "sha256": "782d0af18f558c58e845bad64f8306b8915cf97f0c960a74beb22d27aa50e45e",
+    "qaSha256": "782d0af18f558c58e845bad64f8306b8915cf97f0c960a74beb22d27aa50e45e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/AssemblyInfo.cs",
+    "sha256": "fc59e5f188e3c16e4409831729e9cc893d6cb3caf300cfdcd81746d47fd7307b",
+    "qaSha256": "fc59e5f188e3c16e4409831729e9cc893d6cb3caf300cfdcd81746d47fd7307b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/CellClipboardSnapshot.cs",
+    "sha256": "ce635b18ba2412d06c4b5d9f09446f7c9f10f61bc0b335d1323c3b4c7949a922",
+    "qaSha256": "ce635b18ba2412d06c4b5d9f09446f7c9f10f61bc0b335d1323c3b4c7949a922",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/CellSelectionSet.cs",
+    "sha256": "99e2c786da24d218c1d90cbc6559409ccfe96f04871fc6701c80d67b06b3cb8e",
+    "qaSha256": "99e2c786da24d218c1d90cbc6559409ccfe96f04871fc6701c80d67b06b3cb8e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/ClipboardBorderAnimation.cs",
+    "sha256": "0800ce00d2eb683e3173921c5358dfa3891da25b145e9b5d7b6cab0b62defdba",
+    "qaSha256": "0800ce00d2eb683e3173921c5358dfa3891da25b145e9b5d7b6cab0b62defdba",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/ClipboardOutlineState.cs",
+    "sha256": "829f9b92f482ff1fd36f14dc80113093802cd0e6d302ecc1a75f2c61fa399467",
+    "qaSha256": "829f9b92f482ff1fd36f14dc80113093802cd0e6d302ecc1a75f2c61fa399467",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/CodeCommentLocalization.cs",
+    "sha256": "bb94f377a1d7113d8e5034e6ae684fdd2cdbfd858f30686e75426f605c2b5ac0",
+    "qaSha256": "bb94f377a1d7113d8e5034e6ae684fdd2cdbfd858f30686e75426f605c2b5ac0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/CodeCommentSettings.cs",
+    "sha256": "babec4456cc0c8d7e22d602686351aa1924f58b7eadd5c029bd3472db89e0b78",
+    "qaSha256": "babec4456cc0c8d7e22d602686351aa1924f58b7eadd5c029bd3472db89e0b78",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/ColumnAutoFit.cs",
+    "sha256": "f7497789ec845780166832cd1665ad5bafa7b5dfa0993572e16391c35b71a4ec",
+    "qaSha256": "f7497789ec845780166832cd1665ad5bafa7b5dfa0993572e16391c35b71a4ec",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Config.cs",
+    "sha256": "7af5a7f61f0ddea8f8e5a23a3e141b6e906c81dca3721fabc7ebb96d76644dde",
+    "qaSha256": "7af5a7f61f0ddea8f8e5a23a3e141b6e906c81dca3721fabc7ebb96d76644dde",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/CsvCodec.cs",
+    "sha256": "ede7e804eb0afd44a4e9f859fe7e10052cd97d2b330b18b223d9cef3ad402e8e",
+    "qaSha256": "ede7e804eb0afd44a4e9f859fe7e10052cd97d2b330b18b223d9cef3ad402e8e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/DimensionResizeBatch.cs",
+    "sha256": "c791268bddae8bcb90dae47937977519dd998a2bc7f2fef7e46ce51732a4d5d9",
+    "qaSha256": "c791268bddae8bcb90dae47937977519dd998a2bc7f2fef7e46ce51732a4d5d9",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaEngine.cs",
+    "sha256": "50d6e0348f42d20c47a117fdb8c9a3ee2931d3a785aa6f27d6d4276d8031e63d",
+    "qaSha256": "50d6e0348f42d20c47a117fdb8c9a3ee2931d3a785aa6f27d6d4276d8031e63d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaReferenceToggle.cs",
+    "sha256": "124ec34b6a58413ac22b45e25db94cf4df9dd5a6dfc6af337f13c9161611e299",
+    "qaSha256": "124ec34b6a58413ac22b45e25db94cf4df9dd5a6dfc6af337f13c9161611e299",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaText.cs",
+    "sha256": "fea04b46d8364cfa7c95bbc2e169229b32928d151d2ceb29d25105ec1fae388b",
+    "qaSha256": "fea04b46d8364cfa7c95bbc2e169229b32928d151d2ceb29d25105ec1fae388b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/GeneratedSourceDocumentation.cs",
+    "sha256": "ed6c6aac94c3d946c11ffe02664e6286d662bd6b0fee05788503c11e9421ecc6",
+    "qaSha256": "ed6c6aac94c3d946c11ffe02664e6286d662bd6b0fee05788503c11e9421ecc6",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/GlobalEnumWorkbook.cs",
+    "sha256": "f9f911b9d7e88c2c12c11d78d439c8b00718b6a989ea35083cdc66e6bbbc940a",
+    "qaSha256": "f9f911b9d7e88c2c12c11d78d439c8b00718b6a989ea35083cdc66e6bbbc940a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/HeaderSelectionSet.cs",
+    "sha256": "83f8a344d7881fb39466e3fa1552c0c3dfe75ecf68d935cbd0c297c948ae5492",
+    "qaSha256": "83f8a344d7881fb39466e3fa1552c0c3dfe75ecf68d935cbd0c297c948ae5492",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalEnumWorkbook.cs",
+    "sha256": "6c9afd6c09d963497fc1cad1ee0899a0f746c824c56bf64246fadd9e6a833151",
+    "qaSha256": "6c9afd6c09d963497fc1cad1ee0899a0f746c824c56bf64246fadd9e6a833151",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalizationWorkbook.cs",
+    "sha256": "b75fb5e7ca306abe5831c337318b27fc08e5901a5d0bd9b2a4e8106eea6e5bbb",
+    "qaSha256": "b75fb5e7ca306abe5831c337318b27fc08e5901a5d0bd9b2a4e8106eea6e5bbb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalizationWorkbookCompiler.cs",
+    "sha256": "763c5e68063135b8a101116bb3020c180de43c0dc03781b4b40735b00b9c80ea",
+    "qaSha256": "763c5e68063135b8a101116bb3020c180de43c0dc03781b4b40735b00b9c80ea",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/PasteSpecial.cs",
+    "sha256": "522a648e8851be373112665ef4eea455e743e6d260ad3f57efaab961790f9c47",
+    "qaSha256": "522a648e8851be373112665ef4eea455e743e6d260ad3f57efaab961790f9c47",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/ProblemLabels.cs",
+    "sha256": "03acbcb660f1e5051c734a98459968653f8e1e7687abf95592610b8603ab2ed5",
+    "qaSha256": "03acbcb660f1e5051c734a98459968653f8e1e7687abf95592610b8603ab2ed5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/QuickFormula.cs",
+    "sha256": "495354d2d32b8cb44962c3d545a4abc873b1be92b8dd66a8846f6c77e537ec9d",
+    "qaSha256": "495354d2d32b8cb44962c3d545a4abc873b1be92b8dd66a8846f6c77e537ec9d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/ScriptableObjectExport.cs",
+    "sha256": "20741970030e88de4326be3fb6a3c8084a1fd4414ff27f0132b6c3781774a3b8",
+    "qaSha256": "20741970030e88de4326be3fb6a3c8084a1fd4414ff27f0132b6c3781774a3b8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionSpecial.cs",
+    "sha256": "16ba4c6f848f55ff6eb1d02a5c92c8a2517bc507b76ef13ec1b8961c4f67be59",
+    "qaSha256": "16ba4c6f848f55ff6eb1d02a5c92c8a2517bc507b76ef13ec1b8961c4f67be59",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionSummary.cs",
+    "sha256": "0ae35a4489a49d8e86128535b4b398e5c26fc5f9b41a6d3a5bcc00316c2f9234",
+    "qaSha256": "0ae35a4489a49d8e86128535b4b398e5c26fc5f9b41a6d3a5bcc00316c2f9234",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionTraversal.cs",
+    "sha256": "4aaa32579ae3c7d89a6e70688e85921c81cd3665a8f830c72a592ee17cb3e149",
+    "qaSha256": "4aaa32579ae3c7d89a6e70688e85921c81cd3665a8f830c72a592ee17cb3e149",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetAddress.cs",
+    "sha256": "59bf844ce2f248d317c8797bacdf3854929cfac8f52d36b3752849a718439d47",
+    "qaSha256": "59bf844ce2f248d317c8797bacdf3854929cfac8f52d36b3752849a718439d47",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetNavigation.cs",
+    "sha256": "fa740c212c53d2ff42c23ddc6d0bf977e6b4e773d3184b91da4b1e2eaefe3428",
+    "qaSha256": "fa740c212c53d2ff42c23ddc6d0bf977e6b4e773d3184b91da4b1e2eaefe3428",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetViewport.cs",
+    "sha256": "a530595a8bd311931cac91113c061bd5f0adbf9d99493df16329f7face848040",
+    "qaSha256": "a530595a8bd311931cac91113c061bd5f0adbf9d99493df16329f7face848040",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetVisibility.cs",
+    "sha256": "0644d7c1dc0ad42a10090e8f8b7a62a96cf2b7c4b9afaba9b65b9e4070222b53",
+    "qaSha256": "0644d7c1dc0ad42a10090e8f8b7a62a96cf2b7c4b9afaba9b65b9e4070222b53",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableAutoFill.cs",
+    "sha256": "e17087c87dc239e917698a486db9e80dce686108997d1a223a9c5530189f6c84",
+    "qaSha256": "e17087c87dc239e917698a486db9e80dce686108997d1a223a9c5530189f6c84",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableClipboard.cs",
+    "sha256": "f88aef78d7387ba283ba612a6fc3c1c539fe0d28e023f027a24e46b95ed5b497",
+    "qaSha256": "f88aef78d7387ba283ba612a6fc3c1c539fe0d28e023f027a24e46b95ed5b497",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableCreator.cs",
+    "sha256": "100effa67381c219852468819aeb6e949e7fb82f0354200a91a3619eb15ccd99",
+    "qaSha256": "100effa67381c219852468819aeb6e949e7fb82f0354200a91a3619eb15ccd99",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableCut.cs",
+    "sha256": "c643a97c07d10d3874856858b689b37c790422a2c9336adb45de7056cef748e1",
+    "qaSha256": "c643a97c07d10d3874856858b689b37c790422a2c9336adb45de7056cef748e1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableDelivery.cs",
+    "sha256": "b41f52daae91471c18c1643b424bcf9dfe1c208d0631f5c9a95e5c08aa0b9cf7",
+    "qaSha256": "b41f52daae91471c18c1643b424bcf9dfe1c208d0631f5c9a95e5c08aa0b9cf7",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableDiagnostics.cs",
+    "sha256": "195e48be99d66deb7f998a94264255fbc19d1c7e3efd2d57469cc0cd0f846771",
+    "qaSha256": "195e48be99d66deb7f998a94264255fbc19d1c7e3efd2d57469cc0cd0f846771",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableExport.cs",
+    "sha256": "fc71c2b74d3e8199eaa5eaa568f664361a93ac515c120ba5eded69e16131b4c1",
+    "qaSha256": "fc71c2b74d3e8199eaa5eaa568f664361a93ac515c120ba5eded69e16131b4c1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableFilters.cs",
+    "sha256": "402d049e5ec3efd316db8727068f62fbd1db80de290b2eb989a60faf54af1715",
+    "qaSha256": "402d049e5ec3efd316db8727068f62fbd1db80de290b2eb989a60faf54af1715",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableImport.cs",
+    "sha256": "3eab94824bd2cfe03812754098075386dbd38c46e1ac083fd44af6a320814dcb",
+    "qaSha256": "3eab94824bd2cfe03812754098075386dbd38c46e1ac083fd44af6a320814dcb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableManagementEditor.cs",
+    "sha256": "156c6a37c11bbf8a4dbbcea18b88b887250b82e6f8163e1b55bb43b1427742ca",
+    "qaSha256": "156c6a37c11bbf8a4dbbcea18b88b887250b82e6f8163e1b55bb43b1427742ca",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableManagementEditorExtension.cs",
+    "sha256": "234541ca1425c04125cff070ea1a637c8de50552506066bbbfbd7c78627af1be",
+    "qaSha256": "234541ca1425c04125cff070ea1a637c8de50552506066bbbfbd7c78627af1be",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TablePaths.cs",
+    "sha256": "d9491a1934efefe6d9d34e4fe5bedf08b7b5c46b7d96a34af0872ad782effd35",
+    "qaSha256": "d9491a1934efefe6d9d34e4fe5bedf08b7b5c46b7d96a34af0872ad782effd35",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableRowLayout.cs",
+    "sha256": "1b23846ec62baf909b132d04b6f5290fb5b87410eab97de4e5aa3df5c3088fcb",
+    "qaSha256": "1b23846ec62baf909b132d04b6f5290fb5b87410eab97de4e5aa3df5c3088fcb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableSearch.cs",
+    "sha256": "33a18d7128395a8af9ef17c20d44fb2bfdb2723525eb2e0aa5cc08eeb546961f",
+    "qaSha256": "33a18d7128395a8af9ef17c20d44fb2bfdb2723525eb2e0aa5cc08eeb546961f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableStructure.cs",
+    "sha256": "2d17d2446a75443f829f3e1c931a264eb97194e7e729af47c139261d1cdb7e9b",
+    "qaSha256": "2d17d2446a75443f829f3e1c931a264eb97194e7e729af47c139261d1cdb7e9b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableWorkbook.cs",
+    "sha256": "b8e124ac19af1af75e62c24a91dd1c35da681cd3afccb4044dab082e600cc851",
+    "qaSha256": "b8e124ac19af1af75e62c24a91dd1c35da681cd3afccb4044dab082e600cc851",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Utils.cs",
+    "sha256": "5ab7db1576d8896bc01fa88a5c36e95df76580745175ad64867b0ef19985ccc5",
+    "qaSha256": "5ab7db1576d8896bc01fa88a5c36e95df76580745175ad64867b0ef19985ccc5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAlignmentFormat.cs",
+    "sha256": "f592ae0cbc54379674aba9fa3a26025ddbd61ba097881fd52b1c2e2ef29cc16b",
+    "qaSha256": "f592ae0cbc54379674aba9fa3a26025ddbd61ba097881fd52b1c2e2ef29cc16b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAssets.cs",
+    "sha256": "9c01a3ea2e81970a3ba3ca1924bee9fa0b8733d39c0d86e4755ffbaf6db8533f",
+    "qaSha256": "9c01a3ea2e81970a3ba3ca1924bee9fa0b8733d39c0d86e4755ffbaf6db8533f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomation.cs",
+    "sha256": "ea384fb79ed72a2b878c3541ae686480d0e1bca52ccebd6a40d3382b0bfccd83",
+    "qaSha256": "ea384fb79ed72a2b878c3541ae686480d0e1bca52ccebd6a40d3382b0bfccd83",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomationApi.cs",
+    "sha256": "2da9334017a99d8c09e246a07f78d6339ddf8be98c91843abbac0cc33f4cf13c",
+    "qaSha256": "2da9334017a99d8c09e246a07f78d6339ddf8be98c91843abbac0cc33f4cf13c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomationContracts.cs",
+    "sha256": "38529f1d35e9f5d5bf850da6ba292f1bb371aa158f091135f0caed915fd7d01a",
+    "qaSha256": "38529f1d35e9f5d5bf850da6ba292f1bb371aa158f091135f0caed915fd7d01a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBorderFormat.cs",
+    "sha256": "256be3cf4db68f79aa9a7ace4380824a1ee74a43ac967caaedbfba64a5330a48",
+    "qaSha256": "256be3cf4db68f79aa9a7ace4380824a1ee74a43ac967caaedbfba64a5330a48",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs",
+    "sha256": "068956310d97521a35ba6b9eab48b679a00e71fe32e6e36d3a215534527aab7e",
+    "qaSha256": "068956310d97521a35ba6b9eab48b679a00e71fe32e6e36d3a215534527aab7e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs",
+    "sha256": "814643aba16e106aa93b5214345a4c2bd5c0ec93e7effe0f40d07eb92210f41e",
+    "qaSha256": "814643aba16e106aa93b5214345a4c2bd5c0ec93e7effe0f40d07eb92210f41e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs",
+    "sha256": "e39f37b25539bb316680e9913c1657708efebc85a4b0b1381c3eaa55dd325406",
+    "qaSha256": "e39f37b25539bb316680e9913c1657708efebc85a4b0b1381c3eaa55dd325406",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs",
+    "sha256": "41ec086ab2e2eb289357a3bb720336d73e88c59198ce98d41abecd13d93f6cce",
+    "qaSha256": "41ec086ab2e2eb289357a3bb720336d73e88c59198ce98d41abecd13d93f6cce",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationArrays.cs",
+    "sha256": "b7e653a70ebd817739f7257df4ff679b73826d2431a2a38d2630a17bf73bb1eb",
+    "qaSha256": "b7e653a70ebd817739f7257df4ff679b73826d2431a2a38d2630a17bf73bb1eb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationBindings.cs",
+    "sha256": "53217f7c7903ff0d88ef2a44448c9fe1485ec37a5cd82443411ed933940c2c48",
+    "qaSha256": "53217f7c7903ff0d88ef2a44448c9fe1485ec37a5cd82443411ed933940c2c48",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs",
+    "sha256": "15fdb68e7b9859f3ef30922375c06b484b00d2069e8885c66491f410fb5a0905",
+    "qaSha256": "15fdb68e7b9859f3ef30922375c06b484b00d2069e8885c66491f410fb5a0905",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLambdaArrays.cs",
+    "sha256": "938fdddc595006061fc4402207b018137e905ab2affa13f7da4925b4864a5b75",
+    "qaSha256": "938fdddc595006061fc4402207b018137e905ab2affa13f7da4925b4864a5b75",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLookups.cs",
+    "sha256": "50ecb45e975c35d3433a83bb348eb389697ecdd4856b3ec333f65ae2b3a32155",
+    "qaSha256": "50ecb45e975c35d3433a83bb348eb389697ecdd4856b3ec333f65ae2b3a32155",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs",
+    "sha256": "58afe537f1d11a26341b5a893fe91c5f55b7a69ced16b9f28678a7f9fffc1ce5",
+    "qaSha256": "58afe537f1d11a26341b5a893fe91c5f55b7a69ced16b9f28678a7f9fffc1ce5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs",
+    "sha256": "e3cbd6e9e7b27a743a340615b6dad35dc99911c588a3c46ce142e0f7208e7248",
+    "qaSha256": "e3cbd6e9e7b27a743a340615b6dad35dc99911c588a3c46ce142e0f7208e7248",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationSubtotal.cs",
+    "sha256": "11bd5b06e054caf1be64cf09a960533b4a90905268781b6fe8917ba55d9c4927",
+    "qaSha256": "11bd5b06e054caf1be64cf09a960533b4a90905268781b6fe8917ba55d9c4927",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs",
+    "sha256": "6b59b33a38a3ed50073a0ac4b96f05970d5de3184c0b1a04d693e14cbdbe191a",
+    "qaSha256": "6b59b33a38a3ed50073a0ac4b96f05970d5de3184c0b1a04d693e14cbdbe191a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs",
+    "sha256": "6ab975bcc208ca70f5a7b14ae301905eaf88f2e06be2a037b0e47f06f659f2bf",
+    "qaSha256": "6ab975bcc208ca70f5a7b14ae301905eaf88f2e06be2a037b0e47f06f659f2bf",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs",
+    "sha256": "48ddc991687f6aabc21d12df5afdc6615a5b7b4cd24d148795143ae3f514dfff",
+    "qaSha256": "48ddc991687f6aabc21d12df5afdc6615a5b7b4cd24d148795143ae3f514dfff",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartMath.cs",
+    "sha256": "40c66dfb36a494abb53be0eaa57a2694921276b34bb9009030488e55c641f5df",
+    "qaSha256": "40c66dfb36a494abb53be0eaa57a2694921276b34bb9009030488e55c641f5df",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCharts.cs",
+    "sha256": "cda8368735caf56400fe4681c7b4f756ddadeb144dd1e3c9d3c5d69b184ee296",
+    "qaSha256": "cda8368735caf56400fe4681c7b4f756ddadeb144dd1e3c9d3c5d69b184ee296",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartSeriesLayers.cs",
+    "sha256": "d8e47031188c4f2ae518ae3df7cd4ad5dac591ffb4ab7d8e80cd0c8d6371b2d0",
+    "qaSha256": "d8e47031188c4f2ae518ae3df7cd4ad5dac591ffb4ab7d8e80cd0c8d6371b2d0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs",
+    "sha256": "1b10c2d7da4e733baab35abc3eed2ac84df5a78911d22ad9946455179050c08f",
+    "qaSha256": "1b10c2d7da4e733baab35abc3eed2ac84df5a78911d22ad9946455179050c08f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColors.cs",
+    "sha256": "386ddfd8f4a8cc788588e4c5f775ebfc431645b4cd032ae1a60543f85e5e5901",
+    "qaSha256": "386ddfd8f4a8cc788588e4c5f775ebfc431645b4cd032ae1a60543f85e5e5901",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorScaleEditing.cs",
+    "sha256": "5e608d32229b6faed4c62ba4bf46abd883c887cdd8e768010b647a11642c8ddb",
+    "qaSha256": "5e608d32229b6faed4c62ba4bf46abd883c887cdd8e768010b647a11642c8ddb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorScales.cs",
+    "sha256": "c62560ac55d7ffae0cbebe1883c7f98dc0ad58495a4ee9d82cb888bb5e00c7db",
+    "qaSha256": "c62560ac55d7ffae0cbebe1883c7f98dc0ad58495a4ee9d82cb888bb5e00c7db",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs",
+    "sha256": "3d5521e46742a3ff23c6ad46af31b5383de48ff6fa5915c3edea561d87a0a745",
+    "qaSha256": "3d5521e46742a3ff23c6ad46af31b5383de48ff6fa5915c3edea561d87a0a745",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs",
+    "sha256": "ca19c4b2c5a2ba3ecc6e5c9c744045e888e441a6b1a45c3111a0d8a760d06a75",
+    "qaSha256": "ca19c4b2c5a2ba3ecc6e5c9c744045e888e441a6b1a45c3111a0d8a760d06a75",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalFormats.cs",
+    "sha256": "101da0eb5743c6fff49b21e1fc8ef635db88a16d607a2a901ce7c5673ec3c75b",
+    "qaSha256": "101da0eb5743c6fff49b21e1fc8ef635db88a16d607a2a901ce7c5673ec3c75b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalNumberFormat.cs",
+    "sha256": "664c375cb832577db6575b3b3a40527aaebb49cd1d102de5d21c3f60a621332a",
+    "qaSha256": "664c375cb832577db6575b3b3a40527aaebb49cd1d102de5d21c3f60a621332a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConversion.cs",
+    "sha256": "998bef07b89922ee21eac22480cb0a0341fc356a66478349d12ebdf75dde9afb",
+    "qaSha256": "998bef07b89922ee21eac22480cb0a0341fc356a66478349d12ebdf75dde9afb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCustomEnums.cs",
+    "sha256": "eb328a84f50c34b28c35ff99fa6a85cec16bc33022451dd9d0cbb9fe2fe1520b",
+    "qaSha256": "eb328a84f50c34b28c35ff99fa6a85cec16bc33022451dd9d0cbb9fe2fe1520b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDataBarEditing.cs",
+    "sha256": "44bbba5f35e17431917752c296361ea1bff673b349d5e9b4d7bbc06eb8ff2898",
+    "qaSha256": "44bbba5f35e17431917752c296361ea1bff673b349d5e9b4d7bbc06eb8ff2898",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDataBars.cs",
+    "sha256": "d0e853e398dbf01ca5a895b0c421f4cf682bdbed2c20c6e7022e2f6c7e43972f",
+    "qaSha256": "d0e853e398dbf01ca5a895b0c421f4cf682bdbed2c20c6e7022e2f6c7e43972f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs",
+    "sha256": "47155cfdc1c000985cf9a6b12704754e328a5bd5e78bac69131f70b50a7c683c",
+    "qaSha256": "47155cfdc1c000985cf9a6b12704754e328a5bd5e78bac69131f70b50a7c683c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs",
+    "sha256": "f96fc2d0165cac4f701a93c640f441a47d4f947afe06537fa7b7bd8307c6dd9a",
+    "qaSha256": "f96fc2d0165cac4f701a93c640f441a47d4f947afe06537fa7b7bd8307c6dd9a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawingAffine.cs",
+    "sha256": "f40a98ac04642dbe5129cec4d9eec7ea949d00acc140ef81b2ba6fd4d63c9755",
+    "qaSha256": "f40a98ac04642dbe5129cec4d9eec7ea949d00acc140ef81b2ba6fd4d63c9755",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawingGroups.cs",
+    "sha256": "6a5884bfec9bb38f499860b02dfad44323b49c585460bc75e94f60f3b7710217",
+    "qaSha256": "6a5884bfec9bb38f499860b02dfad44323b49c585460bc75e94f60f3b7710217",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs",
+    "sha256": "0ac2d431ff7147ae0064419662b8f2cdb40e842a642723fadba327697ad4ce47",
+    "qaSha256": "0ac2d431ff7147ae0064419662b8f2cdb40e842a642723fadba327697ad4ce47",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs",
+    "sha256": "a5dc981e2748dd99bbe137de497939b075a988d305cad24d76634f828afce3ac",
+    "qaSha256": "a5dc981e2748dd99bbe137de497939b075a988d305cad24d76634f828afce3ac",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs",
+    "sha256": "13d2e18268c5baa75067a4bb8ad92b95fb99a627af54454e13e500e04a845ffb",
+    "qaSha256": "13d2e18268c5baa75067a4bb8ad92b95fb99a627af54454e13e500e04a845ffb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookExtendedDataBars.cs",
+    "sha256": "d0d7ae6800aca90601143b1b3ed8ae4df28b0e474f69206aecfca34eb17d43cc",
+    "qaSha256": "d0d7ae6800aca90601143b1b3ed8ae4df28b0e474f69206aecfca34eb17d43cc",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookExtendedIcons.cs",
+    "sha256": "21c7ab2b08a99e5af1e59a1a95e98e29b73e6643497cc5eb71e92caa903f5e78",
+    "qaSha256": "21c7ab2b08a99e5af1e59a1a95e98e29b73e6643497cc5eb71e92caa903f5e78",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFeatures.cs",
+    "sha256": "b32c8638f78bd9bc24877c5639d210946daeeefae8be5ef9ff1bd819d27b19e2",
+    "qaSha256": "b32c8638f78bd9bc24877c5639d210946daeeefae8be5ef9ff1bd819d27b19e2",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFilePaths.cs",
+    "sha256": "77efe487fe71cac8fb87cec1741ddd7299c046cf8a8e9ea53ef8123c6162d8ef",
+    "qaSha256": "77efe487fe71cac8fb87cec1741ddd7299c046cf8a8e9ea53ef8123c6162d8ef",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillColors.cs",
+    "sha256": "eda7c8113c15723d4120e0da76330bd15a1397565400e10a613fa2ce8a348e50",
+    "qaSha256": "eda7c8113c15723d4120e0da76330bd15a1397565400e10a613fa2ce8a348e50",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillFormat.cs",
+    "sha256": "d5127b54be1ffea6c59be027d552d6faf8bdeed53c8762fbf9d23081e34ffb82",
+    "qaSha256": "d5127b54be1ffea6c59be027d552d6faf8bdeed53c8762fbf9d23081e34ffb82",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillPaint.cs",
+    "sha256": "3fe4f0bc04cab0d31e8eb92aead263c965a6016804d1d66e3917c9199289e784",
+    "qaSha256": "3fe4f0bc04cab0d31e8eb92aead263c965a6016804d1d66e3917c9199289e784",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillReading.cs",
+    "sha256": "617791ae6be5f51ceba81b47a36defc6808eabddb2cae220f49dbdd03471cec4",
+    "qaSha256": "617791ae6be5f51ceba81b47a36defc6808eabddb2cae220f49dbdd03471cec4",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs",
+    "sha256": "9b64391cb1d8e1105fd45035258b43b0a15272d577aa5159240b7393999b0877",
+    "qaSha256": "9b64391cb1d8e1105fd45035258b43b0a15272d577aa5159240b7393999b0877",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs",
+    "sha256": "aaf0ce5e8e41c78e1cbe889bba374634052f187768cff8fd4683df05df5d9f8e",
+    "qaSha256": "aaf0ce5e8e41c78e1cbe889bba374634052f187768cff8fd4683df05df5d9f8e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFrameGeometry.cs",
+    "sha256": "10b2963205f33332fbe034a8eae83981478a7751d0df33e5a31f5472020c3ef8",
+    "qaSha256": "10b2963205f33332fbe034a8eae83981478a7751d0df33e5a31f5472020c3ef8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGameMode.cs",
+    "sha256": "66c94e9dcca7d030dc36a528cd0b9673200a0c8ca70f93b778d938bcf409d811",
+    "qaSha256": "66c94e9dcca7d030dc36a528cd0b9673200a0c8ca70f93b778d938bcf409d811",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGameValidation.cs",
+    "sha256": "2442a92bcafb19ed2e7338929868b81962fcf75193de8b5b1cdeedf95a988379",
+    "qaSha256": "2442a92bcafb19ed2e7338929868b81962fcf75193de8b5b1cdeedf95a988379",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGradientFill.cs",
+    "sha256": "ff50c56869957a53d3550fdeb5757bf141e4214b1ef0f052cf703209968e14f0",
+    "qaSha256": "ff50c56869957a53d3550fdeb5757bf141e4214b1ef0f052cf703209968e14f0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookHealth.cs",
+    "sha256": "a0c15559d02f6828d7911a8344b66c1d35d694b054010040c4155b61d3a2c229",
+    "qaSha256": "a0c15559d02f6828d7911a8344b66c1d35d694b054010040c4155b61d3a2c229",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconEditing.cs",
+    "sha256": "1eda4a83fc445be0a8da881a58f264bb486e444b3645f9e00d00bb0ebdacdcfe",
+    "qaSha256": "1eda4a83fc445be0a8da881a58f264bb486e444b3645f9e00d00bb0ebdacdcfe",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconFilters.cs",
+    "sha256": "69c964903514d08bb63410591713996179712d04d3e5098ea1169a6d0356545b",
+    "qaSha256": "69c964903514d08bb63410591713996179712d04d3e5098ea1169a6d0356545b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconSets.cs",
+    "sha256": "3759c76158ed2eb052427fbfe8492f15ac18616cf7f4474043c334bb1d828857",
+    "qaSha256": "3759c76158ed2eb052427fbfe8492f15ac18616cf7f4474043c334bb1d828857",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookLocalEnums.cs",
+    "sha256": "a977eaac070e26360272610aa8fe6c5a9f6b95c000364530d74018f95cf84513",
+    "qaSha256": "a977eaac070e26360272610aa8fe6c5a9f6b95c000364530d74018f95cf84513",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookNames.cs",
+    "sha256": "73907a977feb61de8e537a5c8103807de31a3a79e3c570e2f68d733d40768cee",
+    "qaSha256": "73907a977feb61de8e537a5c8103807de31a3a79e3c570e2f68d733d40768cee",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjectGesture.cs",
+    "sha256": "c432faaddf0343c83231f847e672f0e9a231d8964a2f24be2dcec110ccf5097a",
+    "qaSha256": "c432faaddf0343c83231f847e672f0e9a231d8964a2f24be2dcec110ccf5097a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs",
+    "sha256": "f13eeac47c7114504a472dda26d2538dc063f1355fa612ea93d3dee22923c8b5",
+    "qaSha256": "f13eeac47c7114504a472dda26d2538dc063f1355fa612ea93d3dee22923c8b5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjects.cs",
+    "sha256": "4cf65b9474c188c566a11684b1302644e34f67dc1ea43ca4bf24cac099a86d06",
+    "qaSha256": "4cf65b9474c188c566a11684b1302644e34f67dc1ea43ca4bf24cac099a86d06",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPackage.cs",
+    "sha256": "cbcf2b06d0592d55a6614dfb4b287d93f1bb2e35d8bdef5b397fc89c80702b4f",
+    "qaSha256": "cbcf2b06d0592d55a6614dfb4b287d93f1bb2e35d8bdef5b397fc89c80702b4f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs",
+    "sha256": "1798b05cbddc3bd359bcf70abc3a76691db11f80810d8812da657235c6b02864",
+    "qaSha256": "1798b05cbddc3bd359bcf70abc3a76691db11f80810d8812da657235c6b02864",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPresetDefinitions.cs",
+    "sha256": "688486cad7e987e048db2099b4362d4440743e0d4b1656897ff3f2a152c25016",
+    "qaSha256": "688486cad7e987e048db2099b4362d4440743e0d4b1656897ff3f2a152c25016",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookProblems.cs",
+    "sha256": "82ea9f27f5c2550f47a4935cc43382d26cbedb2f404dff736b422a225c2f6dd2",
+    "qaSha256": "82ea9f27f5c2550f47a4935cc43382d26cbedb2f404dff736b422a225c2f6dd2",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookProjectIconHook.cs",
+    "sha256": "adc45ebaa57db791d41d7594cbe4329595c8d16d1a706a95f5e02d8aed4186a5",
+    "qaSha256": "adc45ebaa57db791d41d7594cbe4329595c8d16d1a706a95f5e02d8aed4186a5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookReader.cs",
+    "sha256": "2d5c65c53d3f335180edfa2470ab097bc055f908ab985e7d5185727ea9e12285",
+    "qaSha256": "2d5c65c53d3f335180edfa2470ab097bc055f908ab985e7d5185727ea9e12285",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookRecovery.cs",
+    "sha256": "32e8e27bb3f2856fb05441d5bc6baa4c8affa13c7631ea4e24a22e2e3e26fb4c",
+    "qaSha256": "32e8e27bb3f2856fb05441d5bc6baa4c8affa13c7631ea4e24a22e2e3e26fb4c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookRegistration.cs",
+    "sha256": "774928feaee7a6e97ad47cf444e1857a4d1fe6c2f521dece0f46044ffdc55748",
+    "qaSha256": "774928feaee7a6e97ad47cf444e1857a4d1fe6c2f521dece0f46044ffdc55748",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookScaleFormula.cs",
+    "sha256": "9fe08e037b20c6df0603aa868409464c18d65c4b36b3668665a6ef710da51a7e",
+    "qaSha256": "9fe08e037b20c6df0603aa868409464c18d65c4b36b3668665a6ef710da51a7e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSearch.cs",
+    "sha256": "9e17127148fd20409d472a0f1a96edc50bb943885f87b7cbf0886850f455d2ae",
+    "qaSha256": "9e17127148fd20409d472a0f1a96edc50bb943885f87b7cbf0886850f455d2ae",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapeGeometry.cs",
+    "sha256": "ac1551e787357121ae5b67984c1628ef08b169dbf0ddcd20e4e629892b1afe3e",
+    "qaSha256": "ac1551e787357121ae5b67984c1628ef08b169dbf0ddcd20e4e629892b1afe3e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapePresets.cs",
+    "sha256": "55b88bffb1d85c5be3f37b869bd55eb47a015df065ada375a512faa24f567c6a",
+    "qaSha256": "55b88bffb1d85c5be3f37b869bd55eb47a015df065ada375a512faa24f567c6a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapeRaster.cs",
+    "sha256": "01581e0eac113ca4a1df8b37b543fd6cada6c226f34a687ecb483f0e9d5511d0",
+    "qaSha256": "01581e0eac113ca4a1df8b37b543fd6cada6c226f34a687ecb483f0e9d5511d0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSharedFormulas.cs",
+    "sha256": "1deb0349246ae9e6b3b8f7db8092d8d2c783534cf1b274104ffa7ec553573a8a",
+    "qaSha256": "1deb0349246ae9e6b3b8f7db8092d8d2c783534cf1b274104ffa7ec553573a8a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSheetReference.cs",
+    "sha256": "13c39382908c61188ecaa0d0f6dd089c517355ef7e2ebe049dfe57999832d711",
+    "qaSha256": "13c39382908c61188ecaa0d0f6dd089c517355ef7e2ebe049dfe57999832d711",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShortcutOperations.cs",
+    "sha256": "e5a8f212c301713a896087032b12c90e228360f77c548d36e48753feb97ef7de",
+    "qaSha256": "e5a8f212c301713a896087032b12c90e228360f77c548d36e48753feb97ef7de",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSourceImporter.cs",
+    "sha256": "12b2b7a60b84403756df1a2987c9dcc35800cb93072bc14dfb925c72871eb1b1",
+    "qaSha256": "12b2b7a60b84403756df1a2987c9dcc35800cb93072bc14dfb925c72871eb1b1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSourceInspector.cs",
+    "sha256": "a7f17124970fa5de252f031fb511b02d18974e0cdc83921fee7d9090b4be5052",
+    "qaSha256": "a7f17124970fa5de252f031fb511b02d18974e0cdc83921fee7d9090b4be5052",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSpillClipboard.cs",
+    "sha256": "4a20e20c8afb9731661c8646b4e90325afcce7b0c6463024fec61f0c965508c5",
+    "qaSha256": "4a20e20c8afb9731661c8646b4e90325afcce7b0c6463024fec61f0c965508c5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSpillStorage.cs",
+    "sha256": "52165aa1c5bf0f43ab83a6d4bf41988f28ded1024ad649a07dbec052a75417d4",
+    "qaSha256": "52165aa1c5bf0f43ab83a6d4bf41988f28ded1024ad649a07dbec052a75417d4",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockCharts.cs",
+    "sha256": "f1e88a36afb06884b209b47a0b98a9fde5eab4e8bc0a703f04ccac7eb70c742c",
+    "qaSha256": "f1e88a36afb06884b209b47a0b98a9fde5eab4e8bc0a703f04ccac7eb70c742c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockDates.cs",
+    "sha256": "e7133a492b6f2121635f84c34f74dcb27b05b243e4aff1c9e225aa5c2af34e74",
+    "qaSha256": "e7133a492b6f2121635f84c34f74dcb27b05b243e4aff1c9e225aa5c2af34e74",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs",
+    "sha256": "936908a54ed0533661aa85abd5fb38ac8df6c337db78b987621a42e0b22aefe3",
+    "qaSha256": "936908a54ed0533661aa85abd5fb38ac8df6c337db78b987621a42e0b22aefe3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStructure.cs",
+    "sha256": "3695a7651c004b58c5ef93369e4910314fbd195255a289f11472f99547fdf3e6",
+    "qaSha256": "3695a7651c004b58c5ef93369e4910314fbd195255a289f11472f99547fdf3e6",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSummary.cs",
+    "sha256": "8730ae1236750e5ea44ee30cbfbdcf1ae8ded0c3d34ec833405c9b5ff68be1d1",
+    "qaSha256": "8730ae1236750e5ea44ee30cbfbdcf1ae8ded0c3d34ec833405c9b5ff68be1d1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableDesign.cs",
+    "sha256": "89dcde58525242486ea0bcd96085766f7f33667d49460cd8b15838942d59abb3",
+    "qaSha256": "89dcde58525242486ea0bcd96085766f7f33667d49460cd8b15838942d59abb3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs",
+    "sha256": "0ea4523bc142a2195b0d0b8cde2bbcef93acc1197927e09a11339ca3574d8072",
+    "qaSha256": "0ea4523bc142a2195b0d0b8cde2bbcef93acc1197927e09a11339ca3574d8072",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableStyleColors.cs",
+    "sha256": "1e5a4cbceef4f9d437ab9ceeedb7d9b6090673d419d844a2a034eb6e36994524",
+    "qaSha256": "1e5a4cbceef4f9d437ab9ceeedb7d9b6090673d419d844a2a034eb6e36994524",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookXmlText.cs",
+    "sha256": "8f015ec34288da3e1cbdff8db7ad1aecf71f25d76d76c4f0ae5751a72cffc92a",
+    "qaSha256": "8f015ec34288da3e1cbdff8db7ad1aecf71f25d76d76c4f0ae5751a72cffc92a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkspaceSettings.cs",
+    "sha256": "a43167e7c707608e618281650f6410a45ba13d8bb0e3022a5e4e260a6d55fb8a",
+    "qaSha256": "a43167e7c707608e618281650f6410a45ba13d8bb0e3022a5e4e260a6d55fb8a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "sha256": "26eac6923c23ca81c15ccc7e0462ea9fca47df98dddb998772c9db1a12f06e5a",
+    "qaSha256": "26eac6923c23ca81c15ccc7e0462ea9fca47df98dddb998772c9db1a12f06e5a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/CustomEnumsLanguageTable.cs",
+    "sha256": "ca1a3af9c10d9da0a7b6cd10d75906e0c821333a294d4717105b8296967e1ac5",
+    "qaSha256": "ca1a3af9c10d9da0a7b6cd10d75906e0c821333a294d4717105b8296967e1ac5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/EditorLanguageTable.cs",
+    "sha256": "3fe0da3f2ee589ab3a119b9c7f0563494db84548084fbc1757d2a94833d0eb92",
+    "qaSha256": "3fe0da3f2ee589ab3a119b9c7f0563494db84548084fbc1757d2a94833d0eb92",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/GameValidationLanguageTable.cs",
+    "sha256": "209b04da77d00bf2fdefb5533b4aaaeb36cb1de24eff276376b1eb17e542bb5b",
+    "qaSha256": "209b04da77d00bf2fdefb5533b4aaaeb36cb1de24eff276376b1eb17e542bb5b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/LocalizationDataLanguageTable.cs",
+    "sha256": "c232d788d05ac315e66ea780364c175b8368e496843bfe575ff7c88ea34d236b",
+    "qaSha256": "c232d788d05ac315e66ea780364c175b8368e496843bfe575ff7c88ea34d236b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+    "sha256": "934d95e00d03c303dfd3ba0266c60276b6e2b2a435181b3104866297d82079b3",
+    "qaSha256": "934d95e00d03c303dfd3ba0266c60276b6e2b2a435181b3104866297d82079b3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/SettingsLanguageTable.cs",
+    "sha256": "680006cc33941d28a17d365796466f07a9775a8b7e0fa7cf6f338e0ce40fcdc7",
+    "qaSha256": "680006cc33941d28a17d365796466f07a9775a8b7e0fa7cf6f338e0ce40fcdc7",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/SettingsLocalization.cs",
+    "sha256": "d4b219a6e7937877c3725989b2eebe3ea5b84853af01dd97bd537d09eac92261",
+    "qaSha256": "d4b219a6e7937877c3725989b2eebe3ea5b84853af01dd97bd537d09eac92261",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+    "sha256": "1a2411c6b22e192c25538b8ecf9469890e50ff4b84ec52ef1be989b2a3ae702d",
+    "qaSha256": "1a2411c6b22e192c25538b8ecf9469890e50ff4b84ec52ef1be989b2a3ae702d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/WorkbookShortcutLanguageTable.cs",
+    "sha256": "325f123cd786b1c54153bcae1d7741c8f2be0b0522b771d90bdde5c90ce4d861",
+    "qaSha256": "325f123cd786b1c54153bcae1d7741c8f2be0b0522b771d90bdde5c90ce4d861",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Cell.cs",
+    "sha256": "eb21fcf74944f6c685e9066097052a2d53c27ce941f5fa9f6f1ef3f63094a23a",
+    "qaSha256": "eb21fcf74944f6c685e9066097052a2d53c27ce941f5fa9f6f1ef3f63094a23a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Column.cs",
+    "sha256": "9abf47f898b6f87c23ef38a747c71df1b34b3523e603d7353a8e89f00a4cde6c",
+    "qaSha256": "9abf47f898b6f87c23ef38a747c71df1b34b3523e603d7353a8e89f00a4cde6c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Row.cs",
+    "sha256": "4ef49812485857eea825c4678c93d17dd37b61d4f07837ce9827073033900106",
+    "qaSha256": "4ef49812485857eea825c4678c93d17dd37b61d4f07837ce9827073033900106",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/TableInfo.cs",
+    "sha256": "53fc55ec2b40c863e59f5db1773147a2300663d3683e83bceaa83e4b6ebb5023",
+    "qaSha256": "53fc55ec2b40c863e59f5db1773147a2300663d3683e83bceaa83e4b6ebb5023",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Theme/TableTheme.cs",
+    "sha256": "d5abc5f32a1840f621da40a73e6b20ecabae995c3073f4ed78fe32694d3e680c",
+    "qaSha256": "d5abc5f32a1840f621da40a73e6b20ecabae995c3073f4ed78fe32694d3e680c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Theme/TableThemeEditor.cs",
+    "sha256": "537d41919dc3fc0c9f64fe202029ad13068859ba221956d1245f08c0b2909c1e",
+    "qaSha256": "537d41919dc3fc0c9f64fe202029ad13068859ba221956d1245f08c0b2909c1e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/AboutPopup.cs",
+    "sha256": "56e5174946ea78524f8d9ca5b7ae4e8cd23e653467bf066be3366fd237afdcb5",
+    "qaSha256": "56e5174946ea78524f8d9ca5b7ae4e8cd23e653467bf066be3366fd237afdcb5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/ColumnFilterPopup.cs",
+    "sha256": "0c751a6c7ff681ff84ec9ea47ac09f48dfd93750e5f46e3abcee908af183dd5b",
+    "qaSha256": "0c751a6c7ff681ff84ec9ea47ac09f48dfd93750e5f46e3abcee908af183dd5b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTableEditor.cs",
+    "sha256": "03677689ca645702dede6570b8fe57021eacbedb50bad51317d48055c01ec0b0",
+    "qaSha256": "03677689ca645702dede6570b8fe57021eacbedb50bad51317d48055c01ec0b0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferences.cs",
+    "sha256": "e305f5308128694d71901e0abd6aa19bd8a3f0c63934070124bba6772d63b2ab",
+    "qaSha256": "e305f5308128694d71901e0abd6aa19bd8a3f0c63934070124bba6772d63b2ab",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesComments.cs",
+    "sha256": "f269ab969ebafaaf808b102e800007041f87240c6d25a10e7547d48ac9ad959e",
+    "qaSha256": "f269ab969ebafaaf808b102e800007041f87240c6d25a10e7547d48ac9ad959e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesShortcuts.cs",
+    "sha256": "b50da026887a538c2821c37d0566eb4376ed351b2f873fb7e0bef6080846db7e",
+    "qaSha256": "b50da026887a538c2821c37d0566eb4376ed351b2f873fb7e0bef6080846db7e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FindPopup.cs",
+    "sha256": "09bb05391935998aae7aeaaed842a4783f1999d13c76c598c1501696225035b7",
+    "qaSha256": "09bb05391935998aae7aeaaed842a4783f1999d13c76c598c1501696225035b7",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FindReplacePopup.cs",
+    "sha256": "043c76401bb634cb03fc2135fcd0d22ecc7dfe80e72202632c37a39b5bf7ff3d",
+    "qaSha256": "043c76401bb634cb03fc2135fcd0d22ecc7dfe80e72202632c37a39b5bf7ff3d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FormulaHelpPopup.cs",
+    "sha256": "298861c65321059da208134946cdc5e5f0b1c97f321c4662f3d3c28b57903671",
+    "qaSha256": "298861c65321059da208134946cdc5e5f0b1c97f321c4662f3d3c28b57903671",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/PasteSpecialPopup.cs",
+    "sha256": "bfec2fb90fe984afee719bdbc79f7350981d8ec7369bc086dfff1c659166b220",
+    "qaSha256": "bfec2fb90fe984afee719bdbc79f7350981d8ec7369bc086dfff1c659166b220",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/RibbonHelp.cs",
+    "sha256": "42eee558fcc35e950f9241cc5f1ffd787f87559662e4f1c38051b5490cdaf0c8",
+    "qaSha256": "42eee558fcc35e950f9241cc5f1ffd787f87559662e4f1c38051b5490cdaf0c8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SelectPopup.cs",
+    "sha256": "c63df2f5b9310a3373d7bb799900f8e787aaf8b739fe43621931b40f2b3331ba",
+    "qaSha256": "c63df2f5b9310a3373d7bb799900f8e787aaf8b739fe43621931b40f2b3331ba",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "sha256": "cfbc6aa9027fc3730d6cb6c2e4664d4cc1c34eb16d441f57323db685a6c7ab53",
+    "qaSha256": "cfbc6aa9027fc3730d6cb6c2e4664d4cc1c34eb16d441f57323db685a6c7ab53",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "sha256": "3fb9fecc4956864535ac337018d11e508e98065fa3753535441800a663e85ddc",
+    "qaSha256": "3fb9fecc4956864535ac337018d11e508e98065fa3753535441800a663e85ddc",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+    "sha256": "7a8fd5f346e23aa15af0c0c7c66c3cd1133d10775efa54a4f9e29613b6a75d76",
+    "qaSha256": "7a8fd5f346e23aa15af0c0c7c66c3cd1133d10775efa54a4f9e29613b6a75d76",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/TableDiagnosticsPopup.cs",
+    "sha256": "d51281e83a54b31f3b4304e1c276e2388f536004c5894565f271a74a25ec6344",
+    "qaSha256": "d51281e83a54b31f3b4304e1c276e2388f536004c5894565f271a74a25ec6344",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/ValueInputPopup.cs",
+    "sha256": "e6c9a41d92ac013a8b5a233ae46c4855d72e32e5b837c310e6e78bc16c1a23e1",
+    "qaSha256": "e6c9a41d92ac013a8b5a233ae46c4855d72e32e5b837c310e6e78bc16c1a23e1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WindowPlacement.cs",
+    "sha256": "4056f9942a4e4e222d765bcda82c9d4ad56c923ccd354769859cc787b5235a12",
+    "qaSha256": "4056f9942a4e4e222d765bcda82c9d4ad56c923ccd354769859cc787b5235a12",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookAlignmentControls.cs",
+    "sha256": "093fd42cd70d323c7d2a55c20dae0538084a25c6e754c37760b1e8556069a981",
+    "qaSha256": "093fd42cd70d323c7d2a55c20dae0538084a25c6e754c37760b1e8556069a981",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookAutomationPreview.cs",
+    "sha256": "7bfe84fd297931794775009c6cf8aff403b422a5e864a0a0f6e1623233a8c372",
+    "qaSha256": "7bfe84fd297931794775009c6cf8aff403b422a5e864a0a0f6e1623233a8c372",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookBorderGUI.cs",
+    "sha256": "a7158f103556cc912fd07fd325eed0483029ad3b462b0b6ffac1ac6f6b14ab6f",
+    "qaSha256": "a7158f103556cc912fd07fd325eed0483029ad3b462b0b6ffac1ac6f6b14ab6f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookBugReportWindow.cs",
+    "sha256": "5857d673c8f8f9224849b3f8fb135fda6fe36a4d55144ebc38f1aa260e2d4579",
+    "qaSha256": "5857d673c8f8f9224849b3f8fb135fda6fe36a4d55144ebc38f1aa260e2d4579",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+    "sha256": "d2cd4e8cad11c5e7b6a66bd1e6142f8353c6d044822671b097b3a65264a56769",
+    "qaSha256": "d2cd4e8cad11c5e7b6a66bd1e6142f8353c6d044822671b097b3a65264a56769",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs",
+    "sha256": "c7ad34444ea5f1a01ecf9181ca95f5c1d9fd54d49b29818035fbfdb7547cdf60",
+    "qaSha256": "c7ad34444ea5f1a01ecf9181ca95f5c1d9fd54d49b29818035fbfdb7547cdf60",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartPopup.cs",
+    "sha256": "5c1079dd46e4592a0371cb24763a20483a0fb19689dac2fa06a8ab1fd41bfdc9",
+    "qaSha256": "5c1079dd46e4592a0371cb24763a20483a0fb19689dac2fa06a8ab1fd41bfdc9",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookConditionalPopup.cs",
+    "sha256": "e7838d51328ab6daaf56a9894ef0ffa32a447888b9da0fde9f1cd56c17700350",
+    "qaSha256": "e7838d51328ab6daaf56a9894ef0ffa32a447888b9da0fde9f1cd56c17700350",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookControls.cs",
+    "sha256": "0890cfd6d28b0c286b04b821175de65edf61123371f316d2caef3274c8e10864",
+    "qaSha256": "0890cfd6d28b0c286b04b821175de65edf61123371f316d2caef3274c8e10864",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarGUI.cs",
+    "sha256": "9e3d29feff0b3f2dd4b3ba4d5395477e50ccbfe2f135406d559a92092eb8ca12",
+    "qaSha256": "9e3d29feff0b3f2dd4b3ba4d5395477e50ccbfe2f135406d559a92092eb8ca12",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarPopup.cs",
+    "sha256": "3e28087eb6ac9510939a0d25273f270f5f3e4ca37b93f6a73e32eed0e2ef8008",
+    "qaSha256": "3e28087eb6ac9510939a0d25273f270f5f3e4ca37b93f6a73e32eed0e2ef8008",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDebugPopup.cs",
+    "sha256": "dd0f73df47962f0b1cd9f59571910bf04f599e51463f46875756a741b04386ed",
+    "qaSha256": "dd0f73df47962f0b1cd9f59571910bf04f599e51463f46875756a741b04386ed",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+    "sha256": "94156075e86256d51f621264479da464d2b9e0a468838776f0eb4b8ca2aa96d6",
+    "qaSha256": "94156075e86256d51f621264479da464d2b9e0a468838776f0eb4b8ca2aa96d6",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookExcelShortcuts.cs",
+    "sha256": "fcf247da5018a79a830c6744839fbe6e866da4995ee25b3e4a0f460755db39a2",
+    "qaSha256": "fcf247da5018a79a830c6744839fbe6e866da4995ee25b3e4a0f460755db39a2",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookFillControls.cs",
+    "sha256": "8c75867448e92c4c83d542fa03d2006e795d58cba65a3f608bb717bdfe46880c",
+    "qaSha256": "8c75867448e92c4c83d542fa03d2006e795d58cba65a3f608bb717bdfe46880c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookFontMetadataControls.cs",
+    "sha256": "cb54827601913854386ede61c856a420e0e242d4a6aaac9bd0d61ef8d9ac999b",
+    "qaSha256": "cb54827601913854386ede61c856a420e0e242d4a6aaac9bd0d61ef8d9ac999b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookGradientGUI.cs",
+    "sha256": "a648121c9f7f7fc453e28d85337aad5d4dc8fca9d1e9f84b95de5fa9bba9d40c",
+    "qaSha256": "a648121c9f7f7fc453e28d85337aad5d4dc8fca9d1e9f84b95de5fa9bba9d40c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookHoverPreview.cs",
+    "sha256": "816a5e6aeefe66be3a08f8d8a998eb351c82b6a0c45136698e5737dea3dc28a0",
+    "qaSha256": "816a5e6aeefe66be3a08f8d8a998eb351c82b6a0c45136698e5737dea3dc28a0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookHoverTiming.cs",
+    "sha256": "a5d66445b2b90effd4bc9a1c50ffcd6eee7a01ebe1850745fcb3b17d5cb246e1",
+    "qaSha256": "a5d66445b2b90effd4bc9a1c50ffcd6eee7a01ebe1850745fcb3b17d5cb246e1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookIconGUI.cs",
+    "sha256": "c4ef7730052ee097967b80145a487d6259ffc8125ef69756b7fdfd9388d9cf68",
+    "qaSha256": "c4ef7730052ee097967b80145a487d6259ffc8125ef69756b7fdfd9388d9cf68",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookIconPopup.cs",
+    "sha256": "942343e1f1957da0130bbe84c31b065310f338c53ac11552da7cb561710edda9",
+    "qaSha256": "942343e1f1957da0130bbe84c31b065310f338c53ac11552da7cb561710edda9",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookInteractionMetrics.cs",
+    "sha256": "94f61275700853c0136dee814420e9b2a0f71d882d02e376f07cb46785efaa5a",
+    "qaSha256": "94f61275700853c0136dee814420e9b2a0f71d882d02e376f07cb46785efaa5a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookMinimizeAnimation.cs",
+    "sha256": "8703703ec8a2fb7cea7d5c247d5679fe30979f461b1b0251d0d8173056795300",
+    "qaSha256": "8703703ec8a2fb7cea7d5c247d5679fe30979f461b1b0251d0d8173056795300",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+    "sha256": "89764164e5b20dc7a93366b71d206ce2196106efb61dc529d96dee47e6e58e22",
+    "qaSha256": "89764164e5b20dc7a93366b71d206ce2196106efb61dc529d96dee47e6e58e22",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNamePopup.cs",
+    "sha256": "d947e30a06596279949ea63d439b5451fca749576a2b981039363ca86fec9aec",
+    "qaSha256": "d947e30a06596279949ea63d439b5451fca749576a2b981039363ca86fec9aec",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativePreview.cs",
+    "sha256": "1818ccc013bdc7c4d9f8bc8bad5180d6966e7190accaa05332ba9e6273f1b66b",
+    "qaSha256": "1818ccc013bdc7c4d9f8bc8bad5180d6966e7190accaa05332ba9e6273f1b66b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.cs",
+    "sha256": "475d10a12f6ac460c70d4f1c2436e06dd9b6b4a921f04820543802bd1f91f362",
+    "qaSha256": "475d10a12f6ac460c70d4f1c2436e06dd9b6b4a921f04820543802bd1f91f362",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.Focus.cs",
+    "sha256": "fb785c7c4ed8f4ae8876e9c416f5f941c5b4b524989745b94e0a0c16baa8dcb3",
+    "qaSha256": "fb785c7c4ed8f4ae8876e9c416f5f941c5b4b524989745b94e0a0c16baa8dcb3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.Keyboard.cs",
+    "sha256": "96ab85e44457dab01d3310a520a4ca5651c82d26d33db81ea1369b0164c9d479",
+    "qaSha256": "96ab85e44457dab01d3310a520a4ca5651c82d26d33db81ea1369b0164c9d479",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs",
+    "sha256": "52a5d0c61ead03979e92233b967134a6ca8c511f1b60d59a53d3faee966b9d0d",
+    "qaSha256": "52a5d0c61ead03979e92233b967134a6ca8c511f1b60d59a53d3faee966b9d0d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPolygonGUI.cs",
+    "sha256": "28979ba1880312cd7d186bb8d90cc94bcb4911ec997e0d6fbbd6f125b102beb8",
+    "qaSha256": "28979ba1880312cd7d186bb8d90cc94bcb4911ec997e0d6fbbd6f125b102beb8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPopup.cs",
+    "sha256": "0d2e14966a01af95fe32069ed03b391049ec91f229b0395646477488e9381e0d",
+    "qaSha256": "0d2e14966a01af95fe32069ed03b391049ec91f229b0395646477488e9381e0d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPresentationScope.cs",
+    "sha256": "60a39c4323307d50f428de354dbc61563fff311141f14fa11e5c2b6e170f0268",
+    "qaSha256": "60a39c4323307d50f428de354dbc61563fff311141f14fa11e5c2b6e170f0268",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPreviewLease.cs",
+    "sha256": "dbd450f798cad8e0c5c18d70e3fc2f8696b52c8ad0eeacc671c20634bc411174",
+    "qaSha256": "dbd450f798cad8e0c5c18d70e3fc2f8696b52c8ad0eeacc671c20634bc411174",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRegistrationPopup.cs",
+    "sha256": "079da92969dd99f884b5fa25bc941c6d2e53e90a7896f8a8b3259f51ed78aaa3",
+    "qaSha256": "079da92969dd99f884b5fa25bc941c6d2e53e90a7896f8a8b3259f51ed78aaa3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRenderCache.cs",
+    "sha256": "b52b0b7456998c97e6c13f42a352749e3b069e26553fbbde28e57a7013d0bf0b",
+    "qaSha256": "b52b0b7456998c97e6c13f42a352749e3b069e26553fbbde28e57a7013d0bf0b",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookSchemaUI.cs",
+    "sha256": "07577b8f90aee1c120e48203c514c7e51756757b889be5778f2ad344302a5546",
+    "qaSha256": "07577b8f90aee1c120e48203c514c7e51756757b889be5778f2ad344302a5546",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShapeGallery.cs",
+    "sha256": "05dafe4a083e16e273175daece775f77617f9a571873b4bf8b78f5b723720f1c",
+    "qaSha256": "05dafe4a083e16e273175daece775f77617f9a571873b4bf8b78f5b723720f1c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShapeGUI.cs",
+    "sha256": "d4ed628ca15de97b0f8e0e19c2d7c08e142d6eefc352bead26ab61e62add90e5",
+    "qaSha256": "d4ed628ca15de97b0f8e0e19c2d7c08e142d6eefc352bead26ab61e62add90e5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookSheetTabGUI.cs",
+    "sha256": "1e6531aaebec55df60431baa4a7e7c8b829684582054c3d33033de3214be4397",
+    "qaSha256": "1e6531aaebec55df60431baa4a7e7c8b829684582054c3d33033de3214be4397",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShortcutCatalog.cs",
+    "sha256": "970bb8a2ec6547f24d197d97599e8fb664a898ecd5073dc9579db61f085a7442",
+    "qaSha256": "970bb8a2ec6547f24d197d97599e8fb664a898ecd5073dc9579db61f085a7442",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookStatusBarLayout.cs",
+    "sha256": "5e3288cbcbe37e9d9d228bd2f978a34853f34e8227dddebd924503978a664dd4",
+    "qaSha256": "5e3288cbcbe37e9d9d228bd2f978a34853f34e8227dddebd924503978a664dd4",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarLayout.cs",
+    "sha256": "3454e5ae9f5c19d2f5c33ef017d37bb5ca51cf3da0431f15aee38500144c82ed",
+    "qaSha256": "3454e5ae9f5c19d2f5c33ef017d37bb5ca51cf3da0431f15aee38500144c82ed",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarMenu.cs",
+    "sha256": "cdbcfc7642abc08b9d02c4d207f253e0ac4d9e7c07ed687dc42a34fde32f729d",
+    "qaSha256": "cdbcfc7642abc08b9d02c4d207f253e0ac4d9e7c07ed687dc42a34fde32f729d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTextDecoration.cs",
+    "sha256": "a9b58163afb03d317a4ceaddda5f36b7c60987727777a25c757c43817340145e",
+    "qaSha256": "a9b58163afb03d317a4ceaddda5f36b7c60987727777a25c757c43817340145e",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs",
+    "sha256": "dd4e3bffb18b45d629ffc880abde625982b874bbe9b5e5359f245ca6316457f9",
+    "qaSha256": "dd4e3bffb18b45d629ffc880abde625982b874bbe9b5e5359f245ca6316457f9",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookToolWindow.cs",
+    "sha256": "fe34162ce5d53f0fe4eb46d6d327b262672f64239ecd6beadf70db49248cb808",
+    "qaSha256": "fe34162ce5d53f0fe4eb46d6d327b262672f64239ecd6beadf70db49248cb808",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTurnRoomBridge.cs",
+    "sha256": "a55a88b235c564b23d94a823bba587f0789e1ce74a5dc1b6ac166e5bfec2d0d7",
+    "qaSha256": "a55a88b235c564b23d94a823bba587f0789e1ce74a5dc1b6ac166e5bfec2d0d7",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTypePicker.cs",
+    "sha256": "16cacc12f9d5ace9a0fd05bfec481423aad27a4111213c4ff7e10fe913f21a03",
+    "qaSha256": "16cacc12f9d5ace9a0fd05bfec481423aad27a4111213c4ff7e10fe913f21a03",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs",
+    "sha256": "8f1f272473ba18f8c89e07ea98e7bcd268a3320bc6f6d942aa69cc9a9385773c",
+    "qaSha256": "8f1f272473ba18f8c89e07ea98e7bcd268a3320bc6f6d942aa69cc9a9385773c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerChrome.cs",
+    "sha256": "9b44053cb807de1390c58a60b9ace9590fb14d4094d4bc9332018d4a449455c8",
+    "qaSha256": "9b44053cb807de1390c58a60b9ace9590fb14d4094d4bc9332018d4a449455c8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerClosing.cs",
+    "sha256": "e7f8d9bf344f3cbeac0e267d1177fb44d5ccc4da43409aa8c6eb1f1cbfac7a04",
+    "qaSha256": "e7f8d9bf344f3cbeac0e267d1177fb44d5ccc4da43409aa8c6eb1f1cbfac7a04",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerContextRibbon.cs",
+    "sha256": "de508c9e003a93daa96ae318577c79cd443c8b238ce9a6b64c38631fb0731ff8",
+    "qaSha256": "de508c9e003a93daa96ae318577c79cd443c8b238ce9a6b64c38631fb0731ff8",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs",
+    "sha256": "7bde8fc12bb88cb90941ae79cb59c9ac6fc133a2eab8666cdf2f0693ce70f01f",
+    "qaSha256": "7bde8fc12bb88cb90941ae79cb59c9ac6fc133a2eab8666cdf2f0693ce70f01f",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+    "sha256": "943c6e78c3f7f3c68688f6611ff7b44862aef1f5df68108c80a33866457b27b3",
+    "qaSha256": "943c6e78c3f7f3c68688f6611ff7b44862aef1f5df68108c80a33866457b27b3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs",
+    "sha256": "db8fd5f726cb80b515c1fd0caa781972a55f1fbb93c938e2ed99fbc2b368077d",
+    "qaSha256": "db8fd5f726cb80b515c1fd0caa781972a55f1fbb93c938e2ed99fbc2b368077d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerInsert.cs",
+    "sha256": "147142634f75acfaed6b956dbb40a6557dabb7207b9357bb2d5ca88820dc230c",
+    "qaSha256": "147142634f75acfaed6b956dbb40a6557dabb7207b9357bb2d5ca88820dc230c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+    "sha256": "6759515b56d1e8d2369e55b0447c49d9504d23d3e5cf6741d26fd103e325be5d",
+    "qaSha256": "6759515b56d1e8d2369e55b0447c49d9504d23d3e5cf6741d26fd103e325be5d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerObjects.cs",
+    "sha256": "057ac71045b3d7158fc18b48d679640d673b515ed97db15d0ba74e56e34e8d59",
+    "qaSha256": "057ac71045b3d7158fc18b48d679640d673b515ed97db15d0ba74e56e34e8d59",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerPlayNotice.cs",
+    "sha256": "99f4dba64a93eb0eeb8efd84ddb34d7729bf1ab248831f120f7ea3206be16ca1",
+    "qaSha256": "99f4dba64a93eb0eeb8efd84ddb34d7729bf1ab248831f120f7ea3206be16ca1",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerProblems.cs",
+    "sha256": "fcbee6e2cae2dec50ee6ea8cf9e675a38bdb8a9e43fb128c6d9aedd5c31260ed",
+    "qaSha256": "fcbee6e2cae2dec50ee6ea8cf9e675a38bdb8a9e43fb128c6d9aedd5c31260ed",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRecovery.cs",
+    "sha256": "506bd4ca8ad6bdcde0dfbe54d35ecaff3eec1c479883da6030ffd4bad2da3088",
+    "qaSha256": "506bd4ca8ad6bdcde0dfbe54d35ecaff3eec1c479883da6030ffd4bad2da3088",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerReferences.cs",
+    "sha256": "fb49036e8a594c3173f83a17d8527b7d43252a28aa5abbfe7cbd98621f940671",
+    "qaSha256": "fb49036e8a594c3173f83a17d8527b7d43252a28aa5abbfe7cbd98621f940671",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerShortcuts.cs",
+    "sha256": "6b1dce367a4e9df6699e8aa430f8f73c5b720ef8dc5df7e1a81e4a91aec72aa3",
+    "qaSha256": "6b1dce367a4e9df6699e8aa430f8f73c5b720ef8dc5df7e1a81e4a91aec72aa3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerTableDesign.cs",
+    "sha256": "3d90dec0d7b7092a6704dd82288b4404f46a809d59c9bc0e92912d8228c1ff26",
+    "qaSha256": "3d90dec0d7b7092a6704dd82288b4404f46a809d59c9bc0e92912d8228c1ff26",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerUsage.cs",
+    "sha256": "ef74c75731a397888a292d9ae3c4ca3aaafebc707ebe2214f12f3dae13322feb",
+    "qaSha256": "ef74c75731a397888a292d9ae3c4ca3aaafebc707ebe2214f12f3dae13322feb",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerValidation.cs",
+    "sha256": "c5e0128d63b16bece64b9d2f5c2f0990a05242396ce5631a6b512b6acc1239f5",
+    "qaSha256": "c5e0128d63b16bece64b9d2f5c2f0990a05242396ce5631a6b512b6acc1239f5",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookWindowMotion.cs",
+    "sha256": "7df350b042dd1063c9c6dcde0e2698d343659c4b03ad99965a49ab3f60c86c8c",
+    "qaSha256": "7df350b042dd1063c9c6dcde0e2698d343659c4b03ad99965a49ab3f60c86c8c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookWindowTheme.cs",
+    "sha256": "6cb732c23ff793deaa526085dae4a10fc47d27f09f2cd4d056195e4ccff14941",
+    "qaSha256": "6cb732c23ff793deaa526085dae4a10fc47d27f09f2cd4d056195e4ccff14941",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkspaceFileMenu.cs",
+    "sha256": "bddf01307b8f50651648e8ac4fc7493f71900c5d8f509cf744ada8891ea72b26",
+    "qaSha256": "bddf01307b8f50651648e8ac4fc7493f71900c5d8f509cf744ada8891ea72b26",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/ColorSelection.cs",
+    "sha256": "026c2f454aeab6b36d7eaac0caa075ceae048abd6f7637975c942e9c3b4fc488",
+    "qaSha256": "026c2f454aeab6b36d7eaac0caa075ceae048abd6f7637975c942e9c3b4fc488",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/EditHistory.cs",
+    "sha256": "2830aa858abc7d0f2db684e2780de1bf8586f03817004dfaeaae4c2dc3cbad9a",
+    "qaSha256": "2830aa858abc7d0f2db684e2780de1bf8586f03817004dfaeaae4c2dc3cbad9a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/PackageLayout.cs",
+    "sha256": "24f8f9ed7db6e14206db1936ce3a6825e3c1c35acba7e16b3172b28efb552c1d",
+    "qaSha256": "24f8f9ed7db6e14206db1936ce3a6825e3c1c35acba7e16b3172b28efb552c1d",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/ScreenTips.cs",
+    "sha256": "9d2165d8a2c89908d65b1feeacba4c7734a17d83cd97e3efd7df54061fb793d2",
+    "qaSha256": "9d2165d8a2c89908d65b1feeacba4c7734a17d83cd97e3efd7df54061fb793d2",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TemplateControlFaces.cs",
+    "sha256": "cdb54096b7463e338701ae408b1b115bc5c319903d053c21379eb22996c40e88",
+    "qaSha256": "cdb54096b7463e338701ae408b1b115bc5c319903d053c21379eb22996c40e88",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TemplateIcon.cs",
+    "sha256": "67609de9563f2758531f73e60dbb7cfbc6581ad9b5fea434eea11f0f4880f8cf",
+    "qaSha256": "67609de9563f2758531f73e60dbb7cfbc6581ad9b5fea434eea11f0f4880f8cf",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TemplateIcons.cs",
+    "sha256": "717c37eabc764d07483e3c1910e4a97e42565d7b769ec2137c226ac356dcdf56",
+    "qaSha256": "717c37eabc764d07483e3c1910e4a97e42565d7b769ec2137c226ac356dcdf56",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TemplateWindow.cs",
+    "sha256": "3aa8b3c501976385472922a57ddce3dd36dd6ee605d3a2d5e26b697f7045fff4",
+    "qaSha256": "3aa8b3c501976385472922a57ddce3dd36dd6ee605d3a2d5e26b697f7045fff4",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TempleteImportGuard.cs",
+    "sha256": "722c2476d8de6dc1ec5308581bec6420d0c0c3562b5f6792ff285f6a102fb2fe",
+    "qaSha256": "722c2476d8de6dc1ec5308581bec6420d0c0c3562b5f6792ff285f6a102fb2fe",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+    "sha256": "02630a557bbb09b82adfb9b1812fb106679c2eae94c38a0a565975f43c11f576",
+    "qaSha256": "02630a557bbb09b82adfb9b1812fb106679c2eae94c38a0a565975f43c11f576",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/TempleteVersion.cs",
+    "sha256": "4321819217c9c2c95509498c66e60219e55e411232fd4620a0820d089a9c61be",
+    "qaSha256": "4321819217c9c2c95509498c66e60219e55e411232fd4620a0820d089a9c61be",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/ToolWindow.cs",
+    "sha256": "456bcf22fd74928912a0e89e6aa9af99c25ca99091173f8759f7a5ba6d691a28",
+    "qaSha256": "456bcf22fd74928912a0e89e6aa9af99c25ca99091173f8759f7a5ba6d691a28",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+    "sha256": "7ebaf89652cdf042202e7bef22bba33cffee7370dfd46b07d6f8c58ea2758135",
+    "qaSha256": "7ebaf89652cdf042202e7bef22bba33cffee7370dfd46b07d6f8c58ea2758135",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+    "sha256": "90185448ba3dbdbb5c93e07e44abb4671cae828fb8bde3ed5db8643044e287e0",
+    "qaSha256": "90185448ba3dbdbb5c93e07e44abb4671cae828fb8bde3ed5db8643044e287e0",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/UITemplateFields.cs",
+    "sha256": "011186d64df5d28468e0fe5640faab0878c1ae34005cf33dbfb5357c43aba1e7",
+    "qaSha256": "011186d64df5d28468e0fe5640faab0878c1ae34005cf33dbfb5357c43aba1e7",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/UITemplateSettings.cs",
+    "sha256": "3e4dbfc7139992ffd2544781cc9083968e914a714b99b435d236d0d4d758e87a",
+    "qaSha256": "3e4dbfc7139992ffd2544781cc9083968e914a714b99b435d236d0d4d758e87a",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs",
+    "sha256": "11487b79d3f54e084d36c31a5f39b848a30b01e4bd75e8f4bec8701cb2fb7784",
+    "qaSha256": "11487b79d3f54e084d36c31a5f39b848a30b01e4bd75e8f4bec8701cb2fb7784",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowControls.cs",
+    "sha256": "aa84cdda1fabbb677d2465d39e4be6e92114e80705b0151e12cb9a8f98eea990",
+    "qaSha256": "aa84cdda1fabbb677d2465d39e4be6e92114e80705b0151e12cb9a8f98eea990",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowFocus.cs",
+    "sha256": "dcce96a1c10d67fceb6e6b865fc4087d3ce3e6a1b1d2f4c7a97099265b4ec8a9",
+    "qaSha256": "dcce96a1c10d67fceb6e6b865fc4087d3ce3e6a1b1d2f4c7a97099265b4ec8a9",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowFrame.cs",
+    "sha256": "eb79ece4ad780423c818d5a007fa703dd9c2b247d5b923dd1835fcb6da0e1e0c",
+    "qaSha256": "eb79ece4ad780423c818d5a007fa703dd9c2b247d5b923dd1835fcb6da0e1e0c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowFrame.Focus.cs",
+    "sha256": "fbb9a494fa78e17a85c9a9b9acc676da36710f3e14d19772b0327f2f1847a002",
+    "qaSha256": "fbb9a494fa78e17a85c9a9b9acc676da36710f3e14d19772b0327f2f1847a002",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowFrame.Placement.cs",
+    "sha256": "7d95fc351ff6e2755fd6f6e6e29be307767f6d2b17fc173d5a2b62242ab17701",
+    "qaSha256": "7d95fc351ff6e2755fd6f6e6e29be307767f6d2b17fc173d5a2b62242ab17701",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowFrame.Restack.cs",
+    "sha256": "a3492e77e2d20c9ad0c544bd4ac5ae58aabdc97b752cc5b1a2328bba1cfc78da",
+    "qaSha256": "a3492e77e2d20c9ad0c544bd4ac5ae58aabdc97b752cc5b1a2328bba1cfc78da",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+    "sha256": "6e682ab3dfddfb236961f0511713cf5e9148a12e293b62eae06afb8a24073e44",
+    "qaSha256": "6e682ab3dfddfb236961f0511713cf5e9148a12e293b62eae06afb8a24073e44",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs",
+    "sha256": "4c96129e18be089657130d7b620fcb50d2a3381f8e1451fdcd74bd1b786e1bf3",
+    "qaSha256": "4c96129e18be089657130d7b620fcb50d2a3381f8e1451fdcd74bd1b786e1bf3",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowServices.cs",
+    "sha256": "cdde5970a8cb163147f6b8dc663a5fc52619e191e128e7af239d22e564730a1c",
+    "qaSha256": "cdde5970a8cb163147f6b8dc663a5fc52619e191e128e7af239d22e564730a1c",
+    "same": true
+  },
+  {
+    "file": "Assets/TurnRoom/Templete/Editor/WindowTheme.cs",
+    "sha256": "c4d5ef3fa9e95a1946bb2bd88260d0ba364d974186aabb4f114e5c9122a4d069",
+    "qaSha256": "c4d5ef3fa9e95a1946bb2bd88260d0ba364d974186aabb4f114e5c9122a4d069",
+    "same": true
+  }
+]
