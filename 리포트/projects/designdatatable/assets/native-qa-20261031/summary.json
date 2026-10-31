@@ -1,0 +1,22 @@
+{
+  "nativeInputExecuted": true,
+  "nativeFocusExecuted": true,
+  "unity": "6000.0.83f1",
+  "sourceAssembly": "8c1d7a3f-766f-4937-9f58-4d0e483dcafe",
+  "checks": {
+    "final--excel-shortcuts": "PASS: 2100 Excel shortcut assertions; native focus/keyboard not executed.",
+    "final--formula-reference": "PASS: 64 formula reference assertions; native keyboard/click not executed.",
+    "final--insert-ribbon": "PASS: 51 insertion assertions; GUI not executed.",
+    "final--screentip-only": "PASS: 684 screen tip assertions.",
+    "final--table-context": "PASS: 68 table context assertions; GUI not executed."
+  },
+  "blocked": [
+    "QA Unity ended after Game tab double-click; log: Maximized serialized file backup not found. Root cause unconfirmed."
+  ],
+  "invalidRun": "ArcadeNativeNavigation-BLOCKED.json is excluded; corrected 20 navigation cycles passed.",
+  "timing": "Arcade navigation average258.38ms/max733.71ms includes80ms settle and observer overhead; not FPS.",
+  "additionalNativePass": [
+    "SceneView Ctrl+D:1 to2 objects",
+    "ProjectBrowser Ctrl+D:1 to2 files"
+  ]
+}

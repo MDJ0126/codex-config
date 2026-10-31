@@ -1,5 +1,15 @@
 [
   {
+    "title": "Windows API 실제 입력 QA — 입력·단축키·삽입 메뉴 수정",
+    "summary": "실제 Windows 키·마우스로 입력·저장·IME·Unity 충돌·리본을 검증하고 결함을 수정했습니다. 종료 원인과 일부 전환·전체 키 전수 검증은 남았습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-result-20261031033254327-v1.0.0.html",
+    "date": "2026-10-31T03:32:54.327Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "게시물 목록 갱신일 시·분 표시",
     "summary": "갱신일에 KST 시·분을 추가하고 날짜 변환·표시·정렬을 확인합니다.",
     "project": "codex-config",
