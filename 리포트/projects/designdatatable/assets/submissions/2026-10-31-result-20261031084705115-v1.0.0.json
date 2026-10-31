@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "result",
+    "title": "검색 결과의 원본 파일명을 괄호로 표시",
+    "summary": "EnumGear · EnumAdventure.xlsx를EnumGear (EnumAdventure.xlsx)로 변경했습니다. 두 표시 생성 경로와 기존 에셋 갱신용 임포터 버전을 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "WorkbookSheetReference.Initialize와WorkbookSourceImporter.OnImportAsset의 참조 이름을Table (Workbook.xlsx) 형식으로 통일했습니다. 임포터 버전을4→5로 올려 기존 참조도 다시 임포트되도록 했습니다. 에셋 식별 키table-이름은 유지했습니다.",
+    "verification": "실제 diff에서 두 이름 생성식과 임포터 버전만 바뀐 것을 확인했습니다. 전체 C# 빌드 오류0·경고0,51.31초(WorkFiles/Temp/ExcelParityContinue/build-search-label.log). 현재 실행 프로세스에는 Unity Hub 서비스만 있었고 이전 QA Editor는 종료됐음을 확인했습니다. 새 창을 띄우지 않았으며 변경 후 실제 프로그램 화면 캡처는 없습니다. XERJ 검색 후보는 현재 파일과 대조하고 정확한 문자열은rg로 확인했습니다.",
+    "remaining": "Unity를 다시 열어 에셋이 재임포트되면 표시를 확인해야 합니다. guide-search-source와관련 과거 검색 캡처를 pendingVerification으로 기록했고 기존 이미지/소스 해시를 새것처럼 바꾸지 않았습니다. 다음 세션용 인계 문서에도 반영했습니다.",
+    "outcome": "요청한 괄호 표기로 코드를 수정하고 C# 컴파일을 확인했습니다. Unity Editor가 종료되어 실제 화면 재촬영은 미실행입니다.",
+    "proposedTime": "1~3분 예상.",
+    "actualTime": "시작2026-10-31 17:39:41 KST. 코드/컴파일 확인 및 기록2026-10-31 17:47:02 KST,실제7분21초. 실제 Unity 화면 검증 완료 시각이 아닙니다.",
+    "xerjEvidence": "EnumAdventure.xlsx 후보 검색 후현재 WorkbookSheetReference.cs·WorkbookSourceImporter.cs의 실제 이름 생성식을rg로 대조했습니다. 기존 인덱스의 신규 파일 누락/갱신 실패는 앞선QA 기록에 보존돼 있습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
