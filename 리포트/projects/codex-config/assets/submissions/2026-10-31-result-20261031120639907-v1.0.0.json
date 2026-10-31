@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "이미지 제작·편집은 실제 Affinity 사용 필수로 변경",
+    "summary": "이미지 작업의 Affinity 우선 사용을 필수로 강화했습니다. 임의 직접 생성·다른 도구 대체를 금지하고 원본 보관·실제 출력 품질 검토를 요구합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "가능한 한 Affinity 우선이라는 기존 문구를 필수 사용으로 변경했습니다. 프로그램 도움 없이 SVG·Canvas·Python 등으로 이미지를 직접 그리거나 ImageMagick·다른 생성 도구로 임의 대체하지 못하도록 정리했습니다. 사용자가 다른 도구를 명시적으로 허용한 경우에만 예외입니다.\n\n연결·기능 문제가 생기면 실제 오류를 확인하고 공식 SDK·MCP·전용 CLI의 복구·확장을 먼저 검토합니다. 다른 도구로 우회하기 전에 구체적인 방식을 알리고 승인을 받습니다. 사용자 작업 중 화면 포커스를 빼앗지 않는 기존 규칙은 유지합니다.\n\nAffinity를 썼다는 사실만으로 품질을 통과시키지 않습니다. 목적·레퍼런스·출력 크기·해상도·색상·글꼴을 정하고 편집 가능한 원본을 보관하며, 실제 크기에서 구성·정렬·가독성·윤곽·색상·여백을 검토하고 수정·재출력합니다.\n\n실행 증거는 해당 게임·프로그램·에디터에서 직접 캡처합니다. 캡처 편집·최적화도 Affinity를 사용하고 검증 내용은 왜곡하지 않습니다. 웹·앱 HTML/CSS 구현을 이미지 자산 직접 생성의 우회 수단으로 쓰지 않도록 했습니다.",
+    "verification": "전용 CLI README·VALIDATION을 읽고 doctor --timeout3000 및 status를 실제 실행했습니다. 연결 성공과 Affinity3.3.1.4940 Win32를 확인했습니다. 열린 사용자 문서는 수정하지 않았으며 이 연결 확인을 실제 이미지 제작·출력 품질 검증으로 보고하지 않습니다.\n\n전역 설치본·주 작업 저장소·격리 저장소의 AGENTS.md SHA256은9C9038BC2301EA08C91DB79052DC8DE4709C0C461652DA16B1BEF1B248D5C0EB로 일치했습니다. Sync.ps1 Push로 커밋·푸시했고 Actions41199490830이 성공했습니다.\n\n인증 없이 공개 실행 가이드·작성 가이드·개별 메뉴얼 HTML·GitHub main 지침4곳을 HTTP200과 실제 문구로 확인했습니다. 이전의 대체 도구 임의 허용 문구가 사라졌는지도 대조했습니다. [정책 검토](../assets/affinity-required-2026-10-31/policy-review.json) · [외부 확인](../assets/affinity-required-2026-10-31/public-qa.json). 공통 빌드·로컬 링크 검사도 통과했습니다.",
+    "remaining": "이번 요청은 지침·문서 수정입니다. 새 이미지를 만들거나 기존 이미지를 다시 제작하지 않았으며 불필요한 생성 이미지도 첨부하지 않았습니다. 앞으로 실제 이미지 작업 때 해당 목적과 실제 출력 품질을 별도로 검증해야 합니다.\n\n교훈 검토: 통합 — 사용자가 지적한 품질 문제와 명시적인 도구 지정에 따라 기존 우선 사용·대체 허용 문구를 필수 사용·품질 확인으로 통합했습니다. 이미 실행 중인 다른 대화가 즉시 새 지침을 읽었다고 간주하지 않습니다.",
+    "outcome": "앞으로 로고·아이콘·배너·썸네일·일러스트·합성·보정·자르기·리사이즈·내보내기는 실제 Affinity에서 작업합니다. CLI·MCP·SDK를 사용하더라도 실제 앱에 연결해 처리하는 경우만 Affinity 사용으로 인정합니다.\n\n[공개 작업 가이드](../../../guide/execution.html) · [작성 가이드](../../../guide/index.html) · [이번 완료 메뉴얼](2026-10-31-manual-affinity-image-required-20261031120639622-v1.0.1.html) · [전역 지침](https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md)",
+    "proposedTime": "4~7분",
+    "actualTime": "시작2026-10-31 21:01:23 KST · 지침·가이드 공개 확인 2026-10-31T12:06:39.348Z · 5.3분. 이 결과 보고서의 최종 공개 확인 시각은 채팅에 표기합니다.",
+    "xerjEvidence": "코드 검색 불필요 — 지침·문서 대조 및 CLI 읽기 전용 연결 검사",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
