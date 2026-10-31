@@ -1,5 +1,127 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-10-31-manual-public-report-delivery-20261031101702008-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-10-31-manual-public-report-delivery-20261031101702008-v1.0.1.md",
+    "date": "2026-10-31T10:17:02.008Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "public-report-delivery",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "최종 보고의 푸시·공개 웹 링크 제출 필수화",
+      "summary": "로컬 보고서로 종료하지 않고 푸시·공개 배포·개별 URL 검증 후 최종 보고하도록 지침을 강화합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "지침 적용·첫 공개 확인 완료. 이 완료 기록의 공개 여부도 최종 보고 전에 확인합니다.",
+      "outcome": "기존 전달 규칙2개와 공개 보고 절차를 강화했습니다.",
+      "proposedTime": "4~7분",
+      "actualTime": "시작2026-10-31 19:11:39 KST · 지침·가이드 공개 확인 2026-10-31T10:17:01.499Z · 5.4분. 완료 기록·결과 보고서의 최종 게시 확인 시각은 채팅에 표기합니다.",
+      "xerjEvidence": "코드 검색 불필요 — 지침·문서 대조 작업",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "public-report-delivery",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "모든 세션의 최종 결과를 사용자가 외부에서 열 수 있는 개별 공개 웹 링크로 전달하도록 합니다.",
+      "completionCriteria": "전역 설치본·저장소 지침을 동기화하고 커밋·푸시·배포·개별 공개 보고서 접근까지 확인합니다.",
+      "previousManual": "projects/codex-config/reports/2026-10-31-manual-20261031101410952-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "기존 전달 지침을 필수 완료 조건으로 통합",
+          "action": "기존 HTML 전달·외부 링크 우선 규칙을 푸시·배포·개별 HTTPS 접근 필수로 강화합니다.",
+          "expected": "로컬·localhost 전달로 최종 종료 금지, 공개 실패는 미완료로 구분, 실제 첨부 접근 확인이 명시됩니다.",
+          "qa": "기존 규칙2개와 문구를 대조하고 다른 조건을 보존했는지 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "기존2개 규칙에 필수 공개 절차·로컬 전달 금지·실패 상태 구분을 통합하고 가이드를 보강했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "전역 동기화·푸시·외부 공개 확인",
+          "action": "설치본 해시와 관련 게시 경로를 대조하고 Sync.ps1 Push와 Pages 공개 확인을 수행합니다.",
+          "expected": "동일 지침이 설치·원격 보존되고 개별 HTTPS 보고서에서 결과가 열립니다.",
+          "qa": "해시·빌드·링크·Actions·개별 URL 본문/첨부 접근 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전역 설치본·주 저장소·격리본의 해시 일치, Sync.ps1 Push 성공, Actions41191972499 성공 및 인증 없는 공개 문서·개별 메뉴얼·원격 지침4곳을 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-31T10:14:07.483Z",
+          "summary": "지침·가이드 의미 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존외부링크우선을 필수로 바꾸고 핵심조건을 두 규칙에 통합했습니다.",
+              "evidence": "assets/public-report-policy-2026-10-31/policy-review.json; 전역 설치본·주 작업 저장소·격리본은 동일 내용과 해시",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-10-31T10:17:01.499Z",
+          "summary": "전역 동기화·푸시·배포·공개 본문 접근 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존2개 규칙에 필수 공개 절차·로컬 전달 금지·실패 상태 구분을 통합하고 가이드를 보강했습니다.",
+              "evidence": "assets/public-report-policy-2026-10-31/policy-review.json 및 public-qa.json; SHA256 AF76D0EB5569B8B918D1071E38A42A0FDEA5E75D700E6D7313C73E93A38E1FE0; Actions41191972499 success",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "전역 설치본·주 저장소·격리본의 해시 일치, Sync.ps1 Push 성공, Actions41191972499 성공 및 인증 없는 공개 문서·개별 메뉴얼·원격 지침4곳을 확인했습니다.",
+              "evidence": "assets/public-report-policy-2026-10-31/policy-review.json 및 public-qa.json; SHA256 AF76D0EB5569B8B918D1071E38A42A0FDEA5E75D700E6D7313C73E93A38E1FE0; Actions41191972499 success",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-10-31-manual-20261031101410952-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-10-31-manual-20261031101410952-v1.0.0.md",
     "date": "2026-10-31T10:14:10.952Z",

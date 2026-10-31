@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-31T10:16:54.899Z",
+  "withoutAuthentication": true,
+  "checks": [
+    {
+      "file": "guide/execution.html",
+      "status": 200,
+      "expectedContent": true
+    },
+    {
+      "file": "guide/index.html",
+      "status": 200,
+      "expectedContent": true
+    },
+    {
+      "file": "projects/codex-config/reports/2026-10-31-manual-20261031101410952-v1.0.0.html",
+      "status": 200,
+      "expectedContent": true
+    },
+    {
+      "file": "GitHub main AGENTS.md",
+      "status": 200,
+      "expectedContent": true
+    }
+  ]
+}
