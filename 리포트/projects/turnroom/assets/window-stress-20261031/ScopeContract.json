@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "allocationCounterAvailable": false,
+    "allocationProbeBytes": 0,
+    "error": "",
+    "version": "1.2.6",
+    "utc": "2026-10-31T06:15:51.0824247Z",
+    "samples": [],
+    "checks": [
+        "empty registry does not enumerate native windows",
+        "1000 scoped host handoffs dispose every observation"
+    ]
+}

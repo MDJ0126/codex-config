@@ -1,0 +1,17 @@
+{
+    "done": true,
+    "passed": false,
+    "error": "System.Exception: minimize failed\r\n  at DesignDataTable.Editor.WindowNativeStressQA.Tick () [0x0011b] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\TempleteQA\\Assets\\Editor\\WindowNativeStressQA.cs:17 ",
+    "utc": "2026-10-31T05:35:08.4732399Z",
+    "version": "1.2.6",
+    "windows": 24,
+    "selections": 3000,
+    "minimizations": 14,
+    "checkedStates": 0,
+    "liveToolsAfter": 0,
+    "peakPrivateBytes": 0,
+    "finalPrivateBytes": 0,
+    "seconds": 182.4654644,
+    "maxOperationMs": 89.388,
+    "checks": []
+}

@@ -1,0 +1,79 @@
+{
+    "passed": true,
+    "error": "",
+    "version": "1.2.5",
+    "utc": "2026-10-31T05:25:42.8662860Z",
+    "samples": [
+        {
+            "operation": "registry",
+            "windows": 1,
+            "iterations": 1000,
+            "allocatedBytes": 0,
+            "hostObservations": 0,
+            "milliseconds": 3.9849
+        },
+        {
+            "operation": "focusTick",
+            "windows": 1,
+            "iterations": 500,
+            "allocatedBytes": 0,
+            "hostObservations": 1500,
+            "milliseconds": 5.2363
+        },
+        {
+            "operation": "registry",
+            "windows": 8,
+            "iterations": 1000,
+            "allocatedBytes": 0,
+            "hostObservations": 0,
+            "milliseconds": 15.9105
+        },
+        {
+            "operation": "focusTick",
+            "windows": 8,
+            "iterations": 500,
+            "allocatedBytes": 0,
+            "hostObservations": 8500,
+            "milliseconds": 21.9163
+        },
+        {
+            "operation": "registry",
+            "windows": 32,
+            "iterations": 1000,
+            "allocatedBytes": 0,
+            "hostObservations": 0,
+            "milliseconds": 106.37310000000001
+        },
+        {
+            "operation": "focusTick",
+            "windows": 32,
+            "iterations": 500,
+            "allocatedBytes": 0,
+            "hostObservations": 32500,
+            "milliseconds": 129.0338
+        },
+        {
+            "operation": "registry",
+            "windows": 128,
+            "iterations": 1000,
+            "allocatedBytes": 0,
+            "hostObservations": 0,
+            "milliseconds": 1325.6356
+        },
+        {
+            "operation": "focusTick",
+            "windows": 128,
+            "iterations": 500,
+            "allocatedBytes": 0,
+            "hostObservations": 128500,
+            "milliseconds": 1414.3571000000002
+        }
+    ],
+    "checks": [
+        "isolated batch editor",
+        "registry count 1",
+        "registry count 8",
+        "registry count 32",
+        "registry count 128"
+    ]
+}

@@ -1,5 +1,45 @@
 [
   {
+    "title": "공통 창 관리 최적화와 강한 스트레스 QA",
+    "summary": "현재 소스의 시간·할당·호출 수를 먼저 측정하고 최적화 후 같은 부하와 실제 창 회귀를 비교합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-window-performance-stress-20261031063526126-v1.0.2.html",
+    "date": "2026-10-31T06:35:26.126Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 관리 최적화와 강한 스트레스 테스트",
+    "summary": "실제24개 창 조회 구간94.7% 감소. 미저장 제목 버그를 수정하고 논리 스트레스·실제4000회 부하·마우스60회를 검증했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-result-20261031063525872-v1.0.0.html",
+    "date": "2026-10-31T06:35:25.872Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미저장 제목 별표와 겹친 창 때문에 최소화 실패",
+    "summary": "24개 창 스트레스에서15번째 최소화 실패를 재현했습니다. 실제 제목의 미저장 별표를 공통 판별에 반영해 수정했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-bug-20261031063525616-v1.0.0.html",
+    "date": "2026-10-31T06:35:25.616Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 관리 최적화와 강한 스트레스 QA",
+    "summary": "현재 소스의 시간·할당·호출 수를 먼저 측정하고 최적화 후 같은 부하와 실제 창 회귀를 비교합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-window-performance-stress-20261031054621221-v1.0.1.html",
+    "date": "2026-10-31T05:46:21.221Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "누락된 원본 파일 안내·같은 경로 생성",
     "summary": "누락 파일을 읽기 쉬운 안내 카드로 표시하고 같은 위치 생성과 재열기를 검증합니다.",
     "project": "designdatatable",
@@ -36,6 +76,16 @@
     "reportPath": "projects/designdatatable/reports/2026-10-31-result-20261031052633178-v1.0.0.html",
     "date": "2026-10-31T05:26:33.178Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 관리 최적화와 강한 스트레스 QA",
+    "summary": "현재 소스의 시간·할당·호출 수를 먼저 측정하고 최적화 후 같은 부하와 실제 창 회귀를 비교합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-20261031052458244-v1.0.0.html",
+    "date": "2026-10-31T05:24:58.244Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },

@@ -1,0 +1,38 @@
+{
+  "actualClicks": 60,
+  "actualClickFailures": 0,
+  "ackMedianMs": 17.0,
+  "ackP95Ms": 41,
+  "ackMaxMs": 170,
+  "mouseHeldMs": 80,
+  "frames": 248,
+  "maxFrameGapMs": 265,
+  "leftToolObscuredSamples": 0,
+  "rightToolObscuredSamples": 0,
+  "bothToolsObscuredSamples": 0,
+  "documentShowHideEvents": [],
+  "images": [
+    {
+      "name": "Actual-Pixora",
+      "pngBytes": 93448,
+      "webpBytes": 51254,
+      "width": 1000,
+      "height": 720
+    },
+    {
+      "name": "Actual-DataTable",
+      "pngBytes": 79509,
+      "webpBytes": 40986,
+      "width": 1000,
+      "height": 720
+    }
+  ],
+  "counterLimitations": "Unity GC.GetAllocatedBytesForCurrentThread and Process.PrivateMemorySize64 returned zero. Allocation total is unavailable; external PowerShell memory samples are used. Mono used heap grew similarly before/after; this is not proof of zero leaks.",
+  "nativeBenchmarkNoScopeSeconds": 2.9261442,
+  "nativeBenchmarkScopedMedianSeconds": 0.1556947,
+  "nativeBenchmarkReductionPercent": 94.67918566692646,
+  "externalMemorySamplePeakBytes": 2045947904,
+  "externalMemorySamples": 200,
+  "externalMemoryScope": "sampled interval only, not full-process lifetime peak",
+  "lastIdleChangeValidation": "Final empty-registry early return was added after the 24-window 4000-operation run; this path is checked by ScopeContract, and active windows were rechecked by 60 native clicks."
+}

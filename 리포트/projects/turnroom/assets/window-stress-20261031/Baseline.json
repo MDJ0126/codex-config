@@ -1,0 +1,81 @@
+{
+    "passed": true,
+    "allocationCounterAvailable": false,
+    "allocationProbeBytes": 0,
+    "error": "",
+    "version": "1.2.5",
+    "utc": "2026-10-31T05:27:13.7367773Z",
+    "samples": [
+        {
+            "operation": "registry",
+            "windows": 1,
+            "iterations": 1000,
+            "allocatedBytes": -1,
+            "hostObservations": 0,
+            "milliseconds": 2.7833
+        },
+        {
+            "operation": "focusTick",
+            "windows": 1,
+            "iterations": 500,
+            "allocatedBytes": -1,
+            "hostObservations": 1500,
+            "milliseconds": 3.8797
+        },
+        {
+            "operation": "registry",
+            "windows": 8,
+            "iterations": 1000,
+            "allocatedBytes": -1,
+            "hostObservations": 0,
+            "milliseconds": 14.3261
+        },
+        {
+            "operation": "focusTick",
+            "windows": 8,
+            "iterations": 500,
+            "allocatedBytes": -1,
+            "hostObservations": 8500,
+            "milliseconds": 18.0659
+        },
+        {
+            "operation": "registry",
+            "windows": 32,
+            "iterations": 1000,
+            "allocatedBytes": -1,
+            "hostObservations": 0,
+            "milliseconds": 105.5207
+        },
+        {
+            "operation": "focusTick",
+            "windows": 32,
+            "iterations": 500,
+            "allocatedBytes": -1,
+            "hostObservations": 32500,
+            "milliseconds": 110.54390000000001
+        },
+        {
+            "operation": "registry",
+            "windows": 128,
+            "iterations": 1000,
+            "allocatedBytes": -1,
+            "hostObservations": 0,
+            "milliseconds": 1397.0682000000002
+        },
+        {
+            "operation": "focusTick",
+            "windows": 128,
+            "iterations": 500,
+            "allocatedBytes": -1,
+            "hostObservations": 128500,
+            "milliseconds": 1440.9327
+        }
+    ],
+    "checks": [
+        "isolated batch editor",
+        "registry count 1",
+        "registry count 8",
+        "registry count 32",
+        "registry count 128"
+    ]
+}

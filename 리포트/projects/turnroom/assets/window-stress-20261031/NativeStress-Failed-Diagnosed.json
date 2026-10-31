@@ -1,0 +1,21 @@
+{
+    "done": true,
+    "passed": false,
+    "error": "System.Exception: minimize failed: MiniGameBalance.xlsx event=none\r\n  at DesignDataTable.Editor.WindowNativeStressQA.Tick () [0x0018c] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\TempleteQA\\Assets\\Editor\\WindowNativeStressQA.cs:17 ",
+    "utc": "2026-10-31T05:42:04.8593480Z",
+    "version": "1.2.6",
+    "lastTarget": "MiniGameBalance.xlsx",
+    "lastType": "DesignDataTable.Editor.WorkbookViewer",
+    "lastEvent": "none",
+    "minimizeReturn": false,
+    "windows": 24,
+    "selections": 0,
+    "minimizations": 14,
+    "checkedStates": 0,
+    "liveToolsAfter": 0,
+    "peakPrivateBytes": 0,
+    "finalPrivateBytes": 0,
+    "seconds": 0.0,
+    "maxOperationMs": 114.14890000000001,
+    "checks": []
+}

@@ -1,0 +1,24 @@
+{
+    "done": true,
+    "passed": true,
+    "error": "",
+    "utc": "2026-10-31T05:56:59.8488845Z",
+    "version": "1.2.6",
+    "lastTarget": "",
+    "lastType": "",
+    "lastEvent": "",
+    "minimizeReturn": false,
+    "windows": 24,
+    "selections": 0,
+    "minimizations": 0,
+    "checkedStates": 2400,
+    "liveToolsAfter": 0,
+    "peakPrivateBytes": 0,
+    "finalPrivateBytes": 0,
+    "seconds": 0.0,
+    "maxOperationMs": 0.0,
+    "checks": [
+        "live handles identical for nested snapshot reads, dirty titles and overlapping bounds",
+        "nested, repeated, out-of-order and exception disposal leave no cached scope"
+    ]
+}
