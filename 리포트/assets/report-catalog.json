@@ -1,5 +1,15 @@
 [
   {
+    "title": "Pixel Camera 외곽선 추가 가능성과 부족한 기능 검토",
+    "summary": "현재 런타임·프리셋·셰이더를 직접 대조했습니다. 외곽선은 구현 가능하며 아직 포함되지 않았습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-10-31-result-20261031181905169-v1.0.0.html",
+    "date": "2026-10-31T18:19:05.169Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "공통 에셋 Inspector 상속과 Find 팝업 디자인 수정",
     "summary": "DataTable 기준의 Inspector 부모를 제품 에셋에 적용하고 Find의 여백·검색·결과 행을 정리했습니다. 실제 화면과 구현은 확인됐으며 물리 팝업 입력 및 기존 전체 문서 QA는 남아 있습니다.",
     "project": "turnroom",
