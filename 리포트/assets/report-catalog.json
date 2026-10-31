@@ -1,5 +1,25 @@
 [
   {
+    "title": "TurnRoom 안에 Tidewatch Outpost 맵 샘플 2개 추가",
+    "summary": "기존 단순 기능 씬을 맵 샘플과 구분하고, 실제 TurnRoom Assets에 항구·도로·건물·모델이 있는 맵 씬 2개를 저장했습니다. 실행 검증은 보류입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-10-31-result-20261031164840921-v1.0.0.html",
+    "date": "2026-10-31T16:48:40.921Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 독립 도구 구현과 실행 검증",
+    "summary": "공통 템플릿 창, 공유 프리셋, 카메라 픽셀화와 후순위 레이어를 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-pixel-camera-20261101-20261031164718910-v1.0.3.html",
+    "date": "2026-10-31T16:47:18.910Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera 독립 도구 구현과 실행 검증",
     "summary": "공통 템플릿 창, 공유 프리셋, 카메라 픽셀화와 후순위 레이어를 구현합니다.",
     "project": "turnroom",

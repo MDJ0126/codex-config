@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-31T16:48:00.820Z",
+  "project": "C:\\Projects\\TurnRoom",
+  "staticChecksPassed": true,
+  "unityImport": "not_run",
+  "nativeInput": "not_run",
+  "rendering": "not_run",
+  "results": [
+    {
+      "file": "Assets/TurnRoom/PixelCamera/Samples/Scenes/11-TidewatchOutpost.unity",
+      "localRecords": 649,
+      "meshObjects": 126,
+      "prefabInstances": 6,
+      "externalGuids": 23,
+      "sha256": "5962fc9e58de9174f3d3a043f45f1218ac085375fa295e487b7b6d91eec66030",
+      "passed": true
+    },
+    {
+      "file": "Assets/TurnRoom/PixelCamera/Samples/Scenes/12-OutpostStreet.unity",
+      "localRecords": 649,
+      "meshObjects": 126,
+      "prefabInstances": 6,
+      "externalGuids": 23,
+      "sha256": "cb5c422211db4e96877689daf6328e942f7aee97d39ba29af90c74fa9409fc1c",
+      "passed": true
+    }
+  ]
+}
