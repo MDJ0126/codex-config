@@ -1,0 +1,218 @@
+{
+    "utc": "2026-10-31T09:54:37.1632095Z",
+    "unityVersion": "6000.0.83f1",
+    "mode": "optimized",
+    "actualUnity": true,
+    "instrumentationRevision": 3,
+    "measurements": [
+        {
+            "name": "registration",
+            "calls": 281492,
+            "totalMs": 68206.88379999943,
+            "maxMs": 10.3702,
+            "p95Ms": 0.6541,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.Layout",
+            "calls": 27742,
+            "totalMs": 18967.94119999989,
+            "maxMs": 9.0349,
+            "p95Ms": 1.1985,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "gui.Layout",
+            "calls": 27742,
+            "totalMs": 94748.66350000036,
+            "maxMs": 16.8581,
+            "p95Ms": 6.9085,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "active.Layout",
+            "calls": 27742,
+            "totalMs": 94801.46609999999,
+            "maxMs": 16.8612,
+            "p95Ms": 6.9103,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.mouseMove",
+            "calls": 1,
+            "totalMs": 1.1199,
+            "maxMs": 1.1199,
+            "p95Ms": 1.1199,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.mouseMove",
+            "calls": 1,
+            "totalMs": 6.8597,
+            "maxMs": 6.8597,
+            "p95Ms": 6.8597,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.mouseMove",
+            "calls": 1,
+            "totalMs": 6.8631,
+            "maxMs": 6.8631,
+            "p95Ms": 6.8631,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.mouseDown",
+            "calls": 1,
+            "totalMs": 0.4488,
+            "maxMs": 0.4488,
+            "p95Ms": 0.4488,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.mouseDown",
+            "calls": 1,
+            "totalMs": 2.395,
+            "maxMs": 2.395,
+            "p95Ms": 2.395,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.mouseDown",
+            "calls": 1,
+            "totalMs": 2.397,
+            "maxMs": 2.397,
+            "p95Ms": 2.397,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.mouseUp",
+            "calls": 1,
+            "totalMs": 0.4352,
+            "maxMs": 0.4352,
+            "p95Ms": 0.4352,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.mouseUp",
+            "calls": 1,
+            "totalMs": 2.262,
+            "maxMs": 2.262,
+            "p95Ms": 2.262,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.mouseUp",
+            "calls": 1,
+            "totalMs": 2.264,
+            "maxMs": 2.264,
+            "p95Ms": 2.264,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.repaint",
+            "calls": 7903,
+            "totalMs": 19643.982500000035,
+            "maxMs": 11.8948,
+            "p95Ms": 3.4607,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "gui.repaint",
+            "calls": 7903,
+            "totalMs": 49393.30500000003,
+            "maxMs": 18.0305,
+            "p95Ms": 9.8175,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "active.repaint",
+            "calls": 7903,
+            "totalMs": 49417.195500000045,
+            "maxMs": 18.0332,
+            "p95Ms": 9.8197,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.KeyDown",
+            "calls": 9531,
+            "totalMs": 6729.959599999995,
+            "maxMs": 8.0289,
+            "p95Ms": 0.9705,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "gui.KeyDown",
+            "calls": 11002,
+            "totalMs": 83038.68959999997,
+            "maxMs": 104.4808,
+            "p95Ms": 71.6444,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "active.KeyDown",
+            "calls": 11002,
+            "totalMs": 83062.22320000011,
+            "maxMs": 104.4829,
+            "p95Ms": 71.6461,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.keyUp",
+            "calls": 6002,
+            "totalMs": 4107.255900000012,
+            "maxMs": 7.2977,
+            "p95Ms": 0.9107,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "gui.keyUp",
+            "calls": 6002,
+            "totalMs": 19513.95309999993,
+            "maxMs": 13.153,
+            "p95Ms": 6.4285,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "active.keyUp",
+            "calls": 6002,
+            "totalMs": 19529.523600000008,
+            "maxMs": 13.1553,
+            "p95Ms": 6.4298,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.Used",
+            "calls": 3397,
+            "totalMs": 2728.8633999999997,
+            "maxMs": 17.3182,
+            "p95Ms": 1.2027,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.ExecuteCommand",
+            "calls": 906,
+            "totalMs": 584.9129999999994,
+            "maxMs": 6.1827,
+            "p95Ms": 0.9084,
+            "percentileSampleCount": 906
+        },
+        {
+            "name": "gui.ExecuteCommand",
+            "calls": 2832,
+            "totalMs": 9817.073400000008,
+            "maxMs": 14.7131,
+            "p95Ms": 6.7248,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "active.ExecuteCommand",
+            "calls": 2832,
+            "totalMs": 9822.941399999998,
+            "maxMs": 14.7153,
+            "p95Ms": 6.7269,
+            "percentileSampleCount": 2048
+        }
+    ],
+    "geometry": []
+}
