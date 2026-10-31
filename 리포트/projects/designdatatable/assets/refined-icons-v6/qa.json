@@ -1,0 +1,56 @@
+{
+  "pixel": {
+    "passed": 1473,
+    "errors": [],
+    "graphics": "Direct3D11",
+    "utc": "2026-10-31T13:05:46.9491784Z"
+  },
+  "paths": {
+    "masters": 4,
+    "curves": 926,
+    "closed": 298,
+    "open": 628,
+    "points": 9470,
+    "failures": [],
+    "duplicates": [],
+    "scope": "Native visible vector curves. Open stroked paths allowed; filled paths must close. Glyph outlines remain native editable text."
+  },
+  "cleanup": [
+    {
+      "master": "TurnRoom-Icons-Color-v6",
+      "removedHiddenRoots": 610,
+      "pixelsCompared": 393216,
+      "beforeMismatch": 0,
+      "afterMismatch": 0,
+      "visibleNodes": 265
+    },
+    {
+      "master": "TurnRoom-Icons-White-v6",
+      "removedHiddenRoots": 607,
+      "pixelsCompared": 393216,
+      "beforeMismatch": 0,
+      "afterMismatch": 0,
+      "visibleNodes": 265
+    },
+    {
+      "master": "TurnRoom-Icons-Extras-v6",
+      "removedHiddenRoots": 98,
+      "pixelsCompared": 393216,
+      "beforeMismatch": 0,
+      "afterMismatch": 0,
+      "visibleNodes": 76
+    },
+    {
+      "master": "TurnRoom-Icons-ExtrasWhite-v6",
+      "removedHiddenRoots": 98,
+      "pixelsCompared": 393216,
+      "beforeMismatch": 0,
+      "afterMismatch": 0,
+      "visibleNodes": 76
+    }
+  ],
+  "masterFolder": "Assets/TurnRoom/Templete/Development/Art/ColorIcons",
+  "desktopWrites": false,
+  "actualUiInteractionTested": false,
+  "warning": "Graphics-device offscreen render, not a completed mouse/menu interaction test."
+}

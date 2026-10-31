@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "아이콘 의미·실제 크기 검증 후 Affinity 정밀 수정",
+    "summary": "이전v4를 바탕으로96종 검토·읽기성 보정·잘못된 기능별칭 분리·화이트 내부공간 검증",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "전체 Unity 창의 클릭·호버·최소화 등 상호작용 검증과9개 언어 문서 재촬영은 미실행입니다. 기존 캡처 해시를 최신 화면처럼 갱신하지 않았습니다. 패스 검사는 Native Curve의 닫힘·빈 경로·좌표·중복 범위이며, 모든 곡선의 수학적 자기 교차를 완전 증명한 것은 아닙니다. Affinity 연결이 한 차례 종료됐으며 저장된 원본을 재열어 복구했습니다. 원인은 미확인으로 남깁니다. 교훈 검토: 실제 표시 크기와 내부 투명 공간 검증을 적용했으며, 전역의 실제 Affinity·품질 검증 지침과 중복되어 새 전역 규칙은 추가하지 않았습니다.",
+    "outcome": "실제 Affinity에서 보정·제작한112종을 검증 후 적용했습니다. Direct3D11 렌더 검사1473개가 통과했습니다. 실제 Unity 창의 마우스·메뉴 상호작용 검증은 미실행입니다.",
+    "proposedTime": "25–40분",
+    "actualTime": "2026-10-31 21:33:41 KST 시작. 구현·검증·적용 22:14:34 KST, 공개 배포 확인 별도.",
+    "xerjEvidence": "TemplateIcons ArtworkIndex WindowControls 검색 후 실제 코드·설정 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "icon-refinement-v6-20261031",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "기존 디자인 정체성을 유지하며 의미가 맞고18/26px에서 읽히는 아이콘",
+    "completionCriteria": "실제Affinity원본/출력/재열기·112종 의미대조·화이트공간·Unity 실제 렌더 검증 후 적용",
+    "previousManual": "projects/designdatatable/reports/2026-10-31-manual-20261031124044063-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "의미·시각 기준 확인",
+        "action": "96종 역할과 실제사용키·18/26px·잘못된별칭 목록 작성",
+        "expected": "기능:아이콘 대조목록",
+        "qa": "실제함수와라벨·원본대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "112종 의미와 명령 연결 목록 작성·16개 전용 아이콘 분리"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Affinity 원본 정밀 수정",
+        "action": "이전벡터 기반 광학정렬·글꼴·의미에 맞는 별도아이콘과화이트투명공간 제작",
+        "expected": "기존아트유지·잘못된도형대체·새원본저장",
+        "qa": "Native출력18/26px·구멍·재열기일치",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Native 원본·픽셀·패스·정리 전후 대조 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Unity 렌더와 적용",
+        "action": "실제텍스처/별칭/렌더검증 후 교체·보고",
+        "expected": "기능과시각구분 모두검증",
+        "qa": "UnityGPU렌더·알파·회귀·공개URL",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "1473 GPU검사통과·검증본 적용. 실제 창 상호작용 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T22:14:34.237572+09:00",
+        "summary": "의미·Native 원본·실제 픽셀 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "112종 의미와 명령 연결 목록 작성·16개 전용 아이콘 분리",
+            "evidence": "Docs/Testing/2026-10-31/icon-refinement-v6/semantic-review.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Native 원본·픽셀·패스·정리 전후 대조 통과",
+            "evidence": "Docs/Testing/2026-10-31/icon-refinement-v6/final-qa.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "1473 GPU검사통과·검증본 적용. 실제 창 상호작용 미실행",
+            "evidence": "Docs/Testing/2026-10-31/icon-refinement-v6/pixel-results-final.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
