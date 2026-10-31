@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "공통 Inspector 컬러·배열·중첩 속성 디자인",
+    "summary": "Pixora 프로파일의 기본 리스트를 공통 디자인으로 교체하고 동일 생성 경로를 사용하는 에셋에 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·검증 진행",
+    "outcome": "구현 시작",
+    "proposedTime": "15~25분",
+    "actualTime": "시작 2026-11-01 03:20:16 KST",
+    "xerjEvidence": "Status: XERJ node is not running. rg 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "shared-property-lists-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "공통 컬러 및 일반 배열·중첩 속성 UI 구현과 실제 편집 검증",
+    "completionCriteria": "배열·중첩 UI 공통 적용, 추가·삭제·순서·색상 편집·Undo·저장 재열기와 실제 양 테마 화면, 관련 9개 언어 문서·공개 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 직렬화 목록·중첩 속성 구현",
+        "action": "공통 factory와 목록·그룹 구현 및 제품 연결",
+        "expected": "Unity 기본 ListView/Foldout 대신 템플릿 목록과 그룹",
+        "qa": "컴파일, 데이터 수정·Undo·재열기",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 Unity 입력·화면 검증",
+        "action": "프로필·팔레트·일반 배열, 양 테마와 좁은 폭 확인",
+        "expected": "색상·추가·삭제·순서·접힘과 값 보존",
+        "qa": "실제 Inspector와 저장 데이터 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서와 공개 기록",
+        "action": "9개 언어 설명·캡처·해시 및 아카이브 공개",
+        "expected": "실제 캡처와 검증 범위가 분명한 보고",
+        "qa": "문서 빌드·링크·배포·공개 접근",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

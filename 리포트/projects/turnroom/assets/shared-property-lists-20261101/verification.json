@@ -1,0 +1,126 @@
+{
+  "native-color-undo.json": {
+    "undoColor": {
+      "r": 28,
+      "g": 28,
+      "b": 44,
+      "a": 255
+    },
+    "redoColor": {
+      "r": 255,
+      "g": 51,
+      "b": 102,
+      "a": 255
+    },
+    "method": "physical keyboard through focused Inspector",
+    "passed": true
+  },
+  "native-list-actions.json": {
+    "added": 17,
+    "addedWhite": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "removed": 16,
+    "movedFirst": {
+      "r": 68,
+      "g": 64,
+      "b": 92,
+      "a": 255
+    },
+    "movedSecond": {
+      "r": 255,
+      "g": 51,
+      "b": 102,
+      "a": 255
+    },
+    "restoredFirst": {
+      "r": 255,
+      "g": 51,
+      "b": 102,
+      "a": 255
+    },
+    "method": "physical mouse clicks Add, Remove, Move down, Move up; read back bound SerializedObject JSON",
+    "passed": true
+  },
+  "native-pickers.json": {
+    "enum": 3,
+    "asset": {
+      "instanceID": -2902
+    },
+    "colour": {
+      "r": 0,
+      "g": 170,
+      "b": 255,
+      "a": 255
+    },
+    "passed": true,
+    "method": "physical Enum and asset choices; custom colour popover RGBA input and Apply; bound values read back"
+  },
+  "native-layer.json": {
+    "value": {
+      "serializedVersion": "2",
+      "m_Bits": 1
+    },
+    "method": "physical checkbox and Apply clicks, bound layer mask read back"
+  },
+  "docs-scoped-verification.json": {
+    "passed": true,
+    "screenshots": [
+      "images/Collection-GeneratedRows.jpg",
+      "Images/Collection-LayerPopover.jpg",
+      "Images/Collection-ProfileDark.jpg",
+      "Images/Collection-ProfileLight.jpg"
+    ],
+    "guides": [
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.pt-BR.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.pt-BR.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.pt-BR.html"
+    ],
+    "nineLayoutsVisuallyVerified": false,
+    "historicalUnrelatedFailuresPreserved": true
+  },
+  "savedReopen": {
+    "passed": true,
+    "method": "save, Inspector close/reopen and editor domain reload; fresh process not tested",
+    "profileAssembly": "e32b21ba-105f-4e5d-915c-1913dfad9423",
+    "generated": {
+      "rows": [
+        {
+          "Id": 42,
+          "Name": "Shared collection"
+        }
+      ]
+    }
+  },
+  "escape": {
+    "passed": false,
+    "actual": "Physical Escape closed the utility Inspector together with the popover; docked Inspector Escape unverified"
+  }
+}

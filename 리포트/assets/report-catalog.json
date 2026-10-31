@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixora 컬러 목록과 공통 Inspector 선택 UI",
+    "summary": "컬러·일반 배열·중첩 레코드와 색상·Enum·에셋·레이어 선택을 공통 템플릿으로 적용했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-result-20261031183829138-v1.0.0.html",
+    "date": "2026-10-31T18:38:29.138Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 Inspector 컬러·배열·중첩 속성 디자인",
+    "summary": "Pixora 프로파일의 기본 리스트를 공통 디자인으로 교체하고 동일 생성 경로를 사용하는 에셋에 적용합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-shared-property-lists-20261101-20261031183758367-v1.0.1.html",
+    "date": "2026-10-31T18:37:58.367Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 Inspector 컬러·배열·중첩 속성 디자인",
+    "summary": "Pixora 프로파일의 기본 리스트를 공통 디자인으로 교체하고 동일 생성 경로를 사용하는 에셋에 적용합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-20261031182103701-v1.0.0.html",
+    "date": "2026-10-31T18:21:03.701Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera 외곽선 추가 가능성과 부족한 기능 검토",
     "summary": "현재 런타임·프리셋·셰이더를 직접 대조했습니다. 외곽선은 구현 가능하며 아직 포함되지 않았습니다.",
     "project": "pixelcamera",
