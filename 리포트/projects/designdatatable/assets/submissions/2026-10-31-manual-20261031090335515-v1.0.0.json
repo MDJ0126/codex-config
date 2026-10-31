@@ -1,0 +1,126 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "셀 입력 지연·한영 IME 전환 실측 및 스트레스 검증",
+    "summary": "실제 물리 키 경로로 첫 글자 오염과 입력 지연을 재현하고 수정 및 반복 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "수정 재QA, 성능 실측, 스트레스 및 저장 회귀 미완료",
+    "outcome": "한글이 gks글로 저장되는 현상 재현. 수정·재검증 진행 중.",
+    "proposedTime": "첫 재현·측정 결과 10~15분; 전체 수정 시간은 재현 결과에 따라 갱신",
+    "actualTime": "2026-10-31 17:49:07 KST 시작, 진행 중",
+    "xerjEvidence": "XERJ Search로 compositionString 경로 탐색 후 현재 소스로 확인. 인덱스 오류는 rg 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "workbook-ime-input-stress-20261031",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "배포 전 일반 입력 지연과 한영 전환 첫 글자 오염 해결",
+    "completionCriteria": "실제 IME 전환 반복 입력의 기대값 일치, 지연 실측과 스트레스 통과, 저장·재열기·포커스 회귀 및 실제 화면 증거",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실제 입력 재현·기준 측정",
+        "action": "격리 Unity에서 VK 실제 키로 영문·한글·F2·직접 입력 대조",
+        "expected": "기대 문자열과 실제 저장값 및 IME 모드 기록",
+        "qa": "동일 키열을 실제 UI에서 반복하고 원본 결과 보존",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "IME 첫 글자 오염 수정",
+        "action": "첫 키 조합과 편집 컨트롤 수명 수정",
+        "expected": "한영 전환 직후 첫 글자까지 기대값 일치",
+        "qa": "빠른 연속 키 및 Enter·Tab·F2 재QA",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "입력 성능 수정·측정",
+        "action": "실제 GUI 프로파일로 병목 확인 후 수정",
+        "expected": "측정 조건과 p95·최대 지연 기록",
+        "qa": "단일·다중 창 및 ArcadeText 동일 입력 대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "강한 반복 스트레스",
+        "action": "영문·한글 전환과 셀 편집·포커스 반복",
+        "expected": "입력 누락·중복·혼입 0건",
+        "qa": "반복 횟수와 실제 데이터 일치 검사",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "저장 및 영향 회귀",
+        "action": "저장 재열기, Undo·Redo, Unity 단축키 경계 확인",
+        "expected": "저장값 일치와 기존 편집 동작 보존",
+        "qa": "실제 UI와 관련 모델 검사 재실행",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "배포 전 결과 확인",
+        "action": "실제 화면·수치 및 남은 문제를 HTML 보고",
+        "expected": "미실행을 통과 처리하지 않은 최종 결과",
+        "qa": "보고서 링크와 실제 이미지 및 소스 변경 대조",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
