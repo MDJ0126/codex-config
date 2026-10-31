@@ -1,0 +1,39 @@
+{
+  "icons": 96,
+  "catalogAssertions": 493,
+  "otherRegressionAssertions": 803,
+  "sourceAfBytes": 145790,
+  "sourceAfSha256": "7c4d0a6fd2e61b963e1408025532eb43cc9d7fda5f39a0e6fb6072c2b29200eb",
+  "affinityVersion": "3.3.1.4940",
+  "editableNodes": {
+    "[object GroupNode]": 191,
+    "[object ShapeNode]": 97,
+    "[object PolyCurveNode]": 159,
+    "[object ArtTextNode]": 2
+  },
+  "roundtrip": {
+    "pixelIdentical": true,
+    "size": [
+      512,
+      768
+    ],
+    "source": "TurnRoom-Icons-Color-v4.af"
+  },
+  "nativeDefaultTabsCaptured": 10,
+  "nativeSpecialScreens": [
+    "Game Table",
+    "Local Enums",
+    "Global Enums",
+    "Localization Data",
+    "Settings",
+    "Project search",
+    "Inspector",
+    "Shelf preview"
+  ],
+  "guides": {
+    "languages": 9,
+    "images": 41,
+    "errors": 0
+  },
+  "qualification": "Native Windows captures and GUIView visual captures are recorded separately. This is icon/UI visual QA, not full Excel feature parity."
+}

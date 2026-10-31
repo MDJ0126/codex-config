@@ -1,0 +1,124 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>리본 아이콘96개 컬러 재정비 — Affinity 원본·실제 Unity 검수 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=b127b4ab0881"><link rel="stylesheet" href="../../../assets/theme.css?v=b127b4ab0881"><link rel="stylesheet" href="../../../assets/discussions.css?v=b127b4ab0881"><link rel="stylesheet" href="../../../assets/manuals.css?v=b127b4ab0881"><link rel="stylesheet" href="../../../assets/copy-links.css?v=b127b4ab0881"><script defer src="../../../assets/copy-links.js?v=b127b4ab0881"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/logo.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>리본 아이콘96개 컬러 재정비 — Affinity 원본·실제 Unity 검수</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">단색 강제 처리를 제거하고 전체96개를 검수·수정했습니다. Affinity 벡터 원본, PNG, 실제 화면과9개 언어 가이드를 갱신했습니다.</p><div class="post-byline"><time datetime="2026-10-31T04:29:52.952Z">2026년 10월 31일 오후 1:29 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>아이콘 요청 범위의 구현·편집 원본 저장·제품 적용·필수 검증을 완료했습니다. 실제 화면과 전체 카탈로그를 아래에서 확인할 수 있습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>변경</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>전체96개</td>
+<td>형태·선 굵기·크기·여백을 검수하고 기능별 부분 색상 적용</td>
+</tr>
+<tr>
+<td>색상 보존</td>
+<td>창 강조색으로 아이콘을 단색 덮어쓰기하던 처리 제거</td>
+</tr>
+<tr>
+<td>UI Toolkit</td>
+<td>일반 아이콘도 컬러를 기본값으로 통일</td>
+</tr>
+<tr>
+<td>잘못된 연결</td>
+<td>도형·그림 버튼의 파일 아이콘 별칭 수정</td>
+</tr>
+<tr>
+<td>소수점</td>
+<td>D처럼 보이던 모양을 Affinity에서 <code>.00</code>으로 교정·광학 확대</td>
+</tr>
+<tr>
+<td>대비</td>
+<td>제목 표시줄은 흰색, 글자형·창 제어는 중립색 유지</td>
+</tr>
+<tr>
+<td>편집 원본</td>
+<td>래스터 한 장 대신449개 벡터/문자 노드를 보존한 .af 제작</td>
+</tr>
+<tr>
+<td>자료 정리</td>
+<td>최종 원본·출력·카탈로그·안내만 Assets에, 중간 자료는 QA 보관</td>
+</tr>
+<tr>
+<td>문서</td>
+<td>캡처36개 갱신·9개 언어 HTML 가이드 재생성</td>
+</tr>
+</tbody></table>
+</div><p>편집 원본: <code>Assets/TurnRoom/Templete/Development/Art/ColorIcons/TurnRoom-Icons-Color-v4.af</code></p>
+<p>제품 PNG: <code>Assets/TurnRoom/Templete/Editor/Art/RibbonAtlas.png</code></p>
+<p>기존 래스터 원본은 보존했고 Art/README.md에 현재 편집 원본 위치를 명시했습니다.</p>
+<h2 id="section-4">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검증</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>전체96개 PNG·안전 여백</td>
+<td>모두 통과</td>
+</tr>
+<tr>
+<td>실제 카탈로그 초기화·제품 별칭</td>
+<td>493개 단언 통과</td>
+</tr>
+<tr>
+<td>삽입·표·툴팁 회귀</td>
+<td>803개 단언 통과</td>
+</tr>
+<tr>
+<td>최종 빌드</td>
+<td>오류0·기존 XML 주석 경고8</td>
+</tr>
+<tr>
+<td>Unity 실제 표시</td>
+<td>전체96개,16·24·32px 검수</td>
+</tr>
+<tr>
+<td>Windows API 직접 조작</td>
+<td>기본/표 탭10개 및 전용 탭·설정·검색·인스펙터·선반 확인</td>
+</tr>
+<tr>
+<td>Affinity 저장·닫기·재열기·재출력</td>
+<td>픽셀 동일</td>
+</tr>
+<tr>
+<td>9개 언어 HTML 가이드</td>
+<td>이미지41개·링크·현재 캡처 검증 오류0</td>
+</tr>
+<tr>
+<td>실제 브라우저</td>
+<td>글꼴·탭·키보드·이미지·모바일144개 검사 통과</td>
+</tr>
+</tbody></table>
+</div><p>추가 옵션·도형/그림/차트·Play 잠금 화면은 실제 Unity GUIView로 재촬영했습니다. 일부 준비 단계의 합성 이벤트를 Windows 직접 입력 통과로 계산하지 않았습니다. 최초 경계 넘침·중복 키·잘못된 별칭의 실패와 재검사 이력을 보존했습니다.</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/before-ribbon.webp" alt="수정 전 공통 리본 — 실제 QA 캡처" loading="lazy"><figcaption>수정 전 공통 리본 — 실제 QA 캡처</figcaption></figure></p>
+<p>수정 전 공통 리본 — 실제 QA 캡처</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/after-ribbon.webp" alt="수정 후 공통 리본 — 실제 Unity 캡처" loading="lazy"><figcaption>수정 후 공통 리본 — 실제 Unity 캡처</figcaption></figure></p>
+<p>수정 후 공통 리본 — 실제 Unity 캡처</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/insert.webp" alt="도형·그림의 잘못된 파일 아이콘 연결 수정" loading="lazy"><figcaption>도형·그림의 잘못된 파일 아이콘 연결 수정</figcaption></figure></p>
+<p>도형·그림의 잘못된 파일 아이콘 연결 수정</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/game-data.webp" alt="게임 데이터 컬러 아이콘과 비활성 상태" loading="lazy"><figcaption>게임 데이터 컬러 아이콘과 비활성 상태</figcaption></figure></p>
+<p>게임 데이터 컬러 아이콘과 비활성 상태</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/enum-tools.webp" alt="Enum 전용 도구" loading="lazy"><figcaption>Enum 전용 도구</figcaption></figure></p>
+<p>Enum 전용 도구</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/localization.webp" alt="로컬라이징 전용 도구" loading="lazy"><figcaption>로컬라이징 전용 도구</figcaption></figure></p>
+<p>로컬라이징 전용 도구</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/gallery.webp" alt="전체96개 — 실제 공통 Unity 렌더러,16·24·32px" loading="lazy"><figcaption>전체96개 — 실제 공통 Unity 렌더러,16·24·32px</figcaption></figure></p>
+<p>전체96개 — 실제 공통 Unity 렌더러,16·24·32px</p>
+<p><figure><img class="report-image" src="../assets/color-icons-20261031/affinity.webp" alt="실제 Affinity 편집 화면 — 벡터 레이어를 보존한 원본" loading="lazy"><figcaption>실제 Affinity 편집 화면 — 벡터 레이어를 보존한 원본</figcaption></figure></p>
+<p>실제 Affinity 편집 화면 — 벡터 레이어를 보존한 원본</p>
+<h2 id="section-5">남은 사항</h2>
+<p>요청한 아이콘 범위에서 남은 구현은 없습니다. 전체 Excel 기능·모든 단축키·모든 DPI·모든 언어의 모든 화면을 전수 검증했다는 뜻은 아닙니다. 문서 갱신은9개 언어 HTML 가이드이며 PDF는 재생성하지 않았습니다.</p>
+<p>교훈 검토: 의미별 색상 보존, 실제 벡터 원본 확인, 제품 별칭까지 실행 검증하는 규칙을 프로젝트 AGENTS.md에 추가했습니다. 프로젝트 전용 요구이므로 전역 지침은 변경하지 않았습니다.</p>
+<p>자동 승인 검토가 기존 미커밋 파일을 되돌릴 수 있는 <code>git restore</code>를 거부했습니다. 실행하지 않고 기존 체크아웃을 보존한 새 체크아웃으로 게시했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 40~70분</li>
+<li>실제로 완료된 시간: 2026-10-31 12:36:56 KST 시작. 핵심 구현·필수 검증은13:27:20 KST에 완료(50분24초). 보고서 게시·배포 확인 시간은 최종 채팅에 별도로 기록합니다.</li>
+<li>XERJ: 사용 — XERJ로 TemplateIcons/ArtworkTexture 경로를 찾고 현재 공통 카탈로그·제품 별칭·실제 렌더와 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031042952952-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031042952952-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

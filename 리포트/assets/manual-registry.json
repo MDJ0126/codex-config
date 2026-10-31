@@ -408,6 +408,126 @@
     }
   },
   {
+    "reportPath": "projects/designdatatable/reports/2026-10-31-manual-20261031033828103-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-10-31-manual-20261031033828103-v1.0.0.md",
+    "date": "2026-10-31T03:38:28.103Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-color-icons-20261031",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "공통 리본 아이콘 컬러 전면 검수",
+      "summary": "원본 컬러 디자인을 확인하고 전체 아이콘을 일관된 다색 디자인으로 수정·적용합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "구현 및 QA 진행 중",
+      "outcome": "원본·출력·렌더링 경로 조사 중",
+      "proposedTime": "40~70분",
+      "actualTime": "2026-10-31 12:36:56 KST 시작",
+      "xerjEvidence": "XERJ TemplateIcons ArtworkTexture 검색 후보를 현재 소스와 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-color-icons-20261031",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "전체 리본·도구·상태 아이콘의 가독성과 컬러 일관성 개선",
+      "completionCriteria": "전체 카탈로그 검수 및 수정, Affinity 편집 원본 보존, PNG/atlas 적용, 실제 Unity 화면 확인, 문서·QA 보고",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원본·카탈로그 검수",
+          "action": "컬러 원본·모든 키 매핑·출력의 색상 처리를 조사",
+          "expected": "원본과 실제 화면 차이를 증거로 확인",
+          "qa": "원본 렌더·전체 목록 대조",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Affinity 컬러 아이콘 제작",
+          "action": "기존 원본을 개선하고 전체 아이콘을 다색 팔레트로 구성",
+          "expected": "편집 가능한 Affinity 원본과 대응 출력 존재",
+          "qa": "원본 저장 및 전체 도형/색/안전 여백 확인",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "제품 적용",
+          "action": "공통 atlas와 매핑·색상 처리 수정",
+          "expected": "단색 강제 없이 컬러 artwork 표시",
+          "qa": "PNG 크기·알파·인덱스·색상·컴파일 검사",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "실제 Unity 검증",
+          "action": "리본·팝업·상태·제목 표시의 실제 화면 검수",
+          "expected": "작은 크기에서도 구별 가능하며 누락/클리핑 없음",
+          "qa": "실제 화면 캡처·원본 대조·필요 시 반복 수정",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "문서·결과 보고",
+          "action": "최신 캡처와 QA·사용 원본 경로 정리",
+          "expected": "검증 범위와 남은 사항을 명확히 공개",
+          "qa": "문서·HTML 링크·실제 화면 확인",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-10-31-manual-post-updated-time-20261031033449850-v1.0.2.html",
     "postPath": "projects/codex-config/posts/2026-10-31-manual-post-updated-time-20261031033449850-v1.0.2.md",
     "date": "2026-10-31T03:34:49.850Z",
