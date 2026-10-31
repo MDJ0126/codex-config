@@ -1,0 +1,296 @@
+{
+  "unity": "6000.0.83f1",
+  "editor": {
+    "results": [
+      {
+        "name": "graphics-device",
+        "detail": "Direct3D11",
+        "passed": true
+      },
+      {
+        "name": "pipeline",
+        "detail": "Built-in render pipeline",
+        "passed": true
+      },
+      {
+        "name": "default-resolution",
+        "detail": "(320, 180)",
+        "passed": true
+      },
+      {
+        "name": "portrait-resolution",
+        "detail": "(101, 180)",
+        "passed": true
+      },
+      {
+        "name": "invalid-preset-sanitized",
+        "detail": "{\"referenceHeight\":16,\"zoom\":1.0,\"colorLevels\":2,\"orderedDithering\":false,\"overrideClipPlanes\":false,\"nearClip\":0.10000000149011612,\"farClip\":1000.0,\"lateLayers\":{\"serializedVersion\":\"2\",\"m_Bits\":0},\"drawLateThroughWalls\":false}",
+        "passed": true
+      },
+      {
+        "name": "preset-save-reload",
+        "detail": "%YAML 1.1\n%TAG !u! tag:unity3d.com,2011:\n--- !u!114 &11400000\nMonoBehaviour:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 0}\n  m_Enabled: 1\n  m_EditorHideFlags: 0\n  m_Script: {fileID: 11500000, guid: 8e4c3191db50c7b4083fe982c0336b60, type: 3}\n  m_Name: Save\n  m_EditorClassIdentifier: \n  referenceHeight: 72\n  zoom: 2\n  colorLevels: 2\n  orderedDithering: 0\n  overrideClipPlanes: 0\n  nearClip: 0.1\n  farClip: 1000\n  lateLayers:\n    serializedVersion: 2\n    m_Bits: 1073741824\n  drawLateThroughWalls: 1\n",
+        "passed": true
+      },
+      {
+        "name": "preset-rename-guid",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "name": "late-layer-preserves-depth",
+        "detail": "centre=RGBA(0, 0, 255, 255)",
+        "passed": true
+      },
+      {
+        "name": "late-layer-clears-depth",
+        "detail": "centre=RGBA(255, 0, 0, 255)",
+        "passed": true
+      },
+      {
+        "name": "render-changes-with-depth-policy",
+        "detail": "Through-walls toggle changes actual pixels",
+        "passed": true
+      },
+      {
+        "name": "late-layer-respects-source-mask",
+        "detail": "Excluded layer remains absent",
+        "passed": true
+      },
+      {
+        "name": "transparent-late-layer-single-blend",
+        "detail": "single=RGBA(191, 0, 64, 255); late=RGBA(191, 0, 64, 255)",
+        "passed": true
+      },
+      {
+        "name": "projection-zoom",
+        "detail": "red pixels=3600 -> 14400",
+        "passed": true
+      },
+      {
+        "name": "near-clip",
+        "detail": "Object at distance 11 clipped by near=12",
+        "passed": true
+      },
+      {
+        "name": "far-clip",
+        "detail": "Object at distance 11 clipped by far=10",
+        "passed": true
+      },
+      {
+        "name": "point-filtered-pixel-blocks",
+        "detail": "Nonuniform pixels inside 4x4 blocks=0",
+        "passed": true
+      },
+      {
+        "name": "render-has-foreground",
+        "detail": "Actual foreground and background present",
+        "passed": true
+      },
+      {
+        "name": "quantized-render",
+        "detail": "Colour quantization/dithering changes scene output",
+        "passed": true
+      },
+      {
+        "name": "shared-preset-two-cameras",
+        "detail": "Two independent camera components sharing one preset render identical pixels",
+        "passed": true
+      },
+      {
+        "name": "shared-preset-live-update",
+        "detail": "Editing shared resolution updates both cameras consistently",
+        "passed": true
+      },
+      {
+        "name": "missing-preset-bypass",
+        "detail": "Null preset matches disabled effect output exactly",
+        "passed": true
+      },
+      {
+        "name": "source-camera-unchanged",
+        "detail": "Original culling, clipping and lens preserved",
+        "passed": true
+      },
+      {
+        "name": "capture-camera-cleanup",
+        "detail": "Disable destroys owned helper camera",
+        "passed": true
+      },
+      {
+        "name": "shader-compiled",
+        "detail": "Hidden/TurnRoom/PixelCamera/Color",
+        "passed": true
+      },
+      {
+        "name": "copied-model-ClockworkKingfisher",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-CourierDrone",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-TidewatchObservatory",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-SurveyorKit",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-ClockworkKingfisher",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-CourierDrone",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-TidewatchObservatory",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-SurveyorKit",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-ClockworkKingfisher",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-CourierDrone",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-ClockworkKingfisher",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-TidewatchObservatory",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "copied-model-SurveyorKit",
+        "detail": "Instantiated source prefab with valid mesh references",
+        "passed": true
+      },
+      {
+        "name": "ten-sample-scenes",
+        "detail": "Ten scenes with independently saved presets and materials",
+        "passed": true
+      },
+      {
+        "name": "model-samples-independent",
+        "detail": "All copied prefab, mesh and material dependencies resolve inside PixelCamera or Unity built-ins",
+        "passed": true
+      },
+      {
+        "name": "sample-render-01-Basic",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-02-CoarsePixels",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-03-FinePixels",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-04-Zoom",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-05-LimitedPalette",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-06-Dithering",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-07-Clipping",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-08-WallOcclusion",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-09-ThroughWalls",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "sample-render-10-Perspective",
+        "detail": "Saved scene renders multiple colours with a referenced preset",
+        "passed": true
+      },
+      {
+        "name": "template-window-contract",
+        "detail": "ToolWindow inheritance and shared chrome",
+        "passed": true
+      },
+      {
+        "name": "preset-fields-bound",
+        "detail": "Preset PropertyFields exist with SerializedObject binding",
+        "passed": true
+      },
+      {
+        "name": "window-apply-preset",
+        "detail": "Existing camera component reuses selected preset",
+        "passed": true
+      },
+      {
+        "name": "window-apply-undo",
+        "detail": "Assignment undo restores prior reference",
+        "passed": true
+      },
+      {
+        "name": "window-apply-redo",
+        "detail": "Assignment redo restores selected preset",
+        "passed": true
+      }
+    ],
+    "at": "2026-10-31T16:01:18.3625227Z",
+    "sourceHash": "689d49094afa00ca2721f5736b227aa90aeb09c3a7e06696f38ba285017ca8de",
+    "passed": true,
+    "checks": 54
+  },
+  "hiddenPlayerScreenshot": "Black framebuffer, rejected as visual evidence",
+  "reopen": {
+    "at": "2026-10-31T16:05:13.6722678Z",
+    "passed": true,
+    "checks": 15
+  },
+  "nativeInput": "not_run",
+  "settingsLightDark": "not_run",
+  "player": {
+    "at": "2026-10-31T16:04:57.0610828Z",
+    "passed": true,
+    "renderChecks": 2
+  },
+  "screenshot": "Actual Unity Game view; English UI; 2026-11-01 01:02:35.639–01:02:37.026 KST",
+  "graphics": "Direct3D11"
+}

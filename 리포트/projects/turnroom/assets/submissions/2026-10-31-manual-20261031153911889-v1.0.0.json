@@ -1,0 +1,133 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixel Camera 독립 도구 구현과 실행 검증",
+    "summary": "공통 템플릿 창, 공유 프리셋, 카메라 픽셀화와 후순위 레이어를 구현합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "런타임·창·문서·실행 검증·공개 보고 진행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "30~60분",
+    "actualTime": "2026-11-01 00:34:20 KST 시작, 진행 중",
+    "xerjEvidence": "Status: node is not running. Index: node.lock data dir already in use. rg로 현재 소스 검증",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "독립 카메라 픽셀화 도구 제작",
+    "completionCriteria": "공통 템플릿 창, 프리셋 저장·재사용, 픽셀·확대·클리핑·후순위 레이어 실제 렌더 검증, 10개 샘플과 9개 언어 문서, 공개 결과 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "템플릿과 렌더 환경 확인",
+        "action": "템플릿 지침·API·Unity 버전·패키지 확인",
+        "expected": "실제 지원 범위와 상속 구조 확인",
+        "qa": "원본 문서와 소스·설정을 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "ToolWindow와 UITemplate 공통 API, Unity 6000.0.83f1 Built-in 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "런타임과 프리셋 구현",
+        "action": "프리셋, 저해상도 카메라 캡처, 색상 처리, 클리핑, 후순위 레이어 구현",
+        "expected": "프리셋을 공유하고 장면 렌더링에 적용",
+        "qa": "실제 Unity 렌더 결과 픽셀 비교, 저장·재로드, 가림과 관통 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "템플릿 설정 창",
+        "action": "공통 제목줄·입력·테마·미리보기·컴포넌트 적용",
+        "expected": "독립 창에서 프리셋 편집과 적용",
+        "qa": "실제 Unity 창과 바인딩·Undo·저장 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "샘플·문서·패키지",
+        "action": "10개 샘플, 9개 언어 가이드, 패키지 생성",
+        "expected": "분리 설치 가능한 제품과 사용 안내",
+        "qa": "샘플 실행 및 패키지 파일 목록, 실제 화면 대조",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "최종 QA와 공개 보고",
+        "action": "회귀 검증·실제 화면·공개 HTML 보고서 배포",
+        "expected": "검증 근거와 외부 접근 가능한 개별 보고서",
+        "qa": "빌드·링크·배포와 실제 공개 본문 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T15:38:53.4377559Z",
+        "summary": "템플릿과 프로젝트 설정 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "ToolWindow 상속, UITemplate.Apply/CreateDocumentChrome, Unity 6000.0.83f1 및 SRP 패키지 미설치 확인",
+            "evidence": "Docs/Development/TempleteGallery.md; TempleteRoadmap.md; Assets/TurnRoom/Templete/Editor/ToolWindow.cs; Packages/manifest.json; ProjectSettings/ProjectVersion.txt",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
