@@ -1,0 +1,183 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixora 09-Alpha 변환 외곽 잔상 수정",
+    "summary": "같은 입력의 실제 픽셀을 대조하고 변환 수정과 샘플 재생성 및 실제 화면을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "기존 unitypackage는 자동 갱신되지 않으므로 배포 전 별도 재생성 필요. 이번 요청의 소스·샘플 수정은 완료.",
+    "outcome": "잔상 재현·수정·활성 샘플 갱신·회귀 17개·실제 결과 화면 확인 및 공개 보고서 배포 검증 완료",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-10-31 23:44:37 KST 시작. 공개 보고서·실제 캡처 HTTP 200과 Actions 성공 확인 2026-11-01 00:05:58 KST. 최초 10~20분 예상보다 초과했으며 00:03 무렵 게시 병합·배포에 2~4분 추가 가능성을 안내했습니다.",
+    "xerjEvidence": "XERJ alpha 검색 후 PixelConverter 및 샘플 설정을 현재 소스로 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-alpha-fringe-20261031",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "09-Alpha 랜턴 외곽의 변환 잔상을 재현하고 원인에 맞게 수정한다.",
+    "completionCriteria": "실제 Unity 전후 픽셀·회귀 검증, 샘플 재생성, 실제 화면 확인과 공개 HTML 보고",
+    "previousManual": "projects/turnroom/reports/2026-10-31-manual-pixora-alpha-fringe-20261031-20261031150135961-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "잔상 재현·원인 확인",
+        "action": "원본·프로필·수정 전 변환 픽셀을 독립 Unity에서 대조한다.",
+        "expected": "잔상 발생 조건과 실제 픽셀 근거 확보",
+        "qa": "동일 설정 변환과 연결 성분·외곽 점 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 픽셀·회귀 근거 대조 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "변환 수정·회귀 검증",
+        "action": "확인된 원인을 수정하고 축소·확대·투명도·가느다란 부위 보존을 검증한다.",
+        "expected": "잔상 감소와 투명도·실루엣 보존",
+        "qa": "실제 Unity API 회귀 실행과 동일 샘플 전후 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 픽셀·회귀 근거 대조 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "샘플 적용·공개 보고",
+        "action": "09-Alpha 출력·예상 미리보기를 재생성하고 실제 씬을 확인해 공개 HTML에 기록한다.",
+        "expected": "씬과 실제 변환 결과 일치 및 공개 보고서 응답 확인",
+        "qa": "Unity 실제 실행 화면·변환 픽셀 대조·보고서 빌드 및 공개 URL 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "소스 434037a0 푸시, 공개 보고서·실제 캡처 HTTP 200, Actions 41213046787 success."
+      }
+    ],
+    "focusTasks": [
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T00:01:25.407566+09:00",
+        "summary": "재현 및 불충분했던 영역 평균 시도 기록 재대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 불투명 흰 배경과 기존 잔상을 실제 재현했습니다.",
+            "evidence": "실제 Unity 로그·전후 출력 JSON과 regression.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "영역 평균만 적용한 첫 시도는 밝은 외곽 점을 충분히 제거하지 못했습니다.",
+            "evidence": "실제 Unity 로그·전후 출력 JSON과 regression.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-01T00:01:25.407566+09:00",
+        "summary": "배경 혼합 경계 복원 후 회귀 17개 통과와 실제 Game 뷰 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 변환 결과에서 33개 외곽 픽셀 제거, 전경·손잡이 연결과 크기·팔레트 보존, 회귀 통과.",
+            "evidence": "실제 Unity 로그·전후 출력 JSON과 regression.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-01T00:05:58.378796+09:00",
+        "summary": "공개 보고서 배포 성공과 익명 접근 확인",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "소스 434037a0 푸시, 공개 보고서·실제 캡처 HTTP 200, Actions 41213046787 success.",
+            "evidence": "공개 보고서 2026-10-31-bug-20261031150129486-v1.0.0.html 본문에 해당 커밋 포함, actual-result.png 응답 확인",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-01T00:05:58.378796+09:00",
+        "summary": "기존 실패 기록을 유지하며 전체 현재 버전 구현·실행·화면·공개 검증 근거를 최종 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 불투명 흰 배경과 기존 잔상을 실제 재현했습니다.",
+            "evidence": "실제 Unity 로그·전후 출력 JSON과 regression.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 변환 결과에서 33개 외곽 픽셀 제거, 전경·손잡이 연결과 크기·팔레트 보존, 회귀 통과.",
+            "evidence": "실제 Unity 로그·전후 출력 JSON과 regression.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "소스 434037a0 푸시, 공개 보고서·실제 캡처 HTTP 200, Actions 41213046787 success.",
+            "evidence": "공개 보고서 2026-10-31-bug-20261031150129486-v1.0.0.html 본문에 해당 커밋 포함, actual-result.png 응답 확인",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
