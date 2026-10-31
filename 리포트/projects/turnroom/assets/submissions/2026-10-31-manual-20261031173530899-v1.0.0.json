@@ -1,0 +1,117 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "공통 에셋 Inspector 상속과 Find 팝업 디자인 정리",
+    "summary": "DataTable 기준의 Inspector 부모와 제품별 적용, Find 팝업 전체 배치, 실제 편집·화면·문서를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "Inspector 20~35분, Find 추가 5~10분",
+    "actualTime": "시작 2026-11-01 02:32:17 Asia/Seoul",
+    "xerjEvidence": "노드 미실행·기존 데이터 디렉터리 잠금 오류, rg와 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "shared-inspector-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "생성되는 제품 에셋의 Inspector를 공통 부모로 디자인하고 제품 고유 동작을 보존하며 Find 팝업의 전체 배치도 수정",
+    "completionCriteria": "공통 상속·알려진 제품 에셋 Inspector 적용, Find 검색·선택·빈 상태·키보드 동작, 컴파일과 실제 Unity UI·직렬화 편집·Undo 검증, 관련 9개 언어 문서·실제 캡처·공개 기록",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "Find 팝업 전체 배치 정리",
+        "action": "공통 창·검색·안내·결과 행 디자인으로 전환하고 기존 검색·선택 콜백 보존",
+        "expected": "테두리에 붙지 않는 배치, 좁은 폭 결과와 빈 상태 표시",
+        "qa": "실제 빈 상태·무결과·다중 결과·선택·Escape와 입력 검증",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "공통 Inspector 부모 구현",
+        "action": "제목·아이콘·설명·정보·속성 그룹·작업 버튼과 직렬화 바인딩을 공통화",
+        "expected": "제품 의존성이 없는 상속 API와 임포터 어댑터",
+        "qa": "컴파일·바인딩·테마·좁은 폭 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "제품 에셋 Inspector 적용",
+        "action": "PixelCamera 프리셋·컴포넌트, Pixora 원본·프로필·팔레트·튜토리얼, DataTable 기존 Inspector와 생성 에셋의 적용 범위를 확인해 전환",
+        "expected": "기존 값·열기·재생성·임포트 동작 유지",
+        "qa": "현재 타입·생성 코드와 대조하고 편집·재선택·Undo·동작 검증",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "실제 Unity 회귀 QA",
+        "action": "현재 소스 빌드와 실제 Inspector·Find 화면·입력·저장·재열기를 확인",
+        "expected": "관찰한 범위별 실행 근거와 캡처",
+        "qa": "양 테마·긴 문구·복합 입력·반환 값·스크립트 재컴파일 후 상태 확인",
+        "dependsOn": [
+          "T01",
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "문서와 공개 기록",
+        "action": "개발 지침·9개 언어 설명·관련 캡처를 갱신하고 아카이브 게시",
+        "expected": "실제 캡처 해시와 상태를 구분한 공개 보고",
+        "qa": "관련 문서·링크·해시·배포·첨부 접근 검증, 기존 전체 문서 실패 보존",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

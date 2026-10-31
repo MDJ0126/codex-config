@@ -1,5 +1,196 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-shared-inspector-20261101-20261031175505390-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-10-31-manual-shared-inspector-20261101-20261031175505390-v1.0.1.md",
+    "date": "2026-10-31T17:55:05.390Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shared-inspector-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "공통 에셋 Inspector 상속과 Find 팝업 디자인 정리",
+      "summary": "공통 Inspector와 Find 디자인 구현·컴파일·실제 화면·27개 문서 확인. 네이티브 팝업 입력과 기존 전체 문서 QA는 남음.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "팝업의 실제 마우스·키보드 입력은 자동화 도구가 본창을 먼저 활성화하여 미검증. 기존 DataTable 전체 문서 캡처 불일치/대기 322건. 새 11장과 27개 언어판 범위는 통과. 공개 게시 검증 진행.",
+      "outcome": "구현과 해당 화면 검증은 완료했으며 전체 QA는 활성 상태로 보존합니다.",
+      "proposedTime": "Inspector 20~35분, Find 추가 5~10분",
+      "actualTime": "시작 2026-11-01 02:32:17 Asia/Seoul; 현재 2026-11-01T02:55:01.945549+09:00 기준 구현·해당 UI·문서 검사 완료, 전체 QA 완료 시각 미기록.",
+      "xerjEvidence": "노드 미실행·기존 데이터 디렉터리 잠금 오류, rg와 현재 소스 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shared-inspector-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "생성되는 제품 에셋의 Inspector를 공통 부모로 디자인하고 제품 고유 동작을 보존하며 Find 팝업의 전체 배치도 수정",
+      "completionCriteria": "공통 상속·알려진 제품 에셋 Inspector 적용, Find 검색·선택·빈 상태·키보드 동작, 컴파일과 실제 Unity UI·직렬화 편집·Undo 검증, 관련 9개 언어 문서·실제 캡처·공개 기록",
+      "previousManual": "projects/turnroom/reports/2026-10-31-manual-20261031173530899-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "Find 팝업 전체 배치 정리",
+          "action": "공통 창·검색·안내·결과 행 디자인으로 전환하고 기존 검색·선택 콜백 보존",
+          "expected": "테두리에 붙지 않는 배치, 좁은 폭 결과와 빈 상태 표시",
+          "qa": "실제 빈 상태·무결과·다중 결과·선택·Escape와 입력 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공통 프레임, 16px 여백, 360px/440px 결과 줄바꿈, 빈/무결과, B1 콜백과 Escape Unity 이벤트 확인. 물리 입력은 T04에 미검증으로 기록."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "공통 Inspector 부모 구현",
+          "action": "제목·아이콘·설명·정보·속성 그룹·작업 버튼과 직렬화 바인딩을 공통화",
+          "expected": "제품 의존성이 없는 상속 API와 임포터 어댑터",
+          "qa": "컴파일·바인딩·테마·좁은 폭 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "공통 에셋·임포터 부모, 카드·필드·버튼, 기본 여백과 라벨 조정. 6개 어셈블리 컴파일 exitCode 0."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "제품 에셋 Inspector 적용",
+          "action": "PixelCamera 프리셋·컴포넌트, Pixora 원본·프로필·팔레트·튜토리얼, DataTable 기존 Inspector와 생성 에셋의 적용 범위를 확인해 전환",
+          "expected": "기존 값·열기·재생성·임포트 동작 유지",
+          "qa": "현재 타입·생성 코드와 대조하고 편집·재선택·Undo·동작 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Pixel Camera·Pixora·DataTable에 적용. 9개 유형 실제 editor 생성, 생성 템플릿 에셋과 XLSX 임포터 실제 화면 확인."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "실제 Unity 회귀 QA",
+          "action": "현재 소스 빌드와 실제 Inspector·Find 화면·입력·저장·재열기를 확인",
+          "expected": "관찰한 범위별 실행 근거와 캡처",
+          "qa": "양 테마·긴 문구·복합 입력·반환 값·스크립트 재컴파일 후 상태 확인",
+          "dependsOn": [
+            "T01",
+            "T03"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "실제 양 테마·360px, 숫자 입력 180→240, Undo→Redo, 저장·새 Unity 프로세스 재열기 240 유지, 배열 펼침 확인. 자동 본창 활성화로 Find 물리 입력 검증 차단."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "문서와 공개 기록",
+          "action": "개발 지침·9개 언어 설명·관련 캡처를 갱신하고 아카이브 게시",
+          "expected": "실제 캡처 해시와 상태를 구분한 공개 보고",
+          "qa": "관련 문서·링크·해시·배포·첨부 접근 검증, 기존 전체 문서 실패 보존",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "11개 실제 캡처·현재 소스 해시·27개 언어판 검사 통과, Pixora 144장/예제90개·Pixel Camera 문서 검사 통과. 기존 DataTable 전체 문서 322건 미통과 보존."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T02:55:01.945549+09:00",
+          "summary": "구현·공통 상속·적용 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공통 프레임, 16px 여백, 360px/440px 결과 줄바꿈, 빈/무결과, B1 콜백과 Escape Unity 이벤트 확인. 물리 입력은 T04에 미검증으로 기록.",
+              "evidence": "static/result.json, all-inspectors.json, PublishedScreenshots.json, selected-GeneratedTable.json, selected-cell.txt, escape.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공통 에셋·임포터 부모, 카드·필드·버튼, 기본 여백과 라벨 조정. 6개 어셈블리 컴파일 exitCode 0.",
+              "evidence": "static/result.json, all-inspectors.json, PublishedScreenshots.json, selected-GeneratedTable.json, selected-cell.txt, escape.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Pixel Camera·Pixora·DataTable에 적용. 9개 유형 실제 editor 생성, 생성 템플릿 에셋과 XLSX 임포터 실제 화면 확인.",
+              "evidence": "static/result.json, all-inspectors.json, PublishedScreenshots.json, selected-GeneratedTable.json, selected-cell.txt, escape.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-01T02:55:01.945549+09:00",
+          "summary": "물리 팝업 입력과 기존 전체 문서 제한 보존",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "실제 양 테마·360px, 숫자 입력 180→240, Undo→Redo, 저장·새 Unity 프로세스 재열기 240 유지, 배열 펼침 확인. 자동 본창 활성화로 Find 물리 입력 검증 차단.",
+              "evidence": "실제 Computer Use 화면, selected-PixelPreset.json, loaded-build.json; 가려진 캡처는 게시 제외",
+              "dependencies": {
+                "T01": 1,
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "11개 실제 캡처·현재 소스 해시·27개 언어판 검사 통과, Pixora 144장/예제90개·Pixel Camera 문서 검사 통과. 기존 DataTable 전체 문서 322건 미통과 보존.",
+              "evidence": "docs-scoped-verification.json, full-docs-summary.json, pixel-docs.log, Artifacts/LocalizedGuideVerification.json",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-10-31-manual-pixel-camera-20261101-20261031173653258-v1.0.4.html",
     "postPath": "projects/turnroom/posts/2026-10-31-manual-pixel-camera-20261101-20261031173653258-v1.0.4.md",
     "date": "2026-10-31T17:36:53.258Z",
@@ -324,6 +515,131 @@
         }
       ],
       "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-20261031173530899-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-10-31-manual-20261031173530899-v1.0.0.md",
+    "date": "2026-10-31T17:35:30.899Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shared-inspector-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "공통 에셋 Inspector 상속과 Find 팝업 디자인 정리",
+      "summary": "DataTable 기준의 Inspector 부모와 제품별 적용, Find 팝업 전체 배치, 실제 편집·화면·문서를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "Inspector 20~35분, Find 추가 5~10분",
+      "actualTime": "시작 2026-11-01 02:32:17 Asia/Seoul",
+      "xerjEvidence": "노드 미실행·기존 데이터 디렉터리 잠금 오류, rg와 현재 소스 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shared-inspector-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "생성되는 제품 에셋의 Inspector를 공통 부모로 디자인하고 제품 고유 동작을 보존하며 Find 팝업의 전체 배치도 수정",
+      "completionCriteria": "공통 상속·알려진 제품 에셋 Inspector 적용, Find 검색·선택·빈 상태·키보드 동작, 컴파일과 실제 Unity UI·직렬화 편집·Undo 검증, 관련 9개 언어 문서·실제 캡처·공개 기록",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "Find 팝업 전체 배치 정리",
+          "action": "공통 창·검색·안내·결과 행 디자인으로 전환하고 기존 검색·선택 콜백 보존",
+          "expected": "테두리에 붙지 않는 배치, 좁은 폭 결과와 빈 상태 표시",
+          "qa": "실제 빈 상태·무결과·다중 결과·선택·Escape와 입력 검증",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "공통 Inspector 부모 구현",
+          "action": "제목·아이콘·설명·정보·속성 그룹·작업 버튼과 직렬화 바인딩을 공통화",
+          "expected": "제품 의존성이 없는 상속 API와 임포터 어댑터",
+          "qa": "컴파일·바인딩·테마·좁은 폭 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "제품 에셋 Inspector 적용",
+          "action": "PixelCamera 프리셋·컴포넌트, Pixora 원본·프로필·팔레트·튜토리얼, DataTable 기존 Inspector와 생성 에셋의 적용 범위를 확인해 전환",
+          "expected": "기존 값·열기·재생성·임포트 동작 유지",
+          "qa": "현재 타입·생성 코드와 대조하고 편집·재선택·Undo·동작 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "실제 Unity 회귀 QA",
+          "action": "현재 소스 빌드와 실제 Inspector·Find 화면·입력·저장·재열기를 확인",
+          "expected": "관찰한 범위별 실행 근거와 캡처",
+          "qa": "양 테마·긴 문구·복합 입력·반환 값·스크립트 재컴파일 후 상태 확인",
+          "dependsOn": [
+            "T01",
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "문서와 공개 기록",
+          "action": "개발 지침·9개 언어 설명·관련 캡처를 갱신하고 아카이브 게시",
+          "expected": "실제 캡처 해시와 상태를 구분한 공개 보고",
+          "qa": "관련 문서·링크·해시·배포·첨부 접근 검증, 기존 전체 문서 실패 보존",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
     }
   },
   {

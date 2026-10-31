@@ -1,0 +1,171 @@
+{
+  "checkedAtUtc": "2026-10-31T17:56:12.089942+00:00",
+  "compilation": [
+    {
+      "assembly": "DesignDataTable.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sourceCount": 32
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceCount": 4
+    },
+    {
+      "assembly": "Pixora.Editor",
+      "exitCode": 0,
+      "sourceCount": 44
+    },
+    {
+      "assembly": "DesignDataTable.Editor",
+      "exitCode": 0,
+      "sourceCount": 280
+    },
+    {
+      "assembly": "TurnRoom.Templete.Development.Editor",
+      "exitCode": 0,
+      "sourceCount": 4
+    }
+  ],
+  "runtimeInspectors": {
+    "unity": "6000.0.83f1",
+    "types": [
+      {
+        "type": "TurnRoom.PixelCamera.PixelCameraPreset",
+        "editor": "TurnRoom.PixelCamera.Editor.PixelCameraPresetInspector",
+        "passed": true
+      },
+      {
+        "type": "Pixora.Editor.PixelArtProfile",
+        "editor": "Pixora.Editor.PixelArtProfileInspector",
+        "passed": true
+      },
+      {
+        "type": "Pixora.Editor.PixelPalette",
+        "editor": "Pixora.Editor.PixelPaletteInspector",
+        "passed": true
+      },
+      {
+        "type": "Pixora.Editor.PixoraWork",
+        "editor": "Pixora.Editor.PixoraWorkInspector",
+        "passed": true
+      },
+      {
+        "type": "Pixora.Editor.PixoraTutorial",
+        "editor": "Pixora.Editor.PixoraTutorialInspector",
+        "passed": true
+      },
+      {
+        "type": "DesignDataTable.TableManagement",
+        "editor": "DesignDataTable.Editor.TableManagementEditor",
+        "passed": true
+      },
+      {
+        "type": "DesignDataTable.Editor.TableTheme",
+        "editor": "DesignDataTable.Editor.TableThemeEditor",
+        "passed": true
+      },
+      {
+        "type": "DesignDataTable.Localization.LocalizationData",
+        "editor": "DesignDataTable.Editor.LocalizationDataInspector",
+        "passed": true
+      },
+      {
+        "type": "TurnRoom.Editor.UITemplateSettings",
+        "editor": "TurnRoom.Editor.UITemplateSettingsInspector",
+        "passed": true
+      }
+    ]
+  },
+  "freshProcess": {
+    "utc": "2026-10-31T17:54:02.3292372Z",
+    "unity": "6000.0.83f1",
+    "commonMvid": "75b77705-38a9-433f-9827-81a14d60177c"
+  },
+  "savedPreset": {
+    "checkedAtUtc": "2026-10-31T17:54:13.7910238Z",
+    "commonMvid": "75b77705-38a9-433f-9827-81a14d60177c",
+    "type": "TurnRoom.PixelCamera.PixelCameraPreset",
+    "editor": "TurnRoom.PixelCamera.Editor.PixelCameraPresetInspector",
+    "common": true,
+    "data": {
+      "referenceHeight": 240,
+      "zoom": 1.0,
+      "colorLevels": 256,
+      "orderedDithering": false,
+      "overrideClipPlanes": false,
+      "nearClip": 0.10000000149011612,
+      "farClip": 1000.0,
+      "lateLayers": {
+        "serializedVersion": "2",
+        "m_Bits": 0
+      },
+      "drawLateThroughWalls": false
+    }
+  },
+  "escape": {
+    "syntheticEvent": true,
+    "closed": true
+  },
+  "findSelectedCell": "B1",
+  "findInteractionMethod": "Unity UI events, not native physical input",
+  "nativeInspectorInput": "180 to 240, Undo 180, Redo 240, save, fresh process reopened 240",
+  "nativePopupInput": "unverified: automatic main-window activation before Computer Use input hides popup",
+  "localizedDocs": {
+    "passed": true,
+    "screenshots": [
+      "images/Inspector-FindEmpty.jpg",
+      "images/Inspector-FindMissing.jpg",
+      "images/Inspector-FindResults.jpg",
+      "images/Inspector-FindNarrow.jpg",
+      "images/Inspector-TableTheme.jpg",
+      "images/Inspector-GeneratedTable.jpg",
+      "Images/Inspector-PixelPresetDark.jpg",
+      "Images/Inspector-PixelPresetLight.jpg",
+      "Images/Inspector-PixelPresetNarrow.jpg",
+      "Images/Inspector-PixoraWork.jpg",
+      "Images/Inspector-PixoraProfile.jpg"
+    ],
+    "guides": [
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\DesignDataTable\\Documentation\\UserGuide.pt-BR.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\PixelCamera\\Documentation\\UserGuide.pt-BR.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.en.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.ko.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.ja.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.zh-Hans.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.zh-Hant.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.es.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.fr.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.de.html",
+      "Assets\\TurnRoom\\Pixora\\Documentation\\UserGuide.pt-BR.html"
+    ],
+    "nineLayoutsVisuallyVerified": false,
+    "historicalUnrelatedFailuresPreserved": true
+  },
+  "fullDataTableDocs": {
+    "errors": 322,
+    "currentImages": 50,
+    "historicalUnusedCaptures": 100
+  }
+}
