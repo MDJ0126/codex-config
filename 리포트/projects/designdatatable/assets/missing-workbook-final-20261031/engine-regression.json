@@ -1,0 +1,119 @@
+{
+    "utc": "2026-10-31T05:23:19.7831782Z",
+    "unity": "6000.0.83f1",
+    "nativeKeyboardExecuted": false,
+    "suites": [
+        {
+            "name": "편집 초안 지연 저장",
+            "error": "",
+            "assertions": 4,
+            "milliseconds": 99,
+            "passed": true
+        },
+        {
+            "name": "닫기 취소 저장실패 80회",
+            "error": "",
+            "assertions": 332,
+            "milliseconds": 1059,
+            "passed": true
+        },
+        {
+            "name": "ArcadeText 캐시",
+            "error": "",
+            "assertions": 1064,
+            "milliseconds": 380,
+            "passed": true
+        },
+        {
+            "name": "저장 실패와 재시도",
+            "error": "",
+            "assertions": 24,
+            "milliseconds": 1225,
+            "passed": true
+        },
+        {
+            "name": "줄바꿈 Unicode 저장",
+            "error": "",
+            "assertions": 69,
+            "milliseconds": 727,
+            "passed": true
+        },
+        {
+            "name": "잘못된 복구 상태 보존",
+            "error": "",
+            "assertions": 174,
+            "milliseconds": 344,
+            "passed": true
+        },
+        {
+            "name": "Undo Redo 원자성",
+            "error": "",
+            "assertions": 84,
+            "milliseconds": 215,
+            "passed": true
+        },
+        {
+            "name": "진단 데이터 보존",
+            "error": "",
+            "assertions": 55,
+            "milliseconds": 605,
+            "passed": true
+        },
+        {
+            "name": "수식 참조",
+            "error": "",
+            "assertions": 64,
+            "milliseconds": 111,
+            "passed": true
+        },
+        {
+            "name": "게임 값 유효성",
+            "error": "",
+            "assertions": 331,
+            "milliseconds": 247,
+            "passed": true
+        },
+        {
+            "name": "스키마 Summary",
+            "error": "",
+            "assertions": 31,
+            "milliseconds": 1065,
+            "passed": true
+        },
+        {
+            "name": "Enum 통합",
+            "error": "",
+            "assertions": 31,
+            "milliseconds": 709,
+            "passed": true
+        },
+        {
+            "name": "표 디자인 모델",
+            "error": "",
+            "assertions": 68,
+            "milliseconds": 152,
+            "passed": true
+        },
+        {
+            "name": "삽입 모델",
+            "error": "",
+            "assertions": 51,
+            "milliseconds": 785,
+            "passed": true
+        },
+        {
+            "name": "도형 전체 교체 1회",
+            "error": "",
+            "assertions": 584,
+            "milliseconds": 3141,
+            "passed": true
+        },
+        {
+            "name": "도형 전체 교체 반복",
+            "error": "",
+            "assertions": 584,
+            "milliseconds": 3353,
+            "passed": true
+        }
+    ]
+}
