@@ -1,0 +1,140 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Excel ↔ TurnRoom 탭별 TC · 구형·기준 목록 보충 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>Excel ↔ TurnRoom 탭별 TC · 구형·기준 목록 보충</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">TC-RIB-40–46: 빠른 실행·인쇄·배경 제거·구형 레이아웃·BI·접근성. 원본 미확보를 구분합니다.</p><div class="post-byline"><time datetime="2026-10-31T14:25:46.909Z">2026년 10월 31일 오후 11:25 KST</time><span>v1.0.0</span><span>검토</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>기준58묶음의 누락 없이 TC 연결을 남겼습니다. 기능 및 사진 대조 통과가 아닙니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">TC-RIB-40 · 빠른 실행 도구 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 저장·Undo·Redo·제목 표시</p>
+<p>실제: 현재 저장·Undo·Redo 진입점 표시. 클릭·저장 실패의 이번 회차 GUI 검사는 미실행.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-5">TC-RIB-41 · 인쇄 미리보기 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: Print Preview 전용 탭·인쇄 설정</p>
+<p>실제: 현재 파일 메뉴와 기본 탭에는 Print Preview 진입점이 없음.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-6">TC-RIB-42 · 배경 제거 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 그림 선택 후 배경 제거 전용 탭</p>
+<p>실제: 현재 그림 서식에는 자르기·크기·개체 관리만 있고 배경 제거 진입점이 없음.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-7">TC-RIB-43 · 구형 차트 레이아웃 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 기준 목록 TabChartToolsLayout 명령군</p>
+<p>실제: 현재 Chart Design/Format만 생성. 구형 독립 Layout 탭은 없음. 현대 버전과 같은 탭 구성이라고 간주하지 않음.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-8">TC-RIB-44 · 구형 피벗 차트 레이아웃 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 기준 목록 TabPivotChartToolsLayout 명령군</p>
+<p>실제: 현재 피벗 차트 편집 진입점 및 독립 Layout 탭 없음.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-9">TC-RIB-45 · BI 시각화 도구 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 기준 목록 TabBIVisualTools의 활성 조건과 명령</p>
+<p>실제: 목록의6개 레코드만 확인. 현재 전용 탭 없음. 정확한 원본 버전·활성 조건은 미확인.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h3 id="section-10">TC-RIB-46 · 접근성 작성 도구 — 비교자료 부족</h3>
+<p>절차: 해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</p>
+<p>기대: 기준 목록 TabAccessibleAuthoring의 활성 조건과 명령</p>
+<p>실제: 현재 검토에는 통계만 표시. 원본 전체 전용 탭과 활성 조건 미확인.</p>
+<p>재QA: 원본 전체 화면·정확한 버전 및 해당 명령 실행 검증 필요.</p>
+<h2 id="section-11">검증</h2>
+<h3 id="section-12">TC-RIB-40 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-shape-format-excel365.png" alt="Excel 원본" loading="lazy"><figcaption>Excel 원본</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-13">TC-RIB-41 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-file-menu.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-14">TC-RIB-42 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-picture-format.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-15">TC-RIB-43 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-chart-design.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-16">TC-RIB-44 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-17">TC-RIB-45 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h3 id="section-18">TC-RIB-46 · 사진</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel</th>
+<th>TurnRoom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>원본 미확보 · 대조 미실행</td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-review.png" alt="현재 화면" loading="lazy"><figcaption>현재 화면</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><h2 id="section-19">남은 사항</h2>
+<p>원본 미확보 항목은 실제 사진 대조 미실행입니다. <a class="report-link" href="../assets/ribbon-tab-tc-20261031/source-bucket-coverage.json">58묶음 연결</a> · <a class="report-link" href="../assets/ribbon-tab-tc-20261031/all-cases.json">전체46TC</a></p>
+<h2 id="section-20">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 탭 비교 추가 후35–50분</li>
+<li>실제로 완료된 시간: 2026-10-31 22:49:21 KST 시작, 보충 TC 작성23:27 KST. 전체 기능 완료 아님.</li>
+<li>XERJ: 사용 — XERJ 후보와 ContextualTabs·SpreadsheetRibbon 현재 소스를 대조</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031142546909-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031142546909-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-11">검증</a><a href="#section-19">남은 사항</a><a href="#section-20">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

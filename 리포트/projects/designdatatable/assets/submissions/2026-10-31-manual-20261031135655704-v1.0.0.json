@@ -1,0 +1,82 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "표·차트·삽입 도형 목록 복구",
+    "summary": "표 등록과 리본 목록 연결을 수정하고 편집 API를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "화면 클릭·배치 검증 미실행",
+    "outcome": "구현 및 배치 검증 진행 중",
+    "proposedTime": "15–25분",
+    "actualTime": "2026-10-31 22:49:21 KST 시작",
+    "xerjEvidence": "XERJ 검색 후 현재 소스 및 XLSX ZIP 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "context-gallery-20261031",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "표 전용 탭과 차트·도형 목록을 제공합니다.",
+    "completionCriteria": "표 등록, 차트48스타일·삽입 도형 목록, 컴파일·회귀 및 실제 화면 검증",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "표 인식 복구",
+        "action": "ChartGallery A5:C11 실제 표 등록",
+        "expected": "C11 포함21셀 표 참조",
+        "qa": "표 내부21셀·외부 경계·저장 재열기",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "차트·삽입 도형 목록",
+        "action": "차트48스타일 및 삽입 도형 스크롤 목록 연결",
+        "expected": "리본에서 목록 직접 선택",
+        "qa": "Unity 컴파일 및48스타일 적용·Undo·Redo·저장",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 화면 회귀",
+        "action": "실제 화면 선택·스크롤 검증",
+        "expected": "좁고 넓은 창에서 정상 배치",
+        "qa": "표·차트·도형 클릭 및 촬영",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

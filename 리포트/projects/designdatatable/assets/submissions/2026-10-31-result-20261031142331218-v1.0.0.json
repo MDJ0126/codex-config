@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "result",
+    "title": "Excel ↔ TurnRoom 탭별 TC · 특수탭 2",
+    "summary": "TC-RIB-21–TC-RIB-27: 원본과 실제 Unity 캡처, 절차·기대·실제·재QA를 구분합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "### TC-RIB-21 · 피벗 차트 분석 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | 피벗 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 피벗 차트 선택 시 분석 탭 |\n| 실제 결과 | 현재 피벗 차트 생성·전용 탭이 없습니다. 원본의 Field Buttons 부분 화면과 비교했습니다. |\n| 재QA·수정 필요 | 피벗 차트 기능·전용 탭 미구현. |\n\n### TC-RIB-22 · 피벗 차트 디자인 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | 피벗 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 피벗 차트 스타일·데이터 |\n| 실제 결과 | 현재 피벗 생성·편집 진입점과 해당 전용 탭이 없습니다. |\n| 재QA·수정 필요 | 기능 미구현. 원본 없는 세부 탭은 사진 비교 미실행. |\n\n### TC-RIB-23 · 피벗 차트 서식 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | 피벗 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 피벗 차트 서식 |\n| 실제 결과 | 현재 피벗 생성·편집 진입점과 해당 전용 탭이 없습니다. |\n| 재QA·수정 필요 | 기능 미구현. 원본 없는 세부 탭은 사진 비교 미실행. |\n\n### TC-RIB-24 · 슬라이서 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | 슬라이서 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 슬라이서 선택 시 전용 도구와 스타일을 제공합니다. |\n| 실제 결과 | 현재 슬라이서 진입점이 없습니다. 원본은 삽입 그룹과 슬라이서 개체만 보이며 전용 탭 전체는 아닙니다. |\n| 재QA·수정 필요 | 슬라이서 전용 탭 원본·기능 미구현. |\n\n### TC-RIB-25 · 시간 표시 막대 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | Timeline 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | Timeline 스타일 갤러리를 제공합니다. |\n| 실제 결과 | 현재 Timeline 진입점·탭이 없습니다. |\n| 재QA·수정 필요 | 기능 미구현. |\n\n### TC-RIB-26 · 스파크라인 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | 스파크라인 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 스파크라인 스타일 갤러리를 제공합니다. |\n| 실제 결과 | 현재 스파크라인 삽입과 디자인 탭이 없습니다. |\n| 재QA·수정 필요 | 기능 미구현. |\n\n### TC-RIB-27 · SmartArt 디자인 — 기능 미구현\n\n| 항목 | 내용 |\n|---|---|\n| 실행 절차 | SmartArt 삽입·선택 경로를 확인합니다. |\n| 기대 동작 | 레이아웃·색상·스타일을 제공합니다. |\n| 실제 결과 | 현재 SmartArt 생성·선택 경로와 디자인 탭이 없습니다. |\n| 재QA·수정 필요 | 기능 미구현. |",
+    "verification": "Unity6000.0.83f1 / Windows / 영어 / 실제 Editor GUIView Direct3D11 캡처입니다. 별도 QA 프로젝트에서 실행했으며 모형·AI 이미지는 사용하지 않았습니다. Excel은 출처의 게시 원본이며 이 PC에서 직접 촬영한 화면이 아닙니다.\n\n### TC-RIB-21 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| ![Excel 원본 · 피벗 차트 분석](../assets/ribbon-tab-tc-20261031/excel-pivotchart-analyze-excel.png) | ![Unity 실제 화면 · 피벗 차트 분석](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: W3Schools 직접 작성 Field Buttons 부분 원본. [원본 출처](https://www.w3schools.com/excel/excel_pivot_charts.php)\n\n### TC-RIB-22 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| 해당 Excel 원본 미확보 · 사진 대조 미실행 | ![Unity 실제 화면 · 피벗 차트 디자인](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: 해당 원본 미확보.\n\n### TC-RIB-23 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| 해당 Excel 원본 미확보 · 사진 대조 미실행 | ![Unity 실제 화면 · 피벗 차트 서식](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: 해당 원본 미확보.\n\n### TC-RIB-24 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| ![Excel 원본 · 슬라이서](../assets/ribbon-tab-tc-20261031/excel-d8020853219008.png) | ![Unity 실제 화면 · 슬라이서](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: 삽입·개체 부분 원본. [원본 출처](https://learn.microsoft.com/en-us/answers/questions/545181/slicer-in-excel-on-o365-has-disappeared)\n\n### TC-RIB-25 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| ![Excel 원본 · 시간 표시 막대](../assets/ribbon-tab-tc-20261031/excel-52a00383cdd46f.png) | ![Unity 실제 화면 · 시간 표시 막대](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: Timeline Styles 부분 원본. [원본 출처](https://support.microsoft.com/en-us/excel/create-a-pivottable-timeline-to-filter-dates)\n\n### TC-RIB-26 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| ![Excel 원본 · 스파크라인](../assets/ribbon-tab-tc-20261031/excel-454b87d94b594f.png) | ![Unity 실제 화면 · 스파크라인](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: Sparkline Style 부분 원본. [원본 출처](https://support.microsoft.com/en-us/excel/analyze-trends-in-data-using-sparklines)\n\n### TC-RIB-27 · 사진 대조\n\n| Excel 원본 | TurnRoom 현재 |\n|---|---|\n| ![Excel 원본 · SmartArt 디자인](../assets/ribbon-tab-tc-20261031/excel-d9d51c977005f2.png) | ![Unity 실제 화면 · SmartArt 디자인](../assets/ribbon-tab-tc-20261031/current-insert.png) |\n\n원본 범위: Excel SmartArt 디자인 부분 원본. [원본 출처](https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on)",
+    "remaining": "명령 전체를 클릭·저장·재열기한 전수 동작 QA는 아닙니다. 화면 표시와 기능 실행 판정을 분리했습니다. 없는 기능은 미구현으로 기록했고 차단으로 바꾸지 않았습니다.\n\n[39개 TC 원본 데이터](../assets/ribbon-tab-tc-20261031/cases.json) · [캡처·출처·SHA256](../assets/ribbon-tab-tc-20261031/manifest.json)\n\n로컬 Excel 실행경로를 확보하지 못해 동일 빌드의 원본 직접 촬영은 미실행입니다. 일부 참조는 구형 Windows 또는 Excel 웹의 부분 화면입니다. 제품 저장소 커밋·푸시는 미실행입니다.\n\n교훈: 원본의 실제 제품·탭을 확인하고 부분 자료를 전체 대조로 계산하지 않습니다. 기존 전역 지침 범위이므로 전역 변경 없음.",
+    "outcome": "7개 탭의 비교 TC입니다. 전체 Excel 동등성 통과 보고가 아닙니다.",
+    "proposedTime": "최초15–25분. 전체 탭 비교 요청 추가 후35–50분 예상.",
+    "actualTime": "2026-10-31 22:49:21 KST 시작. 최신 캡처23:14:04 KST 완료, 이 문서 작성23:23 KST. 기능 전체 완료 시각이 아닙니다.",
+    "xerjEvidence": "XERJ ContextualTabs 검색 후 현재 소스·원본 ZIP·Unity 실행과 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "검토",
+    "state": "partial"
+  }
+}

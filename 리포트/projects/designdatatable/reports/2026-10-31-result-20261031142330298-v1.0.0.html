@@ -1,0 +1,291 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Excel ↔ TurnRoom 탭별 TC · 일반 탭 1 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>Excel ↔ TurnRoom 탭별 TC · 일반 탭 1</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">TC-RIB-01–TC-RIB-07: 원본과 실제 Unity 캡처, 절차·기대·실제·재QA를 구분합니다.</p><div class="post-byline"><time datetime="2026-10-31T14:23:30.298Z">2026년 10월 31일 오후 11:23 KST</time><span>v1.0.0</span><span>검토</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>7개 탭의 비교 TC입니다. 전체 Excel 동등성 통과 보고가 아닙니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">TC-RIB-01 · 파일 — 부분 원본·전체 대조 미실행</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>파일 메뉴를 엽니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>열기·저장·닫기와 Excel Backstage 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>원본은 보호 메뉴 일부뿐입니다. 현재는 새 문서·열기·다른 이름 저장·복구·새로 고침 팝업입니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>전체 Backstage 원본 확보 및 각 대화상자 왕복 실행.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-5">TC-RIB-02 · 홈 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>일반 시트에서 홈 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>클립보드·글꼴·맞춤·표시 형식·스타일·셀·편집 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>공통 그룹과 AutoSum·Fill 진입점은 보입니다. 원본의 Sort &amp; Filter·셀 스타일 갤러리 등 전체 구성이 없습니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>각 명령의 전수 입력·다중 선택·Undo 반복.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-6">TC-RIB-03 · 삽입 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>삽입 탭에서 도형 타일을 클릭합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>표·도형·그림·차트·링크·텍스트·기호와 추가 삽입 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>도형187종 스크롤 목록 추가. 실제 IMGUI 타일 클릭으로 삽입 대기 확인. 피벗·SmartArt·스파크라인·슬라이서 진입점이 없습니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>도형 분류별 갤러리 구성·전체 삽입 기능. 760px 창은 가로 스크롤이 생깁니다.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-7">TC-RIB-04 · 페이지 레이아웃 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>페이지 레이아웃을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>테마·페이지 설정·배율 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재는 페이지 설정 버튼 하나입니다. 원본의 독립 그룹·리본 컨트롤이 없습니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>페이지 옵션별 실제 저장·재열기 및 인쇄 동작.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-8">TC-RIB-05 · 수식 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>수식 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>함수 라이브러리·이름·수식 분석·계산을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>도움말·이름 관리자·이름 참조·재계산은 보이지만 함수 분류 갤러리와 분석 도구가 없습니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>원본 전체 함수 그룹·개별 실행.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-9">TC-RIB-06 · 데이터 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>데이터 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>정렬·필터와 데이터 가져오기·쿼리 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>정렬·필터·외부 차트 연결만 보입니다. 원본의 Get Data·쿼리 새로 고침 구성이 없습니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>데이터 도구 전체·쿼리 엔진.</td>
+</tr>
+</tbody></table>
+</div><h3 id="section-10">TC-RIB-07 · 검토 — 불일치</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>검토 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대 동작</td>
+<td>맞춤법·접근성·변경·댓글·보호와 통계를 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재는 통계 버튼만 보입니다. 비교 원본은 Excel 웹이므로 Windows 동일 버전 비교는 아닙니다.</td>
+</tr>
+<tr>
+<td>재QA·수정 필요</td>
+<td>Windows 전체 원본 및 검토 도구 구현.</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-11">검증</h2>
+<p>Unity6000.0.83f1 / Windows / 영어 / 실제 Editor GUIView Direct3D11 캡처입니다. 별도 QA 프로젝트에서 실행했으며 모형·AI 이미지는 사용하지 않았습니다. Excel은 출처의 게시 원본이며 이 PC에서 직접 촬영한 화면이 아닙니다.</p>
+<h3 id="section-12">TC-RIB-01 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-d8311372683111.png" alt="Excel 원본 · 파일" loading="lazy"><figcaption>Excel 원본 · 파일</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-file-menu.png" alt="Unity 실제 화면 · 파일" loading="lazy"><figcaption>Unity 실제 화면 · 파일</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: Excel 보호 메뉴 부분 자료. <a class="report-link" href="https://support.microsoft.com/en-us/excel/restrict-changes-to-files-in-excel">원본 출처</a></p>
+<h3 id="section-13">TC-RIB-02 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-fa65d2941fc390.png" alt="Excel 원본 · 홈" loading="lazy"><figcaption>Excel 원본 · 홈</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="Unity 실제 화면 · 홈" loading="lazy"><figcaption>Unity 실제 화면 · 홈</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: 부분 원본·정확한 빌드 미확인. <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">원본 출처</a></p>
+<h3 id="section-14">TC-RIB-03 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-b44e68d3ffbc77.png" alt="Excel 원본 · 삽입" loading="lazy"><figcaption>Excel 원본 · 삽입</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="Unity 실제 화면 · 삽입" loading="lazy"><figcaption>Unity 실제 화면 · 삽입</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: 부분 원본·정확한 빌드 미확인. <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">원본 출처</a></p>
+<h3 id="section-15">TC-RIB-04 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-090aa7e173a847.png" alt="Excel 원본 · 페이지 레이아웃" loading="lazy"><figcaption>Excel 원본 · 페이지 레이아웃</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-page-layout.png" alt="Unity 실제 화면 · 페이지 레이아웃" loading="lazy"><figcaption>Unity 실제 화면 · 페이지 레이아웃</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: 구형 Windows 원본 일부. <a class="report-link" href="https://support.microsoft.com/en-us/excel/fit-to-one-page-in-excel">원본 출처</a></p>
+<h3 id="section-16">TC-RIB-05 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-be0b71b7ec7530.png" alt="Excel 원본 · 수식" loading="lazy"><figcaption>Excel 원본 · 수식</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-formulas.png" alt="Unity 실제 화면 · 수식" loading="lazy"><figcaption>Unity 실제 화면 · 수식</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: 함수 라이브러리 부분 원본. <a class="report-link" href="https://support.microsoft.com/en-us/excel/using-functions-and-nested-functions-in-excel-formulas">원본 출처</a></p>
+<h3 id="section-17">TC-RIB-06 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-221cd8803c005c.png" alt="Excel 원본 · 데이터" loading="lazy"><figcaption>Excel 원본 · 데이터</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-data.png" alt="Unity 실제 화면 · 데이터" loading="lazy"><figcaption>Unity 실제 화면 · 데이터</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: Excel2016 Get &amp; Transform 부분 원본. <a class="report-link" href="https://support.microsoft.com/en-us/excel/about-power-query-in-excel">원본 출처</a></p>
+<h3 id="section-18">TC-RIB-07 · 사진 대조</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excel 원본</th>
+<th>TurnRoom 현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-af47cc4057d588.png" alt="Excel 원본 · 검토" loading="lazy"><figcaption>Excel 원본 · 검토</figcaption></figure></td>
+<td><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-review.png" alt="Unity 실제 화면 · 검토" loading="lazy"><figcaption>Unity 실제 화면 · 검토</figcaption></figure></td>
+</tr>
+</tbody></table>
+</div><p>원본 범위: Excel 웹 원본·Windows와 구별. <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5190624/review-tab-options-greyed-out-in-excel-365-files-w">원본 출처</a></p>
+<h2 id="section-19">남은 사항</h2>
+<p>명령 전체를 클릭·저장·재열기한 전수 동작 QA는 아닙니다. 화면 표시와 기능 실행 판정을 분리했습니다. 없는 기능은 미구현으로 기록했고 차단으로 바꾸지 않았습니다.</p>
+<p><a class="report-link" href="../assets/ribbon-tab-tc-20261031/cases.json">39개 TC 원본 데이터</a> · <a class="report-link" href="../assets/ribbon-tab-tc-20261031/manifest.json">캡처·출처·SHA256</a></p>
+<p>로컬 Excel 실행경로를 확보하지 못해 동일 빌드의 원본 직접 촬영은 미실행입니다. 일부 참조는 구형 Windows 또는 Excel 웹의 부분 화면입니다. 제품 저장소 커밋·푸시는 미실행입니다.</p>
+<p>교훈: 원본의 실제 제품·탭을 확인하고 부분 자료를 전체 대조로 계산하지 않습니다. 기존 전역 지침 범위이므로 전역 변경 없음.</p>
+<h2 id="section-20">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초15–25분. 전체 탭 비교 요청 추가 후35–50분 예상.</li>
+<li>실제로 완료된 시간: 2026-10-31 22:49:21 KST 시작. 최신 캡처23:14:04 KST 완료, 이 문서 작성23:23 KST. 기능 전체 완료 시각이 아닙니다.</li>
+<li>XERJ: 사용 — XERJ ContextualTabs 검색 후 현재 소스·원본 ZIP·Unity 실행과 대조</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031142330298-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031142330298-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-11">검증</a><a href="#section-19">남은 사항</a><a href="#section-20">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
