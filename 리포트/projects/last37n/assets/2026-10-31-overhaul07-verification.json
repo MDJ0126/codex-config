@@ -1,0 +1,239 @@
+{
+  "at": "2026-10-31T09:43:58.600Z",
+  "passed": true,
+  "artifactFingerprint": "03f6a7831182cc90a83bf4ae4a7586fc3f3dfda07c1da4fca51a02af65ddc035",
+  "initialBytes": 6730869,
+  "runtimeBytes": 6732743,
+  "serverTests": {
+    "pass": 131,
+    "fail": 0,
+    "source": ".runtime/overhaul-server-tests-06.log"
+  },
+  "toolsTests": 17,
+  "checks": {
+    "action": {
+      "passed": true,
+      "count": 14,
+      "source": "docs/qa/overhaul/regression07/action/result.json"
+    },
+    "equipment": {
+      "passed": true,
+      "count": 9,
+      "source": "docs/qa/overhaul/regression07/equipment/result.json"
+    },
+    "rescue": {
+      "passed": true,
+      "count": 20,
+      "source": "docs/qa/overhaul/regression07/rescue/result.json"
+    },
+    "city": {
+      "passed": true,
+      "count": 10,
+      "source": "docs/qa/overhaul/regression07/city/result.json"
+    },
+    "combat": {
+      "passed": true,
+      "count": 14,
+      "source": "docs/qa/overhaul/regression07/combat/combat.json"
+    },
+    "visual": {
+      "passed": true,
+      "count": 29,
+      "source": "docs/qa/overhaul/visual07/result.json"
+    },
+    "soak": {
+      "passed": true,
+      "count": 8,
+      "source": "docs/qa/overhaul/runtime-soak07/result.json"
+    },
+    "load": {
+      "passed": true,
+      "source": "docs/qa/overhaul/final-load05/sustained-100.json"
+    },
+    "lod": {
+      "passed": true,
+      "source": "docs/qa/overhaul/character10/character-lod-verification.json"
+    },
+    "palette": {
+      "passed": true,
+      "source": "docs/qa/overhaul/character10/character-palette.json"
+    },
+    "live": {
+      "passed": true,
+      "count": 13,
+      "source": "docs/qa/lightweight/overhaul07-live/execution.json"
+    },
+    "transition": {
+      "passed": true,
+      "count": 6,
+      "source": "docs/qa/overhaul/live-transition.json"
+    },
+    "gate": {
+      "passed": true,
+      "source": "docs/qa/overhaul/one-byte-gate.json"
+    },
+    "desktop": {
+      "passed": true,
+      "source": "docs/qa/overhaul/desktop-cleanup.json"
+    }
+  },
+  "performance": {
+    "before": {
+      "engine": {
+        "world": "action-native",
+        "units": 9,
+        "renderers": 1958,
+        "frames": 361,
+        "cameras": 1,
+        "characters": 16,
+        "offscreenSkinUpdates": 5,
+        "culledAnimators": 15,
+        "shadowCasters": 1533,
+        "seconds": 3.0079939365386963,
+        "fps": 120.01354217529297,
+        "p95FrameMs": 9,
+        "unityAllocatedBytes": 40473844
+      },
+      "samples": [
+        {
+          "label": "idle",
+          "cpuSingleCorePercent": 164.61898531908514,
+          "wasmBytes": 100466688,
+          "gameRendererPrivateBytes": 214315008,
+          "browserTreePrivateBytes": 661868544
+        },
+        {
+          "label": "moving",
+          "cpuSingleCorePercent": 156.80261712116675,
+          "wasmBytes": 100466688,
+          "gameRendererPrivateBytes": 217866240,
+          "browserTreePrivateBytes": 667602944
+        }
+      ]
+    },
+    "after": {
+      "engine": {
+        "world": "action-native",
+        "units": 9,
+        "renderers": 1829,
+        "frames": 135,
+        "cameras": 1,
+        "characters": 16,
+        "offscreenSkinUpdates": 5,
+        "culledAnimators": 15,
+        "shadowCasters": 1390,
+        "seconds": 3.01400089263916,
+        "fps": 44.79096221923828,
+        "p95FrameMs": 23,
+        "unityAllocatedBytes": 36788322
+      },
+      "samples": [
+        {
+          "label": "idle",
+          "cpuSingleCorePercent": 65.61574055566659,
+          "wasmBytes": 75497472,
+          "gameRendererPrivateBytes": 188932096,
+          "browserTreePrivateBytes": 607027200
+        },
+        {
+          "label": "moving",
+          "cpuSingleCorePercent": 63.8945705429457,
+          "wasmBytes": 75497472,
+          "gameRendererPrivateBytes": 189755392,
+          "browserTreePrivateBytes": 610684928
+        }
+      ]
+    },
+    "note": "같은 PC·Chrome·1440×900·QA 월드. CPU는 논리 코어 하나=100%. rAF와 Unity FPS 구분. 기본 FPS 약120→45·지도 범위520→460m 변경 포함. 전체 브라우저 private bytes는 사용자 Chrome 탭 RAM 표시와 별도 지표."
+  },
+  "load": {
+    "connections": 100,
+    "movingPeers": 80,
+    "p95Ms": 129.46329999999944,
+    "errors": 0
+  },
+  "soak": {
+    "durationMs": 300586,
+    "rounds": 16,
+    "reconnects": 5,
+    "plateaus": [
+      {
+        "world": "crowd-fixed",
+        "samples": 14,
+        "firstMaterials": 812,
+        "lastMaterials": 812,
+        "firstMeshes": 1122,
+        "lastMeshes": 1122,
+        "allocatedGrowth": 101272
+      },
+      {
+        "world": "suwon-war",
+        "samples": 14,
+        "firstMaterials": 812,
+        "lastMaterials": 812,
+        "firstMeshes": 1017,
+        "lastMeshes": 1017,
+        "allocatedGrowth": 15243
+      },
+      {
+        "world": "suwon-zombie",
+        "samples": 14,
+        "firstMaterials": 812,
+        "lastMaterials": 812,
+        "firstMeshes": 1122,
+        "lastMeshes": 1122,
+        "allocatedGrowth": 5379
+      }
+    ]
+  },
+  "character": {
+    "worstParts": [
+      {
+        "name": "Adventurer_Feet",
+        "iou": 0.9305555820465088
+      },
+      {
+        "name": "Adventurer_Legs",
+        "iou": 0.9615384340286255
+      },
+      {
+        "name": "Backpack",
+        "iou": 0.875
+      },
+      {
+        "name": "Casual_Body",
+        "iou": 0.9786096215248108
+      },
+      {
+        "name": "Casual_Head",
+        "iou": 0.9662162065505981
+      }
+    ],
+    "at": "2026-10-31T09:04:04.8510616Z",
+    "worstClip": "Jump",
+    "worstView": "side",
+    "worstSample": 4,
+    "passed": true,
+    "nearMeshRestored": true,
+    "farMeshReduced": true,
+    "cacheBounded": true,
+    "clips": 14,
+    "samplesPerClip": 9,
+    "silhouettes": 252,
+    "highVertices": 6239,
+    "lowVertices": 2374,
+    "meshCache": 10,
+    "minimumSilhouetteIoU": 0.9665126800537109,
+    "meanSilhouetteIoU": 0.9834384322166443
+  },
+  "desktop": {
+    "removedFiles": 5,
+    "otherFilesTouched": false
+  },
+  "limitations": [
+    "저용량 스타일 표현이며 사진 수준 실사·건물 내부는 제공하지 않음",
+    "100 WS 접속과 한 Unity 렌더 클라이언트 검증, 100대 렌더·모바일 미검증",
+    "새 두 번째 시안 .af 저장은 SDK 경로 권한과 GUI 승인 차단으로 미실행. SVG·JSON·기존 AF 원본 보존",
+    "48분 하루는 임시 균형값이며 밤 전용 AI 규칙은 추가하지 않음"
+  ]
+}

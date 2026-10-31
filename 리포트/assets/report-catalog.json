@@ -1,5 +1,25 @@
 [
   {
+    "title": "LAST37N 플레이 품질 재작업: 실제 Affinity·Blender 원본과 적용 검증",
+    "summary": "기본8788에 UI·캐릭터/장비·상가·낮밤·관통/상호작용 개선을 적용했습니다. 전체 배포6732743바이트로 상한을 낮췄습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-result-20261031094401862-v1.0.0.html",
+    "date": "2026-10-31T09:44:01.862Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 플레이 품질 재작업: UI·외형·낮밤·관통·CPU/메모리",
+    "summary": "사용자가 확인한 시야 가림·비현실적 외형·낮밤 부재·관통/상호작용 문제를 실제 도구와 전후 QA로 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-play-quality-overhaul-20261031-20261031094358932-v1.0.3.html",
+    "date": "2026-10-31T09:43:58.932Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora 기본 데모·폴더 및 배포 제외 수정",
     "summary": "고객용 샘플과 개발 검증 자료를 분리하고 실제 배포 파일을 다시 검증합니다.",
     "project": "turnroom",
@@ -45,6 +65,16 @@
     "project": "designdatatable",
     "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031083154340-v1.0.10.html",
     "date": "2026-10-31T08:31:54.340Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 플레이 품질 재작업: UI·외형·낮밤·관통·CPU/메모리",
+    "summary": "사용자가 확인한 시야 가림·비현실적 외형·낮밤 부재·관통/상호작용 문제를 실제 도구와 전후 QA로 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-play-quality-overhaul-20261031-20261031081826215-v1.0.2.html",
+    "date": "2026-10-31T08:18:26.215Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -120,6 +150,16 @@
     "replyTo": ""
   },
   {
+    "title": "실제 플레이 품질 재작업: UI·외형·낮밤·관통·CPU/메모리",
+    "summary": "사용자가 확인한 시야 가림·비현실적 외형·낮밤 부재·관통/상호작용 문제를 실제 도구와 전후 QA로 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-play-quality-overhaul-20261031-20261031072807203-v1.0.1.html",
+    "date": "2026-10-31T07:28:07.203Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "TurnRoom Excel 전체 탭 기능 대조·구현 메뉴얼",
     "summary": "원본229개와31쌍을 대조하고 입력·삽입·페이지 설정을 수정·재QA했습니다. 미구현 기능을 차단/통과로 바꾸지 않고27개 전체 범위를 유지합니다.",
     "project": "designdatatable",
@@ -145,6 +185,16 @@
     "project": "designdatatable",
     "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031071838583-v1.0.7.html",
     "date": "2026-10-31T07:18:38.583Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 플레이 품질 재작업: UI·외형·낮밤·관통·CPU/메모리",
+    "summary": "사용자가 확인한 시야 가림·비현실적 외형·낮밤 부재·관통/상호작용 문제를 실제 도구와 전후 QA로 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-20261031071118634-v1.0.0.html",
+    "date": "2026-10-31T07:11:18.634Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
