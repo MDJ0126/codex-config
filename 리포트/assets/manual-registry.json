@@ -1,5 +1,238 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-10-31-manual-copy-post-and-board-links-20261031034243715-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-10-31-manual-copy-post-and-board-links-20261031034243715-v1.0.1.md",
+    "date": "2026-10-31T03:42:43.715Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "copy-post-and-board-links",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물·게시판 링크 복사 기능",
+      "summary": "보고서·QA 토론·작업 메뉴얼 목록과 상세에 링크 복사를 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "T03 공개 배포·외부 실제 복사 확인이 남았습니다.",
+      "outcome": "게시물과 현재 필터 주소를 복사하는 공통 기능을 구현 중입니다.",
+      "proposedTime": "5~8분",
+      "actualTime": "시작2026-10-31 12:38:41 KST · 진행 중",
+      "xerjEvidence": "제공된 XERJ 연결이 없어 rg와 현재 소스로 확인했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "copy-post-and-board-links",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "목록·상세에서 게시물 주소와 필터가 적용된 게시판 주소를 복사할 수 있도록 합니다.",
+      "completionCriteria": "실제 클립보드·제한 시 대체 경로·필터 주소 복원·모바일·키보드·게시물 이동을 검증하고 공개 반영합니다.",
+      "previousManual": "projects/codex-config/reports/2026-10-31-manual-20261031034104614-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 복사 기능과 유효한 목록·상세 버튼",
+          "action": "링크 내부에 버튼을 중첩하지 않고 목록 행·토론/메뉴얼 카드·상세·게시판 상단에 버튼을 추가합니다.",
+          "expected": "현재 게시물 또는 필터가 포함된 게시판 URL이 선택됩니다.",
+          "qa": "생성 HTML과 실제 버튼·이동 링크를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "별도 복사 버튼을 공통 게시물 상세·보고서 목록·토론·메뉴얼 카드·게시판 상단에 추가하고 필터 주소 저장·복원을 구현했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 복사·거부·주소 복원·모바일 QA",
+          "action": "실제 Clipboard API·대체 복사·직접 선택·필터 복원·키보드·화면 크기를 확인합니다.",
+          "expected": "성공과 실패가 구분되고 복사 클릭으로 이동하지 않습니다.",
+          "qa": "실제 클립보드 읽기와 거부 환경 모의, URL 새로열기,390px 넘침·필터 숨김을 검증합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 클립보드·대체 복사·수동 선택·URL 복원·키보드·390px 검사를27개 통과했습니다. 기존37개 단위 검사도 재실행 통과했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "공개 배포와 실제 화면 보고",
+          "action": "다른 로컬 변경을 제외한 격리 저장소에서 검증·푸시하고 공개 기능을 확인합니다.",
+          "expected": "배포된 게시판과 글에서 복사가 동작하며 HTML 보고서에 실제 화면이 있습니다.",
+          "qa": "Actions 성공 및 외부 페이지·버튼·첨부 이미지 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-31T03:42:43.373Z",
+          "summary": "기존 템플릿 검사 최초 실행 실패의 원인 기록",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Windows 복제본의 기존 Markdown 템플릿 CRLF를 LF 전용 검사 정규식이 읽지 못해37개 중1개 실패했습니다. 기존 템플릿2개의 줄바꿈만 정규화한 뒤 재실행했습니다.",
+              "evidence": "초기 authoring.test.mjs TypeError match null 및 template-report.md/template-bug.md CRLF=true 확인; 제품 코드 변경 없음",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-10-31T03:42:43.373Z",
+          "summary": "공통 기능·기존 단위·실제 브라우저 QA 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "별도 복사 버튼을 공통 게시물 상세·보고서 목록·토론·메뉴얼 카드·게시판 상단에 추가하고 필터 주소 저장·복원을 구현했습니다.",
+              "evidence": "assets/copy-links-2026-10-31/qa.json 27checks errors0; node --test 37/37 pass; build/verify 480pairs 17340links",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 클립보드·대체 복사·수동 선택·URL 복원·키보드·390px 검사를27개 통과했습니다. 기존37개 단위 검사도 재실행 통과했습니다.",
+              "evidence": "assets/copy-links-2026-10-31/qa.json 27checks errors0; node --test 37/37 pass; build/verify 480pairs 17340links",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-10-31-manual-20261031034104614-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-10-31-manual-20261031034104614-v1.0.0.md",
+    "date": "2026-10-31T03:41:04.614Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "copy-post-and-board-links",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물·게시판 링크 복사 기능",
+      "summary": "보고서·QA 토론·작업 메뉴얼 목록과 상세에 링크 복사를 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "",
+      "outcome": "게시물과 현재 필터 주소를 복사하는 공통 기능을 구현 중입니다.",
+      "proposedTime": "5~8분",
+      "actualTime": "시작2026-10-31 12:38:41 KST · 진행 중",
+      "xerjEvidence": "제공된 XERJ 연결이 없어 rg와 현재 소스로 확인했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "copy-post-and-board-links",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "목록·상세에서 게시물 주소와 필터가 적용된 게시판 주소를 복사할 수 있도록 합니다.",
+      "completionCriteria": "실제 클립보드·제한 시 대체 경로·필터 주소 복원·모바일·키보드·게시물 이동을 검증하고 공개 반영합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 복사 기능과 유효한 목록·상세 버튼",
+          "action": "링크 내부에 버튼을 중첩하지 않고 목록 행·토론/메뉴얼 카드·상세·게시판 상단에 버튼을 추가합니다.",
+          "expected": "현재 게시물 또는 필터가 포함된 게시판 URL이 선택됩니다.",
+          "qa": "생성 HTML과 실제 버튼·이동 링크를 대조합니다.",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 복사·거부·주소 복원·모바일 QA",
+          "action": "실제 Clipboard API·대체 복사·직접 선택·필터 복원·키보드·화면 크기를 확인합니다.",
+          "expected": "성공과 실패가 구분되고 복사 클릭으로 이동하지 않습니다.",
+          "qa": "실제 클립보드 읽기와 거부 환경 모의, URL 새로열기,390px 넘침·필터 숨김을 검증합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "공개 배포와 실제 화면 보고",
+          "action": "다른 로컬 변경을 제외한 격리 저장소에서 검증·푸시하고 공개 기능을 확인합니다.",
+          "expected": "배포된 게시판과 글에서 복사가 동작하며 HTML 보고서에 실제 화면이 있습니다.",
+          "qa": "Actions 성공 및 외부 페이지·버튼·첨부 이미지 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-10-31-manual-post-updated-time-20261031033449850-v1.0.2.html",
     "postPath": "projects/codex-config/posts/2026-10-31-manual-post-updated-time-20261031033449850-v1.0.2.md",
     "date": "2026-10-31T03:34:49.850Z",
