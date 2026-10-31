@@ -1,0 +1,29 @@
+{
+  "process": 30432,
+  "verifiedAt": "2026-10-31T22:54:00.6841474Z",
+  "checks": [
+    "Alt+P opens real page-layout groups without editing data",
+    "Margins menu applies Narrow to real workbook",
+    "Undo restores original margins and clean state",
+    "Orientation menu applies Landscape",
+    "Undo restores Portrait",
+    "Paper menu selects native Letter code",
+    "Undo restores A4 paper",
+    "Width dropdown sets one page and enables fit mode",
+    "Height dropdown keeps width and selects two pages",
+    "Automatic width preserves the selected height",
+    "Automatic width and height restore percent scaling mode",
+    "Four actual Undo operations restore clean page baseline",
+    "Delayed scale input commits 75 percent without cell text leakage",
+    "Physical Save clears dirty state after scaling",
+    "Undo after Save restores old scale and marks changed",
+    "Redo returns to saved scale and clean state",
+    "Print Area menu changes the current document",
+    "Print Area persists through physical Save"
+  ],
+  "sourceAssembly": "0900fee4-813e-4317-bd35-bc7cf0be3671",
+  "passed": 18,
+  "window": 11079658,
+  "failed": 0,
+  "source": "C:/Projects/TurnRoom/WorkFiles/Temp/UniqueValidationQA/Assets/NativeKeyboardQA/HomeNativeQA-internal-page-layout-native-r4.xlsx"
+}

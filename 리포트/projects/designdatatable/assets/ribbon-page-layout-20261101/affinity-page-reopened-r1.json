@@ -1,0 +1,25 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "actualAffinity": "3.3.1.4940",
+  "checks": [
+    {
+      "role": "color",
+      "reopenedNativeDocument": "9C56FD6B-57D6-4A59-912D-F151572468F9",
+      "equalPixels": 262144,
+      "retainedIcons": 64,
+      "nativeMaster": "TurnRoom-Icons-Extras-v12.af",
+      "masterBytes": 91549,
+      "nativeRgbaSha256": "b77c1eae23e38a4e8dfc64674e812f8960403a2b831dc2bf41e24a7fb8f19a5a"
+    },
+    {
+      "role": "white",
+      "reopenedNativeDocument": "F39A867A-5FCD-41FD-BF09-92BAE2566825",
+      "equalPixels": 262144,
+      "retainedIcons": 64,
+      "nativeMaster": "TurnRoom-Icons-ExtrasWhite-v12.af",
+      "masterBytes": 77409,
+      "nativeRgbaSha256": "adf097ee44c05ea7296f7deab4749c3a7a35a68bc6a8e4ccaa51a6b65d7f35ef"
+    }
+  ]
+}

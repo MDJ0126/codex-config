@@ -1,0 +1,8 @@
+{
+    "passed": 37,
+    "failed": 1,
+    "error": "System.Exception: Unrelated chart bytes retained: xl/drawings/charts/chart2.xml\r\n  at PageLayoutNativeQA.Check (System.Boolean ok, System.String note) [0x00016] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA\\Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\QAOnly\\PageLayoutNativeQA.cs:20 \r\n  at PageLayoutNativeQA.Run () [0x0108a] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA\\Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\QAOnly\\PageLayoutNativeQA.cs:56 ",
+    "assembly": "e427c3bd-3575-47ba-86e1-d23dd350446a",
+    "utc": "2026-10-31T22:33:48.2170986Z",
+    "source": "C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA/Evidence/PageLayout/PageLayout-r1.xlsx"
+}
