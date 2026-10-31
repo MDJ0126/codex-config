@@ -1,0 +1,30 @@
+{
+  "pixel": {
+    "passed": 1489,
+    "errors": [],
+    "graphics": "Direct3D11",
+    "utc": "2026-10-31T13:39:27.6932910Z"
+  },
+  "path": {
+    "masters": 4,
+    "curves": 952,
+    "closed": 298,
+    "open": 654,
+    "points": 9592,
+    "failures": [],
+    "duplicates": [],
+    "scope": "Native visible vector curves. Open stroked paths allowed; filled paths must close. Glyph outlines remain native editable text."
+  },
+  "unchangedTiles": 176,
+  "changedMainTiles": [
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "uiInteractionTested": false
+}

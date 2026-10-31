@@ -1,0 +1,72 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>정렬6종을18px 실루엣으로 구분하도록 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>정렬6종을18px 실루엣으로 구분하도록 수정</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">세로 방향은 화살표·기준선, 가로 방향은 정렬축·다른 줄 길이로 분리했습니다.</p><div class="post-byline"><time datetime="2026-10-31T13:43:02.458Z">2026년 10월 31일 오후 10:43 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>실제 Affinity에서 정렬6종과 채우기·글자색8종을 수정하고18px 실루엣 비교와1489검사 통과 후 적용했습니다. 실제 Unity 패널 클릭 재촬영은 미실행입니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>위 정렬은 위쪽 화살표와 상단 기준선, 세로 가운데는 안쪽으로 모이는 두 화살표와 중앙선, 아래 정렬은 아래 화살표와 하단선으로 바꿨습니다. 왼쪽·오른쪽은 서로 반대쪽 축을 표시하고, 가로 가운데는 길이가 다른 네 줄을 대칭 배치했습니다. 채우기는 페인트통·흘러내리는 방울·노란 표시선, 글자색은 선명한 A와 색상선으로 보정했습니다. 다른88개 컬러·88개 화이트 타일은 픽셀 버퍼가 동일합니다. 창 제어의 사용자 색상 처리와 투명 마스크 구조도 유지했습니다.</p>
+<p><figure><img class="report-image" src="../assets/alignment-icons-v7/comparison.png" alt="위: 이전18px / 아래: 수정18px, 실제 Affinity에서6배 확대" loading="lazy"><figcaption>위: 이전18px / 아래: 수정18px, 실제 Affinity에서6배 확대</figcaption></figure></p>
+<p>실제 UnityGPU18px 출력을 Affinity에서 nearest-neighbour6배 확대했습니다. 전체 Unity 패널 클릭 QA 화면을 대신하는 이미지는 아닙니다.</p>
+<p><figure><img class="report-image" src="../assets/alignment-icons-v7/unity-render.png" alt="실제 UnityGPU18·26px 출력" loading="lazy"><figcaption>실제 UnityGPU18·26px 출력</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검증</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>18px 실루엣15쌍</td>
+<td>모두 구분, 최소 다른 픽셀12→28</td>
+</tr>
+<tr>
+<td>위/가운데</td>
+<td>26→92픽셀 차이</td>
+</tr>
+<tr>
+<td>위/아래</td>
+<td>28→84픽셀 차이</td>
+</tr>
+<tr>
+<td>가운데/아래</td>
+<td>26→92픽셀 차이</td>
+</tr>
+<tr>
+<td>왼쪽/중앙</td>
+<td>12→28픽셀 차이</td>
+</tr>
+<tr>
+<td>왼쪽/오른쪽</td>
+<td>24→48픽셀 차이</td>
+</tr>
+<tr>
+<td>중앙/오른쪽</td>
+<td>12→28픽셀 차이</td>
+</tr>
+<tr>
+<td>실제UnityGPU</td>
+<td>Direct3D11,1489검사·실패0</td>
+</tr>
+<tr>
+<td>다른 아이콘</td>
+<td>176개 타일 버퍼 동일</td>
+</tr>
+<tr>
+<td>패스</td>
+<td>빈/길이0/채워진 열린 경로/비정상 좌표/중복 검출0</td>
+</tr>
+<tr>
+<td>흰색 저장·최대화·복원</td>
+<td>기존18px 내부 투명도 회귀 통과</td>
+</tr>
+</tbody></table>
+</div><p><a class="report-link" href="../assets/alignment-icons-v7/qa.json">세부 QA</a> · <a class="report-link" href="../assets/alignment-icons-v7/separation.csv">15쌍 실루엣 비교 CSV</a></p>
+<p>실루엣 비교는 색상 구분을 제외한 foreground mask의 서로 다른 픽셀 수입니다. 이 수치만으로 사람의 이해를 보장한다고 해석하지 않고 실제18px 확대본도 함께 검토했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>실제 Unity 패널의 클릭·호버 재촬영은 미실행입니다. 기존 문서 캡처 해시를 갱신해 새 화면처럼 표시하지 않았습니다. 패스 검사는 NativeCurve의 닫힘·빈 경로·좌표·중복 범위이며 모든 자기 교차를 완전 증명한 것은 아닙니다. 교훈 검토: 기존 실제 크기·목적·투명 공간 지침을 적용했으며 전역 추가 없음.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 8–12분</li>
+<li>실제로 완료된 시간: 2026-10-31 22:31:40 KST 시작, 구현·검증·적용 22:43:01 KST. 공개배포 확인은 별도.</li>
+<li>XERJ: 사용 — alignment.top alignment.vertical sheet.left 검색 후 실제SpreadsheetRibbon 배치와 현재소스를 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031134302458-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031134302458-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
