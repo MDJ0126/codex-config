@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-31T19:28:38.9676593Z",
+  "passed": 6,
+  "checks": [
+    "Physical Alt H H opens fill palette",
+    "Palette anchored at actual button x385 y235",
+    "Physical No Fill selection clears native fill",
+    "Source input preserved",
+    "Physical Ctrl+Z restores gold fill",
+    "Undo restores clean state"
+  ],
+  "failed": 0,
+  "assembly": "099c66cf-9392-4fca-9871-4640768aca81"
+}

@@ -1,0 +1,163 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "Excel 전체 탭 레이아웃·아이콘·영역·단축키 구현",
+    "summary": "46TC 전체를 보존하고 원본의 레이아웃·아이콘·영역·단축키를 실제 구현·적용·실행 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "원래46TC와5작업 전체 목록 유지. 홈 세부 검증 외 나머지 레이아웃·아이콘·영역·단축키 구현 및 전체실행QA·제품 커밋·문서·단일 공개보고서 검증을 계속 진행.",
+    "outcome": "지속 목표 active 유지. 홈 최신111회귀·실제 물리 키13건·Unity Scene Ctrl+D5건 통과. 전체46TC 구현·검증은 계속 진행.",
+    "proposedTime": "첫 홈 검증 묶음30–45분(2026-11-01 03:15:07 KST 시작). 전체 완료 예상 시간은 아직 검증 근거 부족.",
+    "actualTime": "진행 중. 2026-11-01 03:15:07 KST 시작한 홈 첫묶음30–45분 및 추가15–25분 예상을 초과했습니다. 전체 완료 시각 없음.",
+    "xerjEvidence": "2026-11-01 XERJ 서버 복구 후 SpreadsheetRibbon 심볼5건 검색. 현재 소스와 공식 Excel 키 팁 사진·단축키 문서로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "context-gallery-20261031",
+    "round": 4,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "전체46개 대조 항목의 레이아웃·아이콘·영역·단축키를 원본에 맞추며 Unity 포커스 충돌 없이 실제 동작 검증",
+    "completionCriteria": "전체46TC의 해당 UI·아이콘·영역·단축키 구현과 원본 대조 및 실제 클릭/키보드 회귀 통과. Affinity 원본·출력 보존, 문서 및 단일 공개 보고서 검증. 미구현·미실행을 완료 처리하지 않음.",
+    "previousManual": "projects/designdatatable/reports/2026-10-31-manual-context-gallery-20261031-20261031183155875-v1.0.3.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "표 인식 복구",
+        "action": "ChartGallery A5:C11 실제 표 등록",
+        "expected": "C11 포함21셀 표 참조",
+        "qa": "표 내부21셀·외부 경계·저장 재열기",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "ChartGallery A5:C11 실제 표 등록, 내부21셀·경계·C11 컨텍스트·저장 재열기 검사 통과."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "전체 탭 레이아웃·아이콘·영역·단축키 구현",
+        "action": "원본 UI의 버튼 크기·그룹 폭·배치·메뉴·아이콘을 실제 구현하고 같은 명령에 Excel 단축키/접근 키를 연결. Affinity 편집 원본·내보내기 보관",
+        "expected": "일반·특수·제품 전용 영역46개 항목에서 요청한 배치·아이콘·영역·단축키가 적용되고 Unity와 포커스 충돌 없음",
+        "qa": "탭별 원본과 같은 상태·확인된 배율로 사진 대조. 버튼·갤러리·실제 키보드·Unity 전환·Undo·저장·재열기 반복",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 3,
+        "result": "홈7그룹 배치·16종 Affinity 원본·40개 접근 키·직접 메뉴를 구현. 최신 Home111회귀/물리 키13/Unity포커스5검사 통과. 다른 탭 구현과 전체TC 검증은 남음."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 화면 회귀",
+        "action": "일반·특수·제품 전용 영역46TC를 실행하고 원본과 같은 선택 상태·크기로 재촬영",
+        "expected": "각TC 수정전후 차이와 실제 동작 결과 확인",
+        "qa": "실제 Unity의 로드 빌드 확인 후 클릭·삽입·스크롤·저장·Undo 및 원본 재대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 3,
+        "result": "최신20화면과 이전 실제 검사 근거 보존. 홈 새 수정 버전의 실행 QA 진행 중. 전체46TC의 키보드·원본 대조는 미완료."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "전체 탭별 비교 TC",
+        "action": "46TC의 절차·기대·실제·수정·원본/전후 사진을 결과 보고서 하나에 통합",
+        "expected": "사용자가 단일 URL에서 모든TC와 근거를 확인",
+        "qa": "사진의 제품·탭 적합성, 이미지/링크 검사",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 2,
+        "result": "46TC 단일 진행 보고서 공개 완료: 2026-10-31-result-20261031175409887-v1.0.0.html. 전체 구현 완료 보고서는 아직 아님."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "보고서 웹 게시",
+        "action": "JSON v2 보고서 생성·커밋·푸시·공개 배포 확인",
+        "expected": "인증 없이 개별 보고서와 모든 첨부 열림",
+        "qa": "사이트 검사·Actions 성공·공개URL 및 첨부 HTTP200",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "진행 기록은 결과 보고서에 보존. 선행 전체 화면 QA를 통과 처리하지 않습니다."
+      }
+    ],
+    "focusTasks": [
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "범위 축소 없음. 기존5작업·46TC와Q01을 보존하고 실제 홈 세부 검증Q02를 추가합니다. 전체작업 완료가 아니므로active를 유지합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "regression",
+        "at": "2026-10-31T14:27:28.322178+00:00",
+        "summary": "Unity730 API 검사와4개 IMGUI 경로. 전체 시각·명령 QA는 별도 미실행.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 표 등록 후21셀 및 경계 검사",
+            "evidence": "context-gallery-result.json 및 table-design.png",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "187종 삽입 준비,48스타일 왕복, 타일3개 실제 IMGUI 클릭",
+            "evidence": "engine-result.json 및 ui-checks.txt",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "전체 명령 및 Windows 실제 입력 QA 미실행",
+            "evidence": "25GPU캡처는 확보. 동일 빌드의 로컬 Excel 원본 직접 촬영은 미실행.",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-10-31T20:07:54.725135+00:00",
+        "summary": "홈 세부 실행과 실제 Unity 단축키 보호를 검증. 전체T02/T03를 통과로 처리하지 않음.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 3,
+            "verdict": "not_run",
+            "actual": "Home111검사(R4),물리 키13건(R11),UnityScene Ctrl+D5건(R11),표시형식5/NoFill6건(R1) 통과. 전체46TC 구현·대조·키 입력은 미완료.",
+            "evidence": "../assets/ribbon-goal-20261101/home-api-r4.json 및 home-physical-r11.json,unity-scope-r11.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 3,
+            "verdict": "not_run",
+            "actual": "최신20화면 R7 촬영 성공. 촬영을 기능 통과로 세지 않음. 전체46TC 원본 대조 및 기능QA는 남음.",
+            "evidence": "../assets/ribbon-goal-20261101/capture-r7.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

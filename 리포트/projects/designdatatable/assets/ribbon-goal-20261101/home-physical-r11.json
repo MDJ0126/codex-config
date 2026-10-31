@@ -1,0 +1,23 @@
+{
+  "process": 30976,
+  "failed": 0,
+  "window": 3411914,
+  "passed": 13,
+  "checks": [
+    "Actual native workbook focus and baseline",
+    "Physical Ctrl+B makes selection bold",
+    "Ctrl+B preserves input",
+    "Physical Ctrl+Z restores baseline",
+    "Physical Alt+H opens Home access keys",
+    "Physical F waits as prefix and does not type",
+    "Physical Alt H F G grows font",
+    "Physical Undo restores font",
+    "Physical Alt H A C centers text",
+    "Physical Undo restores alignment",
+    "Physical Alt H 6 increments indent",
+    "Physical Undo restores indent",
+    "Native key badges remain active for capture"
+  ],
+  "verifiedAt": "2026-10-31T20:04:13.7177268Z",
+  "sourceAssembly": "03cc9c3c-7547-4b54-bd39-191874aec87d"
+}
