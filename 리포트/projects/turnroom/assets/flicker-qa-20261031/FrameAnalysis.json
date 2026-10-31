@@ -1,0 +1,134 @@
+{
+  "Direct": {
+    "frames": 176,
+    "maxSampleGapMs": 298,
+    "bothToolRegionsDarkFrames": 0,
+    "mainForegroundEvents": 0,
+    "documentShowHideEvents": [],
+    "error": null
+  },
+  "ShelfSecond": {
+    "frames": 192,
+    "maxSampleGapMs": 79,
+    "bothToolRegionsDarkFrames": 15,
+    "mainForegroundEvents": 12,
+    "documentShowHideEvents": [],
+    "error": null,
+    "comparisonFrames": [
+      {
+        "ms": 79,
+        "index": 1
+      },
+      {
+        "ms": 142,
+        "index": 2
+      },
+      {
+        "ms": 250,
+        "index": 4
+      }
+    ]
+  },
+  "Fixed": {
+    "frames": 191,
+    "maxSampleGapMs": 80,
+    "bothToolRegionsDarkFrames": 16,
+    "mainForegroundEvents": 11,
+    "documentShowHideEvents": [],
+    "error": null
+  },
+  "ChildFixed": {
+    "frames": 191,
+    "maxSampleGapMs": 78,
+    "bothToolRegionsDarkFrames": 16,
+    "mainForegroundEvents": 12,
+    "documentShowHideEvents": [],
+    "error": null
+  },
+  "StackFixed": {
+    "frames": 189,
+    "maxSampleGapMs": 80,
+    "bothToolRegionsDarkFrames": 0,
+    "mainForegroundEvents": 12,
+    "documentShowHideEvents": [],
+    "error": null,
+    "comparisonFrames": [
+      {
+        "ms": 200,
+        "index": 3
+      },
+      {
+        "ms": 263,
+        "index": 4
+      },
+      {
+        "ms": 325,
+        "index": 5
+      }
+    ]
+  },
+  "MinRestore": {
+    "frames": 351,
+    "maxSampleGapMs": 94,
+    "bothToolRegionsDarkFrames": 0,
+    "mainForegroundEvents": 5,
+    "documentShowHideEvents": [
+      {
+        "kind": 32771,
+        "ms": 572,
+        "handle": 5244320,
+        "title": "Pixora Studio / 2e5149"
+      },
+      {
+        "kind": 32770,
+        "ms": 1209,
+        "handle": 5244320,
+        "title": "Pixora Studio / 2e5149"
+      },
+      {
+        "kind": 32771,
+        "ms": 2108,
+        "handle": 4725808,
+        "title": "PinballSettings.xlsx"
+      },
+      {
+        "kind": 32770,
+        "ms": 2699,
+        "handle": 4725808,
+        "title": "PinballSettings.xlsx"
+      },
+      {
+        "kind": 32771,
+        "ms": 3681,
+        "handle": 5244320,
+        "title": "Pixora Studio / 2e5149"
+      },
+      {
+        "kind": 32770,
+        "ms": 4237,
+        "handle": 5244320,
+        "title": "Pixora Studio / 2e5149"
+      },
+      {
+        "kind": 32771,
+        "ms": 5255,
+        "handle": 4725808,
+        "title": "PinballSettings.xlsx"
+      },
+      {
+        "kind": 32770,
+        "ms": 5767,
+        "handle": 4725808,
+        "title": "PinballSettings.xlsx"
+      }
+    ],
+    "error": null
+  },
+  "Final": {
+    "frames": 175,
+    "maxSampleGapMs": 124,
+    "bothToolRegionsDarkFrames": 0,
+    "documentShowHideEvents": [],
+    "mainForegroundEvents": 12
+  }
+}

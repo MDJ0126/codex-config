@@ -1,5 +1,25 @@
 [
   {
+    "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+    "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-taskbar-flicker-recurrence-20261031031545205-v1.0.2.html",
+    "date": "2026-10-31T03:15:45.205Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 QA로 최소화 목록 클릭 중 전체 창 덮임 재현·수정",
+    "summary": "최종 상태가 정상이더라도 누르는 동안 메인 창이 도구를 덮었습니다. 실제 프레임으로 재현 후 공통 모체에서 수정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-bug-20261031031545005-v1.0.0.html",
+    "date": "2026-10-31T03:15:45.005Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "전체 개발 종합 검토와 HTML 전달",
     "summary": "현재 구현·과거 실행 근거·미구현 범위를 대조해 종합 보고서를 작성합니다.",
     "project": "last37n",
