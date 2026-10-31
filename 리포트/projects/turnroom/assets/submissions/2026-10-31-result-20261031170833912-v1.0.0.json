@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "공통 헬프박스 구현과 Pixel Camera Pixora DataTable 적용",
+    "summary": "공통 UI Toolkit·IMGUI 헬프박스와 세 제품 전환·5개 어셈블리 컴파일을 완료했습니다. 실제 Unity 화면과 캡처 검증은 실행 허락 대기입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Templete 1.3.1 / API 1. 공통 여백·아이콘 크기·모서리·폰트·테마를 공유합니다. None·Info·Warning·Error를 지원하며 기존 diagnostics 컬러 아틀라스를 재사용했습니다. 제품별 최소 템플릿 버전을 1.3.1로 맞췄습니다. 갤러리에 양 API·양 테마·긴 문구 예시를 추가했습니다. 세 제품 각 9개 언어 가이드 설명, 개발 가이드·체크리스트·프로젝트 지침을 갱신했습니다. 편집용 카드 두 곳의 EditorStyles.helpBox는 메시지 박스가 아니므로 보존했습니다. 교훈 검토: 공통 헬프박스 사용 규칙은 프로젝트 지침에 반영했고, 기존 전역 테마·Affinity 규칙은 유지했습니다. 전역 지침 변경 없음.",
+    "verification": "Tools/Verification/CompileSharedHelpBox.py를 통해 Unity 6000.0.83f1의 실제 dotnet·Roslyn으로 TurnRoom.Editor, TurnRoom.PixelCamera.Editor, Pixora.Editor, DesignDataTable.Editor, TurnRoom.Templete.Development.Editor 5개를 현재 소스에서 순서대로 컴파일했고 모두 exitCode 0입니다. 제품 참조는 방금 만든 공통 DLL로 연결했습니다. GUI 프로세스는 실행하지 않았으며 runtimeExecuted=false입니다. 변경 전후 메시지·심각도를 직접 대조하고 남은 네이티브 HelpBox 사용처를 검색했습니다. git diff --check 통과. 문서 생성 27개 언어판 완료. Pixora 문서·언어 이동 검사 통과. DataTable 문서 검사는 캡처 소스 불일치와 이전 recapture pending으로 실패. Pixel Camera 스크린샷 검사는 09-ThroughWalls.unity의 기존 캡처 해시 불일치로 실패. 기존 이미지·캡처 소스 해시는 갱신하지 않았습니다.",
+    "remaining": "Unity 신규 실행은 기존 desktopControl=Paused 기록과 실행 스크립트의 명시적 허락 요구 때문에 사용자에게 비동기 허락을 요청한 상태입니다. 실제 UI의 라이트·다크, 긴 문구·좁은 폭, 아이콘·텍스트 정렬, 폰트와 회귀, 실제 화면 캡처·교체 및 현재 문서 스크린샷 검증은 미실행입니다. 이미지가 없는 이유는 실제 화면 캡처 허락 대기이며, 가짜 화면·요약 이미지를 만들지 않았습니다. ScreenshotManifest에는 pending만 추가하고 기존 캡처 해시는 보존했습니다. 전체 작업 메뉴얼은 완료로 표시하지 않았습니다.",
+    "outcome": "구현과 정적 컴파일을 마쳤습니다. TemplateHelpBox를 UI Toolkit에서 생성하거나 Inspector·IMGUI에서 Draw로 사용합니다. Pixel Camera 창 2곳·Inspector 1곳, Pixora 작업 원본 Inspector 1곳, DataTable 공통 HelpBox 래퍼 1곳을 전환했습니다. DataTable의 기존 Find 메시지 두 곳은 이 공통 래퍼를 통해 적용됩니다. 실제 화면 검증은 미실행입니다.",
+    "proposedTime": "15~30분",
+    "actualTime": "시작 2026-11-01 02:03:41 Asia/Seoul. 구현·최종 정적 컴파일 확인 02:07:43, 약 4분 2초. 전체 완료 시각은 화면 검증 미완료로 미기록.",
+    "xerjEvidence": "XERJ 노드 미실행 및 데이터 디렉터리 잠금 오류 확인. rg로 현재 소스·사용처를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
