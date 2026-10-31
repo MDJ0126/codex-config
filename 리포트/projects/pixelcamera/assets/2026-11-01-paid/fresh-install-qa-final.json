@@ -1,0 +1,28 @@
+{
+    "at": "2026-10-31T19:32:10.5537257Z",
+    "unity": "6000.0.83f1",
+    "error": "",
+    "version": "{\"name\":\"Pixel Camera\",\"version\":\"0.3.0-preview\",\"edition\":\"Paid product candidate\",\"renderPipeline\":\"Built-in / URP 17 RenderGraph\",\"unityValidated\":\"6000.0.83f1\",\"urpValidated\":\"17.0.4\",\"sharedTemplateApi\":1}\r\n",
+    "renderPipeline": "Built-in",
+    "manifestStatus": "{\r\n  \"maps\": [\r\n    {\r\n      \"file\": \"Assets/TurnRoom/PixelCamera/Samples/Scenes/13-PixelOutlines.unity\",\r\n      \"meshObjects\": 127,\r\n      \"prefabInstances\": 9,\r\n      \"sha256\": \"3db655e237330ea0d9c0379b503146cc29fcc0aef560c26b099259a597a20954\",\r\n      \"preset\": \"Assets/TurnRoom/PixelCamera/Samples/Presets/13-PixelOutlines.asset\"\r\n    },\r\n    {\r\n      \"file\": \"Assets/TurnRoom/PixelCamera/Samples/Scenes/14-PaletteMapping.unity\",\r\n      \"meshObjects\": 127,\r\n      \"prefabInstances\": 9,\r\n      \"sha256\": \"348cf2869b43f3426022325c140f105211f149d3c770e350a5edbf0822303424\",\r\n      \"preset\": \"Assets/TurnRoom/PixelCamera/Samples/Presets/14-PaletteMapping.asset\"\r\n    },\r\n    {\r\n      \"file\": \"Assets/TurnRoom/PixelCamera/Samples/Scenes/15-StablePixelGrid.unity\",\r\n      \"meshObjects\": 127,\r\n      \"prefabInstances\": 9,\r\n      \"sha256\": \"4b7fa5a933dc225952a658744577ce5b65577d0a1f6fc78cace0028f418ed7a1\",\r\n      \"preset\": \"Assets/TurnRoom/PixelCamera/Samples/Presets/15-StablePixelGrid.asset\"\r\n    },\r\n    {\r\n      \"file\": \"Assets/TurnRoom/PixelCamera/Samples/Scenes/16-CompleteStyle.unity\",\r\n      \"meshObjects\": 127,\r\n      \"prefabInstances\": 9,\r\n      \"sha256\": \"fded9e38227cb476eff68cf775617e9f2d58da55313a6a1c9a18228610ef6731\",\r\n      \"preset\": \"Assets/TurnRoom/PixelCamera/Samples/Presets/16-CompleteStyle.asset\"\r\n    }\r\n  ],\r\n  \"executionStatus\": \"validated: Unity 6000.0.83f1 Built-in Play and render; URP 17.0.4 RenderGraph render; samples 13-16\",\r\n  \"existingTwelveMapsPreserved\": true\r\n}\r\n",
+    "passed": true,
+    "maps": [
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\01-Basic.unity | colors=353",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\02-CoarsePixels.unity | colors=733",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\03-FinePixels.unity | colors=770",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\04-Zoom.unity | colors=374",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\05-LimitedPalette.unity | colors=23",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\06-Dithering.unity | colors=20",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\07-Clipping.unity | colors=275",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\08-WallOcclusion.unity | colors=10",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\09-ThroughWalls.unity | colors=10",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\10-Perspective.unity | colors=534",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\11-TidewatchOutpost.unity | colors=149",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\12-OutpostStreet.unity | colors=154",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\13-PixelOutlines.unity | colors=96",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\14-PaletteMapping.unity | colors=15",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\15-StablePixelGrid.unity | colors=99",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\16-CompleteStyle.unity | colors=15"
+    ],
+    "shaderCount": 4
+}
