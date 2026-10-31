@@ -1,0 +1,88 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "아이콘 철회·이전 디자인 복원",
+    "summary": "사용자 화면의 흰 사각형 확인과 이전 버전 복원",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 Unity 타이틀바·홈 탭 재촬영은 node_repl 컴퓨터 사용 도구 미제공으로 미실행입니다. 사용자 제공 화면으로 실패 상태를 확인했으며 제공 이미지는 외부에 게시하지 않았습니다. 이번 작업은 기존 파일의 복원이며 다른 도구로 아이콘을 새로 그리지 않았습니다. 프로젝트 AGENTS.md에 흰색 아이콘 내부 공간·실제 크기 검사 규칙을 추가했습니다. 전역 지침의 실제 출력 윤곽·가독성 검증 규칙과 중복되므로 전역 추가 없음.",
+    "outcome": "이전 컬러·화이트 atlas를 복원했습니다.417개의 실제 Unity 가져오기 검사에 저장·최대화·복원 내부 투명도 검사를 추가했습니다. 실제 Unity 화면 재촬영은 미실행입니다.",
+    "proposedTime": "5–10분. 진행 중 사용자 요청에 따라 전체 교체본을 철회하고 이전 버전 복원으로 변경했습니다.",
+    "actualTime": "2026-10-31 21:20:29 KST 시작, 복원·비대화형 검증 21:26:36 KST. 공개 배포 별도 확인.",
+    "xerjEvidence": "XERJ TemplateIcons titleBar whiteAtlas 검색 후 실제 TemplateIcons·WorkbookViewerChrome·native PNG 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "icon-rollback-v4-20261031",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "이전 디자인 복원과 저장·최대화 내부 공간 회복",
+    "completionCriteria": "리소스 복원·내부 alpha 검사·Unity 회귀, 실제 UI 미실행 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "이전 디자인 복원",
+        "action": "컬러·화이트atlas와 개별 아이콘·목록을 이전 버전으로 복원",
+        "expected": "이전 파일 동일 및 내부 투명도0",
+        "qa": "원본바이트·중앙alpha·Unity import",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "417검사 통과·save/max/restore alpha0"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제UI와 웹보고",
+        "action": "화면 확인과 보고 게시",
+        "expected": "화면과 게시 결과 구분",
+        "qa": "실제 UI와 공개 URL 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "GUI도구 미제공으로 실제UI 미실행, 웹보고 진행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T21:27:07.915471+09:00",
+        "summary": "복원 및 내부 공간 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "417검사통과·세아이콘내부alpha0",
+            "evidence": "WorkFiles/Temp/UniqueValidationQA/Evidence/restored-icon-results.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

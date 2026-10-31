@@ -1,0 +1,55 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>아이콘 교체본 철회와 이전 디자인 복원 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>아이콘 교체본 철회와 이전 디자인 복원</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">사용자 화면에서 저장·최대화가 흰 사각형으로 보인 교체본을 철회하고 이전 아이콘으로 복원했습니다.</p><div class="post-byline"><time datetime="2026-10-31T12:26:36.897Z">2026년 10월 31일 오후 9:26 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>이전 컬러·화이트 atlas를 복원했습니다.417개의 실제 Unity 가져오기 검사에 저장·최대화·복원 내부 투명도 검사를 추가했습니다. 실제 Unity 화면 재촬영은 미실행입니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>사용자가 전체 교체본보다 이전 버전을 선호한다고 정정하여 v5를 철회했습니다. 정상 리본은 이전 실제 Affinity v4 export로, 타이틀바는 v5 이전 white resource로 복원했습니다. 개별96개 PNG도 실제 Affinity에서 이전 원본을 자른 출력으로 갱신했습니다. 원본·목록·재설치 도구는 v4를 현재 버전으로 가리키므로 철회된 v5가 자동 재설치되지 않습니다. v5 원본과 이전 검증 기록은 보존했습니다.</p>
+<p><figure><img class="report-image" src="../assets/rollback-icons-v4/restored-colour.png" alt="복원한 이전 컬러 원본" loading="lazy"><figcaption>복원한 이전 컬러 원본</figcaption></figure></p>
+<p>복원된 아트 리소스입니다. 실제 Unity 화면 캡처가 아닙니다.</p>
+<h2 id="section-4">검증</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>실제 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>저장 중앙 alpha</td>
+<td>철회본255 → 복원본0</td>
+</tr>
+<tr>
+<td>최대화 중앙 alpha</td>
+<td>철회본255 → 복원본0</td>
+</tr>
+<tr>
+<td>복원 중앙 alpha</td>
+<td>철회본255 → 복원본0</td>
+</tr>
+<tr>
+<td>Unity6000.0.83f1 batchmode</td>
+<td>417검사 통과·실패0</td>
+</tr>
+<tr>
+<td>기존414검사의 한계</td>
+<td>흰색인지·여백·크기만 확인하여 내부가 메워진 오류를 검출하지 못했음</td>
+</tr>
+<tr>
+<td>새 검사</td>
+<td>실제 import texture의 세 아이콘 내부 alpha가0인지 검증</td>
+</tr>
+<tr>
+<td>이전 디자인</td>
+<td>컬러atlas는 이전 export와 파일 바이트 동일하게 복원</td>
+</tr>
+</tbody></table>
+</div><p><a class="report-link" href="../assets/rollback-icons-v4/negative-space.json">내부 공간 비교</a> · <a class="report-link" href="../assets/rollback-icons-v4/unity-results.json">Unity 실제 결과</a> · <a class="report-link" href="../assets/rollback-icons-v4/restored-white.png">복원 white atlas</a></p>
+<p>원인: 모든 채움색을 흰색으로 바꾼 native white 제작 과정에서 서로 다른 채움 영역이 합쳐졌습니다. 실제 중앙 alpha255와 복원 후0을 확인했습니다. 실제 UI 가독성 확인 없이 palette 검사 통과를 충분한 검증처럼 보고한 것은 잘못이었습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>실제 Unity 타이틀바·홈 탭 재촬영은 node_repl 컴퓨터 사용 도구 미제공으로 미실행입니다. 사용자 제공 화면으로 실패 상태를 확인했으며 제공 이미지는 외부에 게시하지 않았습니다. 이번 작업은 기존 파일의 복원이며 다른 도구로 아이콘을 새로 그리지 않았습니다. 프로젝트 AGENTS.md에 흰색 아이콘 내부 공간·실제 크기 검사 규칙을 추가했습니다. 전역 지침의 실제 출력 윤곽·가독성 검증 규칙과 중복되므로 전역 추가 없음.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 5–10분. 진행 중 사용자 요청에 따라 전체 교체본을 철회하고 이전 버전 복원으로 변경했습니다.</li>
+<li>실제로 완료된 시간: 2026-10-31 21:20:29 KST 시작, 복원·비대화형 검증 21:26:36 KST. 공개 배포 별도 확인.</li>
+<li>XERJ: 사용 — XERJ TemplateIcons titleBar whiteAtlas 검색 후 실제 TemplateIcons·WorkbookViewerChrome·native PNG 확인</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031122636897-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031122636897-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
