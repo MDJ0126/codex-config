@@ -1,0 +1,403 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "last37n",
+    "kind": "manual",
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현/QA 진행 중",
+    "outcome": "진행 중",
+    "proposedTime": "최초60~100분(01:35 KST 시작). 장비 추가35~60분, 이후 이동/무기 애니메이션 추가40~70분 예상. 사용자 추가 범위 포함 전체 약150~230분 범위.",
+    "actualTime": "기록 2026-10-31 03:18:41 KST. 시작2026-10-31 01:35:00 KST.",
+    "xerjEvidence": "XERJ 도구 미제공, rg·현재 소스·실제 실행으로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "rescue-survival-neighborhood",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "동네를 돌아다니며 물자를 수색하고 선택 구조 이벤트를 수행하는 생존 루프를 구현합니다. 주변 채팅·이름표·말풍선도 추가합니다. 사용자 추가 요청에 따라 필수 군복/생존 장비12종과 실제 장착/교체도 구현합니다. 추가 요청: 생존 이동과 무기 사용에 필요한 authored 애니메이션 및 실제 행동 연동.",
+    "completionCriteria": "파밍 장소의 실제 접근성, 물자 지원→NPC 호위→구호소 인계/중복 보상 방지, 주기 허기/갈증/활력/피로/스트레스와 휴식/아이템 효과, 저장/재접속/월드 격리, 실제 웹 UI·이동·상태 변화·기존 회귀/12MiB·로컬 적용·실제 화면/공식 보고 배포를 검증합니다. 실제 두 클라이언트의 이름과 말풍선·주변 채팅을 검증합니다. 필수12장비의 편집 원본·장착/해제·배낭 용량/방어·손전등·군복/NPC/다른 플레이어 외형·파밍/판매/저장과 웹 경량을 실제 검증합니다. 점프/착지·숙이기·검증 구조물 넘기/오르기·사격/장전/근접/사용의 클립/서버 상태와 실제 실행을 확인합니다.",
+    "previousManual": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030181008180-v1.0.8.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "생존 피로·스트레스",
+        "action": "주기 생존 및 회복·상한·행동 제한을 설정 기반으로 구현하고 기존 상태를 호환합니다.",
+        "expected": "온라인 변화·휴식/소비·제한·비접속 정책이 검증됩니다.",
+        "qa": "도메인 시간 경과·임계값·복원 테스트",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 주기 허기/갈증·피로/스트레스·휴식/차 음료·활력 상한/달리기 제한·비접속·과거 저장 호환과 기존 생존 테스트가 통과했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "동네 파밍·구조 서버",
+        "action": "실제 도로의 파밍 지점과 구조 이벤트·소유권·물자/호위·인계/보상·DB를 구현합니다.",
+        "expected": "접근 가능한 장소, 이벤트 주기/격리·중복/실패/재시작이 검증됩니다.",
+        "qa": "지리/게임 규칙·실제 PostGIS/WS 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "현재 호위 간격/경로와 실제 건물 관통 방지·물자/보상 중복·PostGIS 늦은 실패 롤백/재시작·주기/월드 격리를 통과했습니다. 실제 구호소 경로의 일반 입력 시뮬레이션625m도 성공했고 실시간 웹 경로 검증 중입니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "TPS 구조/생존 UI·채팅 이름표/말풍선",
+        "action": "피난민·조난민·목적지·상태 패널·피로/스트레스와 지도 안내를 연결합니다. 주변 채팅에 서버 기준 이름/발신자와 머리 위 이름표/말풍선을 연결합니다.",
+        "expected": "실제 웹에서 수색·지원·호위·인계·수치 확인이 가능합니다. 실제 두 클라이언트에서 이름·송수신·말풍선/만료가 확인됩니다.",
+        "qa": "Unity 빌드·실제 헤드리스 웹 입력/캡처 두 클라이언트 입력/서버 범위·이름 위조/중복 검사.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "최신 Web20개 검사 통과:18개 파밍·피난민 물자/재접속/호위/인계·조난민 의료/중단·주기 생존/휴식/차·이름표/한글 양방향 채팅/조합 Enter/말풍선 만료/이름 생성·실제 NPC3·엔진 오류0."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "회귀·경량·기본 적용",
+        "action": "회귀·상태 저장·필요 부하·12MiB와 기본 localhost 적용을 검증합니다.",
+        "expected": "새 기능과 기존 전투/생존이 실행되고 기본 웹에서 확인됩니다.",
+        "qa": "전체 서버/실제 Web·압축·로컬 기동",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제625.0m 구호소 경로406초·휴식1회·NPC 인계거리4.35m·순간이동/시간가속0·오류0. 전체65개·기존Web전투14/생존3·Windows4/5·100접속·12MiB와 기본8788의18장소/3이벤트/한글이름/채팅·엔진오류0을 확인했습니다."
+      },
+      {
+        "id": "T06",
+        "order": 5,
+        "title": "필수 장비12종 경량 에셋",
+        "action": "군복/신발/장갑/헬멧/조끼/가방2종/벨트/수통/구급파우치/손전등을 기존 리그/재질에 맞춰 제작합니다.",
+        "expected": "편집 가능한 Blender 원본과 실사용 경량 에셋12종의 형태/결합이 확인됩니다.",
+        "qa": "Blender export·에셋 속성·Unity 실제 장착 렌더링",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Blender5.2.3 편집 원본/11개 신규 FBX·기존 조끼/스킨 군복 구성. 실제 Unity14개 부착·헬멧/부츠/가방 좌표·앞뒤 렌더를 확인했습니다."
+      },
+      {
+        "id": "T07",
+        "order": 6,
+        "title": "서버 장착·용량/방어·파밍",
+        "action": "장비 소유/슬롯/장착·해제·배낭 용량/방어와 파밍/상점·저장/중복을 연결합니다.",
+        "expected": "소유/슬롯/무게/판매·저장/재접속과 실제 효과가 서버 기준으로 검증됩니다.",
+        "qa": "게임/DB/WS 실제 효과·실패/중복 검사",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "전체74개 서버/실제 PostGIS 테스트 통과. 장착 중복/슬롯·용량·방어 실피해·판매·손전등·늦은 실패 롤백·재시작을 검증했습니다."
+      },
+      {
+        "id": "T08",
+        "order": 7,
+        "title": "장착 UI·군복/NPC·손전등·회귀",
+        "action": "배낭 장착/교체/해제, 로컬/다른 플레이어/NPC 외형, 손전등과 웹 경량·기존 회귀를 검증/적용합니다.",
+        "expected": "실제 장착/외형·배낭·방어·빛·동기화·12MiB와 기본 로컬 동작이 확인됩니다.",
+        "qa": "실제 웹 두 클라이언트/장비 장면·전체 회귀/로컬 적용",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "헤드리스 실제 웹9개 검사:12카탈로그/11장착/32kg·30%방어/가방26kg교체/손전등on-off/재접속/다른 플레이어 장비/엔진오류0. Web압축10,702,490바이트<12MiB. 기본8788 적용·소유 서버 저장 재시작 완료. 전체 최종 회귀는 T12에서 추가 수행합니다."
+      },
+      {
+        "id": "T09",
+        "order": 8,
+        "title": "서버 이동 행동·검증 구조물",
+        "action": "점프/착지·숙이기/숙인 이동·넘기/오르기를 에너지/시간/높이/착지점 검증과 연결합니다.",
+        "expected": "승인된 구조물과 일반 이동의 서버 상태/충돌/재접속이 검증됩니다.",
+        "qa": "이동·임계값·중복/실패·실제 구조물 통과 테스트",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T10",
+        "order": 9,
+        "title": "공용 리그 Blender 행동 클립",
+        "action": "점프/착지·숙인 대기/걷기·넘기/오르기·소총/발사기·장전/근접/사용 클립을 제작합니다.",
+        "expected": "편집 가능한 원본과 기존 리그에서 실제 관절이 움직이는 클립이 존재합니다.",
+        "qa": "Blender export·Unity 클립/본 동작/실제 프레임 검사",
+        "dependsOn": [
+          "T09"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T11",
+        "order": 10,
+        "title": "무기·이동 애니/입력 연동",
+        "action": "서버 행동/사격/장전 상태에 맞춰 전신/상체 클립과 장비·무기를 연결합니다.",
+        "expected": "실제 점프/숙이기/넘기/오르기·사격/장전/근접/물품 사용이 표시됩니다.",
+        "qa": "실제 웹 입력·서버 상태/본/장비/두 클라이언트 검사",
+        "dependsOn": [
+          "T10"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T12",
+        "order": 11,
+        "title": "전체 행동·장비·기존 기능 회귀/적용",
+        "action": "이동/무기·장비·구조/생존/채팅과 웹 경량을 회귀 검증하고 기본 로컬에 적용합니다.",
+        "expected": "현재 전체 동작·저장·경량·기본 실행을 확인합니다.",
+        "qa": "전체 서버/DB/WS·실제 Web/네이티브·12MiB·기본 로컬",
+        "dependsOn": [
+          "T11"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 12,
+        "title": "공식 보고·최종 QA",
+        "action": "실제 화면·검증 근거를 공식 v2 보고서와 완료 메뉴얼로 기록하고 게시합니다. 추가 장비12종의 실제 장착/용량/방어/빛/경량 검증도 보고합니다. 점프/착지·숙인 이동·넘기/오르기·무기 사용 클립과 서버 행동도 전체 결과에 포함합니다.",
+        "expected": "전체 현재 버전 최종 QA·HTML/이미지/목록·외부 배포가 확인됩니다. 장비 추가를 포함한 전체8개 작업의 최종QA가 확인됩니다. 새 이동/무기 행동까지 현재12개 작업의 QA를 확인합니다.",
+        "qa": "공식 생성/검사·레이아웃·Actions/HTTP200",
+        "dependsOn": [
+          "T12"
+        ],
+        "status": "pending",
+        "revision": 3,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10"
+    ],
+    "scopeChange": "2026-10-31 추가 사용자 지시: 생존 이동/무기 애니메이션. 기존8개 작업/QA를 유지하고 T09~T12를 추가, T05 전체 보고의 순서/의존성을 수정 버전3으로 갱신합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-30T16:55:59.848Z",
+        "summary": "변경된 감소율에서 고정 HP 기대값 불일치",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "허기/갈증 감소율을0.8/1.2분당으로 바꾼 뒤, 기존 테스트의 고정HP94.6 기대값이 실패했습니다. 현재 설정의 0통과 시각과 피해율로 기대값을 계산하도록 수정하고 재검증했습니다.",
+            "evidence": "docs/qa/rescue/attempt-needs-01.txt",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-30T16:56:00.331Z",
+        "summary": "실제63개 서버/DB/WS 회귀 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 주기 허기/갈증·피로/스트레스·휴식/차 음료·활력 상한/달리기 제한·비접속·과거 저장 호환과 기존 생존 테스트가 통과했습니다.",
+            "evidence": "docs/qa/rescue/server-tests.json; server/test/rescue-survival.test.ts",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "18개 실제 도로 파밍 장소·구조 물자/소유권·빵부스러기 호위·인계/보상·주기/격리 및 실제 PostGIS 중복1회/실패롤백/재시작을 통과했습니다. 전체63개 실패0/건너뜀0. DB 장소 저장을 묶어100접속 p95 76.49ms/오류0도 확인했습니다.",
+            "evidence": "docs/qa/rescue/postgres.json; server-tests.json; docs/qa/load/sustained-100.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-10-30T17:32:59.392Z",
+        "summary": "실제 Web 한국어 입력 실패 확인",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "기존 IMGUI에서 한국어 문장이 ?만 전송되어 실제 양방향 채팅 검사가 실패했습니다. 실제 화면/메시지와 Unity6000.0 공식 IME 제한을 대조하고 HTML 입력/포커스/조합 Enter로 수정했습니다.",
+            "evidence": "docs/qa/rescue/attempt-web-01; browser/result-social.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-10-30T17:33:02.536Z",
+        "summary": "호위 간격 조정 후 초기 경로 역행 재현",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "NPC가 카메라 가까이에 머물러 간격을 모든 구간에 적용한 뒤, 실제 시간 경과 테스트에서 초기 경로를 역행해 이동 기대값이 실패했습니다. 사선이 열린 경로점만 제한적으로 건너뛰게 수정하여 벽 차단/간격을 재검증했습니다.",
+            "evidence": "docs/qa/rescue/attempt-follow-gap-02.txt; attempt-follow-gap-01; server/test/rescue-survival.test.ts",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-10-30T17:33:02.856Z",
+        "summary": "수정 후65개와 실제 Web20개 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 설정의 허기/갈증·피로/스트레스·휴식/차·피격 스트레스/100상한과 과거 저장·비접속 정책을 포함한 전체65개 실패0/건너뜀0.",
+            "evidence": "docs/qa/rescue/server-tests.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 호위 간격/경로와 실제 건물 관통 방지·물자/보상 중복·PostGIS 늦은 실패 롤백/재시작·주기/월드 격리를 통과했습니다. 실제 구호소 경로의 일반 입력 시뮬레이션625m도 성공했고 실시간 웹 경로 검증 중입니다.",
+            "evidence": "docs/qa/rescue/postgres.json; route-simulation.json; server-tests.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최신 Web20개 검사 통과:18개 파밍·피난민 물자/재접속/호위/인계·조난민 의료/중단·주기 생존/휴식/차·이름표/한글 양방향 채팅/조합 Enter/말풍선 만료/이름 생성·실제 NPC3·엔진 오류0.",
+            "evidence": "docs/qa/rescue/browser/result.json; browser/*.png",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-10-30T17:33:03.177Z",
+        "summary": "기존 회귀 수색 fixture 공유 실패 조사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존 Native와 Web이 같은 캐릭터 fixture를 사용한 회귀에서 수색 응답 대기가 실패했습니다. DB 거리0m와 쿨다운 종료17:11:12.719Z가 요청 추정17:11:06.908Z보다 늦음을 확인했습니다. Native 종료 후 새 스키마와 초기 상태 검사를 사용해 기존 Web3개 회귀를 통과했습니다.",
+            "evidence": "docs/qa/rescue/attempt-regression-01.json; regression-fixture-probe.json; regression/optimized-browser.json",
+            "dependencies": {
+              "T03": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "regression",
+        "at": "2026-10-30T17:46:05.378Z",
+        "summary": "구조/채팅 기존 범위의 실제 구호소·기본 웹 적용 확인",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제625.0m 구호소 경로406초·휴식1회·NPC 인계거리4.35m·순간이동/시간가속0·오류0. 전체65개·기존Web전투14/생존3·Windows4/5·100접속·12MiB와 기본8788의18장소/3이벤트/한글이름/채팅·엔진오류0을 확인했습니다.",
+            "evidence": "docs/qa/rescue/full-route.json; live.json; server-tests.json; docs/qa/combat/browser/combat.json",
+            "dependencies": {
+              "T03": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-10-30T18:18:06.486Z",
+        "summary": "필수 장비 실제 렌더·서버/DB·웹 장착과 로컬 적용",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Blender5.2.3 편집 원본/11개 신규 FBX·기존 조끼/스킨 군복 구성. 실제 Unity14개 부착·헬멧/부츠/가방 좌표·앞뒤 렌더를 확인했습니다.",
+            "evidence": "art/EssentialEquipment.blend; art/essential-equipment-export.json; docs/qa/equipment/runtime/equipment.json; front.png; back.png",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "전체74개 서버/실제 PostGIS 테스트 통과. 장착 중복/슬롯·용량·방어 실피해·판매·손전등·늦은 실패 롤백·재시작을 검증했습니다.",
+            "evidence": "server/test/equipment.test.ts; equipment-postgres.test.ts; .runtime/equipment-server-tests.log",
+            "dependencies": {
+              "T06": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "헤드리스 실제 웹9개 검사:12카탈로그/11장착/32kg·30%방어/가방26kg교체/손전등on-off/재접속/다른 플레이어 장비/엔진오류0. Web압축10,702,490바이트<12MiB. 기본8788 적용·소유 서버 저장 재시작 완료. 전체 최종 회귀는 T12에서 추가 수행합니다.",
+            "evidence": "docs/qa/equipment/browser/result.json; docs/qa/equipment/runtime/front.png; .runtime/local-processes.json",
+            "dependencies": {
+              "T07": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

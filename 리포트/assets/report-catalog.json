@@ -20,6 +20,716 @@
     "replyTo": ""
   },
   {
+    "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
+    "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-taskbar-flicker-recurrence-20261031031545205-v1.0.2.html",
+    "date": "2026-10-31T03:15:45.205Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 QA로 최소화 목록 클릭 중 전체 창 덮임 재현·수정",
+    "summary": "최종 상태가 정상이더라도 누르는 동안 메인 창이 도구를 덮었습니다. 실제 프레임으로 재현 후 공통 모체에서 수정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-bug-20261031031545005-v1.0.0.html",
+    "date": "2026-10-31T03:15:45.005Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전체 개발 종합 검토와 HTML 전달",
+    "summary": "현재 구현·과거 실행 근거·미구현 범위를 대조해 종합 보고서를 작성합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-20261031030133627-v1.0.0.html",
+    "date": "2026-10-31T03:01:33.627Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "LAST37N 전체 개발 종합: 구현 범위·구조·개선 수치·미구현 항목",
+    "summary": "수원 Unity 웹 생존 게임의 전체 기능·서버 구조·실행 검증과 공개 서비스까지 남은 범위를 종합했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-result-20261031030056257-v1.0.0.html",
+    "date": "2026-10-31T03:00:56.257Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-lightweight-six-hour-20261031-20261031025134310-v1.0.16.html",
+    "date": "2026-10-31T02:51:34.310Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "경량화 최종 검증: 6.75MB 적용본·1시간 반복 시험 통과",
+    "summary": "실제 적용본의 동일 지문·용량·실행을 재확인하고 1시간 반복 시험과 서버122개·배포17개 검사를 마쳤습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-result-20261031024803085-v1.0.0.html",
+    "date": "2026-10-31T02:48:03.085Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-lightweight-six-hour-20261031-20261031024802825-v1.0.15.html",
+    "date": "2026-10-31T02:48:02.825Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "웹 HUD 클릭 후 빠른 포인터 이동의 의도치 않은 발사 수정",
+    "summary": "하단 안내를 누른 직후 중앙으로 포인터를 옮겼을 때 탄약이 줄던 실제 웹 입력 문제를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-bug-20261031001042500-v1.0.0.html",
+    "date": "2026-10-31T00:10:42.500Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반복 월드 전환의 지형 머티리얼 누적 수정",
+    "summary": "실제10분 반복에서 재질이450개 증가하던 문제를 색별 공유와 소유권 정리로 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-bug-20261031001042277-v1.0.0.html",
+    "date": "2026-10-31T00:10:42.277Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 경량화4차: 6.75MB 기본 게임 적용·전체 기능 회귀 통과",
+    "summary": "검증한 패키지를 실제8788 게임에 적용하고 재시작 전후 캐릭터와 물자를 대조했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-result-20261031000340832-v1.0.0.html",
+    "date": "2026-10-31T00:03:40.832Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-lightweight-six-hour-20261031-20261031000130893-v1.0.14.html",
+    "date": "2026-10-31T00:01:30.893Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030235016134-v1.0.13.html",
+    "date": "2026-10-30T23:50:16.134Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030235015838-v1.0.12.html",
+    "date": "2026-10-30T23:50:15.838Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 경량화3차: 동일100명 장면19→53FPS와 반복 전환 재질 누적 수정",
+    "summary": "기존 캐릭터를 유지한 재질 묶음·거리LOD와 WebAssembly 설정을 실제100명 장면에서 비교했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030233925329-v1.0.0.html",
+    "date": "2026-10-30T23:39:25.329Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030230608351-v1.0.11.html",
+    "date": "2026-10-30T23:06:08.351Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030225603636-v1.0.10.html",
+    "date": "2026-10-30T22:56:03.636Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 경량화2차: 상태 전송81.2% 감소와 현장 생존 루프",
+    "summary": "기존 자산만 사용해 좀비 소음 반응·보급 제보·위험 호위를 연결하고 실제 Web에서 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030221642564-v1.0.0.html",
+    "date": "2026-10-30T22:16:42.564Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030221540028-v1.0.9.html",
+    "date": "2026-10-30T22:15:40.028Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030221205717-v1.0.8.html",
+    "date": "2026-10-30T22:12:05.717Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030215952965-v1.0.7.html",
+    "date": "2026-10-30T21:59:52.965Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030215926037-v1.0.6.html",
+    "date": "2026-10-30T21:59:26.037Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반복 캐릭터 빌드의 참조 없는 AvatarMask 누적 수정",
+    "summary": "실제 자산 참조 그래프에서32객체 중10개의 미참조 마스크를 확인해 제거하고 반복 생성 파일을 고정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030211946330-v1.0.0.html",
+    "date": "2026-10-30T21:19:46.330Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 경량화1차: 용량 증가 차단과6.78MB 검증 후보",
+    "summary": "초기11,095,729→6,775,800바이트 후보를 실제 게임에서 검증했습니다. 마지막 적용 용량도 증가할 수 없도록 고정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030211946118-v1.0.0.html",
+    "date": "2026-10-30T21:19:46.118Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030211626816-v1.0.5.html",
+    "date": "2026-10-30T21:16:26.816Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030205224247-v1.0.4.html",
+    "date": "2026-10-30T20:52:24.247Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030205140623-v1.0.3.html",
+    "date": "2026-10-30T20:51:40.623Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030203509080-v1.0.2.html",
+    "date": "2026-10-30T20:35:09.080Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030202458216-v1.0.1.html",
+    "date": "2026-10-30T20:24:58.216Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030201855189-v1.0.0.html",
+    "date": "2026-10-30T20:18:55.189Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 최종 전달·화재 상세 실행 화면",
+    "summary": "최종 전달 기록에 불꽃과 연기가 직접 보이는 실제 게임 상세 장면을 추가합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030201030723-v1.0.0.html",
+    "date": "2026-10-30T20:10:30.723Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 작업 최종 전달·공개 검증 완료",
+    "summary": "도시·반파/화재·서버 테스트 구현과 실제 로컬 적용·공개 보고서 확인을 마쳤습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030200610018-v1.0.0.html",
+    "date": "2026-10-30T20:06:10.018Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030200543262-v1.0.8.html",
+    "date": "2026-10-30T20:05:43.262Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "성문 복합 부재 중복과 거리 간판 벽 투과 수정",
+    "summary": "실제 게임 캡처에서 성문 주변 부재가 창문 상자로 생성되어 문루를 가리고 간판이 건물 벽 너머 보이는 문제를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030200231800-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.800Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WebGL 월드 ID 입력이 단축키로 처리되는 문제 수정",
+    "summary": "실제 브라우저에서 입력한 월드 대신 기본 suwon-2에 접속하고 배낭이 열린 현상을 확인했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030200231591-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.591Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시·반파/화재 적용 및 실제 서버 테스트",
+    "summary": "실제 OSM 수원 윤곽을 보존하고 성문·행궁/거리 표현과 월드별 허구의 피해를 추가했습니다. 로컬 게임 적용·89개 서버 검사·100명90초·실제 두 브라우저를 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030200231363-v1.0.0.html",
+    "date": "2026-10-30T20:02:31.363Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030200119444-v1.0.7.html",
+    "date": "2026-10-30T20:01:19.444Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030195747833-v1.0.6.html",
+    "date": "2026-10-30T19:57:47.833Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030194947621-v1.0.5.html",
+    "date": "2026-10-30T19:49:47.621Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030194020268-v1.0.4.html",
+    "date": "2026-10-30T19:40:20.268Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030193450000-v1.0.3.html",
+    "date": "2026-10-30T19:34:50.000Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030192418327-v1.0.2.html",
+    "date": "2026-10-30T19:24:18.327Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-suwon-city-scenery-20261030191930382-v1.0.1.html",
+    "date": "2026-10-30T19:19:30.382Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 도시 외형·반파 건물/화재·서버 테스트",
+    "summary": "실제 수원 지도 배치를 보존하고 지명/랜드마크·거리 외형과 경량 반파/화재를 보강하며 테스트 방법을 검증합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030191728675-v1.0.0.html",
+    "date": "2026-10-30T19:17:28.675Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 TPS 확장 · 최종 검증과 배포 완료 확인",
+    "summary": "피난민 구조·생존·한국어 이름/말풍선, 필수 장비12종과 이동/무기 행동10클립의 구현·적용·실제 검증 및 외부 보고서/완료 메뉴얼 반영을 확인했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030191219933-v1.0.0.html",
+    "date": "2026-10-30T19:12:19.933Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030190326023-v1.0.15.html",
+    "date": "2026-10-30T19:03:26.023Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공용 리그 행동 FBX 바인딩·빈 이동 상태 예외 수정",
+    "summary": "원본 키프레임·Unity 곡선 경로와 실행 예외를 대조해 리그 부모 계층과 미지정 중첩 상태 처리를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030185520988-v1.0.0.html",
+    "date": "2026-10-30T18:55:20.988Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Web 한국어 이름·채팅 입력 손실 수정",
+    "summary": "실제 Web 입력에서 ?만 전송된 실패를 확인하고 HTML 입력/조합 Enter·Unity 키보드 포커스를 연결했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030185520833-v1.0.0.html",
+    "date": "2026-10-30T18:55:20.833Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030185441628-v1.0.14.html",
+    "date": "2026-10-30T18:54:41.628Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수원 TPS 생존 확장 · 구조·채팅·장비12종·행동10종",
+    "summary": "동네 파밍·선택 구조·피로/스트레스·한국어 이름/말풍선, 필수 군복/생존 장비12종, 점프·숙이기·넘기·오르기와 무기 행동10클립을 실제 게임에 연결했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030185416169-v1.0.0.html",
+    "date": "2026-10-30T18:54:16.169Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030184201999-v1.0.13.html",
+    "date": "2026-10-30T18:42:01.999Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030183736235-v1.0.12.html",
+    "date": "2026-10-30T18:37:36.235Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030183259357-v1.0.11.html",
+    "date": "2026-10-30T18:32:59.357Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030182412657-v1.0.10.html",
+    "date": "2026-10-30T18:24:12.657Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030181841256-v1.0.9.html",
+    "date": "2026-10-30T18:18:41.256Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030181008180-v1.0.8.html",
+    "date": "2026-10-30T18:10:08.180Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030174605603-v1.0.7.html",
+    "date": "2026-10-30T17:46:05.603Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "구조·생존·주변 채팅 중간 보고 · 실제 웹20개 검사 통과",
+    "summary": "18개 동네 파밍 장소, 선택 구조·호위·인계, 주기 생존/피로/스트레스, 한국어 주변 채팅·이름표/말풍선을 구현했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030173536779-v1.0.0.html",
+    "date": "2026-10-30T17:35:36.779Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030173303405-v1.0.6.html",
+    "date": "2026-10-30T17:33:03.405Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030173303091-v1.0.5.html",
+    "date": "2026-10-30T17:33:03.091Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030173302775-v1.0.4.html",
+    "date": "2026-10-30T17:33:02.775Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030173302445-v1.0.3.html",
+    "date": "2026-10-30T17:33:02.445Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Excel 편집 재검사 — Unity 엔진 통과, 실제 입력 QA 대기",
+    "summary": "격리 Unity에서16개 그룹3550개 단언을 통과했습니다.반복 테스트 충돌·오래된 도움말 기대값을 수정했으며 실제 키보드/화면 QA는 도구 미제공으로 남았습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030173156607-v1.0.0.html",
+    "date": "2026-10-30T17:31:56.607Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030165600591-v1.0.2.html",
+    "date": "2026-10-30T16:56:00.591Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-rescue-survival-neighborhood-20261030165600238-v1.0.1.html",
+    "date": "2026-10-30T16:56:00.238Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030163906863-v1.0.0.html",
+    "date": "2026-10-30T16:39:06.863Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030145026528-v1.0.7.html",
+    "date": "2026-10-30T14:50:26.528Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전투 장비 FBX 축과 전차 시각 효과 초기화 예외 수정",
+    "summary": "실제 실행에서 발견한 장비 방향/헬멧 높이와 MaterialPropertyBlock 초기화 예외를 수정하고 재검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-bug-20261030144202464-v1.0.0.html",
+    "date": "2026-10-30T14:42:02.464Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·전차·선택 좀비 모드와 NPC 협동 구현",
+    "summary": "실제 웹에서 보병·전차·근접 돌격대·좀비 처치와 아군 동행·대기·지원 사격을 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030144042175-v1.0.0.html",
+    "date": "2026-10-30T14:40:42.175Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030143823359-v1.0.6.html",
+    "date": "2026-10-30T14:38:23.359Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030143042176-v1.0.5.html",
+    "date": "2026-10-30T14:30:42.176Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전투 확장 중간 보고 · 실제 웹 교전과 NPC 협동 확인",
+    "summary": "실제 웹에서 보병·전차·근접 돌격대·좀비 처치와 아군 동행·대기·지원 사격을 검증했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-result-20261030142931219-v1.0.0.html",
+    "date": "2026-10-30T14:29:31.219Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "TurnRoom 선택 개체 전용 디자인 탭",
     "summary": "표 프리셋과 도형·차트·그림 전용 탭의 표시 및 동작을 구현하고 실제 Unity에서 검증합니다.",
     "project": "designdatatable",
@@ -36,6 +746,16 @@
     "reportPath": "projects/designdatatable/reports/2026-10-30-result-20261030142442394-v1.0.0.html",
     "date": "2026-10-30T14:24:42.394Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030141433043-v1.0.4.html",
+    "date": "2026-10-30T14:14:33.043Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
@@ -70,11 +790,51 @@
     "replyTo": ""
   },
   {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030135618431-v1.0.3.html",
+    "date": "2026-10-30T13:56:18.431Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "최소화 목록 선택 시 전체 창 깜박임 재발 조사",
     "summary": "이전 공개 버그의 접관·재정렬 경로를 대조하고 재발 방지 회귀를 추가합니다.",
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-10-30-manual-20261030134522069-v1.0.0.html",
     "date": "2026-10-30T13:45:22.069Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133911838-v1.0.2.html",
+    "date": "2026-10-30T13:39:11.838Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-combat-coop-prototype-20261030133437204-v1.0.1.html",
+    "date": "2026-10-30T13:34:37.204Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "군사 전장·탱크·좀비 선택 모드·NPC 협동 프로토타입",
+    "summary": "서버 권위 전투, 선택 좀비 월드와 아군 협동을 웹 경량 예산 안에서 단계별 구현합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-20261030132542303-v1.0.0.html",
+    "date": "2026-10-30T13:25:42.303Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""

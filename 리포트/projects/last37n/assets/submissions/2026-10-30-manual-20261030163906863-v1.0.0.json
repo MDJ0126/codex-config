@@ -1,0 +1,116 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "last37n",
+    "kind": "manual",
+    "title": "동네 파밍·피난민/조난민 구조·피로/스트레스 생존",
+    "summary": "실제 동네 도로의 파밍과 선택 구조·호위, 주기 생존 수치와 스트레스를 서버 기준으로 연결합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현/QA 진행 중",
+    "outcome": "진행 중",
+    "proposedTime": "60~100분. 시작2026-10-31 01:35:00 KST.",
+    "actualTime": "진행 중",
+    "xerjEvidence": "XERJ 도구 미제공, rg·현재 소스·실제 실행으로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "rescue-survival-neighborhood",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "동네를 돌아다니며 물자를 수색하고 선택 구조 이벤트를 수행하는 생존 루프를 구현합니다.",
+    "completionCriteria": "파밍 장소의 실제 접근성, 물자 지원→NPC 호위→구호소 인계/중복 보상 방지, 주기 허기/갈증/활력/피로/스트레스와 휴식/아이템 효과, 저장/재접속/월드 격리, 실제 웹 UI·이동·상태 변화·기존 회귀/12MiB·로컬 적용·실제 화면/공식 보고 배포를 검증합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "생존 피로·스트레스",
+        "action": "주기 생존 및 회복·상한·행동 제한을 설정 기반으로 구현하고 기존 상태를 호환합니다.",
+        "expected": "온라인 변화·휴식/소비·제한·비접속 정책이 검증됩니다.",
+        "qa": "도메인 시간 경과·임계값·복원 테스트",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "동네 파밍·구조 서버",
+        "action": "실제 도로의 파밍 지점과 구조 이벤트·소유권·물자/호위·인계/보상·DB를 구현합니다.",
+        "expected": "접근 가능한 장소, 이벤트 주기/격리·중복/실패/재시작이 검증됩니다.",
+        "qa": "지리/게임 규칙·실제 PostGIS/WS 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 TPS 표현·UI",
+        "action": "피난민·조난민·목적지·상태 패널·피로/스트레스와 지도 안내를 연결합니다.",
+        "expected": "실제 웹에서 수색·지원·호위·인계·수치 확인이 가능합니다.",
+        "qa": "Unity 빌드·실제 헤드리스 웹 입력/캡처",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "회귀·경량·기본 적용",
+        "action": "회귀·상태 저장·필요 부하·12MiB와 기본 localhost 적용을 검증합니다.",
+        "expected": "새 기능과 기존 전투/생존이 실행되고 기본 웹에서 확인됩니다.",
+        "qa": "전체 서버/실제 Web·압축·로컬 기동",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "공식 보고·최종 QA",
+        "action": "실제 화면·검증 근거를 공식 v2 보고서와 완료 메뉴얼로 기록하고 게시합니다.",
+        "expected": "전체 현재 버전 최종 QA·HTML/이미지/목록·외부 배포가 확인됩니다.",
+        "qa": "공식 생성/검사·레이아웃·Actions/HTTP200",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

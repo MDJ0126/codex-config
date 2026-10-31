@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "last37n",
+    "kind": "bug",
+    "title": "성문 복합 부재 중복과 거리 간판 벽 투과 수정",
+    "summary": "실제 게임 캡처에서 성문 주변 부재가 창문 상자로 생성되어 문루를 가리고 간판이 건물 벽 너머 보이는 문제를 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "Unity6000.0.83f1 Windows/WebGL, OSM 성문 복합 부재.",
+    "steps": "팔달문 카메라와 거리에서 실제 게임을 렌더해 원본 OSM 부재와 비교합니다.",
+    "expected": "성문 모델과 옹성/지붕 부재가 겹쳐 상자처럼 가리지 않고 간판은 가려진 벽 뒤에서 보이지 않습니다.",
+    "actual": "초기 캡처에서 지붕·옹성 부재가 기본9m 건물 외벽으로 표시되었고 기본 폰트 재질이 벽을 투과했습니다.",
+    "cause": "관련 OSM 부재를 모두 일반 건물로 렌더하는 분류와 깊이 검사를 하지 않는 기본 텍스트 재질을 현재 소스/실제 캡처로 확인했습니다.",
+    "changes": "문화유산 관련 부재ID를 설정으로 분리하여 중복 roof를 숨기고 옹성을 낮은 석벽으로 처리했습니다. 간판에 ZTest LEqual 전용 공유 재질을 적용했습니다. 실제 사용한 내장 particlesystem1.0 패키지도 명시했습니다.",
+    "verification": "수정 후 실제6개 Native 장면과 현재 Web 도시/예외0을 검증했습니다. ![수정 후 실제 성문·옹성 렌더](../assets/2026-10-31-city-paldal.webp)",
+    "remaining": "건물 외형은 경량 스타일이며 실제 건축물의 세부 치수까지 복원한 것은 아닙니다.",
+    "outcome": "팔달문 원본 부재 유형을 분리하고 깊이 검사를 하는 전용 텍스트 셰이더를 적용했습니다.",
+    "proposedTime": "45~75분. 시작2026-10-31 04:14:41 KST.",
+    "actualTime": "기능 구현·빌드·실제 로컬 적용 검증 47분50초, 2026-10-31 05:02:31 KST. 외부 게시 검증은 별도 전달 기록에 남깁니다.",
+    "xerjEvidence": "XERJ MCP/검색 도구가 제공되지 않아 rg·현재 소스·원본 해시·실제 실행/렌더로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  }
+}
