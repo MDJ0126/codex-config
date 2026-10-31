@@ -1,0 +1,1874 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Excel 리본 재구성·실행 QA — 전체46TC 통합 현황 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Excel 리본 재구성·실행 QA — 전체46TC 통합 현황</h1><span class="badge" data-state="progress">진행 중</span></div><p class="post-summary">실제 수정과 실행 근거를46개 TC에 통합했습니다. 전체 Excel 동등 구성은 미완료이며, 미구현·미실행을 구분했습니다.</p><div class="post-byline"><time datetime="2026-10-31T17:54:09.887Z">2026년 11월 1일 오전 2:54 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>전체 작업은 아직 끝나지 않았습니다. 앞선 답변에서 보고서 링크 없이 작업을 끝낸 것은 전달 누락입니다. 이 보고서는 현재 확인된 수정·QA와 남은 범위를 한 곳에 모은 진행 보고이며 최종 통과 보고가 아닙니다.</p>
+<p>표·도형·그림·차트의 실제 리본·갤러리·Affinity 아이콘을 수정했습니다. 최신 격리 Unity의20화면과 본 프로젝트 실제 창을 확보했습니다. 본 프로젝트 CLI에서 로드된 빌드 ID가 변경된 것도 확인했습니다. 전체46TC의 명령·원본 대조가 모두 통과한 상태는 아닙니다.</p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/main-workbook.png" alt="본 프로젝트 Unity에서 실제 열린 통합문서" loading="lazy"><figcaption>본 프로젝트 Unity에서 실제 열린 통합문서</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>삽입 도형187종의9개 분류 드롭다운, 도형32종 스타일 목록과 실제 적용·Undo를 연결했습니다.</li>
+<li>실제 Office 표60종+기존6종과 Office 셀 스타일63종을 지원하며 셀 스타일 팝업에는47종을 표시합니다.</li>
+<li>차트48종은 legacy OOXML 스타일 ID입니다. 최신 Excel의 전체 효과·갤러리와 동일하다고 주장하지 않습니다.</li>
+<li>표 스타일의 표시·저장과 범위 변환 시 글꼴·채움·테두리 보존을 수정했습니다. 그림 테두리 편집은 이미지 원본과 자르기를 보존합니다.</li>
+<li>Affinity3.3.1에서 실제 아이콘을 제작하고 프로젝트 ColorIcons에 편집 원본과 V10 출력물을 모았습니다.</li>
+<li>도형 리본의 잘리는 문구는 실제 화면 확인 후 글자 크기/가용 폭을 수정했습니다.</li>
+<li>보고서 공통 JSON에 TC 배열을 추가해46TC를 단일 문서에 보존합니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<p>검증 환경: Unity6000.0.83f1, Windows. 격리 QA 프로젝트와 본 프로젝트 결과를 구분합니다. 원본 사진은 공개된 Excel 자료이며 이번 PC의 로컬 Excel을 새로 실행해 촬영한 사진이 아닙니다. 원본의 전체 탭/부분 화면/구형 또는 Web 여부는 각 TC의 출처·범위에 기록합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>실제 실행 묶음</th>
+<th align="right">통과 검사 수</th>
+<th>범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>도형 분류/선택</td>
+<td align="right">203</td>
+<td>분류·드롭다운 선택</td>
+</tr>
+<tr>
+<td>도형 스타일</td>
+<td align="right">199</td>
+<td>32종·Undo·보존</td>
+</tr>
+<tr>
+<td>최신 도형 리본</td>
+<td align="right">3</td>
+<td>실제 스타일 클릭·변경·Undo</td>
+</tr>
+<tr>
+<td>최신 차트 스타일</td>
+<td align="right">196</td>
+<td>48스타일·색상·실제 타일 클릭</td>
+</tr>
+<tr>
+<td>Office표 스타일</td>
+<td align="right">367</td>
+<td>60종·저장·색/글꼴/테두리</td>
+</tr>
+<tr>
+<td>그림 서식</td>
+<td align="right">52</td>
+<td>원본/자르기·테두리·Undo</td>
+</tr>
+<tr>
+<td>통합 편집</td>
+<td align="right">326</td>
+<td>63셀 스타일·표 변환·차트 표현</td>
+</tr>
+<tr>
+<td>최신 실제 팝업</td>
+<td align="right">4</td>
+<td>Good선택·Light2적용·Undo</td>
+</tr>
+</tbody></table>
+</div><p>각 숫자는 서로 다른 시점의 세부 검사 묶음이며 전체46TC 통과 수로 합산하지 않습니다. 최신20화면은 촬영 성공이며20개 기능 통과를 의미하지 않습니다. 실제 Windows 마우스 클릭은 창 포커스 검사에서 중단된 시도가 있어 성공으로 기록하지 않았습니다. GUI 이벤트 검사는 실제 Unity 네이티브 팝업 호스트에서 실행했습니다.</p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/cell-styles-popup.png" alt="실제 셀 스타일 팝업" loading="lazy"><figcaption>실제 셀 스타일 팝업</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/table-styles-popup.png" alt="실제 표 스타일 팝업" loading="lazy"><figcaption>실제 표 스타일 팝업</figcaption></figure></p>
+<p>화면은 직접 캡처한 PNG 원본을 보존했습니다. 대다수200KB 이하이며, 작은 글자 판독을 위해 로컬라이징234KB 화면은 강제 축소하지 않았습니다. 이미지 편집이나 가짜 비교 합성은 하지 않았습니다.</p>
+<h3 id="section-5">TC-RIB-01 · 파일</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>파일 메뉴를 엽니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>열기·저장·닫기와 Excel Backstage 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>원본은 보호 메뉴 일부뿐입니다. 현재는 새 문서·열기·다른 이름 저장·복구·새로 고침 팝업입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 보호 메뉴 부분 자료 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/restrict-changes-to-files-in-excel">https://support.microsoft.com/en-us/excel/restrict-changes-to-files-in-excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-d8311372683111.png" alt="TC-RIB-01 Excel 원본" loading="lazy"><figcaption>TC-RIB-01 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-file-menu.png" alt="TC-RIB-01 수정 전" loading="lazy"><figcaption>TC-RIB-01 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-6">TC-RIB-02 · 홈</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>일반 시트에서 홈 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>클립보드·글꼴·맞춤·표시 형식·스타일·셀·편집 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>셀 스타일47종 갤러리와 정렬·필터 메뉴를 연결했습니다. 셀 스타일63종 API 및 팝업 Good 선택 확인. 전체 홈 명령 전수 입력 검사는 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>셀 스타일47종 갤러리와 정렬·필터 메뉴를 연결했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>셀 스타일63종 API 및 팝업 Good 선택 확인. 전체 홈 명령 전수 입력 검사는 남아 있습니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>부분 원본·정확한 빌드 미확인 · <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-fa65d2941fc390.png" alt="TC-RIB-02 Excel 원본" loading="lazy"><figcaption>TC-RIB-02 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="TC-RIB-02 수정 전" loading="lazy"><figcaption>TC-RIB-02 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/home.png" alt="TC-RIB-02 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-02 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-7">TC-RIB-03 · 삽입</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>삽입 탭에서 도형 타일을 클릭합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>표·도형·그림·차트·링크·텍스트·기호와 추가 삽입 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>도형187종을9개 분류의 스크롤 드롭다운으로 변경했습니다. 203건 분류·템플릿·실제 항목 클릭 검사 통과. 모든187종의 마우스 배치 전수는 미실행입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>도형187종을9개 분류의 스크롤 드롭다운으로 변경했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>203건 분류·템플릿·실제 항목 클릭 검사 통과. 모든187종의 마우스 배치 전수는 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>부분 원본·정확한 빌드 미확인 · <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-b44e68d3ffbc77.png" alt="TC-RIB-03 Excel 원본" loading="lazy"><figcaption>TC-RIB-03 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-03 수정 전" loading="lazy"><figcaption>TC-RIB-03 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/insert.png" alt="TC-RIB-03 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-03 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-8">TC-RIB-04 · 페이지 레이아웃</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>페이지 레이아웃을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>테마·페이지 설정·배율 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재는 페이지 설정 버튼 하나입니다. 원본의 독립 그룹·리본 컨트롤이 없습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>구형 Windows 원본 일부 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/fit-to-one-page-in-excel">https://support.microsoft.com/en-us/excel/fit-to-one-page-in-excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-090aa7e173a847.png" alt="TC-RIB-04 Excel 원본" loading="lazy"><figcaption>TC-RIB-04 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-page-layout.png" alt="TC-RIB-04 수정 전" loading="lazy"><figcaption>TC-RIB-04 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/page-layout.png" alt="TC-RIB-04 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-04 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-9">TC-RIB-05 · 수식</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>수식 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>함수 라이브러리·이름·수식 분석·계산을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>도움말·이름 관리자·이름 참조·재계산은 보이지만 함수 분류 갤러리와 분석 도구가 없습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>함수 라이브러리 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/using-functions-and-nested-functions-in-excel-formulas">https://support.microsoft.com/en-us/excel/using-functions-and-nested-functions-in-excel-formulas</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-be0b71b7ec7530.png" alt="TC-RIB-05 Excel 원본" loading="lazy"><figcaption>TC-RIB-05 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-formulas.png" alt="TC-RIB-05 수정 전" loading="lazy"><figcaption>TC-RIB-05 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/formulas.png" alt="TC-RIB-05 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-05 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-10">TC-RIB-06 · 데이터</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>데이터 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>정렬·필터와 데이터 가져오기·쿼리 그룹을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>정렬·필터·외부 차트 연결만 보입니다. 원본의 Get Data·쿼리 새로 고침 구성이 없습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel2016 Get &amp; Transform 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/about-power-query-in-excel">https://support.microsoft.com/en-us/excel/about-power-query-in-excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-221cd8803c005c.png" alt="TC-RIB-06 Excel 원본" loading="lazy"><figcaption>TC-RIB-06 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-data.png" alt="TC-RIB-06 수정 전" loading="lazy"><figcaption>TC-RIB-06 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/data.png" alt="TC-RIB-06 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-06 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-11">TC-RIB-07 · 검토</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>검토 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>맞춤법·접근성·변경·댓글·보호와 통계를 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재는 통계 버튼만 보입니다. 비교 원본은 Excel 웹이므로 Windows 동일 버전 비교는 아닙니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 웹 원본·Windows와 구별 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5190624/review-tab-options-greyed-out-in-excel-365-files-w">https://learn.microsoft.com/en-us/answers/questions/5190624/review-tab-options-greyed-out-in-excel-365-files-w</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-af47cc4057d588.png" alt="TC-RIB-07 Excel 원본" loading="lazy"><figcaption>TC-RIB-07 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-review.png" alt="TC-RIB-07 수정 전" loading="lazy"><figcaption>TC-RIB-07 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/review.png" alt="TC-RIB-07 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-07 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-12">TC-RIB-08 · 보기</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>보기 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>통합 문서 보기·표시·확대/축소·창 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>고정·해제·개체·시트·보기 메뉴는 보이지만 원본의 보기/확대 그룹 구성과 다릅니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>부분 원본·정확한 빌드 미확인 · <a class="report-link" href="https://techcommunity.microsoft.com/discussions/excelgeneral/view-ribbon-tab-checkboxes-no-longer-aligned/3989915">https://techcommunity.microsoft.com/discussions/excelgeneral/view-ribbon-tab-checkboxes-no-longer-aligned/3989915</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-38bde9ca1a7bc0.png" alt="TC-RIB-08 Excel 원본" loading="lazy"><figcaption>TC-RIB-08 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-view.png" alt="TC-RIB-08 수정 전" loading="lazy"><figcaption>TC-RIB-08 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/view.png" alt="TC-RIB-08 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-08 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-13">TC-RIB-09 · 도움말</h3>
+<p>분류: 일반 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>도움말을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>도움말 탭의 실제 명령을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 디버그·버그 보고·수식 버튼 표시. 원본에는 Help 탭 이름만 보여 명령 대조는 미실행입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>전체 Help 리본 아님 · <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-fa65d2941fc390.png" alt="TC-RIB-09 Excel 원본" loading="lazy"><figcaption>TC-RIB-09 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-help.png" alt="TC-RIB-09 수정 전" loading="lazy"><figcaption>TC-RIB-09 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/help.png" alt="TC-RIB-09 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-09 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-14">TC-RIB-10 · 그리기</h3>
+<p>분류: 일반 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>그리기 탭 진입점을 찾습니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>펜·잉크·다시 재생 등의 탭을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel Draw 화면·사진 촬영 자료 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5070058/cant-exit-the-drawing-tool-in-excel">https://learn.microsoft.com/en-us/answers/questions/5070058/cant-exit-the-drawing-tool-in-excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-8d1770b6a8c9db.jpeg" alt="TC-RIB-10 Excel 원본" loading="lazy"><figcaption>TC-RIB-10 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="TC-RIB-10 수정 전" loading="lazy"><figcaption>TC-RIB-10 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-15">TC-RIB-11 · 자동화</h3>
+<p>분류: 일반 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>자동화 탭 진입점을 찾습니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>Office Scripts 목록과 스크립트 진입점을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel Automate 원본 · <a class="report-link" href="https://techcommunity.microsoft.com/blog/microsoft365insiderblog/automate-tasks-with-office-scripts-in-excel-for-windows-and-mac/4216151">https://techcommunity.microsoft.com/blog/microsoft365insiderblog/automate-tasks-with-office-scripts-in-excel-for-windows-and-mac/4216151</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-0f31b8fcecf427.png" alt="TC-RIB-11 Excel 원본" loading="lazy"><figcaption>TC-RIB-11 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="TC-RIB-11 수정 전" loading="lazy"><figcaption>TC-RIB-11 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-16">TC-RIB-12 · 개발 도구</h3>
+<p>분류: 일반 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>개발 도구 탭 진입점을 찾습니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>컨트롤·코드·디자인 모드 그룹을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Developer 컨트롤 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/form-controls">https://support.microsoft.com/en-us/excel/form-controls</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-8734469cdbcc68.png" alt="TC-RIB-12 Excel 원본" loading="lazy"><figcaption>TC-RIB-12 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="TC-RIB-12 수정 전" loading="lazy"><figcaption>TC-RIB-12 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-17">TC-RIB-13 · 추가 기능</h3>
+<p>분류: 일반 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>삽입의 추가 기능 그룹을 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>추가 기능 진입점을 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>삽입 Add-ins 그룹 부분 원본 · <a class="report-link" href="https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/">https://techcommunity.microsoft.com/blog/nonprofittechies/getting-familiar-with-microsoft-excel/3756412/</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-b44e68d3ffbc77.png" alt="TC-RIB-13 Excel 원본" loading="lazy"><figcaption>TC-RIB-13 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-13 수정 전" loading="lazy"><figcaption>TC-RIB-13 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-18">TC-RIB-14 · 표 디자인</h3>
+<p>분류: 특수 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>ChartGallery A5:C11 안 C11을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>표 내부에서 전용 탭·스타일 갤러리·옵션을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>ChartGallery A5:C11을 실제 표로 등록하고 Office60종+기존6종 갤러리를 연결했습니다. Office표367검사 및 실제 Light2 선택·Undo 통과. 이름 편집·크기 변경·총합 행 등 원본 메뉴는 미완성입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>ChartGallery A5:C11을 실제 표로 등록하고 Office60종+기존6종 갤러리를 연결했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>Office표367검사 및 실제 Light2 선택·Undo 통과. 이름 편집·크기 변경·총합 행 등 원본 메뉴는 미완성입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Windows 표 디자인 및 피벗 분석 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/where-are-the-table-tools">https://support.microsoft.com/en-us/excel/where-are-the-table-tools</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-a006f775941643.png" alt="TC-RIB-14 Excel 원본" loading="lazy"><figcaption>TC-RIB-14 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-table-design.png" alt="TC-RIB-14 수정 전" loading="lazy"><figcaption>TC-RIB-14 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/table-design.png" alt="TC-RIB-14 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-14 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-19">TC-RIB-15 · 도형 서식</h3>
+<p>분류: 특수 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>도형 개체를 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>도형 삽입·도형 스타일·WordArt·접근성·정렬·크기를 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>원본 순서의 그룹,3개 미리보기+32종 목록,색상·회전·정렬 순서 메뉴와 Affinity 아이콘을 적용했습니다. 문구 잘림도 수정했습니다. 스타일199검사 및 최신 실제 타일 선택·Undo3건 통과. 도형 효과·다중 객체 맞춤/그룹은 미구현입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>원본 순서의 그룹,3개 미리보기+32종 목록,색상·회전·정렬 순서 메뉴와 Affinity 아이콘을 적용했습니다. 문구 잘림도 수정했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>스타일199검사 및 최신 실제 타일 선택·Undo3건 통과. 도형 효과·다중 객체 맞춤/그룹은 미구현입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>OfficeToolTips 직접 촬영 Excel365 원본·빌드 미확인 · <a class="report-link" href="https://www.officetooltips.com/excel/tips/how_to_change_format_for_diagram_shapes_in_excel">https://www.officetooltips.com/excel/tips/how_to_change_format_for_diagram_shapes_in_excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-shape-format-excel365.png" alt="TC-RIB-15 Excel 원본" loading="lazy"><figcaption>TC-RIB-15 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-shape-format.png" alt="TC-RIB-15 수정 전" loading="lazy"><figcaption>TC-RIB-15 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/shape-format.png" alt="TC-RIB-15 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-15 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-20">TC-RIB-16 · 그림 서식</h3>
+<p>분류: 특수 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>삽입된 그림을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>보정·그림 스타일·접근성·정렬·크기를 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>조정·그림 스타일·접근성·배치·크기 그룹과6개 테두리 미리보기를 구성했습니다. 52검사에서 이미지 바이트·자르기·Undo·저장 재열기 보존 확인. Office 전체 그림 효과와 색 보정은 미구현입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>조정·그림 스타일·접근성·배치·크기 그룹과6개 테두리 미리보기를 구성했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>52검사에서 이미지 바이트·자르기·Undo·저장 재열기 보존 확인. Office 전체 그림 효과와 색 보정은 미구현입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>부분 원본·정확한 빌드 미확인 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5267157/where-are-microsoft-365-excel-picture-format-tools">https://learn.microsoft.com/en-us/answers/questions/5267157/where-are-microsoft-365-excel-picture-format-tools</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-8f6a1195d0b727.png" alt="TC-RIB-16 Excel 원본" loading="lazy"><figcaption>TC-RIB-16 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-picture-format.png" alt="TC-RIB-16 수정 전" loading="lazy"><figcaption>TC-RIB-16 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/picture-format.png" alt="TC-RIB-16 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-16 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-21">TC-RIB-17 · 차트 디자인</h3>
+<p>분류: 특수 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>차트를 선택한 뒤 디자인 탭에서 스타일2를 클릭합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>썸네일 스타일 목록·데이터·차트 요소를 대조합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>차트 레이아웃·스타일·데이터·유형·위치 순서와6개 실제 차트 미리보기·48종 목록을 구성했습니다. 최신 배치196검사 및 실제 스타일2 클릭 통과. 빠른 레이아웃·행/열 전환·종류/위치 변경 버튼은 비활성이며 구현이 남았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>차트 레이아웃·스타일·데이터·유형·위치 순서와6개 실제 차트 미리보기·48종 목록을 구성했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>최신 배치196검사 및 실제 스타일2 클릭 통과. 빠른 레이아웃·행/열 전환·종류/위치 변경 버튼은 비활성이며 구현이 남았습니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>부분 원본·정확한 빌드 미확인 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5423242/chart-design-not-available-i-have-tried-everything">https://learn.microsoft.com/en-us/answers/questions/5423242/chart-design-not-available-i-have-tried-everything</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-ed1f576bd1e820.png" alt="TC-RIB-17 Excel 원본" loading="lazy"><figcaption>TC-RIB-17 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-chart-design.png" alt="TC-RIB-17 수정 전" loading="lazy"><figcaption>TC-RIB-17 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/chart-design.png" alt="TC-RIB-17 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-17 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-22">TC-RIB-18 · 차트 서식</h3>
+<p>분류: 특수 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>차트를 선택한 뒤 서식 탭을 선택합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>현재 선택·서식·스타일·정렬을 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 선택·도형 스타일·텍스트·접근성·배치·크기 그룹과 차트 영역 서식 팝업을 연결했습니다. 326개 통합 검사에 차트 제목·범례·격자·색상·저장 검증 포함. 전체 차트 요소 선택/효과 메뉴는 미완성입니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>현재 선택·도형 스타일·텍스트·접근성·배치·크기 그룹과 차트 영역 서식 팝업을 연결했습니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>326개 통합 검사에 차트 제목·범례·격자·색상·저장 검증 포함. 전체 차트 요소 선택/효과 메뉴는 미완성입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>구형 Current Selection 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/office/graphics-visuals/change-the-shape-fill-outline-or-effects-of-chart-elements">https://support.microsoft.com/en-us/office/graphics-visuals/change-the-shape-fill-outline-or-effects-of-chart-elements</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-7db3b2c52a86d2.gif" alt="TC-RIB-18 Excel 원본" loading="lazy"><figcaption>TC-RIB-18 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-chart-format.png" alt="TC-RIB-18 수정 전" loading="lazy"><figcaption>TC-RIB-18 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/chart-format.png" alt="TC-RIB-18 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-18 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-23">TC-RIB-19 · 피벗 테이블 분석</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>피벗 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>피벗 개체 선택 시 분석 탭</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>원본 일부 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/where-are-the-table-tools">https://support.microsoft.com/en-us/excel/where-are-the-table-tools</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-a006f775941643.png" alt="TC-RIB-19 Excel 원본" loading="lazy"><figcaption>TC-RIB-19 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-19 수정 전" loading="lazy"><figcaption>TC-RIB-19 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-24">TC-RIB-20 · 피벗 테이블 디자인</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>피벗 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>피벗 스타일·레이아웃</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>원본 일부 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/design-the-layout-and-format-of-a-pivottable">https://support.microsoft.com/en-us/excel/design-the-layout-and-format-of-a-pivottable</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-dab46976558dc5.jpeg" alt="TC-RIB-20 Excel 원본" loading="lazy"><figcaption>TC-RIB-20 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-20 수정 전" loading="lazy"><figcaption>TC-RIB-20 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-25">TC-RIB-21 · 피벗 차트 분석</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>피벗 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>피벗 차트 선택 시 분석 탭</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>W3Schools 직접 작성 Field Buttons 부분 원본 · <a class="report-link" href="https://www.w3schools.com/excel/excel_pivot_charts.php">https://www.w3schools.com/excel/excel_pivot_charts.php</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-pivotchart-analyze-excel.png" alt="TC-RIB-21 Excel 원본" loading="lazy"><figcaption>TC-RIB-21 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-21 수정 전" loading="lazy"><figcaption>TC-RIB-21 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-26">TC-RIB-22 · 피벗 차트 디자인</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>피벗 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>피벗 차트 스타일·데이터</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-22 수정 전" loading="lazy"><figcaption>TC-RIB-22 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-27">TC-RIB-23 · 피벗 차트 서식</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>피벗 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>피벗 차트 서식</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-23 수정 전" loading="lazy"><figcaption>TC-RIB-23 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-28">TC-RIB-24 · 슬라이서</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>슬라이서 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>슬라이서 선택 시 전용 도구와 스타일을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>삽입·개체 부분 원본 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/545181/slicer-in-excel-on-o365-has-disappeared">https://learn.microsoft.com/en-us/answers/questions/545181/slicer-in-excel-on-o365-has-disappeared</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-d8020853219008.png" alt="TC-RIB-24 Excel 원본" loading="lazy"><figcaption>TC-RIB-24 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-24 수정 전" loading="lazy"><figcaption>TC-RIB-24 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-29">TC-RIB-25 · 시간 표시 막대</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Timeline 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>Timeline 스타일 갤러리를 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Timeline Styles 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/create-a-pivottable-timeline-to-filter-dates">https://support.microsoft.com/en-us/excel/create-a-pivottable-timeline-to-filter-dates</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-52a00383cdd46f.png" alt="TC-RIB-25 Excel 원본" loading="lazy"><figcaption>TC-RIB-25 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-25 수정 전" loading="lazy"><figcaption>TC-RIB-25 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-30">TC-RIB-26 · 스파크라인</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>스파크라인 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>스파크라인 스타일 갤러리를 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Sparkline Style 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/analyze-trends-in-data-using-sparklines">https://support.microsoft.com/en-us/excel/analyze-trends-in-data-using-sparklines</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-454b87d94b594f.png" alt="TC-RIB-26 Excel 원본" loading="lazy"><figcaption>TC-RIB-26 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-26 수정 전" loading="lazy"><figcaption>TC-RIB-26 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-31">TC-RIB-27 · SmartArt 디자인</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>SmartArt 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>레이아웃·색상·스타일을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel SmartArt 디자인 부분 원본 · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on">https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-d9d51c977005f2.png" alt="TC-RIB-27 Excel 원본" loading="lazy"><figcaption>TC-RIB-27 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-27 수정 전" loading="lazy"><figcaption>TC-RIB-27 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-32">TC-RIB-28 · SmartArt 서식</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>SmartArt 관련 서식 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>관련 개체의 서식·스타일을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>SmartArt 파생 개체의 Shape Format · <a class="report-link" href="https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on">https://learn.microsoft.com/en-us/answers/questions/5368523/smartart-in-excel-can-t-find-text-pane-no-arrow-on</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-d3c12abf1be4c0.png" alt="TC-RIB-28 Excel 원본" loading="lazy"><figcaption>TC-RIB-28 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-shape-format.png" alt="TC-RIB-28 수정 전" loading="lazy"><figcaption>TC-RIB-28 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-33">TC-RIB-29 · 그래픽 서식</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>관련 개체 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>SVG 선택 시 그래픽 서식</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-29 수정 전" loading="lazy"><figcaption>TC-RIB-29 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-34">TC-RIB-30 · 3D 모델 서식</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>관련 개체 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>3D 모델 선택 시 보기·정렬</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-30 수정 전" loading="lazy"><figcaption>TC-RIB-30 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-35">TC-RIB-31 · 수식 디자인</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>관련 개체 삽입·선택 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>수식 개체 선택 시 디자인</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>SpreadsheetPlanet 직접 작성 Excel Microsoft365 Windows 원본 · <a class="report-link" href="https://spreadsheetplanet.com/insert-equation-excel/">https://spreadsheetplanet.com/insert-equation-excel/</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-equation-excel365.png" alt="TC-RIB-31 Excel 원본" loading="lazy"><figcaption>TC-RIB-31 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-31 수정 전" loading="lazy"><figcaption>TC-RIB-31 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-36">TC-RIB-32 · 머리글·바닥글</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>머리글·바닥글 전용 편집 경로를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>페이지 번호·날짜·파일명 등의 요소를 비교합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Header/Footer Elements 부분 원본 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/headers-and-footers-in-a-worksheet">https://support.microsoft.com/en-us/excel/headers-and-footers-in-a-worksheet</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-764b201ec1e175.png" alt="TC-RIB-32 Excel 원본" loading="lazy"><figcaption>TC-RIB-32 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-page-layout.png" alt="TC-RIB-32 수정 전" loading="lazy"><figcaption>TC-RIB-32 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-37">TC-RIB-33 · 쿼리 편집</h3>
+<p>분류: 특수 · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>쿼리 개체의 전용 편집 진입을 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>쿼리 선택·편집 탭을 제공합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>현재 해당 기능/전용 탭은 구현되지 않았습니다. 이전 삽입/홈 화면을 해당 기능의 실행 증거로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Data Get &amp; Transform 부분 자료 · <a class="report-link" href="https://support.microsoft.com/en-us/excel/about-power-query-in-excel">https://support.microsoft.com/en-us/excel/about-power-query-in-excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-221cd8803c005c.png" alt="TC-RIB-33 Excel 원본" loading="lazy"><figcaption>TC-RIB-33 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-data.png" alt="TC-RIB-33 수정 전" loading="lazy"><figcaption>TC-RIB-33 수정 전</figcaption></figure></p>
+<p>화면 근거: 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-38">TC-RIB-34 · 게임 데이터</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>게임 데이터 탭 선택</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>등록 종류별 그룹과 창 색상 일관성</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-game-data.png" alt="TC-RIB-34 수정 전" loading="lazy"><figcaption>TC-RIB-34 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/game-data.png" alt="TC-RIB-34 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-34 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-39">TC-RIB-35 · 게임 테이블 도구</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>EnumGear 선택</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>게임 테이블 전용 도구·사용 예제</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-game-tools.png" alt="TC-RIB-35 수정 전" loading="lazy"><figcaption>TC-RIB-35 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/game-tools.png" alt="TC-RIB-35 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-35 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-40">TC-RIB-36 · 열거형 도구</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Enums 시트 선택</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>Enum 전용 도구·사용 예제</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-enum-tools.png" alt="TC-RIB-36 수정 전" loading="lazy"><figcaption>TC-RIB-36 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/enum-tools.png" alt="TC-RIB-36 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-36 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-41">TC-RIB-37 · 로컬라이징</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>ArcadeText 선택</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>번역 전용 도구·대체 언어·예제</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-localization.png" alt="TC-RIB-37 수정 전" loading="lazy"><figcaption>TC-RIB-37 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/localization.png" alt="TC-RIB-37 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-37 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-42">TC-RIB-38 · 서머리 도구</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Summary 시트 선택</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>서머리 전용 도구와 안내</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-summary-tools.png" alt="TC-RIB-38 수정 전" loading="lazy"><figcaption>TC-RIB-38 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/summary-tools.png" alt="TC-RIB-38 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-38 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-43">TC-RIB-39 · 설정</h3>
+<p>분류: 제품 전용 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>환경 설정 열기</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>우측 설정 위치와 읽기 쉬운 패널</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신 Unity에서 해당 제품 전용 화면을 재촬영했습니다. 전체 명령·플레이 잠금·저장 실패의 재검증은 남아 있습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel 대응 원본 없음·제품 고유 기능 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-settings.png" alt="TC-RIB-39 수정 전" loading="lazy"><figcaption>TC-RIB-39 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/settings.png" alt="TC-RIB-39 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-39 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 제품 전용 기능이므로 Excel 원본과 직접 대응하지 않음</p>
+<h3 id="section-44">TC-RIB-40 · 빠른 실행 도구</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>저장·Undo·Redo·제목 표시</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>Excel365 원본의 빠른 실행 도구 일부 · <a class="report-link" href="https://www.officetooltips.com/excel/tips/how_to_change_format_for_diagram_shapes_in_excel">https://www.officetooltips.com/excel/tips/how_to_change_format_for_diagram_shapes_in_excel</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>Excel 원본</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/excel-shape-format-excel365.png" alt="TC-RIB-40 Excel 원본" loading="lazy"><figcaption>TC-RIB-40 Excel 원본</figcaption></figure></p>
+<p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-home.png" alt="TC-RIB-40 수정 전" loading="lazy"><figcaption>TC-RIB-40 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-parity-20261101/home.png" alt="TC-RIB-40 수정 후 실제 실행" loading="lazy"><figcaption>TC-RIB-40 수정 후 실제 실행</figcaption></figure></p>
+<h3 id="section-45">TC-RIB-41 · 인쇄 미리보기</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>Print Preview 전용 탭·인쇄 설정</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-file-menu.png" alt="TC-RIB-41 수정 전" loading="lazy"><figcaption>TC-RIB-41 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-46">TC-RIB-42 · 배경 제거</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>그림 선택 후 배경 제거 전용 탭</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-picture-format.png" alt="TC-RIB-42 수정 전" loading="lazy"><figcaption>TC-RIB-42 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-47">TC-RIB-43 · 구형 차트 레이아웃</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>기준 목록 TabChartToolsLayout 명령군</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-chart-design.png" alt="TC-RIB-43 수정 전" loading="lazy"><figcaption>TC-RIB-43 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-48">TC-RIB-44 · 구형 피벗 차트 레이아웃</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>기준 목록 TabPivotChartToolsLayout 명령군</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-44 수정 전" loading="lazy"><figcaption>TC-RIB-44 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-49">TC-RIB-45 · BI 시각화 도구</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>기준 목록 TabBIVisualTools의 활성 조건과 명령</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-insert.png" alt="TC-RIB-45 수정 전" loading="lazy"><figcaption>TC-RIB-45 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h3 id="section-50">TC-RIB-46 · 접근성 작성 도구</h3>
+<p>분류: 기준 목록 보충 · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>해당 전용 탭 또는 진입점을 현재 리본에서 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>기준 목록 TabAccessibleAuthoring의 활성 조건과 명령</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>자료가 구형 별칭·부분 화면이거나 해당 기능의 실제 실행 증거가 부족합니다. 독립 최신 탭으로 확정하거나 통과 처리하지 않았습니다.</td>
+</tr>
+<tr>
+<td>수정 내용</td>
+<td>이번 회차 수정 없음. 이전 기록의 근거와 제한을 보존합니다.</td>
+</tr>
+<tr>
+<td>재검증</td>
+<td>전체 명령의 최신 실행 재검증은 미실행입니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td>해당 Excel 원본 미확보 · 제품 전용 기능: Excel 대응 원본 없음</td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/ribbon-tab-tc-20261031/current-review.png" alt="TC-RIB-46 수정 전" loading="lazy"><figcaption>TC-RIB-46 수정 전</figcaption></figure></p>
+<p>화면 근거: 대응 원본 사진 없음 또는 정확한 버전의 원본 미확보; 해당 기능의 최신 실제 실행 화면 미확보 또는 미구현</p>
+<h2 id="section-51">남은 사항</h2>
+<ol>
+<li>전체46TC의 원본과 같은 메뉴·아이콘·배치·기능 일치: 미완료. 아래 각TC의 미구현·미실행을 확인해 주십시오.</li>
+<li>피벗·슬라이서·시간 막대·SmartArt·3D·쿼리 등의 엔진과 전용 탭은 구현되지 않았습니다. 실제 외부 제한이 아니므로 차단으로 표시하지 않습니다.</li>
+<li>기존 탭도 모든 메뉴를 복제한 상태가 아닙니다. 차트 비활성 버튼, 도형 효과/다중 맞춤, 표 이름/범위/총합 행 등의 구현과 검증이 남았습니다.</li>
+<li>최신 본 프로젝트의 실제 클릭·입력·IME·반복 저장·닫기 안전성 전체 회귀가 남았습니다. 현재 보고서는 입력 성능 및 더티 파일 유실 문제의 해결을 보증하지 않습니다.</li>
+<li>문서9개 언어 갱신과 최종 제품 변경의 커밋·푸시·제출 패키지 검증이 남았습니다. 이 보고서 게시와 제품 배포를 구분합니다.</li>
+</ol>
+<p>교훈 검토: 전역 지침 변경 없음. 미실행을 통과로 보고하지 않기, 실행 증거와 화면 촬영을 구분하기, 최종 개별 웹 링크 확인 의무가 기존 지침에 이미 있습니다. 이번에는 해당 의무를 완료 보고에 적용하지 못했으므로 기존 규칙을 그대로 준수하고 상세 근거를 이 프로젝트에 남깁니다.</p>
+<h2 id="section-52">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 작업4–6시간(2026-10-31 23:42:56 KST 시작). 이번 보고서 정리·공개10–15분(2026-11-01 02:52:15 KST 시작).</li>
+<li>실제로 완료된 시간: 제품 전체 미완료. 이 원본 작성 시각 2026-11-01 02:54:05 KST. 보고서 공개 완료 시각과 소요 시간은 실제 배포 확인 후 채팅에 기록합니다.</li>
+<li>XERJ: 사용 — 작업 시작 XERJ 심볼 검색 후 현재 소스·XLSX XML 및 실제 Unity 결과와 대조. 이번 보고서 단계는 보존된 실행 근거를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-31-result-20261031175409887-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-10-31-result-20261031175409887-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-51">남은 사항</a><a href="#section-52">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

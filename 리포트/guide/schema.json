@@ -295,6 +295,86 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 1500
+    },
+    "testCases": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "group",
+          "title",
+          "steps",
+          "expected",
+          "actual",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_-]{1,30}$"
+          },
+          "group": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "steps": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "expected": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "actual": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "fix": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "retest": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "reference": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "referenceImage": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "beforeImage": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "afterImage": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "missingEvidence": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "partial",
+              "not_run"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "allOf": [
@@ -403,6 +483,20 @@
           },
           "focusTasks": {
             "maxItems": 5
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "testCases"
+        ]
+      },
+      "then": {
+        "properties": {
+          "kind": {
+            "const": "result"
           }
         }
       }

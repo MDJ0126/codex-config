@@ -1,5 +1,6 @@
 import {validateDiscussion,DISCUSSION_STATES,TOPICS} from './discussion-contract.mjs';
 import {validateManual,manualMarkdown} from './manual-contract.mjs';
+import {validateTestCases,testCaseMarkdown} from './test-case-contract.mjs';
 export const WORKFLOW=[['new','접수'],['review','검토'],['in_progress','진행'],['resolved','해결'],['closed','종료']];
 export const PRIORITY=[['low','낮음'],['normal','보통'],['high','높음'],['urgent','긴급']];
 export const SEVERITY=[['minor','경미'],['normal','보통'],['major','주요'],['critical','치명']];
@@ -32,8 +33,9 @@ export function validateReport(input,projects){
   r.state=input.state||'verification';if(!['complete','partial','progress','verification','blocked'].includes(r.state))throw new Error('결과 상태를 확인하세요.');
   if(r.state==='complete'&&!r.verification)throw new Error('완료된 결과에는 검증 근거가 필요합니다.');
  }
+ if(input.testCases!==undefined){if(r.kind!=='result')throw new Error('TC는 결과 보고서에 기록하세요.');r.testCases=validateTestCases(input.testCases);if(r.state==='complete'&&r.testCases.some(c=>c.status!=='pass'))throw new Error('전체 TC 통과 전에는 완료로 등록할 수 없습니다.');}
  if(/(?:ghp_[a-zA-Z0-9]{20,}|github_pat_[a-zA-Z0-9_]{25,}|-----BEGIN .*PRIVATE KEY)/.test(JSON.stringify(r)))throw new Error('인증정보로 보이는 내용은 공개 보고서에 포함할 수 없습니다.');
- if(JSON.stringify(r).length>(r.kind==='manual'?55000:35000))throw new Error('전체 내용 제한을 초과했습니다. 이전 기록을 보존하고 후속 버전으로 이어가세요.');
+ if(JSON.stringify(r).length>(r.kind==='manual'||r.testCases?55000:35000))throw new Error('전체 내용 제한을 초과했습니다. 이전 기록을 보존하고 후속 버전으로 이어가세요.');
  return r;
 }
 export function issueBody(r){return '<!-- tracefolio:v2 -->\n\n이 보고서는 Tracefolio 공통 작성 양식으로 등록되었습니다. 단계 변경은 아래 JSON의 workflow를 수정합니다.\n\n```json\n'+JSON.stringify(r,null,2)+'\n```';}
@@ -58,6 +60,6 @@ export function toMarkdown(r,{date=new Date().toISOString(),version='v1.0.0',iss
  if(issueNumber)lines.push(`issue: ${issueNumber}`,`issue_url: ${issueURL}`);
  lines.push('---','','## 작업 결과','',r.outcome,'','## 변경 내용','');
  if(r.kind==='bug')for(const [name,key]of [['재현 조건','environment'],['재현 순서','steps'],['기대 동작','expected'],['실제 동작','actual'],['원인','cause']])lines.push(`### ${name}`,'',r[key]||(key==='cause'?'미확인':missing),'');
- lines.push('### 적용 내용','',r.changes||missing,'','## 검증','',r.verification||'검증 기록이 제공되지 않았습니다.','','## 남은 사항','',r.remaining||'남은 사항이 기록되지 않았습니다.','','## 작업 시간','',`- 제안 시간: ${r.proposedTime||'작성 시 기록되지 않았습니다.'}`,`- 실제로 완료된 시간: ${r.actualTime||'제품 작업의 완료 시간은 기록되지 않았습니다.'}`,`- XERJ: ${r.xerjUsage} — ${r.xerjEvidence||'코드 검색 근거가 제공되지 않았습니다.'}`,'');
+ lines.push('### 적용 내용','',r.changes||missing,'','## 검증','',r.verification||'검증 기록이 제공되지 않았습니다.','',...(r.testCases?testCaseMarkdown(r.testCases):[]),'## 남은 사항','',r.remaining||'남은 사항이 기록되지 않았습니다.','','## 작업 시간','',`- 제안 시간: ${r.proposedTime||'작성 시 기록되지 않았습니다.'}`,`- 실제로 완료된 시간: ${r.actualTime||'제품 작업의 완료 시간은 기록되지 않았습니다.'}`,`- XERJ: ${r.xerjUsage} — ${r.xerjEvidence||'코드 검색 근거가 제공되지 않았습니다.'}`,'');
  if(issueURL)lines.push(`[등록·상태 변경 이력](${issueURL})`,'');return lines.join('\n');
 }

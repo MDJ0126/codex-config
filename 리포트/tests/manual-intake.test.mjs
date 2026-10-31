@@ -6,7 +6,7 @@ import {issueBody,validateReport} from '../assets/report-contract.mjs';
 test('manual CLI and GitHub intake retain failed QA, immutable versions and reject truncation',async()=>{
  const root=await mkdtemp(path.join(os.tmpdir(),'tracefolio-manual-'));
  try{
-  for(const file of ['create-report.mjs','update-manual.mjs','sync-issue.mjs','discussion-data.mjs','layout.mjs','assets/report-contract.mjs','assets/discussion-contract.mjs','assets/manual-contract.mjs']){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await cp(new URL('../'+file,import.meta.url),path.join(root,file));}
+  for(const file of ['create-report.mjs','update-manual.mjs','sync-issue.mjs','discussion-data.mjs','layout.mjs','assets/report-contract.mjs','assets/discussion-contract.mjs','assets/manual-contract.mjs','assets/test-case-contract.mjs']){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await cp(new URL('../'+file,import.meta.url),path.join(root,file));}
   await mkdir(path.join(root,'projects/pixora/posts'),{recursive:true});await writeFile(path.join(root,'projects.json'),JSON.stringify({pixora:{name:'Pixora'}}));
   const payload={schemaVersion:2,project:'pixora',kind:'manual',title:'실제 순차 계획',summary:'격리 접수 검사',outcome:'계획 생성',manualId:'intake-test',manualState:'planned',phase:'initial',round:1,goal:'목표',completionCriteria:'실제 전체 QA',tasks:[{id:'T01',title:'작업',action:'실행',expected:'기대값',qa:'실제 비교',revision:1,status:'pending',dependsOn:[]}],qaRuns:[]};
   const command=async(script,args=[])=>{await writeFile(path.join(root,'input.json'),JSON.stringify(payload));return spawnSync(process.execPath,[path.join(root,script),...args],{encoding:'utf8',windowsHide:true});};
