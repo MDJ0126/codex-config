@@ -1,5 +1,45 @@
 [
   {
+    "title": "6시간 경량화4차: 6.75MB 기본 게임 적용·전체 기능 회귀 통과",
+    "summary": "검증한 패키지를 실제8788 게임에 적용하고 재시작 전후 캐릭터와 물자를 대조했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-result-20261031000340832-v1.0.0.html",
+    "date": "2026-10-31T00:03:40.832Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-manual-lightweight-six-hour-20261031-20261031000130893-v1.0.14.html",
+    "date": "2026-10-31T00:01:30.893Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030235016134-v1.0.13.html",
+    "date": "2026-10-30T23:50:16.134Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "6시간 지속 경량 웹 생존·피난·전쟁·좀비 개선",
+    "summary": "빌드 용량 증가를 차단하고 기존 네 가지 개념을 실제 게임·서버·배포 비용 검증과 함께 개선합니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-30-manual-lightweight-six-hour-20261031-20261030235015838-v1.0.12.html",
+    "date": "2026-10-30T23:50:15.838Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "6시간 경량화3차: 동일100명 장면19→53FPS와 반복 전환 재질 누적 수정",
     "summary": "기존 캐릭터를 유지한 재질 묶음·거리LOD와 WebAssembly 설정을 실제100명 장면에서 비교했습니다.",
     "project": "last37n",
