@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-31T07:52:40.663725+00:00",
+  "modifiedWorkbookFilesMatchingQaSource": 17,
+  "otherConcurrentDifferences": [
+    {
+      "file": "Scripts/Editor/Window/DataTableEditor.cs",
+      "scope": "Concurrent change outside the Workbook ribbon sources; not claimed tested by the recorded native Workbook captures."
+    }
+  ],
+  "files": [
+    {
+      "file": "Scripts/Editor/WorkbookEditingOperations.cs",
+      "sha256": "145ed5fad532ffe573d3b4bafa6e0fd773b3370941edb0f19e07379c542678a3"
+    },
+    {
+      "file": "Scripts/Editor/WorkbookEditSession.cs",
+      "sha256": "983aee086d594c8ff101b738b47bed69ae6f4acc94dd09f50cc8daf9d78d950b"
+    },
+    {
+      "file": "Scripts/Editor/WorkbookInsertContent.cs",
+      "sha256": "3bf58f7d2f224cc5620e46f005911e0f574f535a5986543a18f629ef9d974fe2"
+    },
+    {
+      "file": "Scripts/Editor/WorkbookPageLayout.cs",
+      "sha256": "993575b96473a1a0b9df91bffb2b37fcd4c5ea7b13d66131ea037620249b1a22"
+    },
+    {
+      "file": "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+      "sha256": "067ac1ff4d6b364c3b5bb74a2bddea48a06364995c927297723172ab5a044f15"
+    },
+    {
+      "file": "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+      "sha256": "834255ca82e1d6fcd28c7b04fbf4a67b844a76e91198196c0f5f216334124fec"
+    },
+    {
+      "file": "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+      "sha256": "ea6450abae8ca4dd7598588e6695de671eaf028d6ee6072a8b5fa37788adb47e"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookInsertContentPopup.cs",
+      "sha256": "7d3c8a3a65381902dc89e151eaa7ba7ae36dc2a872aa757a619b24a957400ef7"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookInteractionMetrics.cs",
+      "sha256": "ae568da851f8aaf12f059937ef5da461bff8170555e5d1b5c1c094610d3edc20"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookPageLayoutPopup.cs",
+      "sha256": "828c3712ea43715a3590af5d61fe1dff10f4085ab79ed18e540ec9c9d4ed334b"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookShortcutCatalog.cs",
+      "sha256": "5334dfde8dd6118e9df6b34e91343ee717f4c55fa992e225c306668b15f03ed2"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookStatisticsPopup.cs",
+      "sha256": "972246095631bc6f0cada9e7ea84a280d7bff4de122e5e5c75d08de361612e09"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookViewer.cs",
+      "sha256": "cf5e8cd848f316ea840dac2eea4df63fd6c583acd44e5a86986713cc68e325fe"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookViewerInsert.cs",
+      "sha256": "d5a2fb2b795d517e476a239097a0c95523dd7d57fbdd69e6ca95f5c99a946757"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookViewerRibbonActions.cs",
+      "sha256": "26d4534968c12dd4f0de15afb7bd25c1ddddae442e6621f92a658375c8c13760"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookViewerShortcuts.cs",
+      "sha256": "31e7d49deaf7f05ec385764b2bd66310bd71863f8cf1b66aaad4182ca7ae8c68"
+    },
+    {
+      "file": "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+      "sha256": "413c37d3c3aed8545fd1e688d48f765d934b58dee5c92ea1c9c33e6fe87ebac8"
+    }
+  ]
+}

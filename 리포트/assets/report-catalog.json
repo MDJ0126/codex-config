@@ -1,5 +1,15 @@
 [
   {
+    "title": "Excel 원본229개 재검수와 입력·삽입 오류 수정",
+    "summary": "원본229개를 검수하고 Ctrl+K·동적 배열 링크·텍스트 상자·리본 라벨 문제를 수정·재QA했습니다. 실제 검사와 미구현·미확인을 분리했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-result-20261031080955505-v1.0.0.html",
+    "date": "2026-10-31T08:09:55.505Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora 예제 소재 다양화 — Affinity·Blender",
     "summary": "다양한 원본과 10개 실제 씬을 제작하고 공용 폰트·깔끔한 샘플 UI를 추가합니다.",
     "project": "turnroom",
@@ -16,6 +26,16 @@
     "reportPath": "projects/turnroom/reports/2026-10-31-result-20261031080201009-v1.0.0.html",
     "date": "2026-10-31T08:02:01.009Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom Excel 전체 탭 기능 대조·구현 메뉴얼",
+    "summary": "원본229개와 현재 화면을 대조해 입력·삽입·글꼴 라벨 문제를 수정·재QA했습니다.4926행 분류를 최신화했으며 전체 Excel 동등성은 미완료입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031080122104-v1.0.9.html",
+    "date": "2026-10-31T08:01:22.104Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
@@ -40,11 +60,31 @@
     "replyTo": ""
   },
   {
+    "title": "TurnRoom Excel 전체 탭 기능 대조·구현 메뉴얼",
+    "summary": "원본229개와31쌍을 대조하고 입력·삽입·페이지 설정을 수정·재QA했습니다. 미구현 기능을 차단/통과로 바꾸지 않고27개 전체 범위를 유지합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031072730670-v1.0.8.html",
+    "date": "2026-10-31T07:27:30.670Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora 예제 소재 다양화 — Affinity·Blender",
     "summary": "다양한 원본과 10개 실제 씬을 제작하고 공용 폰트·깔끔한 샘플 UI를 추가합니다.",
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-10-31-manual-pixora-varied-sample-art-20261031072728601-v1.0.1.html",
     "date": "2026-10-31T07:27:28.601Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom Excel 전체 탭 기능 대조·구현 메뉴얼",
+    "summary": "원본229개와31쌍을 대조하고 입력·삽입·페이지 설정을 수정·재QA했습니다. 미구현 기능을 차단/통과로 바꾸지 않고27개 전체 범위를 유지합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031071838583-v1.0.7.html",
+    "date": "2026-10-31T07:18:38.583Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -95,6 +135,16 @@
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-10-31-manual-window-performance-stress-20261031054621221-v1.0.1.html",
     "date": "2026-10-31T05:46:21.221Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom Excel 전체 탭 기능 대조·구현 메뉴얼",
+    "summary": "기존27개 작업에 원본·실제 화면과 판정 근거를 연결했습니다. 차단 오분류를 정정했고 전체 Excel 일치는 실패 상태입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-manual-turnroom-excel-ribbon-parity-20261031-20261031054249597-v1.0.6.html",
+    "date": "2026-10-31T05:42:49.597Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""

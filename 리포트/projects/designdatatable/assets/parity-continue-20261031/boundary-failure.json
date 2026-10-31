@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-31T07:21:02.7611745Z",
+  "passedBeforeFailure": 51,
+  "actualFailure": "DesignDataTable.Editor.WorkbookPreservationException: Editing array, data-table and other range formulas is not supported yet.",
+  "fix": "WorkbookPackage.SetHyperlink: allow verified dynamic arrays while preserving sheet protection.",
+  "afterFix": "53 assertions passed; 16 regression suites / 3550 assertions passed."
+}

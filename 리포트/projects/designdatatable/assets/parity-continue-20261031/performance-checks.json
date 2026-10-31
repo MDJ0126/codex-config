@@ -1,0 +1,210 @@
+{
+    "utc": "2026-10-31T07:10:16.3630026Z",
+    "unityVersion": "6000.0.83f1",
+    "mode": "optimized",
+    "actualUnity": true,
+    "instrumentationRevision": 3,
+    "measurements": [
+        {
+            "name": "gui.Layout",
+            "calls": 880,
+            "totalMs": 3706.9386999999965,
+            "maxMs": 126.9805,
+            "p95Ms": 7.3223,
+            "percentileSampleCount": 880
+        },
+        {
+            "name": "gui.repaint",
+            "calls": 722,
+            "totalMs": 4076.7198999999996,
+            "maxMs": 204.1926,
+            "p95Ms": 10.9569,
+            "percentileSampleCount": 722
+        },
+        {
+            "name": "registration",
+            "calls": 8390,
+            "totalMs": 5703.435900000002,
+            "maxMs": 118.7922,
+            "p95Ms": 1.6172,
+            "percentileSampleCount": 2048
+        },
+        {
+            "name": "grid.Layout",
+            "calls": 511,
+            "totalMs": 287.71049999999959,
+            "maxMs": 3.5525,
+            "p95Ms": 1.09,
+            "percentileSampleCount": 511
+        },
+        {
+            "name": "active.Layout",
+            "calls": 510,
+            "totalMs": 3299.1557000000003,
+            "maxMs": 126.9834,
+            "p95Ms": 12.1694,
+            "percentileSampleCount": 510
+        },
+        {
+            "name": "grid.MouseLeaveWindow",
+            "calls": 1,
+            "totalMs": 0.8574,
+            "maxMs": 0.8574,
+            "p95Ms": 0.8574,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.MouseLeaveWindow",
+            "calls": 1,
+            "totalMs": 3.8657,
+            "maxMs": 3.8657,
+            "p95Ms": 3.8657,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.MouseLeaveWindow",
+            "calls": 1,
+            "totalMs": 3.8684,
+            "maxMs": 3.8684,
+            "p95Ms": 3.8684,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.mouseDown",
+            "calls": 1,
+            "totalMs": 1.365,
+            "maxMs": 1.365,
+            "p95Ms": 1.365,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.mouseDown",
+            "calls": 1,
+            "totalMs": 5.8246,
+            "maxMs": 5.8246,
+            "p95Ms": 5.8246,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.mouseDown",
+            "calls": 1,
+            "totalMs": 5.828,
+            "maxMs": 5.828,
+            "p95Ms": 5.828,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.mouseUp",
+            "calls": 1,
+            "totalMs": 0.4256,
+            "maxMs": 0.4256,
+            "p95Ms": 0.4256,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.mouseUp",
+            "calls": 1,
+            "totalMs": 3.9984,
+            "maxMs": 3.9984,
+            "p95Ms": 3.9984,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.mouseUp",
+            "calls": 1,
+            "totalMs": 4.0015,
+            "maxMs": 4.0015,
+            "p95Ms": 4.0015,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.repaint",
+            "calls": 353,
+            "totalMs": 1066.653099999999,
+            "maxMs": 113.0441,
+            "p95Ms": 3.9523,
+            "percentileSampleCount": 353
+        },
+        {
+            "name": "active.repaint",
+            "calls": 352,
+            "totalMs": 3337.569200000002,
+            "maxMs": 204.1951,
+            "p95Ms": 15.7802,
+            "percentileSampleCount": 352
+        },
+        {
+            "name": "grid.MouseEnterWindow",
+            "calls": 1,
+            "totalMs": 0.596,
+            "maxMs": 0.596,
+            "p95Ms": 0.596,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "gui.MouseEnterWindow",
+            "calls": 1,
+            "totalMs": 5.8597,
+            "maxMs": 5.8597,
+            "p95Ms": 5.8597,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "active.MouseEnterWindow",
+            "calls": 1,
+            "totalMs": 5.8698,
+            "maxMs": 5.8698,
+            "p95Ms": 5.8698,
+            "percentileSampleCount": 1
+        },
+        {
+            "name": "grid.Used",
+            "calls": 77,
+            "totalMs": 39.9234,
+            "maxMs": 2.6985,
+            "p95Ms": 1.2117,
+            "percentileSampleCount": 77
+        },
+        {
+            "name": "gui.KeyDown",
+            "calls": 77,
+            "totalMs": 642.1477999999998,
+            "maxMs": 126.131,
+            "p95Ms": 19.767,
+            "percentileSampleCount": 77
+        },
+        {
+            "name": "active.KeyDown",
+            "calls": 77,
+            "totalMs": 642.3425,
+            "maxMs": 126.1342,
+            "p95Ms": 19.7703,
+            "percentileSampleCount": 77
+        },
+        {
+            "name": "grid.keyUp",
+            "calls": 77,
+            "totalMs": 40.199799999999999,
+            "maxMs": 1.9788,
+            "p95Ms": 1.3812,
+            "percentileSampleCount": 77
+        },
+        {
+            "name": "gui.keyUp",
+            "calls": 77,
+            "totalMs": 517.9018000000001,
+            "maxMs": 117.8117,
+            "p95Ms": 14.7498,
+            "percentileSampleCount": 77
+        },
+        {
+            "name": "active.keyUp",
+            "calls": 77,
+            "totalMs": 518.2111000000001,
+            "maxMs": 117.8146,
+            "p95Ms": 14.7601,
+            "percentileSampleCount": 77
+        }
+    ],
+    "geometry": []
+}
