@@ -1,0 +1,335 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixel Camera 독립 도구 구현과 실행 검증",
+    "summary": "공통 템플릿 창, 공유 프리셋, 카메라 픽셀화와 후순위 레이어를 구현합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "새 기능 구현·두 파이프라인 실행·네이티브입력·문서·패키지·공개보고 진행",
+    "outcome": "12개 전체 맵, Overlay UI, 135/180/270/360/540 프리셋, 카드형 설정 창과 실제 Affinity 로고 적용. 기존 TurnRoom에서 전체 렌더 및 Play 확인.",
+    "proposedTime": "60~90분. 시작 2026-11-01 03:26:13 KST.",
+    "actualTime": "구현·검증 진행 중; 완료시각 없음",
+    "xerjEvidence": "실제 권한에서 XERJ Status 정상, TemplateAssetInspector 검색 5개 후보를 현재 모체 소스와 대조. 샌드박스 접속 실패를 노드 미실행으로 단정하지 않음.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-20261101",
+    "round": 5,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Pixel Camera 유료 제품용 기능 보완과 두 파이프라인 실제 검증",
+    "completionCriteria": "기존 원래 기준을 유지하며 전체 12개 맵의 렌더·Play·Overlay UI, 작은 픽셀 프리셋, 실제 Affinity 로고 및 새 설정 창 디자인 검증을 추가합니다. 외곽선·격자 안정화·팔레트 실제픽셀 비교, Built-in 최적화 경로, URP17 RenderGraph 실제실행, 기존프리셋호환, 네이티브입력·Undo 검증.",
+    "previousManual": "projects/turnroom/reports/2026-10-31-manual-pixel-camera-20261101-20261031173653258-v1.0.4.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "템플릿과 렌더 환경 확인",
+        "action": "템플릿 지침·API·Unity 버전·패키지 확인",
+        "expected": "실제 지원 범위와 상속 구조 확인",
+        "qa": "원본 문서와 소스·설정을 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "ToolWindow와 UITemplate 공통 API, Unity 6000.0.83f1 Built-in 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "런타임과 프리셋 구현",
+        "action": "프리셋, 저해상도 카메라 캡처, 색상 처리, 클리핑, 후순위 레이어 구현; 외곽선·격자 안정화·팔레트·자동 렌더 경로 구현",
+        "expected": "프리셋을 공유하고 장면 렌더링에 적용",
+        "qa": "실제 Unity 렌더 결과 픽셀 비교, 저장·재로드, 가림과 관통 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "doing",
+        "revision": 2,
+        "result": "기존 기준과 새 기능 회귀 QA 대기"
+      },
+      {
+        "id": "T06",
+        "order": 3,
+        "title": "URP17 RenderGraph 통합",
+        "action": "독립 통합 어셈블리·RendererFeature·설치 가이드·URP 테스트 프로젝트 구현",
+        "expected": "URP17에서 실제 렌더와 새 효과 작동, Built-in 프로젝트는 URP 설치 없이 컴파일",
+        "qa": "Unity6000.0.83f1/URP17.0.4 RenderGraph 실제 픽셀 비교와 샘플Play",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 4,
+        "title": "템플릿 설정 창",
+        "action": "공통 제목줄·입력·테마·미리보기·컴포넌트 적용; 카드 레이아웃·5단계 픽셀 버튼·Affinity 벡터 로고; 새 기능 카드 및 팔레트 Inspector",
+        "expected": "독립 창에서 프리셋 편집과 적용",
+        "qa": "실제 Unity 창과 바인딩·Undo·저장 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 3,
+        "result": "실제 라이트/다크 화면·로고·카메라 미리보기·필드 대비 재검증. 팝업의 네이티브 값 편집/Undo 미검증."
+      },
+      {
+        "id": "T04",
+        "order": 5,
+        "title": "샘플·문서·패키지",
+        "action": "12개 전체 맵, Overlay UI, 5개 해상도 프리셋, 9개 언어 문서 및 새 Unity 패키지; 상업용 기능 예제와 Built-in/URP 패키지 설치 검사",
+        "expected": "분리 설치 가능한 제품과 사용 안내; TurnRoom Assets 안에 실제 맵 씬이 존재하고 Unity 임포트·렌더·입력을 확인",
+        "qa": "샘플 실행 및 패키지 파일 목록, 실제 화면 대조",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 5,
+        "result": "전체 12개 씬 렌더·Play에서 렌더러292, Overlay1, UI 버튼7/텍스트12. native 4키→540, UI버튼→270, P→원본 확인. 353개 에셋 패키지와 제품 원본144개 해시 대조 통과. 선행 T03의 네이티브 입력 검사가 미검증이므로 메뉴얼 상태 완료 등록은 보류합니다."
+      },
+      {
+        "id": "T05",
+        "order": 6,
+        "title": "최종 QA와 공개 보고",
+        "action": "회귀 검증·실제 화면·공개 HTML 보고서 배포",
+        "expected": "검증 근거와 외부 접근 가능한 개별 보고서",
+        "qa": "빌드·링크·배포와 실제 공개 본문 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": "실제 화면과 검증 근거로 후속 결과 보고 및 공개 배포 진행. T03 미검증 범위 보존. 선행 T03의 네이티브 입력 검사가 미검증이므로 메뉴얼 상태 완료 등록은 보류합니다."
+      }
+    ],
+    "focusTasks": [
+      "T02",
+      "T06",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "사용자가 외곽선과 부족 기능 보완 구현을 승인하고 유료 제품 방향으로 전환했습니다. 기존 로고·12개샘플·프리셋 호환을 유지하며 외곽선/격자 안정화/팔레트/URP/성능/남은입력QA를 포함합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T15:38:53.4377559Z",
+        "summary": "템플릿과 프로젝트 설정 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "ToolWindow 상속, UITemplate.Apply/CreateDocumentChrome, Unity 6000.0.83f1 및 SRP 패키지 미설치 확인",
+            "evidence": "Docs/Development/TempleteGallery.md; TempleteRoadmap.md; Assets/TurnRoom/Templete/Editor/ToolWindow.cs; Packages/manifest.json; ProjectSettings/ProjectVersion.txt",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-31T15:42:18.9628348Z",
+        "summary": "미표시 검증 창 Close에서 NullReferenceException. 실제 UI 입력 QA가 아니라 검증 코드 수명 오류였습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "미표시 검증 창 Close에서 NullReferenceException. 실제 UI 입력 QA가 아니라 검증 코드 수명 오류였습니다.",
+            "evidence": "qa.first.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-10-31T15:43:40.3659247Z",
+        "summary": "씬 전환으로 임시 RenderTexture가 해제되어 샘플 렌더 QA 실패. HideAndDontSave 수명 설정 후 재검증했습니다.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "씬 전환으로 임시 RenderTexture가 해제되어 샘플 렌더 QA 실패. HideAndDontSave 수명 설정 후 재검증했습니다.",
+            "evidence": "qa.second.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-10-31T15:44:45.5456507Z",
+        "summary": "클리핑 샘플의 근거리 평면이 비교 피사체까지 제거해 다중 색상 검사 실패. 샘플 클리핑 값을 수정했습니다.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "클리핑 샘플의 근거리 평면이 비교 피사체까지 제거해 다중 색상 검사 실패. 샘플 클리핑 값을 수정했습니다.",
+            "evidence": "qa.third.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "regression",
+        "at": "2026-10-31T16:01:18.3625227Z",
+        "summary": "모델 4종을 포함한 Unity 에디터 54개 검사 통과. 원래 UI 완료 기준의 실제 입력 검사는 미실행으로 구분합니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 렌더 픽셀·프리셋 저장·공유·클리핑·깊이 제어 통과",
+            "evidence": "qa.json: 54 checks passed, sourceHash 689d49094afa00ca2721f5736b227aa90aeb09c3a7e06696f38ba285017ca8de",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "바인딩·직접 적용·Undo/Redo 통과. 실제 키보드·마우스와 테마 화면 검사는 보류",
+            "evidence": "qa.json 및 사용자 화면 전환 금지 요청",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "모델 4종·씬 10개 실제 렌더와 Pixora 경로 의존성 제거 검사 통과",
+            "evidence": "qa.json, Samples/Artwork/Provenance.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "final",
+        "at": "2026-10-31T16:20:40.7090225Z",
+        "summary": "전체 QA 점검: 실행 검증·패키지는 통과, 실제 입력·테마 화면·최종 공개 확인은 미실행이므로 메뉴얼을 완료 처리하지 않습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "템플릿과 Built-in 환경 확인",
+            "evidence": "기존 Q01 원본 대조",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "54개 에디터 검사·15개 재개방 검사·2개 플레이어 렌더 검사 통과",
+            "evidence": "qa.json, reopen.json, player-models.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "실제 입력 및 설정 창 테마 화면 검사 보류",
+            "evidence": "사용자 화면 전환 금지 요청",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "모델·문서·패키지 정적 검사는 통과, 설정 창 가이드 캡처는 남음",
+            "evidence": "package-verification.json, ScreenshotManifest.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "보고서 생성과 공개 배포 준비 중. 전체 QA 통과 미충족",
+            "evidence": "result.json",
+            "dependencies": {
+              "T04": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-10-31T16:47:18.2308276Z",
+        "summary": "TurnRoom 안의 맵 2개 정적 검사와 Unity 어셈블리 대상 C# 컴파일 통과. Unity 실행 검증은 미실행.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 3,
+            "verdict": "not_run",
+            "actual": "각 씬 649개 직렬화 레코드, 메시 126개·모델 6개. 로컬 fileID·외부 GUID 연결·단위 회전·크기·해시 검사 통과. C# 오류·경고 0개. Unity 임포트·실제 렌더·입력은 미실행.",
+            "evidence": "Docs/Testing/2026-11-01/pixel-camera-map/static-verification.json; compile.txt",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-10-31T17:36:33.904Z",
+        "summary": "실제 TurnRoom 12개 맵 렌더/Play와 UI·미세 픽셀·설정 테마·패키지 검증",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "설정 창 라이트/다크·미리보기·로고 시각 검증 통과. 네이티브 팝업 입력은 부모 창 활성화로 실패하여 미검증.",
+            "evidence": "SettingsDark.png, SettingsLight.png; native-settings270-readback referenceHeight180(기대270) 보존",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 4,
+            "verdict": "pass",
+            "actual": "12개 맵 렌더/Play·Overlay UI·native540/270/원본 전환·9개 언어 문서 링크/캡처 해시·새 패키지 원본 대조 통과",
+            "evidence": "play-all-03.json; all-scenes-render-02.json; native-key4-readback.json; native-button270-readback.json; native-bypass-readback.json; package-verification.json",
+            "dependencies": {
+              "T03": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
