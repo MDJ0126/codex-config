@@ -1,0 +1,148 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "Unique 타입·Enum·로컬라이징 중복 경고",
+    "summary": "화면 조작 없이 타입 제약과 중복 위치 진단을 구현·검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 Unity 화면에서 붉은 경고 박스·팝업 선택·오류 목록의 배치를 확인하고 9개 언어 가이드의 관련 이미지를 재촬영해야 합니다. 사용자 화면 조작 금지에 따라 미실행입니다. 이 보고서에는 오래된 스크린샷을 새 결과처럼 첨부하지 않았습니다. 전역 교훈 검토: 웹사이트 링크만 전달한다는 최신 지침이 설치본·설정 저장소에 이미 반영되어 있어 중복 추가하지 않았습니다.",
+    "outcome": "구현·headless 검증 통과. 네이티브 화면 검증은 사용자 제한으로 미실행.",
+    "proposedTime": "15~25분",
+    "actualTime": "구현·비대화형 검증 23분 27초, 2026-10-31 19:32:53 KST. 공개 배포 확인은 별도로 수행합니다. 화면 검증 완료 시각은 없습니다.",
+    "xerjEvidence": "XERJ WorkbookGameValidation 검색 후 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "unique-column-validation-20261031",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "타입별 unique, 기존 게임 Id 전환, Enum·로컬라이징 중복 셀 및 상대 위치 로그",
+    "completionCriteria": "파싱·저장·생성형식·중복 위치 검사와 기존 Id 마이그레이션 및 회귀 통과. 네이티브 화면 검증은 사용자 제한에 따라 미실행으로 명시.",
+    "previousManual": "projects/designdatatable/reports/2026-10-31-manual-20261031101436930-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "Unique 타입 계약",
+        "action": "타입 선택·파싱·직렬화에 unique 추가",
+        "expected": "기본·Enum 타입의 일반/unique 선택과 Id int(unique) 보존",
+        "qa": "모든 타입 파싱·저장·다시 읽기 및 생성 C# 타입 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "기본·Enum unique 선택·파싱·저장 검증 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "중복 셀·위치 로그",
+        "action": "게임·Enum·로컬라이징 중복을 양쪽 셀과 문제 목록에 연결",
+        "expected": "붉은 셀 진단과 상대 셀 주소가 동일 API에서 반환",
+        "qa": "2개·3개·타입 정규화·수정 해소·교차 Enum 회귀",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "양쪽 셀·상대 주소·문제 목록과 중복 해소 검증 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "기존 Id 마이그레이션",
+        "action": "게임 소스와 Summary Id 타입을 API로 전환",
+        "expected": "값과 다른 시트가 보존되고 재실행 변경 없음",
+        "qa": "실제 파일 재읽기·멱등성·스키마 및 binary 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "23개 전환, 원본 값·수식 보존 및 재실행 변경0"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "회귀·문서·웹 보고",
+        "action": "컴파일·비대화형 QA·문서 갱신 및 웹 게시",
+        "expected": "실행 근거와 화면 미검증을 구분한 웹 보고서",
+        "qa": "성능 및 중복 케이스 검사, 사이트 배포와 링크 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "9개 언어 본문 갱신. 화면 검증·재촬영 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T10:32:53.938935+00:00",
+        "summary": "실제 headless 재검증 및 보존한 중간 테스트 조정",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기본·Enum unique 선택·파싱·저장 검증 통과",
+            "evidence": "assets/unique-columns-qa/results.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "양쪽 셀·상대 주소·문제 목록과 중복 해소 검증 통과",
+            "evidence": "assets/unique-columns-qa/results.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "23개 전환, 원본 값·수식 보존 및 재실행 변경0",
+            "evidence": "assets/unique-columns-qa/results.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "9개 언어 본문 갱신. 화면 검증·재촬영 미실행",
+            "evidence": "assets/unique-columns-qa/results.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
