@@ -1,0 +1,98 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "프로젝트 XLSX 아이콘 배경 제거",
+    "summary": "배경 덮개와 이중 그리기를 없애고 투명 네이티브 아이콘을 사용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Project 창의 선택·포커스·Ping 실화면 및 가이드 재촬영 대기",
+    "outcome": "구현·headless19검사 통과. 실제 Project 화면 검증은 사용자 제한으로 미실행.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-10-31 19:39:12 KST 시작",
+    "xerjEvidence": "XERJ WorkbookAssets.DrawProjectIcon 검색 후 현재 소스 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "transparent-workbook-project-icon-20261031",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "README처럼 프로젝트 배경·선택색이 자연스럽게 보이는 XLSX 아이콘",
+    "completionCriteria": "가져오기 아이콘 알파·색상·메인/시트 참조·재가져오기와 빌드 확인. 실제 화면은 조작 금지에 따라 미검증 명시.",
+    "previousManual": "projects/designdatatable/reports/2026-10-31-manual-20261031104404193-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "불투명 배경·이중 그리기 제거",
+        "action": "XLSX를 투명 네이티브 썸네일로 등록하고 중복 오버레이 생략; 이전 로고 삭제 및 현재 아이콘으로 참조 정리",
+        "expected": "프로젝트 선택 배경을 칠하지 않고 파일 아이콘 색상이 유지됨",
+        "qa": "실제 가져오기 객체·아이콘 투명 픽셀과 색상 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "투명 네이티브 캐시 RGBA, 소스 보존, 참조 유지 및 이전 로고 삭제 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "비대화형 회귀·웹 보고",
+        "action": "메인 자산·숨긴 썸네일·시트 참조와 테마 캐시 검사 후 게시",
+        "expected": "회귀 통과 및 화면 미검증을 구분한 공개 HTTPS 보고서",
+        "qa": "Unity batchmode로 검사하고 배포·본문 접근 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "headless19검사 통과. 실제 화면 검증·재촬영 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "사용자 추가 요청으로 이전 로고 PNG·메타와 활성 참조 삭제를 T01에 포함했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T10:54:09.092109+00:00",
+        "summary": "실제 importer 네이티브 아이콘 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "투명 네이티브 캐시 RGBA, 소스 보존, 참조 유지 및 이전 로고 삭제 확인",
+            "evidence": "assets/native-icon-qa/results.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "headless19검사 통과. 실제 화면 검증·재촬영 미실행",
+            "evidence": "화면 조작 금지",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
