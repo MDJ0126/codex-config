@@ -1,0 +1,20 @@
+{
+    "utc": "2026-10-31T05:13:48.8477327Z",
+    "checks": [
+        ".xlsx exact path created",
+        ".xlsx opens one sheet",
+        ".xlsx edit/save/reopen",
+        ".xlsx existing source rejected",
+        ".xlsx existing bytes preserved",
+        ".xlsx no temporary remnants",
+        ".csv exact path created",
+        ".csv opens one sheet",
+        ".csv edit/save/reopen",
+        ".csv existing source rejected",
+        ".csv existing bytes preserved",
+        ".csv no temporary remnants",
+        "unsupported extension rejected without file",
+        "missing source recovery is preserved",
+        "recovery retains actual edits"
+    ]
+}

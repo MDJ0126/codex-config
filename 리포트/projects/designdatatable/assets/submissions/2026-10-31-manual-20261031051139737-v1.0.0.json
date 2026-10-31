@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "누락된 원본 파일 안내·같은 경로 생성",
+    "summary": "누락 파일을 읽기 쉬운 안내 카드로 표시하고 같은 위치 생성과 재열기를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "",
+    "outcome": "구현과 실제 Unity 검증을 진행합니다.",
+    "proposedTime": "20~35분; 시작2026-10-31 14:10:30 KST",
+    "actualTime": "실행 전",
+    "xerjEvidence": "WorkbookViewer Reload/error를 검색하고 현재 소스를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "missing-workbook-create-20261031",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "누락 파일 화면을 개선하고 사용자가 버튼으로 같은 경로/이름의 새 파일을 생성할 수 있도록 합니다.",
+    "completionCriteria": "XLSX/CSV 생성·원본 덮어쓰기 방지·복구 보호·실제 Unity 화면과 생성/재열기·다국어 가이드를 검증합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "누락 안내 카드",
+        "action": "파일명·경로·설명·생성/열기/다시 확인 버튼과 다국어 문구 추가",
+        "expected": "예외 문자열 대신 정돈된 안내 표시",
+        "qa": "실제 누락 파일 창과 좁은 창에서 가독성 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "같은 경로 생성",
+        "action": "확장자·복구 상태 검사 후 원자적으로 새 원본 생성",
+        "expected": "기존 원본 덮어쓰지 않고 생성 후 즉시 편집",
+        "qa": "XLSX/CSV·부모 폴더 없음·기존 원본·복구 보존·저장 재열기",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀·가이드·보고",
+        "action": "빌드·실제 버튼 클릭·현재 캡처·가이드 업데이트",
+        "expected": "실행 근거와 한국어 TC·HTML 보고서 제공",
+        "qa": "생성 전후·복구 경로·파일 존재·단축키·문서 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

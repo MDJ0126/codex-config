@@ -1,0 +1,1587 @@
+{
+  "utc": "2026-10-31T05:21:35.461489+00:00",
+  "default": "en",
+  "languages": [
+    {
+      "language": "en",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 14179,
+      "guideSha256": "18a29702bae957c9c5b490e223eae9911c768a07dd3b0925cd3f93388cdbc8f0"
+    },
+    {
+      "language": "ko",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 8961,
+      "guideSha256": "121508ad05d9e489e9195acd61ef58cbe62242c62c2356d65e16b642ca138141"
+    },
+    {
+      "language": "ja",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 7432,
+      "guideSha256": "21d186f6db99e4844541d3ffdfddcebba7ecc609c54555c819b9bfffe67dff54"
+    },
+    {
+      "language": "zh-Hans",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 6698,
+      "guideSha256": "b5c2a02fadf057cce94e437267cdc6067b518fe339961d0d2b4db41c6df0dc2b"
+    },
+    {
+      "language": "zh-Hant",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 6709,
+      "guideSha256": "86640f5c58887792faed7d795bc76aee4afd17d3ec2319e7dffb43d29d00a5d4"
+    },
+    {
+      "language": "es",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 13033,
+      "guideSha256": "7c54c140be412064c8691af07a92a4f5ff599beb7d15f46045a78a0e56e67424"
+    },
+    {
+      "language": "fr",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 13343,
+      "guideSha256": "7b9fc5ea235abdbfc6c0cb9483c034807dc2c87f0070f727030e4fa4495e12bf"
+    },
+    {
+      "language": "de",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 13069,
+      "guideSha256": "ca28343e677e62f4384ed034e352bc9d16f078c341203a8261dd1b8c11a96f15"
+    },
+    {
+      "language": "pt-BR",
+      "chapters": 14,
+      "featureRows": 58,
+      "textCharacters": 12571,
+      "guideSha256": "44db67f57b612d4202a9c527261d3a45b3f244445d73bc916281b67d393261f7"
+    }
+  ],
+  "currentImages": 42,
+  "errors": [],
+  "historicalUnusedCaptures": [
+    {
+      "file": "images/closed-shape-gradient-controls-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookObjects.cs",
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookGradientGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/object-properties-fill-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/logical-text-coercion-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCalculation.cs",
+        "Scripts/Editor/WorkbookCalculationRanges.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/empty-text-coercion-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCalculation.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/unified-general-home.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/closed-shape-gradient-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookObjects.cs",
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookGradientGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/general-section-format-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFormatting.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/cell-format-categories-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/locale-calendar-month-preview.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/WorkbookEditingOperations.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/unified-game-home.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/unified-game-data-tools.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/ribbon-screen-tip-copy.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/window-motion-restored.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/window-motion-minimized.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/addressables-table-registry-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/DataTablePreferences.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/TableDelivery.cs",
+        "Scripts/Editor/TablePaths.cs",
+        "Scripts/TableBinaryDelivery.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/external-registration-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookFilePaths.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs"
+      ]
+    },
+    {
+      "file": "images/custom-object-tooltip-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookFilePaths.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs"
+      ]
+    },
+    {
+      "file": "images/shape-catalog-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/shape-custom-paths-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/shape-insert-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-data-tab-ko-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/store-samples-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookSourceImporter.cs"
+      ]
+    },
+    {
+      "file": "images/taskbar-hover-preview-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/WorkbookHoverTiming.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs"
+      ]
+    },
+    {
+      "file": "images/taskbar-hover-peek-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/WorkbookHoverTiming.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs"
+      ]
+    },
+    {
+      "file": "images/sheet-tabs-curves-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookSheetTabGUI.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/localization-data-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/LocalizationDataLanguageTable.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/asset-create-menu-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/source-creation-menu-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-coin.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/CoinDash/Runtime/CoinDashSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Coin Dash.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-meteor.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/MeteorDodge/Runtime/MeteorDodgeSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Meteor Dodge.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-brick.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/BrickBreaker/Runtime/BrickBreakerSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Brick Breaker.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-runner.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/RoadDash/Runtime/RoadDashSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Neon Runner.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-memory.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/MemoryMatch/Runtime/MemoryMatchSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Memory Match.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-original-game-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/DuskPatrol/Runtime/SurvivalSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Dusk Patrol.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-original-shop-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ItemShop/Runtime/ShopAutoPlay.cs",
+        "Sample/Games/ItemShop/Runtime/ShopSceneView.cs",
+        "Sample/Games/ItemShop/Runtime/ShopShowcase.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - UI (Shop).unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-hub.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/MiniGames/Scenes/00 Mini Arcade.unity",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/Navigation/HubSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-enum.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleAutoPlay.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleGame.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleSceneView.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleState.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Custom Enum Battle.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-fps.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/NeonRange/Runtime/FpsSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - 3D FPS.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Shared/UI/ThreeDSceneView.cs",
+        "Sample/ThreeD/Editor/ThreeDSamplesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-rpg.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/CrystalRuins/Runtime/RpgSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - 3D RPG.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Shared/UI/ThreeDSceneView.cs",
+        "Sample/ThreeD/Editor/ThreeDSamplesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-standard-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-game-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-localization-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-xlsx-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-csv-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-icon-contrast-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/DataTableEditor.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-shop-paused-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ItemShop/Runtime/ShopAutoPlay.cs",
+        "Sample/Games/ItemShop/Runtime/ShopShowcase.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - UI (Shop).unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-enum-paused-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleAutoPlay.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleGame.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleSceneView.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleState.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Custom Enum Battle.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-popup-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-invalid-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-repaired-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-types-invalid-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/project-icon-focus-ping-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookProjectIconHook.cs",
+        "Scripts/Editor/WorkbookSourceImporter.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-0.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/CanyonSprint/Runtime/CanyonSprintGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Canyon Sprint.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-1.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/SkyboundSteps/Runtime/SkyboundGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Skybound Steps.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-2.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/LanternDefense/Runtime/LanternDefenseGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Lantern Defense.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-3.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/PutterGarden/Runtime/GolfGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Putter Garden.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-4.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/StrikeLane/Runtime/BowlingGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Strike Lane.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-5.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/WarehousePush/Runtime/WarehouseGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Warehouse Push.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-6.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/DroneArena/Runtime/DroneGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Drone Arena.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-7.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/MarbleCircuit/Runtime/MarbleGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Marble Circuit.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-8.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/LunarLander/Runtime/LanderGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Lunar Lander.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-9.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/QuietCourier/Runtime/CourierGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Quiet Courier.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-10.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/PotionMatch/Runtime/PotionGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Potion Match.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-11.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/BeatBeacon/Runtime/RhythmGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Beat Beacon.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-12.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/BlockHarbour/Runtime/BlocksGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Block Harbour.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-13.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/CometPinball/Runtime/PinballGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Comet Pinball.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-localization-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-standard-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-multi-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-imported-header-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/registered-sheet-links-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-type-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-value-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/game-default-style-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/TableWorkbook.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-missing-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-restored-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-provider-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-client-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/enum-summary-sheet-menu-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-connections-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-types-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-register-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-missing-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-restored-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-table-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-group-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-types-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-inspector-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/play-mode-spreadsheet-bright-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs"
+      ]
+    },
+    {
+      "file": "images/play-mode-readonly-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerRecovery.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerPlayNotice.cs"
+      ]
+    },
+    {
+      "file": "images/summary-schema-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs"
+      ]
+    },
+    {
+      "file": "images/summary-source-columns-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs"
+      ]
+    },
+    {
+      "file": "images/minimize-window-motion-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookMinimizeAnimation.cs",
+        "Scripts/Editor/Window/WorkbookWindowMotion.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookNativePreview.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs"
+      ]
+    },
+    {
+      "file": "images/native-keyboard-settings-final.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs"
+      ]
+    },
+    {
+      "file": "images/native-insert-tab-fixed.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs"
+      ]
+    },
+    {
+      "file": "images/native-table-context-a9-native.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs"
+      ]
+    }
+  ],
+  "historicalPendingVerification": [
+    {
+      "file": "images/source-creation-menu-ui.png",
+      "reason": "Global Enum Table.xlsx is registered and verified via native Unity GetSubmenus; existing dropdown screenshot predates this entry. Desktop input remains prohibited, so the physical Create dropdown has not been visually recaptured."
+    }
+  ],
+  "verificationScope": "Only images referenced by the rebuilt current guides determine the current-guide result. Older captures and their original source hashes remain recorded above; they are not claimed current.",
+  "browserRenderEvidence": "WorkFiles\\Temp\\MissingWorkbookQA\\BrowserChecks.json",
+  "translationReview": "Independent native-speaker review not performed."
+}
