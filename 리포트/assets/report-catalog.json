@@ -20,6 +20,36 @@
     "replyTo": ""
   },
   {
+    "title": "콘솔 경고와 생성 템플릿 경로 오류 수정",
+    "summary": "목표와 완료 기준을 확정하고 작업별 QA를 반복합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-manual-20261031145609400-v1.0.0.html",
+    "date": "2026-10-31T14:56:09.400Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 이력 키 입력의 사용 중단 API 교체",
+    "summary": "실제 Unity 6000.0.83f1 재컴파일 후 경로 오류 24개와 C# 경고 2개가 재발하지 않았습니다. Unity 내부 글꼴 경고 2개는 남아 있습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-10-31-result-20261031145537575-v1.0.0.html",
+    "date": "2026-10-31T14:55:37.575Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "생성 템플릿 설치 경로 조회와 미사용 필드 수정",
+    "summary": "실제 Unity 6000.0.83f1 재컴파일 후 경로 오류 24개와 C# 경고 2개가 재발하지 않았습니다. Unity 내부 글꼴 경고 2개는 남아 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-10-31-result-20261031145537166-v1.0.0.html",
+    "date": "2026-10-31T14:55:37.166Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora 09-Alpha 변환 외곽 잔상 수정",
     "summary": "같은 입력의 실제 픽셀을 대조하고 변환 수정과 샘플 재생성 및 실제 화면을 검증합니다.",
     "project": "turnroom",
