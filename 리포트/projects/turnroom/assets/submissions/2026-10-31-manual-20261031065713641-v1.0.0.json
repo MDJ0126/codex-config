@@ -1,0 +1,116 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixora 예제 소재 다양화 — Affinity·Blender",
+    "summary": "반복 로봇 예제를 서로 다른 이미지·입체 모델로 교체합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "이미지·모델 제작 및 통합 QA 진행 전",
+    "outcome": "현재 10개 예제의 반복 입력 확인. Affinity 연결·Blender 5.2.3 확인.",
+    "proposedTime": "40~70분",
+    "actualTime": "2026-10-31 15:48:59 KST 기록 시작; 진행 중",
+    "xerjEvidence": "TutorialAssets 검색 후 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-varied-sample-art",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "편집 가능한 원본과 서로 다른 예제 결과물을 제공한다.",
+    "completionCriteria": "Affinity 원본·PNG, Blender 원본·FBX, 10개 단계별 씬 입력/출력 연결, 실행·픽셀/애니메이션 QA와 HTML 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "소재와 기존 씬 확인",
+        "action": "10개 씬의 입력과 생성 경로를 확인한다.",
+        "expected": "역할별 소재 배정",
+        "qa": "현재 소스·에셋 속성 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Affinity 이미지 제작",
+        "action": "벡터 원본을 Affinity에서 저장하고 PNG를 내보낸다.",
+        "expected": "6종 이미지·4프레임 시트와 편집 가능한 원본",
+        "qa": "다시 열기·내보내기 픽셀 비교와 시각 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Blender 모델 제작",
+        "action": "4종 모델과 움직임을 제작하고 FBX로 내보낸다.",
+        "expected": "편집 가능한 blend와 서로 다른 모델",
+        "qa": "Blender 실제 저장·렌더·FBX Unity 재임포트",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "예제 통합과 실행 QA",
+        "action": "기존 10개 씬과 예제 코드를 다양한 입력으로 수정하고 생성한다.",
+        "expected": "10개 씬과 전체 단계·출력 정상",
+        "qa": "실제 Unity 실행·움직임·그리드·부위 검사",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "결과 보고",
+        "action": "근거·원본 사용법과 HTML 결과를 게시한다.",
+        "expected": "실제 씬 화면·제한·작업 시간 포함",
+        "qa": "보고서 빌드·링크·게시 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

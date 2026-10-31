@@ -1,0 +1,202 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixora 예제 소재 다양화 — Affinity·Blender",
+    "summary": "다양한 원본과 10개 실제 씬을 제작하고 공용 폰트·깔끔한 샘플 UI를 추가합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공용 폰트·다국어·DataTable 회귀, 문서·게시 진행 중",
+    "outcome": "Affinity 7개 벡터 원본 재열기 픽셀 일치, Blender 4개 재열기, Unity 396개 검사와 실제 50번 단계 클릭 통과.",
+    "proposedTime": "40~70분",
+    "actualTime": "2026-10-31 15:48:59 KST 기록 시작; 진행 중",
+    "xerjEvidence": "TutorialAssets 검색 후 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-varied-sample-art",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "편집 가능한 원본과 서로 다른 예제 결과물을 제공한다.",
+    "completionCriteria": "Affinity 원본·PNG, Blender 원본·FBX, 10개 단계별 씬 입력/출력 연결, 실행·픽셀/애니메이션 QA와 HTML 보고",
+    "previousManual": "projects/turnroom/reports/2026-10-31-manual-20261031065713641-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "소재와 기존 씬 확인",
+        "action": "10개 씬의 입력과 생성 경로를 확인한다.",
+        "expected": "역할별 소재 배정",
+        "qa": "현재 소스·에셋 속성 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "10개 씬의 공통 로봇 재사용과 입력·생성 경로 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Affinity 이미지 제작",
+        "action": "벡터 원본을 Affinity에서 저장하고 PNG를 내보낸다.",
+        "expected": "6종 이미지·4프레임 시트와 편집 가능한 원본",
+        "qa": "다시 열기·내보내기 픽셀 비교와 시각 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "6종 이미지와 4프레임 시트의 Affinity .af 원본·PNG, 7개 재열기 출력 픽셀 일치"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Blender 모델 제작",
+        "action": "4종 모델과 움직임을 제작하고 FBX로 내보낸다.",
+        "expected": "편집 가능한 blend와 서로 다른 모델",
+        "qa": "Blender 실제 저장·렌더·FBX Unity 재임포트",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "4종 .blend·FBX 실제 저장·렌더·재열기, 새·드론 애니메이션 키 확인"
+      },
+      {
+        "id": "T06",
+        "order": 4,
+        "title": "공용 폰트·샘플 UI",
+        "action": "재배포 가능한 Noto Sans KR 기반 정적 Regular·SemiBold를 Templete에 포함하고 Pixora·DataTable에서 연결한다.",
+        "expected": "동일 Font 자산·적절한 제목/본문 대비·중립 색상·기존 표 표시 유지",
+        "qa": "실제 Unity 폰트 로드·글리프·두 제품 표시·라이선스·버전 요구·9개 언어 화면",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "12.45MB 정적 두 굵기·원문 라이선스 포함, 적용 후 실제 샘플 화면 확인. DataTable 및 다국어 회귀 진행 중"
+      },
+      {
+        "id": "T04",
+        "order": 5,
+        "title": "예제 통합과 실행 QA",
+        "action": "소재별 씬·코드·폰트·레이아웃을 통합하고 모든 씬을 실제 Play 모드와 마우스로 검증한다.",
+        "expected": "10개 씬·5단계·움직임·그리드·폰트와 9개 언어 정상",
+        "qa": "실제 카메라·각 모델 상하 기준점·픽셀·부위·50번 네이티브 단계 클릭·9개 언어·DataTable 회귀",
+        "dependsOn": [
+          "T03",
+          "T06"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 6,
+        "title": "결과 보고",
+        "action": "근거·원본 사용법과 HTML 결과를 게시한다.",
+        "expected": "실제 씬 화면·제한·작업 시간 포함",
+        "qa": "보고서 빌드·링크·게시 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T06",
+      "T04"
+    ],
+    "scopeChange": "사용자가 샘플의 글꼴·디자인 정리와 DataTable에서도 쓰는 공용 폰트 추가를 요청함. T06 추가 및 T04 통합·화면 검증 범위 확대. 기존 다섯 작업 보존.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T16:26:59.956343+09:00",
+        "summary": "10개 씬의 반복 입력 소스 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "10개 씬의 반복 입력 소스 확인",
+            "evidence": "TutorialBuilder.cs, TutorialAssets.cs, XERJ TutorialAssets 검색",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-31T16:26:59.956343+09:00",
+        "summary": "7개 Affinity .af 재열기·PNG 픽셀 일치, 벡터 노드 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "7개 Affinity .af 재열기·PNG 픽셀 일치, 벡터 노드 확인",
+            "evidence": "affinity-roundtrip.json, affinity-pixel-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-10-31T16:26:59.956343+09:00",
+        "summary": "Blender 4개 재열기 및 키 변화 확인",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Blender 4개 재열기 및 키 변화 확인",
+            "evidence": "blender-reopen.json; 초기 Euler 비교 QA 스크립트 타입 오류는 수정 후 재실행",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-10-31T16:26:59.956343+09:00",
+        "summary": "구조 검사384개 통과했으나 실제 씬 렌더에서 FBX 축·단위 최상위 초기화로 모델 방향과 입력 표시 오류 발견",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "구조 검사384개 통과했으나 실제 씬 렌더에서 FBX 축·단위 최상위 초기화로 모델 방향과 입력 표시 오류 발견",
+            "evidence": "FirstPass/03-Model.png, FirstPass/result.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
