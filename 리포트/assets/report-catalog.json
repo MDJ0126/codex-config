@@ -1,5 +1,15 @@
 [
   {
+    "title": "Pixora 예제 소재 다양화와 공용 폰트",
+    "summary": "6종 이미지·4종 Blender 모델을 실제 10개 씬에 적용했습니다. Affinity 벡터 원본·공용 폰트·50회 실제 단계 클릭을 검증했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-10-31-result-20261031080201009-v1.0.0.html",
+    "date": "2026-10-31T08:02:01.009Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "신규 Blender 예제의 FBX 축·단위 초기화 수정",
     "summary": "신규 예제 검증 중 발견한 모델 방향·입력 표시 문제를 내부 Geometry와 identity 배치 루트 분리로 수정했습니다.",
     "project": "turnroom",
