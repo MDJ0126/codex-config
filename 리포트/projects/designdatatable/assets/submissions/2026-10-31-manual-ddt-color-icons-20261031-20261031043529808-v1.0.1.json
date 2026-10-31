@@ -1,0 +1,209 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "공통 리본 아이콘 컬러 전면 검수",
+    "summary": "원본 컬러 디자인을 확인하고 전체 아이콘을 일관된 다색 디자인으로 수정·적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "아이콘 요청 범위의 남은 구현 없음. 전체 Excel 동작·모든 DPI·모든 UI 언어 화면은 이번 전수 범위가 아니며 HTML 외 PDF는 갱신하지 않음.",
+    "outcome": "전체96개 컬러 아이콘, Affinity 편집 원본, 제품 적용, 실제 Unity 검수,9개 언어 HTML 문서와 공개 보고서를 완료했습니다.",
+    "proposedTime": "40~70분",
+    "actualTime": "제품·필수검증·문서·공개 보고서 배포 확인: 56분24초, 2026-10-31 13:33:20 KST. 이후 메뉴얼 완료 이력을 등록했습니다.",
+    "xerjEvidence": "XERJ TemplateIcons ArtworkTexture 검색 후보를 현재 소스와 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "ddt-color-icons-20261031",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "전체 리본·도구·상태 아이콘의 가독성과 컬러 일관성 개선",
+    "completionCriteria": "전체 카탈로그 검수 및 수정, Affinity 편집 원본 보존, PNG/atlas 적용, 실제 Unity 화면 확인, 문서·QA 보고",
+    "previousManual": "projects/designdatatable/reports/2026-10-31-manual-20261031033828103-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원본·카탈로그 검수",
+        "action": "컬러 원본·모든 키 매핑·출력의 색상 처리를 조사",
+        "expected": "원본과 실제 화면 차이를 증거로 확인",
+        "qa": "원본 렌더·전체 목록 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "기존 래스터 원본·현재 PNG·단색 tint·별칭 경로를 실제 source와 Affinity로 대조"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Affinity 컬러 아이콘 제작",
+        "action": "기존 원본을 개선하고 전체 아이콘을 다색 팔레트로 구성",
+        "expected": "편집 가능한 Affinity 원본과 대응 출력 존재",
+        "qa": "원본 저장 및 전체 도형/색/안전 여백 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Affinity449개 벡터/문자 노드·145790바이트 .af 저장 및 재열기/재출력 픽셀 동일"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "제품 적용",
+        "action": "공통 atlas와 매핑·색상 처리 수정",
+        "expected": "단색 강제 없이 컬러 artwork 표시",
+        "qa": "PNG 크기·알파·인덱스·색상·컴파일 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "96개 안전 여백과 실제 카탈로그493+회귀803 단언 통과, 빌드 오류0"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "실제 Unity 검증",
+        "action": "리본·팝업·상태·제목 표시의 실제 화면 검수",
+        "expected": "작은 크기에서도 구별 가능하며 누락/클리핑 없음",
+        "qa": "실제 화면 캡처·원본 대조·필요 시 반복 수정",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "전체96개 실제 Unity 렌더·10개 기본/표 탭·전용 탭·검색·인스펙터·선반 확인"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "문서·결과 보고",
+        "action": "최신 캡처와 QA·사용 원본 경로 정리",
+        "expected": "검증 범위와 남은 사항을 명확히 공개",
+        "qa": "문서·HTML 링크·실제 화면 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "9개 언어 HTML·이미지41개·현재 링크 검증 오류0, 브라우저144개 통과; 공개 보고서 HTTP 확인"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "원래5개 작업을 그대로 보존한 최종 검수 회차입니다. 범위 축소 없음.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-10-31T03:58:27.151599+00:00",
+        "summary": "보존한 실제 초기화·별칭 실패",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "초기 중복 키2건과 도형/그림 파일 대체를 실제 Unity에서 확인. 중복 제거·제품 별칭 수정.",
+            "evidence": "color-home-first.png / 실제 Unity 초기화 예외 / color-release-insert.png",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-10-31T04:34:22.081143+00:00",
+        "summary": "보존한 초기 출력의 경계 실패 재현",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "보존된 v3 PNG를 다시 검사하여 경계 넘침 슬롯 [22, 41, 42, 43, 59, 74, 75, 76, 90, 91, 92] 확인. 최종 v4 출력은96개 전부 통과.",
+            "evidence": "IntermediateSources/TurnRoom-Icons-Color-v3.png; ExportChecks.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-10-31T04:34:22.081143+00:00",
+        "summary": "전체 요청 범위 최종 재검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 래스터 원본·현재 PNG·단색 tint·별칭 경로를 실제 source와 Affinity로 대조",
+            "evidence": "Docs/Testing/2026-10-31/icon-color-refresh/summary.json; ExportChecks.json; roundtrip-final.json; source-parity-final.json; docs-verification-final.json; BrowserChecks.json; 공개 결과 보고서",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Affinity449개 벡터/문자 노드·145790바이트 .af 저장 및 재열기/재출력 픽셀 동일",
+            "evidence": "Docs/Testing/2026-10-31/icon-color-refresh/summary.json; ExportChecks.json; roundtrip-final.json; source-parity-final.json; docs-verification-final.json; BrowserChecks.json; 공개 결과 보고서",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "96개 안전 여백과 실제 카탈로그493+회귀803 단언 통과, 빌드 오류0",
+            "evidence": "Docs/Testing/2026-10-31/icon-color-refresh/summary.json; ExportChecks.json; roundtrip-final.json; source-parity-final.json; docs-verification-final.json; BrowserChecks.json; 공개 결과 보고서",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "전체96개 실제 Unity 렌더·10개 기본/표 탭·전용 탭·검색·인스펙터·선반 확인",
+            "evidence": "Docs/Testing/2026-10-31/icon-color-refresh/summary.json; ExportChecks.json; roundtrip-final.json; source-parity-final.json; docs-verification-final.json; BrowserChecks.json; 공개 결과 보고서",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "9개 언어 HTML·이미지41개·현재 링크 검증 오류0, 브라우저144개 통과; 공개 보고서 HTTP 확인",
+            "evidence": "Docs/Testing/2026-10-31/icon-color-refresh/summary.json; ExportChecks.json; roundtrip-final.json; source-parity-final.json; docs-verification-final.json; BrowserChecks.json; 공개 결과 보고서",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
