@@ -1,5 +1,180 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-10-31-manual-post-updated-time-20261031033033399-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-10-31-manual-post-updated-time-20261031033033399-v1.0.1.md",
+    "date": "2026-10-31T03:30:33.399Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "post-updated-time",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물 목록 갱신일 시·분 표시",
+      "summary": "갱신일에 KST 시·분을 추가하고 날짜 변환·표시·정렬을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "",
+      "outcome": "게시물 목록의 날짜 표시를 수정 중입니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "시작2026-10-31 12:28:23 KST · 진행 중",
+      "xerjEvidence": "제공된 XERJ 연결·검색 스크립트가 없어 rg와 현재 소스로 표시 위치 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "post-updated-time",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "갱신일 열에서 작성 시각을 한국 시간 기준 시·분까지 확인할 수 있도록 합니다.",
+      "completionCriteria": "KST 날짜·시간 변환과 기존 정렬·필터, 실제 목록 화면을 검증하고 공개 배포를 확인합니다.",
+      "previousManual": "projects/codex-config/reports/2026-10-31-manual-20261031032934178-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "갱신일 시·분과 시간대 표시",
+          "action": "원본 ISO 시각을 Asia/Seoul 기준 날짜·시분으로 렌더링하고 datetime을 보존합니다.",
+          "expected": "기존 열 너비에서 날짜와 시분이 두 줄로 표시됩니다.",
+          "qa": "UTC→KST 날짜 경계·분·자정과 기존 최신순을 대조하고 실제 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "332개 원본 시각과 KST 날짜·시분, UTC 날짜경계·자정00:00·최신순·필터를 Chrome에서 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실행 검증·실제 화면·공개 반영",
+          "action": "빌드·링크·필터 검사와 브라우저 캡처 후 관련 파일만 푸시합니다.",
+          "expected": "실제 화면과 공개 URL에서 시간이 확인됩니다.",
+          "qa": "로컬·공개 목록 time 요소의 원본과 KST 표시값을 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-10-31T03:30:33.095Z",
+          "summary": "KST 표시·경계·정렬·필터 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "332개 원본 시각과 KST 날짜·시분, UTC 날짜경계·자정00:00·최신순·필터를 Chrome에서 확인했습니다.",
+              "evidence": "assets/list-time-2026-10-31/qa.json; 실제 Chrome 화면 list-time.webp",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-10-31-manual-20261031032934178-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-10-31-manual-20261031032934178-v1.0.0.md",
+    "date": "2026-10-31T03:29:34.178Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "post-updated-time",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물 목록 갱신일 시·분 표시",
+      "summary": "갱신일에 KST 시·분을 추가하고 날짜 변환·표시·정렬을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "",
+      "outcome": "게시물 목록의 날짜 표시를 수정 중입니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "시작2026-10-31 12:28:23 KST · 진행 중",
+      "xerjEvidence": "제공된 XERJ 연결·검색 스크립트가 없어 rg와 현재 소스로 표시 위치 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "post-updated-time",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "갱신일 열에서 작성 시각을 한국 시간 기준 시·분까지 확인할 수 있도록 합니다.",
+      "completionCriteria": "KST 날짜·시간 변환과 기존 정렬·필터, 실제 목록 화면을 검증하고 공개 배포를 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "갱신일 시·분과 시간대 표시",
+          "action": "원본 ISO 시각을 Asia/Seoul 기준 날짜·시분으로 렌더링하고 datetime을 보존합니다.",
+          "expected": "기존 열 너비에서 날짜와 시분이 두 줄로 표시됩니다.",
+          "qa": "UTC→KST 날짜 경계·분·자정과 기존 최신순을 대조하고 실제 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실행 검증·실제 화면·공개 반영",
+          "action": "빌드·링크·필터 검사와 브라우저 캡처 후 관련 파일만 푸시합니다.",
+          "expected": "실제 화면과 공개 URL에서 시간이 확인됩니다.",
+          "qa": "로컬·공개 목록 time 요소의 원본과 KST 표시값을 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/designdatatable/reports/2026-10-30-manual-ddt-context-design-20261030-20261030142605909-v1.0.1.html",
     "postPath": "projects/designdatatable/posts/2026-10-30-manual-ddt-context-design-20261030-20261030142605909-v1.0.1.md",
     "date": "2026-10-30T14:26:05.909Z",
