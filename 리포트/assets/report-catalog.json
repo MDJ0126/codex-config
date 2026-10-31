@@ -1,5 +1,25 @@
 [
   {
+    "title": "웹 HUD 클릭 후 빠른 포인터 이동의 의도치 않은 발사 수정",
+    "summary": "하단 안내를 누른 직후 중앙으로 포인터를 옮겼을 때 탄약이 줄던 실제 웹 입력 문제를 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-bug-20261031001042500-v1.0.0.html",
+    "date": "2026-10-31T00:10:42.500Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반복 월드 전환의 지형 머티리얼 누적 수정",
+    "summary": "실제10분 반복에서 재질이450개 증가하던 문제를 색별 공유와 소유권 정리로 수정했습니다.",
+    "project": "last37n",
+    "reportPath": "projects/last37n/reports/2026-10-31-bug-20261031001042277-v1.0.0.html",
+    "date": "2026-10-31T00:10:42.277Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "6시간 경량화4차: 6.75MB 기본 게임 적용·전체 기능 회귀 통과",
     "summary": "검증한 패키지를 실제8788 게임에 적용하고 재시작 전후 캐릭터와 물자를 대조했습니다.",
     "project": "last37n",
