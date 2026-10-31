@@ -1,0 +1,31 @@
+{
+    "id": "all-scenes-render-02",
+    "at": "2026-10-31T17:20:20.7057671Z",
+    "error": "",
+    "scene": "Assets/TurnRoom/PixelCamera/Samples/Scenes/01-Basic.unity",
+    "preset": "01-Basic",
+    "assembly": "d4583a54-e180-4a57-93a4-6e82ff73dead",
+    "passed": true,
+    "playing": false,
+    "pixelEnabled": true,
+    "meshRenderers": 292,
+    "canvasCount": 1,
+    "overlayCanvasCount": 1,
+    "uiTextCount": 0,
+    "uiButtonCount": 0,
+    "referenceHeight": 180,
+    "scenes": [
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\01-Basic.unity | colors=154 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\02-CoarsePixels.unity | colors=342 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\03-FinePixels.unity | colors=770 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\04-Zoom.unity | colors=374 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\05-LimitedPalette.unity | colors=24 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\06-Dithering.unity | colors=17 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\07-Clipping.unity | colors=275 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\08-WallOcclusion.unity | colors=10 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\09-ThroughWalls.unity | colors=10 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\10-Perspective.unity | colors=241 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\11-TidewatchOutpost.unity | colors=149 | renderers=292",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\12-OutpostStreet.unity | colors=154 | renderers=292"
+    ]
+}
