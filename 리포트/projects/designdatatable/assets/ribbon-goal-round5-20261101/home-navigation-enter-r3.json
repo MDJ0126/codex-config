@@ -1,0 +1,21 @@
+{
+  "process": 30432,
+  "checks": [
+    "Alt+H then Tab focuses Cut without entering worksheet text",
+    "Tab advances to Copy",
+    "Shift+Tab returns to Cut",
+    "Reverse traversal wraps to last enabled Home control",
+    "Forward traversal wraps to first Home control",
+    "Tab follows clipboard then font group to Bold",
+    "Right arrow moves from Bold to Italic",
+    "Left arrow returns to Bold",
+    "Enter executes focused Bold on original worksheet cell",
+    "Physical Undo restores clean original content and format",
+    "Escape clears ribbon command focus without changing cell"
+  ],
+  "passed": 11,
+  "window": 11344064,
+  "assembly": "07789a36-2ace-430c-ac9a-2e6d2dfa7a1f",
+  "failed": 0,
+  "verifiedAt": "2026-10-31T22:05:14.9675878Z"
+}

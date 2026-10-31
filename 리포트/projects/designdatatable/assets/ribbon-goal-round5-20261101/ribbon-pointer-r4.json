@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-31T21:56:09.1934029Z",
+  "passed": 13,
+  "window": 145033624,
+  "failed": 0,
+  "sourceAssembly": "dce422b3-9602-4480-9776-4fd2e3d9f7fc",
+  "checks": [
+    "Clean original cell baseline",
+    "Ribbon initially collapsed",
+    "Temporary Home commands visible",
+    "Mouse Bold in temporary ribbon formats intended cell and dismisses ribbon",
+    "Physical Undo restores clean original data",
+    "Click selects intended A1 before temporary ribbon closes",
+    "Mouse Home tab opens collapsed commands without Alt",
+    "Mouse tab switching keeps temporary ribbon usable",
+    "Command click after mouse tab opening formats intended cell",
+    "Second physical Undo restores clean source",
+    "Native table tools follow actual C11 selection",
+    "Ctrl+F1 preserves active uncommitted table-name editor",
+    "Enter commits preserved table-name draft"
+  ],
+  "process": 30432
+}

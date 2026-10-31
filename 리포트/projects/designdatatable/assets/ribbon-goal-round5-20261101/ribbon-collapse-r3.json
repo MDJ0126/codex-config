@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Expanded baseline is visible and clean",
+    "Physical Ctrl+F1 reclaims exactly110px",
+    "Collapse preserves input and clean state",
+    "Physical Ctrl+F1 restores full layout",
+    "Expand preserves input and clean state",
+    "Alt+H temporarily reveals collapsed Home commands",
+    "Escape dismisses temporary ribbon and restores compact layout",
+    "Final expanded state is clean and data unchanged"
+  ],
+  "verifiedAt": "2026-10-31T20:51:50.8287813Z",
+  "window": 3018694,
+  "failed": 0,
+  "process": 22236,
+  "sourceAssembly": "227596ac-b4a5-40a2-a273-d5169edaa3ad",
+  "passed": 8
+}

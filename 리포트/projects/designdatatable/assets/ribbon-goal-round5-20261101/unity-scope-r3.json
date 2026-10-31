@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Actual SceneView focus",
+    "Workbook owns keyboard false",
+    "Scene Ctrl+F1 does not collapse workbook",
+    "Scene Ctrl+F1 preserves workbook input",
+    "Scene Ctrl+F1 leaves workbook clean",
+    "Physical Unity Ctrl+D duplicates object:1 to2",
+    "Workbook keyboard scope remains false",
+    "Unity duplication preserves workbook input and clean state"
+  ],
+  "passed": 8,
+  "sourceAssembly": "227596ac-b4a5-40a2-a273-d5169edaa3ad",
+  "verifiedAt": "2026-10-31T20:58:13.6287953Z",
+  "failed": 0
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "file": "home-api-r5.json",
+    "bytes": 75,
+    "sha256": "5348386e752365608e0d1b6aa262b92e8bcd328cd705f097d38465791ec8e987"
+  },
+  {
+    "file": "home-physical-r13.json",
+    "bytes": 767,
+    "sha256": "756eb109cbeec54bebd71cea1091ebe2f3707ebd15d73ca3472b4b2ec97f647c"
+  },
+  {
+    "file": "home-navigation-enter-r3.json",
+    "bytes": 778,
+    "sha256": "efddd26e6562b99ef6f43d026e5c0f813e0f5b3783626ab50e2fd0516b3e0739"
+  },
+  {
+    "file": "home-navigation-space-r5.json",
+    "bytes": 779,
+    "sha256": "aca364b554bc1f9f84b728ee136742f72a13c0f4d985c0f89712382ecc472d74"
+  },
+  {
+    "file": "home-navigation-failed-r2.json",
+    "bytes": 1278,
+    "sha256": "fb912dfd24a2ed0b30d3addd7c7633109af7635a4986de05e4e655f8c9bec55d"
+  },
+  {
+    "file": "home-navigation-failed-r4.json",
+    "bytes": 1666,
+    "sha256": "3e78be2950ac518c92c9e88d1f751346ba0c9693f53672e25123ac45001c3ee7"
+  },
+  {
+    "file": "ribbon-pointer-r4.json",
+    "bytes": 927,
+    "sha256": "5810f67a4798a8678e80a95d1698b1d53eb54355966c02c8091b255f387685bb"
+  },
+  {
+    "file": "ribbon-pointer-escape-r4.json",
+    "bytes": 984,
+    "sha256": "d412be36f2b45df79fb547b2156f76705056d10b512df8365e61204bd1016127"
+  },
+  {
+    "file": "ribbon-collapse-r3.json",
+    "bytes": 631,
+    "sha256": "3dca77ec1963f45514c5f13fdc7a793ac62a3612e3cf7ed07ff87ba30d0435b1"
+  },
+  {
+    "file": "unity-scope-r3.json",
+    "bytes": 542,
+    "sha256": "edf772ad844ca485349a08795f19110f4f8b2fd8d33f7242e14368b3030f57c3"
+  },
+  {
+    "file": "native-tables-r1.json",
+    "bytes": 281,
+    "sha256": "8e4c1a51c5b340b531cd476823d781aa05a310488451d8d0b13d945978729536"
+  },
+  {
+    "file": "native-table-chart-parts.json",
+    "bytes": 1228,
+    "sha256": "8718f29d6eaf30200beffd7ec006a6c53df26c7fc3642bf23dfc5f270a79bb97"
+  },
+  {
+    "file": "sample-package-guard.json",
+    "bytes": 325,
+    "sha256": "215c61927ba242c87fde0bbcbaf5a81fdbbafd486c5920d055c2f0db74040cd9"
+  },
+  {
+    "file": "capture-r8.json",
+    "bytes": 76,
+    "sha256": "0eed181653c4916a8166f97021d75b7991bd8aaf372f07d8cb283cf21ad7148d"
+  },
+  {
+    "file": "home-keyboard-focus-native-r5.png",
+    "bytes": 122843,
+    "sha256": "a13843e943cfa76b98b9e963ad276d9a12452d2bf6bb9c1a869ed27cd296db2c"
+  },
+  {
+    "file": "home-native-keytips-r12.png",
+    "bytes": 122623,
+    "sha256": "64dc24319e54bea3931d8d9e98cf3f879b9aee7dee088b4d8de0edd1028c7d9c"
+  },
+  {
+    "file": "ribbon-collapsed-native-r3.png",
+    "bytes": 101083,
+    "sha256": "3b6ba526015da02aa9746c139bf35e97e6fb5c4e7f26bd54adebb5c403e03679"
+  },
+  {
+    "file": "alignment-v9-pixel-check.json",
+    "bytes": 319,
+    "sha256": "78a089dc5534d469a2fba125c60a1a06e6afff108aeaca27283edf564a28127f"
+  },
+  {
+    "file": "alignment-v9-tile-verification-r2.json",
+    "bytes": 2031,
+    "sha256": "05c0f75d4a8a86a4431171416594f4c5eda26a182f90a0959746c2b8d7f4bb6e"
+  },
+  {
+    "file": "table-name-api.json",
+    "bytes": 74,
+    "sha256": "1335f49c567417cc9f4d54554e60318e1dc9192c1625b949e53ff70273e009aa"
+  },
+  {
+    "file": "chart-part-rename.json",
+    "bytes": 73,
+    "sha256": "18c504ddcdf11114690d5257ab549652812eaa3be3b53851a62e7b69b40be72b"
+  },
+  {
+    "file": "r8-chart-design.png",
+    "bytes": 105646,
+    "sha256": "3b30aa3dce15cb27ea0a5783c4b9b0076703d8d1c02c4726aaaca1d66cfafbeb"
+  },
+  {
+    "file": "r8-chart-format.png",
+    "bytes": 109940,
+    "sha256": "b6768e74ade6c2d0838ddea8bf6ce64c30ef34c96450e67986702b842d72fc22"
+  },
+  {
+    "file": "r8-data.png",
+    "bytes": 95754,
+    "sha256": "db21c37dd5143778e3b44325f05d739570b10918a14c3f07a3ee9e81d79c9334"
+  },
+  {
+    "file": "r8-enum-tools.png",
+    "bytes": 111525,
+    "sha256": "0be317064534261b88feaa0f465103e0d29e2229093e5874fbb340437fda0e87"
+  },
+  {
+    "file": "r8-formulas.png",
+    "bytes": 97908,
+    "sha256": "2978af2e3b4719fa6ecd6ce265c8b35f13573099347d86b0d963fc0d1cc5b316"
+  },
+  {
+    "file": "r8-game-data.png",
+    "bytes": 97747,
+    "sha256": "ee57f91ab3ca15174f7f629ad087512297a919ae0a4e01135b7037c2e72385f8"
+  },
+  {
+    "file": "r8-game-tools.png",
+    "bytes": 100630,
+    "sha256": "d8d380b1d5eee5070b22f7f622dc63ea6317e4db7cdfb32ad18494096a3ee9d5"
+  },
+  {
+    "file": "r8-help.png",
+    "bytes": 91431,
+    "sha256": "d6546d70c44638a0649332f62636eb48e6bd705f7e29d0d6092b8329d76f32d6"
+  },
+  {
+    "file": "r8-home.png",
+    "bytes": 108916,
+    "sha256": "ff27729143c31ef768a0e3fd7463c053714151438be17a38128c9995ac27806c"
+  },
+  {
+    "file": "r8-insert-narrow.png",
+    "bytes": 68295,
+    "sha256": "c562c01181bb8615e117e30264b03f335e7efd17296d9c8e48d9d167f55ad43d"
+  },
+  {
+    "file": "r8-insert.png",
+    "bytes": 96513,
+    "sha256": "353d60a858c94d6bf5bb4e57240a44f033c3fd24fde08ebd8aea99d94c6f96f3"
+  },
+  {
+    "file": "r8-localization.png",
+    "bytes": 214789,
+    "sha256": "9f2051660e8fa0e378b3f1583a58143beaa8bfba9118b126113452fdf80019eb"
+  },
+  {
+    "file": "r8-page-layout.png",
+    "bytes": 88485,
+    "sha256": "29c03ee5a1d46186b796133b4f1c163a3b288c99a7cef5c710186c956d480bd9"
+  },
+  {
+    "file": "r8-picture-format.png",
+    "bytes": 83369,
+    "sha256": "be3b8f1cc331b896e5bb2b55426a49a2105acce05d26c205d73b93f99c8fe0a9"
+  },
+  {
+    "file": "r8-review.png",
+    "bytes": 88628,
+    "sha256": "903256eeae7865ce143bbd86508b6d792a14c213f64edd2de4d0f811992667f7"
+  },
+  {
+    "file": "r8-settings.png",
+    "bytes": 66122,
+    "sha256": "c2649cd392b50112d9ddec7e4bfb8f3ab33f1fa2413a018bdf688635abb98d5c"
+  },
+  {
+    "file": "r8-shape-format.png",
+    "bytes": 90863,
+    "sha256": "e6d0093fb9a27c5cba5299233e41f0fbdad7497003c7a15af65d16d72db8c78d"
+  },
+  {
+    "file": "r8-summary-tools.png",
+    "bytes": 105721,
+    "sha256": "23c8a14c2038db5605a6e16a6d7b54fd1903eccf251cb3b08f6560e804dd62e9"
+  },
+  {
+    "file": "r8-table-design.png",
+    "bytes": 104659,
+    "sha256": "feef6a97d603af7b29eac1a2b5948d08773d34e065714441228ce751801f3589"
+  },
+  {
+    "file": "r8-view.png",
+    "bytes": 96782,
+    "sha256": "9e57f39c87963c5c2dd674576e6d73020253d3c6eb07d373c6f7219541df3a9b"
+  },
+  {
+    "file": "native-table-area-r1.png",
+    "bytes": 106813,
+    "sha256": "8338088e6c67d0405f5e41ba2e750ec2f99b0d5a06e629cf7681c330afa3a591"
+  },
+  {
+    "file": "native-table-column-r1.png",
+    "bytes": 103271,
+    "sha256": "7b8e5ccc0e49623b9d3617d1fb716e7ab1dd12a3940a41442a3ff652ea4bf5a5"
+  },
+  {
+    "file": "native-table-doughnut-r1.png",
+    "bytes": 141311,
+    "sha256": "b1dfa0a66c66bd3ba4006152bbbff34f175332412f8ef5074b2ba36e979ea385"
+  },
+  {
+    "file": "native-table-line-r1.png",
+    "bytes": 108788,
+    "sha256": "d85518e80dfac6b07c51a37c90fd6561a97d63561bcabe56c6cff1ef965566f6"
+  },
+  {
+    "file": "native-table-pie-r1.png",
+    "bytes": 164808,
+    "sha256": "778b27c923e3d290972b2968b79e4b4b4a9171e345f08f11126232917dfcd003"
+  },
+  {
+    "file": "native-table-radar-r1.png",
+    "bytes": 116353,
+    "sha256": "e9a009e33f76c07cd8d91c22345074c95eb0b3aaf9b36ad60f48ac4ab299729f"
+  },
+  {
+    "file": "native-table-scatter-r1.png",
+    "bytes": 97110,
+    "sha256": "2baa68dc7e627be81f73619325e3b1e140cfd260028c45e0323ef31b00681530"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    "Current seven-table sample accepted",
+    "Rebuild staging seven-table sample accepted",
+    "Old one-table regression rejected before publication",
+    "Negative validation leaves main sample bytes unchanged"
+  ],
+  "negativeError": "Native table missing: Line"
+}

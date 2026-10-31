@@ -1,0 +1,47 @@
+{
+  "error": "Tab advances to Copy failed; actual command=editor.cut keys=",
+  "actual": {
+    "keyboardCommand": "editor.cut",
+    "id": "home-navigation-r2-state-11",
+    "utc": "2026-10-31T22:04:28.3680891Z",
+    "error": "",
+    "source": "C:/Projects/TurnRoom/WorkFiles/Temp/UniqueValidationQA/Evidence/HomeNative/HomeNativeQA-home-navigation-r2-fresh.xlsx",
+    "assembly": "a7f2fd4b-58df-4bff-aefa-8f9416a66933",
+    "keys": "",
+    "painter": "",
+    "focusedWindow": "WorkbookViewer",
+    "tableName": "MonthlyRewards",
+    "inputA": "Source",
+    "inputB": "Target",
+    "horizontal": "",
+    "numberFormat": "General",
+    "foreground": "FF263444",
+    "background": "FFF6D778",
+    "owns": true,
+    "focused": true,
+    "dirty": false,
+    "bold": false,
+    "ribbonCollapsed": false,
+    "ribbonDisplayed": true,
+    "process": 30432,
+    "tab": 0,
+    "row": 0,
+    "column": 0,
+    "indent": 0,
+    "scopeObjects": 0,
+    "fontSize": 11.0,
+    "top": 213.0,
+    "position": {
+      "serializedVersion": "2",
+      "x": 100.0,
+      "y": 100.0,
+      "width": 1350.0,
+      "height": 800.0
+    }
+  },
+  "failed": 1,
+  "checks": [
+    "Alt+H then Tab focuses Cut without entering worksheet text"
+  ],
+  "passed": 1
+}
