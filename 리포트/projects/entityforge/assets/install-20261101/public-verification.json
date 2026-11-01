@@ -1,0 +1,44 @@
+{
+  "utc": "2026-11-01T12:29:21.1654589+00:00",
+  "deployment": "success",
+  "commit": "803f65e47288fa182035ac5955932c1be73496ff",
+  "url": "https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+  "bodyVerified": true,
+  "checks": [
+    {
+      "path": "projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+      "status": 200,
+      "bytes": 9829
+    },
+    {
+      "path": "projects/entityforge/reports/2026-11-01-bug-20261101122528139-v1.0.0.html",
+      "status": 200,
+      "bytes": 8363
+    },
+    {
+      "path": "projects/entityforge/assets/install-20261101/installed-estimate.png",
+      "status": 200,
+      "bytes": 86668
+    },
+    {
+      "path": "projects/entityforge/assets/install-20261101/installed-light.png",
+      "status": 200,
+      "bytes": 78279
+    },
+    {
+      "path": "projects/entityforge/assets/install-20261101/functional-Dots.png",
+      "status": 200,
+      "bytes": 64108
+    },
+    {
+      "path": "projects/entityforge/assets/install-20261101/reopened-estimate.json",
+      "status": 200,
+      "bytes": 411
+    },
+    {
+      "path": "projects/entityforge/assets/install-20261101/estimated-build.json",
+      "status": 200,
+      "bytes": 3050
+    }
+  ]
+}
