@@ -1,5 +1,364 @@
 [
   {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101065808562-v1.0.1.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101065808562-v1.0.1.md",
+    "date": "2026-11-01T06:58:08.562Z",
+    "version": "v1.0.1",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Addressables 씬 전환, UI 수명 관리, 두 테스트 씬과 로딩·화면·팝업 예제를 구현하고 실제 플레이어로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "중앙 보고서 푸시·공개 배포·개별 본문과 첨부 접근 확인",
+      "outcome": "구현·빌드·플레이어 57개 QA·화면 검증 완료, 보고서 공개 검증 진행 중",
+      "proposedTime": "25~45분",
+      "actualTime": "시작 2026-11-01 15:30:16 KST. 최종 게임 실행 QA 완료 2026-11-01 15:55:20 KST(25분 4초). 보고서 작성 시점 2026-11-01 15:57:32 KST까지 1637초. 공개 배포 확인은 후속 메뉴얼과 최종 채팅에 기록합니다.",
+      "xerjEvidence": "제공된 XERJ 도구와 검색 스크립트 없음. rg 대체.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-20261101063225468-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": "문서와 JSON 결과 생성·HTML 검사 후 공개 배포 확인 예정"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "요청 범위는 유지한다. T03은 검은 캡처 실패 뒤 창 표시와 렌더 완료 후 캡처·검은 화면 거부·UI 갱신 한 프레임 대기를 QA 절차에 추가하여 r2로 올렸다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-20261101063225468-v1.0.0.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-20261101063225468-v1.0.0.md",
+    "date": "2026-11-01T06:32:25.468Z",
+    "version": "v1.0.0",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Addressables 씬 전환, UI 수명 관리, 두 테스트 씬과 로딩·화면·팝업 예제를 구현하고 실제 플레이어로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "25~45분",
+      "actualTime": "2026-11-01 15:30:16 KST 시작",
+      "xerjEvidence": "제공된 XERJ 도구와 검색 스크립트 없음. rg 대체.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "빌드 플레이어에서 정상·중복·오류·수명 시나리오와 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "자동 시나리오 assertion과 실행 로그·화면 대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-store-20261101-20261101063027380-v1.0.2.html",
     "postPath": "projects/pixelcamera/posts/2026-11-01-manual-pixel-camera-store-20261101-20261101063027380-v1.0.2.md",
     "date": "2026-11-01T06:30:27.380Z",

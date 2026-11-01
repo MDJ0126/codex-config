@@ -1,0 +1,101 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Addressables 씬 전환, UI 수명 관리, 두 테스트 씬과 로딩·화면·팝업 예제를 구현하고 실제 플레이어로 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "25~45분",
+    "actualTime": "2026-11-01 15:30:16 KST 시작",
+    "xerjEvidence": "제공된 XERJ 도구와 검색 스크립트 없음. rg 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+    "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "런타임 시스템 구현",
+        "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+        "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+        "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "씬과 UI 예제 생성",
+        "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+        "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+        "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 실행 QA",
+        "action": "빌드 플레이어에서 정상·중복·오류·수명 시나리오와 화면을 검증한다.",
+        "expected": "구체적인 실행 결과·실제 화면 확보",
+        "qa": "자동 시나리오 assertion과 실행 로그·화면 대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "문서와 공개 보고",
+        "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+        "expected": "문서 검증과 공개 보고서·첨부 확인",
+        "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
