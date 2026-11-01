@@ -1,0 +1,21 @@
+{
+  "checkedAtUtc": "2026-11-01T12:28:07.083822+00:00",
+  "results": [
+    {
+      "assembly": "DesignDataTable.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sourceCount": 38
+    },
+    {
+      "assembly": "DesignDataTable.Editor",
+      "exitCode": 0,
+      "sourceCount": 303
+    }
+  ],
+  "runtimeEvidence": "release-native-summary.json; static compile is separate from runtime QA"
+}
