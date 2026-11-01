@@ -1,0 +1,120 @@
+{
+    "at": "2026-11-01T06:25:13.8847693Z",
+    "unity": "6000.0.83f1",
+    "error": "",
+    "runtimeAssembly": "79b0548d-6d6a-4973-9aab-a95474176183",
+    "editorAssembly": "39c1f5e3-b523-4128-8764-b430ad843e95",
+    "passed": true,
+    "checks": [
+        {
+            "name": "automatic-source-path",
+            "detail": "Source image (no duplicate scene render) passes=0",
+            "passed": true
+        },
+        {
+            "name": "recapture-path",
+            "detail": "Low-resolution recapture",
+            "passed": true
+        },
+        {
+            "name": "source-recapture-equivalence",
+            "detail": "Unlit orthographic source and recapture pixels match",
+            "passed": true
+        },
+        {
+            "name": "outline-visible",
+            "detail": "black pixels=480",
+            "passed": true
+        },
+        {
+            "name": "outline-radius",
+            "detail": "black pixels 480 -> 1440",
+            "passed": true
+        },
+        {
+            "name": "outline-zero-mask",
+            "detail": "Empty selection adds no outlines",
+            "passed": true
+        },
+        {
+            "name": "outline-selected-layer",
+            "detail": "Selected cube outlined",
+            "passed": true
+        },
+        {
+            "name": "outline-other-layer-excluded",
+            "detail": "Cube layer30 excluded from mask",
+            "passed": true
+        },
+        {
+            "name": "normal-creases",
+            "detail": "Normals add crease edges on rotated cube",
+            "passed": true
+        },
+        {
+            "name": "late-depth-policy",
+            "detail": "Hidden and through-wall rendering differ",
+            "passed": true
+        },
+        {
+            "name": "outline-through-wall",
+            "detail": "Through-wall cube remains visible and outlined",
+            "passed": true
+        },
+        {
+            "name": "subpixel-stability",
+            "detail": "Two subpixel translations inside one snap cell give identical pixels",
+            "passed": true
+        },
+        {
+            "name": "snap-cell-motion",
+            "detail": "Crossing a snap cell updates rendering",
+            "passed": true
+        },
+        {
+            "name": "source-transform-preserved",
+            "detail": "Snapping applies to helper only",
+            "passed": true
+        },
+        {
+            "name": "palette-exact-colours",
+            "detail": "Every opaque pixel maps to an exact palette colour",
+            "passed": true
+        },
+        {
+            "name": "palette-zero-strength",
+            "detail": "Blend0 is exact bypass",
+            "passed": true
+        },
+        {
+            "name": "preset-palette-persistence",
+            "detail": "Serialized preset retains new flags and palette GUID",
+            "passed": true
+        },
+        {
+            "name": "shader-PixelCameraColor",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "name": "shader-PixelCameraDepthNormals",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "name": "shader-PixelCameraOutlineMask",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "name": "shader-PixelCameraURPColor",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "name": "helper-cleanup",
+            "detail": "No owned helper remains after disable",
+            "passed": true
+        }
+    ]
+}

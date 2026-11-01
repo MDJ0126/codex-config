@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixel Camera 1차 제출 후보 갱신과 무포커스 검증",
+    "summary": "창문 관통 수정, 실제 Unity 회귀, 9개 가이드와 패키지 갱신을 마쳤습니다. Affinity 이미지 일부·제출 UI·새 설치 및 판매자 정보는 대기입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-result-20261101063028349-v1.0.0.html",
+    "date": "2026-11-01T06:30:28.349Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "일반 샘플 창문이 벽을 관통하는 기본 프리셋 수정",
+    "summary": "16번·135픽셀 프리셋의 Through walls를 해제하고 생성 스크립트를 수정했습니다. 실제 Unity 동일 카메라 전후 렌더와 16맵 회귀를 확인했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-bug-20261101063027877-v1.0.0.html",
+    "date": "2026-11-01T06:30:27.877Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera Asset Store 제출 준비",
+    "summary": "검증된 제품을 제출 패키지·메타데이터·Affinity 이미지로 정리",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-store-20261101-20261101063027380-v1.0.2.html",
+    "date": "2026-11-01T06:30:27.380Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Addressables 씬 전환과 UI 관리 설계 검토",
     "summary": "현재 소스와 Addressables 2.9.1 문서를 대조하여 책임과 수명 관리 기준을 제안합니다.",
     "project": "sampleprojectforunity",
