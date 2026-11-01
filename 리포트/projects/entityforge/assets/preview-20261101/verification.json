@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "at": "2026-11-01T09:26:28.661Z",
+  "unity": "6000.0.83f1",
+  "entities": "1.3.15",
+  "coreEditorChecks": [
+    "DOTS backend compiled and loaded",
+    "128 supported scene objects",
+    "Physics object rejected",
+    "Nonuniform scale rejected",
+    "Incoming serialized scene reference prevents destructive conversion",
+    "Transparent ordering requires an explicit renderer adapter",
+    "Build copy has no converted GameObjects",
+    "Serialized build records match source count",
+    "Saved source scene unchanged",
+    "DOTS job moves entities by velocity times delta",
+    "100 DOTS rotation steps match native Transform rotation within 0.05 degree",
+    "Burst spawns exactly 1000 entities without repeated spawning",
+    "Timed spawner emits five entities at 0.05 seconds",
+    "Timed spawner retains the emission count across updates",
+    "Lifetime expires all entities",
+    "No evidence never generates a percentage",
+    "Formula preserves 20 percent slowdown (synthetic input, not product performance)",
+    "Stale source evidence rejected",
+    "Sample eligibility: 01-LinearMotion",
+    "Sample source preserved: 01-LinearMotion",
+    "Sample eligibility: 02-LocalRotation",
+    "Sample source preserved: 02-LocalRotation",
+    "Sample eligibility: 03-MotionAndRotation",
+    "Sample source preserved: 03-MotionAndRotation",
+    "Sample eligibility: 04-Lifetime",
+    "Sample source preserved: 04-Lifetime",
+    "Sample eligibility: 05-BurstSpawn",
+    "Sample source preserved: 05-BurstSpawn",
+    "Sample eligibility: 06-TimedSpawn",
+    "Sample source preserved: 06-TimedSpawn",
+    "Sample eligibility: 07-SpawnAndExpire",
+    "Sample source preserved: 07-SpawnAndExpire",
+    "Sample eligibility: 08-MultipleMaterials",
+    "Sample source preserved: 08-MultipleMaterials",
+    "Sample eligibility: 09-MixedGameObjects",
+    "Sample source preserved: 09-MixedGameObjects",
+    "Sample eligibility: 10-BenchmarkGrid",
+    "Sample source preserved: 10-BenchmarkGrid"
+  ],
+  "coreEditorResult": "pass",
+  "playerComparison": {
+    "baselineFrameMs": 8.14861011505127,
+    "dotsFrameMs": 2.23193621635437,
+    "frameTimeReductionPercent": 72.6096084505041,
+    "samplesPerPlayer": 600,
+    "gameObjects": 10000,
+    "entities": 10000,
+    "inputFingerprint": "9032f275c1e6dabe786ee5b3e7d57f3419471f15b6a878d560b6799aa4f46b59",
+    "matchingInputs": true,
+    "rendered": true,
+    "scope": "One Built-in Windows x64 sample on the same machine; historical estimate, not a guarantee"
+  },
+  "logo": {
+    "application": "Affinity 3.3.1.4940",
+    "nativeVectorLayers": 7,
+    "pngWidth": 256,
+    "pngHeight": 256,
+    "pngBytes": 1105,
+    "pngSHA256": "0a9e9be63d14a09e720e477d275e36e4c1b3eae4c706e3f75794de87243d83e7",
+    "reopenedExportIdentical": true,
+    "smallNativeSizes": [
+      16,
+      24,
+      32,
+      48
+    ],
+    "lightDarkReview": "inspected"
+  },
+  "uiAuthoring": {
+    "layout": "UXML / USS",
+    "buttons": "8 persistent Inspector UnityEvents",
+    "staticCompilation": "pass",
+    "nativeUI": "not_run: desktop use paused by user",
+    "nativeKeyboard": "not_run"
+  },
+  "documentation": {
+    "languages": 9,
+    "localLinkChecks": 171,
+    "nativeScreenshots": "pending"
+  },
+  "package": {
+    "cleanUnityImport": "not_run: desktop use paused by user"
+  },
+  "fullTask": "incomplete",
+  "lessonReview": {
+    "change": "integrated existing privacy rule",
+    "commit": "ada3197",
+    "scope": "Mask sensitive process arguments before tool/report output"
+  },
+  "proposedTime": "2–4 hours",
+  "actualTime": "전체 미완료. 작성 기준 1시간 39분 27초 진행; 2026-11-01 18:26:28 Asia/Seoul. 완료 시각 미기록: 실제 화면·설치 검증 보류."
+}
