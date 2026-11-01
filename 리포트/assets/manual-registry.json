@@ -172,6 +172,667 @@
     }
   },
   {
+    "reportPath": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101080103448-v1.0.3.html",
+    "postPath": "projects/pengutown/posts/2026-11-01-manual-pengutown-movement-20261101-20261101080103448-v1.0.3.md",
+    "date": "2026-11-01T08:01:03.448Z",
+    "version": "v1.0.3",
+    "project": "pengutown",
+    "kind": "manual",
+    "manualId": "pengutown-movement-20261101",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pengutown",
+      "kind": "manual",
+      "title": "PenguTown 펭귄 에셋과 웹 이동 프로토타입",
+      "summary": "공유 기획을 확인하고 실제 펭귄 에셋을 확보해 기본 이동과 물리 동작을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청한 에셋 조사와 Unity 기본 구현·필수 검증·보고서 공개 완료. 서버 멀티플레이·전용 Slide/Dive 클립·꾸미기·모바일·WebGL은 이번 기본 구현 밖의 후속 작업입니다.",
+      "outcome": "2026-11-01 16:33:54 KST 시작. 공유 공개 본문과 무료 모델 원본을 확인했습니다.",
+      "proposedTime": "조사 5~10분, 구현·검증 추가 20~40분",
+      "actualTime": "시작 2026-11-01 16:33:54 KST, 공개 확인 2026-11-01 17:00:51 KST. 실제 26분 57초. 이 완료 메뉴얼의 게시 상태는 후속 푸시·배포로 따로 확인합니다.",
+      "xerjEvidence": "빈 프로젝트이며 제공된 XERJ 연결·검색 스크립트 없음. 직접 파일 검사와 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pengutown-movement-20261101",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "공유 기획의 펭귄 힐링 공간을 바탕으로 Unity 6000.0.83f1에서 걷기·배 미끄러짐·경사·다이빙·수영을 구현합니다.",
+      "completionCriteria": "실제 에셋·라이선스·애니메이션 확인, Unity 기본 동작 구현, 실제 PhysX 및 그래픽 플레이어 검증, 결과 보고서 공개",
+      "previousManual": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101075755063-v1.0.2.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "에셋과 기획 확인",
+          "action": "공유 본문을 브라우저에서 읽고 무료 모델 원본과 판매자 정보를 확인합니다.",
+          "expected": "확인한 라이선스와 실제 클립 목록을 기록합니다.",
+          "qa": "원본 ZIP·GLB 구조·출처를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "기본 이동 구현",
+          "action": "Unity Rigidbody·지형 MeshCollider·부력·수영과 모델 애니메이션을 구현합니다.",
+          "expected": "동작이 연결되고 실제 펭귄 에셋이 표시됩니다.",
+          "qa": "Unity 컴파일·실제 PhysX QA·Windows 빌드를 실행합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "Unity 6000.0.83f1에서 실제 Rigidbody 이동·애니메이션·지형을 구현하고 Windows 빌드와 PhysX QA를 통과했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증",
+          "action": "Unity 그래픽 플레이어에서 동작을 실행하고 실제 화면과 runtime-qa.json을 확인합니다.",
+          "expected": "모델이 표시되고 핵심 이동 전환이 실행됩니다.",
+          "qa": "Unity 플레이어 화면과 실제 이동 상태·깊이·속도를 비교합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 플레이어의 실제 화면과 자동 조작, 수영·잠수 UI와 R 키 복귀를 확인했습니다."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "배포와 결과 공개",
+          "action": "Unity 결과·원본 근거와 화면을 중앙 보고서에 등록하고 공개 링크를 확인합니다.",
+          "expected": "실행 결과와 제한을 외부에서 열리는 보고서로 전달합니다.",
+          "qa": "이번 변경만 스테이징하고 커밋·푸시·Pages 배포·개별 공개 URL을 확인합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "보고서 커밋 13e64e32c3f06fc56fe0b1d7e1432f321ce83630, Pages Actions 41286927971 성공 및 개별 보고서 HTTP 200·화면 3개 HTTP 200 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "사용자께서 다른 프로젝트와 같은 Unity 버전을 지정하셨습니다. TurnRoom·LAST37N·샘플 프로젝트의 6000.0.83f1을 확인했습니다. 기존 웹 초안을 보존하고 Unity 구현·검증으로 T02~T04를 변경합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T16:44:37+09:00",
+          "summary": "공유 기획과 원본 에셋을 실제 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 ZIP 확보, CC0 출처, idle/swim/tpose/walk 실물 클립과 리그를 확인했습니다.",
+              "evidence": "docs/asset-research.md, docs/penguin-inspection.json, assets/vendor/penguin/penguin.zip",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T07:46:51.085Z",
+          "summary": "최초 Unity 컴파일 실패를 보존합니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "오디오 모듈을 사용하지 않는 프로젝트에서 AudioListener 참조로 CS1069 발생. 참조를 제거했습니다.",
+              "evidence": "outputs/unity-build.log",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T16:50:44.103+09:00",
+          "summary": "최초 그래픽 실행에서 모델 표시 실패를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "물리 전환은 통과했지만 실제 화면에 펭귄이 보이지 않았습니다. 원본 키 범위와 FBX 단위 변환을 검사·수정했습니다.",
+              "evidence": "outputs/unity-qa-missing-model/, docs/animation-keyframes.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T16:56:00.5513601+09:00",
+          "summary": "최종 Unity 컴파일·PhysX·빌드·그래픽 실행을 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 빌드 exit 0, 다섯 이동 상태와 부력 복귀 통과, idle/walk/swim 0.917초 확인.",
+              "evidence": "outputs/unity-build-final.log, outputs/unity-qa/physics-qa.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 플레이어에서 걷기·배 미끄러짐·수영·잠수 장면과 수중 카메라를 확인했습니다. 실제 UI 클릭으로 수영·잠수, R 키 복귀도 확인했습니다.",
+              "evidence": "outputs/unity-qa/runtime-qa.json, slide.png, swim.png, dive.png; 실제 게임 창 조작",
+              "dependencies": {
+                "T02": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "final",
+          "at": "2026-11-01T17:00:51.3012169+09:00",
+          "summary": "원래 전체 작업과 Unity 전환 후 현재 버전, 공개 보고서를 최종 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다.",
+              "evidence": "원본 ZIP Git blob 동일: da96a7f4342f06dae2becbc80e85f45b134fca88; docs/asset-research.md",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "Unity 6000.0.83f1에서 실제 Rigidbody 이동·애니메이션·지형을 구현하고 Windows 빌드와 PhysX QA를 통과했습니다.",
+              "evidence": "Unity 6000.0.83f1; unity-build-final.log exit 0; physics-qa.json 다섯 상태 통과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 플레이어의 실제 화면과 자동 조작, 수영·잠수 UI와 R 키 복귀를 확인했습니다.",
+              "evidence": "runtime-qa.json 다섯 상태 true, 깊이 -3.80m; 실제 화면과 UI 조작 확인",
+              "dependencies": {
+                "T02": 2
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "보고서 커밋 13e64e32c3f06fc56fe0b1d7e1432f321ce83630, Pages Actions 41286927971 성공 및 개별 보고서 HTTP 200·화면 3개 HTTP 200 확인.",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/pengutown/reports/2026-11-01-result-20261101075702678-v1.0.0.html; Actions 41286927971 success; reportStatus 200; 실제 PNG 3개 HTTP 200",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101075755063-v1.0.2.html",
+    "postPath": "projects/pengutown/posts/2026-11-01-manual-pengutown-movement-20261101-20261101075755063-v1.0.2.md",
+    "date": "2026-11-01T07:57:55.063Z",
+    "version": "v1.0.2",
+    "project": "pengutown",
+    "kind": "manual",
+    "manualId": "pengutown-movement-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pengutown",
+      "kind": "manual",
+      "title": "PenguTown 펭귄 에셋과 웹 이동 프로토타입",
+      "summary": "공유 기획을 확인하고 실제 펭귄 에셋을 확보해 기본 이동과 물리 동작을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "중앙 보고서 푸시·Pages 배포·개별 공개 링크 검증 진행 중",
+      "outcome": "2026-11-01 16:33:54 KST 시작. 공유 공개 본문과 무료 모델 원본을 확인했습니다.",
+      "proposedTime": "조사 5~10분, 구현·검증 추가 20~40분",
+      "actualTime": "진행 중",
+      "xerjEvidence": "빈 프로젝트이며 제공된 XERJ 연결·검색 스크립트 없음. 직접 파일 검사와 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pengutown-movement-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "공유 기획의 펭귄 힐링 공간을 바탕으로 Unity 6000.0.83f1에서 걷기·배 미끄러짐·경사·다이빙·수영을 구현합니다.",
+      "completionCriteria": "실제 에셋·라이선스·애니메이션 확인, Unity 기본 동작 구현, 실제 PhysX 및 그래픽 플레이어 검증, 결과 보고서 공개",
+      "previousManual": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101074752291-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "에셋과 기획 확인",
+          "action": "공유 본문을 브라우저에서 읽고 무료 모델 원본과 판매자 정보를 확인합니다.",
+          "expected": "확인한 라이선스와 실제 클립 목록을 기록합니다.",
+          "qa": "원본 ZIP·GLB 구조·출처를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "기본 이동 구현",
+          "action": "Unity Rigidbody·지형 MeshCollider·부력·수영과 모델 애니메이션을 구현합니다.",
+          "expected": "동작이 연결되고 실제 펭귄 에셋이 표시됩니다.",
+          "qa": "Unity 컴파일·실제 PhysX QA·Windows 빌드를 실행합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "Unity 6000.0.83f1에서 실제 Rigidbody 이동·애니메이션·지형을 구현하고 Windows 빌드와 PhysX QA를 통과했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증",
+          "action": "Unity 그래픽 플레이어에서 동작을 실행하고 실제 화면과 runtime-qa.json을 확인합니다.",
+          "expected": "모델이 표시되고 핵심 이동 전환이 실행됩니다.",
+          "qa": "Unity 플레이어 화면과 실제 이동 상태·깊이·속도를 비교합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 플레이어의 실제 화면과 자동 조작, 수영·잠수 UI와 R 키 복귀를 확인했습니다."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "배포와 결과 공개",
+          "action": "Unity 결과·원본 근거와 화면을 중앙 보고서에 등록하고 공개 링크를 확인합니다.",
+          "expected": "실행 결과와 제한을 외부에서 열리는 보고서로 전달합니다.",
+          "qa": "이번 변경만 스테이징하고 커밋·푸시·Pages 배포·개별 공개 URL을 확인합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "사용자께서 다른 프로젝트와 같은 Unity 버전을 지정하셨습니다. TurnRoom·LAST37N·샘플 프로젝트의 6000.0.83f1을 확인했습니다. 기존 웹 초안을 보존하고 Unity 구현·검증으로 T02~T04를 변경합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T16:44:37+09:00",
+          "summary": "공유 기획과 원본 에셋을 실제 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 ZIP 확보, CC0 출처, idle/swim/tpose/walk 실물 클립과 리그를 확인했습니다.",
+              "evidence": "docs/asset-research.md, docs/penguin-inspection.json, assets/vendor/penguin/penguin.zip",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T07:46:51.085Z",
+          "summary": "최초 Unity 컴파일 실패를 보존합니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "오디오 모듈을 사용하지 않는 프로젝트에서 AudioListener 참조로 CS1069 발생. 참조를 제거했습니다.",
+              "evidence": "outputs/unity-build.log",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T16:50:44.103+09:00",
+          "summary": "최초 그래픽 실행에서 모델 표시 실패를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "물리 전환은 통과했지만 실제 화면에 펭귄이 보이지 않았습니다. 원본 키 범위와 FBX 단위 변환을 검사·수정했습니다.",
+              "evidence": "outputs/unity-qa-missing-model/, docs/animation-keyframes.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T16:56:00.5513601+09:00",
+          "summary": "최종 Unity 컴파일·PhysX·빌드·그래픽 실행을 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 빌드 exit 0, 다섯 이동 상태와 부력 복귀 통과, idle/walk/swim 0.917초 확인.",
+              "evidence": "outputs/unity-build-final.log, outputs/unity-qa/physics-qa.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 플레이어에서 걷기·배 미끄러짐·수영·잠수 장면과 수중 카메라를 확인했습니다. 실제 UI 클릭으로 수영·잠수, R 키 복귀도 확인했습니다.",
+              "evidence": "outputs/unity-qa/runtime-qa.json, slide.png, swim.png, dive.png; 실제 게임 창 조작",
+              "dependencies": {
+                "T02": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101074752291-v1.0.1.html",
+    "postPath": "projects/pengutown/posts/2026-11-01-manual-pengutown-movement-20261101-20261101074752291-v1.0.1.md",
+    "date": "2026-11-01T07:47:52.291Z",
+    "version": "v1.0.1",
+    "project": "pengutown",
+    "kind": "manual",
+    "manualId": "pengutown-movement-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pengutown",
+      "kind": "manual",
+      "title": "PenguTown 펭귄 에셋과 웹 이동 프로토타입",
+      "summary": "공유 기획을 확인하고 실제 펭귄 에셋을 확보해 기본 이동과 물리 동작을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity 빌드·실행 QA와 중앙 보고서 공개 진행 중",
+      "outcome": "2026-11-01 16:33:54 KST 시작. 공유 공개 본문과 무료 모델 원본을 확인했습니다.",
+      "proposedTime": "조사 5~10분, 구현·검증 추가 20~40분",
+      "actualTime": "진행 중",
+      "xerjEvidence": "빈 프로젝트이며 제공된 XERJ 연결·검색 스크립트 없음. 직접 파일 검사와 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pengutown-movement-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "공유 기획의 펭귄 힐링 공간을 바탕으로 Unity 6000.0.83f1에서 걷기·배 미끄러짐·경사·다이빙·수영을 구현합니다.",
+      "completionCriteria": "실제 에셋·라이선스·애니메이션 확인, Unity 기본 동작 구현, 실제 PhysX 및 그래픽 플레이어 검증, 결과 보고서 공개",
+      "previousManual": "projects/pengutown/reports/2026-11-01-manual-20261101073905824-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "에셋과 기획 확인",
+          "action": "공유 본문을 브라우저에서 읽고 무료 모델 원본과 판매자 정보를 확인합니다.",
+          "expected": "확인한 라이선스와 실제 클립 목록을 기록합니다.",
+          "qa": "원본 ZIP·GLB 구조·출처를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "기본 이동 구현",
+          "action": "Unity Rigidbody·지형 MeshCollider·부력·수영과 모델 애니메이션을 구현합니다.",
+          "expected": "동작이 연결되고 실제 펭귄 에셋이 표시됩니다.",
+          "qa": "Unity 컴파일·실제 PhysX QA·Windows 빌드를 실행합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증",
+          "action": "Unity 그래픽 플레이어에서 동작을 실행하고 실제 화면과 runtime-qa.json을 확인합니다.",
+          "expected": "모델이 표시되고 핵심 이동 전환이 실행됩니다.",
+          "qa": "Unity 플레이어 화면과 실제 이동 상태·깊이·속도를 비교합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "배포와 결과 공개",
+          "action": "Unity 결과·원본 근거와 화면을 중앙 보고서에 등록하고 공개 링크를 확인합니다.",
+          "expected": "실행 결과와 제한을 외부에서 열리는 보고서로 전달합니다.",
+          "qa": "이번 변경만 스테이징하고 커밋·푸시·Pages 배포·개별 공개 URL을 확인합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "사용자께서 다른 프로젝트와 같은 Unity 버전을 지정하셨습니다. TurnRoom·LAST37N·샘플 프로젝트의 6000.0.83f1을 확인했습니다. 기존 웹 초안을 보존하고 Unity 구현·검증으로 T02~T04를 변경합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T16:44:37+09:00",
+          "summary": "공유 기획과 원본 에셋을 실제 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 ZIP 확보, CC0 출처, idle/swim/tpose/walk 실물 클립과 리그를 확인했습니다.",
+              "evidence": "docs/asset-research.md, docs/penguin-inspection.json, assets/vendor/penguin/penguin.zip",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/pengutown/reports/2026-11-01-manual-20261101073905824-v1.0.0.html",
+    "postPath": "projects/pengutown/posts/2026-11-01-manual-20261101073905824-v1.0.0.md",
+    "date": "2026-11-01T07:39:05.824Z",
+    "version": "v1.0.0",
+    "project": "pengutown",
+    "kind": "manual",
+    "manualId": "pengutown-movement-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pengutown",
+      "kind": "manual",
+      "title": "PenguTown 펭귄 에셋과 웹 이동 프로토타입",
+      "summary": "공유 기획을 확인하고 실제 펭귄 에셋을 확보해 기본 이동과 물리 동작을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "구현·실행 QA·게시 진행 중",
+      "outcome": "2026-11-01 16:33:54 KST 시작. 공유 공개 본문과 무료 모델 원본을 확인했습니다.",
+      "proposedTime": "조사 5~10분, 구현·검증 추가 20~40분",
+      "actualTime": "진행 중",
+      "xerjEvidence": "빈 프로젝트이며 제공된 XERJ 연결·검색 스크립트 없음. 직접 파일 검사와 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pengutown-movement-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "공유 기획의 브라우저 3D 펭귄 공간을 기반으로 걷기·배 미끄러짐·경사·다이빙·수영 기본 구현",
+      "completionCriteria": "실제 에셋·라이선스·애니메이션 확인, 기본 동작 구현, 실제 브라우저 검증, 결과 보고서 공개",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "에셋과 기획 확인",
+          "action": "공유 본문을 브라우저에서 읽고 무료 모델 원본과 판매자 정보를 확인합니다.",
+          "expected": "확인한 라이선스와 실제 클립 목록을 기록합니다.",
+          "qa": "원본 ZIP·GLB 구조·출처를 대조합니다.",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "기본 이동 구현",
+          "action": "눈섬·바다와 걷기·배 미끄러짐·경사 가속·다이빙·수영·카메라를 구현합니다.",
+          "expected": "동작이 연결되고 실제 펭귄 에셋이 표시됩니다.",
+          "qa": "자동 물리 시나리오와 빌드, 실제 조작을 검사합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실행 검증",
+          "action": "브라우저에서 씬·조작·상태 전환을 실행하고 관찰한 문제를 수정합니다.",
+          "expected": "모델이 표시되고 핵심 이동 전환이 실행됩니다.",
+          "qa": "실제 화면·로그와 물리 테스트 결과를 비교합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "배포와 결과 공개",
+          "action": "소스·사이트와 중앙 보고서를 게시하고 배포 상태·개별 링크를 확인합니다.",
+          "expected": "실행 결과와 제한을 외부에서 열리는 보고서로 전달합니다.",
+          "qa": "정확한 커밋·배포 상태·공개 본문을 확인합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
     "postPath": "projects/pixelcamera/posts/2026-11-01-manual-20261101072921387-v1.0.0.md",
     "date": "2026-11-01T07:29:21.387Z",
@@ -278,6 +939,509 @@
       "scopeChange": "사용자 최신 지시에 따라 필수 예제 수를 약3개로 줄이고 품질에 집중합니다. 기존 씬은 Development 아래에 보존하고 고객 Samples 진입점을 재사용합니다.",
       "qaRuns": [],
       "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101072711604-v1.0.6.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101072711604-v1.0.6.md",
+    "date": "2026-11-01T07:27:11.604Z",
+    "version": "v1.0.6",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "기존 Scenes·AddressablesResources·Management·UI·SampleScene 구조로 통합하고 GUID·번들·실행을 재검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청 범위의 남은 작업 없음",
+      "outcome": "기존 프로젝트 폴더 통합·이동 후 실제 회귀·지침 동기화·공개 보고서 검증 완료",
+      "proposedTime": "후속 폴더 통합 10~20분",
+      "actualTime": "후속 시작 2026-11-01 16:10:07 KST. 실제 이동 후 QA 16:20:58 KST 완료, 공개 보고서·5개 첨부 검증 16:26:46 KST 완료. 기록 시각 2026-11-01 16:27:11 KST.",
+      "xerjEvidence": "XERJ 도구 미제공. rg로 현재 경로와 참조를 검색.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101072221273-v1.0.5.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "기존 프로젝트 폴더로 통합",
+          "action": "Scenes·Datas·Prefabs/UI·Material과 Management·UI·SampleScene으로 에셋·메타를 함께 이동하고 생성기·설정·문서를 고친다.",
+          "expected": "GUID·직렬화 참조 보존, 독립 Examples 트리 제거, 기존 게임 파일 보존",
+          "qa": "이동 전후 GUID 대조, 이전 경로 잔존 검색, 설정·문서 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "통합 배치의 실제 실행 회귀",
+          "action": "이동된 에셋에서 콘텐츠·플레이어를 빌드하고 실제 창에서 57개 QA와 화면을 확인한다.",
+          "expected": "이동된 경로의 번들·실행 성공과 실제 화면 확보",
+          "qa": "실제 빌드·실행 결과와 원본 대조·캡처 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "후속 결과와 선호 반영",
+          "action": "문서·보고서·완료 메뉴얼을 게시하고 기존 구조 우선 선호의 중복 여부를 검토해 지침에 반영한다.",
+          "expected": "공개 결과·첨부 확인 및 지침 처리 기록",
+          "qa": "공개 배포·본문·첨부, 지침 차이·동기화 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치"
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06",
+        "T07"
+      ],
+      "scopeChange": "사용자 정정: 독립 Examples 트리를 만들지 않고 기존 폴더에 융화한다. 원래 T01~T04 및 QA 기록은 보존하고 후속 T05~T07을 추가한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-01T07:00:50.140Z",
+          "summary": "공개 보고서 및 실제 첨부 대조",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions 배포 성공·개별 보고서 HTTP 200·이미지 5개 해시 일치·57개 QA JSON 확인",
+              "evidence": "../assets/scene-ui-20261101/publication-check.json; Actions run 41282943235",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "final",
+          "at": "2026-11-01T07:00:50.141Z",
+          "summary": "요청 전체 범위의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "최종 57개 결과·5개 실제 화면·visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "공개 보고서·publication-check.json",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-01T07:15:08Z",
+          "summary": "첫 문서 갱신 오류 보존",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "문서 파일 열기 UNKNOWN 오류로 빌드 중단·페이지 빌드 시각 불일치 검사 실패. 원인은 미확인.",
+              "evidence": "문서 build.mjs 및 validate.mjs 실행 결과. 기존 파일 속성 확인 후 전체 재실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-01T07:17:01Z",
+          "summary": "이동과 참조·문서 재검증 통과",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "프로젝트 docs/verification/scene-ui/layout/guid-check.json, references.json, unchanged.json; 문서 27개·908 링크 검사 통과",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-01T07:22:20.392Z",
+          "summary": "이동 후 실제 실행과 파일 대조",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "../assets/scene-ui-layout-20261101/results.json; build-comparison.json; visual-check.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "step",
+          "at": "2026-11-01T07:27:11.357Z",
+          "summary": "후속 보고서·지침 공개 확인",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "../assets/scene-ui-layout-20261101/publication-check.json; instructions.json; Actions 41284710020",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "final",
+          "at": "2026-11-01T07:27:11.358Z",
+          "summary": "원래 전체 작업과 후속 통합 작업의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "31개 GUID·7개 참조·기존 파일 보존",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "이동 후 실제 57개 QA·화면 5장·32개 파일 대조",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "공개 publication-check.json·지침 해시",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
     }
   },
   {

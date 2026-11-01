@@ -1,0 +1,228 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pengutown",
+    "kind": "manual",
+    "title": "PenguTown 펭귄 에셋과 웹 이동 프로토타입",
+    "summary": "공유 기획을 확인하고 실제 펭귄 에셋을 확보해 기본 이동과 물리 동작을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "요청한 에셋 조사와 Unity 기본 구현·필수 검증·보고서 공개 완료. 서버 멀티플레이·전용 Slide/Dive 클립·꾸미기·모바일·WebGL은 이번 기본 구현 밖의 후속 작업입니다.",
+    "outcome": "2026-11-01 16:33:54 KST 시작. 공유 공개 본문과 무료 모델 원본을 확인했습니다.",
+    "proposedTime": "조사 5~10분, 구현·검증 추가 20~40분",
+    "actualTime": "시작 2026-11-01 16:33:54 KST, 공개 확인 2026-11-01 17:00:51 KST. 실제 26분 57초. 이 완료 메뉴얼의 게시 상태는 후속 푸시·배포로 따로 확인합니다.",
+    "xerjEvidence": "빈 프로젝트이며 제공된 XERJ 연결·검색 스크립트 없음. 직접 파일 검사와 rg 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pengutown-movement-20261101",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "공유 기획의 펭귄 힐링 공간을 바탕으로 Unity 6000.0.83f1에서 걷기·배 미끄러짐·경사·다이빙·수영을 구현합니다.",
+    "completionCriteria": "실제 에셋·라이선스·애니메이션 확인, Unity 기본 동작 구현, 실제 PhysX 및 그래픽 플레이어 검증, 결과 보고서 공개",
+    "previousManual": "projects/pengutown/reports/2026-11-01-manual-pengutown-movement-20261101-20261101075755063-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "에셋과 기획 확인",
+        "action": "공유 본문을 브라우저에서 읽고 무료 모델 원본과 판매자 정보를 확인합니다.",
+        "expected": "확인한 라이선스와 실제 클립 목록을 기록합니다.",
+        "qa": "원본 ZIP·GLB 구조·출처를 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "기본 이동 구현",
+        "action": "Unity Rigidbody·지형 MeshCollider·부력·수영과 모델 애니메이션을 구현합니다.",
+        "expected": "동작이 연결되고 실제 펭귄 에셋이 표시됩니다.",
+        "qa": "Unity 컴파일·실제 PhysX QA·Windows 빌드를 실행합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "Unity 6000.0.83f1에서 실제 Rigidbody 이동·애니메이션·지형을 구현하고 Windows 빌드와 PhysX QA를 통과했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실행 검증",
+        "action": "Unity 그래픽 플레이어에서 동작을 실행하고 실제 화면과 runtime-qa.json을 확인합니다.",
+        "expected": "모델이 표시되고 핵심 이동 전환이 실행됩니다.",
+        "qa": "Unity 플레이어 화면과 실제 이동 상태·깊이·속도를 비교합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "최종 플레이어의 실제 화면과 자동 조작, 수영·잠수 UI와 R 키 복귀를 확인했습니다."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "배포와 결과 공개",
+        "action": "Unity 결과·원본 근거와 화면을 중앙 보고서에 등록하고 공개 링크를 확인합니다.",
+        "expected": "실행 결과와 제한을 외부에서 열리는 보고서로 전달합니다.",
+        "qa": "이번 변경만 스테이징하고 커밋·푸시·Pages 배포·개별 공개 URL을 확인합니다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "보고서 커밋 13e64e32c3f06fc56fe0b1d7e1432f321ce83630, Pages Actions 41286927971 성공 및 개별 보고서 HTTP 200·화면 3개 HTTP 200 확인."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "사용자께서 다른 프로젝트와 같은 Unity 버전을 지정하셨습니다. TurnRoom·LAST37N·샘플 프로젝트의 6000.0.83f1을 확인했습니다. 기존 웹 초안을 보존하고 Unity 구현·검증으로 T02~T04를 변경합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T16:44:37+09:00",
+        "summary": "공유 기획과 원본 에셋을 실제 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 ZIP 확보, CC0 출처, idle/swim/tpose/walk 실물 클립과 리그를 확인했습니다.",
+            "evidence": "docs/asset-research.md, docs/penguin-inspection.json, assets/vendor/penguin/penguin.zip",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-01T07:46:51.085Z",
+        "summary": "최초 Unity 컴파일 실패를 보존합니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "오디오 모듈을 사용하지 않는 프로젝트에서 AudioListener 참조로 CS1069 발생. 참조를 제거했습니다.",
+            "evidence": "outputs/unity-build.log",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-01T16:50:44.103+09:00",
+        "summary": "최초 그래픽 실행에서 모델 표시 실패를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "물리 전환은 통과했지만 실제 화면에 펭귄이 보이지 않았습니다. 원본 키 범위와 FBX 단위 변환을 검사·수정했습니다.",
+            "evidence": "outputs/unity-qa-missing-model/, docs/animation-keyframes.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-01T16:56:00.5513601+09:00",
+        "summary": "최종 Unity 컴파일·PhysX·빌드·그래픽 실행을 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종 빌드 exit 0, 다섯 이동 상태와 부력 복귀 통과, idle/walk/swim 0.917초 확인.",
+            "evidence": "outputs/unity-build-final.log, outputs/unity-qa/physics-qa.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 플레이어에서 걷기·배 미끄러짐·수영·잠수 장면과 수중 카메라를 확인했습니다. 실제 UI 클릭으로 수영·잠수, R 키 복귀도 확인했습니다.",
+            "evidence": "outputs/unity-qa/runtime-qa.json, slide.png, swim.png, dive.png; 실제 게임 창 조작",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "final",
+        "at": "2026-11-01T17:00:51.3012169+09:00",
+        "summary": "원래 전체 작업과 Unity 전환 후 현재 버전, 공개 보고서를 최종 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공유 공개 본문, CC0 원본 ZIP·Blend와 실제 GLB 클립 4개를 확인하고 유료 후보를 비교했습니다.",
+            "evidence": "원본 ZIP Git blob 동일: da96a7f4342f06dae2becbc80e85f45b134fca88; docs/asset-research.md",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Unity 6000.0.83f1에서 실제 Rigidbody 이동·애니메이션·지형을 구현하고 Windows 빌드와 PhysX QA를 통과했습니다.",
+            "evidence": "Unity 6000.0.83f1; unity-build-final.log exit 0; physics-qa.json 다섯 상태 통과",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종 플레이어의 실제 화면과 자동 조작, 수영·잠수 UI와 R 키 복귀를 확인했습니다.",
+            "evidence": "runtime-qa.json 다섯 상태 true, 깊이 -3.80m; 실제 화면과 UI 조작 확인",
+            "dependencies": {
+              "T02": 2
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "보고서 커밋 13e64e32c3f06fc56fe0b1d7e1432f321ce83630, Pages Actions 41286927971 성공 및 개별 보고서 HTTP 200·화면 3개 HTTP 200 확인.",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/pengutown/reports/2026-11-01-result-20261101075702678-v1.0.0.html; Actions 41286927971 success; reportStatus 200; 실제 PNG 3개 HTTP 200",
+            "dependencies": {
+              "T03": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
