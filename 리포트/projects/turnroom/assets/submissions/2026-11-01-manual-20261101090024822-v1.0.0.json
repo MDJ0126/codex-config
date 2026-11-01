@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실행 중",
+    "outcome": "조사 진행",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-01 17:59:13 KST 시작",
+    "xerjEvidence": "Status 노드 미실행; Search 복구 시도 진행",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "forge-ui-template-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기본 Unity 선택창을 공통 디자인으로 연결하고 Entity Forge 레이아웃을 수정",
+    "completionCriteria": "공통 자동 연결과 제품 수정, 실제 마우스·키보드 선택값·취소·테마·레이아웃 검증, 관련 다국어 문서·공개 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 선택 경로와 레이아웃 수정",
+        "action": "누락 경로 확인, 중복 없는 공통 바인딩과 제품 헤더·필드 정리",
+        "expected": "새 필드가 공통 적용 시 기본 선택창을 호출하지 않음",
+        "qa": "소스 대조와 컴파일",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 Unity 회귀 검증",
+        "action": "선택·반환값·취소와 테마·좁은 폭을 실제 화면에서 확인",
+        "expected": "선택값 보존과 겹침·잘림 해소",
+        "qa": "실제 입력·저장 데이터·캡처 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "지침·문서·공개 기록",
+        "action": "재발 방지 지침과 9개 언어 가이드·실제 캡처 및 보고서 갱신",
+        "expected": "근거와 현재 검증 범위 공개",
+        "qa": "문서·해시·링크·배포 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자께서 게임 종료 후 진행을 선택하셨으므로 화면 전환·신규 GUI 실행·재시작을 보류했습니다. 실제 Unity의 마우스·키보드 선택값·취소·라이트/다크·좁은 폭과 최종 캡처, 스크린샷 교체·현재 해시 등록은 미완료입니다. Unity 대상 캡처에 전면 게임이 나타났으므로 이를 제품 증거로 저장·게시하지 않았습니다. 자동 UI 이벤트 QA는 도메인 재로드 후 유틸리티 창 참조가 없어 실패했으며 통과 처리하지 않았습니다. 공통 변경의 다른 제품 실제 화면 회귀도 남아 있습니다. 교훈은 프로젝트 지침에 공통 Apply·선택 패널·패키징 검사·로고 슬롯 사용 규칙으로 통합했습니다. 전역 지침은 새 중복 규칙 없이 유지합니다.",
+    "outcome": "코드 수정·컴파일·정책 검사·문서 링크 검사 완료; 실제 입력·캡처 미완료",
+    "proposedTime": "15~25분",
+    "actualTime": "수정·정적 검증 21분 37초, 2026-11-01T18:20:50.536036+09:00; 실제 화면 검증은 게임 종료 후 대기",
+    "xerjEvidence": "Status 노드 미실행; Search 복구 시도 진행",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "forge-ui-template-20261101",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기본 Unity 선택창을 공통 디자인으로 연결하고 Entity Forge 레이아웃을 수정",
+    "completionCriteria": "공통 자동 연결과 제품 수정, 실제 마우스·키보드 선택값·취소·테마·레이아웃 검증, 관련 다국어 문서·공개 보고",
+    "previousManual": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 선택 경로와 레이아웃 수정",
+        "action": "누락 경로 확인, 중복 없는 공통 바인딩과 제품 헤더·필드 정리",
+        "expected": "새 필드가 공통 적용 시 기본 선택창을 호출하지 않음",
+        "qa": "소스 대조와 컴파일",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "코드·UXML 대조, 컴파일 및 실제 C# 정책 검사 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 Unity 회귀 검증",
+        "action": "선택·반환값·취소와 테마·좁은 폭을 실제 화면에서 확인",
+        "expected": "선택값 보존과 겹침·잘림 해소",
+        "qa": "실제 입력·저장 데이터·캡처 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "게임 종료 후 실제 입력·캡처 대기. 자동 UI 이벤트 QA 실패 기록 보존"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "지침·문서·공개 기록",
+        "action": "재발 방지 지침과 9개 언어 가이드·실제 캡처 및 보고서 갱신",
+        "expected": "근거와 현재 검증 범위 공개",
+        "qa": "문서·해시·링크·배포 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T18:20:50.536036+09:00",
+        "summary": "정적 구현 검증 및 UI 미완료 범위 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "코드·UXML 대조, 컴파일 및 실제 C# 정책 검사 통과",
+            "evidence": "static-common/result.json; static/result.json; policy/result.json; layout-source-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "게임 종료 후 실제 입력·캡처 대기. 자동 UI 이벤트 QA 실패 기록 보존",
+            "evidence": "error.txt: utility window reference missing after reload; foreground capture occluded; user requested after-game QA",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

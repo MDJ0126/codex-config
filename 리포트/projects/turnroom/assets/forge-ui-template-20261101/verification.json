@@ -1,0 +1,99 @@
+{
+  "sourceHashes": {
+    "Assets/TurnRoom/Templete/Editor/UITemplate.cs": "f54171fea63957d3414ac90e7c58c1600711f8ed4a28e0d31ba868751b04cf29",
+    "Assets/TurnRoom/Templete/Editor/UITemplateFields.cs": "9daffaf504c66aaa9f87075d9edb8290c756c0d395f1b558e6a174b96e8891ec",
+    "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs": "3cf68e77b6557dcc682695df603e562fd5cede43b6ce3e838cefe0c12beddf88",
+    "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs": "c3cdfd710bf629d6400d60cbcb3a38523431326b5b725cd462cd5ffb55dc414d",
+    "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs": "fc85ddb78063a3356181d04a21439617fcdf52e467da8b9f25bdffc4b2691ab4",
+    "Assets/TurnRoom/Templete/Editor/TemplateSelectionPanel.uxml": "e3c0d731e8a8b93231bd9a9379dfe09a3105ade98a634f27fb23424518bb5709",
+    "Assets/TurnRoom/Templete/Editor/TemplateSelectionPanel.uss": "40a1e1e3fb24f00fdff0e555add37e632a231d8493a2806e1f1e7466cf068dea",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "b2edd28448f79931a0f11054895a15fc61311d0bedec87daed9ac1ddc7d6f2ab",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+  },
+  "policy": {
+    "passed": true,
+    "actualCSharpPolicyExecuted": true,
+    "product": "EntityForge",
+    "negativeCases": 10,
+    "summary": "PASS actual C# policy: product accepted; 10 forbidden-call cases rejected"
+  },
+  "layout": {
+    "passed": true,
+    "method": "XML parse, unique names and C# root queries matched to editable layout; no native layout rendering claimed",
+    "namedElements": 24,
+    "queriedElements": 19,
+    "styleFileExists": true
+  },
+  "docs": {
+    "guides": 9,
+    "localLinks": 171,
+    "passed": true,
+    "scope": "version and local links; physical layouts pending"
+  },
+  "physicalUI": {
+    "state": "pending",
+    "reason": "User explicitly chose verification after game exit. Foreground game occluded target captures; no substitute images published."
+  },
+  "uiEventFixture": {
+    "state": "not_passed",
+    "reason": "Fixture lost utility window reference after domain reload; error preserved. Targeted events are not physical-input proof."
+  },
+  "compilation": {
+    "common": [
+      {
+        "assembly": "DesignDataTable.Runtime",
+        "exitCode": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Runtime",
+        "exitCode": 0
+      },
+      {
+        "assembly": "TurnRoom.Editor",
+        "exitCode": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0
+      },
+      {
+        "assembly": "Pixora.Editor",
+        "exitCode": 0
+      },
+      {
+        "assembly": "DesignDataTable.Editor",
+        "exitCode": 0
+      },
+      {
+        "assembly": "TurnRoom.Templete.Development.Editor",
+        "exitCode": 0
+      }
+    ],
+    "product": [
+      {
+        "name": "TurnRoom.EntityForge.Runtime",
+        "exitCode": 0
+      },
+      {
+        "name": "TurnRoom.EntityForge.Dots",
+        "exitCode": 0
+      },
+      {
+        "name": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0
+      },
+      {
+        "name": "TurnRoom.EntityForge.Development.Editor",
+        "exitCode": 0
+      }
+    ],
+    "finalCommon": [
+      {
+        "assembly": "TurnRoom.Editor",
+        "exitCode": 0
+      }
+    ]
+  },
+  "finalCommonSourcesMatch": true
+}

@@ -1,5 +1,2344 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-forge-ui-template-20261101-20261101092250528-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-forge-ui-template-20261101-20261101092250528-v1.0.1.md",
+    "date": "2026-11-01T09:22:50.528Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "forge-ui-template-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+      "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자께서 게임 종료 후 진행을 선택하셨으므로 화면 전환·신규 GUI 실행·재시작을 보류했습니다. 실제 Unity의 마우스·키보드 선택값·취소·라이트/다크·좁은 폭과 최종 캡처, 스크린샷 교체·현재 해시 등록은 미완료입니다. Unity 대상 캡처에 전면 게임이 나타났으므로 이를 제품 증거로 저장·게시하지 않았습니다. 자동 UI 이벤트 QA는 도메인 재로드 후 유틸리티 창 참조가 없어 실패했으며 통과 처리하지 않았습니다. 공통 변경의 다른 제품 실제 화면 회귀도 남아 있습니다. 교훈은 프로젝트 지침에 공통 Apply·선택 패널·패키징 검사·로고 슬롯 사용 규칙으로 통합했습니다. 전역 지침은 새 중복 규칙 없이 유지합니다.",
+      "outcome": "코드 수정·컴파일·정책 검사·문서 링크 검사 완료; 실제 입력·캡처 미완료",
+      "proposedTime": "15~25분",
+      "actualTime": "수정·정적 검증 21분 37초, 2026-11-01T18:20:50.536036+09:00; 실제 화면 검증은 게임 종료 후 대기",
+      "xerjEvidence": "Status 노드 미실행; Search 복구 시도 진행",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "forge-ui-template-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "기본 Unity 선택창을 공통 디자인으로 연결하고 Entity Forge 레이아웃을 수정",
+      "completionCriteria": "공통 자동 연결과 제품 수정, 실제 마우스·키보드 선택값·취소·테마·레이아웃 검증, 관련 다국어 문서·공개 보고",
+      "previousManual": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 선택 경로와 레이아웃 수정",
+          "action": "누락 경로 확인, 중복 없는 공통 바인딩과 제품 헤더·필드 정리",
+          "expected": "새 필드가 공통 적용 시 기본 선택창을 호출하지 않음",
+          "qa": "소스 대조와 컴파일",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "코드·UXML 대조, 컴파일 및 실제 C# 정책 검사 통과"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 Unity 회귀 검증",
+          "action": "선택·반환값·취소와 테마·좁은 폭을 실제 화면에서 확인",
+          "expected": "선택값 보존과 겹침·잘림 해소",
+          "qa": "실제 입력·저장 데이터·캡처 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "게임 종료 후 실제 입력·캡처 대기. 자동 UI 이벤트 QA 실패 기록 보존"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "지침·문서·공개 기록",
+          "action": "재발 방지 지침과 9개 언어 가이드·실제 캡처 및 보고서 갱신",
+          "expected": "근거와 현재 검증 범위 공개",
+          "qa": "문서·해시·링크·배포 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T18:20:50.536036+09:00",
+          "summary": "정적 구현 검증 및 UI 미완료 범위 구분",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "코드·UXML 대조, 컴파일 및 실제 C# 정책 검사 통과",
+              "evidence": "static-common/result.json; static/result.json; policy/result.json; layout-source-verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "게임 종료 후 실제 입력·캡처 대기. 자동 UI 이벤트 QA 실패 기록 보존",
+              "evidence": "error.txt: utility window reference missing after reload; foreground capture occluded; user requested after-game QA",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101091010720-v1.0.5.html",
+    "postPath": "projects/designdatatable/posts/2026-11-01-manual-submission-202-20261101-20261101091010720-v1.0.5.md",
+    "date": "2026-11-01T09:10:10.720Z",
+    "version": "v1.0.5",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "submission-202-20261101",
+    "round": 6,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+      "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "기존 전체 제출 준비는 미완료입니다. 이전 문서 이미지 검증468건을 처리하거나 최신 전체 계수를 재산정하지 않았습니다. 도형 정렬 미구현·일시정지 Excel 목표도 유지합니다. 실제 폴더 캡처 하단에 기존 ChartGallery 레이아웃 저장 경고가 있어 모든 창 복원이 해결됐다고 주장하지 않습니다. 첫 검사 대기 정체·대기 콜백 집계 실패·자동 한국어 주석 갱신으로 생긴 패키지346파일 차이를 보존했습니다.346파일은 주석행 이외가 같았고 동결 원본 복원 후 재내보냈습니다. 테스트의 전체3370조건 실행본과 최종본은 이 검증된 주석 차이만 있습니다. 사용자 프로젝트의 주석 언어 설정은 변경하지 않았습니다.",
+      "outcome": "삭제 실패·입력 지연을 재현했습니다. 최종 수정안은 컴파일 통과했으며 화면 조작 금지로 실제 재검증을 보류했습니다.",
+      "proposedTime": "2026-11-01 17:54:08 KST 시작,10–15분.",
+      "actualTime": "소스 구현·정적 컴파일 완료:2026-11-01 18:06:35 KST,12분27초. 실제 동작·성능·IME 최종 검증은 미완료. 공개 보고서 확인 시각은 최종 채팅에 기록합니다.",
+      "xerjEvidence": "XERJ 서버를 복구해 QueueNativeIconRefresh 검색을 호출했습니다. 검색 후보에 현재 구현이 누락돼 rg와 실제 로그·현재 소스로 대조했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "submission-202-20261101",
+      "round": 6,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "현재 지원 범위의2.0.2 제출 패키지·간단한 스토어 원고·필수 검증과 공개 보고를 준비한다. 포털 제출은 수행하지 않는다.",
+      "completionCriteria": "공개 API 교체를 실행 검증하고, 네이티브 패키지·참조·메타데이터·새 프로젝트·공식 검사·현재 화면과 제출 자료·보고 링크를 확인한다.",
+      "previousManual": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "배포 범위·메타데이터 고정",
+          "action": "제품과 공유 의존성만 고정하고 개발·QA 파일을 제외한다. 누락 메타와 메뉴 경로를 수정한다.",
+          "expected": "동결 소스·메타·GUID·패키지 파일 일치",
+          "qa": "네이티브 아카이브를 원본 인벤토리와 대조한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "1577개 파일·8037참조, 동결 소스와 패키지 오류0."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "새 프로젝트·샘플·생성 데이터 검사",
+          "action": "새 Unity 프로젝트에서 컴파일·씬·바이너리·편집/Undo/Redo/저장과 Windows 빌드를 실행한다.",
+          "expected": "빌드와 실제 검사 실패0",
+          "qa": "현재 패키지를 만든 동일 스냅샷으로 검사한다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Unity 내부 API를 공개 API로 교체",
+          "action": "비공개 창·선반·스포이트·캡처·아이콘 접근을 공개 EditorWindow와 공식 Win32 API로 바꾼다. 추가 로그의 중복 메뉴·생성 소스의 매핑 파일 저장과 시작 시 서랍 생성 순서를 수정한다.",
+          "expected": "핵심 창 동작·PNG·색상 선택 보존과 공식 검사 실패0",
+          "qa": "실제 창·물리 클릭·색상·최대화·호버·복원·10회 반복과 소스·어셈블리 검사를 실행한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "재촬영·제출 자료·공개 보고",
+          "action": "플레이어 선택 동작을 확인하고 실제 화면·간단한 스토어 원고·패키지와 검증 근거를 한 제출 폴더와 보고서에 모은다.",
+          "expected": "확인된 지원 범위와 파일·이미지·개별 공개 링크 일치",
+          "qa": "현재 플레이어·허브 선택과 파일 해시·사이트 본문·첨부를 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "qa",
+          "revision": 3,
+          "result": "현재 제출본·원고·Affinity 원본·키 이미지·검증 자료 정리 완료. 공개 게시 확인 중."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "서식 적용 무반영 수정·실제 QA",
+          "action": "직접 셀 서식에 가려진 표 스타일 적용을 분리하고 전용 서식 탭의 프리셋을 실제 실행·저장·재열기한다.",
+          "expected": "표·차트·도형·그림 프리셋이 표시·저장되고 Undo/Redo가 복원된다.",
+          "qa": "실제 Unity GUI 이벤트·227조건 매트릭스·탭별 실제 화면을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "227조건 통과,5개 서식 탭 실제 적용·촬영, 그룹 관리 창 열기 확인. 정렬 미구현은 제한으로 기록."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "Project 폴더 무한 재임포트 수정",
+          "action": "아이콘 그리기에서 임포트를 제거하고 프로세스 간 유지되는 색상 상태·재진입 방지를 적용한다.",
+          "expected": "아이콘2000회 표시와 캐시 초기화에서 임포트0, 색상 변경은 파일당 최대1회, 원본 SHA-256 유지.",
+          "qa": "실제 Unity 임포트 관찰자와 저장된 아이콘·실행 중 에디터 로그·실제 폴더 화면 및 기존3370조건을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과."
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "시트 탭 우클릭 메뉴",
+          "action": "오른쪽 MouseDown은 탭 버튼에 전달하지 않고 MouseUp에서 메뉴를 한 번만 엽니다. 같은 클릭의 ContextClick 재처리를 억제합니다. 메뉴를 열 때 SelectWorksheet를 호출하지 않으며, 이름 변경·삭제는 캡처한 시트 이름을 대상으로 실행합니다. 연결된 팝업이 열려 있으면 문서 ScreenTip을 초기화하고, 닫으면 일반 호버를 다시 허용합니다.",
+          "expected": "실제 우클릭 메뉴 유지·현재 시트 유지·대상 작업 정확·메뉴 중 뒤쪽 툴팁 없음·종료 후 복구.",
+          "qa": "실제 우클릭5초 관찰과6회 반복·Esc/외부 닫기·대상 작업 저장·재열기·툴팁3초 억제와 복구.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다."
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "제목줄 검색 입력 삭제·최적화",
+          "action": "제목 검색을 EditorGUI 텍스트 편집기로 연결하고, 일반 Backspace/Delete의 Unity 단축키 등록을 그리드 컨텍스트로 옮겼습니다. 제목 입력 포커스를 기록해 셀·객체 단축키와 분리하고 삭제 문자를 보존합니다. 네이티브 키보드 포커스 조회는 GUI 이벤트당 한 번으로 묶고 검색 스타일을 재사용합니다. 측정에서 더 느린 셀·차트 표시 생략 시도는 최종 코드에서 제거했습니다.",
+          "expected": "Backspace·Delete·전체 선택 삭제·한영 입력이 검색창에만 적용되고 문서·객체가 보존되며 계측 결과 개선.",
+          "qa": "정적 컴파일 후, 사용자 화면 조작 허용 시 실제 키보드·한영 조합·200입력 반복·객체 보존을 재검증한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "소스 구현·정적 컴파일 완료. 화면 조작 금지로 실제 QA 대기. 수정 전200입력: 총3459.8ms·중앙16.12ms·p95 27.05ms. Backspace 후 검색어 길이 미변경. 중간 수정200입력: 총4972.2ms·중앙23.91ms·p95 32.77ms, 삭제 미해결. 해당 표시 생략 시도는 제거했습니다. 최종 소스3어셈블리 정적 컴파일 exit0. 공유 템플릿의 기존 obsolete경고3건은 별도입니다. 최종 타이핑·성능·IME 검증은 사용자의 화면 조작 금지에 따라 실행하지 않았습니다. 기존38TC는 과거 회차 결과입니다."
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T08"
+      ],
+      "scopeChange": "2026-11-01 11:57 KST 사용자가 기능을 유지한 공개 API 교체를 승인했습니다. 전체 Excel46TC 동일 구현 목표는 계속 일시정지이며 이번 제출 준비와 분리합니다. 15:23KST 추가 로그의 메뉴 중복·매핑 소스 저장·복원 서랍 창 문제를 같은 범위에서 수정하고 현재 버전 재QA를 수행했습니다. 사용자의15:45경 서식 무반영 제보로 T05를 추가하고 문서 검증 실패를 숨기지 않고 보존합니다. 16:26KST 사용자의 파일 폴더 무한 로딩 제보로 T06을 추가했습니다. 기존 미완료 문서 QA와 일시정지 Excel 목표를 완료로 바꾸지 않습니다. 사용자의 시트 우클릭 미표시 제보로 T07을 추가합니다. 기존 잔여를 보존합니다. 사용자가 메뉴 깜박임·우클릭 시 시트 전환을 제보했습니다. T07을 revision2로 재개하고 단일 ContextClick·현재 시트 유지·실제 오른쪽 마우스 반복 검증을 추가합니다. 이전 Q07은 당시 합성 이벤트 검사 기록으로 보존하며 현재 수정의 통과로 사용하지 않습니다. 실제 MouseDown이 일반 탭 버튼으로 전달되는 추가 재현을 반영해 MouseUp 단일 표시로 수정했습니다. 사용자의 추가 툴팁 제보를 T07 revision3에 포함했습니다. 사용자 제보로 T08 제목줄 검색 삭제·입력 최적화를 추가합니다. T08 revision2: 실행 결과가 더 느린 표시 생략을 제거하고 최종 포커스·단축키·스타일 캐시 수정으로 변경했습니다. 사용자 화면 조작 금지로 실제 QA를 보류하며 완료 기준은 유지합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T03:56:55.759385+00:00",
+          "summary": "교체 중 선반 초기 렌더링 실패를 발견하고 보존했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "초기 선반 캡처가 검게 나왔습니다. 준비·숨김·최종 네이티브 배치와 노출 검사 대상을 수정했습니다.",
+              "evidence": "로컬 PublicApi/public-shelf-fixed-r2.png 및 이전 시도 폴더",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-01T04:31:38.856063+00:00",
+          "summary": "현재 교체본의 소스·네이티브 실행·패키지·공식 검사 결과를 대조했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "1578개 파일·메타·GUID·8037참조 검사 오류0",
+              "evidence": "../assets/submission-202-20261101/ArchiveVerification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "3370검증조건·25씬·24테이블·빌드 성공",
+              "evidence": "../assets/submission-202-20261101/NativeSubmissionQA.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 창 동작·PNG·색상 선택과 10회 반복 통과, 공식31통과·3경고·0실패",
+              "evidence": "../assets/submission-202-20261101/PublicApiNativeQA.json / OfficialValidator.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:34:44.5732382Z",
+          "summary": "서랍 초기 수정 후 재시작에서 레이아웃 경고가 재발해 시작 순서를 보완했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "핸들 정리와 hideFlags만 변경한 회차에서 시작 경고 재발. docked 준비 상태를 기다리도록 수정.",
+              "evidence": "../assets/submission-202-final-20261101/StartupErrorQA.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "regression",
+          "at": "2026-11-01T15:38:55.855989+09:00",
+          "summary": "현재 동결 버전의 전체 데이터·빌드·공식 검사와 파일 잠금 재현을 다시 실행했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "1577개 파일·8037참조, 동결 소스와 패키지 오류0.",
+              "evidence": "../assets/submission-202-final-20261101/ArchiveVerification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과.",
+              "evidence": "../assets/submission-202-final-20261101/NativeSubmissionQA.json",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중.",
+              "evidence": "../assets/submission-202-final-20261101/GeneratedSourceLockQA.json",
+              "dependencies": {
+                "T02": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "regression",
+          "at": "2026-11-01T07:11:30.218911+00:00",
+          "summary": "현재 코드와 최종 회귀를 확인하고 문서 검증 실패를 보존합니다.",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 GUI·227조건·저장 재열기와 Undo/Redo 통과",
+              "evidence": "../assets/submission-202-final-20261101/FormatTabsQA.json",
+              "dependencies": {
+                "T03": 3
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 3,
+              "verdict": "fail",
+              "actual": "9언어 내용과4개 화면 갱신. 기존 이미지 소스 해시·재촬영 검증468건 잔여.",
+              "evidence": "../assets/submission-202-final-20261101/GuideVerification.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T08:05:11.954341+00:00",
+          "summary": "현재 아이콘 코드와 실제 에디터·기존 회귀를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과.",
+              "evidence": "../assets/project-icon-loop-20261101/ProjectIconLoopQA.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T08:32:14.427814+00:00",
+          "summary": "시트 우클릭 메뉴 실제 실행 검사",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 메뉴 표시·메뉴 키 선택·시트 작업3종·저장 재열기·스크롤·더블클릭 확인. 데이터 작업은 편집 콜백을 직접 호출했으며 전체 물리 입력 QA로 확대하지 않는다.",
+              "evidence": "../assets/sheet-context-20261101/context-r8.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "regression",
+          "at": "2026-11-01T08:39:05+00:00",
+          "summary": "중간 수정의 실제 우클릭 실패 보존",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "ContextClick만 남긴 중간 수정에서도 일반 버튼이 오른쪽 MouseDown을 받아 메뉴 소멸·시트 전환.",
+              "evidence": "../assets/sheet-context-stability-20261101/native-after-r1.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "regression",
+          "at": "2026-11-01T08:50:00.507848+00:00",
+          "summary": "실제 입력·메뉴 유지·대상 작업·툴팁 회귀",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다.",
+              "evidence": "../assets/sheet-context-stability-20261101/tooltip-final.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "regression",
+          "at": "2026-11-01T09:03:00+00:00",
+          "summary": "제목 검색 중간 수정 실패 보존",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "200입력4972.2ms·Backspace 길이 미변경. 표시 생략 시도 제거.",
+              "evidence": "../assets/title-search-20261101/input-measurements.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-20261101090024822-v1.0.0.md",
+    "date": "2026-11-01T09:00:24.822Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "forge-ui-template-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+      "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실행 중",
+      "outcome": "조사 진행",
+      "proposedTime": "15~25분",
+      "actualTime": "2026-11-01 17:59:13 KST 시작",
+      "xerjEvidence": "Status 노드 미실행; Search 복구 시도 진행",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "forge-ui-template-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "기본 Unity 선택창을 공통 디자인으로 연결하고 Entity Forge 레이아웃을 수정",
+      "completionCriteria": "공통 자동 연결과 제품 수정, 실제 마우스·키보드 선택값·취소·테마·레이아웃 검증, 관련 다국어 문서·공개 보고",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 선택 경로와 레이아웃 수정",
+          "action": "누락 경로 확인, 중복 없는 공통 바인딩과 제품 헤더·필드 정리",
+          "expected": "새 필드가 공통 적용 시 기본 선택창을 호출하지 않음",
+          "qa": "소스 대조와 컴파일",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 Unity 회귀 검증",
+          "action": "선택·반환값·취소와 테마·좁은 폭을 실제 화면에서 확인",
+          "expected": "선택값 보존과 겹침·잘림 해소",
+          "qa": "실제 입력·저장 데이터·캡처 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "지침·문서·공개 기록",
+          "action": "재발 방지 지침과 9개 언어 가이드·실제 캡처 및 보고서 갱신",
+          "expected": "근거와 현재 검증 범위 공개",
+          "qa": "문서·해시·링크·배포 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.html",
+    "postPath": "projects/designdatatable/posts/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.md",
+    "date": "2026-11-01T08:50:14.645Z",
+    "version": "v1.0.4",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "submission-202-20261101",
+    "round": 5,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+      "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "기존 전체 제출 준비는 미완료입니다. 이전 문서 이미지 검증468건을 처리하거나 최신 전체 계수를 재산정하지 않았습니다. 도형 정렬 미구현·일시정지 Excel 목표도 유지합니다. 실제 폴더 캡처 하단에 기존 ChartGallery 레이아웃 저장 경고가 있어 모든 창 복원이 해결됐다고 주장하지 않습니다. 첫 검사 대기 정체·대기 콜백 집계 실패·자동 한국어 주석 갱신으로 생긴 패키지346파일 차이를 보존했습니다.346파일은 주석행 이외가 같았고 동결 원본 복원 후 재내보냈습니다. 테스트의 전체3370조건 실행본과 최종본은 이 검증된 주석 차이만 있습니다. 사용자 프로젝트의 주석 언어 설정은 변경하지 않았습니다.",
+      "outcome": "실제 마우스로 우클릭 소멸·시트 전환을 재현해 수정하고, 메뉴 뒤쪽 툴팁을 억제했습니다.",
+      "proposedTime": "2026-11-01 17:18:47 KST 시작,10–15분.",
+      "actualTime": "구현·실행 검증 2026-11-01 17:50:00 KST. 공개 배포 확인은 최종 채팅에 기록합니다.",
+      "xerjEvidence": "XERJ 서버를 복구해 QueueNativeIconRefresh 검색을 호출했습니다. 검색 후보에 현재 구현이 누락돼 rg와 실제 로그·현재 소스로 대조했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "submission-202-20261101",
+      "round": 5,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "현재 지원 범위의2.0.2 제출 패키지·간단한 스토어 원고·필수 검증과 공개 보고를 준비한다. 포털 제출은 수행하지 않는다.",
+      "completionCriteria": "공개 API 교체를 실행 검증하고, 네이티브 패키지·참조·메타데이터·새 프로젝트·공식 검사·현재 화면과 제출 자료·보고 링크를 확인한다.",
+      "previousManual": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101083225346-v1.0.3.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "배포 범위·메타데이터 고정",
+          "action": "제품과 공유 의존성만 고정하고 개발·QA 파일을 제외한다. 누락 메타와 메뉴 경로를 수정한다.",
+          "expected": "동결 소스·메타·GUID·패키지 파일 일치",
+          "qa": "네이티브 아카이브를 원본 인벤토리와 대조한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "1577개 파일·8037참조, 동결 소스와 패키지 오류0."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "새 프로젝트·샘플·생성 데이터 검사",
+          "action": "새 Unity 프로젝트에서 컴파일·씬·바이너리·편집/Undo/Redo/저장과 Windows 빌드를 실행한다.",
+          "expected": "빌드와 실제 검사 실패0",
+          "qa": "현재 패키지를 만든 동일 스냅샷으로 검사한다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "Unity 내부 API를 공개 API로 교체",
+          "action": "비공개 창·선반·스포이트·캡처·아이콘 접근을 공개 EditorWindow와 공식 Win32 API로 바꾼다. 추가 로그의 중복 메뉴·생성 소스의 매핑 파일 저장과 시작 시 서랍 생성 순서를 수정한다.",
+          "expected": "핵심 창 동작·PNG·색상 선택 보존과 공식 검사 실패0",
+          "qa": "실제 창·물리 클릭·색상·최대화·호버·복원·10회 반복과 소스·어셈블리 검사를 실행한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "재촬영·제출 자료·공개 보고",
+          "action": "플레이어 선택 동작을 확인하고 실제 화면·간단한 스토어 원고·패키지와 검증 근거를 한 제출 폴더와 보고서에 모은다.",
+          "expected": "확인된 지원 범위와 파일·이미지·개별 공개 링크 일치",
+          "qa": "현재 플레이어·허브 선택과 파일 해시·사이트 본문·첨부를 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "qa",
+          "revision": 3,
+          "result": "현재 제출본·원고·Affinity 원본·키 이미지·검증 자료 정리 완료. 공개 게시 확인 중."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "서식 적용 무반영 수정·실제 QA",
+          "action": "직접 셀 서식에 가려진 표 스타일 적용을 분리하고 전용 서식 탭의 프리셋을 실제 실행·저장·재열기한다.",
+          "expected": "표·차트·도형·그림 프리셋이 표시·저장되고 Undo/Redo가 복원된다.",
+          "qa": "실제 Unity GUI 이벤트·227조건 매트릭스·탭별 실제 화면을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "227조건 통과,5개 서식 탭 실제 적용·촬영, 그룹 관리 창 열기 확인. 정렬 미구현은 제한으로 기록."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "Project 폴더 무한 재임포트 수정",
+          "action": "아이콘 그리기에서 임포트를 제거하고 프로세스 간 유지되는 색상 상태·재진입 방지를 적용한다.",
+          "expected": "아이콘2000회 표시와 캐시 초기화에서 임포트0, 색상 변경은 파일당 최대1회, 원본 SHA-256 유지.",
+          "qa": "실제 Unity 임포트 관찰자와 저장된 아이콘·실행 중 에디터 로그·실제 폴더 화면 및 기존3370조건을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과."
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "시트 탭 우클릭 메뉴",
+          "action": "오른쪽 MouseDown은 탭 버튼에 전달하지 않고 MouseUp에서 메뉴를 한 번만 엽니다. 같은 클릭의 ContextClick 재처리를 억제합니다. 메뉴를 열 때 SelectWorksheet를 호출하지 않으며, 이름 변경·삭제는 캡처한 시트 이름을 대상으로 실행합니다. 연결된 팝업이 열려 있으면 문서 ScreenTip을 초기화하고, 닫으면 일반 호버를 다시 허용합니다.",
+          "expected": "실제 우클릭 메뉴 유지·현재 시트 유지·대상 작업 정확·메뉴 중 뒤쪽 툴팁 없음·종료 후 복구.",
+          "qa": "실제 우클릭5초 관찰과6회 반복·Esc/외부 닫기·대상 작업 저장·재열기·툴팁3초 억제와 복구.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다."
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T07"
+      ],
+      "scopeChange": "2026-11-01 11:57 KST 사용자가 기능을 유지한 공개 API 교체를 승인했습니다. 전체 Excel46TC 동일 구현 목표는 계속 일시정지이며 이번 제출 준비와 분리합니다. 15:23KST 추가 로그의 메뉴 중복·매핑 소스 저장·복원 서랍 창 문제를 같은 범위에서 수정하고 현재 버전 재QA를 수행했습니다. 사용자의15:45경 서식 무반영 제보로 T05를 추가하고 문서 검증 실패를 숨기지 않고 보존합니다. 16:26KST 사용자의 파일 폴더 무한 로딩 제보로 T06을 추가했습니다. 기존 미완료 문서 QA와 일시정지 Excel 목표를 완료로 바꾸지 않습니다. 사용자의 시트 우클릭 미표시 제보로 T07을 추가합니다. 기존 잔여를 보존합니다. 사용자가 메뉴 깜박임·우클릭 시 시트 전환을 제보했습니다. T07을 revision2로 재개하고 단일 ContextClick·현재 시트 유지·실제 오른쪽 마우스 반복 검증을 추가합니다. 이전 Q07은 당시 합성 이벤트 검사 기록으로 보존하며 현재 수정의 통과로 사용하지 않습니다. 실제 MouseDown이 일반 탭 버튼으로 전달되는 추가 재현을 반영해 MouseUp 단일 표시로 수정했습니다. 사용자의 추가 툴팁 제보를 T07 revision3에 포함했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T03:56:55.759385+00:00",
+          "summary": "교체 중 선반 초기 렌더링 실패를 발견하고 보존했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "초기 선반 캡처가 검게 나왔습니다. 준비·숨김·최종 네이티브 배치와 노출 검사 대상을 수정했습니다.",
+              "evidence": "로컬 PublicApi/public-shelf-fixed-r2.png 및 이전 시도 폴더",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-01T04:31:38.856063+00:00",
+          "summary": "현재 교체본의 소스·네이티브 실행·패키지·공식 검사 결과를 대조했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "1578개 파일·메타·GUID·8037참조 검사 오류0",
+              "evidence": "../assets/submission-202-20261101/ArchiveVerification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "3370검증조건·25씬·24테이블·빌드 성공",
+              "evidence": "../assets/submission-202-20261101/NativeSubmissionQA.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 창 동작·PNG·색상 선택과 10회 반복 통과, 공식31통과·3경고·0실패",
+              "evidence": "../assets/submission-202-20261101/PublicApiNativeQA.json / OfficialValidator.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:34:44.5732382Z",
+          "summary": "서랍 초기 수정 후 재시작에서 레이아웃 경고가 재발해 시작 순서를 보완했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "핸들 정리와 hideFlags만 변경한 회차에서 시작 경고 재발. docked 준비 상태를 기다리도록 수정.",
+              "evidence": "../assets/submission-202-final-20261101/StartupErrorQA.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "regression",
+          "at": "2026-11-01T15:38:55.855989+09:00",
+          "summary": "현재 동결 버전의 전체 데이터·빌드·공식 검사와 파일 잠금 재현을 다시 실행했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "1577개 파일·8037참조, 동결 소스와 패키지 오류0.",
+              "evidence": "../assets/submission-202-final-20261101/ArchiveVerification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과.",
+              "evidence": "../assets/submission-202-final-20261101/NativeSubmissionQA.json",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중.",
+              "evidence": "../assets/submission-202-final-20261101/GeneratedSourceLockQA.json",
+              "dependencies": {
+                "T02": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "regression",
+          "at": "2026-11-01T07:11:30.218911+00:00",
+          "summary": "현재 코드와 최종 회귀를 확인하고 문서 검증 실패를 보존합니다.",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 GUI·227조건·저장 재열기와 Undo/Redo 통과",
+              "evidence": "../assets/submission-202-final-20261101/FormatTabsQA.json",
+              "dependencies": {
+                "T03": 3
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 3,
+              "verdict": "fail",
+              "actual": "9언어 내용과4개 화면 갱신. 기존 이미지 소스 해시·재촬영 검증468건 잔여.",
+              "evidence": "../assets/submission-202-final-20261101/GuideVerification.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T08:05:11.954341+00:00",
+          "summary": "현재 아이콘 코드와 실제 에디터·기존 회귀를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과.",
+              "evidence": "../assets/project-icon-loop-20261101/ProjectIconLoopQA.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T08:32:14.427814+00:00",
+          "summary": "시트 우클릭 메뉴 실제 실행 검사",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 메뉴 표시·메뉴 키 선택·시트 작업3종·저장 재열기·스크롤·더블클릭 확인. 데이터 작업은 편집 콜백을 직접 호출했으며 전체 물리 입력 QA로 확대하지 않는다.",
+              "evidence": "../assets/sheet-context-20261101/context-r8.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "regression",
+          "at": "2026-11-01T08:39:05+00:00",
+          "summary": "중간 수정의 실제 우클릭 실패 보존",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "ContextClick만 남긴 중간 수정에서도 일반 버튼이 오른쪽 MouseDown을 받아 메뉴 소멸·시트 전환.",
+              "evidence": "../assets/sheet-context-stability-20261101/native-after-r1.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "regression",
+          "at": "2026-11-01T08:50:00.507848+00:00",
+          "summary": "실제 입력·메뉴 유지·대상 작업·툴팁 회귀",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다.",
+              "evidence": "../assets/sheet-context-stability-20261101/tooltip-final.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084843698-v1.0.9.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101084843698-v1.0.9.md",
+    "date": "2026-11-01T08:48:43.698Z",
+    "version": "v1.0.9",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청 범위 남은 작업 없음. 특수 Domain Reload 비활성 Play 설정은 검증 범위 외. 게임 저장소 자동 커밋·푸시는 수행하지 않음.",
+      "outcome": "Bootstrap 제거·공통 프리팹 적용·A/B 직접 Play 및 매니저 중복 방지 검증과 공개 결과 확인 완료",
+      "proposedTime": "15~25분",
+      "actualTime": "2026-11-01 17:17:57 KST 시작 → 2026-11-01 17:48:38 KST 결과 공개 확인. 실제 1841초. 최초 예상15~25분 초과 원인: 격리 임포트·셰이더 빌드 및 검증 수정·재실행. 최종 메뉴얼 공개 확인은 채팅에 별도 기록.",
+      "xerjEvidence": "XERJ 도구 미제공. rg로 현재 경로와 참조를 검색.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "기존 프로젝트 폴더로 통합",
+          "action": "Scenes·Datas·Prefabs/UI·Material과 Management·UI·SampleScene으로 에셋·메타를 함께 이동하고 생성기·설정·문서를 고친다.",
+          "expected": "GUID·직렬화 참조 보존, 독립 Examples 트리 제거, 기존 게임 파일 보존",
+          "qa": "이동 전후 GUID 대조, 이전 경로 잔존 검색, 설정·문서 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "통합 배치의 실제 실행 회귀",
+          "action": "이동된 에셋에서 콘텐츠·플레이어를 빌드하고 실제 창에서 57개 QA와 화면을 확인한다.",
+          "expected": "이동된 경로의 번들·실행 성공과 실제 화면 확보",
+          "qa": "실제 빌드·실행 결과와 원본 대조·캡처 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "후속 결과와 선호 반영",
+          "action": "문서·보고서·완료 메뉴얼을 게시하고 기존 구조 우선 선호의 중복 여부를 검토해 지침에 반영한다.",
+          "expected": "공개 결과·첨부 확인 및 지침 처리 기록",
+          "qa": "공개 배포·본문·첨부, 지침 차이·동기화 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치"
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "공통 초기화 프리팹으로 전환",
+          "action": "공통 루트를 Addressable 프리팹으로 옮기고 양쪽 씬 진입점과 네이티브 초기 씬 등록·정리를 구현하며 Bootstrap 씬을 제거한다. 씬 저장 전 카탈로그를 저장하고 씬을 연 뒤 에셋을 재조회한다.",
+          "expected": "각 씬 직접 Play, 현재 씬 재로드 없음, 공통 매니저 한 번 생성",
+          "qa": "실제 Unity 컴파일·에셋 생성·참조와 Bootstrap 제거 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존"
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "A/B 직접 Play와 중복 회귀",
+          "action": "Editor에서 A와 B를 각각 직접 Play하고 실제 번들 플레이어도 실행하여 매니저 수·동일 객체·누적 생성 횟수를 비교한다.",
+          "expected": "두 직접 Play 성공·반복 후 루트/매니저/EventSystem 단일·실제 화면 확보",
+          "qa": "Editor 세션별 결과와 sceneLoaded 및 반복 전환 스냅샷·플레이어 렌더 대조 Editor QA는 독립 키보드와 Game View 입력 전달 설정을 사용한다. 플레이어는 실제 런타임 입력 경로를 별도 검사한다.",
+          "dependsOn": [
+            "T08"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인"
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "문서·공개 보고·정리",
+          "action": "새 실행 방식 문서와 결과·메뉴얼을 게시하고 임시 프로젝트를 정리한다.",
+          "expected": "공개 보고서와 실제 첨부 확인·임시 검증 파일 정리",
+          "qa": "문서 검사·배포·개별 본문/첨부 해시 확인",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치"
+        }
+      ],
+      "focusTasks": [
+        "T08",
+        "T09",
+        "T10"
+      ],
+      "scopeChange": "사용자 요청에 따라 별도 Bootstrap 씬을 제거한다. T01~T07·이전 QA를 유지하고 프리팹 초기화·직접 Play·중복 검증 T08~T10을 추가한다. T08 r2는 카탈로그 저장·재조회 수정, T09 r2는 포커스 조건, r3는 연속 Play 간 독립 입력 장치로 검증 절차를 보완한다. 첫 실패와 재검사 결과는 유지한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-01T07:00:50.140Z",
+          "summary": "공개 보고서 및 실제 첨부 대조",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions 배포 성공·개별 보고서 HTTP 200·이미지 5개 해시 일치·57개 QA JSON 확인",
+              "evidence": "../assets/scene-ui-20261101/publication-check.json; Actions run 41282943235",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "final",
+          "at": "2026-11-01T07:00:50.141Z",
+          "summary": "요청 전체 범위의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "최종 57개 결과·5개 실제 화면·visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "공개 보고서·publication-check.json",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-01T07:15:08Z",
+          "summary": "첫 문서 갱신 오류 보존",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "문서 파일 열기 UNKNOWN 오류로 빌드 중단·페이지 빌드 시각 불일치 검사 실패. 원인은 미확인.",
+              "evidence": "문서 build.mjs 및 validate.mjs 실행 결과. 기존 파일 속성 확인 후 전체 재실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-01T07:17:01Z",
+          "summary": "이동과 참조·문서 재검증 통과",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "프로젝트 docs/verification/scene-ui/layout/guid-check.json, references.json, unchanged.json; 문서 27개·908 링크 검사 통과",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-01T07:22:20.392Z",
+          "summary": "이동 후 실제 실행과 파일 대조",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "../assets/scene-ui-layout-20261101/results.json; build-comparison.json; visual-check.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "step",
+          "at": "2026-11-01T07:27:11.357Z",
+          "summary": "후속 보고서·지침 공개 확인",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "../assets/scene-ui-layout-20261101/publication-check.json; instructions.json; Actions 41284710020",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "final",
+          "at": "2026-11-01T07:27:11.358Z",
+          "summary": "원래 전체 작업과 후속 통합 작업의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "31개 GUID·7개 참조·기존 파일 보존",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "이동 후 실제 57개 QA·화면 5장·32개 파일 대조",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "공개 publication-check.json·지침 해시",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q15",
+          "kind": "step",
+          "at": "2026-11-01T08:33:21+00:00",
+          "summary": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+              "evidence": "../assets/scene-ui-prefab-20261101/build-1-failure.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q16",
+          "kind": "step",
+          "at": "2026-11-01T08:40:36+00:00",
+          "summary": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+              "evidence": "로컬 editor-run-2 결과 두 개 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "kind": "step",
+          "at": "2026-11-01T08:44:05+00:00",
+          "summary": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+              "evidence": "로컬 editor-run-3 결과 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q18",
+          "kind": "step",
+          "at": "2026-11-01T08:45:16.999Z",
+          "summary": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+              "evidence": "../assets/scene-ui-prefab-20261101/source-check.json; scene-preservation.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "kind": "step",
+          "at": "2026-11-01T08:45:38.7129204Z",
+          "summary": "최종 A/B 직접 Play와 플레이어 전체 회귀",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/editor-results.json; editor-ExampleA.json; editor-ExampleB.json; player-results.json; visual-check.json",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "kind": "step",
+          "at": "2026-11-01T08:48:38.397Z",
+          "summary": "문서·정리·실제 공개 결과 확인",
+          "results": [
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치",
+              "evidence": "../assets/scene-ui-prefab-20261101/publication-check.json; cleanup.json; GitHub Actions 41290304919",
+              "dependencies": {
+                "T09": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q21",
+          "kind": "final",
+          "at": "2026-11-01T08:48:38.398Z",
+          "summary": "기존 전체 작업과 프리팹 전환 후속의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T06": 1
+              }
+            },
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T09",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T08": 2
+              }
+            },
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T09": 3
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.md",
+    "date": "2026-11-01T08:45:27.644Z",
+    "version": "v1.0.8",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "A/B 최종 재검사·공개 배포 확인·임시 복사본 정리",
+      "outcome": "직접 Play 구조와 실행 검증을 구현 중입니다.",
+      "proposedTime": "15~25분",
+      "actualTime": "2026-11-01 17:17:57 KST 시작, 17:44 KST 재검사 진행 중",
+      "xerjEvidence": "XERJ 도구 미제공. rg로 현재 경로와 참조를 검색.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101082545064-v1.0.7.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "기존 프로젝트 폴더로 통합",
+          "action": "Scenes·Datas·Prefabs/UI·Material과 Management·UI·SampleScene으로 에셋·메타를 함께 이동하고 생성기·설정·문서를 고친다.",
+          "expected": "GUID·직렬화 참조 보존, 독립 Examples 트리 제거, 기존 게임 파일 보존",
+          "qa": "이동 전후 GUID 대조, 이전 경로 잔존 검색, 설정·문서 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "통합 배치의 실제 실행 회귀",
+          "action": "이동된 에셋에서 콘텐츠·플레이어를 빌드하고 실제 창에서 57개 QA와 화면을 확인한다.",
+          "expected": "이동된 경로의 번들·실행 성공과 실제 화면 확보",
+          "qa": "실제 빌드·실행 결과와 원본 대조·캡처 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "후속 결과와 선호 반영",
+          "action": "문서·보고서·완료 메뉴얼을 게시하고 기존 구조 우선 선호의 중복 여부를 검토해 지침에 반영한다.",
+          "expected": "공개 결과·첨부 확인 및 지침 처리 기록",
+          "qa": "공개 배포·본문·첨부, 지침 차이·동기화 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치"
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "공통 초기화 프리팹으로 전환",
+          "action": "공통 루트를 Addressable 프리팹으로 옮기고 양쪽 씬 진입점과 네이티브 초기 씬 등록·정리를 구현하며 Bootstrap 씬을 제거한다. 씬 저장 전 카탈로그를 저장하고 씬을 연 뒤 에셋을 재조회한다.",
+          "expected": "각 씬 직접 Play, 현재 씬 재로드 없음, 공통 매니저 한 번 생성",
+          "qa": "실제 Unity 컴파일·에셋 생성·참조와 Bootstrap 제거 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존"
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "A/B 직접 Play와 중복 회귀",
+          "action": "Editor에서 A와 B를 각각 직접 Play하고 실제 번들 플레이어도 실행하여 매니저 수·동일 객체·누적 생성 횟수를 비교한다.",
+          "expected": "두 직접 Play 성공·반복 후 루트/매니저/EventSystem 단일·실제 화면 확보",
+          "qa": "Editor 세션별 결과와 sceneLoaded 및 반복 전환 스냅샷·플레이어 렌더 대조 Editor QA는 독립 키보드와 Game View 입력 전달 설정을 사용한다. 플레이어는 실제 런타임 입력 경로를 별도 검사한다.",
+          "dependsOn": [
+            "T08"
+          ],
+          "status": "doing",
+          "revision": 3,
+          "result": ""
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "문서·공개 보고·정리",
+          "action": "새 실행 방식 문서와 결과·메뉴얼을 게시하고 임시 프로젝트를 정리한다.",
+          "expected": "공개 보고서와 실제 첨부 확인·임시 검증 파일 정리",
+          "qa": "문서 검사·배포·개별 본문/첨부 해시 확인",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T08",
+        "T09",
+        "T10"
+      ],
+      "scopeChange": "사용자 요청에 따라 별도 Bootstrap 씬을 제거한다. T01~T07·이전 QA를 유지하고 프리팹 초기화·직접 Play·중복 검증 T08~T10을 추가한다. T08 r2는 카탈로그 저장·재조회 수정, T09 r2는 포커스 조건, r3는 연속 Play 간 독립 입력 장치로 검증 절차를 보완한다. 첫 실패와 재검사 결과는 유지한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-01T07:00:50.140Z",
+          "summary": "공개 보고서 및 실제 첨부 대조",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions 배포 성공·개별 보고서 HTTP 200·이미지 5개 해시 일치·57개 QA JSON 확인",
+              "evidence": "../assets/scene-ui-20261101/publication-check.json; Actions run 41282943235",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "final",
+          "at": "2026-11-01T07:00:50.141Z",
+          "summary": "요청 전체 범위의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "최종 57개 결과·5개 실제 화면·visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "공개 보고서·publication-check.json",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-01T07:15:08Z",
+          "summary": "첫 문서 갱신 오류 보존",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "문서 파일 열기 UNKNOWN 오류로 빌드 중단·페이지 빌드 시각 불일치 검사 실패. 원인은 미확인.",
+              "evidence": "문서 build.mjs 및 validate.mjs 실행 결과. 기존 파일 속성 확인 후 전체 재실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-01T07:17:01Z",
+          "summary": "이동과 참조·문서 재검증 통과",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "프로젝트 docs/verification/scene-ui/layout/guid-check.json, references.json, unchanged.json; 문서 27개·908 링크 검사 통과",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-01T07:22:20.392Z",
+          "summary": "이동 후 실제 실행과 파일 대조",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "../assets/scene-ui-layout-20261101/results.json; build-comparison.json; visual-check.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "step",
+          "at": "2026-11-01T07:27:11.357Z",
+          "summary": "후속 보고서·지침 공개 확인",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "../assets/scene-ui-layout-20261101/publication-check.json; instructions.json; Actions 41284710020",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "final",
+          "at": "2026-11-01T07:27:11.358Z",
+          "summary": "원래 전체 작업과 후속 통합 작업의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "31개 GUID·7개 참조·기존 파일 보존",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "이동 후 실제 57개 QA·화면 5장·32개 파일 대조",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "공개 publication-check.json·지침 해시",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q15",
+          "kind": "step",
+          "at": "2026-11-01T08:33:21+00:00",
+          "summary": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+              "evidence": "../assets/scene-ui-prefab-20261101/build-1-failure.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q16",
+          "kind": "step",
+          "at": "2026-11-01T08:40:36+00:00",
+          "summary": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+              "evidence": "로컬 editor-run-2 결과 두 개 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "kind": "step",
+          "at": "2026-11-01T08:44:05+00:00",
+          "summary": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+              "evidence": "로컬 editor-run-3 결과 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q18",
+          "kind": "step",
+          "at": "2026-11-01T08:45:16.999Z",
+          "summary": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+              "evidence": "../assets/scene-ui-prefab-20261101/source-check.json; scene-preservation.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101083225346-v1.0.3.html",
     "postPath": "projects/designdatatable/posts/2026-11-01-manual-submission-202-20261101-20261101083225346-v1.0.3.md",
     "date": "2026-11-01T08:32:25.346Z",
@@ -319,6 +2658,551 @@
         }
       ],
       "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101082545064-v1.0.7.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101082545064-v1.0.7.md",
+    "date": "2026-11-01T08:25:45.064Z",
+    "version": "v1.0.7",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "프리팹 에셋 생성·실제 Editor A/B 직접 Play·플레이어 회귀·공개 결과 확인",
+      "outcome": "직접 Play 구조와 실행 검증을 구현 중입니다.",
+      "proposedTime": "15~25분",
+      "actualTime": "2026-11-01 17:17:57 KST 후속 시작",
+      "xerjEvidence": "XERJ 도구 미제공. rg로 현재 경로와 참조를 검색.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101072711604-v1.0.6.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "기존 프로젝트 폴더로 통합",
+          "action": "Scenes·Datas·Prefabs/UI·Material과 Management·UI·SampleScene으로 에셋·메타를 함께 이동하고 생성기·설정·문서를 고친다.",
+          "expected": "GUID·직렬화 참조 보존, 독립 Examples 트리 제거, 기존 게임 파일 보존",
+          "qa": "이동 전후 GUID 대조, 이전 경로 잔존 검색, 설정·문서 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "통합 배치의 실제 실행 회귀",
+          "action": "이동된 에셋에서 콘텐츠·플레이어를 빌드하고 실제 창에서 57개 QA와 화면을 확인한다.",
+          "expected": "이동된 경로의 번들·실행 성공과 실제 화면 확보",
+          "qa": "실제 빌드·실행 결과와 원본 대조·캡처 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "후속 결과와 선호 반영",
+          "action": "문서·보고서·완료 메뉴얼을 게시하고 기존 구조 우선 선호의 중복 여부를 검토해 지침에 반영한다.",
+          "expected": "공개 결과·첨부 확인 및 지침 처리 기록",
+          "qa": "공개 배포·본문·첨부, 지침 차이·동기화 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치"
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "공통 초기화 프리팹으로 전환",
+          "action": "공통 루트를 Addressable 프리팹으로 옮기고 양쪽 씬 진입점과 네이티브 초기 씬 등록·정리를 구현하며 Bootstrap 씬을 제거한다.",
+          "expected": "각 씬 직접 Play, 현재 씬 재로드 없음, 공통 매니저 한 번 생성",
+          "qa": "실제 Unity 컴파일·에셋 생성·참조와 Bootstrap 제거 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "A/B 직접 Play와 중복 회귀",
+          "action": "Editor에서 A와 B를 각각 직접 Play하고 실제 번들 플레이어도 실행하여 매니저 수·동일 객체·누적 생성 횟수를 비교한다.",
+          "expected": "두 직접 Play 성공·반복 후 루트/매니저/EventSystem 단일·실제 화면 확보",
+          "qa": "Editor 세션별 결과와 sceneLoaded 및 반복 전환 스냅샷·플레이어 렌더 대조",
+          "dependsOn": [
+            "T08"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "문서·공개 보고·정리",
+          "action": "새 실행 방식 문서와 결과·메뉴얼을 게시하고 임시 프로젝트를 정리한다.",
+          "expected": "공개 보고서와 실제 첨부 확인·임시 검증 파일 정리",
+          "qa": "문서 검사·배포·개별 본문/첨부 해시 확인",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T08",
+        "T09",
+        "T10"
+      ],
+      "scopeChange": "사용자 요청에 따라 별도 Bootstrap 씬을 제거한다. T01~T07·이전 QA를 유지하고 프리팹 초기화·직접 Play·중복 검증 T08~T10을 추가한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-01T07:00:50.140Z",
+          "summary": "공개 보고서 및 실제 첨부 대조",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions 배포 성공·개별 보고서 HTTP 200·이미지 5개 해시 일치·57개 QA JSON 확인",
+              "evidence": "../assets/scene-ui-20261101/publication-check.json; Actions run 41282943235",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "final",
+          "at": "2026-11-01T07:00:50.141Z",
+          "summary": "요청 전체 범위의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "최종 57개 결과·5개 실제 화면·visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "공개 보고서·publication-check.json",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-01T07:15:08Z",
+          "summary": "첫 문서 갱신 오류 보존",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "문서 파일 열기 UNKNOWN 오류로 빌드 중단·페이지 빌드 시각 불일치 검사 실패. 원인은 미확인.",
+              "evidence": "문서 build.mjs 및 validate.mjs 실행 결과. 기존 파일 속성 확인 후 전체 재실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-01T07:17:01Z",
+          "summary": "이동과 참조·문서 재검증 통과",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "프로젝트 docs/verification/scene-ui/layout/guid-check.json, references.json, unchanged.json; 문서 27개·908 링크 검사 통과",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-01T07:22:20.392Z",
+          "summary": "이동 후 실제 실행과 파일 대조",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "../assets/scene-ui-layout-20261101/results.json; build-comparison.json; visual-check.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "step",
+          "at": "2026-11-01T07:27:11.357Z",
+          "summary": "후속 보고서·지침 공개 확인",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "../assets/scene-ui-layout-20261101/publication-check.json; instructions.json; Actions 41284710020",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "final",
+          "at": "2026-11-01T07:27:11.358Z",
+          "summary": "원래 전체 작업과 후속 통합 작업의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "31개 GUID·7개 참조·기존 파일 보존",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "이동 후 실제 57개 QA·화면 5장·32개 파일 대조",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "공개 publication-check.json·지침 해시",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
     }
   },
   {

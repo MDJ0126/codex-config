@@ -1,0 +1,188 @@
+[
+  {
+    "id": "baseline-chart-focus",
+    "error": "",
+    "utc": "2026-11-01T08:56:54.3708320Z",
+    "assembly": "a6d0a3b5-3dbc-49f3-97cb-2195658bc116",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 1185030,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 0.0,
+    "p50Ms": 0.0,
+    "p95Ms": 0.0,
+    "maxMs": 0.0,
+    "events": 0,
+    "queryLength": 28
+  },
+  {
+    "id": "baseline-stress200",
+    "error": "",
+    "utc": "2026-11-01T08:57:15.1045261Z",
+    "assembly": "a6d0a3b5-3dbc-49f3-97cb-2195658bc116",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 1185030,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 3459.7986,
+    "p50Ms": 16.1169,
+    "p95Ms": 27.049500000000002,
+    "maxMs": 31.5789,
+    "events": 200,
+    "queryLength": 228
+  },
+  {
+    "id": "baseline-backspace",
+    "error": "",
+    "utc": "2026-11-01T08:57:18.6452491Z",
+    "assembly": "a6d0a3b5-3dbc-49f3-97cb-2195658bc116",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 1185030,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 0.0,
+    "p50Ms": 0.0,
+    "p95Ms": 0.0,
+    "maxMs": 0.0,
+    "events": 0,
+    "queryLength": 228
+  },
+  {
+    "id": "optimized-chart-focus",
+    "error": "",
+    "utc": "2026-11-01T09:02:56.5800558Z",
+    "assembly": "ab4ec81b-46ea-4f22-a233-807b1c8c6718",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 9833520,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 0.0,
+    "p50Ms": 0.0,
+    "p95Ms": 0.0,
+    "maxMs": 0.0,
+    "events": 0,
+    "queryLength": 0
+  },
+  {
+    "id": "optimized-stress200",
+    "error": "",
+    "utc": "2026-11-01T09:02:56.8308931Z",
+    "assembly": "ab4ec81b-46ea-4f22-a233-807b1c8c6718",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 9833520,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 4972.2065,
+    "p50Ms": 23.909100000000002,
+    "p95Ms": 32.7703,
+    "maxMs": 43.6013,
+    "events": 200,
+    "queryLength": 200
+  },
+  {
+    "id": "optimized-backspace",
+    "error": "",
+    "utc": "2026-11-01T09:03:02.0457906Z",
+    "assembly": "ab4ec81b-46ea-4f22-a233-807b1c8c6718",
+    "dirty": false,
+    "charts": 7,
+    "objects": 2,
+    "objectId": 1,
+    "handle": 9833520,
+    "bounds": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "search": {
+      "serializedVersion": "2",
+      "x": 495.0,
+      "y": 5.0,
+      "width": 360.0,
+      "height": 24.0
+    },
+    "elapsedMs": 0.0,
+    "p50Ms": 0.0,
+    "p95Ms": 0.0,
+    "maxMs": 0.0,
+    "events": 0,
+    "queryLength": 200
+  }
+]

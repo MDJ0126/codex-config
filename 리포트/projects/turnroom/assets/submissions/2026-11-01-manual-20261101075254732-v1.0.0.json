@@ -1,0 +1,146 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "전체 작업 진행 중. Affinity 로컬 MCP 연결 ECONNREFUSED로 로고 복구 필요.",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "2~4시간",
+    "actualTime": "2026-11-01 16:47:01 Asia/Seoul 시작. 진행 중.",
+    "xerjEvidence": "Xerj.ps1 Search CreateDocumentChrome 실행; 현재 소스로 대조. 최초 접근 오류 후 로컬 연결 검색 성공.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "entity-forge-product",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "GameObject로 이동·회전·스폰·수명을 작성하고 빌드 결과에서 ECS/DOTS로 실행하는 독립 제품을 만듭니다.",
+    "completionCriteria": "빌드 전용 변환·지원 제외·실제 플레이어 실행·비교 측정과 예상 표시·Templete UI·Affinity 로고·샘플 10개·9개 언어 가이드·실제 화면·패키지 설치·공개 보고서 검증을 완료합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "제품 구조와 변환 계약",
+        "action": "기존 Templete와 Unity·Entities 의존성 확인; 지원 범위와 제외 조건 정의",
+        "expected": "원본 씬 보존 및 지원 범위 확인",
+        "qa": "실제 소스·공식 패키지 메타데이터 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "GameObject 기능과 DOTS 런타임",
+        "action": "이동·회전·스폰·수명과 Burst Job 처리·인스턴스 렌더링 구현",
+        "expected": "일반/변환 실행의 기능 대응",
+        "qa": "실제 Unity 컴파일·상태 및 수명 테스트",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "빌드 변환과 참조 보존",
+        "action": "빌드 씬 복사본만 변환; 제외 이유와 빌드 실패 처리",
+        "expected": "원본 해시 불변·지원 대상만 변환",
+        "qa": "일반/DOTS 플레이어 빌드·실행 및 잘못된 입력 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "성능 비교와 예상 개선율",
+        "action": "플레이어 프레임 수집·동일 조건 비교·근거 무효화",
+        "expected": "빌드 시 근거 있는 예상 또는 산정 불가 표시",
+        "qa": "실제 비교 실행·불일치/음수/잘못된 표본 거부",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "Templete 제품 UI와 로고",
+        "action": "공통 창·Inspector·헬프박스·테마; Affinity 벡터 로고 원본 제작",
+        "expected": "공통 디자인 및 실제 로고 표시",
+        "qa": "실제 Unity 화면·라이트/다크·Affinity 재열기 출력 대조",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "샘플과 다국어 문서",
+        "action": "기능·조합 샘플 10개, 9개 언어 가이드·실제 화면",
+        "expected": "설치부터 확장·문제 해결까지 문서화",
+        "qa": "샘플 실행·스크린샷 해시·문서 링크 확인",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "제품 패키지와 최종 QA·공개 보고",
+        "action": "개발 파일 제외 패키지 생성·새 프로젝트 설치·보고서 게시",
+        "expected": "설치·동작·보고서 외부 접근 성공",
+        "qa": "원본과 빌드 대조·회귀 QA·공개 URL 본문 확인",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

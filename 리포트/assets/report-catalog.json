@@ -1,5 +1,125 @@
 [
   {
+    "title": "Entity Forge 기본 선택창 누락과 제목·라벨 배치 수정",
+    "summary": "공통 필드 적용 시 선택 패널을 자동 연결하고 기본 명령 메뉴 직접 호출을 교체했습니다. 실제 화면 최종 QA는 게임 종료 후 대기입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-bug-20261101092521260-v1.0.0.html",
+    "date": "2026-11-01T09:25:21.260Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-forge-ui-template-20261101-20261101092250528-v1.0.1.html",
+    "date": "2026-11-01T09:22:50.528Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101091010720-v1.0.5.html",
+    "date": "2026-11-01T09:10:10.720Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제목줄 검색 삭제 불가·입력 지연",
+    "summary": "삭제 실패·입력 지연을 재현했습니다. 최종 수정안은 컴파일 통과했으며 화면 조작 금지로 실제 재검증을 보류했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-bug-20261101090917572-v1.0.0.html",
+    "date": "2026-11-01T09:09:17.572Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "2.0.2 통합 QA · 제목 검색 삭제·입력 지연 수정안과 검증 보류",
+    "summary": "삭제 실패·입력 지연을 재현했습니다. 최종 수정안은 컴파일 통과했으며 화면 조작 금지로 실제 재검증을 보류했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101090916182-v1.0.0.html",
+    "date": "2026-11-01T09:09:16.182Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
+    "date": "2026-11-01T09:00:24.822Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.html",
+    "date": "2026-11-01T08:50:14.645Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "시트 우클릭 메뉴 깜박임·시트 전환·뒤쪽 툴팁",
+    "summary": "실제 마우스로 우클릭 소멸·시트 전환을 재현해 수정하고, 메뉴 뒤쪽 툴팁을 억제했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-bug-20261101085014011-v1.0.0.html",
+    "date": "2026-11-01T08:50:14.011Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "2.0.2 통합 QA · 시트 우클릭 유지·현재 시트 유지·툴팁 수정",
+    "summary": "실제 마우스로 우클릭 소멸·시트 전환을 재현해 수정하고, 메뉴 뒤쪽 툴팁을 억제했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101085007718-v1.0.0.html",
+    "date": "2026-11-01T08:50:07.718Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084843698-v1.0.9.html",
+    "date": "2026-11-01T08:48:43.698Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Bootstrap 씬 제거와 공통 초기화 프리팹·A/B 직접 Play 검증",
+    "summary": "두 예제 씬에서 바로 Play하며 하나의 Addressable 초기화 루트와 매니저를 전환 내내 재사용합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101084552999-v1.0.0.html",
+    "date": "2026-11-01T08:45:52.999Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.html",
+    "date": "2026-11-01T08:45:27.644Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
     "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
     "project": "designdatatable",
@@ -16,6 +136,16 @@
     "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101083224223-v1.0.0.html",
     "date": "2026-11-01T08:32:24.223Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101082545064-v1.0.7.html",
+    "date": "2026-11-01T08:25:45.064Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
