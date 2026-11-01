@@ -1,5 +1,173 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101133650886-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-20261101133650886-v1.0.0.md",
+    "date": "2026-11-01T13:36:50.886Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-global-settings",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "턴룸 전역 언어·제품 버전·업데이트 설정",
+      "summary": "공통 설정 팝업과 제품별 설치 버전·업데이트 확인을 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "화면 조작 제한으로 실제 팝업 조작·테마·취소·별도 에디터 동기화·새 캡처·패키지 설치 검증 보류. 공개 배포 버전이 확인되지 않아 업데이트 목록은 비어 있습니다. 전체 문서 캡처 검사는479건으로 실패를 보존합니다. 교훈 검토: 전역 지침 변경 없음.",
+      "outcome": "전역 팝업·언어 공유·제품 버전·업데이트 검사 구현과 정적/격리 실행 QA를 마쳤으며 native UI 최종 QA는 보류입니다.",
+      "proposedTime": "초기 언어 변경 20~40분; 전역 설정으로 변경 후 30~50분",
+      "actualTime": "2026-11-01 22:14:45 KST 시작. 구현·정적/격리 QA 진행. 전체 native QA 완료 시각 없음.",
+      "xerjEvidence": "Status: XERJ node is not running. 기존 포커스 제한 아래 새 데몬을 실행하지 않고 rg·직접 소스 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-global-settings",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "턴룸 전역 팝업에서 표시 언어와 제품 버전·업데이트를 관리",
+      "completionCriteria": "공통 팝업, 언어 동기화, 실제 메타데이터 버전, 실패를 구분하는 업데이트 검사, 컴파일·실행 가능한 로직 QA·문서·보고",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 언어",
+          "action": "공통 설정·기존 설정 이전·양방향 알림",
+          "expected": "언어 설정 공유와 주석 언어 보존",
+          "qa": "9개 언어와 저장·외부 변경 테스트",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공통 EditorPrefs 설정과 기존 설정 이전·제품 알림 구현. 격리 .NET 실행 통과; 실제 별도 에디터 네이티브 검증 대기."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "전역 팝업·제품 업데이트",
+          "action": "설정 진입과 설치 메타데이터·HTTPS 업데이트 비교",
+          "expected": "설치/미설치/미확인/업데이트/오류 구분",
+          "qa": "버전·사전 배포·잘못된 응답·오프라인 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "공통 팝업·5개 제품 메타데이터·HTTPS 목록·SemVer 상태 구현. 실제 팝업 조작 대기."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "검증·문서·보고",
+          "action": "현재 전체 어셈블리 컴파일, 로직 QA와 공개 보고",
+          "expected": "검증 범위·실제 UI 보류 구분",
+          "qa": "컴파일 로그·QA 실행·공개 URL 대조",
+          "dependsOn": [
+            "T01",
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "9개 어셈블리 컴파일과 로직 200개·45개 문서 연결 검증. 전체 문서 캡처 검사는479건으로 실패. 현재 UI 캡처·설치 검증 대기."
+        }
+      ],
+      "focusTasks": [
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T13:36:03.959Z",
+          "summary": "현재 소스 컴파일·격리 공통 서비스 실행·문서 링크 검사. Native UI 통과를 뜻하지 않습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "공통 EditorPrefs 설정과 기존 설정 이전·제품 알림 구현. 격리 .NET 실행 통과; 실제 별도 에디터 네이티브 검증 대기.",
+              "evidence": "global-settings-20261101/verification.json; static/result.json; logic/result.json; docs-verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "공통 팝업·5개 제품 메타데이터·HTTPS 목록·SemVer 상태 구현. 실제 팝업 조작 대기.",
+              "evidence": "global-settings-20261101/verification.json; static/result.json; logic/result.json; docs-verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "9개 어셈블리 컴파일과 로직 200개·45개 문서 연결 검증. 전체 문서 캡처 검사는479건으로 실패. 현재 UI 캡처·설치 검증 대기.",
+              "evidence": "global-settings-20261101/verification.json; static/result.json; logic/result.json; docs-verification.json",
+              "dependencies": {
+                "T01": 1,
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-01T13:36:49.345Z",
+          "summary": "단계별 구현·격리 로직 QA와 남은 실제 UI QA를 구분합니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공통 EditorPrefs 설정과 기존 설정 이전·제품 알림 구현. 격리 .NET 실행 통과; 실제 별도 에디터 네이티브 검증 대기.",
+              "evidence": "global-settings-20261101/verification.json; standalone .NET nativeUnityExecuted=false",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공통 팝업·5개 제품 메타데이터·HTTPS 목록·SemVer 상태 구현. 실제 팝업 조작 대기.",
+              "evidence": "global-settings-20261101/verification.json; standalone .NET nativeUnityExecuted=false",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "9개 어셈블리 컴파일과 로직 200개·45개 문서 연결 검증. 전체 문서 캡처 검사는479건으로 실패. 현재 UI 캡처·설치 검증 대기.",
+              "evidence": "global-settings-20261101/verification.json; standalone .NET nativeUnityExecuted=false",
+              "dependencies": {
+                "T01": 1,
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101124109803-v1.0.6.html",
     "postPath": "projects/designdatatable/posts/2026-11-01-manual-submission-202-20261101-20261101124109803-v1.0.6.md",
     "date": "2026-11-01T12:41:09.803Z",
