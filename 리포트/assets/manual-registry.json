@@ -1,5 +1,1032 @@
 [
   {
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094547268-v1.0.12.html",
+    "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101094547268-v1.0.12.md",
+    "date": "2026-11-01T09:45:47.268Z",
+    "version": "v1.0.12",
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "manualId": "scene-ui-implementation-20261101",
+    "round": 4,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "sampleprojectforunity",
+      "kind": "manual",
+      "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+      "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청 범위 남은 구현 없음. 실제 장비·코스튬 데이터 착용은 후속 기능. 원본 에디터 창 새로고침/GUI 확인은 캡처가 다른 앱 화면을 반환하여 미확인으로 유지하며, 동일 소스·에셋의 Editor/플레이어 검증은 완료. 게임 저장소 자동 커밋·푸시는 수행하지 않음.",
+      "outcome": "Splash → Playground ↔ 정면 CharacterStage와 씬 배치 UI 구현·적용·실행/화면 검증·공개 확인 완료",
+      "proposedTime": "25~40분",
+      "actualTime": "2026-11-01 17:57:36 KST 시작 → 2026-11-01 18:45:46 KST 결과 공개 확인. 실제 2889초. 최초25~40분 초과: 셰이더 컴파일, headless 검사 보완·재빌드 및 공개 배포. 최종 메뉴얼 공개 확인과 임시 보고서 작업 폴더 정리 시각은 채팅에 별도 기록.",
+      "xerjEvidence": "현재 도구 목록에 XERJ 없음. rg로 현재 소스·에셋·참조 검색",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "scene-ui-implementation-20261101",
+      "round": 4,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "요청한 런타임 시스템과 씬 내 예제를 구현·적용·검증한다.",
+      "completionCriteria": "컴파일, Addressables 콘텐츠 빌드, 플레이어 빌드, 왕복 전환·중복 요청·팝업·해제·실패 복귀 검증, 실제 실행 캡처, 공개 보고서 확인",
+      "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094037900-v1.0.11.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "런타임 시스템 구현",
+          "action": "프로젝트 작성 규칙에 맞춰 씬·UI 카탈로그와 관리자를 구현한다.",
+          "expected": "핸들 소유권·전환 직렬화·UI 수명·실패 복구 구현",
+          "qa": "Unity 컴파일 및 소스 책임·해제 경로 검토",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬과 UI 예제 생성",
+          "action": "Bootstrap·테스트 씬 2개와 UI 프리팹·Addressables 그룹을 생성한다.",
+          "expected": "씬 안의 버튼으로 전환·팝업·실패 복귀 시연",
+          "qa": "에셋 참조·콘텐츠 빌드·플레이어 빌드",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 실행 QA",
+          "action": "사용자 허용 후 창을 표시하고 전체 실행 시나리오와 렌더 완료 뒤 실제 화면을 검증한다.",
+          "expected": "구체적인 실행 결과·실제 화면 확보",
+          "qa": "EventSystem 클릭·Escape·실패 복구·개수 검사와 비검정 캡처 및 상태 표시·가독성을 실제 실행에서 대조한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 보고",
+          "action": "사용 예제·실행 방법·검증 근거를 문서화하고 아카이브에 게시한다.",
+          "expected": "문서 검증과 공개 보고서·첨부 확인",
+          "qa": "문서 빌드·링크 검사·배포·HTTP 본문 검증",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "기존 프로젝트 폴더로 통합",
+          "action": "Scenes·Datas·Prefabs/UI·Material과 Management·UI·SampleScene으로 에셋·메타를 함께 이동하고 생성기·설정·문서를 고친다.",
+          "expected": "GUID·직렬화 참조 보존, 독립 Examples 트리 제거, 기존 게임 파일 보존",
+          "qa": "이동 전후 GUID 대조, 이전 경로 잔존 검색, 설정·문서 검사",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "통합 배치의 실제 실행 회귀",
+          "action": "이동된 에셋에서 콘텐츠·플레이어를 빌드하고 실제 창에서 57개 QA와 화면을 확인한다.",
+          "expected": "이동된 경로의 번들·실행 성공과 실제 화면 확보",
+          "qa": "실제 빌드·실행 결과와 원본 대조·캡처 검사",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "후속 결과와 선호 반영",
+          "action": "문서·보고서·완료 메뉴얼을 게시하고 기존 구조 우선 선호의 중복 여부를 검토해 지침에 반영한다.",
+          "expected": "공개 결과·첨부 확인 및 지침 처리 기록",
+          "qa": "공개 배포·본문·첨부, 지침 차이·동기화 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치"
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "공통 초기화 프리팹으로 전환",
+          "action": "공통 루트를 Addressable 프리팹으로 옮기고 양쪽 씬 진입점과 네이티브 초기 씬 등록·정리를 구현하며 Bootstrap 씬을 제거한다. 씬 저장 전 카탈로그를 저장하고 씬을 연 뒤 에셋을 재조회한다.",
+          "expected": "각 씬 직접 Play, 현재 씬 재로드 없음, 공통 매니저 한 번 생성",
+          "qa": "실제 Unity 컴파일·에셋 생성·참조와 Bootstrap 제거 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존"
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "A/B 직접 Play와 중복 회귀",
+          "action": "Editor에서 A와 B를 각각 직접 Play하고 실제 번들 플레이어도 실행하여 매니저 수·동일 객체·누적 생성 횟수를 비교한다.",
+          "expected": "두 직접 Play 성공·반복 후 루트/매니저/EventSystem 단일·실제 화면 확보",
+          "qa": "Editor 세션별 결과와 sceneLoaded 및 반복 전환 스냅샷·플레이어 렌더 대조 Editor QA는 독립 키보드와 Game View 입력 전달 설정을 사용한다. 플레이어는 실제 런타임 입력 경로를 별도 검사한다.",
+          "dependsOn": [
+            "T08"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인"
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "문서·공개 보고·정리",
+          "action": "새 실행 방식 문서와 결과·메뉴얼을 게시하고 임시 프로젝트를 정리한다.",
+          "expected": "공개 보고서와 실제 첨부 확인·임시 검증 파일 정리",
+          "qa": "문서 검사·배포·개별 본문/첨부 해시 확인",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치"
+        },
+        {
+          "id": "T11",
+          "order": 11,
+          "title": "실제 씬 흐름과 편집 가능한 UI 적용",
+          "action": "기존 Playground를 보존하면서 Splash와 정면 캐릭터 Stage를 만들고 UI 프리팹과 버튼 이벤트를 직렬화한다. 이전 UI 생성 도구와 예제 전용 에셋을 정리한다.",
+          "expected": "Splash 자동 진입 → Playground ↔ CharacterStage, 편집 가능한 UI, 초기화 공통 프리팹 재사용",
+          "qa": "씬·프리팹·참조·기존 변경 대조와 Unity 컴파일·콘텐츠/플레이어 빌드 최종 저장 에셋을 새로 빌드하고 72개 소스·핵심 에셋의 복사본 일치를 대조한다.",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 콘텐츠·플레이어 빌드 성공, 기본 화면은 씬에 배치된 프리팹. 버튼9개 Inspector 이벤트, 기존151오브젝트 중 EventSystem4개만 제거·나머지 본문 보존. 소스/핵심에셋72개 일치"
+        },
+        {
+          "id": "T12",
+          "order": 12,
+          "title": "실제 전환·정면 캐릭터·중복 실행 QA",
+          "action": "Splash 시작과 Playground/CharacterStage 직접 Play, 버튼 전환·팝업·실패 복귀·반복 전환을 검증하고 실제 화면을 캡처한다.",
+          "expected": "실제 전환·정면 표시와 매니저/EventSystem 단일성·기존 플레이 제어 유지",
+          "qa": "에디터 및 그래픽 플레이어 실제 실행, 입력·씬 소유권·UI 오브젝트·화면 대조 우측 화면 앵커를 적용하며 Editor는640×480 입력 컴포넌트·버튼 좌표를 검사하고 실제1280×720 플레이어에서 OS 커서 잠금을 검사한다.",
+          "dependsOn": [
+            "T11"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "Editor Splash106·Playground104·CharacterStage117개 및 종료 오류0, 실제 플레이어114개·오류0·실제7개화면 확인. 모든 경로 반복6회 전환 및 같은 루트/매니저/EventSystem1·누적생성1"
+        },
+        {
+          "id": "T13",
+          "order": 13,
+          "title": "문서·공개 결과·임시 파일 정리",
+          "action": "새 실행 구조를 문서에 반영하고 실패·수정 이력을 보존한 공개 보고서와 완료 메뉴얼을 게시하고 검증 복사본을 정리한다.",
+          "expected": "문서검사·개별 공개 보고서·실제 화면 확인·임시 도구 제거",
+          "qa": "문서 빌드/링크·공개 배포/본문/첨부 검증",
+          "dependsOn": [
+            "T12"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서27페이지·908링크·스냅샷변경0, 생성·검증 임시도구/복사본 삭제. Pages41294292978 성공, 개별 보고서·첨부19개HTTP200·이미지7개 원본 해시 일치, 전역 UI 선호1개 추가·Sync 커밋/푸시·3개 복사본 해시 일치"
+        }
+      ],
+      "focusTasks": [
+        "T11",
+        "T12",
+        "T13"
+      ],
+      "scopeChange": "사용자 요청에 따라 예제 A/B를 실제 Splash → Playground ↔ CharacterStage 흐름으로 교체한다. UI는 직렬화된 오브젝트·Inspector 이벤트로 구성하고 생성 코드를 제거한다. 기존 전체 작업·QA는 유지한다. T11 r2는 우측 앵커·최종 에셋 재빌드, T12 r2는 실제로 실패한 headless 커서 검사를 입력 상태와 그래픽 플레이어 OS 잠금 검사로 나누고 버튼 좌표 기록을 추가한 절차 보완이다. 원래 목표와 실패 이력을 유지한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T06:35:05Z",
+          "summary": "원본 배치 실행 제한 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "원본 Unity 에디터가 프로젝트 잠금을 소유하여 새 배치 실행 종료",
+              "evidence": "Unity 로그 HandleProjectAlreadyOpenInAnotherInstance; 기존 프로세스를 종료하지 않고 복사본으로 진행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T06:47:54Z",
+          "summary": "첫 컴파일 및 콘텐츠·플레이어 빌드 통과",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "런타임 소스 Unity 컴파일 성공",
+              "evidence": "첫 실제 Unity 플레이어 빌드 성공 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예제 콘텐츠·Windows 플레이어 빌드 성공",
+              "evidence": "첫 플레이어 빌드 155815979 bytes",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:48:30Z",
+          "summary": "첫 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 48개 통과했으나 배치 캡처 5개가 동일한 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-1/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T06:50:31Z",
+          "summary": "숨김 그래픽 캡처 QA 실패 보존",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기능 52개 통과했으나 숨김 캡처가 검은 이미지",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-2/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T06:53:40Z",
+          "summary": "창 표시·프레임 끝 캡처로 복구",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "57개 통과·실제 화면 확인, 상태 표시 한 프레임 지연은 다음 수정에서 보강",
+              "evidence": "프로젝트 docs/verification/scene-ui/run-3/results.json 및 visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T06:55:27Z",
+          "summary": "T03 r2 최종 회귀와 실제 화면 대조",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "57개 통과·오류 0개, 상태 표시까지 올바른 5개 화면 검토",
+              "evidence": "../assets/scene-ui-20261101/results.json; visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T06:58:08.298Z",
+          "summary": "최종 변경 뒤 소스·에셋 대조 근거 검토",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 16개 해시 일치와 최종 Unity 컴파일 성공 확인",
+              "evidence": "source-comparison.json; 최종 빌드 성공 155820007 bytes",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 생성 에셋·메타 24개 해시 일치, 실제 플레이어 빌드·실행 확인",
+              "evidence": "assets-comparison.json; run-4/results.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-01T07:00:50.140Z",
+          "summary": "공개 보고서 및 실제 첨부 대조",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions 배포 성공·개별 보고서 HTTP 200·이미지 5개 해시 일치·57개 QA JSON 확인",
+              "evidence": "../assets/scene-ui-20261101/publication-check.json; Actions run 41282943235",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "final",
+          "at": "2026-11-01T07:00:50.141Z",
+          "summary": "요청 전체 범위의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "최종 Unity 빌드·source-comparison.json·assets-comparison.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "최종 57개 결과·5개 실제 화면·visual-check.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "공개 보고서·publication-check.json",
+              "dependencies": {
+                "T03": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-01T07:15:08Z",
+          "summary": "첫 문서 갱신 오류 보존",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "문서 파일 열기 UNKNOWN 오류로 빌드 중단·페이지 빌드 시각 불일치 검사 실패. 원인은 미확인.",
+              "evidence": "문서 build.mjs 및 validate.mjs 실행 결과. 기존 파일 속성 확인 후 전체 재실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-01T07:17:01Z",
+          "summary": "이동과 참조·문서 재검증 통과",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "프로젝트 docs/verification/scene-ui/layout/guid-check.json, references.json, unchanged.json; 문서 27개·908 링크 검사 통과",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-01T07:22:20.392Z",
+          "summary": "이동 후 실제 실행과 파일 대조",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "../assets/scene-ui-layout-20261101/results.json; build-comparison.json; visual-check.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "step",
+          "at": "2026-11-01T07:27:11.357Z",
+          "summary": "후속 보고서·지침 공개 확인",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "../assets/scene-ui-layout-20261101/publication-check.json; instructions.json; Actions 41284710020",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "final",
+          "at": "2026-11-01T07:27:11.358Z",
+          "summary": "원래 전체 작업과 후속 통합 작업의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 최종 소스 Unity 컴파일 및 소유권·정리 경로 검토 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Addressables 콘텐츠·Windows 빌드 성공, 소스 16개·에셋 24개 대조 일치",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 실행 57개 통과·오류 0개, 실제 5개 화면 검사 완료",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 검사와 중앙 아카이브 배포 성공. 개별 보고서 HTTP 200·본문·공개 이미지 5개 해시·57개 QA JSON 확인.",
+              "evidence": "기존 QA 및 이동 후 57개 실제 회귀 검사",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "파일 31개 GUID 보존, 카탈로그 참조 7개 정상, 기존 Playground·HUD·manifest·Prefabs 그룹 보존, 현재 소스·설정의 이전 경로 없음, 문서 검사 통과",
+              "evidence": "31개 GUID·7개 참조·기존 파일 보존",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "이동된 에셋 그대로 빌드 성공, 원본 32개 파일 해시 일치, 실제 QA 57개·오류 0개·화면 5장 통과",
+              "evidence": "이동 후 실제 57개 QA·화면 5장·32개 파일 대조",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 구조 우선 규칙 1개 추가·Sync 푸시·3개 파일 해시 일치, 공개 후속 보고서 HTTP 200·이미지 5개 해시 일치",
+              "evidence": "공개 publication-check.json·지침 해시",
+              "dependencies": {
+                "T06": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q15",
+          "kind": "step",
+          "at": "2026-11-01T08:33:21+00:00",
+          "summary": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "씬 저장 중 카탈로그 객체가 해제되어 SetDirty MissingReferenceException 발생",
+              "evidence": "../assets/scene-ui-prefab-20261101/build-1-failure.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q16",
+          "kind": "step",
+          "at": "2026-11-01T08:40:36+00:00",
+          "summary": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "A/B 각 59개 통과 뒤 Escape 검사 시간 초과. 매니저 개수·동일 객체·생성 횟수는 정상",
+              "evidence": "로컬 editor-run-2 결과 두 개 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "kind": "step",
+          "at": "2026-11-01T08:44:05+00:00",
+          "summary": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "포커스 제한 설정 후 A 63개 통과, B Escape 시간 초과. 독립 검사 키보드로 장치 상태 분리 후 재검사",
+              "evidence": "로컬 editor-run-3 결과 및 aggregate",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q18",
+          "kind": "step",
+          "at": "2026-11-01T08:45:16.999Z",
+          "summary": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+              "evidence": "../assets/scene-ui-prefab-20261101/source-check.json; scene-preservation.json",
+              "dependencies": {
+                "T07": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "kind": "step",
+          "at": "2026-11-01T08:45:38.7129204Z",
+          "summary": "최종 A/B 직접 Play와 플레이어 전체 회귀",
+          "results": [
+            {
+              "taskId": "T09",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/editor-results.json; editor-ExampleA.json; editor-ExampleB.json; player-results.json; visual-check.json",
+              "dependencies": {
+                "T08": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "kind": "step",
+          "at": "2026-11-01T08:48:38.397Z",
+          "summary": "문서·정리·실제 공개 결과 확인",
+          "results": [
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치",
+              "evidence": "../assets/scene-ui-prefab-20261101/publication-check.json; cleanup.json; GitHub Actions 41290304919",
+              "dependencies": {
+                "T09": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q21",
+          "kind": "final",
+          "at": "2026-11-01T08:48:38.398Z",
+          "summary": "기존 전체 작업과 프리팹 전환 후속의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 QA 근거 유지. 최종 소스 컴파일·A/B 각63개·플레이어68개·화면5장·소스대조 및 공개 본문 재검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T06": 1
+              }
+            },
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "프리팹·양쪽 진입점 적용, Bootstrap 제거·42개 파일 대조·기존 오브젝트 66개씩 보존",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T09",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "Editor A/B 각63개·Play 종료 오류0, 실제 플레이어68개·오류0. 각 경로의 sceneLoaded·6회 반복 후 루트/매니저1·생성1·동일 객체, EventSystem/AudioListener 단일 및 실제 화면5장 확인",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T08": 2
+              }
+            },
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크 통과·스냅샷변경0. 검증 복사본 제거, Pages 41290304919 성공, 개별 보고서와 첨부14개 HTTP200·이미지5개 해시 일치",
+              "evidence": "../assets/scene-ui-prefab-20261101/final-summary.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T09": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q22",
+          "kind": "step",
+          "at": "2026-11-01T18:29:40.4312428+09:00",
+          "summary": "첫 Unity 컴파일·Addressables 콘텐츠·Windows 플레이어 빌드 성공, 에셋 구조·기존 Playground 보존 대조",
+          "results": [
+            {
+              "taskId": "T11",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "첫 Unity 컴파일·Addressables 콘텐츠·Windows 플레이어 빌드 성공, 에셋 구조·기존 Playground 보존 대조",
+              "evidence": "첫 빌드 성공 로그, asset-audit.json, source-check.json",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q23",
+          "kind": "step",
+          "at": "2026-11-01T18:30:04.6912221+09:00",
+          "summary": "Splash/Playground의 입력 재개 뒤 headless 커서 잠금 검사 실패, Stage 직접 시작의 ReturnButton 레이캐스트 실패. 정면·휴머노이드 검사는 통과",
+          "results": [
+            {
+              "taskId": "T12",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Splash/Playground의 입력 재개 뒤 headless 커서 잠금 검사 실패, Stage 직접 시작의 ReturnButton 레이캐스트 실패. 정면·휴머노이드 검사는 통과",
+              "evidence": "../assets/scene-flow-20261101/failures.json",
+              "dependencies": {
+                "T11": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q24",
+          "kind": "step",
+          "at": "2026-11-01T18:34:27.6278655+09:00",
+          "summary": "최종 콘텐츠·플레이어 빌드 성공, 기본 화면은 씬에 배치된 프리팹. 버튼9개 Inspector 이벤트, 기존151오브젝트 중 EventSystem4개만 제거·나머지 본문 보존. 소스/핵심에셋72개 일치",
+          "results": [
+            {
+              "taskId": "T11",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 콘텐츠·플레이어 빌드 성공, 기본 화면은 씬에 배치된 프리팹. 버튼9개 Inspector 이벤트, 기존151오브젝트 중 EventSystem4개만 제거·나머지 본문 보존. 소스/핵심에셋72개 일치",
+              "evidence": "../assets/scene-flow-20261101/source-check.json; asset-audit.json; 최종 빌드 성공",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q25",
+          "kind": "step",
+          "at": "2026-11-01T09:40:37.339Z",
+          "summary": "Editor Splash106·Playground104·CharacterStage117개 및 종료 오류0, 실제 플레이어114개·오류0·실제7개화면 확인. 모든 경로 반복6회 전환 및 같은 루트/매니저/EventSystem1·누적생성1",
+          "results": [
+            {
+              "taskId": "T12",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "Editor Splash106·Playground104·CharacterStage117개 및 종료 오류0, 실제 플레이어114개·오류0·실제7개화면 확인. 모든 경로 반복6회 전환 및 같은 루트/매니저/EventSystem1·누적생성1",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; visual-check.json; failures.json",
+              "dependencies": {
+                "T11": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q26",
+          "kind": "step",
+          "at": "2026-11-01T09:45:46.354Z",
+          "summary": "공개 보고서·실제 첨부·정리·지침 검증",
+          "results": [
+            {
+              "taskId": "T13",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크·스냅샷변경0, 생성·검증 임시도구/복사본 삭제. Pages41294292978 성공, 개별 보고서·첨부19개HTTP200·이미지7개 원본 해시 일치, 전역 UI 선호1개 추가·Sync 커밋/푸시·3개 복사본 해시 일치",
+              "evidence": "../assets/scene-flow-20261101/publication-check.json; cleanup.json; instructions.json; format-check.json; Actions41294292978",
+              "dependencies": {
+                "T12": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q27",
+          "kind": "final",
+          "at": "2026-11-01T09:45:46.355Z",
+          "summary": "원래 전체 작업과 최신 Splash/Playground/CharacterStage 요청의 현재 버전 최종 QA",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T03": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T05": 1
+              }
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T06": 1
+              }
+            },
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T09",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T08": 2
+              }
+            },
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "과거 QA 이력 유지. 사용자 후속 요청 T11~T13이 이전 A/B 예제를 실제 3씬으로 교체했다. 최종 컴파일·콘텐츠/플레이어 빌드·Editor106/104/117·플레이어114·실제7장·72개 대조 및 공개 검증으로 현재 영향 범위 확인",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T09": 3
+              }
+            },
+            {
+              "taskId": "T11",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 콘텐츠·플레이어 빌드 성공, 기본 화면은 씬에 배치된 프리팹. 버튼9개 Inspector 이벤트, 기존151오브젝트 중 EventSystem4개만 제거·나머지 본문 보존. 소스/핵심에셋72개 일치",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T10": 1
+              }
+            },
+            {
+              "taskId": "T12",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "Editor Splash106·Playground104·CharacterStage117개 및 종료 오류0, 실제 플레이어114개·오류0·실제7개화면 확인. 모든 경로 반복6회 전환 및 같은 루트/매니저/EventSystem1·누적생성1",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T11": 2
+              }
+            },
+            {
+              "taskId": "T13",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서27페이지·908링크·스냅샷변경0, 생성·검증 임시도구/복사본 삭제. Pages41294292978 성공, 개별 보고서·첨부19개HTTP200·이미지7개 원본 해시 일치, 전역 UI 선호1개 추가·Sync 커밋/푸시·3개 복사본 해시 일치",
+              "evidence": "../assets/scene-flow-20261101/editor-results.json; player-results.json; asset-audit.json; source-check.json; publication-check.json 및 이전 QA 이력",
+              "dependencies": {
+                "T12": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094037900-v1.0.11.html",
     "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101094037900-v1.0.11.md",
     "date": "2026-11-01T09:40:37.900Z",
@@ -870,6 +1897,466 @@
         }
       ],
       "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-objects-20261101-20261101093358621-v1.0.1.html",
+    "postPath": "projects/pixelcamera/posts/2026-11-01-manual-pixel-camera-objects-20261101-20261101093358621-v1.0.1.md",
+    "date": "2026-11-01T09:33:58.621Z",
+    "version": "v1.0.1",
+    "project": "pixelcamera",
+    "kind": "manual",
+    "manualId": "pixel-camera-objects-20261101",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixelcamera",
+      "kind": "manual",
+      "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+      "summary": "깊이를 보존하는 혼합 렌더링·물체별 픽셀 크기/외곽선과 렌더 시점 스냅, 기본 회전/외곽선 조작을 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "컴퓨터 조작 중지 요청을 유지합니다. 새 물체 모드의 실제 Unity 출력·벽/그룹 깊이·동일 셀 안정화·계층/다중카메라/상태 복원, 프리팹 import·UI 실제 클릭/키와 값 왕복, 새 URP 실행, 최종 신규 설치, 현재 화면 재촬영이 미실행입니다. 투명 합성·커스텀 정점 변형·중첩 렌더 콜백은 보장하지 않습니다. 기존 카메라 전체 모드 QA/화면을 새 기능 통과로 재분류하지 않았습니다. 스토어 판매자/지원 연락처/가격과 실제 Affinity 키이미지 작업도 남아 있으며 실제 제출은 하지 않았습니다. 교훈 검토: 포커스 금지·기존 폴더 재사용·실제 QA 구분·씬/프리팹 UI 지침에 이미 포함되므로 전역 규칙 추가/통합 변경 없음. 프로세스 목록만으로 종료를 판단했던 발언은 새 Unity 응답으로 정정했고 이후 기존 연결의 실제 어셈블리와 내부 QA 결과를 기준으로 기록했습니다.",
+      "outcome": "물체별 렌더·스냅·개별 외곽선과 예제 기본 회전/편집 가능한 UI 구현, 정적 C#/HLSL/에셋·패키지 검사 완료. Unity 렌더/네이티브 UI QA 대기.",
+      "proposedTime": "60~100분",
+      "actualTime": "2026-11-01 17:30:31 KST 시작. 구현·정적 검사·제출 후보 자료 작성 2026-11-01 18:32:34 KST, 62분 3초. 공개 배포는 이후 별도 확인하며 Unity 실행 QA와 전체 요청의 최종 완료 시각은 아직 없습니다.",
+      "xerjEvidence": "Status: XERJ node is not running. rg·현재 소스와 실제 Unity 결과로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-objects-20261101",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "선택한 물체별 해상도와 비픽셀 배경을 합성하고 물체 이동 스냅·복원을 검증. 세 샘플 기본 자동 회전과 명시적 외곽선 버튼 제공",
+      "completionCriteria": "기존 기본 경로 호환 유지, 실제 Unity 렌더의 서로 다른 크기/배경보존/깊이/이동·계층·다중카메라 복원 및 회귀, Inspector·샘플·가이드·패키지·공개 보고. 네이티브 입력 및 새 URP 프로세스 미실행은 명시",
+      "previousManual": "projects/pixelcamera/reports/2026-11-01-manual-20261101084605854-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "설계·상태 보존 계약",
+          "action": "기존 렌더/프리셋 및 Unity6 API 대조, 깊이·크기 버킷·복원 계약 정의",
+          "expected": "기존 FullCamera 기본값 호환 및 렌더 시점 변경의 정확한 복원",
+          "qa": "현재 소스/API 및 실제 복원 검사 설계",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "물체별 렌더와 스냅",
+          "action": "선택 컴포넌트·크기별 저해상도 캡처·깊이 합성·위치/선택 회전 스냅 및 복원 구현",
+          "expected": "비픽셀 배경, 다른 픽셀 크기, 앞 물체 가림과 게임 좌표 보존",
+          "qa": "실제 Unity 색/깊이/동일 셀 렌더 및 다중카메라/상태 복원 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "PixelCameraObject/렌더 스코프/크기 버킷/float ID+눈 깊이 합성/루트 스냅·복원 코드를 구현했습니다. 첫 Unity 셰이더 실패의 예약어를 수정했고 정적 HLSL8항목 통과. 수정 후 Unity 재실행·렌더/복원 QA는 미실행."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "URP 통합 및 호환",
+          "action": "기존 RenderGraph에 물체 필터/합성 경로 연결, FullCamera 회귀 보존",
+          "expected": "원래 모드 유지 및 신규 경로 미지원/한계 명시",
+          "qa": "현재17.0.4 소스/참조 대조와 가능한 컴파일·기존 실행 검사. 신규 URP GUI 실행 보류 명시",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "URP RenderGraph 필터·합성·원본 rendering-layer 보존 및 재질 정리 코드와 정확한17.0.4 참조 컴파일 통과. 실행 QA 대기."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "Inspector와 예제 조작",
+          "action": "템플릿 Inspector, 세 씬 자동 회전/4·8px와 외곽선·스냅 조작. 배치·스타일·정적 문구·버튼 연결은 각 ShowcaseGuide.prefab의 native UGUI/Inspector 영구 이벤트로 작성하고 런타임 생성 제거",
+          "expected": "시작 회전과 외곽선/스냅 버튼 값·화면 일치, UI를 씬/프리팹에서 편집 가능",
+          "qa": "프리팹 import·씬 배치·Inspector 이벤트 대상·실제 클릭/키의 반환 값과 렌더를 대조. 현재 정적 파일 검사만 통과, native UI QA 보류",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "세 기존 씬 각각4/8px 컴포넌트2개·autoRotate1·프리팹 연결, native CanvasRenderer/Text/Image와 버튼8/8/9개 영구 대상/메서드 참조 검사 통과. 실제 import/화면/클릭은 미확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·문서·패키지·공개",
+          "action": "새 렌더 캡처와9개 언어 가이드, 패키지 전수 대조와 JSON 기반 공개 보고",
+          "expected": "검증 범위와 제약을 포함한 구현 결과·개별 HTTPS 보고서",
+          "qa": "전체 관련 렌더 회귀·에셋/메타/링크·실제 공개 바이트 대조",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "9개 번역 설명·한계·미촬영 표시 갱신, 기존 캡처 해시 보존. 고객 패키지590개 asset/meta 전수 바이트 대조 통과. 설치·화면·공개 배포 QA는 별도."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "T04 r2: 최신 사용자 지침에 따라 런타임 UI 생성 대신 기존 Samples/Artwork의 세 ShowcaseGuide.prefab에 배치·스타일·정적 문구·Inspector 영구 이벤트를 저장했습니다. 첫 셰이더 실패를 보존하고 컴퓨터 조작 중지 이후 씬 자동 QA도 보류했습니다. 전체 원래5개 작업과 실행 검증 기준을 유지합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T09:02:16.8117727Z",
+          "summary": "첫 실제 Unity 셰이더 probe 실패를 보존합니다. 상위 명령 passed가 내부 QA의 실패를 덮지 않도록 bridge 소스도 수정했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "PixelCameraObjects.isSupported/ShaderHasError 검사 실패. 이후 메시지에서 HLSL 예약어 triangle, line의 사용 오류를 확인했습니다.",
+              "evidence": "UnityProbe-1/2/3.json. 아직 픽셀 비교 단계에 도달하지 않았으므로 물체별 렌더/안정화 통과 증거가 아닙니다.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T09:03:40.4798796Z",
+          "summary": "수정 전 Unity 예약어 오류 확인. 예약어를 바꾸고 static D3DCompile로 재검사했지만 컴퓨터 조작 중지 후 Unity 장면 QA는 보류했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Unity에서 unexpected token line 및 파생 오류가 확인됐습니다. 해당 식별자는 edgeSample로 변경했습니다. triangle도 fullscreenVertex로 변경했습니다.",
+              "evidence": "UnityProbe-3.json; 수정 후 Shaders.json의8개 엔트리/인스턴싱 변형은 hresult0. Unity 재-probe 미실행.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-01T09:32:34.890Z",
+          "summary": "최종 현재 소스 정적 컴파일, 직렬화 참조, 패키지 바이트 대조 통과. Unity 화면/입력/설치 전체 QA와 구분합니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다.",
+              "evidence": "CSharp.json의6개 컴파일 exitCode0 및 현재 소스 해시. FullCamera enum0과 기존 분기 유지 확인.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "PixelCameraObject/렌더 스코프/크기 버킷/float ID+눈 깊이 합성/루트 스냅·복원 코드를 구현했습니다. 첫 Unity 셰이더 실패의 예약어를 수정했고 정적 HLSL8항목 통과. 수정 후 Unity 재실행·렌더/복원 QA는 미실행.",
+              "evidence": "CSharp.json/ Shaders.json은 정적 통과. 픽셀·좌표 복원 실제 비교 미실행",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "URP RenderGraph 필터·합성·원본 rendering-layer 보존 및 재질 정리 코드와 정확한17.0.4 참조 컴파일 통과. 실행 QA 대기.",
+              "evidence": "정확한 URP17.0.4 참조 정적 컴파일 exitCode0. 새 URP 프로세스 실행 없음",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "세 기존 씬 각각4/8px 컴포넌트2개·autoRotate1·프리팹 연결, native CanvasRenderer/Text/Image와 버튼8/8/9개 영구 대상/메서드 참조 검사 통과. 실제 import/화면/클릭은 미확인.",
+              "evidence": "SerializedAssets.json:3씬·2루트씩·UI영구버튼8/8/9·내부 fileID/CanvasRenderer 확인. 실제 Unity import/클릭 미실행",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "9개 번역 설명·한계·미촬영 표시 갱신, 기존 캡처 해시 보존. 고객 패키지590개 asset/meta 전수 바이트 대조 통과. 설치·화면·공개 배포 QA는 별도.",
+              "evidence": "PackageAudit.json asset/meta 전수 대조, ZIP CRC/바이트 대조. fresh import/재촬영 미실행",
+              "dependencies": {
+                "T04": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-entity-forge-product-20261101092950611-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-entity-forge-product-20261101092950611-v1.0.1.md",
+    "date": "2026-11-01T09:29:50.611Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "entity-forge-product",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+      "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "T05 실제 에디터 라이트/다크·좁은 폭·Inspector 이벤트 호출, T06 실제 UI 캡처와 9개 가이드 반영, T07 새 프로젝트 설치·전체 final QA가 남았습니다. 사용자가 화면 사용을 다시 허용하면 기존 메뉴얼에서 이어갑니다.",
+      "outcome": "핵심 구현·실제 에디터/플레이어 비교·로고는 완료했고, 사용자 데스크톱 사용에 따라 최종 UI·새 설치 검증을 보류합니다.",
+      "proposedTime": "2~4시간",
+      "actualTime": "전체 미완료. 작성 기준 1시간 39분 27초 진행; 2026-11-01 18:26:28 Asia/Seoul. 완료 시각 미기록: 실제 화면·설치 검증 보류.",
+      "xerjEvidence": "Xerj.ps1 Search CreateDocumentChrome 실행; 현재 소스로 대조. 최초 접근 오류 후 로컬 연결 검색 성공.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "entity-forge-product",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "GameObject로 이동·회전·스폰·수명을 작성하고 빌드 결과에서 ECS/DOTS로 실행하는 독립 제품을 만듭니다.",
+      "completionCriteria": "빌드 전용 변환·지원 제외·실제 플레이어 실행·비교 측정과 예상 표시·Templete UI·Affinity 로고·샘플 10개·9개 언어 가이드·실제 화면·패키지 설치·공개 보고서 검증을 완료합니다.",
+      "previousManual": "projects/turnroom/reports/2026-11-01-manual-20261101075254732-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "제품 구조와 변환 계약",
+          "action": "기존 Templete와 Unity·Entities 의존성 확인; 지원 범위와 제외 조건 정의",
+          "expected": "원본 씬 보존 및 지원 범위 확인",
+          "qa": "실제 소스·공식 패키지 메타데이터 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "Templete 1.5.0 API와 Unity 6000.0.83f1·Entities 1.3.15 및 지원 범위를 실제 소스·공식 패키지에서 대조했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "GameObject 기능과 DOTS 런타임",
+          "action": "이동·회전·스폰·수명과 Burst Job 처리·인스턴스 렌더링 구현",
+          "expected": "일반/변환 실행의 기능 대응",
+          "qa": "실제 Unity 컴파일·상태 및 수명 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 Unity에서 이동·네이티브 회전 대조·일괄/시간제 스폰·수명 및 안전 검사와 10개 샘플의 원본 보존 검사가 통과했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "빌드 변환과 참조 보존",
+          "action": "빌드 씬 복사본만 변환; 제외 이유와 빌드 실패 처리",
+          "expected": "원본 해시 불변·지원 대상만 변환",
+          "qa": "일반/DOTS 플레이어 빌드·실행 및 잘못된 입력 검사",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "일반/변환 Windows 플레이어 빌드 성공. 씬 캐시 문제를 재현하고 CleanBuildCache 및 잘못된 빌드 차단으로 보호했으며 실제 개체 수로 변환을 확인했습니다."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "성능 비교와 예상 개선율",
+          "action": "플레이어 프레임 수집·동일 조건 비교·근거 무효화",
+          "expected": "빌드 시 근거 있는 예상 또는 산정 불가 표시",
+          "qa": "실제 비교 실행·불일치/음수/잘못된 표본 거부",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "정상 렌더링 플레이어에서 각 600프레임과 10,000개 개체를 비교하고 원시 평균·동일 입력·현재 지문 대조와 예상 에셋 저장이 통과했습니다."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "Templete 제품 UI와 로고",
+          "action": "Templete 창·Inspector·헬프박스 적용, 정적 UXML/USS 및 Inspector 이벤트 자산 작성, 실제 Affinity 로고 제작·적용",
+          "expected": "공통 디자인 및 실제 로고 표시",
+          "qa": "실제 Unity 화면·라이트/다크·Affinity 재열기 출력 대조",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "blocked",
+          "revision": 2,
+          "result": "로고 PNG 및 실제 Affinity 저장·닫기·재열기 출력 동일성 검증 완료. UXML/USS·Inspector 이벤트 8개·정적 컴파일 완료. 사용자 화면 사용 금지로 실제 UI·이벤트 호출 검증 보류."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "샘플과 다국어 문서",
+          "action": "기능·조합 샘플 10개, 9개 언어 가이드·실제 화면",
+          "expected": "설치부터 확장·문제 해결까지 문서화",
+          "qa": "샘플 실행·스크린샷 해시·문서 링크 확인",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "10개 샘플과 9개 가이드 생성, 171개 로컬 링크 검사 통과. 실제 UI 캡처 및 화면 대조는 대기입니다."
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "제품 패키지와 최종 QA·공개 보고",
+          "action": "개발 파일 제외 패키지 생성·새 프로젝트 설치·보고서 게시",
+          "expected": "설치·동작·보고서 외부 접근 성공",
+          "qa": "원본과 빌드 대조·회귀 QA·공개 URL 본문 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "파일 전용 프리뷰 패키지 및 바이트 읽기 대조를 준비했습니다. 실제 Unity 가져오기·설치·전체 최종 QA는 미실행입니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07"
+      ],
+      "scopeChange": "최신 사용자 지침에 따라 T05의 정적 UI를 UXML·USS 및 Inspector UnityEvent 자산으로 분리했습니다. 원래 전체 완료 기준과 미실행 QA를 보존하며 화면 사용 금지 동안 GUI 검증을 보류합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T09:26:28.661Z",
+          "summary": "Templete 1.5.0 API와 Unity 6000.0.83f1·Entities 1.3.15 및 지원 범위를 실제 소스·공식 패키지에서 대조했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Templete 1.5.0 API와 Unity 6000.0.83f1·Entities 1.3.15 및 지원 범위를 실제 소스·공식 패키지에서 대조했습니다.",
+              "evidence": "현재 소스 및 공식 Entities 1.3.15 메타데이터",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T09:26:28.661Z",
+          "summary": "실제 Unity에서 이동·네이티브 회전 대조·일괄/시간제 스폰·수명 및 안전 검사와 10개 샘플의 원본 보존 검사가 통과했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity에서 이동·네이티브 회전 대조·일괄/시간제 스폰·수명 및 안전 검사와 10개 샘플의 원본 보존 검사가 통과했습니다.",
+              "evidence": "Unity 실제 실행 로그의 FORGE PASS 및 플레이어 빌드·실행 기록",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T09:26:28.661Z",
+          "summary": "일반/변환 Windows 플레이어 빌드 성공. 씬 캐시 문제를 재현하고 CleanBuildCache 및 잘못된 빌드 차단으로 보호했으며 실제 개체 수로 변환을 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "일반/변환 Windows 플레이어 빌드 성공. 씬 캐시 문제를 재현하고 CleanBuildCache 및 잘못된 빌드 차단으로 보호했으며 실제 개체 수로 변환을 확인했습니다.",
+              "evidence": "Unity 실제 실행 로그의 FORGE PASS 및 플레이어 빌드·실행 기록",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-01T09:26:28.661Z",
+          "summary": "정상 렌더링 플레이어에서 각 600프레임과 10,000개 개체를 비교하고 원시 평균·동일 입력·현재 지문 대조와 예상 에셋 저장이 통과했습니다.",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "정상 렌더링 플레이어에서 각 600프레임과 10,000개 개체를 비교하고 원시 평균·동일 입력·현재 지문 대조와 예상 에셋 저장이 통과했습니다.",
+              "evidence": "실제 비교 JSON·런타임 개체 수·paired-estimate valid=True 및 보존 로그",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-01T09:26:28.661Z",
+          "summary": "사용자 데스크톱 사용으로 실제 UI 검증 보류",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "로고 PNG 및 실제 Affinity 저장·닫기·재열기 출력 동일성 검증 완료. UXML/USS·Inspector 이벤트 8개·정적 컴파일 완료. 사용자 화면 사용 금지로 실제 UI·이벤트 호출 검증 보류.",
+              "evidence": "명시적 화면 조작 금지. ScreenshotManifest는 pending과 빈 캡처 목록을 유지합니다.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
     }
   },
   {
@@ -3396,6 +4883,130 @@
     }
   },
   {
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101084605854-v1.0.0.html",
+    "postPath": "projects/pixelcamera/posts/2026-11-01-manual-20261101084605854-v1.0.0.md",
+    "date": "2026-11-01T08:46:05.854Z",
+    "version": "v1.0.0",
+    "project": "pixelcamera",
+    "kind": "manual",
+    "manualId": "pixel-camera-objects-20261101",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixelcamera",
+      "kind": "manual",
+      "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+      "summary": "깊이를 보존하는 혼합 렌더링·물체별 픽셀 크기/외곽선과 렌더 시점 스냅, 기본 회전/외곽선 조작을 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업 중. 포커스 전환·GUI 신규 실행 금지 유지",
+      "outcome": "현재 카메라 전체 경로와 공식 Unity6 API를 확인하고 구현 중",
+      "proposedTime": "60~100분",
+      "actualTime": "2026-11-01 17:30:31 KST 시작",
+      "xerjEvidence": "Status: XERJ node is not running. rg·현재 소스와 실제 Unity 결과로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-objects-20261101",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "선택한 물체별 해상도와 비픽셀 배경을 합성하고 물체 이동 스냅·복원을 검증. 세 샘플 기본 자동 회전과 명시적 외곽선 버튼 제공",
+      "completionCriteria": "기존 기본 경로 호환 유지, 실제 Unity 렌더의 서로 다른 크기/배경보존/깊이/이동·계층·다중카메라 복원 및 회귀, Inspector·샘플·가이드·패키지·공개 보고. 네이티브 입력 및 새 URP 프로세스 미실행은 명시",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "설계·상태 보존 계약",
+          "action": "기존 렌더/프리셋 및 Unity6 API 대조, 깊이·크기 버킷·복원 계약 정의",
+          "expected": "기존 FullCamera 기본값 호환 및 렌더 시점 변경의 정확한 복원",
+          "qa": "현재 소스/API 및 실제 복원 검사 설계",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "물체별 렌더와 스냅",
+          "action": "선택 컴포넌트·크기별 저해상도 캡처·깊이 합성·위치/선택 회전 스냅 및 복원 구현",
+          "expected": "비픽셀 배경, 다른 픽셀 크기, 앞 물체 가림과 게임 좌표 보존",
+          "qa": "실제 Unity 색/깊이/동일 셀 렌더 및 다중카메라/상태 복원 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "URP 통합 및 호환",
+          "action": "기존 RenderGraph에 물체 필터/합성 경로 연결, FullCamera 회귀 보존",
+          "expected": "원래 모드 유지 및 신규 경로 미지원/한계 명시",
+          "qa": "현재17.0.4 소스/참조 대조와 가능한 컴파일·기존 실행 검사. 신규 URP GUI 실행 보류 명시",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "Inspector와 예제 조작",
+          "action": "템플릿 Inspector, 세 예제 시작 회전·외곽선 버튼/단축키·서로 다른 물체 크기/안정화 비교 적용",
+          "expected": "게임 시작부터 회전, 외곽선 켜기/끄기 가시적 UI와 값 일치",
+          "qa": "실제 Unity 렌더·UI/값·소스 어셈블리 대조, 네이티브 입력 미실행 구분",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·문서·패키지·공개",
+          "action": "새 렌더 캡처와9개 언어 가이드, 패키지 전수 대조와 JSON 기반 공개 보고",
+          "expected": "검증 범위와 제약을 포함한 구현 결과·개별 HTTPS 보고서",
+          "qa": "전체 관련 렌더 회귀·에셋/메타/링크·실제 공개 바이트 대조",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "기존 Samples/Runtime/Editor/Documentation 구조 재사용. 모든 경쟁 기능 일괄 동등성은 주장하지 않고 물체별 렌더·안정화부터 검증",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.html",
     "postPath": "projects/sampleprojectforunity/posts/2026-11-01-manual-scene-ui-implementation-20261101-20261101084527644-v1.0.8.md",
     "date": "2026-11-01T08:45:27.644Z",
@@ -5828,6 +7439,160 @@
           ]
         }
       ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101075254732-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-20261101075254732-v1.0.0.md",
+    "date": "2026-11-01T07:52:54.732Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "entity-forge-product",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+      "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전체 작업 진행 중. Affinity 로컬 MCP 연결 ECONNREFUSED로 로고 복구 필요.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "2~4시간",
+      "actualTime": "2026-11-01 16:47:01 Asia/Seoul 시작. 진행 중.",
+      "xerjEvidence": "Xerj.ps1 Search CreateDocumentChrome 실행; 현재 소스로 대조. 최초 접근 오류 후 로컬 연결 검색 성공.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "entity-forge-product",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "GameObject로 이동·회전·스폰·수명을 작성하고 빌드 결과에서 ECS/DOTS로 실행하는 독립 제품을 만듭니다.",
+      "completionCriteria": "빌드 전용 변환·지원 제외·실제 플레이어 실행·비교 측정과 예상 표시·Templete UI·Affinity 로고·샘플 10개·9개 언어 가이드·실제 화면·패키지 설치·공개 보고서 검증을 완료합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "제품 구조와 변환 계약",
+          "action": "기존 Templete와 Unity·Entities 의존성 확인; 지원 범위와 제외 조건 정의",
+          "expected": "원본 씬 보존 및 지원 범위 확인",
+          "qa": "실제 소스·공식 패키지 메타데이터 대조",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "GameObject 기능과 DOTS 런타임",
+          "action": "이동·회전·스폰·수명과 Burst Job 처리·인스턴스 렌더링 구현",
+          "expected": "일반/변환 실행의 기능 대응",
+          "qa": "실제 Unity 컴파일·상태 및 수명 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "빌드 변환과 참조 보존",
+          "action": "빌드 씬 복사본만 변환; 제외 이유와 빌드 실패 처리",
+          "expected": "원본 해시 불변·지원 대상만 변환",
+          "qa": "일반/DOTS 플레이어 빌드·실행 및 잘못된 입력 검사",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "성능 비교와 예상 개선율",
+          "action": "플레이어 프레임 수집·동일 조건 비교·근거 무효화",
+          "expected": "빌드 시 근거 있는 예상 또는 산정 불가 표시",
+          "qa": "실제 비교 실행·불일치/음수/잘못된 표본 거부",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "Templete 제품 UI와 로고",
+          "action": "공통 창·Inspector·헬프박스·테마; Affinity 벡터 로고 원본 제작",
+          "expected": "공통 디자인 및 실제 로고 표시",
+          "qa": "실제 Unity 화면·라이트/다크·Affinity 재열기 출력 대조",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "샘플과 다국어 문서",
+          "action": "기능·조합 샘플 10개, 9개 언어 가이드·실제 화면",
+          "expected": "설치부터 확장·문제 해결까지 문서화",
+          "qa": "샘플 실행·스크린샷 해시·문서 링크 확인",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "제품 패키지와 최종 QA·공개 보고",
+          "action": "개발 파일 제외 패키지 생성·새 프로젝트 설치·보고서 게시",
+          "expected": "설치·동작·보고서 외부 접근 성공",
+          "qa": "원본과 빌드 대조·회귀 QA·공개 URL 본문 확인",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
       "state": "progress"
     }
   },
