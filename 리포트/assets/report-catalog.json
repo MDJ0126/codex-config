@@ -1,5 +1,25 @@
 [
   {
+    "title": "신규 제품 기본 테마 색상 중복 금지 지침",
+    "summary": "새 제품은 기존 제품에서 사용하지 않는 새로운 기본 테마 색상으로 시작합니다. 생성 전에 기존 제품 테마 설정과 대조하고 선택한 색상값을 제품 문서에 기록합니다. 하위 창·Inspector·팝업은 해당 제품 테마를 상속합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-result-20261101080814172-v1.0.0.html",
+    "date": "2026-11-01T08:08:14.172Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "신규 제품 테마 색상 지침 반영",
+    "summary": "새 제품은 기존 제품에서 사용하지 않는 새로운 기본 테마 색상으로 시작합니다. 생성 전에 기존 제품 테마 설정과 대조하고 선택한 색상값을 제품 문서에 기록합니다. 하위 창·Inspector·팝업은 해당 제품 테마를 상속합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101080813519-v1.0.0.html",
+    "date": "2026-11-01T08:08:13.519Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera 세 애니메이션 쇼케이스와 ProPixelizer 기능 차이",
     "summary": "반복16씬을 고유 자산·실제 클립·설명 UI가 있는3씬으로 교체했습니다. 실제 Unity 렌더·72포즈·동작 계약과 공식 기능 차이를 확인했습니다.",
     "project": "pixelcamera",
