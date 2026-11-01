@@ -1,5 +1,25 @@
 [
   {
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "최종 패키지 재검증과 추가 시작 오류 수정을 확인하고 공개 게시 QA를 진행합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101071202410-v1.0.1.html",
+    "date": "2026-11-01T07:12:02.410Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table2.0.2 공개 API·시작 오류·서식 적용 수정과 통합 QA",
+    "summary": "표 스타일 무반영 원인을 재현하고 셀 서식 정리 적용을 추가했습니다.227개 프리셋 검사와3370개 회귀 조건을 통과했지만 문서 이미지 검증은 남아 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101071135484-v1.0.0.html",
+    "date": "2026-11-01T07:11:35.484Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
     "summary": "Addressables 씬 전환, UI 수명 관리, 두 테스트 씬과 로딩·화면·팝업 예제를 구현하고 실제 플레이어로 검증합니다.",
     "project": "sampleprojectforunity",

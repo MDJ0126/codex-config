@@ -1,0 +1,271 @@
+{
+    "error": "",
+    "utc": "2026-11-01T04:34:44.4609447Z",
+    "endedUtc": "2026-11-01T04:35:01.9776820Z",
+    "cases": [
+        {
+            "index": 0,
+            "expected": "Example - Coin Dash",
+            "actual": "Example - Coin Dash",
+            "hit": "HubCard0",
+            "point": {
+                "x": 140.721435546875,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 1,
+            "expected": "Example - Meteor Dodge",
+            "actual": "Example - Meteor Dodge",
+            "hit": "HubCard1",
+            "point": {
+                "x": 348.6994323730469,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 2,
+            "expected": "Example - Brick Breaker",
+            "actual": "Example - Brick Breaker",
+            "hit": "HubCard2",
+            "point": {
+                "x": 556.6774291992188,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 3,
+            "expected": "Example - Neon Runner",
+            "actual": "Example - Neon Runner",
+            "hit": "HubCard3",
+            "point": {
+                "x": 764.6553955078125,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 4,
+            "expected": "Example - Memory Match",
+            "actual": "Example - Memory Match",
+            "hit": "HubCard4",
+            "point": {
+                "x": 972.6334228515625,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 5,
+            "expected": "Example - Dusk Patrol",
+            "actual": "Example - Dusk Patrol",
+            "hit": "HubCard5",
+            "point": {
+                "x": 1180.611328125,
+                "y": 567.5775146484375
+            },
+            "passed": true
+        },
+        {
+            "index": 6,
+            "expected": "Example - UI (Shop)",
+            "actual": "Example - UI (Shop)",
+            "hit": "HubCard6",
+            "point": {
+                "x": 140.721435546875,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 7,
+            "expected": "Example - Custom Enum Battle",
+            "actual": "Example - Custom Enum Battle",
+            "hit": "HubCard7",
+            "point": {
+                "x": 348.6994323730469,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 8,
+            "expected": "Example - 3D FPS",
+            "actual": "Example - 3D FPS",
+            "hit": "HubCard8",
+            "point": {
+                "x": 556.6774291992188,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 9,
+            "expected": "Example - 3D RPG",
+            "actual": "Example - 3D RPG",
+            "hit": "HubCard9",
+            "point": {
+                "x": 764.6553955078125,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 10,
+            "expected": "Example - Canyon Sprint",
+            "actual": "Example - Canyon Sprint",
+            "hit": "HubCard10",
+            "point": {
+                "x": 972.6334228515625,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 11,
+            "expected": "Example - Skybound Steps",
+            "actual": "Example - Skybound Steps",
+            "hit": "HubCard11",
+            "point": {
+                "x": 1180.611328125,
+                "y": 437.2032165527344
+            },
+            "passed": true
+        },
+        {
+            "index": 12,
+            "expected": "Example - Lantern Defense",
+            "actual": "Example - Lantern Defense",
+            "hit": "HubCard12",
+            "point": {
+                "x": 140.721435546875,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 13,
+            "expected": "Example - Putter Garden",
+            "actual": "Example - Putter Garden",
+            "hit": "HubCard13",
+            "point": {
+                "x": 348.6994323730469,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 14,
+            "expected": "Example - Strike Lane",
+            "actual": "Example - Strike Lane",
+            "hit": "HubCard14",
+            "point": {
+                "x": 556.6774291992188,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 15,
+            "expected": "Example - Warehouse Push",
+            "actual": "Example - Warehouse Push",
+            "hit": "HubCard15",
+            "point": {
+                "x": 764.6553955078125,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 16,
+            "expected": "Example - Drone Arena",
+            "actual": "Example - Drone Arena",
+            "hit": "HubCard16",
+            "point": {
+                "x": 972.6334228515625,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 17,
+            "expected": "Example - Marble Circuit",
+            "actual": "Example - Marble Circuit",
+            "hit": "HubCard17",
+            "point": {
+                "x": 1180.611328125,
+                "y": 306.8289489746094
+            },
+            "passed": true
+        },
+        {
+            "index": 18,
+            "expected": "Example - Lunar Lander",
+            "actual": "Example - Lunar Lander",
+            "hit": "HubCard18",
+            "point": {
+                "x": 140.721435546875,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        },
+        {
+            "index": 19,
+            "expected": "Example - Quiet Courier",
+            "actual": "Example - Quiet Courier",
+            "hit": "HubCard19",
+            "point": {
+                "x": 348.6994323730469,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        },
+        {
+            "index": 20,
+            "expected": "Example - Potion Match",
+            "actual": "Example - Potion Match",
+            "hit": "HubCard20",
+            "point": {
+                "x": 556.6774291992188,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        },
+        {
+            "index": 21,
+            "expected": "Example - Beat Beacon",
+            "actual": "Example - Beat Beacon",
+            "hit": "HubCard21",
+            "point": {
+                "x": 764.6553955078125,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        },
+        {
+            "index": 22,
+            "expected": "Example - Block Harbour",
+            "actual": "Example - Block Harbour",
+            "hit": "HubCard22",
+            "point": {
+                "x": 972.6334228515625,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        },
+        {
+            "index": 23,
+            "expected": "Example - Comet Pinball",
+            "actual": "Example - Comet Pinball",
+            "hit": "HubCard23",
+            "point": {
+                "x": 1180.611328125,
+                "y": 176.45469665527345
+            },
+            "passed": true
+        }
+    ]
+}

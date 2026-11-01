@@ -1,0 +1,884 @@
+{
+  "utc": "2026-11-01T04:16:52.781993+00:00",
+  "environment": "Unity6000.0.83f1 Windows, isolated actual editor",
+  "cases": [
+    {
+      "id": "public-render-final-r1",
+      "utc": "2026-11-01T04:04:20.1313513Z",
+      "error": "",
+      "assembly": "975581aa-c542-4cfc-9b1d-4b9238c28a58",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "WorkbookViewer",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA/Evidence/PublicApi/public-render-final-r1.png",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 400,
+      "previewHeight": 277,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 62390444,
+      "colorHandle": 0,
+      "foregroundBefore": 5183950,
+      "foregroundAfter": 5183950,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-draft-r2",
+      "utc": "2026-11-01T03:57:06.9799038Z",
+      "error": "",
+      "assembly": "7d4793b7-1e6a-46de-8374-e73889211d1e",
+      "sharedAssembly": "199a752c-7908-462a-ac3f-a84b68805ffd",
+      "focused": "InspectorWindow",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "PUBLIC API DRAFT",
+      "dirty": true,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 10951288,
+      "colorHandle": 0,
+      "foregroundBefore": 1969748,
+      "foregroundAfter": 1969748,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-minimize-r2",
+      "utc": "2026-11-01T03:57:07.2129000Z",
+      "error": "",
+      "assembly": "7d4793b7-1e6a-46de-8374-e73889211d1e",
+      "sharedAssembly": "199a752c-7908-462a-ac3f-a84b68805ffd",
+      "focused": "InspectorWindow",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "PUBLIC API DRAFT",
+      "dirty": true,
+      "minimized": true,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 14685050,
+      "shelfHandle": 10951288,
+      "colorHandle": 0,
+      "foregroundBefore": 1969748,
+      "foregroundAfter": 1969748,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-native-restore-r1",
+      "utc": "2026-11-01T04:03:59.6746930Z",
+      "error": "",
+      "assembly": "975581aa-c542-4cfc-9b1d-4b9238c28a58",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "WorkbookViewer",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "PUBLIC API DRAFT",
+      "dirty": true,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 62390444,
+      "colorHandle": 0,
+      "foregroundBefore": 5183950,
+      "foregroundAfter": 5183950,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-native-undo-r2",
+      "utc": "2026-11-01T04:03:59.8379821Z",
+      "error": "",
+      "assembly": "975581aa-c542-4cfc-9b1d-4b9238c28a58",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "WorkbookViewer",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 62390444,
+      "colorHandle": 0,
+      "foregroundBefore": 5183950,
+      "foregroundAfter": 5183950,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-maximized-fixed-r1",
+      "utc": "2026-11-01T04:05:38.8030416Z",
+      "error": "",
+      "assembly": "c3518643-ebc4-46d3-b3fe-df1ce5480e0c",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "WorkbookViewer",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": true,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 8591022,
+      "colorHandle": 0,
+      "foregroundBefore": 5183950,
+      "foregroundAfter": 5183950,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 1032.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-restored-size-r1",
+      "utc": "2026-11-01T04:05:39.6801578Z",
+      "error": "",
+      "assembly": "c3518643-ebc4-46d3-b3fe-df1ce5480e0c",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "WorkbookViewer",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 0,
+      "viewerHandle": 5183950,
+      "shelfHandle": 8591022,
+      "colorHandle": 0,
+      "foregroundBefore": 5183950,
+      "foregroundAfter": 5183950,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+      },
+      "color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "oldColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "eventColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    {
+      "id": "public-color-final-selected",
+      "utc": "2026-11-01T04:07:14.6566631Z",
+      "error": "",
+      "assembly": "c3518643-ebc4-46d3-b3fe-df1ce5480e0c",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "PublicColorProbeWindow",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 1,
+      "viewerHandle": 5183950,
+      "shelfHandle": 8591022,
+      "colorHandle": 2494028,
+      "foregroundBefore": 2494028,
+      "foregroundAfter": 2494028,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 592.0,
+        "y": 264.0,
+        "width": 18.0,
+        "height": 26.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 255.0,
+        "y": 330.0,
+        "width": 140.0,
+        "height": 80.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 430.0,
+        "y": 330.0,
+        "width": 140.0,
+        "height": 80.0
+      },
+      "color": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.6000000238418579
+      },
+      "oldColor": {
+        "r": 0.20000000298023224,
+        "g": 0.30000001192092896,
+        "b": 0.4000000059604645,
+        "a": 0.6000000238418579
+      },
+      "eventColor": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.6000000238418579
+      }
+    },
+    {
+      "id": "public-color-final-cancel",
+      "utc": "2026-11-01T04:07:14.9521253Z",
+      "error": "",
+      "assembly": "c3518643-ebc4-46d3-b3fe-df1ce5480e0c",
+      "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+      "focused": "PublicColorProbeWindow",
+      "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+      "previewPath": "",
+      "input": "",
+      "dirty": false,
+      "minimized": false,
+      "maximized": false,
+      "previewClean": true,
+      "pickerActive": false,
+      "previewWidth": 0,
+      "previewHeight": 0,
+      "shelfCount": 1,
+      "colorEvents": 1,
+      "viewerHandle": 5183950,
+      "shelfHandle": 8591022,
+      "colorHandle": 2494028,
+      "foregroundBefore": 2494028,
+      "foregroundAfter": 2494028,
+      "viewerBounds": {
+        "serializedVersion": "2",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 1350.0,
+        "height": 800.0
+      },
+      "shelfBounds": {
+        "serializedVersion": "2",
+        "x": 18.0,
+        "y": 974.0,
+        "width": 1900.0,
+        "height": 28.0
+      },
+      "eyedropper": {
+        "serializedVersion": "2",
+        "x": 592.0,
+        "y": 264.0,
+        "width": 18.0,
+        "height": 26.0
+      },
+      "red": {
+        "serializedVersion": "2",
+        "x": 255.0,
+        "y": 330.0,
+        "width": 140.0,
+        "height": 80.0
+      },
+      "blue": {
+        "serializedVersion": "2",
+        "x": 430.0,
+        "y": 330.0,
+        "width": 140.0,
+        "height": 80.0
+      },
+      "color": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.6000000238418579
+      },
+      "oldColor": {
+        "r": 0.20000000298023224,
+        "g": 0.30000001192092896,
+        "b": 0.4000000059604645,
+        "a": 0.6000000238418579
+      },
+      "eventColor": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.6000000238418579
+      }
+    }
+  ],
+  "repeat": [
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 1,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 2,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 3,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 4,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 5,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 6,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 7,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 8,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 9,
+      "dirty": false,
+      "minimized": true
+    },
+    {
+      "input": "",
+      "restored": true,
+      "cycle": 10,
+      "dirty": false,
+      "minimized": true
+    }
+  ],
+  "screenshots": [
+    "Editor-R3.png",
+    "hover.png",
+    "shelf.png",
+    "preview.png"
+  ],
+  "failedAttemptsRetainedLocally": [
+    "PublicWindowInvisibleR3 black transparent capture",
+    "PublicWindowOffscreenR5 position guard failure",
+    "PublicApi public-shelf-fixed-r2 black initial shelf capture"
+  ],
+  "scope": "Actual running editor via public API and guarded physical pointer/keyboard; not full Excel parity or all sample gameplay QA.",
+  "settingsOpen": {
+    "id": "public-settings-final-open",
+    "utc": "2026-11-01T04:25:07.2797879Z",
+    "error": "",
+    "assembly": "c3518643-ebc4-46d3-b3fe-df1ce5480e0c",
+    "sharedAssembly": "7dcd134c-4c46-4c9b-b4db-ea037e92385e",
+    "focused": "DataTablePreferences",
+    "source": "Assets/NativeKeyboardQA/ChartGallery.xlsx",
+    "previewPath": "",
+    "input": "",
+    "dirty": false,
+    "minimized": false,
+    "maximized": false,
+    "previewClean": true,
+    "pickerActive": false,
+    "previewWidth": 0,
+    "previewHeight": 0,
+    "shelfCount": 1,
+    "colorEvents": 0,
+    "viewerHandle": 5183950,
+    "shelfHandle": 8591022,
+    "colorHandle": 0,
+    "foregroundBefore": 5049472,
+    "foregroundAfter": 5049472,
+    "viewerBounds": {
+      "serializedVersion": "2",
+      "x": 100.0,
+      "y": 100.0,
+      "width": 1350.0,
+      "height": 800.0
+    },
+    "shelfBounds": {
+      "serializedVersion": "2",
+      "x": 18.0,
+      "y": 974.0,
+      "width": 1900.0,
+      "height": 28.0
+    },
+    "eyedropper": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 0.0,
+      "height": 0.0
+    },
+    "red": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 0.0,
+      "height": 0.0
+    },
+    "blue": {
+      "serializedVersion": "2",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 0.0,
+      "height": 0.0
+    },
+    "color": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "oldColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "eventColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "hoverObservation": {
+    "source": "Win32 EnumWindows observation during physical hover, followed by public-hover-r1.png native capture",
+    "nativeCardHandle": 17698718,
+    "nativeCardBounds": [
+      0,
+      730,
+      336,
+      238
+    ],
+    "cardWasForeground": false,
+    "mainEditorHandle": 1969748,
+    "mainWasForeground": true,
+    "screenshotUtcFromFile": "2026-11-01T04:03:59.484099+00:00"
+  }
+}
