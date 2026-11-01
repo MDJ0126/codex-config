@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "신규 제품 기본 테마 색상 중복 금지 지침",
+    "summary": "새 제품은 기존 제품에서 사용하지 않는 새로운 기본 테마 색상으로 시작합니다. 생성 전에 기존 제품 테마 설정과 대조하고 선택한 색상값을 제품 문서에 기록합니다. 하위 창·Inspector·팝업은 해당 제품 테마를 상속합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "AGENTS.md의 기존 공통 강조색 규칙을 새 제품별 고유 테마와 상속 규칙으로 통합했습니다. TempleteRoadmap.md 필수 항목과 TempleteGallery.md 테마 설명에 같은 기준을 반영했습니다.",
+    "verification": "세 문서에서 필수 문구를 실제 읽어 대조했습니다. 문서 지침만 변경하여 실행 화면 캡처 대상이 없습니다.",
+    "remaining": "실제 제품의 현재 색상은 변경하지 않았으며 새 제품 생성 시 기존 색상과 대조·선정해야 합니다. 교훈 검토: 명시적 사용자 선호를 프로젝트 공통 지침에 통합했습니다. 전역 지침은 프로젝트 한정 규칙이므로 변경 없음.",
+    "outcome": "제작 지침 3곳 반영 및 대조 검사 완료",
+    "proposedTime": "2~4분",
+    "actualTime": "문서 반영·검사 48초, 2026-11-01T17:08:06.195680+09:00; 공개 배포 확인 진행",
+    "xerjEvidence": "코드 검색 불필요 — 문서 지침 변경",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
