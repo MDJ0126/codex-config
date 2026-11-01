@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "title": "Addressables 씬 전환과 UI 관리 설계 검토",
+    "summary": "현재 소스와 Addressables 2.9.1 문서를 대조하여 책임과 수명 관리 기준을 제안합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "설계 기록과 공개 검증",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "2026-11-01 15:17:26 KST 시작",
+    "xerjEvidence": "XERJ 도구·프로젝트 검색 스크립트 미제공. rg로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "unity-scene-ui-design-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "씬 전환·UI 관리의 구현 전 설계 제안",
+    "completionCriteria": "현재 구조 확인, API 문서 대조, 권장 흐름과 미검증 범위 명시",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 구조와 API 검토",
+        "action": "manifest, ProjectVersion, HUDManager, Addressables 패키지 문서를 대조한다.",
+        "expected": "버전·기존 책임·로드 해제 규칙 확인",
+        "qa": "현재 소스와 제안의 근거를 비교한다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

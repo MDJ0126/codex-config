@@ -1,5 +1,35 @@
 [
   {
+    "title": "Addressables 씬 전환과 UI 관리 설계 검토",
+    "summary": "현재 소스와 Addressables 2.9.1 문서를 대조하여 책임과 수명 관리 기준을 제안합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-unity-scene-ui-design-20261101-20261101061939447-v1.0.1.html",
+    "date": "2026-11-01T06:19:39.447Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Addressables 기반 씬 전환·UI 관리 설계 제안",
+    "summary": "Bootstrap 유지, 씬 전환 직렬화, UI 레이어와 수명 구분을 제안합니다. 구현·실행 검증은 수행하지 않았습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101061915292-v1.0.0.html",
+    "date": "2026-11-01T06:19:15.292Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Addressables 씬 전환과 UI 관리 설계 검토",
+    "summary": "현재 소스와 Addressables 2.9.1 문서를 대조하여 책임과 수명 관리 기준을 제안합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-20261101061846223-v1.0.0.html",
+    "date": "2026-11-01T06:18:46.223Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Design Data Table2.0.2 제출본·공개 API 교체 검증",
     "summary": "Unity 비공개 API를 교체하고 실제 창·PNG·색상 선택,3370개 검증 조건·24개 허브 선택·공식 검사와 제출 자료를 확인했습니다.",
     "project": "designdatatable",
