@@ -1,0 +1,23 @@
+{
+    "passed": 12,
+    "failed": 1,
+    "utc": "2026-11-01T01:04:48.4429317Z",
+    "assembly": "8165833a-cc37-4027-8449-69a9a2efe60c",
+    "checks": [
+        "실제 표 범위가 행 확장",
+        "원본 표 스타일 보존",
+        "행 확장 시 모든 기존 셀 값 보존",
+        "행 확장 한 번 Undo 복원",
+        "행 확장 Redo",
+        "행·열 동시 축소",
+        "표 제외 값은 셀에서 삭제되지 않음",
+        "축소 Undo는 열 메타데이터까지 복원",
+        "중복·빈 새 머리글에 고유 이름 생성",
+        "새 머리글 셀과 표 메타데이터 일치",
+        "열 확장 시 원본 스타일 유지",
+        "저장 재열기 후 범위와 열 유지"
+    ],
+    "errors": [
+        "System.Exception: 원본 차트 XML 전부 바이트 보존\r\n  at TableResizeNativeChecks.Check (System.Boolean ok, System.String n) [0x0002c] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA\\Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\QAOnly\\TableResizeNativeChecks.cs:9 \r\n  at TableResizeNativeChecks.Run () [0x00443] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA\\Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\QAOnly\\TableResizeNativeChecks.cs:16 "
+    ]
+}

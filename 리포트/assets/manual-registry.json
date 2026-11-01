@@ -1,5 +1,312 @@
 [
   {
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-context-gallery-20261031-20261101013912997-v1.0.9.html",
+    "postPath": "projects/designdatatable/posts/2026-11-01-manual-context-gallery-20261031-20261101013912997-v1.0.9.md",
+    "date": "2026-11-01T01:39:12.997Z",
+    "version": "v1.0.9",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "context-gallery-20261031",
+    "round": 9,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "Excel 전체 탭 레이아웃·아이콘·영역·단축키 구현",
+      "summary": "46TC 전체를 보존하고 원본의 레이아웃·아이콘·영역·단축키를 실제 구현·적용·실행 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "표 내부에서 크기 조정 대화상자를 열어 확장·축소합니다. 기존 값과 원본 스타일을 보존하며 빈/중복 새 머리글은 고유 이름으로 저장합니다. 합계 행의8개 SUBTOTAL 집계는 숨긴 행을 제외하며 직접 수정·삭제한 수식·숫자·라벨도 토글 후 기억합니다. 표별 필터는 네이티브 table XML에 저장하고 다른 표·워크시트 필터와 교집합으로 적용하며 수동 숨김을 유지합니다.\n\n옵션을3열로 나누고 스타일5개 미리보기를 배치했습니다. 작은 화살표와 셀 값 여백, 기본값 목록의 불필요한 아이콘·빈 공간을 실제 화면에서 수정했습니다. 제목 표·차트 아이콘은 기존 Affinity 원본 카탈로그를 재사용했습니다. 새 이미지 자산을 코드로 그리지 않았습니다.\n\n대화상자 Enter와 종료 후 Undo·Escape·X를 수정했습니다. 재컴파일 후 빈 문자열로 복구된 포맷 복사 상태가 첫 Enter를 소비하는 문제는 실제 null 여부·키 입력으로 확인 후 수정했습니다. Unity 포커스 가드 두 곳은 유지했습니다.\n\n9개 언어 가이드에3개 기능행과 최신 실제 화면3장을 추가했습니다. 기존157개 촬영 기록·해시는 보존했습니다.\n\n이전 구현·근거: [차트 대화상자·전용 시트·Affinity8종](2026-11-01-result-20261101005206354-v1.0.0.html). 아래46개 TC는 동일한 전체 목록을 유지합니다.",
+      "verification": "|실제 검증|결과|근거|\n|---|---|---|\n|표 크기·빈/중복 머리글·거부·20회 왕복·저장·Undo|39통과,0실패 /4.84초|[네이티브 범위 API](../assets/ribbon-table-tools-20261101/resize-api-r4.json)|\n|집계8종·수동 수식·지운 값·숫자/라벨·20회 토글·저장|28통과,0실패 /6.01초|[네이티브 합계 API](../assets/ribbon-table-tools-20261101/total-api-r4.json)|\n|표2개·워크시트 필터 교집합·수동 숨김·재적용·범위 확장|25통과,0실패 /4.17초|[네이티브 필터 API](../assets/ribbon-table-tools-20261101/filter-api-r3.json)|\n|실제 F10·Tab·Enter·Undo/Redo·X/Escape·합계/필터 클릭·Unity Scene|22통과,0실패|[실제 입력](../assets/ribbon-table-tools-20261101/native-ui-r4.json)|\n|새 기능3행·화면3장·9언어·현재 소스 해시|57통과|[한정 문서 검증](../assets/ribbon-table-tools-20261101/docs-focused-r1.json)|\n|전체 문서 검증|미통과364항목|[기존 재촬영·해시 불일치 유지](../assets/ribbon-table-tools-20261101/docs-full-incomplete-r1.json)|\n\nAPI 실행은 실제 Unity6000.0.83f1의 격리 QA 에디터이며 경과 시간은 네이티브 Stopwatch로 측정했습니다. 이 수치를 전체46TC의 통과 수로 합산하지 않습니다.\n\n![현재 실제 표 디자인·네이티브 머리글 필터](../assets/ribbon-table-tools-20261101/table-design.png)\n\n![실제 범위 입력 대화상자](../assets/ribbon-table-tools-20261101/resize-dialog.png)\n\n![실제 합계 선택과9250 표시](../assets/ribbon-table-tools-20261101/total-row.png)\n\n![실제 표 값 필터 목록](../assets/ribbon-table-tools-20261101/table-filter.png)\n\n![실제 잘못된 범위 안내·상태 유지](../assets/ribbon-table-tools-20261101/resize-validation.png)\n\n[집계 목록](../assets/ribbon-table-tools-20261101/total-menu.png) · [Jan만 적용한 실제 시트](../assets/ribbon-table-tools-20261101/filtered-jan.png) · [여백 수정 전](../assets/ribbon-table-tools-20261101/before-total-overlap.png).\n\n초기 실제 입력 회차의 실패도 보존했습니다. [R1 포커스 진입 전 키 손실](../assets/ribbon-table-tools-20261101/native-ui-failed-r1.json), [R2 첫 Enter 소비](../assets/ribbon-table-tools-20261101/native-ui-failed-r2.json), [재컴파일 직후 포맷 복사 상태가 null이 아닌 빈 문자열](../assets/ribbon-table-tools-20261101/painter-after-reload.json). 제품 포커스 가드를 약화하지 않고 수정 후 R4를 통과했습니다.\n\n초기 범위 API의 원본 차트 바이트 동일성 검사는12검사 후 실패했습니다. 확인된 차이는 비어 있던 연결 캐시가 저장 시 채워진 것이었습니다. 실패 원본을 보존하고 최종 검사는 캐시를 제외한 차트 XML 전체 동일성을 검사했습니다. [실패 원본](../assets/ribbon-table-tools-20261101/resize-raw-cache-failed-r1.json).\n\n공식 대조: [표 서식 옵션](https://support.microsoft.com/en-us/excel/format-an-excel-table), [표 크기 조정](https://support.microsoft.com/en-gb/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel), [합계 행](https://support.microsoft.com/en-us/excel/get-started/total-the-data-in-an-excel-table). 공식 문서의 일부 화면은 Excel2016이며 정확한 설치 버전/DPI 일치는 미확인입니다. 원본 표 디자인/피벗 사진과 현재 화면은 TC-RIB-14에 함께 유지했습니다.\n\n직접 캡처한 PNG는 변형하지 않았고 모두200KB 미만입니다. [크기·해시 목록](../assets/ribbon-table-tools-20261101/evidence-manifest.json).",
+      "remaining": "전체46TC의 레이아웃·아이콘·크기·영역·단축키 원본 일치와 전수 실제 QA를 계속합니다. 표 머리글 행 토글,피벗 요약·중복 제거·슬라이서·외부 데이터 그룹,전체 표 디자인 접근키·원본 그룹 폭 최종 일치는 남았습니다. 합계 추가는 아래 행이 비어 있어야 하며 점유 행을 밀어 넣는 동작은 미구현입니다. 합계 행이 있는 표의 끝 행 크기 조정은 현재 먼저 합계 해제를 요구합니다. 표 필터의 조건/색/날짜 등 고급 UI와 숨긴 데이터에 대한 차트 표시 원본 일치도 남습니다.\n\n기존 페이지 고급 인쇄·전체 테마,도형 맞춤·그룹,전체 차트 유형/세부/복합/3D·번호 레이아웃·데이터/요소 메뉴,나머지 일반/특수 탭,File·전체 단축키 및IME·저장/닫기 스트레스,전체 문서364항목의 재촬영·9언어 시각 검증/PDF,제품 커밋·패키징·배포는 원래 범위에 유지합니다. 이번 보고서 공개와 제품 배포는 구분합니다.\n\n교훈 검토: 전역 변경 없음. Unity 재컴파일의 빈 문자열 상태 문제는 검증된 프로젝트 사례로 이 보고서에 남겼습니다. 기존 실제 실행·소스 대조·원본 보존 지침을 적용했으며 전역에 중복 규칙을 추가하지 않았습니다.",
+      "outcome": "표 디자인에서 범위 조정·합계 행·표 머리글 필터를 실제 XLSX 편집과 연결했습니다. 최종 API92검사와 Windows 실제 입력22검사를 통과했고,9개 언어 안내와 실제 새 화면3장을 갱신했습니다. 전체46TC 완료는 아닙니다.",
+      "proposedTime": "이번 표 디자인 묶음35–55분. 시작2026-11-01 09:56:57 KST. 전체 최초4–6시간 예상은 이미 초과했으며 전체 완료 시각은 아직 없습니다.",
+      "actualTime": "2026-11-01 10:38 KST 기준 약41분 진행. 구현·실제 API/입력·문서 검증을 수행했습니다. 공개 배포 확인 시각은 별도 기록하며 전체46TC 완료로 처리하지 않습니다.",
+      "xerjEvidence": "WorkbookTableReference를 XERJ로 검색해 파일/심볼 후보를 찾았습니다. 인덱스의 필드 일부가 오래된 것을 현재 소스로 확인하여 구현 판단은 현재 소스·rg·실제 실행으로 검증했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "context-gallery-20261031",
+      "round": 9,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "전체46개 대조 항목의 레이아웃·아이콘·영역·단축키를 원본에 맞추며 Unity 포커스 충돌 없이 실제 동작 검증",
+      "completionCriteria": "전체46TC의 해당 UI·아이콘·영역·단축키 구현과 원본 대조 및 실제 클릭/키보드 회귀 통과. Affinity 원본·출력 보존, 문서 및 단일 공개 보고서 검증. 미구현·미실행을 완료 처리하지 않음.",
+      "previousManual": "projects/designdatatable/reports/2026-11-01-manual-context-gallery-20261031-20261101005206631-v1.0.8.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "표 인식 복구",
+          "action": "ChartGallery7개 시트 실제 표 등록과 재패키징 보존",
+          "expected": "7개 각 범위의 표·115개 내부 좌표·경계·차트와 셀 보존",
+          "qa": "복사본 구현·저장/재열기·표 내부/외부·7개 실제 컨텍스트 촬영 후 원본 적용 및 해시 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "6764검사 통과. 원본에6개 누락 표 추가.7개 실제 차트 파트 바이트 보존 별도 확인. 재패키징 원본7개와 음성 누락 거부 검사 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "전체 탭 레이아웃·아이콘·영역·단축키 구현",
+          "action": "원본 UI의 버튼 크기·그룹 폭·배치·메뉴·아이콘을 실제 구현하고 같은 명령에 Excel 단축키/접근 키를 연결. Affinity 편집 원본·내보내기 보관",
+          "expected": "일반·특수·제품 전용 영역46개 항목에서 요청한 배치·아이콘·영역·단축키가 적용되고 Unity와 포커스 충돌 없음",
+          "qa": "탭별 원본과 같은 상태·확인된 배율로 사진 대조. 버튼·갤러리·실제 키보드·Unity 전환·Undo·저장·재열기 반복",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 9,
+          "result": "표 범위·집계8종·표별 필터 구현. 실제 API92/입력22/새 문서57검사 통과. 전체46TC 및364개 전체 문서 검증은 계속 진행 중."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 화면 회귀",
+          "action": "일반·특수·제품 전용 영역46TC를 실행하고 원본과 같은 선택 상태·크기로 재촬영",
+          "expected": "각TC 수정전후 차이와 실제 동작 결과 확인",
+          "qa": "실제 Unity의 로드 빌드 확인 후 클릭·삽입·스크롤·저장·Undo 및 원본 재대조",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 4,
+          "result": "최신20화면과 이전 실제 검사 근거 보존. 홈 새 수정 버전의 실행 QA 진행 중. 전체46TC의 키보드·원본 대조는 미완료."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "전체 탭별 비교 TC",
+          "action": "46TC의 절차·기대·실제·수정·원본/전후 사진을 결과 보고서 하나에 통합",
+          "expected": "사용자가 단일 URL에서 모든TC와 근거를 확인",
+          "qa": "사진의 제품·탭 적합성, 이미지/링크 검사",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 2,
+          "result": "46TC 단일 진행 보고서 공개 완료: 2026-10-31-result-20261031175409887-v1.0.0.html. 전체 구현 완료 보고서는 아직 아님."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "보고서 웹 게시",
+          "action": "JSON v2 보고서 생성·커밋·푸시·공개 배포 확인",
+          "expected": "인증 없이 개별 보고서와 모든 첨부 열림",
+          "qa": "사이트 검사·Actions 성공·공개URL 및 첨부 HTTP200",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "진행 기록은 결과 보고서에 보존. 선행 전체 화면 QA를 통과 처리하지 않습니다."
+        }
+      ],
+      "focusTasks": [
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "전체46TC·5개 작업·완료 기준 유지. T02 revision9에 표 범위·합계·표별 필터·실제 입력과 Unity 포커스 회귀를 추가. 초기 실패와 전체 문서364미통과·나머지 원본 불일치는 보존. 범위 축소 없음.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "regression",
+          "at": "2026-10-31T14:27:28.322178+00:00",
+          "summary": "Unity730 API 검사와4개 IMGUI 경로. 전체 시각·명령 QA는 별도 미실행.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 표 등록 후21셀 및 경계 검사",
+              "evidence": "context-gallery-result.json 및 table-design.png",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "187종 삽입 준비,48스타일 왕복, 타일3개 실제 IMGUI 클릭",
+              "evidence": "engine-result.json 및 ui-checks.txt",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "전체 명령 및 Windows 실제 입력 QA 미실행",
+              "evidence": "25GPU캡처는 확보. 동일 빌드의 로컬 Excel 원본 직접 촬영은 미실행.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-10-31T20:07:54.725135+00:00",
+          "summary": "홈 세부 실행과 실제 Unity 단축키 보호를 검증. 전체T02/T03를 통과로 처리하지 않음.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 3,
+              "verdict": "not_run",
+              "actual": "Home111검사(R4),물리 키13건(R11),UnityScene Ctrl+D5건(R11),표시형식5/NoFill6건(R1) 통과. 전체46TC 구현·대조·키 입력은 미완료.",
+              "evidence": "../assets/ribbon-goal-20261101/home-api-r4.json 및 home-physical-r11.json,unity-scope-r11.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 3,
+              "verdict": "not_run",
+              "actual": "최신20화면 R7 촬영 성공. 촬영을 기능 통과로 세지 않음. 전체46TC 원본 대조 및 기능QA는 남음.",
+              "evidence": "../assets/ribbon-goal-20261101/capture-r7.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-10-31T22:09:42.020038+00:00",
+          "summary": "7개 표 작업의 확대 검증 및 홈 이동/임시 리본 재검증. 전체46TC는 미완료.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "7개 표 내부115좌표·경계·저장/재열기·7개 화면 및 원본 적용6764 검사 통과. 실제 차트7개 파트 원본 바이트 보존 별도 검증.",
+              "evidence": "../assets/ribbon-goal-round5-20261101/native-tables-r1.json; ../assets/ribbon-goal-round5-20261101/native-table-chart-parts.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "세부 Home111/접근키13/Enter11/Space11/포인터13,표 이름38 통과. 전체 탭 구현은 남음.",
+              "evidence": "../assets/ribbon-goal-round5-20261101/evidence-manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "전체46TC 기능·배치·아이콘·단축키 최종 검증은 남음. 촬영 성공을 통과로 집계하지 않음.",
+              "evidence": "../assets/ribbon-goal-round5-20261101/capture-r8.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "regression",
+          "at": "2026-10-31T22:57:05.398772+00:00",
+          "summary": "페이지 실제 구현/실행·Affinity 재열기 검증. 전체T02/T03 통과로 처리하지 않음.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 5,
+              "verdict": "not_run",
+              "actual": "세부 페이지 API43·UI18·초안4·표/리본 회귀13,Affinity색상/흰색각64타일 재열기 일치 통과. 전체 탭 구현/전수QA는 남음.",
+              "evidence": "../assets/ribbon-page-layout-20261101/page-ui-r3.json; ../assets/ribbon-page-layout-20261101/affinity-page-reopened-r1.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "페이지 실제 화면을 직접 촬영하고 검증. 전체46TC 최종 원본 대조/전수 입력QA는 남음.",
+              "evidence": "../assets/ribbon-page-layout-20261101/page-layout-native-r3.png",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "regression",
+          "at": "2026-10-31T23:47:04.067854+00:00",
+          "summary": "차트 API235·실제 입력21개 검사. 전체46TC와T02/T03는 통과 처리하지 않음.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 6,
+              "verdict": "not_run",
+              "actual": "세부 차트235/API·21/UI 검사 통과,초기 레이더1실패 기록 보존. 전체 탭/전체 프리셋/대화상자 구현과QA는 남음.",
+              "evidence": "../assets/ribbon-chart-design-20261101/chart-api-r3.json; ../assets/ribbon-chart-design-20261101/chart-native-ui-r1.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "실제 리본/갤러리/종류 메뉴 캡처,클릭/저장/Undo/Unity 범위 검증. 전체46TC 최종 대조는 남음.",
+              "evidence": "../assets/ribbon-chart-design-20261101/chart-ribbon-native-r3.png",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T00:38:07.349846+00:00",
+          "summary": "실제 대화상자·전용 시트·Affinity 재열기/런타임 및 새 문서 검증. 전체46TC/전체 문서는 통과 처리하지 않음.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 7,
+              "verdict": "not_run",
+              "actual": "세부29/API·235회귀·22실제UI·680아틀라스 검사 통과. 전체 탭·전체 종류/레이아웃·최종 원본 일치는 남음.",
+              "evidence": "../assets/ribbon-chart-dialogs-20261101/chart-sheet-api-r3.json; ../assets/ribbon-chart-dialogs-20261101/chart-dialog-ui-r2.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "새3장 실제 캡처·9개 언어2행 검증48통과. 전체 문서335항목과46TC 최종 대조는 남음.",
+              "evidence": "../assets/ribbon-chart-dialogs-20261101/focused-docs-r1.json; ../assets/ribbon-chart-dialogs-20261101/full-docs-incomplete-r1.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-01T00:52:06.036698+00:00",
+          "summary": "최종 촬영에서 발견한 두 셀 차트 크기 손실 수정·재검증. Q06 보존.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 8,
+              "verdict": "not_run",
+              "actual": "전용 시트31/API·기존235회귀·실제 전후 크기/저장4검사 통과. 전체 탭/종류/최종 원본 일치는 남음.",
+              "evidence": "../assets/ribbon-chart-dialogs-20261101/chart-sheet-api-r4.json; ../assets/ribbon-chart-dialogs-20261101/chart-geometry-ui-r1.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "regression",
+          "at": "2026-11-01T01:38:43.972757+00:00",
+          "summary": "표 범위·합계·필터·실제 키와 Unity 범위 검증. 이전 Q01–Q07 보존.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 9,
+              "verdict": "not_run",
+              "actual": "이번 API92/실제 입력22/새 문서57검사 통과. 전체 탭·머리글·피벗·외부 데이터·전체 원본 일치는 아직 미실행/미구현이므로 작업 전체 통과 아님.",
+              "evidence": "../assets/ribbon-table-tools-20261101/native-ui-r4.json; ../assets/ribbon-table-tools-20261101/resize-api-r4.json; ../assets/ribbon-table-tools-20261101/total-api-r4.json; ../assets/ribbon-table-tools-20261101/filter-api-r3.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/designdatatable/reports/2026-11-01-manual-context-gallery-20261031-20261101005206631-v1.0.8.html",
     "postPath": "projects/designdatatable/posts/2026-11-01-manual-context-gallery-20261031-20261101005206631-v1.0.8.md",
     "date": "2026-11-01T00:52:06.631Z",

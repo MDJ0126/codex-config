@@ -1,0 +1,15 @@
+{
+  "passed": 1,
+  "failed": 1,
+  "utc": "2026-11-01T01:21:56.9132602Z",
+  "checks": [
+    "원본 표 기준 상태"
+  ],
+  "errors": [
+    "System.Management.Automation.RuntimeException: F10·Tab은 셀 이동 없이 표 크기 조정 포커스"
+  ],
+  "snapshots": [
+    "table-ui-final-r1-01",
+    "table-ui-final-r1-02"
+  ]
+}
