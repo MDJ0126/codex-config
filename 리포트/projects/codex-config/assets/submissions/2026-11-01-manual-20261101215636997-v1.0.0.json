@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "간결한 보고·분할 작성·전후 화면 기준 적용",
+    "summary": "지침과 공개 작성 가이드에 핵심 요약·주제별 분할·전후 화면 기준을 반영합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "지침·가이드를 수정했으며 공개 검증을 진행합니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "시작 2026-11-02 06:55:37 KST · 진행 중",
+    "xerjEvidence": "코드 검색 불필요 — 문서·지침 수정",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "concise-before-after-reports",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "읽기 쉬운 보고와 실제 전후 비교를 공통 작성 기준으로 적용합니다.",
+    "completionCriteria": "지침·가이드 변경과 빌드·링크 검사를 통과하고 커밋·푸시·공개 URL을 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "보고 기준 통합·검증·공개",
+        "action": "전역 지침과 가이드에 요약·분할·전후 사진 기준을 통합하고 빌드·외부 공개를 확인합니다.",
+        "expected": "지침·가이드 변경과 빌드·링크 검사를 통과하고 커밋·푸시·공개 URL을 확인합니다.",
+        "qa": "요구 문구·지침 동일성·빌드·링크·배포·공개 본문 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
