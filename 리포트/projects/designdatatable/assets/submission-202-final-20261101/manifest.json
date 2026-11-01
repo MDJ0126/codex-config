@@ -1,8 +1,11 @@
 [
   {
     "file": "ArchiveVerification.json",
-    "bytes": 480,
-    "sha256": "21e8e9dc76491767e67020c5b1405c17162e0d2e5378961a9412cc5c0228c28e"
+    "bytes": 467,
+    "sha256": "7c3b2d8357afb10f564d28ef3e6830449b563e119345d0ef34757c0d20aa5194",
+    "sourceSha256BeforeGitNormalization": "21e8e9dc76491767e67020c5b1405c17162e0d2e5378961a9412cc5c0228c28e",
+    "sourceBytesBeforeGitNormalization": 480,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "Card.png",
@@ -56,18 +59,27 @@
   },
   {
     "file": "FormatTabsQA.json",
-    "bytes": 299850,
-    "sha256": "871957f2e1ad98179f8ab000d655f2d6df73fce9eac2d03aafdc20c6970b824f"
+    "bytes": 288805,
+    "sha256": "c03037c48b2c981d19a0f68bfab6da4aab04eb30c3bb50969c1f881161c71acf",
+    "sourceSha256BeforeGitNormalization": "871957f2e1ad98179f8ab000d655f2d6df73fce9eac2d03aafdc20c6970b824f",
+    "sourceBytesBeforeGitNormalization": 299850,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "GeneratedSourceLockQA.json",
-    "bytes": 1929,
-    "sha256": "f47090a44c2caa0714a28cba257a38de4b0637f5f0fbed967cbc1884e6790706"
+    "bytes": 1921,
+    "sha256": "93565aeed6a819fa3dfb6ae0245f0ebd6e06815a7b321c7f2aa4465bd058059a",
+    "sourceSha256BeforeGitNormalization": "f47090a44c2caa0714a28cba257a38de4b0637f5f0fbed967cbc1884e6790706",
+    "sourceBytesBeforeGitNormalization": 1929,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "GuideVerification.json",
-    "bytes": 46597,
-    "sha256": "b23e22aa93253863dfcb84e30b3a55a7eac582b41092fa87d0c4ebc20f81dc20"
+    "bytes": 46596,
+    "sha256": "0d43c17eb290866a11718e65d282353477fc30e5c119809d66e23a602a87d6ea",
+    "sourceSha256BeforeGitNormalization": "b23e22aa93253863dfcb84e30b3a55a7eac582b41092fa87d0c4ebc20f81dc20",
+    "sourceBytesBeforeGitNormalization": 46597,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "hover.png",
@@ -86,8 +98,11 @@
   },
   {
     "file": "InternalApiCompliance.json",
-    "bytes": 66264,
-    "sha256": "9922b5c5a15b8822c03b0061839205938779047f27241813eb5834b63daa9d1f"
+    "bytes": 64864,
+    "sha256": "7f9f590da36332702f1467a34d226245fcea973244e0b51bba06c873fc02d0e9",
+    "sourceSha256BeforeGitNormalization": "9922b5c5a15b8822c03b0061839205938779047f27241813eb5834b63daa9d1f",
+    "sourceBytesBeforeGitNormalization": 66264,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "NativeFinalExport.json",
@@ -96,8 +111,11 @@
   },
   {
     "file": "NativePointerQA.json",
-    "bytes": 2601,
-    "sha256": "7e7f9a56b8d55c5a3d0cee150a17247e96267e3457a963bbb830bed84e1ac3cc"
+    "bytes": 2536,
+    "sha256": "183ef511ec12b9682999f40f87fe229ac7ed1102c4367bb2305b47ae2da1a667",
+    "sourceSha256BeforeGitNormalization": "7e7f9a56b8d55c5a3d0cee150a17247e96267e3457a963bbb830bed84e1ac3cc",
+    "sourceBytesBeforeGitNormalization": 2601,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "NativeSubmissionQA.json",
@@ -126,23 +144,35 @@
   },
   {
     "file": "PublicApiAssemblyAudit.json",
-    "bytes": 980,
-    "sha256": "8a169171edaa49f4c23d9451b042a21bf7fe789e83ea4959b136025c50bd58a6"
+    "bytes": 954,
+    "sha256": "2f07a8016e67df1e4b7ca1385d4abd009c3e1993a3b212b50252032a3371052a",
+    "sourceSha256BeforeGitNormalization": "8a169171edaa49f4c23d9451b042a21bf7fe789e83ea4959b136025c50bd58a6",
+    "sourceBytesBeforeGitNormalization": 980,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "PublicApiNativeQA.json",
-    "bytes": 21275,
-    "sha256": "87c8f04b306f4786b66929c3353340a4f5bdf2b9f37703c4d32a4815fc87ecd3"
+    "bytes": 20392,
+    "sha256": "798c2d22941e311d63bf4d27b8d8984ff2ea240dc8161750ac697c677210db6c",
+    "sourceSha256BeforeGitNormalization": "87c8f04b306f4786b66929c3353340a4f5bdf2b9f37703c4d32a4815fc87ecd3",
+    "sourceBytesBeforeGitNormalization": 21275,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "PublisherNotes.en.txt",
-    "bytes": 1451,
-    "sha256": "e467d79057ef0a2369a93e6cc852323634e9368c095f0974d15519f18b3002d5"
+    "bytes": 1442,
+    "sha256": "8fd48ca96c9bf52e23057d2f973380ebcfcf9ae98f1b06d7953b92f2d85ddcd5",
+    "sourceSha256BeforeGitNormalization": "e467d79057ef0a2369a93e6cc852323634e9368c095f0974d15519f18b3002d5",
+    "sourceBytesBeforeGitNormalization": 1451,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "ReleaseNotes-2.0.2.ko.md",
-    "bytes": 566,
-    "sha256": "adb4dca14fb583e8130e5db0ea0fb21775aaae3c185ca95de1c061fdc24d10db"
+    "bytes": 558,
+    "sha256": "e33bbca5863941bf0b02125a7cd4170ecb6fb6688e7170f2699028bcff1c00ea",
+    "sourceSha256BeforeGitNormalization": "adb4dca14fb583e8130e5db0ea0fb21775aaae3c185ca95de1c061fdc24d10db",
+    "sourceBytesBeforeGitNormalization": 566,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "SampleHubQA.json",
@@ -166,18 +196,27 @@
   },
   {
     "file": "StartupErrorQA.json",
-    "bytes": 5731,
-    "sha256": "721e10075ecdf5e20c2e376ec641a0ca6ef30718f79ef751ebbbdb073d31cb1d"
+    "bytes": 5484,
+    "sha256": "dcc1aa58771febb5de6403e4ff219921f4c66611af0ff8ed36e2aa4cd17eef34",
+    "sourceSha256BeforeGitNormalization": "721e10075ecdf5e20c2e376ec641a0ca6ef30718f79ef751ebbbdb073d31cb1d",
+    "sourceBytesBeforeGitNormalization": 5731,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "StaticCompile.json",
-    "bytes": 53139,
-    "sha256": "ff1e849c77ea44106f26bf8ebd8fb564fe803f57c92e568e8ba5bb797beb4e1f"
+    "bytes": 52765,
+    "sha256": "870eda1d629df9e75541d327ad336e2de08879faadc7b92433b63aac5868393e",
+    "sourceSha256BeforeGitNormalization": "ff1e849c77ea44106f26bf8ebd8fb564fe803f57c92e568e8ba5bb797beb4e1f",
+    "sourceBytesBeforeGitNormalization": 53139,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "SubmissionHandoff.json",
-    "bytes": 6521,
-    "sha256": "f220c697d134e84db16decfac3c2f7a5575d521d5bd7ca163b196b5e4a44057d"
+    "bytes": 6332,
+    "sha256": "21937d0cfdc79307ad3423cabca721949499bf3a41b8a8423981cb28f81e42be",
+    "sourceSha256BeforeGitNormalization": "f220c697d134e84db16decfac3c2f7a5575d521d5bd7ca163b196b5e4a44057d",
+    "sourceBytesBeforeGitNormalization": 6521,
+    "textNormalization": "Git repository LF bytes"
   },
   {
     "file": "Warehouse-R3.png",
