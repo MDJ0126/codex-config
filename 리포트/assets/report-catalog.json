@@ -1,5 +1,85 @@
 [
   {
+    "title": "Entity Forge 프리팹 선택 누락과 다른 씬 분석 잔류 수정",
+    "summary": "실제 새 설치에서 발견한 프리팹 선택·씬 분석 문제를 수정하고 바인딩 값을 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-bug-20261101122528139-v1.0.0.html",
+    "date": "2026-11-01T12:25:28.139Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 새 프로젝트 설치와 실제 DOTS 빌드·개선율 검증",
+    "summary": "네이티브 패키지 설치, 10개 샘플, 실제 기능 플레이어와 비교 측정 UI를 검증했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+    "date": "2026-11-01T12:25:27.634Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-entity-forge-product-20261101122504590-v1.0.3.html",
+    "date": "2026-11-01T12:25:04.590Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-entity-forge-product-20261101113342561-v1.0.2.html",
+    "date": "2026-11-01T11:33:42.561Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 기본 창 장식 재발 수정",
+    "summary": "기본 제목줄·탭 제거와 재열기·도메인 재로드 회귀를 검증합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-manual-entity-forge-frame-20261101-20261101112435681-v1.0.2.html",
+    "date": "2026-11-01T11:24:35.681Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 기본 제목줄·탭 노출 수정과 재로드 회귀 검증",
+    "summary": "공통 독립 프레임으로 교체하고 닫기·재열기·반복 Open·실제 스크립트 재로드를 검증했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-bug-20261101112120160-v1.0.0.html",
+    "date": "2026-11-01T11:21:20.160Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 기본 창 장식 재발 수정",
+    "summary": "기본 제목줄·탭 제거와 재열기·도메인 재로드 회귀를 검증합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-manual-entity-forge-frame-20261101-20261101112119554-v1.0.1.html",
+    "date": "2026-11-01T11:21:19.554Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 기본 창 장식 재발 수정",
+    "summary": "기본 제목줄·탭 제거와 재열기·도메인 재로드 회귀를 검증합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-manual-20261101111508984-v1.0.0.html",
+    "date": "2026-11-01T11:15:08.984Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
     "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
     "project": "sampleprojectforunity",

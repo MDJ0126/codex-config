@@ -1,0 +1,1313 @@
+{
+  "at": "2026-11-01T12:20:09.297Z",
+  "file": "Artifacts/TurnRoomPackages/TurnRoom-EntityForge.unitypackage",
+  "bytes": 9283391,
+  "sha256": "8c094117cfed554e373564fbc7db2abb279d89aba4e46448a990adb39c896fe4",
+  "nativeUnityExport": true,
+  "files": 325,
+  "developmentExcluded": true,
+  "otherProductsExcluded": true,
+  "sourceAndMetadataReadback": "pass",
+  "assets": [
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-theme-effects.png",
+      "sha256": "3eecd25a05757a71f162093a59501031b34924055d87cbceefa3182699fff0c3"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-fr.webp",
+      "sha256": "b86247c4041496eca57fe77be0ec71b6f0b66c61c5cdd6c3a9df467978446d57"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/flipvertical.png",
+      "sha256": "b4b8ea7a7643b3c141602b0e4bf220fd69baca6d2bc2c6d704cb215869f23009"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Dots/ForgeDotsBackend.cs",
+      "sha256": "c56ed28392c19dd351dfad8b512a75239577b0eea3ba99f7c7a2a75526ee05bb"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/Images/EditorDark.png",
+      "sha256": "93b787072f1b823c474ee340d4a043b0338937e80c3a476572fe159478815bbb"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.fr.html",
+      "sha256": "216eec6479c409e7482e8db173746e0ab8eaa08c54e36ee60873a59fe733c6ca"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/copy.png",
+      "sha256": "83dd210396e67102c5736f2a8ef34011029e9d0e00f84d6d3e726bb54976f27a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/view.png",
+      "sha256": "616f844e13dcd43447bc9b361a1ac94f205dda63c6dbbed461c2e22955317c85"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/textcolor.png",
+      "sha256": "35cd64044056b4cee035255579900bd23be60792efbe9ea2a4cf03dedc74c46d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartmove.png",
+      "sha256": "1549310441d94b60f45398a44282bd16b6f45d03ea81b04860936096f82be237"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Version.json",
+      "sha256": "6b98b465c2f7f4546e62959026f3e8596daaab511f656c4ebc2a3226b1ecfe64"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/Images/EditorDarkNarrow.png",
+      "sha256": "a7cd000e046cc046f596b6fa8a3ed4fe6ae0be0e50fd2ec1e7e9b91df8b82df5"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/layout.png",
+      "sha256": "86c80abc3a004258a1376d2e85421c6c1d40f67edaf61ce694772c8fa4cc9327"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+      "sha256": "1ecbbf7b226716a60049a7d5d62ce6080d29a680fe8315b12ebbd5b8fca9e95c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TurnRoom.Editor.asmdef",
+      "sha256": "56bfb5c74c331366ec3973b9bb1c65e35db279b91b11b73e254ad721a2afdea6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/pastevalues.png",
+      "sha256": "1f4882bcf53991982d713bcededc40b7e83042943b32a2cc0e6d2ee2a556f214"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowPresentationScope.cs",
+      "sha256": "f2685b1591cd91373453eb8d69567fcaf8941628761a19929b8684f428b40468"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateSelectionPanel.uss",
+      "sha256": "40a1e1e3fb24f00fdff0e555add37e632a231d8493a2806e1f1e7466cf068dea"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/cancel.png",
+      "sha256": "b7d8c2e4c0686cbbcb2748158919f8b83f5879a6021bffd27a403acd110e99f6"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss",
+      "sha256": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/bold.png",
+      "sha256": "50f6661e9f2ed979e7ee036fcab05d216a36f43fd1e19750dcb8b49e9d7ddf04"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/text.png",
+      "sha256": "9226012460df98f2bc0094f20592515b695e726450939fb08cb04d256a400d45"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateControlFaces.cs",
+      "sha256": "6d031b283cc18079ff4b0d9fa89f9329bba8a488d2351e6393f6c3f09168b8bd"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-fr.webp",
+      "sha256": "a85df31cfa727f046dbc0e0754205c7504bd9eee90061b028de8263f40f58ce1"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+      "sha256": "f54171fea63957d3414ac90e7c58c1600711f8ed4a28e0d31ba868751b04cf29"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sort.png",
+      "sha256": "4c57e8116ca017226ebf9996bb3c95ed6e7740860f223deb77138c2ad112b45d"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/Verification.json",
+      "sha256": "5dcc01afd07259c102cc541ec4e5f514152a78267162b18068451ddf1d8f1308"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/10-BenchmarkGrid.unity",
+      "sha256": "3816442516721966b5f25be1991b53054e5ee2c50ba784e9979b844733d5bc54"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/autosum.png",
+      "sha256": "ec6500ccd526b13e0c57584a84959fc8b3b294f1cb0f70950c7a99bb776e75e3"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-de.webp",
+      "sha256": "042f499e80a8b53f320471572d4bf115472b7039718e6d4b90067e79b8423d01"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/fliphorizontal.png",
+      "sha256": "0be31e2c2aab7ee8b3a8d85d387e4e4a3c40f46b6630a89f069539f4960046bc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-margins.png",
+      "sha256": "6d5e9eaf3007ca3eb6a642fef4403e9e0926bae57f192eed53772569998aa075"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/right.png",
+      "sha256": "20b8814ab668f7f8dcac4083419a1ceabc04ec490dc515de080fe463c95585d7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/down.png",
+      "sha256": "560e034596d41b6d1149f758fcbea47f790831101cbb1dacca749227804bd7be"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.de.html",
+      "sha256": "b4bcd4030ac598326b33c76170b655752337a5049a83a2d6bca30ccad9dafc73"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg",
+      "sha256": "f6dda942ad6edc31d24d0ed942178a931edfada9b6dc6d56716d780a94403b05"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplatePropertyCollection.cs",
+      "sha256": "4af5b1562ac00bedccd3bf7f7a4d4f4702a1e19988be314b5039b320c666c657"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/Shaders/ForgeInstanced.shader",
+      "sha256": "5f6ea5ead2f4e9774dc7a290de5f2b39b95ebd1fdd62cebe87f60bb2406d62db"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/05-BurstSpawn.unity",
+      "sha256": "9a511da9f2defeaaffe837c4035e20088c064791753a6881a8104a3ebef3b445"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.Restack.cs",
+      "sha256": "4eb97855c0742d29f9e83948d03af3e4516afcf0e2ec13d7a4b02c505111bd3d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateInspectorUI.cs",
+      "sha256": "a99d21dfd3b24f8f24e43162517feb1422962fe81e73b2d5cc20410a568d4cc1"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateSelectionPanel.uxml",
+      "sha256": "e3c0d731e8a8b93231bd9a9379dfe09a3105ade98a634f27fb23424518bb5709"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/comments.png",
+      "sha256": "1ea132a5e652abb29b72f41de1fb7bf203b53bae472a448a2c718ee43aec764c"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/Images/EditorLight.png",
+      "sha256": "ad734f551bbdfbbd6de881cca32737ffb778dfc08f93583f43bd171e974b8a29"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowTheme.uss",
+      "sha256": "03094292a7d3db951f516f87b5165ed6b36a309700d299f07e498b711fc80f7c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplateSettings.cs",
+      "sha256": "64577b2f757f791678da29249db3006d554afacab4cce02bd6bf4f8c30c41975"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-LinearMotion.unity",
+      "sha256": "c94f84f3c68df5a919961f5b7e714c05cace9dff879d26d0d6cbba8f0a51973b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/conditional.png",
+      "sha256": "957da56d34d28e4410ac8f0de77275c0f54a56296eafc5220458b857db9d6cd6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/next.png",
+      "sha256": "4a998efd57c22e361164f8b2db6949f675f37cf9e3908654861a9a2e8604419a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-pie.png",
+      "sha256": "19565ca18e4a784ca30927bc4e8658ab2554c75b2867d671197bcb2f9836a441"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sortascending.png",
+      "sha256": "af93c218935ecdd13970164e1cbf5321a040de7d1d068fecaeba6e90ee90c804"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.zh-Hans.html",
+      "sha256": "93c65f90860373da5d79451e10d96da2931de0c586c27f9d75b4bf9a1019a08a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/bringforward.png",
+      "sha256": "b07ac9f78d31b5ff0d84bc28a119bfbe7b6785cf16aee1750eeb1d44097108a4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/symbols.png",
+      "sha256": "5a376a2c98700e842247ae8002314f54a38a5fd4ad85dd9ed24064fc21634ac6"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeBuildSettings.cs",
+      "sha256": "6411f64d3364b432f4d1491a85998245ade1fd65bdfa45296f117ab835a17596"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-gridlines.png",
+      "sha256": "dc982acaf8867baefb5e8986ca7247df6eca030c2c0623d1837c992bbdc96a2b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/restore.png",
+      "sha256": "a17d4e6fcb0cc4b7600644bf979bfde9c08bc86dfad33cca3167a461bf2208f4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-ko.webp",
+      "sha256": "6c97c8c7ba212d7c2f8e25303213ccdda834fdca203e6aced55e910d86c9dd58"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplateSettingsInspector.cs",
+      "sha256": "0bf8ff311666110ecf3c27de931a02cae62cc41a94611a0a0a51ea63db61303b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs",
+      "sha256": "fc85ddb78063a3356181d04a21439617fcdf52e467da8b9f25bdffc4b2691ab4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/palette.png",
+      "sha256": "f85d278ceba12a876c152f7a2a17a6d38047bf36b2c2cd7d2af21a541fd374e6"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkRunner.cs",
+      "sha256": "c431e1f8015415b2cdd003b6ec6efba381e813d113db9a47c104b8a2eb77409a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/ColorSelection.cs",
+      "sha256": "8bfa627d2a2add6a622380eee4c69e95429b332fc79e447caa27a553ed150c21"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+      "sha256": "3cf68e77b6557dcc682695df603e562fd5cede43b6ce3e838cefe0c12beddf88"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartstyles.png",
+      "sha256": "1fd14fef800f0d4fc068aa809e058f08f9dec9848c442df6ee5569043e83c8d3"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/summary.png",
+      "sha256": "9a224e5fe068334ef13d552ed20f423353851505251508a35834cf654ca3b6b3"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/InstallVerification.json",
+      "sha256": "6b534c356b7e3db945b969dea02882ade51985ef4c4e4546d08b44754668e40d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/dependencies.png",
+      "sha256": "cb9298e09607e8a5efc8713b38209e5549d214070b04457246685c9e4f475dbf"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/picturecorrections.png",
+      "sha256": "d18a9b46ae9ccc3f7b1a04d498cd85232a96abf4fa32818974c7df2c7962b9da"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/freeze.png",
+      "sha256": "dfe0d03a355405ff0a5c786eb1aaa0d009f2f77b9220738a08d30da1fb63bd1d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.pt-BR.html",
+      "sha256": "3f9c9fdafc205d6cd543ac1f12f11042290ebef004f46c4b2c8d3cde3f3e4d52"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/cell-styles.png",
+      "sha256": "74ea15b5db71212e0fa86d06d85026b95c8b35da35094d4aac054c7e38140299"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/SupplementAtlasWhite.png",
+      "sha256": "1b971b903ae0fc2c29eece4678b539d6e782ac9913c986cfa033caf4e20046ee"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/underline.png",
+      "sha256": "ef0fade84925185033322d9d494974c873557874c045e9bfcd678870df6c528e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/unfreeze.png",
+      "sha256": "64009746b1d651b2b1c727478dfab93fecdfa14218225cae90ce61ea834d9c4a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/schema.png",
+      "sha256": "0e5112fe9f0e682314699259d553dc92b7d166c8d491b30bbe7c84524d6b3fbf"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/layers.png",
+      "sha256": "06f9a10db43dfa164a1200a67db226d8dfd3ad1bbc8084ef0a12ca4a9d4b3f4b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/globalenum.png",
+      "sha256": "82c9c6e947b076105cf5eea33add74b33bbcc1244e320be0b330ff8e85946e4b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/convertrange.png",
+      "sha256": "88245a63c7bb7f5414cfad1f7270cdf12b93f89edaf3059a8e37cb1b68bc06bf"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs",
+      "sha256": "4374401d77dcbae25860666c98fdb34637392abac10a20cb9e878e5561e5027a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/cut.png",
+      "sha256": "a61c10e8aa64323a6523987ccf2ef323c2c09b54c1a764265a42dfb367edf67b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/filter.png",
+      "sha256": "f7ab099b8412c6b76e41e841adb863b7034548ebcc1e9c8e05ef3f9072246382"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.cs",
+      "sha256": "706244de4591caa4f2336015fcaf5dea086a6ae03b6b1a9ccb51383a7fa23471"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/keyboard.png",
+      "sha256": "56fe5a419920137f6b9c61525d0ae8861ba75cd8b0049662601731a4b9777b79"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-theme-colors.png",
+      "sha256": "3812711a05bc332390ff93eb773ba36b01106ca36ffa4a389539417f1ec64bf8"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-de.webp",
+      "sha256": "23f767873ac95502bae56d972b6f5eaca69124e349c29a602f226d4abfbe2193"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/alignobjects.png",
+      "sha256": "2fd65183278add9c872a2ba3fcdf6814d8476812aad788c6205d4b6ac0d0fcd8"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/ToolWindow.cs",
+      "sha256": "9fd7bbf389f522f846adca66ed3034efbdda7d53cbbf2f8003c76e69a9712153"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/DemoCanvas.cs",
+      "sha256": "aea741da5f1fed76334e9803fa8ae777f1f8e6b10a77b6c1980eb1cfefe29915"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/TurnRoomSans-SemiBold.ttf",
+      "sha256": "47657273b4a440a21d9475ff5636e480b6a0b270ea93a3761c740ac94c087d4b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/text-orientation.png",
+      "sha256": "c9912724c99e5cf5c7c5555b96428b875afaa17389c2daed82f12a2f55720bdc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/DefaultUITemplate.asset",
+      "sha256": "115a2a6b5da52c3c0c31838d3ce4ceaa48ec85323090b8b459e3d21a4bbd9537"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/image.png",
+      "sha256": "57ba0d596565dfe3304a33aa3d3ae3b13349af1964311c824396e23f1898643b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/TipCard.cs",
+      "sha256": "f283d063e19205dafeaa89a7a322bf7e29189695bdfeb7cbd211eddf3d462b1c"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkEvidence.cs",
+      "sha256": "3af956333564a4ae60861f4062ec7e1baec8de98da34dc939cb93ecb8f33da76"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/statistics.png",
+      "sha256": "832b3e5dac4c7d51d74a8b02c9d78684eb9610767ee7381a09c85769851dcaed"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.cs",
+      "sha256": "6e7693f63e1fc26ccf44f556f4ac9099307681be64dc727e033aef66144608c1"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/rotateleft.png",
+      "sha256": "c6da8c14b8cd0407bfac862628d21c87fbc0d868280032f5d1a63d74120fa46a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/font-increase.png",
+      "sha256": "5164b613cc7b46fbd5791389362137dc0015b88f9b00689865a049b24114c924"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs",
+      "sha256": "9401e499e133452a73b90803ad792d142d7bab8d2e85b7c526b814ee6627773e"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.zh-Hans.html",
+      "sha256": "bb3bf622fd0b394e6d780fbd18c30ddf8d8ab9eece7add4c2c414ab84af60cd7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/status-info.png",
+      "sha256": "74eec38ec12a8d8ea9acc4a283f6ae16a74d7f8924c6774266de7bfa014b3b83"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/unmerge.png",
+      "sha256": "b4eac7167aaa2112171500ff6bd415e9da8541b6f09ce0cb1c293afff590210d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/print.png",
+      "sha256": "689f2911786f6e5c876d8b8d1328c69da24680edcaa9cefefbdeaca5eab27fee"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/previous.png",
+      "sha256": "0d7b3143fc78cae1474944f0f2cb8a3bbdefe890fba70ed7d9604e497b38c827"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-doughnut.png",
+      "sha256": "19565ca18e4a784ca30927bc4e8658ab2554c75b2867d671197bcb2f9836a441"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/Art/EntityForgeLogo.png",
+      "sha256": "0a9e9be63d14a09e720e477d275e36e4c1b3eae4c706e3f75794de87243d83e7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-line.png",
+      "sha256": "d033f456bc7c6edb6b607b2c1cc81d5ea6b44173bb03cc7f9f8f960ac94ea642"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.ko.html",
+      "sha256": "367cfcab3e82b7d52f52d8ca9ca3d9082e928941c3efde20ccead07e4e09bcb3"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/decimal-decrease.png",
+      "sha256": "aab74d84961f3ec46c464bef2ea915a3fcf6c8d05e577daff473ea7d3e6a9061"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/TurnRoomSans-Regular.ttf",
+      "sha256": "3b99a6f05cbf063cc3ae5d3ecf7bcf48ab9292c24eeb2e1af8b02b0908f53e44"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.ja.html",
+      "sha256": "133a8608d97c8296e8443d8f032a87290c50b5df6a824892f42d18c3648d0950"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/wrap.png",
+      "sha256": "bf12093a27e0679cbcc304c14096886d408da4bf1ee41e3804090b6b789ad9f9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-es.webp",
+      "sha256": "009bc12f47aa426c7bcb7079ea7b63b566e638d075111858c31aa40e44148866"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-en.webp",
+      "sha256": "74a3c0b0dffde899afd431a57028cac5dee48437ecbbefb6ac1a1205f10f631a"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Dots/TurnRoom.EntityForge.Dots.asmdef",
+      "sha256": "e288d43c19bb0022e124f8754f84fb1f9fcf23b4faae87e3f35b033b95cfc53e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TempleteImportGuard.cs",
+      "sha256": "722c2476d8de6dc1ec5308581bec6420d0c0c3562b5f6792ff285f6a102fb2fe"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/percent.png",
+      "sha256": "49541c8f402b3086f8ccb059f8421daede0bcedc0448fc6aec70374d3f34fe8e"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.pt-BR.html",
+      "sha256": "a2c3955056ec4d08b4eccf4aadca020c17583200dd3a06e05c6f47aecb67022d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-print-titles.png",
+      "sha256": "1424803747f2f3198f6e3c43248f18df1f045bf7d9e7681af533a2f5a12bbf21"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/fillright.png",
+      "sha256": "66b61587402dca4bc538c89cdf2e2898be17ca3cd0df7313e28fff0afe738c18"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowControls.cs",
+      "sha256": "a91e20c1403b3fd8c100e167c17118197cb6940ff1a8d902b9ea1ea786ea8025"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/save.png",
+      "sha256": "0e883288ced109f07ac15caf8b4ccc225ff917577376c2281916115fca67ac96"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/ForgeBatch.cs",
+      "sha256": "01ba45749e6d76b135b70b6da91d0fd76fc32147339755ac7961a99bf59f330e"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.ja.html",
+      "sha256": "f35509943464962698ac0c7524d1bd4f50c9526dc3a0f05297b10f20594405c8"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/04-Lifetime.unity",
+      "sha256": "84771c95a229162bf744d911008b74f92c162d705e74cb848107c8467bf4a653"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowFocus.cs",
+      "sha256": "62e9dee4bbc82f78e4bd5af89de691529085ae64ae9d7b2550ff52564b95193c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartcolors.png",
+      "sha256": "a9dce0c1f546b9f6805cc6d4de2b4462167e4738eb18d82458adc2fb3280bb11"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/italic.png",
+      "sha256": "3b9f1f7b844ab46f5427f55d1f2ffecbeefbf7a5ddcc6be778ac96fcbc686c50"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-bar.png",
+      "sha256": "55aa4503ba500c755fcf78e21bbd91d9946f757d30946e7afbc5ca594274f786"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/clearfilters.png",
+      "sha256": "6c7f1fa169bc114f3eb67e8279e5225305c0e15b585455ad3b34ec8ec0f38ad5"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/format-painter.png",
+      "sha256": "5004116e9b5c38576d6def7e386b56b672952d233e07b0cc63205e25402467bb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/unregister.png",
+      "sha256": "98fbb4c61bc059361693389b60180633c96980e993f3f28a5fdd003200ab33e2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sort-filter.png",
+      "sha256": "8506d5261ea8bf7aaecd9a0e0539f9edaafbb58421588314a48cc0334305a843"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.en.html",
+      "sha256": "6af966d229d5280bed82fbeb866764ef260dcf33539aabcd1e0d2fd6d5dfba2f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/TemplateTypography.cs",
+      "sha256": "ba9187e5a23f69fda180627ad816eb847597719c4c77e1d5b6ceb8393196ee4d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/filldown.png",
+      "sha256": "d0a035b0e903d7584bad9c051af6c97dee812b043b87aaf1c502c47e30e694e6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/delete-cells.png",
+      "sha256": "edfc0bb4fdfd357a3714e2ab9509fd1f920d93fa16743992313a5808c38bd3bf"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/status-error.png",
+      "sha256": "5ffa30a7d1cbfecd304db1e262d7b487948cc984418ddf763f0a09c2921f4f90"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/pivot.png",
+      "sha256": "03a63485b16bef06894e0577cf96b2553faa4fa470bb41a48c7a5e5896946c53"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sendbackward.png",
+      "sha256": "c4ecca9357cf8c109ca43d25c1a0048020658139dd81ee007cc88553d3b8c378"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-zh-Hans.webp",
+      "sha256": "ec248b46b2edb605086498ba21e04bf7c5753cb30653d6bb6d9cecd437b0f9ce"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/TempleteRequirement.json",
+      "sha256": "7e3ce3cd31aedccf79b07513b7fb2cb698cb51998b748b9270360b15689c6fae"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/TurnRoom.EntityForge.Editor.asmdef",
+      "sha256": "32ac3d0d5d585a9690e0c7a6374106096275fe63276e3fa52c8616faf2cd37e9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-orientation.png",
+      "sha256": "987a26d34200de275fafc7e7a13e390f78178b6ca84a289465af13bebcb391ff"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeSamples.cs",
+      "sha256": "174313bfef06a78ed8ccb2caab7513d7f523aa44afc16cf302828b409a8bb627"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/comma-format.png",
+      "sha256": "f33344b098d418e718e01ccf3031dffc1f63c8f63fb80ed71b2a250ea1b6de27"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/checkbox.png",
+      "sha256": "1d42d355e285951e8e594b846226e4a7ca88d3d13f5ff4a1d7b3a3bd51fb0bf9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-background.png",
+      "sha256": "922e150ac4f0084d87facd97440b44edb4cabac428426e4e05aa33bc6254b98f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/names.png",
+      "sha256": "24d9986d5c453f78b76aff8df6e1c61392546c056ad7e58bd4ec9c03801f0442"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-zh-Hant.webp",
+      "sha256": "909e647cd296b311af477b3b5543cf811a8eb2e5dc43412071b331f622b7723f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/indent-increase.png",
+      "sha256": "7b4be4ef3a38583e4732fb87c59e207a957f39ee7e6221309f3a1bea03a374b6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/groupobjects.png",
+      "sha256": "4002d659f84c51da43a0dd0187dc2ffb9d527a19779fe3e472fefe89baa4374b"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/ForgePlayerProbe.cs",
+      "sha256": "23cd8319bcfe8a7e325300296b575c24dcccade55f0ca099f02d528bb2947f29"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/refreshlanguage.png",
+      "sha256": "3f3024e548548cf75c7261c207ef95bd727f3aeddfe59d53606bda6d455bc7c5"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/fill-menu.png",
+      "sha256": "330bb9045f5fe50044f26bbead3d1f5ba6390f7b13bf562111627d3ee8f443c0"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/format.png",
+      "sha256": "3de3bdda777d5d73d6991e5e54471f78abfb2820074bc12160ce4002fe6e0232"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/hide.png",
+      "sha256": "c4c4d45e8e019aadae4060ad02f01563ee9975a053d6604c9f495e811f41711d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/unlink.png",
+      "sha256": "bb616e4b375b09290d2290ed6b0a7021a643bc84f599107f2045b84c3339cdcd"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/folder.png",
+      "sha256": "01dece7756b5beb04d042cb3e3f645a633e97456b24775a5658da8316efd2d74"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.fr.html",
+      "sha256": "c0612ea21f7b0c2ef62a1d3d5690b3a25d2c287d14dc0d1182cee55881d5e87e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/globe.png",
+      "sha256": "66fcf0704aa8e6ce0bb60a637c41568b0426ad67298cd718cb9d365a45e44a62"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-radar.png",
+      "sha256": "e20127e8af21bdb89c2a95d1a7b6649732e45c6ea1de6c407cc5b4c6b296ee19"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartchangetype.png",
+      "sha256": "70b11e7b9517e3c7ef3579f05bdf8c3b5eed3ac0e24d19ff1579e593e3506c21"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/defaultlanguage.png",
+      "sha256": "a92b69e09506a3720875feda8a9fb8e23b8a70411624ec51d5711077e3587f98"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/06-TimedSpawn.prefab",
+      "sha256": "ce9ca2335753d533ac3f9ee9584422180bdcf34563aa83960f178c28f74191d4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowTheme.cs",
+      "sha256": "2af9bda4e3166fad8ce7c0bd9ed04d8d135336c727c19e819858d5744832b40f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sources.png",
+      "sha256": "e31dc9219fe03be4b50b630847a22ff8431f47553ecff80abcf73b288a9b2101"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/README.md",
+      "sha256": "6865b2a31a533778eaf98b75c9b3bb180706587615db7f533b9b58c5ad12d1cb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/font-decrease.png",
+      "sha256": "2360f51228fe2279304f52be1ce0527a5ffee60ce5e48484a8371807bd0f54f4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-breaks.png",
+      "sha256": "95f81132cf4a3c2b69dee04c7396bd0852b1dd20f8b9dcadd1fbb931f2cb2cab"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Version.json",
+      "sha256": "dd42d3ef0e41b224cfa4654c53004e026ed79caebeefaa13cf429ce67b10caef"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sheet.png",
+      "sha256": "ebcd06c99650c038be565c4e08a98c8ce6f69c16023b84b10a22d6b7d324256e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart.png",
+      "sha256": "1fe0d1c5355f6a461981cd227f9482fecf9543d448459556b0c0bc7831273302"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/Images/EditorLightNarrow.png",
+      "sha256": "1afa81266eae76954bbb31124beae42505fb0173333adec233d82492dd47c6ec"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/05-BurstSpawn.prefab",
+      "sha256": "30a331f3a42a6b6842897f7e2b7077e1952955a371f55c6b967902382742c9a7"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/07-SpawnAndExpire.unity",
+      "sha256": "15b933ca8b19d7389dd7e0df4255272aa1f1e2261315734810e9980f9780fb3c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.Focus.cs",
+      "sha256": "43db23a5c541fd1e5ed78f77cb8d69859c438dc867b13894118bcf198d8ca7d4"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/07-SpawnAndExpire.prefab",
+      "sha256": "7b31025fa17f532e3484fa691f870f3630d22d02e102c75ed130cb8d10c2a2dd"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Materials/ForgeWarm.mat",
+      "sha256": "4dd34a3dd100fef106274dc39bae06a0a4bdadb47a988ebdccd769793b96f233"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/paste.png",
+      "sha256": "a9b7e8ac54ac3be4cf7dc9b054da8e6a9640ecfba2ea22971cc5654ab6d340f4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TempleteVersion.cs",
+      "sha256": "4321819217c9c2c95509498c66e60219e55e411232fd4620a0820d089a9c61be"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/edit.png",
+      "sha256": "83c6dbffc06d337c66f0cf2ca1e00ef2351eb6dcc5dac60db1ae9eaef0f0d4c4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateIcon.cs",
+      "sha256": "fff42f6b37874f3de6653be95360eff081c73f2d2ec62cc4a34dee2f0a4afb4c"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/ForgeObject.cs",
+      "sha256": "ffe308f9ea679d79254e036fd221fc11613f08eaf9f1680ad53658787d5242f8"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.en.html",
+      "sha256": "d42b6e0c68b9d82884b8fc41b547f83ff58020b1f81ef69fe3b6c289a6df9b5b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartswitchrows.png",
+      "sha256": "eadc4b419659af7cedc14218f1850843995edb293dbf215d4e54f61d9806d98f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/decimal-increase.png",
+      "sha256": "86f95fa1e93c93695c682c3eaa7b4911cd079f729279848e590d6c47b6ea6006"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/README.md",
+      "sha256": "d87a71bc4f035bd64d6fea914a611a3365fb991738f8eb68e98179a0cad841fc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/lock.png",
+      "sha256": "8c47d1a9d2e8a23238c103bbd6c4c5a8ab04f62d447abdfd7ae575c5b1046fd7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/table.png",
+      "sha256": "a878d9b0820a8d93ce2a1fa773c0a262b2542bbbe25614ad436580e65b95432e"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.de.html",
+      "sha256": "fbd564b930e5da588907d5a3e834c563bef6178f45cbdcf54bcd93140bbd6d45"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-fit-width.png",
+      "sha256": "9e07f6638148cc7f8eddea985193e3efbc8276f41c00e2500c1e56e37701df61"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/column.png",
+      "sha256": "c78828c9e91253afe4179d1fa189e89099883db19e245d2f14e1057a3ccdc832"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-themes.png",
+      "sha256": "358ea34f2a630d52fc76ef3345d9822eb9dbb8af6bcd19b6c502dd37172f07d2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.zh-Hant.html",
+      "sha256": "0014c8a12f3bf05cd714d7aee4d7865da570d38e2afb46bd08aebed1ae2a5dfa"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-en.webp",
+      "sha256": "87ef077e972bd70b9132ac058201c81739ae4f8b8064fd6afbf717b2e780c68c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.Placement.cs",
+      "sha256": "7d95fc351ff6e2755fd6f6e6e29be307767f6d2b17fc173d5a2b62242ab17701"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/accounting-format.png",
+      "sha256": "f90778837b370cc60fbac6e980c5b4a19f9e1128d3279e6e845a1a0154c85d2b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/close.png",
+      "sha256": "f90a4fe787f38cb474525c77cd3fe126dc4786cc0d96862fb6b73c7d1c07f76b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/check.png",
+      "sha256": "d30b1c5984c4ceeacf51564489ad28c4b69ac92e035f12bff9d8de0ef635153c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/sortdescending.png",
+      "sha256": "58a58fca855a4673f41b8c968689aba44c3495542bf35f962fad5d940087ee4a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/crop.png",
+      "sha256": "5711727f25fab096e23a204660bf5c76ef790e93db5166536c9857e1a4884cbb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplateFields.cs",
+      "sha256": "9daffaf504c66aaa9f87075d9edb8290c756c0d395f1b558e6a174b96e8891ec"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-es.webp",
+      "sha256": "b6bd1287642ca25c9b6045004babc37aec8a53db00feaaa35c3e8e3fcaaff9cb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateHelpBox.cs",
+      "sha256": "d37cd84e1bfdf8a3e428d81cfdfdff762516466ecb05663ab9c0e4379ae76621"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Materials/ForgeNeutral.mat",
+      "sha256": "114e36f3a0b9c1949f1a955bdcd0a3a059d36ce83b9f9c50a2ea10ce35efbaba"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/ScreenTips.cs",
+      "sha256": "ef5bfafed0aec46330544eaa956cd9f2004e47d9fdcdd6c2a7df3e008eb7018d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-size.png",
+      "sha256": "790bc8c0a9a30feab9094ee93325ff9cd9fc9f2f1d699d30aec262f1628085b4"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml",
+      "sha256": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateAssetInspector.cs",
+      "sha256": "ed17a847008f18b4261b3be75a6b6929526a9dbb41379c9a60cb8be756a44516"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/export.png",
+      "sha256": "c7261cd11aa9d18ec5d755dc196d2ed2f8e6a1f5862843d47ceb392ca7851448"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/ForgeSpawner.cs",
+      "sha256": "f8b4386cb8ce9e668d282bafd5fc2f90401290ee54dc51fe7baec2965bb15e36"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/plus.png",
+      "sha256": "e537c61931f276ca585f9876554173c26d603cd935a215f7d21df8ff44a33697"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/top.png",
+      "sha256": "ef35e4a44b1a29f315204ceb3997534e7524519e9bd318292743c13c77b90599"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-scatter.png",
+      "sha256": "4f7d4043d704bef822fa53379d4aef535f61d67042a4c7efdef8216a0e70d827"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/import.png",
+      "sha256": "93d2f77fa7ed463b504fd39e6a3621a98948f3934dd0b9af91e058d2679fb77e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/language.png",
+      "sha256": "63cb5b1f3066c874eda2e7927a075c749a36c13fd21a5e7a4228d6dce7613d63"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-zh-Hant.webp",
+      "sha256": "cceed860f80db1b284a2f8402fc2b84ae2db898a739aaf54a5427a1805964fc2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/indent-decrease.png",
+      "sha256": "55f03225400fe4ca0db92bb18cd99b3fa38ba1f07c59519c2f1e1162b6f710a9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/hyperlink.png",
+      "sha256": "e31dc9219fe03be4b50b630847a22ff8431f47553ecff80abcf73b288a9b2101"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+      "sha256": "68738c066b3e6315b6b39567072c61d0a62ae55392d598ac4386a6505e0534aa"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/minimize.png",
+      "sha256": "46dde96e764a8aa41c1eef38866e50d574b341a90a07581d95632d28c384ad20"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs",
+      "sha256": "23531d2114fd2166fcbfd653be386b3f6de8ad2b416c4556c4126a634aea4834"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/decimal.png",
+      "sha256": "c6d5343f57599b1d3d9aaf302ffc84c145ec0ec351a0c90fc1d0b05b97f7c3a1"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Runtime/TurnRoom.EntityForge.Runtime.asmdef",
+      "sha256": "21b7cce99d91aa98a311dbf25bf378e1676c744c63e4e19e74fd3234d58ff472"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/number.png",
+      "sha256": "58a024460133b1d8eac04d230002025a553b284f24c312f71e721120ac39a6e7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/eyedropper.png",
+      "sha256": "7957cdbecec9e9812245b2296cbba46802258ec83229bf4439aeecef7e6d2f52"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/merge.png",
+      "sha256": "ec7e519e3e4a34419f264b6ed07f0e973c453018c4085d63c8a23c08b12c405c"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-MotionAndRotation.unity",
+      "sha256": "af8ab3f23deb41d53a957464d46b817cd0c680c366ddc20d1af52bc4d5c5a134"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/play.png",
+      "sha256": "352fffec5ed30a60508b953119ba0923c0a14b221b46e162a58417afe4a20e2d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-column.png",
+      "sha256": "fcde1e5b16866480f9a019a64bc41de8c38a918c6e37c4ec3eda42a0ea9f2c16"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.ko.html",
+      "sha256": "4c0570cf722b09ca574699b1d788371564894db04d1ef43cd4b4883d6ce66c16"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartselectdata.png",
+      "sha256": "52db86fa049eee8fee5a412fd280ba415ccf352e83b1c19059fa7ad2d68ed1e7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/clear.png",
+      "sha256": "5542265d7b8b6d93ecae72fd6a078ab55376a87fe2546872712fa12614c71ca7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/zoom.png",
+      "sha256": "8320b5ef62b3af3c59983ede3b51c4a1f5d06b4db25512e2ecfd85e74a56675c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/bottom.png",
+      "sha256": "c1f7c706f02e1cd54d165e389f549efb855d4e8189087d71c5978c8ee12da39b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/left.png",
+      "sha256": "a12f481acb997c3488c87d4331b7b9eabaf21529636d22e155de74a235620e2e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/objects.png",
+      "sha256": "7502b16ad6e7f72f2036ae5ecb1a218d3662152788d3d2345cc222a4d0f4b742"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/enum.png",
+      "sha256": "3d1a19beb18aa038e45e47359e6fea1a7bd3978562b314efd450879d7ae5fa3a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/recalculate.png",
+      "sha256": "d96c5986962a15cdb13dc7f3050bb8e00b8e2ebaed6edae295f380ea3a476472"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/10-BenchmarkGrid.prefab",
+      "sha256": "7356a687896cebaf81f98ef7311530c8c1c6b8cd71f3aa988377ba181add0314"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/formula.png",
+      "sha256": "101807d5c107b38066cc7b98829ae8560582413c697cf2c10f166f11ac096bdc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/debug.png",
+      "sha256": "87fb9ed98ac2678409332babe0749ee609e76a8ccc71f3d2b229d12b015cf96c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateIcons.cs",
+      "sha256": "8f9387004446cbd7f9b48663e8044aa3e7bd08709ee0f351ca8d2de16e3c3353"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartquicklayout.png",
+      "sha256": "5798666778e7d9967718345f7c69c585c88e984be19fb1d4c132b1d2f893094b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-scale.png",
+      "sha256": "26c5f1fca17b4993d945d4bd7950a598ed2e16f8ef6842fc5122b3769d2ed229"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/09-MixedGameObjects.unity",
+      "sha256": "c2665770511b82615f719eb18e426178d87373e00225fa7659fb2210820504b2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/linktable.png",
+      "sha256": "75737c4349deb33d53e803806793a5c0c673353d4b172705313274f83300228e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/rotateobject.png",
+      "sha256": "0b8ce0da5ab239a2f18d288383da4a4635bcc5d11e9ed3a15a36fd3bf66cde20"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/undo.png",
+      "sha256": "3276938a6f968ad2d8035bb61fb6adc5f40f439d86a87dc3ce3928a5dece1c7d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/WindowServices.cs",
+      "sha256": "d10b249a176cf928a307fad59e99a21c00531fd7411f81ed8757ecd6c40b2c2f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-ko.webp",
+      "sha256": "3693bb21fcfbe644681e481ca78b0219cd7d8a36215ea32bd5934e7c42deeb5c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs",
+      "sha256": "295c7fa2b7e920c2a0ed052a3b4d28e31b81646bbce189c482b4314b31c96839"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg",
+      "sha256": "cc6b66549652f1c1ca4d5e0b733f25eb96d36c9acf0821218ef0a27106f33116"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-fit-height.png",
+      "sha256": "01b2b0c5746a112aa0d8c5a16c53f597534c0e120835cc55305bf122409457e7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/alttext.png",
+      "sha256": "919469b9cf70f34d1e2c8dfc925eb66f16867f31282a5b99181e9cb695bd13b4"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-LocalRotation.unity",
+      "sha256": "affdb159c001dd7a13679e586897e3f740510fbb02690a40acbfbe9f22506459"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/help.png",
+      "sha256": "404d3e836d93fb540179ba52e1ae2e5edd8e1e81fe10ccfa64ef5e159c1c635e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/find.png",
+      "sha256": "c0fc4d98d783a7b5af3ba89eba97890bd9a9caa0f8b86eb4f1c33de299d66561"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgePlayerBuild.cs",
+      "sha256": "29cb5965a75b8eea33c2bd7ab623f6bf9b78ba8e404d650ec6046bc7b2d77416"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/Source.json",
+      "sha256": "f71137ce23bc8c62623cd28d4cb9dc3c4e74ac1490f77b051326b4c0b9f1ac87"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/EditHistory.cs",
+      "sha256": "e5c3672ca49ccd9106e0eedacef41bfffefcf4cc74c9ac980d66cced7700ea6e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/PackageLayout.cs",
+      "sha256": "24f8f9ed7db6e14206db1936ce3a6825e3c1c35acba7e16b3172b28efb552c1d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-theme-fonts.png",
+      "sha256": "697d2ed3572123a5ff470394648467af8b84af48114f4365aed5a80ac570869e"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeDependencies.cs",
+      "sha256": "3957dc4ec19ddea36e326a71e35d2d3ba603baf2f12672b36aef221b48a5cfb9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/SharedFonts.es.html",
+      "sha256": "9ca01cdcf3d6b37a8c1dec905e0238ea5791be394400eb896a1b64e88c417a8d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/register.png",
+      "sha256": "245f925ea0dcf8b366824bbdd270118ce4d07782a56c3064da3c09f9b3f1bb97"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateImporterInspector.cs",
+      "sha256": "7b5210a4f5686d15c5907c392addf7590d6481ded5419a61a30ee1f6c388d46a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/gamebadge.png",
+      "sha256": "a757fd269c846dde1d0d5361b19b2f46cb7fadfb4e85c71b0bbb102336ff6ef6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/center.png",
+      "sha256": "a1ead8e995e5b221ba01f45d9c9d00cca677185f43003d6ae891ee2c686deae5"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-ja.webp",
+      "sha256": "15a26aa282b14b815fc85d2bec382c17c45313e8dc4870142fcdd9abd1ab9729"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/06-TimedSpawn.unity",
+      "sha256": "93892d4acf45579b2bc4f569110707cf18b3dcbbd190b3aacd34a79926f44f16"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/middle.png",
+      "sha256": "43672b68d945e659e07b798a38edf852cc08a1e2a420ad7a3b9545757dcb07cc"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeConversion.cs",
+      "sha256": "4a0fd7c73485268b1b2510be358211cacdb6d7031179f263e1d216cb7023d86c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/searchtable.png",
+      "sha256": "e251fe7f1bf195f53d64dd956a84327abab7a59a50c899744759bdd162c33dd1"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-ja.webp",
+      "sha256": "a4b555bb70d42ac4dfff670fa8e78ce359940afa3713218c5138321109aeecee"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateMaskField.cs",
+      "sha256": "a2aa9f01c30998cdd30c159ee642b29169e52a5fe4086a98159990e7a34a9a3d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/calendar.png",
+      "sha256": "51ab0bcd84ceb788e7fbae14324ee1e20575c210d6bdff7bdd1f9a4934945265"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/settings.png",
+      "sha256": "2a3cc627b5039efee21f856e5ae3fac0181cc03e98150cc0fab2fc131f2c1148"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/up.png",
+      "sha256": "a962640575fd0c395b5c37462ad2bd68cb0eb25df8a850c9bc5bfa19638109b4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Runtime/TurnRoom.Templete.Runtime.asmdef",
+      "sha256": "3a7b4710e38633adf25db376b041a236432b72d307e837d075403d9f4ac21a8f"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/Pixora-pt-BR.webp",
+      "sha256": "35dc09127355f4d1b7d80d9ee8f1fdaf4d9f2812d9de03d33a6e2afe534c969e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/status-warning.png",
+      "sha256": "ac18bb5ad9021dc8d5eb5da5b1c82243da59f11db94d966d56f26bd09ebc0334"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/insert-cells.png",
+      "sha256": "e8e3ddd0797630a3d0d25326c9610bea38fb6e21089bb2c7d2ef2107916eb483"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateWindow.cs",
+      "sha256": "3aa8b3c501976385472922a57ddce3dd36dd6ee605d3a2d5e26b697f7045fff4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chart-family-area.png",
+      "sha256": "5da8be0790f2fc08dba81244d4aadb98d14a1a8f03d083cc2889b0d21fc3e20d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/borders.png",
+      "sha256": "f0fe0083cd43df6d4a1949fdf56e687e3580e2847d6f08c823f20677bc1005ae"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.asset",
+      "sha256": "b375812a7c2831a9fae2dad943d343a430d7515ec61043e8f8508ef6b183ac7c"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-print-area.png",
+      "sha256": "ed5b2d2d039b957bf69172c0e80fb086849fda10e3f8c48b706c1144d7bd5553"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/page-headings.png",
+      "sha256": "3ba3b972561dcbacec18338c688c09b622c98af97b6145b36cf1df8de5aabad6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/row.png",
+      "sha256": "3c34b16f94f80cb8e78778a172186e588889f06ec9579e23240e5fceaf640641"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/generated.png",
+      "sha256": "7c40e3ef6ec12a3128e4f18a47a42447480ac2cd6b0912282cc345ca4d826d0a"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkImport.cs",
+      "sha256": "d801b9bd75a42c56299863e29300b33a3454e66478a448c10e6995fd8b3a552d"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/diagnostic.png",
+      "sha256": "5dd9236b8cf2aaa83debd6759a12652b0df0d7e24252d2afa64fe20feaeda491"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.zh-Hant.html",
+      "sha256": "b082770daf1f2265f61e631c3a0a8aef3ebade02c8bcc59e50abc39fc876ec31"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-zh-Hans.webp",
+      "sha256": "6d26925cce9f3e7bf740f95c6ef6d2f37288114a34592d3f0d719952d89209ee"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/translate.png",
+      "sha256": "69b922450e90f9d8acfbc6c1a3b97cc51832ff7844e867207d9ce9cea95918dc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Documentation/Images/DataTable-pt-BR.webp",
+      "sha256": "a5cb50f8683f89f0d3ca54187e5d3f23d029f5b83bcf35fa0299c52372f779d0"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/08-MultipleMaterials.unity",
+      "sha256": "b7f4cbc88ddb18e9d7351331dc807fbb324430b2e251e1820ed9d25a2725ccdf"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/maximize.png",
+      "sha256": "4e94aa23bc23c060679e2b06eda9cfaa0e3040d4d3248e25af9e0a9735b48507"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlas.png",
+      "sha256": "80a60ce2422b5a96d247c569e4f6335e26024aa4add993b68cd587a137bb32fb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasWhite.png",
+      "sha256": "5b6523a447567bef4b53752cb1ef3049f27bf3f2ae8564e5d1c019c406d22ecb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasV8.png",
+      "sha256": "5f6f303f84a19188f0d4deccdc014fa6b26db2285531601f49fb8e33a9e2f9c7"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasWhiteV8.png",
+      "sha256": "45daab20ad96ee9fc84476116e906c8f2a9ccd5303700f58c87ea1ade868f8f9"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementV9.png",
+      "sha256": "0f72ea3073911a58566372e5a86584da130c26745fcc52bdc60ebafe6d05c5c0"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementWhiteV9.png",
+      "sha256": "a40a49b9917c8ba606a2efcb99e3d53c70e368796200871104e6dd95c7fd87cb"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementV10.png",
+      "sha256": "1576411decc25a8f6b8fe2bc4a07a11fbf052b8a7ac955a0fa630d6d5e84dc2a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementWhiteV10.png",
+      "sha256": "835dd33fc922abc3f4255f599c4e5bf7c3c72132721cf18ef9f6f8f5ccb91dc4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementV11.png",
+      "sha256": "4e38fb7266d3b5380aaa94293958dfc068616cadba80735ea8e88c1794b3bd21"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementWhiteV11.png",
+      "sha256": "d1102da6009cbeaa067e42a59db349b50270caaec9ab3e12287d87ef6024313e"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasV9.png",
+      "sha256": "bf244f9b35b74866ad0b0c81554c51fd318cd78321723ff5973809dabf2fbbd2"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasWhiteV9.png",
+      "sha256": "aec39471aa77a05c79adacfe1869aab428aed2c1a24034534acdec3b6fb69a6b"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementV12.png",
+      "sha256": "007d1e9163dc985b6a3ef0501e86d48b5c2d6c02b3777714531f457070c211b4"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementWhiteV12.png",
+      "sha256": "5d9170d6c94274ad164bd2f168d75f60a788b309044a300bf7d44962417b1cbc"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementV13.png",
+      "sha256": "50307311dfe002f73db7853800af4278ffd4ad9e36025cb91e08432395e2b78a"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/RibbonAtlasSupplementWhiteV13.png",
+      "sha256": "a4b5b6ee3d880fe62b2541e53393b0c50b3970d6e1a53ef33f207ad0861b18b6"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/fill.png",
+      "sha256": "a23abb37df2943eaad33aee24ec7bbccd134ed5f45f715416394bae30dfa8fc8"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/TemplateEnumField.cs",
+      "sha256": "b3be8aa904d7d5fa7f7527c9a347a7e8e3e8cea5c938860d25912d941fa29721"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/SupplementAtlas.png",
+      "sha256": "08be4f35a1ad50deb36957cbc5656af9a9550416ede0c9a71c6328231e64abea"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/find-select.png",
+      "sha256": "2779c9d6ca763e159c2ed90fb39f4a3c1c480b997c1e16b41e2ee51e2b38e192"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/redo.png",
+      "sha256": "f5b9a5c320e179c180202312412361b5daffe3d2043f7219acc696aa0b98cf63"
+    },
+    {
+      "path": "Assets/TurnRoom/Templete/Editor/Art/Commands/chartelements.png",
+      "sha256": "55412fced4399b949fc4ca3526b53afb6f32bad395fccc9900ef03c663f3c8c7"
+    },
+    {
+      "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.es.html",
+      "sha256": "08938f623da6db9f4a9608b6173381e0b7b68ba041f300e748317ee668da339b"
+    }
+  ]
+}
