@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-01T09:11:54.607286+00:00",
+  "compiler": "Windows D3DCompile d3dcompiler_47, SM5 + Unity6000.0.83f1 include sources",
+  "scope": "Static HLSL compilation only; not Unity import, variant stripping or rendered-image QA",
+  "passed": true,
+  "entries": [
+    {
+      "shader": "PixelCameraObjects",
+      "entry": "vert",
+      "target": "vs_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 2204,
+      "messages": ""
+    },
+    {
+      "shader": "PixelCameraObjects",
+      "entry": "composite",
+      "target": "ps_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 12948,
+      "messages": ""
+    },
+    {
+      "shader": "PixelCameraObjects",
+      "entry": "fullscreenVertex",
+      "target": "vs_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 768,
+      "messages": ""
+    },
+    {
+      "shader": "PixelCameraObjects",
+      "entry": "metadata",
+      "target": "ps_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 2720,
+      "messages": ""
+    },
+    {
+      "shader": "PixelCameraObjectData",
+      "entry": "vert",
+      "target": "vs_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 2548,
+      "messages": "C:\\Projects\\TurnRoom\\PixelCameraObjectData(6,21-26): warning X3568: 'target' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(7,21-26): warning X3568: 'vertex' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(8,21-28): warning X3568: 'fragment' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(9,21-44): warning X3568: 'multi_compile_instancing' : unknown pragma ignored\n\u0000"
+    },
+    {
+      "shader": "PixelCameraObjectData",
+      "entry": "frag",
+      "target": "ps_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 560,
+      "messages": "C:\\Projects\\TurnRoom\\PixelCameraObjectData(6,21-26): warning X3568: 'target' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(7,21-26): warning X3568: 'vertex' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(8,21-28): warning X3568: 'fragment' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(9,21-44): warning X3568: 'multi_compile_instancing' : unknown pragma ignored\n\u0000"
+    },
+    {
+      "shader": "PixelCameraObjectData",
+      "entry": "vert-instanced",
+      "target": "vs_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 2836,
+      "messages": "C:\\Projects\\TurnRoom\\PixelCameraObjectData(7,21-26): warning X3568: 'target' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(8,21-26): warning X3568: 'vertex' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(9,21-28): warning X3568: 'fragment' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(10,21-44): warning X3568: 'multi_compile_instancing' : unknown pragma ignored\n\u0000"
+    },
+    {
+      "shader": "PixelCameraObjectData",
+      "entry": "frag-instanced",
+      "target": "ps_5_0",
+      "hresult": 0,
+      "bytecodeBytes": 560,
+      "messages": "C:\\Projects\\TurnRoom\\PixelCameraObjectData(7,21-26): warning X3568: 'target' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(8,21-26): warning X3568: 'vertex' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(9,21-28): warning X3568: 'fragment' : unknown pragma ignored\nC:\\Projects\\TurnRoom\\PixelCameraObjectData(10,21-44): warning X3568: 'multi_compile_instancing' : unknown pragma ignored\n\u0000"
+    }
+  ],
+  "sourceHashes": {
+    "Assets\\TurnRoom\\PixelCamera\\Runtime\\Resources\\TurnRoom\\PixelCamera\\PixelCameraObjects.shader": "61053dbfe7d81b3f056934089853cc00d076aee8c0824cee8cffdce00230aa7a",
+    "UnityCG.cginc": "b3eaeccf5d1ead844abb5c1023367ed06a000882089bb46c38e87e385bd28f5e",
+    "UnityShaderVariables.cginc": "e6e421c3c64550c886eed2ca9c0442093305393c87d89004a0436feabf65b90c",
+    "HLSLSupport.cginc": "f8bd801346280b53bb1f64baa761ad55f6a44be5de701c7580f47bd116eded64",
+    "UnityShaderUtilities.cginc": "99aee089004d6476edac833d57b080acb6523e6cfe583e660e7ebab0cf056b79",
+    "UnityInstancing.cginc": "fcb9305be528bf0ed08cf410535fb6379d6c672ee06356d24b807f373550c37e",
+    "Assets\\TurnRoom\\PixelCamera\\Runtime\\Resources\\TurnRoom\\PixelCamera\\PixelCameraProcess.cginc": "41edc415239717a4bdae239b666fc99ebab178616e421a6b7c81034f2553bfd9",
+    "Assets\\TurnRoom\\PixelCamera\\Runtime\\Resources\\TurnRoom\\PixelCamera\\PixelCameraObjectData.shader": "ec0efb4cabdc78b12394093d0d33682967a02d42f41da9b2638899e41c070afb"
+  }
+}

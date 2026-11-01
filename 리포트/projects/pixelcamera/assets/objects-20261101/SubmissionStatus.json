@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "authoringVersion": "0.5.0-preview",
+  "submissionReady": false,
+  "uploaded": false,
+  "submittedToReview": false,
+  "primaryScenes": 3,
+  "animationClips": 3,
+  "chapterPresets": 9,
+  "palettes": 3,
+  "showcases": "Historical camera-wide captures retained; current object/orbit/editable UI revision needs recapture",
+  "runtimeActionContracts": "Historical action checks only; new prefab persistent events and auto-orbit await Unity execution",
+  "nativeKeyboardMouse": "pending, focus restriction",
+  "newURPScenes": "not run",
+  "finalFreshInstall": "pending",
+  "artwork": "historical store key images need refreshing to new scenes in actual Affinity; icon/card still pending",
+  "publisherDisplayName": null,
+  "supportEmail": null,
+  "supportWebsite": null,
+  "priceUsd": null,
+  "objectMode": "Implemented; C# and HLSL static compilation passed. Initial Unity shader failures retained; corrected source not re-probed in Unity while operation is paused",
+  "editableUI": "Three authored native UGUI prefabs, persistent Inspector button events, source runtime UI generation removed"
+}

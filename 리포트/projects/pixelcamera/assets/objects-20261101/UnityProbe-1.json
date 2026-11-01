@@ -1,0 +1,17 @@
+{
+    "at": "2026-11-01T09:02:16.8117727Z",
+    "unity": "6000.0.83f1",
+    "assembly": "41b48c2d-6f0b-44dd-a612-e0d042f6123f",
+    "error": "System.Exception: PixelCameraObjects compiled on current graphics device\r\n  at TurnRoom.PixelCamera.Development.PixelCameraObjectQA.Check (System.Boolean ok, System.String label) [0x0001a] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelCamera\\Development\\Editor\\PixelCameraShowcaseQA.cs:100 \r\n  at TurnRoom.PixelCamera.Development.PixelCameraObjectQA.Run () [0x000e9] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelCamera\\Development\\Editor\\PixelCameraShowcaseQA.cs:110 ",
+    "passed": false,
+    "checks": [
+        "Clean existing Edit scene required"
+    ],
+    "redPixels": 0,
+    "greenPixels": 0,
+    "stableChanged": 0,
+    "movingChanged": 0,
+    "crossingChanged": 0,
+    "outlineChanged": 0,
+    "wallChanged": 0
+}

@@ -1,0 +1,17 @@
+{
+    "at": "2026-11-01T09:03:40.4798796Z",
+    "unity": "6000.0.83f1",
+    "assembly": "37d97b56-c48c-4133-8b9d-acd22c038b49",
+    "error": "System.Exception: PixelCameraObjects compiled on current graphics device: syntax error: unexpected token 'line';syntax error: unexpected token 'line';undeclared identifier 'otherDepth'\r\n  at TurnRoom.PixelCamera.Development.PixelCameraObjectQA.Check (System.Boolean ok, System.String label) [0x0001a] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelCamera\\Development\\Editor\\PixelCameraShowcaseQA.cs:100 \r\n  at TurnRoom.PixelCamera.Development.PixelCameraObjectQA.Run () [0x000ec] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelCamera\\Development\\Editor\\PixelCameraShowcaseQA.cs:110 ",
+    "passed": false,
+    "checks": [
+        "Clean existing Edit scene required"
+    ],
+    "redPixels": 0,
+    "greenPixels": 0,
+    "stableChanged": 0,
+    "movingChanged": 0,
+    "crossingChanged": 0,
+    "outlineChanged": 0,
+    "wallChanged": 0
+}

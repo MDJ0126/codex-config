@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-01T09:32:34.304888+00:00",
+  "passed": true,
+  "scope": "ZIP CRC and byte-for-byte comparison only; not Unity install",
+  "bytes": 14503370,
+  "sha256": "cdf211a0385aba7edc5466e4ec4720fed4a786ddf7a75361ae30b5a9fab07257",
+  "entries": [
+    "README.md",
+    "TurnRoom-PixelCamera-1.0.0.unitypackage",
+    "Listing/AI-Disclosure.en.txt",
+    "Listing/Description.en.txt",
+    "Listing/PortalFields.json",
+    "Listing/ReleaseNotes.en.txt",
+    "Listing/ReviewerNotes.en.txt",
+    "Review/PackageAudit.json",
+    "Review/ShowcasePackage.json",
+    "Review/SubmissionStatus.json",
+    "Review/ObjectModeCSharp.json",
+    "Review/ObjectModeShaders.json",
+    "Review/ObjectModeAssets.json",
+    "Review/ObjectModeReferences.json"
+  ],
+  "excluded": "Historical Screenshots/Artwork and old QA certificates; current Unity execution still pending"
+}
