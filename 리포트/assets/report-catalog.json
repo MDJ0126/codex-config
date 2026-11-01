@@ -1,5 +1,35 @@
 [
   {
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.html",
+    "date": "2026-11-01T08:50:14.645Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "시트 우클릭 메뉴 깜박임·시트 전환·뒤쪽 툴팁",
+    "summary": "실제 마우스로 우클릭 소멸·시트 전환을 재현해 수정하고, 메뉴 뒤쪽 툴팁을 억제했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-bug-20261101085014011-v1.0.0.html",
+    "date": "2026-11-01T08:50:14.011Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "2.0.2 통합 QA · 시트 우클릭 유지·현재 시트 유지·툴팁 수정",
+    "summary": "실제 마우스로 우클릭 소멸·시트 전환을 재현해 수정하고, 메뉴 뒤쪽 툴팁을 억제했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101085007718-v1.0.0.html",
+    "date": "2026-11-01T08:50:07.718Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
     "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
     "project": "sampleprojectforunity",

@@ -1,0 +1,36 @@
+{
+    "id": "stable-reopen",
+    "utc": "2026-11-01T08:40:31.0744608Z",
+    "error": "",
+    "sheet": "Column",
+    "assembly": "13edd4aa-3a63-4dd5-a197-f2c545e3e366",
+    "sheets": [
+        "Column",
+        "LineStable QA",
+        "Area",
+        "Pie",
+        "Doughnut",
+        "Radar",
+        "Scatter",
+        "FormatObjects"
+    ],
+    "windows": [
+        "DesignDataTable.Editor.WorkbookShelfWindow",
+        "DesignDataTable.Editor.WorkbookViewer",
+        "UnityEditor.ProjectBrowser",
+        "UnityEditor.InspectorWindow",
+        "UnityEditor.SceneHierarchyWindow",
+        "UnityEditor.SceneView",
+        "UnityEditor.GameView",
+        "UnityEditor.ConsoleWindow"
+    ],
+    "dirty": false,
+    "handle": 1185030,
+    "bounds": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1350.0,
+        "height": 800.0
+    }
+}

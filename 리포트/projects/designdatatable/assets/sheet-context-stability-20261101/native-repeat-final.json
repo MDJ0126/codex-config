@@ -1,0 +1,88 @@
+{
+  "leftSelect": true,
+  "saveReopen": true,
+  "utc": "2026-11-01T08:43:38.0403612Z",
+  "process": 36680,
+  "passed": true,
+  "targetDelete": true,
+  "cycles": [
+    {
+      "handles": [
+        4853644,
+        4853644,
+        4853644
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "LineStable QA",
+      "pass": true,
+      "active": "Column",
+      "close": "native Escape",
+      "cycle": 1
+    },
+    {
+      "handles": [
+        18093152,
+        18093152,
+        18093152
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "Column",
+      "pass": true,
+      "active": "Column",
+      "close": "native outside click",
+      "cycle": 2
+    },
+    {
+      "handles": [
+        18158688,
+        18158688,
+        18158688
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "LineStable QA",
+      "pass": true,
+      "active": "Column",
+      "close": "native Escape",
+      "cycle": 3
+    },
+    {
+      "handles": [
+        4656486,
+        4656486,
+        4656486
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "Column",
+      "pass": true,
+      "active": "Column",
+      "close": "native outside click",
+      "cycle": 4
+    },
+    {
+      "handles": [
+        6033292,
+        6033292,
+        6033292
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "LineStable QA",
+      "pass": true,
+      "active": "Column",
+      "close": "native Escape",
+      "cycle": 5
+    },
+    {
+      "handles": [
+        724328,
+        724328,
+        724328
+      ],
+      "assembly": "c5da66c0-cab5-4045-8ef1-513be1019ba8",
+      "target": "Column",
+      "pass": true,
+      "active": "Column",
+      "close": "native outside click",
+      "cycle": 6
+    }
+  ]
+}
