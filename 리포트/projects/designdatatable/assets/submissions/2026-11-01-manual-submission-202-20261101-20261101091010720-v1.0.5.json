@@ -1,0 +1,382 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "기존 전체 제출 준비는 미완료입니다. 이전 문서 이미지 검증468건을 처리하거나 최신 전체 계수를 재산정하지 않았습니다. 도형 정렬 미구현·일시정지 Excel 목표도 유지합니다. 실제 폴더 캡처 하단에 기존 ChartGallery 레이아웃 저장 경고가 있어 모든 창 복원이 해결됐다고 주장하지 않습니다. 첫 검사 대기 정체·대기 콜백 집계 실패·자동 한국어 주석 갱신으로 생긴 패키지346파일 차이를 보존했습니다.346파일은 주석행 이외가 같았고 동결 원본 복원 후 재내보냈습니다. 테스트의 전체3370조건 실행본과 최종본은 이 검증된 주석 차이만 있습니다. 사용자 프로젝트의 주석 언어 설정은 변경하지 않았습니다.",
+    "outcome": "삭제 실패·입력 지연을 재현했습니다. 최종 수정안은 컴파일 통과했으며 화면 조작 금지로 실제 재검증을 보류했습니다.",
+    "proposedTime": "2026-11-01 17:54:08 KST 시작,10–15분.",
+    "actualTime": "소스 구현·정적 컴파일 완료:2026-11-01 18:06:35 KST,12분27초. 실제 동작·성능·IME 최종 검증은 미완료. 공개 보고서 확인 시각은 최종 채팅에 기록합니다.",
+    "xerjEvidence": "XERJ 서버를 복구해 QueueNativeIconRefresh 검색을 호출했습니다. 검색 후보에 현재 구현이 누락돼 rg와 실제 로그·현재 소스로 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "submission-202-20261101",
+    "round": 6,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "현재 지원 범위의2.0.2 제출 패키지·간단한 스토어 원고·필수 검증과 공개 보고를 준비한다. 포털 제출은 수행하지 않는다.",
+    "completionCriteria": "공개 API 교체를 실행 검증하고, 네이티브 패키지·참조·메타데이터·새 프로젝트·공식 검사·현재 화면과 제출 자료·보고 링크를 확인한다.",
+    "previousManual": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101085014645-v1.0.4.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "배포 범위·메타데이터 고정",
+        "action": "제품과 공유 의존성만 고정하고 개발·QA 파일을 제외한다. 누락 메타와 메뉴 경로를 수정한다.",
+        "expected": "동결 소스·메타·GUID·패키지 파일 일치",
+        "qa": "네이티브 아카이브를 원본 인벤토리와 대조한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "1577개 파일·8037참조, 동결 소스와 패키지 오류0."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "새 프로젝트·샘플·생성 데이터 검사",
+        "action": "새 Unity 프로젝트에서 컴파일·씬·바이너리·편집/Undo/Redo/저장과 Windows 빌드를 실행한다.",
+        "expected": "빌드와 실제 검사 실패0",
+        "qa": "현재 패키지를 만든 동일 스냅샷으로 검사한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Unity 내부 API를 공개 API로 교체",
+        "action": "비공개 창·선반·스포이트·캡처·아이콘 접근을 공개 EditorWindow와 공식 Win32 API로 바꾼다. 추가 로그의 중복 메뉴·생성 소스의 매핑 파일 저장과 시작 시 서랍 생성 순서를 수정한다.",
+        "expected": "핵심 창 동작·PNG·색상 선택 보존과 공식 검사 실패0",
+        "qa": "실제 창·물리 클릭·색상·최대화·호버·복원·10회 반복과 소스·어셈블리 검사를 실행한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "재촬영·제출 자료·공개 보고",
+        "action": "플레이어 선택 동작을 확인하고 실제 화면·간단한 스토어 원고·패키지와 검증 근거를 한 제출 폴더와 보고서에 모은다.",
+        "expected": "확인된 지원 범위와 파일·이미지·개별 공개 링크 일치",
+        "qa": "현재 플레이어·허브 선택과 파일 해시·사이트 본문·첨부를 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "qa",
+        "revision": 3,
+        "result": "현재 제출본·원고·Affinity 원본·키 이미지·검증 자료 정리 완료. 공개 게시 확인 중."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "서식 적용 무반영 수정·실제 QA",
+        "action": "직접 셀 서식에 가려진 표 스타일 적용을 분리하고 전용 서식 탭의 프리셋을 실제 실행·저장·재열기한다.",
+        "expected": "표·차트·도형·그림 프리셋이 표시·저장되고 Undo/Redo가 복원된다.",
+        "qa": "실제 Unity GUI 이벤트·227조건 매트릭스·탭별 실제 화면을 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "227조건 통과,5개 서식 탭 실제 적용·촬영, 그룹 관리 창 열기 확인. 정렬 미구현은 제한으로 기록."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "Project 폴더 무한 재임포트 수정",
+        "action": "아이콘 그리기에서 임포트를 제거하고 프로세스 간 유지되는 색상 상태·재진입 방지를 적용한다.",
+        "expected": "아이콘2000회 표시와 캐시 초기화에서 임포트0, 색상 변경은 파일당 최대1회, 원본 SHA-256 유지.",
+        "qa": "실제 Unity 임포트 관찰자와 저장된 아이콘·실행 중 에디터 로그·실제 폴더 화면 및 기존3370조건을 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과."
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "시트 탭 우클릭 메뉴",
+        "action": "오른쪽 MouseDown은 탭 버튼에 전달하지 않고 MouseUp에서 메뉴를 한 번만 엽니다. 같은 클릭의 ContextClick 재처리를 억제합니다. 메뉴를 열 때 SelectWorksheet를 호출하지 않으며, 이름 변경·삭제는 캡처한 시트 이름을 대상으로 실행합니다. 연결된 팝업이 열려 있으면 문서 ScreenTip을 초기화하고, 닫으면 일반 호버를 다시 허용합니다.",
+        "expected": "실제 우클릭 메뉴 유지·현재 시트 유지·대상 작업 정확·메뉴 중 뒤쪽 툴팁 없음·종료 후 복구.",
+        "qa": "실제 우클릭5초 관찰과6회 반복·Esc/외부 닫기·대상 작업 저장·재열기·툴팁3초 억제와 복구.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "제목줄 검색 입력 삭제·최적화",
+        "action": "제목 검색을 EditorGUI 텍스트 편집기로 연결하고, 일반 Backspace/Delete의 Unity 단축키 등록을 그리드 컨텍스트로 옮겼습니다. 제목 입력 포커스를 기록해 셀·객체 단축키와 분리하고 삭제 문자를 보존합니다. 네이티브 키보드 포커스 조회는 GUI 이벤트당 한 번으로 묶고 검색 스타일을 재사용합니다. 측정에서 더 느린 셀·차트 표시 생략 시도는 최종 코드에서 제거했습니다.",
+        "expected": "Backspace·Delete·전체 선택 삭제·한영 입력이 검색창에만 적용되고 문서·객체가 보존되며 계측 결과 개선.",
+        "qa": "정적 컴파일 후, 사용자 화면 조작 허용 시 실제 키보드·한영 조합·200입력 반복·객체 보존을 재검증한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": "소스 구현·정적 컴파일 완료. 화면 조작 금지로 실제 QA 대기. 수정 전200입력: 총3459.8ms·중앙16.12ms·p95 27.05ms. Backspace 후 검색어 길이 미변경. 중간 수정200입력: 총4972.2ms·중앙23.91ms·p95 32.77ms, 삭제 미해결. 해당 표시 생략 시도는 제거했습니다. 최종 소스3어셈블리 정적 컴파일 exit0. 공유 템플릿의 기존 obsolete경고3건은 별도입니다. 최종 타이핑·성능·IME 검증은 사용자의 화면 조작 금지에 따라 실행하지 않았습니다. 기존38TC는 과거 회차 결과입니다."
+      }
+    ],
+    "focusTasks": [
+      "T04",
+      "T08"
+    ],
+    "scopeChange": "2026-11-01 11:57 KST 사용자가 기능을 유지한 공개 API 교체를 승인했습니다. 전체 Excel46TC 동일 구현 목표는 계속 일시정지이며 이번 제출 준비와 분리합니다. 15:23KST 추가 로그의 메뉴 중복·매핑 소스 저장·복원 서랍 창 문제를 같은 범위에서 수정하고 현재 버전 재QA를 수행했습니다. 사용자의15:45경 서식 무반영 제보로 T05를 추가하고 문서 검증 실패를 숨기지 않고 보존합니다. 16:26KST 사용자의 파일 폴더 무한 로딩 제보로 T06을 추가했습니다. 기존 미완료 문서 QA와 일시정지 Excel 목표를 완료로 바꾸지 않습니다. 사용자의 시트 우클릭 미표시 제보로 T07을 추가합니다. 기존 잔여를 보존합니다. 사용자가 메뉴 깜박임·우클릭 시 시트 전환을 제보했습니다. T07을 revision2로 재개하고 단일 ContextClick·현재 시트 유지·실제 오른쪽 마우스 반복 검증을 추가합니다. 이전 Q07은 당시 합성 이벤트 검사 기록으로 보존하며 현재 수정의 통과로 사용하지 않습니다. 실제 MouseDown이 일반 탭 버튼으로 전달되는 추가 재현을 반영해 MouseUp 단일 표시로 수정했습니다. 사용자의 추가 툴팁 제보를 T07 revision3에 포함했습니다. 사용자 제보로 T08 제목줄 검색 삭제·입력 최적화를 추가합니다. T08 revision2: 실행 결과가 더 느린 표시 생략을 제거하고 최종 포커스·단축키·스타일 캐시 수정으로 변경했습니다. 사용자 화면 조작 금지로 실제 QA를 보류하며 완료 기준은 유지합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T03:56:55.759385+00:00",
+        "summary": "교체 중 선반 초기 렌더링 실패를 발견하고 보존했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "초기 선반 캡처가 검게 나왔습니다. 준비·숨김·최종 네이티브 배치와 노출 검사 대상을 수정했습니다.",
+            "evidence": "로컬 PublicApi/public-shelf-fixed-r2.png 및 이전 시도 폴더",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-01T04:31:38.856063+00:00",
+        "summary": "현재 교체본의 소스·네이티브 실행·패키지·공식 검사 결과를 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "1578개 파일·메타·GUID·8037참조 검사 오류0",
+            "evidence": "../assets/submission-202-20261101/ArchiveVerification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "3370검증조건·25씬·24테이블·빌드 성공",
+            "evidence": "../assets/submission-202-20261101/NativeSubmissionQA.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 창 동작·PNG·색상 선택과 10회 반복 통과, 공식31통과·3경고·0실패",
+            "evidence": "../assets/submission-202-20261101/PublicApiNativeQA.json / OfficialValidator.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-01T06:34:44.5732382Z",
+        "summary": "서랍 초기 수정 후 재시작에서 레이아웃 경고가 재발해 시작 순서를 보완했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "핸들 정리와 hideFlags만 변경한 회차에서 시작 경고 재발. docked 준비 상태를 기다리도록 수정.",
+            "evidence": "../assets/submission-202-final-20261101/StartupErrorQA.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-01T15:38:55.855989+09:00",
+        "summary": "현재 동결 버전의 전체 데이터·빌드·공식 검사와 파일 잠금 재현을 다시 실행했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "1577개 파일·8037참조, 동결 소스와 패키지 오류0.",
+            "evidence": "../assets/submission-202-final-20261101/ArchiveVerification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과.",
+            "evidence": "../assets/submission-202-final-20261101/NativeSubmissionQA.json",
+            "dependencies": {
+              "T01": 2
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중.",
+            "evidence": "../assets/submission-202-final-20261101/GeneratedSourceLockQA.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "regression",
+        "at": "2026-11-01T07:11:30.218911+00:00",
+        "summary": "현재 코드와 최종 회귀를 확인하고 문서 검증 실패를 보존합니다.",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 GUI·227조건·저장 재열기와 Undo/Redo 통과",
+            "evidence": "../assets/submission-202-final-20261101/FormatTabsQA.json",
+            "dependencies": {
+              "T03": 3
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 3,
+            "verdict": "fail",
+            "actual": "9언어 내용과4개 화면 갱신. 기존 이미지 소스 해시·재촬영 검증468건 잔여.",
+            "evidence": "../assets/submission-202-final-20261101/GuideVerification.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "regression",
+        "at": "2026-11-01T08:05:11.954341+00:00",
+        "summary": "현재 아이콘 코드와 실제 에디터·기존 회귀를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과.",
+            "evidence": "../assets/project-icon-loop-20261101/ProjectIconLoopQA.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "regression",
+        "at": "2026-11-01T08:32:14.427814+00:00",
+        "summary": "시트 우클릭 메뉴 실제 실행 검사",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 메뉴 표시·메뉴 키 선택·시트 작업3종·저장 재열기·스크롤·더블클릭 확인. 데이터 작업은 편집 콜백을 직접 호출했으며 전체 물리 입력 QA로 확대하지 않는다.",
+            "evidence": "../assets/sheet-context-20261101/context-r8.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "regression",
+        "at": "2026-11-01T08:39:05+00:00",
+        "summary": "중간 수정의 실제 우클릭 실패 보존",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "ContextClick만 남긴 중간 수정에서도 일반 버튼이 오른쪽 MouseDown을 받아 메뉴 소멸·시트 전환.",
+            "evidence": "../assets/sheet-context-stability-20261101/native-after-r1.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "regression",
+        "at": "2026-11-01T08:50:00.507848+00:00",
+        "summary": "실제 입력·메뉴 유지·대상 작업·툴팁 회귀",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "수정 전 실제 우클릭에서 메뉴 소멸·시트 전환 재현. 수정 후 같은 메뉴 핸들로5초 유지·Column 유지. 최종 메뉴 코드에서 실제 우클릭6회, Esc/바깥 클릭 각3회, 왼쪽 선택·비선택 시트 삭제·저장 재열기 통과. 메뉴의 이름 변경 항목을 실제 클릭한 뒤 캡처된 콜백으로 다른 시트만 변경했습니다. 툴팁 추가 수정 후 실제 우클릭·정지3초에서 tipKey 비어 있음·painted false·동일 메뉴 유지, Esc 후 일반 sheet.tab 툴팁 복구를 확인했습니다. 제품3어셈블리 컴파일 통과. 서로 다른 실행 어셈블리는 source.json에 구분합니다.",
+            "evidence": "../assets/sheet-context-stability-20261101/tooltip-final.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q10",
+        "kind": "regression",
+        "at": "2026-11-01T09:03:00+00:00",
+        "summary": "제목 검색 중간 수정 실패 보존",
+        "results": [
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "200입력4972.2ms·Backspace 길이 미변경. 표시 생략 시도 제거.",
+            "evidence": "../assets/title-search-20261101/input-measurements.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
