@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-01T11:17:48.766Z",
+  "passed": true,
+  "method": "Actual running Unity APIs; native screen captures inspected separately. No physical mouse/keyboard claim.",
+  "checks": [
+    {
+      "label": "Initial custom popup",
+      "passed": true
+    },
+    {
+      "label": "Close removes the product window",
+      "passed": true
+    },
+    {
+      "label": "Reopen creates one new custom popup",
+      "passed": true
+    },
+    {
+      "label": "Repeated Open reuses the same custom popup",
+      "passed": true
+    },
+    {
+      "label": "Legacy normal window migrates to custom popup",
+      "passed": true
+    },
+    {
+      "label": "Actual script domain reload retains a single custom popup",
+      "passed": true
+    },
+    {
+      "label": "Open after reload retains custom popup",
+      "passed": true
+    }
+  ],
+  "beforeDomain": "a1e551ea54a0472598b2c45a052f45b8",
+  "afterDomain": "de1a626d204d4f77ac0f17a0c46cd1d3"
+}

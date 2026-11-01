@@ -1,5 +1,75 @@
 [
   {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094547268-v1.0.12.html",
+    "date": "2026-11-01T09:45:47.268Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094037900-v1.0.11.html",
+    "date": "2026-11-01T09:40:37.900Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Splash → Playground ↔ CharacterStage와 씬 배치 UI 적용",
+    "summary": "실제 게임 흐름을 연결하고 UI를 편집 가능한 씬·프리팹 오브젝트와 Inspector 이벤트로 정리했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101094002511-v1.0.0.html",
+    "date": "2026-11-01T09:40:02.511Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+    "summary": "깊이를 보존하는 혼합 렌더링·물체별 픽셀 크기/외곽선과 렌더 시점 스냅, 기본 회전/외곽선 조작을 구현합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-objects-20261101-20261101093358621-v1.0.1.html",
+    "date": "2026-11-01T09:33:58.621Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 물체별 픽셀화·루트 안정화와 편집 가능한 예제 UI",
+    "summary": "선택 물체별 크기·깊이 합성·직교 루트 스냅·개별 외곽선, 예제 시작 회전과 프리팹 버튼을 구현했습니다. 정적 컴파일/패키지 검사 통과, 새 Unity 실행 QA 대기.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-result-20261101093242796-v1.0.0.html",
+    "date": "2026-11-01T09:32:42.796Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 프리뷰 · 빌드 시 DOTS 변환과 실측 기반 예상치",
+    "summary": "핵심 구현·실제 10,000개 플레이어 비교·Affinity 로고 완료. 최종 에디터 UI·새 설치 검증은 화면 사용 중단으로 보류합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-01-result-20261101092952941-v1.0.0.html",
+    "date": "2026-11-01T09:29:52.941Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-entity-forge-product-20261101092950611-v1.0.1.html",
+    "date": "2026-11-01T09:29:50.611Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 기본 선택창 누락과 제목·라벨 배치 수정",
     "summary": "공통 필드 적용 시 선택 패널을 자동 연결하고 기본 명령 메뉴 직접 호출을 교체했습니다. 실제 화면 최종 QA는 게임 종료 후 대기입니다.",
     "project": "turnroom",
@@ -60,6 +130,16 @@
     "replyTo": ""
   },
   {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101085944054-v1.0.10.html",
+    "date": "2026-11-01T08:59:44.054Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
     "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
     "project": "designdatatable",
@@ -95,6 +175,16 @@
     "project": "sampleprojectforunity",
     "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084843698-v1.0.9.html",
     "date": "2026-11-01T08:48:43.698Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+    "summary": "깊이를 보존하는 혼합 렌더링·물체별 픽셀 크기/외곽선과 렌더 시점 스냅, 기본 회전/외곽선 조작을 구현합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101084605854-v1.0.0.html",
+    "date": "2026-11-01T08:46:05.854Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -246,6 +336,16 @@
     "reportPath": "projects/pengutown/reports/2026-11-01-result-20261101075702678-v1.0.0.html",
     "date": "2026-11-01T07:57:02.678Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101075254732-v1.0.0.html",
+    "date": "2026-11-01T07:52:54.732Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
