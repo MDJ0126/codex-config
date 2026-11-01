@@ -1,5 +1,75 @@
 [
   {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101184405969-v1.0.5.html",
+    "date": "2026-11-01T18:44:05.969Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·검 뽑기와 Unity Behavior AI 구현",
+    "summary": "기존 Splash→Playground↔CharacterStage 흐름에 공통 전투와 실제 Behavior AI를 연결하고, 번들·물리·UI 회귀를 검증했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101184318119-v1.0.0.html",
+    "date": "2026-11-01T18:43:18.119Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101180841801-v1.0.4.html",
+    "date": "2026-11-01T18:08:41.801Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101174828301-v1.0.3.html",
+    "date": "2026-11-01T17:48:28.301Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101174011275-v1.0.2.html",
+    "date": "2026-11-01T17:40:11.275Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101172853896-v1.0.1.html",
+    "date": "2026-11-01T17:28:53.896Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간 예산으로 기존 구조를 재사용해 전투 루프를 완성하고 스크립트 간소화·실제 반복 검증과 상세 결과를 기록합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-20261101165235098-v1.0.0.html",
+    "date": "2026-11-01T16:52:35.098Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "배포 주소 입력 제거 · Asset Store 제품별 업데이트 직접 확인",
     "summary": "배포 목록 주소 입력·요청을 제거하고 제품별 Unity Asset Store 공개 페이지의 버전을 직접 확인하도록 변경했습니다.",
     "project": "turnroom",
