@@ -1,0 +1,32 @@
+{
+  "passed": 10,
+  "failed": 1,
+  "utc": "2026-11-01T02:18:39.4012970Z",
+  "checks": [
+    "원본 표 기준 상태",
+    "첫 키보드 컨트롤은 표 이름",
+    "F10·Tab은 셀 이동 없이 표 크기 조정 포커스",
+    "키보드 Enter로 크기 조정 대화상자 열림",
+    "범위 입력 Enter 적용·문서 포커스 복귀",
+    "대화상자 종료 직후 Ctrl+Z 한 번 복원",
+    "실제 Ctrl+Y 범위 재적용",
+    "다시 Ctrl+Z 원본 상태",
+    "잘못된 범위 Enter는 원본 값·범위 유지",
+    "Escape는 입력 취소·텍스트 포커스 해제"
+  ],
+  "errors": [
+    "System.Management.Automation.RuntimeException: 실제 합계 행 체크박스는 마지막 데이터 아래 한 행 추가"
+  ],
+  "snapshots": [
+    "table-ui-final-r6-01",
+    "table-ui-final-r6-02",
+    "table-ui-final-r6-03",
+    "table-ui-final-r6-04",
+    "table-ui-final-r6-05",
+    "table-ui-final-r6-06",
+    "table-ui-final-r6-07",
+    "table-ui-final-r6-08",
+    "table-ui-final-r6-09",
+    "table-ui-final-r6-10"
+  ]
+}
