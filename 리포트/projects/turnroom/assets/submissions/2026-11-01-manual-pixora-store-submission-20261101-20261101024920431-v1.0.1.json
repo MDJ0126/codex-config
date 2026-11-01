@@ -1,0 +1,144 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Pixora Asset Store 제출 준비",
+    "summary": "최신 규정과 대조해 고객 패키지·문서·호환 코드·검증·마케팅 자료를 준비합니다. 실제 업로드와 심사 신청은 수행하지 않습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Unity 실행·화면 조작 재허락 대기. 정적 검사와 파일 정리는 계속합니다.",
+    "outcome": "실제 파일 감사 완료. 공유 창·스포이트의 내부 API 2곳과 중복 생성 출력 및 제출 문서 누락을 확인했습니다.",
+    "proposedTime": "30~60분",
+    "actualTime": "2026-11-01 11:37:40 KST 시작",
+    "xerjEvidence": "IncludeInRelease·ContainerWindow 검색 후 현재 소스와 공식 규정 대조. 일부 검색 누락은 rg로 보완했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-store-submission-20261101",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Pixora의 제출용 파일과 심사 근거를 실제로 정리하고 공개 결과를 기록한다.",
+    "completionCriteria": "규정 위반 코드·불필요 파일 정리, 최신 고객 패키지, 오프라인 문서·라이선스·스토어 자료, 공식 Validator·클린 설치·10개 씬·편집 원본·공유 버전 검증과 공개 HTML",
+    "previousManual": "projects/turnroom/reports/2026-11-01-manual-20261101024412520-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기준·포함 파일 감사",
+        "action": "공식 제출 규정·현재 파일·판매 주장·의존성을 대조한다.",
+        "expected": "차단 항목과 실제 포함 후보 목록 확보",
+        "qa": "파일·소스·설정 및 공식 기준 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "initial-audit.json: Pixora 후보 1692개 파일·10개 메인 씬, 공유 Templete 내부 API 2곳, 개발 제외·긴 경로 감사 완료"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "제품 문서·배포 구성",
+        "action": "제품 버전·설치·지원 범위·라이선스·예제·불필요 출력 제외를 정리한다.",
+        "expected": "재현 가능한 최소 고객 패키지 구성",
+        "qa": "오프라인 링크·직렬화 참조·경로·라이선스·개발 자료 제외 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "공유 API 제출 호환",
+        "action": "공유 창과 색상 선택의 에디터 내부 API 사용을 공개 API로 대체하고 메뉴 경로를 정리한다.",
+        "expected": "내부 API 호출 제거와 기존 기능 유지",
+        "qa": "정적 검사·실제 창·픽커·최소화·다중 창 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "패키지·공식 검증",
+        "action": "최신 패키지를 내보내고 공식 Validator·클린 설치·10개 씬·작업 재열기·샘플 제거·공유 버전 시나리오를 검증한다.",
+        "expected": "설치·컴파일·핵심 기능과 공식 검증 통과",
+        "qa": "공식 실행 결과·실제 픽셀·씬·빌드와 설치 순서 대조",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "스토어·마케팅 자료",
+        "action": "실제 Affinity 원본과 로고를 사용해 필수 키 이미지와 스크린샷·정확한 설명·AI 고지·심사 메모를 준비한다.",
+        "expected": "규격·가독성 검증된 이미지와 설명 원본",
+        "qa": "Affinity 실제 출력·규격·원본·스크린샷·주장 대조",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "전달·공개 기록",
+        "action": "이번 변경만 커밋하고 패키지 해시·검증·남은 Portal 입력을 공개 HTML에 기록한다.",
+        "expected": "재현 가능한 제출 폴더와 개별 공개 보고서",
+        "qa": "명시적 스테이징·공개 배포·본문·첨부 응답 확인",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T11:47:19.115646+09:00",
+        "summary": "최신 공식 규정과 현재 포함 후보의 정적 감사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "initial-audit.json: Pixora 후보 1692개 파일·10개 메인 씬, 공유 Templete 내부 API 2곳, 개발 제외·긴 경로 감사 완료",
+            "evidence": "initial-audit.json 및 공식 제출 가이드 2026-10-23 버전 대조",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

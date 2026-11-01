@@ -1,0 +1,28 @@
+{
+  "product": "Pixora",
+  "version": "1.0.0",
+  "status": "NOT_READY_FOR_SUBMISSION",
+  "candidateFiles": 1184,
+  "nativeUnityStartedThisTask": false,
+  "officialValidatorExecuted": false,
+  "freshImportExecuted": false,
+  "storeMediaRendered": false,
+  "portalUploaded": false,
+  "reviewSubmitted": false,
+  "screenPermission": "renewed authorization pending",
+  "blockers": [
+    "Native Unity compile/import and official Asset Store Tools 12.0.0 execution",
+    "Actual minimize/maximize/restore, multiple windows and public ColorField eyedropper round trip",
+    "Actual ten-scene, editable work, sample removal and co-install validation",
+    "Affinity key-image execution and quality review; actual current screenshots",
+    "Publisher Portal price/contact/metadata confirmation and upload/Submit are separate actions"
+  ],
+  "staticEvidence": [
+    "5 real-reference Roslyn assembly compiles",
+    "10 main sample scenes in static serialized graph",
+    "No unresolved serialized GUIDs or private Unity API patterns in selected candidate",
+    "9 guide scripts executed with DOM stubs; 16 chapters and 11 image paths per language",
+    "20 file-policy assertions against the existing guard with stubbed Unity events; not native imports"
+  ],
+  "generatedAt": "2026-11-01T12:31:37.459562+09:00"
+}

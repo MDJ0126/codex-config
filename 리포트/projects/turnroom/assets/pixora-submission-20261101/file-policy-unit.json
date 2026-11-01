@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": 20,
+  "cases": [
+    "downgrade",
+    "upgrade accepted",
+    "different API major",
+    "cancel after partial import",
+    "failed malformed import",
+    "path traversal rejected"
+  ],
+  "nativeUnityImport": false,
+  "scope": "real candidate file operations with stubbed Unity events only"
+}
