@@ -1,0 +1,286 @@
+{
+    "at": "2026-11-01T02:59:25.3880282Z",
+    "error": "",
+    "unity": "6000.0.83f1",
+    "system": "Windows 11  (10.0.26200)",
+    "graphics": "Direct3D11",
+    "validatorVersion": "11.3.1",
+    "runtimeModule": "3e5fe52b-71af-4666-a827-12dff6c53e67",
+    "editorModule": "909fecdf-62fb-46ba-a164-a9417b5662ba",
+    "passed": true,
+    "compilationErrors": false,
+    "tests": [
+        {
+            "title": "Check Audio Clipping",
+            "status": "Pass",
+            "messages": [
+                "No clipping audio files were detected."
+            ]
+        },
+        {
+            "title": "Check Colliders",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs have colliders!"
+            ]
+        },
+        {
+            "title": "Check Compressed Files",
+            "status": "Pass",
+            "messages": [
+                "No archives were found in the package content!"
+            ]
+        },
+        {
+            "title": "Check Demo Scenes",
+            "status": "Pass",
+            "messages": [
+                "Scenes found",
+                "If these Scenes should not belong to your package, make sure you have selected the correct main folder."
+            ]
+        },
+        {
+            "title": "Check Documentation",
+            "status": "Pass",
+            "messages": [
+                "Found documentation files"
+            ]
+        },
+        {
+            "title": "Check Empty Prefabs",
+            "status": "Pass",
+            "messages": [
+                "No empty prefabs were found!"
+            ]
+        },
+        {
+            "title": "Check File Menu Names",
+            "status": "Pass",
+            "messages": [
+                "No MenuItems with invalid names were found!"
+            ]
+        },
+        {
+            "title": "Check Line Endings",
+            "status": "Pass",
+            "messages": [
+                "No scripts with inconsistent line endings were found!"
+            ]
+        },
+        {
+            "title": "Check LODs",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs are meeting the LOD requirements!"
+            ]
+        },
+        {
+            "title": "Check Mesh Prefabs",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs have meshes!"
+            ]
+        },
+        {
+            "title": "Check Missing Components in Assets",
+            "status": "Pass",
+            "messages": [
+                "No assets have missing components!"
+            ]
+        },
+        {
+            "title": "Check Missing Components in Scenes",
+            "status": "Pass",
+            "messages": [
+                "No missing components were found!"
+            ]
+        },
+        {
+            "title": "Check Model Orientation",
+            "status": "Warning",
+            "messages": [
+                "The following models have incorrect rotation"
+            ]
+        },
+        {
+            "title": "Check Model Types",
+            "status": "Pass",
+            "messages": [
+                "All models are of allowed formats!"
+            ]
+        },
+        {
+            "title": "Check Normal Map Textures",
+            "status": "Pass",
+            "messages": [
+                "All normal map textures have the correct texture type!"
+            ]
+        },
+        {
+            "title": "Check Particle Systems",
+            "status": "Pass",
+            "messages": [
+                "No Particle Systems without Prefabs were found!"
+            ]
+        },
+        {
+            "title": "Check Path Lengths",
+            "status": "Pass",
+            "messages": [
+                "All package content matches the path limit criteria!"
+            ]
+        },
+        {
+            "title": "Check Prefab Transforms",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs were reset!"
+            ]
+        },
+        {
+            "title": "Check Script Compilation",
+            "status": "Pass",
+            "messages": [
+                "All scripts in the project compiled successfully!"
+            ]
+        },
+        {
+            "title": "Check Shader Compilation",
+            "status": "Pass",
+            "messages": [
+                "All found Shaders have no compilation errors!"
+            ]
+        },
+        {
+            "title": "Check Texture Dimensions",
+            "status": "Pass",
+            "messages": [
+                "All texture dimensions are a power of 2!"
+            ]
+        },
+        {
+            "title": "Check Type Namespaces",
+            "status": "Pass",
+            "messages": [
+                "No types without namespaces were found!"
+            ]
+        },
+        {
+            "title": "Remove Executable Files",
+            "status": "Pass",
+            "messages": [
+                "No executable files were found!"
+            ]
+        },
+        {
+            "title": "Remove JavaScript Files",
+            "status": "Pass",
+            "messages": [
+                "No UnityScript / JS files were found!"
+            ]
+        },
+        {
+            "title": "Remove JPG Files",
+            "status": "Warning",
+            "messages": [
+                "The following textures are compressed as JPG/JPEG"
+            ]
+        },
+        {
+            "title": "Remove Lossy Audio Files",
+            "status": "Pass",
+            "messages": [
+                "No lossy audio files were found!"
+            ]
+        },
+        {
+            "title": "Remove Mixamo Files",
+            "status": "Pass",
+            "messages": [
+                "No Mixamo files were found!"
+            ]
+        },
+        {
+            "title": "Remove SpeedTree Files",
+            "status": "Pass",
+            "messages": [
+                "No SpeedTree assets have been found!"
+            ]
+        },
+        {
+            "title": "Remove Video Files",
+            "status": "Pass",
+            "messages": [
+                "No video files were found, looking good!"
+            ]
+        }
+    ],
+    "models": [
+        {
+            "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Models/ClockworkKingfisher.fbx",
+            "meshes": 21,
+            "triangles": 2986,
+            "vertices": 5316,
+            "clips": 0,
+            "scale": {
+                "x": 100.0,
+                "y": 100.0,
+                "z": 100.0
+            }
+        },
+        {
+            "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Models/CourierDrone.fbx",
+            "meshes": 18,
+            "triangles": 1984,
+            "vertices": 3022,
+            "clips": 0,
+            "scale": {
+                "x": 100.0,
+                "y": 100.0,
+                "z": 100.0
+            }
+        },
+        {
+            "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Models/SurveyorKit.fbx",
+            "meshes": 14,
+            "triangles": 1468,
+            "vertices": 2060,
+            "clips": 0,
+            "scale": {
+                "x": 100.0,
+                "y": 100.0,
+                "z": 100.0
+            }
+        },
+        {
+            "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Models/TidewatchObservatory.fbx",
+            "meshes": 20,
+            "triangles": 1928,
+            "vertices": 2885,
+            "clips": 0,
+            "scale": {
+                "x": 100.0,
+                "y": 100.0,
+                "z": 100.0
+            }
+        }
+    ],
+    "scenes": [
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\01-Basic.unity | colors=353",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\02-CoarsePixels.unity | colors=733",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\03-FinePixels.unity | colors=770",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\04-Zoom.unity | colors=374",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\05-LimitedPalette.unity | colors=23",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\06-Dithering.unity | colors=20",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\07-Clipping.unity | colors=275",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\08-WallOcclusion.unity | colors=10",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\09-ThroughWalls.unity | colors=10",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\10-Perspective.unity | colors=534",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\11-TidewatchOutpost.unity | colors=149",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\12-OutpostStreet.unity | colors=154",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\13-PixelOutlines.unity | colors=96",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\14-PaletteMapping.unity | colors=15",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\15-StablePixelGrid.unity | colors=99",
+        "Assets/TurnRoom/PixelCamera/Samples/Scenes\\16-CompleteStyle.unity | colors=15"
+    ]
+}

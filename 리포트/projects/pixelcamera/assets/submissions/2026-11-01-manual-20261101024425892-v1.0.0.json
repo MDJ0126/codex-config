@@ -1,0 +1,98 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelcamera",
+    "kind": "manual",
+    "title": "Pixel Camera Asset Store 제출 준비",
+    "summary": "검증된 제품을 제출 패키지·메타데이터·Affinity 이미지로 정리",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업중",
+    "outcome": "제출준비중",
+    "proposedTime": "30~50분",
+    "actualTime": "2026-11-01 11:37:25 KST 시작",
+    "xerjEvidence": "공유내보내기검색5개후보·현재소스직접대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-store-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "스토어 업로드 직전 자료 준비",
+    "completionCriteria": "공개API제출빌드·라이선스/AI공개·제출이미지·공식Validator와설치검증·보고서. 실제포털업로드·심사제출별도",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "제출 기준과 패키지 정리",
+        "action": "현재공식기준과원본대조·공개API제출빌드생성",
+        "expected": "원본보존·비공개UnityAPI제거·한루트·개발도구제외",
+        "qa": "현재코드와제출트리/원본해시대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": "공식지침확인·제출스테이징진행"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "설명·라이선스·입력자료",
+        "action": "영문설명·지원범위·AI도구공개·폰트고지·릴리스노트·포털입력자료작성",
+        "expected": "검증된기능만명시·미정값구분",
+        "qa": "원본/문서/라이선스/입력필드대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "스토어 이미지",
+        "action": "실제Affinity에서카드/커버/아이콘/소셜제작·원본/출력보존",
+        "expected": "규격/가독성/실제제품화면일치",
+        "qa": "실제크기이미지검토·저장재열기와내보내기대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "공식 검사·설치·보고",
+        "action": "공식AssetStoreValidator·16맵·설치·소스대조와공개보고",
+        "expected": "오류해결·경고실제분류·제출번들·공개보고",
+        "qa": "공식실행결과·패키지SHA·실제화면·공개HTTP검증",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

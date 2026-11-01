@@ -1,0 +1,90 @@
+{
+    "at": "2026-11-01T03:04:09.9789262Z",
+    "unity": "6000.0.83f1",
+    "urp": "17.0.4",
+    "error": "",
+    "passed": true,
+    "renderGraph": true,
+    "checks": [
+        {
+            "name": "native-rendergraph",
+            "detail": "Compatibility mode disabled",
+            "passed": true
+        },
+        {
+            "name": "urp-feature-runs",
+            "detail": "URP RenderGraph source image; red=3600",
+            "passed": true
+        },
+        {
+            "name": "urp-source-path",
+            "detail": "No duplicate scene geometry for automatic source path",
+            "passed": true
+        },
+        {
+            "name": "urp-outline",
+            "detail": "black=480",
+            "passed": true
+        },
+        {
+            "name": "urp-outline-radius",
+            "detail": "Pixel radius changes outline coverage",
+            "passed": true
+        },
+        {
+            "name": "urp-outline-empty-mask",
+            "detail": "Empty layer selection is bypass",
+            "passed": true
+        },
+        {
+            "name": "urp-outline-selected-layer",
+            "detail": "Selected cube layer outlined",
+            "passed": true
+        },
+        {
+            "name": "urp-subpixel-stability",
+            "detail": "Same pixel cell produces identical rendered pixels",
+            "passed": true
+        },
+        {
+            "name": "urp-camera-restored",
+            "detail": "Source pose and lens restored after render",
+            "passed": true
+        },
+        {
+            "name": "urp-zoom",
+            "detail": "Projection zoom increases object screen area",
+            "passed": true
+        },
+        {
+            "name": "urp-late-depth",
+            "detail": "red hidden=0, through=3600",
+            "passed": true
+        },
+        {
+            "name": "urp-late-outline",
+            "detail": "Through-wall outline pass renders",
+            "passed": true
+        },
+        {
+            "name": "urp-repeated-rendergraph-frames",
+            "detail": "24 captures vary optional mask and outline passes without render errors",
+            "passed": true
+        },
+        {
+            "name": "urp-lens-remains-live",
+            "detail": "Lens changes after SRP rendering update the default projection",
+            "passed": true
+        },
+        {
+            "name": "urp-culling-follows-camera",
+            "detail": "Default culling matrix updates after camera movement",
+            "passed": true
+        },
+        {
+            "name": "urp-palette",
+            "detail": "Exact palette RGB output",
+            "passed": true
+        }
+    ]
+}
