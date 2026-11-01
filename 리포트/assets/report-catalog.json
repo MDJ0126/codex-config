@@ -1,5 +1,15 @@
 [
   {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101084843698-v1.0.9.html",
+    "date": "2026-11-01T08:48:43.698Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Bootstrap 씬 제거와 공통 초기화 프리팹·A/B 직접 Play 검증",
     "summary": "두 예제 씬에서 바로 Play하며 하나의 Addressable 초기화 루트와 매니저를 전환 내내 재사용합니다.",
     "project": "sampleprojectforunity",
