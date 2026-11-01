@@ -1,0 +1,64 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>씬·UI 시스템을 기존 프로젝트 폴더로 통합 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">S</span><span>SampleProjectForUnity</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>씬·UI 시스템을 기존 프로젝트 폴더로 통합</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">독립 Examples 트리를 없애고 기존 Scenes·AddressablesResources·Management·UI·SampleScene으로 통합했습니다. GUID 31개를 보존하고 이동 후 실제 플레이어 검사 57개를 통과했습니다.</p><div class="post-byline"><time datetime="2026-11-01T07:22:20.998Z">2026년 11월 1일 오후 4:22 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>기존 프로젝트 구조와 분리했던 예제 배치를 정리했습니다. 폴더 통합·원본 반영·실제 번들 및 Windows 플레이어 실행 검증을 완료했습니다.</p>
+<p><figure><img class="report-image" src="../assets/scene-ui-layout-20261101/scene-a.png" alt="기존 폴더로 이동한 에셋에서 빌드한 실제 Harbor 실행 화면" loading="lazy"><figcaption>기존 폴더로 이동한 에셋에서 빌드한 실제 Harbor 실행 화면</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>통합 위치</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bootstrap·ExampleA·ExampleB 씬</td>
+<td>Assets/Scenes</td>
+</tr>
+<tr>
+<td>로딩·화면·팝업 프리팹</td>
+<td>Assets/AddressablesResources/Prefabs/UI</td>
+</tr>
+<tr>
+<td>SceneCatalog·UICatalog</td>
+<td>Assets/AddressablesResources/Datas</td>
+</tr>
+<tr>
+<td>예제 머티리얼</td>
+<td>Assets/ArtResources/Material</td>
+</tr>
+<tr>
+<td>씬 관리·Bootstrap 코드</td>
+<td>Assets/Scripts/Management</td>
+</tr>
+<tr>
+<td>UI 관리·기반 코드</td>
+<td>Assets/Scripts/UI</td>
+</tr>
+<tr>
+<td>사용 예제·실행 QA</td>
+<td>Assets/Scripts/SampleScene</td>
+</tr>
+</tbody></table>
+</div><p>기존 Assets/Examples와 Assets/Scripts/Examples 트리 및 불필요한 Management/SceneControl·UI/Management 하위 폴더를 제거했습니다. 중복 README 내용은 기존 사용 문서로 통합했습니다.</p>
+<p>파일 31개를 .meta와 함께 이동해 GUID를 보존했습니다. 생성기·Bootstrap 빌드 경로·문서를 새 배치에 맞췄습니다. Addressables 그룹은 Scenes·UI로 정리하고 주소는 기존 Prefabs 그룹처럼 실제 Assets 경로를 사용합니다. 기존 Prefabs 그룹과 Playground·HUD·원본 manifest는 변경하지 않았습니다. 런타임 클래스 이름과 API는 유지합니다.</p>
+<p>실행은 기존과 동일하게 Sample Project → Scene UI → Open Example Bootstrap → Play입니다. Bootstrap의 실제 위치는 Assets/Scenes/SceneUIBootstrap.unity입니다.</p>
+<p><figure><img class="report-image" src="../assets/scene-ui-layout-20261101/popup.png" alt="이동 후 팝업 열기·닫기와 입력 차단이 유지되는 실제 화면" loading="lazy"><figcaption>이동 후 팝업 열기·닫기와 입력 차단이 유지되는 실제 화면</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<p>이동 후 에셋을 재생성하지 않고 실제 Addressables 콘텐츠와 Windows 플레이어를 빌드했습니다. 빌드 성공 크기 155,824,124바이트. 기존 에디터를 보존하기 위해 검증 복사본에서 수행했고 원본과 32개 파일의 내용 해시가 모두 일치했습니다. <a class="report-link" href="../assets/scene-ui-layout-20261101/build-comparison.json">빌드 대조</a>.</p>
+<p>실행 2026-11-01T16:20:50.3959281+09:00 → 2026-11-01T16:20:58.1328784+09:00, 57개 통과·오류 0개입니다. 왕복 전환·중복 거부·모달·늦은 로드 정리·실패 복구·EventSystem 버튼 레이캐스트·Escape 및 반복 후 개수를 다시 검사했습니다. <a class="report-link" href="../assets/scene-ui-layout-20261101/results.json">실제 QA JSON</a>.</p>
+<p><a class="report-link" href="../assets/scene-ui-layout-20261101/guid-check.json">31개 이동 전후 GUID</a>, <a class="report-link" href="../assets/scene-ui-layout-20261101/references.json">카탈로그 참조 7개</a>, <a class="report-link" href="../assets/scene-ui-layout-20261101/unchanged.json">기존 파일 보존</a>을 실제 파일에서 대조했습니다. 현재 소스·설정·사용 문서에 이전 Examples 경로가 남지 않았습니다. 과거 QA와 이력의 당시 경로는 보존했습니다.</p>
+<p>실제 렌더 화면 5장을 직접 검토했습니다. 1280×720 원본 PNG를 편집 없이 사용하며 각 200KB 미만입니다. <a class="report-link" href="../assets/scene-ui-layout-20261101/visual-check.json">화면 메타데이터</a>.</p>
+<p>문서 첫 빌드는 파일 열기 UNKNOWN 오류로 중단됐습니다. 파일 상태 확인 후 전체 재실행하여 문서 27개·로컬 링크 908개 검사를 통과했습니다. 원인은 미확인으로 남기고 실패·재검증을 메뉴얼에 보존했습니다. record 후 재빌드·검증했으며 snapshotChanges는 0입니다.</p>
+<p><figure><img class="report-image" src="../assets/scene-ui-layout-20261101/loading.png" alt="이동 후 로딩 오버레이" loading="lazy"><figcaption>이동 후 로딩 오버레이</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/scene-ui-layout-20261101/recovery.png" alt="이동 후 초기화 실패 복구" loading="lazy"><figcaption>이동 후 초기화 실패 복구</figcaption></figure></p>
+<h2 id="section-5">남은 사항</h2>
+<p>재생성 메뉴의 실제 실행과 다른 플랫폼은 이번 후속 검증에서 실행하지 않았습니다. 생성기의 새 경로는 소스·Unity 컴파일로 확인했고 이동한 에셋 그대로의 빌드·실행을 검증했습니다.</p>
+<p>교훈 검토: 추가 1개. 사용자가 정정하신 기존 구조 우선 선호를 다른 프로젝트에도 적용할 짧은 규칙으로 전역 지침에 추가했습니다. 별도 요청이나 확인된 기술적 필요가 있는 예외는 보존합니다. Sync.ps1 -Direction Push로 커밋·푸시했으며 설치본·기본 체크아웃·동기화본 해시가 일치합니다. <a class="report-link" href="../assets/scene-ui-layout-20261101/instructions.json">동기화 근거</a>, <a class="report-link" href="https://github.com/MDJ0126/codex-config/commit/9d384ae6">지침 커밋</a>. 다른 실행 중 대화의 자동 반영을 보장하지 않습니다.</p>
+<p>게임 프로젝트는 자동 커밋·푸시하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 10~20분</li>
+<li>실제로 완료된 시간: 후속 시작 2026-11-01 16:10:07 KST. 이동 후 실행 QA 완료 16:20:58 KST(10분 51초). 보고서 기록 2026-11-01 16:22:20 KST. 공개 배포 확인은 완료 메뉴얼과 최종 채팅에 기록합니다.</li>
+<li>XERJ: 미사용 — 제공된 XERJ 도구·스크립트가 없어 rg로 현재 경로·참조를 검색했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-01-result-20261101072220998-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=sampleprojectforunity&topic=qa&relatedReport=projects%2Fsampleprojectforunity%2Freports%2F2026-11-01-result-20261101072220998-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=sampleprojectforunity">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=sampleprojectforunity">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

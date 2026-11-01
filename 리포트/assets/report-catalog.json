@@ -1,10 +1,50 @@
 [
   {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "기존 Scenes·AddressablesResources·Management·UI·SampleScene 구조로 통합하고 GUID·번들·실행을 재검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101072221273-v1.0.5.html",
+    "date": "2026-11-01T07:22:21.273Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "씬·UI 시스템을 기존 프로젝트 폴더로 통합",
+    "summary": "독립 Examples 트리를 없애고 기존 Scenes·AddressablesResources·Management·UI·SampleScene으로 통합했습니다. GUID 31개를 보존하고 이동 후 실제 플레이어 검사 57개를 통과했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101072220998-v1.0.0.html",
+    "date": "2026-11-01T07:22:20.998Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "기존 Scenes·AddressablesResources·Management·UI·SampleScene 구조로 통합하고 GUID·번들·실행을 재검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101071739397-v1.0.4.html",
+    "date": "2026-11-01T07:17:39.397Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
     "summary": "최종 패키지 재검증과 추가 시작 오류 수정을 확인하고 공개 게시 QA를 진행합니다.",
     "project": "designdatatable",
     "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101071202410-v1.0.1.html",
     "date": "2026-11-01T07:12:02.410Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "기존 Scenes·AddressablesResources·Management·UI·SampleScene 구조로 통합하고 GUID·번들·실행을 재검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101071149271-v1.0.3.html",
+    "date": "2026-11-01T07:11:49.271Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
