@@ -1,5 +1,25 @@
 [
   {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094037900-v1.0.11.html",
+    "date": "2026-11-01T09:40:37.900Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Splash → Playground ↔ CharacterStage와 씬 배치 UI 적용",
+    "summary": "실제 게임 흐름을 연결하고 UI를 편집 가능한 씬·프리팹 오브젝트와 Inspector 이벤트로 정리했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101094002511-v1.0.0.html",
+    "date": "2026-11-01T09:40:02.511Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 기본 선택창 누락과 제목·라벨 배치 수정",
     "summary": "공통 필드 적용 시 선택 패널을 자동 연결하고 기본 명령 메뉴 직접 호출을 교체했습니다. 실제 화면 최종 QA는 게임 종료 후 대기입니다.",
     "project": "turnroom",
@@ -55,6 +75,16 @@
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
     "date": "2026-11-01T09:00:24.822Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
+    "summary": "Bootstrap 씬을 제거하고 Addressable 공통 초기화 프리팹으로 전환하여 A/B 직접 Play와 중복 방지를 검증합니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101085944054-v1.0.10.html",
+    "date": "2026-11-01T08:59:44.054Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
