@@ -1,0 +1,18 @@
+{
+    "id": "menu-down",
+    "utc": "2026-11-01T08:30:30.5389825Z",
+    "error": "System.InvalidOperationException: Sequence contains no matching element\r\n  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <91ec04a334ad481db49c19fb6ee29e58>:0 \r\n  at SheetContextQA.Tick () [0x0028f] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\UniqueValidationQA\\Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\QAOnly\\SheetContextQA.cs:12 ",
+    "sheet": "",
+    "assembly": "",
+    "sheets": [],
+    "windows": [],
+    "dirty": false,
+    "handle": 0,
+    "bounds": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0
+    }
+}
