@@ -1,0 +1,32 @@
+{
+    "utc": "2026-11-01T07:46:19.1060266Z",
+    "endedUtc": "2026-11-01T07:46:47.3692713Z",
+    "error": "",
+    "assembly": "479a444b-ae28-4202-8e35-bfde02924dbd",
+    "sources": 34,
+    "controlImports": 1,
+    "paintImports": 0,
+    "cacheResetImports": 0,
+    "themeImports": 34,
+    "restoreImports": 34,
+    "idleImports": 0,
+    "paintingDoesNotQueue": true,
+    "sourceFilesUnchanged": true,
+    "colorsMatchAfterChange": true,
+    "colorsMatchAfterRestore": true,
+    "passed": 11,
+    "failed": 0,
+    "checks": [
+        "Real imported XLSX assets found",
+        "Import observer detects a real forced import",
+        "1000 icon draws with empty process cache schedule no imports",
+        "Paint/idle produces zero XLSX imports",
+        "Same-color explicit refresh after cache reset uses persisted imported texture names",
+        "Theme refresh imports at most once per source",
+        "Every imported thumbnail has the requested color",
+        "Color restoration imports at most once per source",
+        "Original colors restored",
+        "Second1000 draws and idle do not reimport",
+        "All source XLSX SHA-256 values unchanged"
+    ]
+}

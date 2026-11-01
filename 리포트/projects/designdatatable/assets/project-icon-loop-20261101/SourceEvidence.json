@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-01T07:54:50.185314+00:00",
+  "files": [
+    {
+      "path": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAssets.cs",
+      "sha256": "e2b4ec403fbb5cef0aa715a29f21e27fc0fd9ac0d4e30fddcac9753cecefdfc6"
+    },
+    {
+      "path": "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSourceImporter.cs",
+      "sha256": "d7144ae597ead16e97f2cb240f3177f1741c02e788b6d855ae5eeb81a1e8fa9f"
+    }
+  ],
+  "importerVersion": 7,
+  "observedImportProcesses": [
+    25616,
+    28832,
+    30124
+  ],
+  "workerProcessObservations": 0,
+  "processObservationScope": "Main-process imports were observed. Cache-reset tests separately verify persisted state; no claim that a second-process theme roundtrip was executed.",
+  "testDriver": "Real AssetDatabase imports and postprocessor counts. Pending own refresh callbacks were drained explicitly before measurement to separate control-import invalidation from painting. GUI screenshot uses the actual Project window in a separate editor."
+}

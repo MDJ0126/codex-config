@@ -1,0 +1,23 @@
+{
+    "utc": "2026-11-01T07:44:05.0934532Z",
+    "endedUtc": "2026-11-01T07:44:10.0920625Z",
+    "error": "System.Exception: 1000 icon draws with empty process cache schedule no imports\r\n  at ProjectIconLoopQA.Check (System.Boolean value, System.String name) [0x0002c] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\DDTSubmission202\\Assets\\Editor\\ProjectIconLoopQA.cs:12 \r\n  at ProjectIconLoopQA.Tick () [0x0012b] in C:\\Projects\\TurnRoom\\WorkFiles\\Temp\\DDTSubmission202\\Assets\\Editor\\ProjectIconLoopQA.cs:19 ",
+    "assembly": "479a444b-ae28-4202-8e35-bfde02924dbd",
+    "sources": 34,
+    "controlImports": 1,
+    "paintImports": 0,
+    "cacheResetImports": 0,
+    "themeImports": 0,
+    "restoreImports": 0,
+    "idleImports": 0,
+    "paintingDoesNotQueue": false,
+    "sourceFilesUnchanged": false,
+    "colorsMatchAfterChange": false,
+    "colorsMatchAfterRestore": false,
+    "passed": 2,
+    "failed": 1,
+    "checks": [
+        "Real imported XLSX assets found",
+        "Import observer detects a real forced import"
+    ]
+}
