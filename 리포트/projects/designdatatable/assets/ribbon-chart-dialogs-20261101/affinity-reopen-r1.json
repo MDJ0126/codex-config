@@ -1,0 +1,26 @@
+{
+  "nativeApplication": "Affinity",
+  "procedure": "Native save, close, project-path reopen, rerender, full RGBA comparison",
+  "results": [
+    {
+      "role": "color",
+      "reopenedDocument": "CB27AD70-8C09-4B52-8439-82D76AFFAD58",
+      "rgbaPixelsEqual": 294912,
+      "all72TilesEqual": true,
+      "editableLayers": 400,
+      "rasterLayers": 0,
+      "masterBytes": 102660,
+      "masterSha256": "b5d275d268d66b27179ac83d5e5384070039abe160790c4fa2e04d7836910402"
+    },
+    {
+      "role": "white",
+      "reopenedDocument": "70316A0B-47A6-4985-B331-C757783A28A5",
+      "rgbaPixelsEqual": 294912,
+      "all72TilesEqual": true,
+      "editableLayers": 400,
+      "rasterLayers": 0,
+      "masterBytes": 86087,
+      "masterSha256": "61ebb3b4e1c8084deceec62298e818dbc1792c0d8e9a5a2dfad3d49b6e2d8d52"
+    }
+  ]
+}

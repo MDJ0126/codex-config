@@ -1,0 +1,30 @@
+{
+  "nativeApplication": "Affinity",
+  "encodingOnly": "Untouched native RGBA encoded as PNG; all rendering and tile extraction occurred inside Affinity",
+  "results": [
+    {
+      "role": "color",
+      "nativeDocument": "D151DCCE-015B-430A-B129-0835E923618F",
+      "preservedExistingIcons": 64,
+      "newTiles": 8,
+      "atlasSize": [
+        512,
+        576
+      ],
+      "bytes": 50694,
+      "sha256": "50307311dfe002f73db7853800af4278ffd4ad9e36025cb91e08432395e2b78a"
+    },
+    {
+      "role": "white",
+      "nativeDocument": "975D51F4-B4B9-498C-AD56-8DCC95F8B6D5",
+      "preservedExistingIcons": 64,
+      "newTiles": 8,
+      "atlasSize": [
+        512,
+        576
+      ],
+      "bytes": 36866,
+      "sha256": "a4b5b6ee3d880fe62b2541e53393b0c50b3970d6e1a53ef33f207ad0861b18b6"
+    }
+  ]
+}

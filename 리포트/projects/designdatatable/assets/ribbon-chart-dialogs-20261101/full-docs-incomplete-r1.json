@@ -1,0 +1,2003 @@
+{
+  "utc": "2026-11-01T00:33:07.544407+00:00",
+  "default": "en",
+  "languages": [
+    {
+      "language": "en",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 16620,
+      "guideSha256": "4f22b01c8d0b49d92835c3cb1710f3dc645a1a424712b0e44bfd836901b55756"
+    },
+    {
+      "language": "ko",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 10509,
+      "guideSha256": "76e86128d9714fc9ce806fe8254ecfc1885fc99337a9d62554011c8a443c12be"
+    },
+    {
+      "language": "ja",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 8782,
+      "guideSha256": "338e5f737af0ddea2c1c4d399158609aae8d174c3812c3706b8b08782d51f5d1"
+    },
+    {
+      "language": "zh-Hans",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 7830,
+      "guideSha256": "20444de606cc8681ce641b70812ca0cc94bce38ac8df5bcf6efd5067440e7460"
+    },
+    {
+      "language": "zh-Hant",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 7837,
+      "guideSha256": "23151e0b4b97f710fb5984308df9fec192489445ab5499a7f36eae3256fe6626"
+    },
+    {
+      "language": "es",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 15499,
+      "guideSha256": "415f4fdc2f298961c684bf26d13a76b6f0f5c4a31c5e4d16a2c03053e972ae52"
+    },
+    {
+      "language": "fr",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 16001,
+      "guideSha256": "95a0a4ce87b628e3c27de2ade25fa66daa4b3b889a057646834f18bed77dcc87"
+    },
+    {
+      "language": "de",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 15674,
+      "guideSha256": "4d474056298c74a10a38c4420dc5c0d916bc47e9c2a0fbc318625701af3c1fdc"
+    },
+    {
+      "language": "pt-BR",
+      "chapters": 14,
+      "featureRows": 65,
+      "textCharacters": 15025,
+      "guideSha256": "e910b0c5176547cd19ea3eec29a874f3440f96fc81171ab8ca178e93a43ad035"
+    }
+  ],
+  "currentImages": 52,
+  "errors": [
+    "images/guide-context-shape.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-shape.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-shape.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-shape.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-shape.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-shape.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-shape.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-shape.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindResults.jpg: current source changed: ../Templete/Editor/TemplateInspectorUI.cs",
+    "images/Inspector-FindResults.jpg: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindResults.jpg: current source changed: ../Templete/Editor/UITemplateSettings.cs",
+    "images/Inspector-FindResults.jpg: current source changed: ../Templete/Editor/DefaultUITemplate.asset",
+    "images/guide-context-game.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-game.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-game.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-game.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-game.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-game.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-game.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-game.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-enums.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-enums.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-enums.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-enums.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-enums.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-enums.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-enums.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-enums.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-convert.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-convert.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-convert.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-convert.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-convert.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-convert.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-convert.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-convert.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-rpg-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-rpg-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-rpg-table.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-rpg-table.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-rpg-table.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-rpg-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-rpg-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-rpg-table.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-workbook-statistics.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-workbook-statistics.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-workbook-statistics.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-workbook-statistics.png: current source changed: Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "images/guide-workbook-statistics.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-runtime-lock-localization.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-runtime-lock-localization.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-runtime-lock-localization.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-spreadsheet.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-spreadsheet.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-spreadsheet.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-spreadsheet.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-spreadsheet.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-spreadsheet.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-spreadsheet.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-spreadsheet.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-runtime-lock-enum.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-runtime-lock-enum.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-runtime-lock-enum.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Collection-GeneratedRows.jpg: current source changed: ../Templete/Editor/UITemplateSettings.cs",
+    "images/Collection-GeneratedRows.jpg: current source changed: ../Templete/Editor/DefaultUITemplate.asset",
+    "images/guide-options-format.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-format.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-format.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-format.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-format.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-format.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-format.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-format.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-fps-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-fps-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-fps-table.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-fps-table.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-fps-table.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-fps-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-fps-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-fps-table.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-insert-link.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-insert-link.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-insert-link.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-insert-link.png: current source changed: Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "images/guide-insert-link.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-charts.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-charts.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-charts.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-charts.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-charts.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-charts.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-charts.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-charts.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-global.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-global.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-global.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-global.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-global.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-global.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-global.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-global.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-missing-file.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-missing-file.png: current source changed: Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "images/guide-missing-file.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-shared-chrome.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-shared-chrome.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-shared-chrome.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-shared-chrome.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-shared-chrome.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-shared-chrome.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-shared-chrome.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-shared-chrome.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-context-chart-format.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-chart-format.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-chart-format.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-chart-format.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-chart-format.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-chart-format.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-chart-format.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-chart-format.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-window-restore.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-window-restore.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-window-restore.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-window-restore.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-window-restore.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-window-restore.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-window-restore.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-window-restore.png: current source changed: Scripts/Editor/WorkbookSourceInspector.cs",
+    "images/guide-window-restore.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindMissing.jpg: current source changed: ../Templete/Editor/TemplateInspectorUI.cs",
+    "images/Inspector-FindMissing.jpg: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindMissing.jpg: current source changed: ../Templete/Editor/UITemplateSettings.cs",
+    "images/Inspector-FindMissing.jpg: current source changed: ../Templete/Editor/DefaultUITemplate.asset",
+    "images/guide-options-find.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-find.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-find.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-find.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-find.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-find.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-find.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-find.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-options-paste.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-paste.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-paste.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-paste.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-paste.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-paste.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-paste.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-paste.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-context-enum.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-enum.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-enum.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-enum.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-enum.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-enum.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-enum.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-enum.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-options-registry.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-registry.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-registry.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-registry.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-registry.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-registry.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-registry.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-registry.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-summary.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-summary.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-summary.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-summary.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-summary.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-summary.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-summary.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-summary.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-type-picker.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-type-picker.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-type-picker.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-type-picker.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-type-picker.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-type-picker.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-type-picker.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-type-picker.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-options-objects.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-objects.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-objects.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-objects.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-objects.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-objects.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-objects.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-objects.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-context-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-table.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-table.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-table.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-table.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindEmpty.jpg: current source changed: ../Templete/Editor/TemplateInspectorUI.cs",
+    "images/Inspector-FindEmpty.jpg: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/Inspector-FindEmpty.jpg: current source changed: ../Templete/Editor/UITemplateSettings.cs",
+    "images/Inspector-FindEmpty.jpg: current source changed: ../Templete/Editor/DefaultUITemplate.asset",
+    "images/guide-context-picture.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-context-picture.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-context-picture.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-context-picture.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-context-picture.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-context-picture.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-context-picture.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-context-picture.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-settings.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-settings.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-settings.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-settings.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-settings.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-settings.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-settings.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-settings.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-search-source.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-search-source.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-search-source.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-search-source.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-search-source.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-search-source.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-search-source.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-search-source.png: current source changed: Scripts/Editor/WorkbookSourceInspector.cs",
+    "images/guide-search-source.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "images/guide-page-setup.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/WorkbookPageLayout.cs",
+    "images/guide-page-setup.png: current source changed: Scripts/Editor/Window/WorkbookPageLayoutPopup.cs",
+    "images/guide-register.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-register.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-register.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-register.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-register.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-register.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-register.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-register.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-validation.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-validation.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-validation.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-validation.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-validation.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-validation.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-validation.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-validation.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-dusk-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-dusk-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-dusk-table.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-dusk-table.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-dusk-table.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-dusk-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-dusk-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-dusk-table.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-insert-tools.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-insert-tools.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-insert-tools.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-insert-tools.png: current source changed: Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+    "images/guide-insert-tools.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-search-inspector.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-search-inspector.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-search-inspector.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-search-inspector.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-search-inspector.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-search-inspector.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-search-inspector.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-search-inspector.png: current source changed: Scripts/Editor/WorkbookSourceInspector.cs",
+    "images/guide-search-inspector.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-api-preview.png: current source changed: Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+    "images/guide-api-preview.png: current source changed: Scripts/Editor/Window/WorkbookChartGUI.cs",
+    "images/guide-options-conditional.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-options-conditional.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-options-conditional.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-options-conditional.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-options-conditional.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-options-conditional.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-options-conditional.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-options-conditional.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-game-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-game-table.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-game-table.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-game-table.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-game-table.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-game-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-game-table.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-game-table.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-code-comments.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-code-comments.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-code-comments.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-code-comments.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-code-comments.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-code-comments.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-code-comments.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-code-comments.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-localization.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-localization.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-localization.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-localization.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-localization.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-localization.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-localization.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-localization.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-game-ribbon.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+    "images/guide-game-ribbon.png: current source changed: Scripts/Editor/Window/SpreadsheetRibbon.cs",
+    "images/guide-game-ribbon.png: current source changed: Scripts/Editor/Window/WorkbookViewer.cs",
+    "images/guide-game-ribbon.png: current source changed: Scripts/Editor/Window/WorkbookControls.cs",
+    "images/guide-game-ribbon.png: current source changed: ../Templete/Editor/TemplateIcons.cs",
+    "images/guide-game-ribbon.png: current source changed: ../Templete/Editor/Art/RibbonAtlas.png",
+    "images/guide-game-ribbon.png: current source changed: ../Templete/Editor/Art/RibbonAtlasWhite.png",
+    "images/guide-game-ribbon.png: current source changed: ../Templete/Editor/UITemplateStyles.cs",
+    "images/guide-search-source.png: current UI recapture pending",
+    "images/guide-type-picker.png: current UI recapture pending",
+    "images/guide-validation.png: current UI recapture pending",
+    "images/guide-summary.png: current UI recapture pending",
+    "images/guide-enums.png: current UI recapture pending",
+    "images/guide-localization.png: current UI recapture pending",
+    "images/guide-spreadsheet.png: current UI recapture pending",
+    "images/guide-game-ribbon.png: current UI recapture pending",
+    "images/guide-context-table.png: current UI recapture pending",
+    "images/guide-context-shape.png: current UI recapture pending",
+    "images/guide-settings.png: current UI recapture pending"
+  ],
+  "historicalUnusedCaptures": [
+    {
+      "file": "images/closed-shape-gradient-controls-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookObjects.cs",
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookGradientGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/object-properties-fill-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/logical-text-coercion-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCalculation.cs",
+        "Scripts/Editor/WorkbookCalculationRanges.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/empty-text-coercion-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCalculation.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/unified-general-home.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/closed-shape-gradient-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookObjects.cs",
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookGradientGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/general-section-format-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFormatting.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/cell-format-categories-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/locale-calendar-month-preview.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/WorkbookEditingOperations.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookToolWindow.cs",
+        "Scripts/Editor/Window/WorkbookPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/unified-game-home.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/unified-game-data-tools.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerGameTools.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/WorkspaceSettings.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/ribbon-screen-tip-copy.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/RibbonHelp.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Localization/RibbonHelpLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs",
+        "Scripts/Editor/Localization/AdvancedLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/window-motion-restored.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/window-motion-minimized.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/addressables-table-registry-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/DataTablePreferences.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/TableDelivery.cs",
+        "Scripts/Editor/TablePaths.cs",
+        "Scripts/TableBinaryDelivery.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/external-registration-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookFilePaths.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs"
+      ]
+    },
+    {
+      "file": "images/custom-object-tooltip-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookFilePaths.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs",
+        "Scripts/Editor/Window/SpreadsheetScreenTip.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookCellTextGUI.cs"
+      ]
+    },
+    {
+      "file": "images/shape-catalog-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/shape-custom-paths-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/shape-insert-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-data-tab-ko-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookDrawings.cs",
+        "Scripts/Editor/WorkbookShapeGeometry.cs",
+        "Scripts/Editor/WorkbookShapeRaster.cs",
+        "Scripts/Editor/WorkbookPresetDefinitions.cs",
+        "Scripts/Editor/Window/WorkbookDrawingGUI.cs",
+        "Scripts/Editor/Window/WorkbookShapeGUI.cs",
+        "Scripts/Editor/Window/WorkbookObjectPopup.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/EditorLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/store-samples-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookSourceImporter.cs"
+      ]
+    },
+    {
+      "file": "images/taskbar-hover-preview-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/WorkbookHoverTiming.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs"
+      ]
+    },
+    {
+      "file": "images/taskbar-hover-peek-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/WorkbookHoverTiming.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs"
+      ]
+    },
+    {
+      "file": "images/sheet-tabs-curves-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookSheetTabGUI.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs"
+      ]
+    },
+    {
+      "file": "images/localization-data-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/LocalizationDataLanguageTable.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/asset-create-menu-ui.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/source-creation-menu-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/LocalizationWorkbook.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-coin.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/CoinDash/Runtime/CoinDashSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Coin Dash.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-meteor.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/MeteorDodge/Runtime/MeteorDodgeSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Meteor Dodge.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-brick.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/BrickBreaker/Runtime/BrickBreakerSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Brick Breaker.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-runner.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/RoadDash/Runtime/RoadDashSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Neon Runner.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-memory.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/MemoryMatch/Runtime/MemoryMatchSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Memory Match.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/ArcadeSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-original-game-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/DuskPatrol/Runtime/SurvivalSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Dusk Patrol.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-original-shop-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ItemShop/Runtime/ShopAutoPlay.cs",
+        "Sample/Games/ItemShop/Runtime/ShopSceneView.cs",
+        "Sample/Games/ItemShop/Runtime/ShopShowcase.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - UI (Shop).unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-hub.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/MiniGames/Scenes/00 Mini Arcade.unity",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/Navigation/HubSceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-enum.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleAutoPlay.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleGame.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleSceneView.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleState.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Custom Enum Battle.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-fps.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/NeonRange/Runtime/FpsSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - 3D FPS.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Shared/UI/ThreeDSceneView.cs",
+        "Sample/ThreeD/Editor/ThreeDSamplesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-rpg.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/CrystalRuins/Runtime/RpgSceneView.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - 3D RPG.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Shared/UI/ThreeDSceneView.cs",
+        "Sample/ThreeD/Editor/ThreeDSamplesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-standard-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-game-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/data-use-localization-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerLocalization.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkspaceSettings.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-xlsx-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-csv-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-icon-contrast-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookHoverPreview.cs",
+        "Scripts/Editor/Window/DataTableEditor.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-shop-paused-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ItemShop/Runtime/ShopAutoPlay.cs",
+        "Sample/Games/ItemShop/Runtime/ShopShowcase.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - UI (Shop).unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/LegacySceneView.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-enum-paused-ko.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ArcadeText.cs",
+        "Sample/AutoPlay/Editor/AutoPlaySamplesBuilder.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleAutoPlay.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleGame.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleSceneView.cs",
+        "Sample/Games/ElementTrials/Runtime/EnumBattleState.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Custom Enum Battle.unity",
+        "Sample/Shared/AutoPlay/SampleAutoPlayControl.cs",
+        "Sample/Shared/Localization/SampleText.cs",
+        "Sample/Shared/UI/SampleButtonFeedback.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-popup-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-invalid-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-enum-repaired-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/game-cell-types-invalid-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/TableInfo/TableInfo.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/project-icon-focus-ping-ui.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookProjectIconHook.cs",
+        "Scripts/Editor/WorkbookSourceImporter.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-0.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/CanyonSprint/Runtime/CanyonSprintGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Canyon Sprint.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-1.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/SkyboundSteps/Runtime/SkyboundGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Skybound Steps.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-2.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/LanternDefense/Runtime/LanternDefenseGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Lantern Defense.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-3.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/PutterGarden/Runtime/GolfGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Putter Garden.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-4.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/StrikeLane/Runtime/BowlingGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Strike Lane.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-5.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/WarehousePush/Runtime/WarehouseGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Warehouse Push.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-6.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/DroneArena/Runtime/DroneGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Drone Arena.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-7.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/MarbleCircuit/Runtime/MarbleGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Marble Circuit.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-8.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/LunarLander/Runtime/LanderGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Lunar Lander.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-9.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/QuietCourier/Runtime/CourierGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Quiet Courier.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-10.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/PotionMatch/Runtime/PotionGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Potion Match.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-11.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/BeatBeacon/Runtime/RhythmGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Beat Beacon.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-12.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/BlockHarbour/Runtime/BlocksGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Block Harbour.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/mini-arcade-extra-13.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Generated/Localization/Code/ExtraGamesText.cs",
+        "Sample/Games/CometPinball/Runtime/PinballGame.cs",
+        "Sample/MiniGames/Editor/SampleSceneObjectsBuilder.cs",
+        "Sample/Scenes/Example - Comet Pinball.unity",
+        "Sample/Shared/Gameplay/ExtraGame.cs",
+        "Sample/Shared/Gameplay/ExtraGameView.cs",
+        "Sample/Shared/Localization/ExtraGameText.cs",
+        "Sample/Shared/UI/SampleSceneUI.cs",
+        "Sample/ThreeD/Data/ExtraGamesText.xlsx",
+        "Sample/ThreeD/Editor/ExtraGameSharedUi.cs",
+        "Sample/ThreeD/Editor/ExtraGamesBuilder.cs",
+        "Sample/Visuals/Editor/SampleVisualPolish.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-localization-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-standard-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-inspector-multi-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/workbook-imported-header-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/registered-sheet-links-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-type-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-value-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/game-default-style-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/TableWorkbook.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-missing-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs"
+      ]
+    },
+    {
+      "file": "images/enum-definition-restored-ko.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/Localization/GameValidationLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-provider-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-client-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/enum-summary-sheet-menu-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-connections-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-types-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-register-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-missing-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/global-enum-restored-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/GlobalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookReader.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookToolPopups.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewerValidation.cs",
+        "Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-table-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-group-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-types-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/local-enums-inspector-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookCustomEnums.cs",
+        "Scripts/Editor/WorkbookLocalEnums.cs",
+        "Scripts/Editor/LocalEnumWorkbook.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookSourceInspector.cs",
+        "Scripts/Editor/WorkbookGameValidation.cs",
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/Window/WorkbookTypePicker.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/WorkbookReader.cs"
+      ]
+    },
+    {
+      "file": "images/play-mode-spreadsheet-bright-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookWindowTheme.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/WorkbookCustomEnums.cs"
+      ]
+    },
+    {
+      "file": "images/play-mode-readonly-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerEditing.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookViewerRecovery.cs",
+        "Scripts/Editor/WorkbookGameMode.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs",
+        "Scripts/Editor/Window/WorkbookViewerPlayNotice.cs"
+      ]
+    },
+    {
+      "file": "images/summary-schema-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs"
+      ]
+    },
+    {
+      "file": "images/summary-source-columns-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/WorkbookSummary.cs",
+        "Scripts/Editor/WorkbookFeatures.cs",
+        "Scripts/Editor/WorkbookEditSession.cs",
+        "Scripts/Editor/WorkbookStructure.cs",
+        "Scripts/Editor/WorkbookRegistration.cs",
+        "Scripts/Editor/WorkbookAssets.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerGrid.cs",
+        "Scripts/Editor/Window/WorkbookSchemaUI.cs"
+      ]
+    },
+    {
+      "file": "images/minimize-window-motion-en.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookMinimizeAnimation.cs",
+        "Scripts/Editor/Window/WorkbookWindowMotion.cs",
+        "Scripts/Editor/Window/WorkbookMinimizedShelf.cs",
+        "Scripts/Editor/Window/WorkbookNativeWindow.cs",
+        "Scripts/Editor/Window/WorkbookNativePreview.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerChrome.cs"
+      ]
+    },
+    {
+      "file": "images/guide-context-chart.png",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/SpreadsheetRibbonIcons.cs",
+        "Scripts/Editor/Window/SpreadsheetRibbon.cs",
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookControls.cs",
+        "../Templete/Editor/TemplateIcons.cs",
+        "../Templete/Editor/Art/RibbonAtlas.png",
+        "../Templete/Editor/Art/RibbonAtlasWhite.png",
+        "../Templete/Editor/UITemplateStyles.cs"
+      ]
+    },
+    {
+      "file": "images/native-keyboard-settings-final.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerShortcuts.cs",
+        "Scripts/Editor/Window/WorkbookShortcutCatalog.cs"
+      ]
+    },
+    {
+      "file": "images/native-insert-tab-fixed.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerShortcuts.cs",
+        "Scripts/Editor/Window/WorkbookShortcutCatalog.cs"
+      ]
+    },
+    {
+      "file": "images/native-table-context-a9-native.webp",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "Scripts/Editor/Window/WorkbookViewer.cs",
+        "Scripts/Editor/Window/WorkbookViewerShortcuts.cs",
+        "Scripts/Editor/Window/WorkbookShortcutCatalog.cs"
+      ]
+    },
+    {
+      "file": "images/HelpBox-DataTableFindInfo.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "../Templete/Editor/UITemplateStyles.cs",
+        "../Templete/Editor/UITemplateSettings.cs",
+        "../Templete/Editor/DefaultUITemplate.asset",
+        "../Templete/Editor/TemplateIcons.cs",
+        "Scripts/Editor/Window/FindPopup.cs"
+      ]
+    },
+    {
+      "file": "images/HelpBox-DataTableFindError.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "../Templete/Editor/UITemplateStyles.cs",
+        "../Templete/Editor/UITemplateSettings.cs",
+        "../Templete/Editor/DefaultUITemplate.asset",
+        "../Templete/Editor/TemplateIcons.cs",
+        "Scripts/Editor/Window/FindPopup.cs"
+      ]
+    },
+    {
+      "file": "images/Inspector-FindNarrow.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "../Templete/Editor/TemplateInspectorUI.cs",
+        "../Templete/Editor/UITemplateStyles.cs",
+        "../Templete/Editor/UITemplateSettings.cs",
+        "../Templete/Editor/DefaultUITemplate.asset"
+      ]
+    },
+    {
+      "file": "images/Inspector-TableTheme.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "../Templete/Editor/TemplateInspectorUI.cs",
+        "../Templete/Editor/UITemplateStyles.cs",
+        "../Templete/Editor/UITemplateSettings.cs",
+        "../Templete/Editor/DefaultUITemplate.asset"
+      ]
+    },
+    {
+      "file": "images/Inspector-GeneratedTable.jpg",
+      "referencedByCurrentGuide": false,
+      "staleSources": [
+        "../Templete/Editor/TemplateInspectorUI.cs",
+        "../Templete/Editor/UITemplateStyles.cs",
+        "../Templete/Editor/UITemplateSettings.cs",
+        "../Templete/Editor/DefaultUITemplate.asset"
+      ]
+    }
+  ],
+  "historicalPendingVerification": [
+    {
+      "file": "images/source-creation-menu-ui.png",
+      "reason": "Global Enum Table.xlsx is registered and verified via native Unity GetSubmenus; existing dropdown screenshot predates this entry. Desktop input remains prohibited, so the physical Create dropdown has not been visually recaptured."
+    },
+    {
+      "file": "images/store-samples-ui.jpg",
+      "reason": "Table search aliases now use Table (Workbook.xlsx). Actual Unity editor is closed; recapture the affected search label after reopening. Existing capture/source hashes have not been advanced."
+    },
+    {
+      "file": "images/project-icon-focus-ping-ui.png",
+      "reason": "Table search aliases now use Table (Workbook.xlsx). Actual Unity editor is closed; recapture the affected search label after reopening. Existing capture/source hashes have not been advanced."
+    }
+  ],
+  "verificationScope": "Only images referenced by the rebuilt current guides determine the current-guide result. Older captures and their original source hashes remain recorded above; they are not claimed current.",
+  "browserRenderEvidence": "WorkFiles\\Temp\\ContextGallery\\BrowserChecks.json",
+  "translationReview": "Independent native-speaker review not performed."
+}
