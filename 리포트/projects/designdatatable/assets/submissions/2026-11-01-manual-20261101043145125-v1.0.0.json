@@ -1,0 +1,156 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "공개 API 교체·패키지·공식 검사를 확인하고 샘플 실행과 제출 자료를 정리합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "샘플 허브 선택 재확인, 미디어·전달 파일·개별 공개 보고서 배포 확인.",
+    "outcome": "공개 API 교체·패키지 재생성과 공식 검사는 완료했습니다. 샘플 선택 재확인·최종 전달과 공개 보고를 진행합니다.",
+    "proposedTime": "초기20–30분(11:36:01 KST), 추가 공개 API 교체60–90분(11:57:08 KST). 샘플 선택 추가확인15–25분 가능성을 상한 전에 안내.",
+    "actualTime": "진행 중. 초기 시작2026-11-01 11:36:01 KST, 승인된 교체 시작11:57:08 KST.",
+    "xerjEvidence": "Tools/Search/Xerj.ps1로 Sort·WorkbookAutomationPreview를 검색하고 현재 소스와 대조했습니다. 자동 인덱스 갱신은 주장하지 않습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "submission-202-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "현재 지원 범위의2.0.2 제출 패키지·간단한 스토어 원고·필수 검증과 공개 보고를 준비한다. 포털 제출은 수행하지 않는다.",
+    "completionCriteria": "공개 API 교체를 실행 검증하고, 네이티브 패키지·참조·메타데이터·새 프로젝트·공식 검사·현재 화면과 제출 자료·보고 링크를 확인한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "배포 범위·메타데이터 고정",
+        "action": "제품과 공유 의존성만 고정하고 개발·QA 파일을 제외한다. 누락 메타와 메뉴 경로를 수정한다.",
+        "expected": "동결 소스·메타·GUID·패키지 파일 일치",
+        "qa": "네이티브 아카이브를 원본 인벤토리와 대조한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "1578개 파일·8037개 직렬화 참조, 오류0. 40개 아이콘 메타 추가."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "새 프로젝트·샘플·생성 데이터 검사",
+        "action": "새 Unity 프로젝트에서 컴파일·씬·바이너리·편집/Undo/Redo/저장과 Windows 빌드를 실행한다.",
+        "expected": "빌드와 실제 검사 실패0",
+        "qa": "현재 패키지를 만든 동일 스냅샷으로 검사한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "3370개 검증 조건·25씬·24바이너리 테이블, 실패0. Windows 빌드 성공."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Unity 내부 API를 공개 API로 교체",
+        "action": "비공개 창·선반·스포이트·캡처·아이콘 접근을 공개 EditorWindow와 공식 Win32 API로 바꾼다.",
+        "expected": "핵심 창 동작·PNG·색상 선택 보존과 공식 검사 실패0",
+        "qa": "실제 창·물리 클릭·색상·최대화·호버·복원·10회 반복과 소스·어셈블리 검사를 실행한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "최소화·호버·클릭 복원·미저장 값·Undo·최대화·PNG·색상 선택/취소 통과. 공식31통과·3경고·0실패."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "재촬영·제출 자료·공개 보고",
+        "action": "플레이어 선택 동작을 확인하고 실제 화면·간단한 스토어 원고·패키지와 검증 근거를 한 제출 폴더와 보고서에 모은다.",
+        "expected": "확인된 지원 범위와 파일·이미지·개별 공개 링크 일치",
+        "qa": "현재 플레이어·허브 선택과 파일 해시·사이트 본문·첨부를 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "doing",
+        "revision": 2,
+        "result": "샘플 선택 추가 계측 중. 미실행을 통과 처리하지 않습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "2026-11-01 11:57 KST 사용자가 기능을 유지한 공개 API 교체를 승인했습니다. 전체 Excel46TC 동일 구현 목표는 계속 일시정지이며 이번 제출 준비와 분리합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T03:56:55.759385+00:00",
+        "summary": "교체 중 선반 초기 렌더링 실패를 발견하고 보존했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "초기 선반 캡처가 검게 나왔습니다. 준비·숨김·최종 네이티브 배치와 노출 검사 대상을 수정했습니다.",
+            "evidence": "로컬 PublicApi/public-shelf-fixed-r2.png 및 이전 시도 폴더",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-01T04:31:38.856063+00:00",
+        "summary": "현재 교체본의 소스·네이티브 실행·패키지·공식 검사 결과를 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "1578개 파일·메타·GUID·8037참조 검사 오류0",
+            "evidence": "../assets/submission-202-20261101/ArchiveVerification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "3370검증조건·25씬·24테이블·빌드 성공",
+            "evidence": "../assets/submission-202-20261101/NativeSubmissionQA.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 창 동작·PNG·색상 선택과 10회 반복 통과, 공식31통과·3경고·0실패",
+            "evidence": "../assets/submission-202-20261101/PublicApiNativeQA.json / OfficialValidator.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

@@ -1,0 +1,7 @@
+Design Data Table 2.0.2 — reviewer notes
+Verified: Unity6000.0.83f1, Windows, Built-in samples. Unity UI and 2D Sprite required; shared TurnRoom Templete1.5.0 included.
+Native desktop windows, screen color picking and AI PNG previews use public EditorWindow APIs and documented Win32 APIs. No private Unity editor reflection is used in the shipped code paths audited for2.5.g.
+Asset Store Tools12.0.0:31 Pass,3 Warning,0 Fail. Warnings cover34 XLSX source archives,47 non-power-of-two textures and72 JPG documentation images. Sources are intentional editor inputs; Tools-category image-format exception2.4.3.a and conditional wording in2.4.3.h apply. Final review belongs to Unity.
+Native export:1578 files,8037 serialized references,0 archive/GUID/hash errors.25 sample scenes and24 generated binary tables verified.3370 assertions are not3370 independent user scenarios.
+AI integrations require Python3.10+ and an open idle Unity editor. Configure your own MCP/AI client; shared workbook data is available to that client. Review its permissions and privacy policy. No online AI subscription is bundled.
+Excel support is documented and partial. This release does not claim full Excel compatibility or universal platform support.

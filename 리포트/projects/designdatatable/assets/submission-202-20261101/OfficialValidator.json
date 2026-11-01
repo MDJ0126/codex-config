@@ -1,0 +1,489 @@
+{
+    "version": "12.0.0",
+    "commit": "944773fcec4d9e1551bc8058523e5ccb649ab87e",
+    "utc": "2026-11-01T04:08:49.0041070Z",
+    "endedUtc": "2026-11-01T04:09:11.7651564Z",
+    "status": "RanToCompletion",
+    "error": "",
+    "compilationErrors": false,
+    "pass": 31,
+    "warning": 3,
+    "fail": 0,
+    "tests": [
+        {
+            "title": "Check Animation Clips",
+            "status": "Pass",
+            "messages": [
+                "No animation clips with invalid names were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Audio Clipping",
+            "status": "Pass",
+            "messages": [
+                "No clipping audio files were detected."
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Colliders",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs have colliders!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Compressed Files",
+            "status": "Warning",
+            "messages": [
+                "The following .zip archives were found in the package content.\n� Zip archives should contain the keyword 'source' in the file name"
+            ],
+            "assets": [
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/ArcadeText.xlsx / ArcadeText",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/BlocksSettings.xlsx / BlocksSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/MiniGameBalance.xlsx / MiniGameBalance",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/PinballSettings.xlsx / PinballSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/PotionSettings.xlsx / PotionSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/RhythmSettings.xlsx / RhythmSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleCharacter.xlsx / SampleCharacter",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleDropItem.xlsx / SampleDropItem",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleShopProduct.xlsx / SampleShopProduct",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleSkill.xlsx / SampleSkill",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/CustomEnums/EnumAdventure.xlsx / EnumAdventure",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Localization/GameLanguage.xlsx / GameLanguage",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/Enemies.xlsx / Enemies",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/Equipment.xlsx / Equipment",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/ExampleEnums.xlsx / ExampleEnums",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ChartGallery.xlsx / ChartGallery",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ClosedShapeGradientsUi.xlsx / ClosedShapeGradientsUi",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/EmptyStringCoercion.xlsx / EmptyStringCoercion",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/GeneralSections.xlsx / GeneralSections",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/LocaleDefaultCalendar.xlsx / LocaleDefaultCalendar",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ShapeCatalog.xlsx / ShapeCatalog",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/BowlingSettings.xlsx / BowlingSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/CanyonSettings.xlsx / CanyonSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/CourierSettings.xlsx / CourierSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/DefenseSettings.xlsx / DefenseSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/DroneSettings.xlsx / DroneSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ExtraGamesText.xlsx / ExtraGamesText",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/GolfSettings.xlsx / GolfSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/LanderSettings.xlsx / LanderSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/MarbleSettings.xlsx / MarbleSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/SkyboundSettings.xlsx / SkyboundSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ThreeDSettings.xlsx / ThreeDSettings",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ThreeDText.xlsx / ThreeDText",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/WarehouseSettings.xlsx / WarehouseSettings"
+            ]
+        },
+        {
+            "title": "Check Empty Prefabs",
+            "status": "Pass",
+            "messages": [
+                "No empty prefabs were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check File Menu Names",
+            "status": "Pass",
+            "messages": [
+                "No MenuItems with invalid names were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Line Endings",
+            "status": "Pass",
+            "messages": [
+                "No scripts with inconsistent line endings were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check LODs",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs are meeting the LOD requirements!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Mesh Prefabs",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs have meshes!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Missing Components in Assets",
+            "status": "Pass",
+            "messages": [
+                "No assets have missing components!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Missing Components in Scenes",
+            "status": "Pass",
+            "messages": [
+                "No missing components were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Model Import Logs",
+            "status": "Pass",
+            "messages": [
+                "No issues were detected when importing your models!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Model Orientation",
+            "status": "Pass",
+            "messages": [
+                "All found models are facing the right way!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Model Types",
+            "status": "Pass",
+            "messages": [
+                "All models are of allowed formats!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Normal Map Textures",
+            "status": "Pass",
+            "messages": [
+                "All normal map textures have the correct texture type!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Package Naming",
+            "status": "Pass",
+            "messages": [
+                "All package asset names are valid!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Particle Systems",
+            "status": "Pass",
+            "messages": [
+                "No Particle Systems without Prefabs were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Path Lengths",
+            "status": "Pass",
+            "messages": [
+                "All package content matches the path limit criteria!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Prefab Transforms",
+            "status": "Pass",
+            "messages": [
+                "All found prefabs were reset!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Script Compilation",
+            "status": "Pass",
+            "messages": [
+                "All scripts in the project compiled successfully!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Shader Compilation",
+            "status": "Pass",
+            "messages": [
+                "All found Shaders have no compilation errors!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Texture Dimensions",
+            "status": "Warning",
+            "messages": [
+                "The following texture dimensions are not a power of 2:"
+            ],
+            "assets": [
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/backdrop.png / backdrop",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/brickOrange.png / brickOrange",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/paddle.png / paddle",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal0.png / animal0",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal1.png / animal1",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal2.png / animal2",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal3.png / animal3",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal4.png / animal4",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal5.png / animal5",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal6.png / animal6",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal7.png / animal7",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/backdrop.png / backdrop",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Dungeon/room.png / room",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/barrel_red.png / barrel_red",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/barrier_red.png / barrier_red",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/car_blue_1.png / car_blue_1",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/car_red_1.png / car_red_1",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/cone_straight.png / cone_straight",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/road.png / road",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/tree_large.png / tree_large",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/tree_small.png / tree_small",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor1.png / meteor1",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor2.png / meteor2",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor3.png / meteor3",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor4.png / meteor4",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/playerShip1_blue.png / playerShip1_blue",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/playerShip3_red.png / playerShip3_red",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtBrick.png / ArtBrick",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtCoin.png / ArtCoin",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtEnum.png / ArtEnum",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtFPS.png / ArtFPS",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtMemory.png / ArtMemory",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtMeteor.png / ArtMeteor",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtRPG.png / ArtRPG",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtRunner.png / ArtRunner",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtShop.png / ArtShop",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtSurvival.png / ArtSurvival",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbBrick.png / ThumbBrick",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbCoin.png / ThumbCoin",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbEnum.png / ThumbEnum",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbFPS.png / ThumbFPS",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbMemory.png / ThumbMemory",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbMeteor.png / ThumbMeteor",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbRPG.png / ThumbRPG",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbRunner.png / ThumbRunner",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbShop.png / ThumbShop",
+                "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbSurvival.png / ThumbSurvival"
+            ]
+        },
+        {
+            "title": "Check Type Namespaces",
+            "status": "Pass",
+            "messages": [
+                "All scripts contain valid namespaces!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove Executable Files",
+            "status": "Pass",
+            "messages": [
+                "No executable files were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove JavaScript Files",
+            "status": "Pass",
+            "messages": [
+                "No UnityScript / JS files were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove JPG Files",
+            "status": "Warning",
+            "messages": [
+                "The following textures are compressed as JPG/JPEG"
+            ],
+            "assets": [
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/addressables-table-registry-ui.jpg / addressables-table-registry-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/asset-create-menu-ui.jpg / asset-create-menu-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/cell-format-categories-ui.jpg / cell-format-categories-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/clipboard-range-paste-ui.jpg / clipboard-range-paste-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/clipboard-sparse-paste-ui.jpg / clipboard-sparse-paste-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/closed-shape-gradient-controls-ui.jpg / closed-shape-gradient-controls-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/closed-shape-gradient-ui.jpg / closed-shape-gradient-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Collection-GeneratedRows.jpg / Collection-GeneratedRows",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/custom-object-tooltip-ui.jpg / custom-object-tooltip-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/embedded-number-literals-ui.jpg / embedded-number-literals-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/empty-text-coercion-ui.jpg / empty-text-coercion-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/external-registration-ui.jpg / external-registration-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/formula-bar-game-fixed.jpg / formula-bar-game-fixed",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/formula-bar-viewer-fixed.jpg / formula-bar-viewer-fixed",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/game-data-tab-ko-ui.jpg / game-data-tab-ko-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/general-section-format-ui.jpg / general-section-format-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/HelpBox-DataTableFindError.jpg / HelpBox-DataTableFindError",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/HelpBox-DataTableFindInfo.jpg / HelpBox-DataTableFindInfo",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/index-zero-axis-ui.jpg / index-zero-axis-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindEmpty.jpg / Inspector-FindEmpty",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindMissing.jpg / Inspector-FindMissing",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindNarrow.jpg / Inspector-FindNarrow",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindResults.jpg / Inspector-FindResults",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-GeneratedTable.jpg / Inspector-GeneratedTable",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-TableTheme.jpg / Inspector-TableTheme",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/locale-calendar-month-preview.jpg / locale-calendar-month-preview",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/localization-data-ui.jpg / localization-data-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/logical-text-coercion-ui.jpg / logical-text-coercion-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-brick.jpg / mini-arcade-brick",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-coin.jpg / mini-arcade-coin",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-enum-paused-ko.jpg / mini-arcade-enum-paused-ko",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-enum.jpg / mini-arcade-enum",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-0.jpg / mini-arcade-extra-0",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-1.jpg / mini-arcade-extra-1",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-2.jpg / mini-arcade-extra-2",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-3.jpg / mini-arcade-extra-3",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-4.jpg / mini-arcade-extra-4",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-5.jpg / mini-arcade-extra-5",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-6.jpg / mini-arcade-extra-6",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-7.jpg / mini-arcade-extra-7",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-8.jpg / mini-arcade-extra-8",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-9.jpg / mini-arcade-extra-9",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-10.jpg / mini-arcade-extra-10",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-11.jpg / mini-arcade-extra-11",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-12.jpg / mini-arcade-extra-12",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-13.jpg / mini-arcade-extra-13",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-fps.jpg / mini-arcade-fps",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-hub.jpg / mini-arcade-hub",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-memory.jpg / mini-arcade-memory",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-meteor.jpg / mini-arcade-meteor",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-original-game-ko.jpg / mini-arcade-original-game-ko",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-original-shop-ko.jpg / mini-arcade-original-shop-ko",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-rpg.jpg / mini-arcade-rpg",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-runner.jpg / mini-arcade-runner",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-shop-paused-ko.jpg / mini-arcade-shop-paused-ko",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/object-properties-fill-ui.jpg / object-properties-fill-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/ribbon-screen-tip-copy.jpg / ribbon-screen-tip-copy",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/selection-add-mode-ui.jpg / selection-add-mode-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-catalog-ui.jpg / shape-catalog-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-custom-paths-ui.jpg / shape-custom-paths-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-insert-ui.jpg / shape-insert-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/sheet-tabs-curves-ui.jpg / sheet-tabs-curves-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/store-samples-ui.jpg / store-samples-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/taskbar-hover-peek-ui.jpg / taskbar-hover-peek-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/taskbar-hover-preview-ui.jpg / taskbar-hover-preview-ui",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-game-data-tools.jpg / unified-game-data-tools",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-game-home.jpg / unified-game-home",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-general-home.jpg / unified-general-home",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/window-motion-minimized.jpg / window-motion-minimized",
+                "Assets/TurnRoom/DesignDataTable/Documentation/images/window-motion-restored.jpg / window-motion-restored",
+                "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg / HelpBox-DarkWide",
+                "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg / HelpBox-LightWide"
+            ]
+        },
+        {
+            "title": "Remove Lossy Audio Files",
+            "status": "Pass",
+            "messages": [
+                "No lossy audio files were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove Mixamo Files",
+            "status": "Pass",
+            "messages": [
+                "No Mixamo files were found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove SpeedTree Files",
+            "status": "Pass",
+            "messages": [
+                "No SpeedTree assets have been found!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Remove Video Files",
+            "status": "Pass",
+            "messages": [
+                "No video files were found, looking good!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Demo Scenes",
+            "status": "Pass",
+            "messages": [
+                "Demo scenes found"
+            ],
+            "assets": [
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/00 Mini Arcade.unity / 00 Mini Arcade",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - 3D FPS.unity / Example - 3D FPS",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - 3D RPG.unity / Example - 3D RPG",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Beat Beacon.unity / Example - Beat Beacon",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Block Harbour.unity / Example - Block Harbour",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Brick Breaker.unity / Example - Brick Breaker",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Canyon Sprint.unity / Example - Canyon Sprint",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Coin Dash.unity / Example - Coin Dash",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Comet Pinball.unity / Example - Comet Pinball",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Custom Enum Battle.unity / Example - Custom Enum Battle",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Drone Arena.unity / Example - Drone Arena",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Dusk Patrol.unity / Example - Dusk Patrol",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Lantern Defense.unity / Example - Lantern Defense",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Lunar Lander.unity / Example - Lunar Lander",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Marble Circuit.unity / Example - Marble Circuit",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Memory Match.unity / Example - Memory Match",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Meteor Dodge.unity / Example - Meteor Dodge",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Neon Runner.unity / Example - Neon Runner",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Potion Match.unity / Example - Potion Match",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Putter Garden.unity / Example - Putter Garden",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Quiet Courier.unity / Example - Quiet Courier",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Skybound Steps.unity / Example - Skybound Steps",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Strike Lane.unity / Example - Strike Lane",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - UI (Shop).unity / Example - UI (Shop)",
+                "Assets/TurnRoom/DesignDataTable/Sample/Scenes/Example - Warehouse Push.unity / Example - Warehouse Push"
+            ]
+        },
+        {
+            "title": "Check Documentation",
+            "status": "Pass",
+            "messages": [
+                "Found documentation files"
+            ],
+            "assets": [
+                "Assets/TurnRoom/DesignDataTable/AI_INSTRUCTIONS.md / AI_INSTRUCTIONS",
+                "Assets/TurnRoom/DesignDataTable/DataTableSetupGuide.pdf / DataTableSetupGuide",
+                "Assets/TurnRoom/DesignDataTable/Documentation/Entries/index.html / index",
+                "Assets/TurnRoom/DesignDataTable/Documentation/fonts/Inter-LICENSE.txt / Inter-LICENSE",
+                "Assets/TurnRoom/DesignDataTable/Documentation/fonts/Pretendard-LICENSE.txt / Pretendard-LICENSE",
+                "Assets/TurnRoom/DesignDataTable/Documentation/index.html / index",
+                "Assets/TurnRoom/DesignDataTable/Documentation/ReleaseNotes-2.0.2.md / ReleaseNotes-2.0.2",
+                "Assets/TurnRoom/DesignDataTable/Documentation/UserGuide.en.pdf / UserGuide.en",
+                "Assets/TurnRoom/DesignDataTable/Documentation/UserGuide.ko.pdf / UserGuide.ko",
+                "Assets/TurnRoom/DesignDataTable/Documentation/Verification.md / Verification",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/Localization/README.md / README",
+                "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/README.md / README",
+                "Assets/TurnRoom/DesignDataTable/Sample/Documentation/CODE-STYLE.md / CODE-STYLE",
+                "Assets/TurnRoom/DesignDataTable/Sample/START-HERE.ko.md / START-HERE.ko",
+                "Assets/TurnRoom/DesignDataTable/Sample/START-HERE.md / START-HERE",
+                "Assets/TurnRoom/DesignDataTable/START-HERE.md / START-HERE",
+                "Assets/TurnRoom/DesignDataTable/Third-Party Notices.txt / Third-Party Notices",
+                "Assets/TurnRoom/DesignDataTable/ThirdParty/DrawingML/LICENSE.txt / LICENSE",
+                "Assets/TurnRoom/Templete/README.md / README",
+                "Assets/TurnRoom/Templete/Runtime/Resources/TurnRoom/Fonts/OFL.txt / OFL"
+            ]
+        },
+        {
+            "title": "Check Package Size",
+            "status": "Pass",
+            "messages": [
+                "Your package does not exceed the maximum allowed package size!"
+            ],
+            "assets": []
+        },
+        {
+            "title": "Check Project Template Assets",
+            "status": "Pass",
+            "messages": [
+                "No common assets that might cause asset clashing were found!"
+            ],
+            "assets": []
+        }
+    ]
+}

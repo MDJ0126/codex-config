@@ -1,0 +1,27 @@
+{
+  "runtimeVerifiedSeparately": true,
+  "scope": "Compiled type-reference audit only; explicit reflection-source review is recorded separately.",
+  "utc": "2026-11-01T04:07:32.1964584Z",
+  "findings": [],
+  "remainingReflection": "Own serialized/generated data; optional public Addressables API; stack trace method names",
+  "assemblies": [
+    {
+      "internalUnityReferences": 0,
+      "assembly": "DesignDataTable.Runtime",
+      "typeReferences": 90,
+      "sha256": "c3608b5748f3023bb296ed252533108dfee73590de219550d493a7d993decd5e"
+    },
+    {
+      "internalUnityReferences": 0,
+      "assembly": "TurnRoom.Editor",
+      "typeReferences": 242,
+      "sha256": "4f36db197480741ed67ad9bb840aa88716675ebf5c0dc9fe6aaed7d815666ac6"
+    },
+    {
+      "internalUnityReferences": 0,
+      "assembly": "DesignDataTable.Editor",
+      "typeReferences": 436,
+      "sha256": "7384c54d65708af1eb026172abdbc7de4fc3c304ff0e8b375ba456e783371bf8"
+    }
+  ]
+}
