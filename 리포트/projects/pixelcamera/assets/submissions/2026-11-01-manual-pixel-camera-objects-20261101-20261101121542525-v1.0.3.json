@@ -1,0 +1,319 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelcamera",
+    "kind": "manual",
+    "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+    "summary": "깊이를 보존하는 혼합 렌더링·물체별 픽셀 크기/외곽선과 렌더 시점 스냅, 기본 회전/외곽선 조작을 구현합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "포커스/GUI 조작 금지 유지: 새 Unity/플레이어/Affinity 실행·재시작·창 전환·마우스/키보드 조작을 하지 않았습니다. 현재 Built-in/URP 실제 렌더·깊이/잔여 재투영/상태 복원, Inspector 편집·Undo·저장/재열기, GPU 팔레트 추출·LUT/클립 베이크 왕복, Animator blend/IK/root motion/physics/restore, Graph UI/재임포트, 샘플 실제 입력, 신규 프로젝트 설치, 현재 화면 캡처가 미실행입니다. Native 실행 QA는 정적 검사로 대체하지 않습니다. 실제 Affinity 키이미지·icon/card 작업은 MCP 연결 거부로 진행할 수 없었습니다. 판매자/공개 지원 연락처·사이트는 미확정, 가격은 사용자가 명시적으로 보류하여 null입니다. 업로드·심사 제출·자동 게시를 하지 않았습니다. 교훈 검토: 도구 전처리 실패와 실제 셰이더 결함을 분리하고 독립 컴파일러로 재검증한 사실은 프로젝트 QA에 기록했습니다. 전역의 근거/미확인·헤드리스 구분 규칙에 이미 포함되므로 전역 지침 추가·통합 변경 없음.",
+    "outcome": "부족한 저작·크기·스타일·재투영 코드를 추가하고 실제 공유 알고리즘 실행/소스·고객 템플릿 컴파일/셰이더·파일 포장 검사를 완료했습니다. Native Unity와 실제 제출 준비의 남은 항목은 보존합니다.",
+    "proposedTime": "이번 후속90~150분",
+    "actualTime": "후속 시작2026-11-01 19:21:57 KST. 구현·헤드리스/정적 검사·후보 포장까지 2026-11-01 21:15:34 KST, 113분 37초. 공개 배포는 이후 별도 확인하며 native QA와 전체 제출 준비 완료 시각은 아직 없습니다.",
+    "xerjEvidence": "Status: XERJ node is not running. rg·현재 소스와 실제 Unity 결과로 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-objects-20261101",
+    "round": 4,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "선택한 물체별 해상도와 비픽셀 배경을 합성하고 물체 이동 스냅·복원을 검증. 세 샘플 기본 자동 회전과 명시적 외곽선 버튼 제공",
+    "completionCriteria": "기존 기본 경로 호환 유지, 실제 Unity 렌더의 서로 다른 크기/배경보존/깊이/이동·계층·다중카메라 복원 및 회귀, Inspector·샘플·가이드·패키지·공개 보고. 네이티브 입력 및 새 URP 프로세스 미실행은 명시",
+    "previousManual": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-objects-20261101-20261101102728468-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "설계·상태 보존 계약",
+        "action": "기존 렌더/프리셋 및 Unity6 API 대조, 깊이·크기 버킷·복원 계약 정의",
+        "expected": "기존 FullCamera 기본값 호환 및 렌더 시점 변경의 정확한 복원",
+        "qa": "현재 소스/API 및 실제 복원 검사 설계",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "물체별 렌더와 스냅",
+        "action": "선택 컴포넌트·크기별 저해상도 캡처·깊이 합성·위치/선택 회전 스냅 및 복원 구현",
+        "expected": "비픽셀 배경, 다른 픽셀 크기, 앞 물체 가림과 게임 좌표 보존",
+        "qa": "실제 Unity 색/깊이/동일 셀 렌더 및 다중카메라/상태 복원 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "qa",
+        "revision": 2,
+        "result": "화면/월드/비율 크기, 선택 원근 앵커와 잔여 합성 재투영·방향성 외곽선 공통 코드까지 추가. 소스6개·고객/템플릿7개 컴파일 및31셰이더 엔트리 정적 커버. 실제 픽셀·복원 검증은 미실행."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "URP 통합 및 호환",
+        "action": "기존 RenderGraph에 물체 필터/합성 경로 연결, FullCamera 회귀 보존",
+        "expected": "원래 모드 유지 및 신규 경로 미지원/한계 명시",
+        "qa": "현재17.0.4 소스/참조 대조와 가능한 컴파일·기존 실행 검사. 신규 URP GUI 실행 보류 명시",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": "URP17.0.4 공통 단위/재질/Meta+Composite 연결·툰/Graph API 정적 컴파일. 한 vendor macro는 Unity-bundled DXC legacy expansion으로 검증. 현재 URP native실행은 보류."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "Inspector와 예제 조작",
+        "action": "템플릿 Inspector, 세 씬 자동 회전/4·8px와 외곽선·스냅 조작. 배치·스타일·정적 문구·버튼 연결은 각 ShowcaseGuide.prefab의 native UGUI/Inspector 영구 이벤트로 작성하고 런타임 생성 제거; X 크기·M 잔여이동·B 베벨·D 디더·V 툰 비교와13/13/14개 영구 이벤트 반영",
+        "expected": "시작 회전과 외곽선/스냅 버튼 값·화면 일치, UI를 씬/프리팹에서 편집 가능",
+        "qa": "프리팹 import·씬 배치·Inspector 이벤트 대상·실제 클릭/키의 반환 값과 렌더를 대조. 현재 정적 파일 검사만 통과, native UI QA 보류",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 3,
+        "result": "새13/13/14개 영구 이벤트의 내부fileID·메서드·CanvasRenderer, overlay·autoRotate·4/8px 초기값 검사 통과. 현재 native import/레이아웃/클릭은 미확인."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "회귀·문서·패키지·공개",
+        "action": "새 렌더 캡처와9개 언어 가이드, 패키지 전수 대조와 JSON 기반 공개 보고",
+        "expected": "검증 범위와 제약을 포함한 구현 결과·개별 HTTPS 보고서",
+        "qa": "전체 관련 렌더 회귀·에셋/메타/링크·실제 공개 바이트 대조",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": "9개 언어 저작 가이드·API/제한·업데이트된 사용자 가이드·1134개 로컬 링크 검사,611개 패키지 asset/meta 및 ZIP CRC/바이트 대조 통과. 실제 재촬영/신규 설치·게시 확인은 별도."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "해상도·서브픽셀 안정화",
+        "action": "카메라/물체의 화면 비율·월드 단위, 원근 루트 스냅 옵션과 합성 오프셋 구현",
+        "expected": "기존 기본값 보존, 단위 변환·화면 잔여 이동과 깊이 합성 계약 명시",
+        "qa": "컴파일·CPU 수학/경계 검사, 실제 Unity 렌더 QA 보류",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "화면/월드/비율 계산과 줌, 셀 중심·잔여 이동 수학은 실제 공유 C# 코드에서 검사. Root smooth9이웃 재투영과 선택 원근 앵커 구현; 교차/뼈/모든 원근 안정화는 보장하지 않으며 native렌더 대기."
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "팔레트·디더 저작",
+        "action": "RGB/원형HSV 매칭·이미지 팔레트 추출·3D LUT·4/8/사용자 디더 구현",
+        "expected": "원본 이미지/프리셋 보존, 재생성 가능 LUT와 재현 가능한 패턴",
+        "qa": "실제 알고리즘 입력/출력 테스트·HLSL 컴파일·에셋 API 검사",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "RGB/원형HSV·median-cut 추출·2/4/8/custom 임계값·float32 Texture3D lookup 및 stale-signature fallback API 구현. 입력 불변/알파/순위·팔레트 인덱스·어두운 선형색 보존 등 CPU검사 통과. 실제 텍스처/에셋 왕복은 미실행."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "툰 조명·외곽선·Shader Graph",
+        "action": "툰 재질과 방향성 외곽선, 문서화된 Shader Graph Custom Function 계약 추가",
+        "expected": "원래 재질 경로와 신규 선택 기능 구분, 사용 가능한 함수/재질 제공",
+        "qa": "정확한 Unity/URP 참조·HLSL 컴파일, 실제 렌더/Graph UI 미확인 구분",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "툰 bands/주광원ramp/shadow tint/ambient/rim/emission, Built-in forward/add/shadow 및 URP forward/shadow/depth/normal 패스, directional edge lighting과Graph17 float 함수5개 구현. 정적 셰이더/Texture3D wire계약 통과; 전용SubTarget이나 기하 bevel은 아님."
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "애니메이션 저작",
+        "action": "Animator 단계 재생과 원본을 보존하는 클립 베이크 API/편집 UI 추가",
+        "expected": "재생/전환과 원본 메타·이벤트 보존, 일반 클립 변환 작업 제공",
+        "qa": "C#·타임샘플/상수 곡선 알고리즘 검사, 실제 Animator 실행 QA 대기",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "원본을 보존하는 고유 stepped.anim 복사·constant tangent·event/reference/settings 유지 및 200만key제한 API/Inspector, 수동 Animator clock·flag복원 컴포넌트 구현. 프레임 시간표 CPU검사/C#컴파일 통과. Native Animator/Clip왕복은 미실행."
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "title": "제출 준비·문서·포장",
+        "action": "9개 언어 설명과 현재 기능 차이·제출 필드/의존성/파일·최종 후보 갱신",
+        "expected": "안전한 후보와 사실에 맞는 제출 체크리스트. GUI/미확정 판매자 필드는 명시",
+        "qa": "패키지 asset/meta/연결·문서 링크·게시 검증. Native UI/신규설치/Affinity 제한 기록",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "현재611에셋 후보와 체크리스트/정확한 listing·AI disclosure/지원 범위 작성, static-customer7어셈블리·31셰이더·24187알고리즘검사·946GUID참조·1134문서링크 통과. 가격미정/null·native/미디어/판매자 게이트 유지."
+      }
+    ],
+    "focusTasks": [
+      "T02",
+      "T06",
+      "T07",
+      "T08",
+      "T09"
+    ],
+    "scopeChange": "기존10개 작업과 모든 QA이력을 유지합니다. T02/T03 r2는 새 단위·재투영/스타일 공통 코드, T04 r3는 X/M/B/D/V와13/13/14개 native 영구 이벤트, T05 r2는9언어 저작 가이드와 현재 후보를 반영합니다. Native실행/화면 기준을 줄이지 않았으며 가격은 사용자 결정 보류를 기록합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T09:02:16.8117727Z",
+        "summary": "첫 실제 Unity 셰이더 probe 실패를 보존합니다. 상위 명령 passed가 내부 QA의 실패를 덮지 않도록 bridge 소스도 수정했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "PixelCameraObjects.isSupported/ShaderHasError 검사 실패. 이후 메시지에서 HLSL 예약어 triangle, line의 사용 오류를 확인했습니다.",
+            "evidence": "UnityProbe-1/2/3.json. 아직 픽셀 비교 단계에 도달하지 않았으므로 물체별 렌더/안정화 통과 증거가 아닙니다.",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-01T09:03:40.4798796Z",
+        "summary": "수정 전 Unity 예약어 오류 확인. 예약어를 바꾸고 static D3DCompile로 재검사했지만 컴퓨터 조작 중지 후 Unity 장면 QA는 보류했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Unity에서 unexpected token line 및 파생 오류가 확인됐습니다. 해당 식별자는 edgeSample로 변경했습니다. triangle도 fullscreenVertex로 변경했습니다.",
+            "evidence": "UnityProbe-3.json; 수정 후 Shaders.json의8개 엔트리/인스턴싱 변형은 hresult0. Unity 재-probe 미실행.",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-11-01T09:32:34.890Z",
+        "summary": "최종 현재 소스 정적 컴파일, 직렬화 참조, 패키지 바이트 대조 통과. Unity 화면/입력/설치 전체 QA와 구분합니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다.",
+            "evidence": "CSharp.json의6개 컴파일 exitCode0 및 현재 소스 해시. FullCamera enum0과 기존 분기 유지 확인.",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "PixelCameraObject/렌더 스코프/크기 버킷/float ID+눈 깊이 합성/루트 스냅·복원 코드를 구현했습니다. 첫 Unity 셰이더 실패의 예약어를 수정했고 정적 HLSL8항목 통과. 수정 후 Unity 재실행·렌더/복원 QA는 미실행.",
+            "evidence": "CSharp.json/ Shaders.json은 정적 통과. 픽셀·좌표 복원 실제 비교 미실행",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "URP RenderGraph 필터·합성·원본 rendering-layer 보존 및 재질 정리 코드와 정확한17.0.4 참조 컴파일 통과. 실행 QA 대기.",
+            "evidence": "정확한 URP17.0.4 참조 정적 컴파일 exitCode0. 새 URP 프로세스 실행 없음",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "세 기존 씬 각각4/8px 컴포넌트2개·autoRotate1·프리팹 연결, native CanvasRenderer/Text/Image와 버튼8/8/9개 영구 대상/메서드 참조 검사 통과. 실제 import/화면/클릭은 미확인.",
+            "evidence": "SerializedAssets.json:3씬·2루트씩·UI영구버튼8/8/9·내부 fileID/CanvasRenderer 확인. 실제 Unity import/클릭 미실행",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "9개 번역 설명·한계·미촬영 표시 갱신, 기존 캡처 해시 보존. 고객 패키지590개 asset/meta 전수 바이트 대조 통과. 설치·화면·공개 배포 QA는 별도.",
+            "evidence": "PackageAudit.json asset/meta 전수 대조, ZIP CRC/바이트 대조. fresh import/재촬영 미실행",
+            "dependencies": {
+              "T04": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-01T12:15:34.639Z",
+        "summary": "현재 소스와 고객 후보의 실제 헤드리스/정적 검사. FXC 전처리 실패를 보존하고 같은 instancing 입력의 DXC 대체 컴파일을 별도 기록했습니다. Native QA는 미실행입니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "화면/월드/비율 크기, 선택 원근 앵커와 잔여 합성 재투영·방향성 외곽선 공통 코드까지 추가. 소스6개·고객/템플릿7개 컴파일 및31셰이더 엔트리 정적 커버. 실제 픽셀·복원 검증은 미실행.",
+            "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "화면/월드/비율 계산과 줌, 셀 중심·잔여 이동 수학은 실제 공유 C# 코드에서 검사. Root smooth9이웃 재투영과 선택 원근 앵커 구현; 교차/뼈/모든 원근 안정화는 보장하지 않으며 native렌더 대기.",
+            "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "RGB/원형HSV·median-cut 추출·2/4/8/custom 임계값·float32 Texture3D lookup 및 stale-signature fallback API 구현. 입력 불변/알파/순위·팔레트 인덱스·어두운 선형색 보존 등 CPU검사 통과. 실제 텍스처/에셋 왕복은 미실행.",
+            "evidence": "Algorithms.json 24187검사·CPU input/indices/oracle 통과. Native Texture3D/추출/재열기 미실행",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "툰 bands/주광원ramp/shadow tint/ambient/rim/emission, Built-in forward/add/shadow 및 URP forward/shadow/depth/normal 패스, directional edge lighting과Graph17 float 함수5개 구현. 정적 셰이더/Texture3D wire계약 통과; 전용SubTarget이나 기하 bevel은 아님.",
+            "evidence": "CompositeShaders13개+ToonGraphShaders17개 FXC 통과, vendor instancing1개는 동일 입력으로 DxcInstancing 통과. native렌더/Graph미실행",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "원본을 보존하는 고유 stepped.anim 복사·constant tangent·event/reference/settings 유지 및 200만key제한 API/Inspector, 수동 Animator clock·flag복원 컴포넌트 구현. 프레임 시간표 CPU검사/C#컴파일 통과. Native Animator/Clip왕복은 미실행.",
+            "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

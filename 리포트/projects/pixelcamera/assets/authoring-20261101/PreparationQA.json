@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-01T12:12:31.092486+00:00",
+  "passed": true,
+  "scope": "Headless algorithms, static source/ABI/shader/serialized/HTML/packaging contracts; no native Unity rendering or desktop input",
+  "sourceAssemblies": 6,
+  "customerAssembliesIncludingTemplate": 7,
+  "algorithmAssertions": 24187,
+  "shaderEntriesCovered": 31,
+  "fxcSuccessfulEntries": 30,
+  "dxcAlternativeEntries": 1,
+  "fxcFailureRetained": "One vendor instancing macro needs legacy expansion; Unity-bundled DXC covers the identical input. No release DXIL is shipped.",
+  "sourceHashesMatch": true,
+  "customerReferences": 946,
+  "documentationLinks": 1134,
+  "localizedAuthoringGuides": 9,
+  "nativeGuidePersistentButtons": [
+    13,
+    13,
+    14
+  ],
+  "screenshotRecapture": "pending; historical image/source records preserved",
+  "nativeUnityQA": "not run",
+  "freshInstall": "not run",
+  "price": "owner deferred; null remains"
+}

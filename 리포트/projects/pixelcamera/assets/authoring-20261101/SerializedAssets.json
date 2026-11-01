@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-01T11:34:09.289288+00:00",
+  "passed": true,
+  "scope": "Static serialized asset/reference/event inspection only, not native Unity import, UI click or rendered output",
+  "scenes": [
+    {
+      "scene": "Assets/TurnRoom/PixelCamera/Samples/Scenes/01-ClockworkGarden.unity",
+      "sceneSha256": "cf56a3fdf9e1fff24746c44261edec28d4c11ca0afb098b1c26f6676f1c58767",
+      "guidePrefab": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ShowcaseGuide.prefab",
+      "prefabSha256": "03d7a92cb468b717728942f9306ae518f042d2fdc2add4f35b3661af6714d37b",
+      "objectSizes": [
+        4,
+        8
+      ],
+      "autoRotateSerialized": true,
+      "persistentButtons": 13,
+      "overlaySerialized": true,
+      "internalReferencesResolve": true,
+      "canvasRenderersPresent": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixelCamera/Samples/Scenes/02-NeonCourier.unity",
+      "sceneSha256": "c78bcfe648cf326962f30d1ab4828748945a829c1611ddd3a535aa5df512d7d3",
+      "guidePrefab": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/ShowcaseGuide.prefab",
+      "prefabSha256": "3631aa4e187f2383c56722f4c42140ada4c68e431383f4349b1ddd89e22782fc",
+      "objectSizes": [
+        4,
+        8
+      ],
+      "autoRotateSerialized": true,
+      "persistentButtons": 13,
+      "overlaySerialized": true,
+      "internalReferencesResolve": true,
+      "canvasRenderersPresent": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixelCamera/Samples/Scenes/03-SunkenObservatory.unity",
+      "sceneSha256": "1c23255aac64f5ce2bccf5aacc627faca51007934aea3db967fe345e2c444bdf",
+      "guidePrefab": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/ShowcaseGuide.prefab",
+      "prefabSha256": "bd98f8036665edfa062ea7ed32257f57740ce7d354920bbcffbe7941f2c0d643",
+      "objectSizes": [
+        4,
+        8
+      ],
+      "autoRotateSerialized": true,
+      "persistentButtons": 14,
+      "overlaySerialized": true,
+      "internalReferencesResolve": true,
+      "canvasRenderersPresent": true
+    }
+  ],
+  "sampleRuntimeCreatesUI": false,
+  "ninePresetsSelectedObjects": true,
+  "recapture": "pending; prior image/source hashes retained"
+}

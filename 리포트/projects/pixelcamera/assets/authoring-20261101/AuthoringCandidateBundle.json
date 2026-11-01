@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-01T12:12:31.814945+00:00",
+  "passed": true,
+  "scope": "ZIP CRC and original byte comparison, not Unity import",
+  "bytes": 14550348,
+  "sha256": "2536a73f7f70e177c7716a45e1ba8db368517fb6a11d40b36bd1f01bc6b2d785",
+  "entries": [
+    "README.md",
+    "SUBMISSION-GATES.md",
+    "TurnRoom-PixelCamera-1.0.0.unitypackage",
+    "Listing/AI-Disclosure.en.txt",
+    "Listing/Description.en.txt",
+    "Listing/PortalFields.json",
+    "Listing/ReleaseNotes.en.txt",
+    "Listing/ReviewerNotes.en.txt",
+    "Review/PackageAudit.json",
+    "Review/ShowcasePackage.json",
+    "Review/SubmissionStatus.json",
+    "Review/AuthoringCSharp.json",
+    "Review/CustomerCSharp.json",
+    "Review/AuthoringAlgorithms.json",
+    "Review/CompositeShaders.json",
+    "Review/ToonGraphShaders.json",
+    "Review/DxcInstancing.json",
+    "Review/AuthoringAssets.json",
+    "Review/PreparationQA.json"
+  ],
+  "historicalScreenshotsAndValidationExcluded": true
+}
