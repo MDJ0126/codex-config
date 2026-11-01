@@ -1,5 +1,110 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101140332175-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-01-manual-20261101140332175-v1.0.0.md",
+    "date": "2026-11-01T14:03:32.175Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-menu-cleanup",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "턴룸 메뉴 통합·제품 및 개발 도구 분류",
+      "summary": "제품·공통 명령·개발 도구로 TurnRoom 메뉴를 통합하고 중복 진입점과 문서 경로를 정리했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "현재 Unity 메뉴 순서·구분선·클릭·단축키·현재 화면 캡처는 보류. 전체 문서 검사479건의 불일치·재캡처 대기를 보존했습니다. 교훈 검토: 전역 지침 변경 없음. 프로젝트별 파일 매핑 오류와 검증한 원자 교체는 MenuLayout.md에 기록했습니다.",
+      "outcome": "소스 메뉴 정리와 관련15개 어셈블리 컴파일을 마쳤습니다. 실제 Unity 메뉴의 현재 화면·클릭 검증은 기존 화면 조작 제한으로 보류입니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-01 22:52:18 KST 시작. 23:01 KST까지 메뉴 구현·정적 검증과 문서 갱신 진행. 실제 UI QA 전체 완료 시각 없음.",
+      "xerjEvidence": "Xerj.ps1 Status: XERJ node is not running. 기존 화면·포커스 제한 아래 새 데몬을 실행하지 않고 rg와 현재 소스를 직접 대조했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-menu-cleanup",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "제품과 공통 명령을 한 메뉴에 모으고 중복·개발 항목을 정리합니다.",
+      "completionCriteria": "등록 경로·단축키·기능·컴파일·문서·실제 메뉴 화면·공개 보고를 검증합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "메뉴 등록 경로·분류 정리",
+          "action": "제품4개와 공통 명령을 TurnRoom에 통합하고 개발 항목·중복 별칭을 정리합니다.",
+          "expected": "기능 본문·단축키·검증 함수 쌍을 보존하며 중복 경로를 제거합니다.",
+          "qa": "원본과 현재 소스의 메뉴 외 본문·단축키·경로·우선순위·검증 쌍을 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "36개 파일의 메뉴 속성을 정리했고 중복 별칭11개·단축키7개·기능 본문과 URP 검증 쌍을 대조했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "컴파일·문서·실제 메뉴 QA",
+          "action": "관련 전체 어셈블리 컴파일,9개 언어 안내 갱신, 실제 메뉴 실행·캡처와 공개 보고를 수행합니다.",
+          "expected": "현재 소스 컴파일·안내 경로·네이티브 메뉴 QA를 구분하여 기록합니다.",
+          "qa": "15개 어셈블리와 문서 연결 검사 후 실제 Unity 메뉴 순서·클릭·현재 화면을 확인합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "15개 어셈블리 컴파일 통과.9개 언어 안내 갱신과45개 공통 문서 연결 통과. 실제 메뉴 조작·캡처는 기존 화면 조작 제한으로 보류."
+        }
+      ],
+      "focusTasks": [
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T14:03:23.072Z",
+          "summary": "메뉴 속성·기능 본문·컴파일 대조. 실제 메뉴 QA는 미실행입니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "36개 파일의 메뉴 속성을 정리했고 중복 별칭11개·단축키7개·기능 본문과 URP 검증 쌍을 대조했습니다.",
+              "evidence": "../assets/menu-cleanup-20261101/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "15개 어셈블리 컴파일 통과.9개 언어 안내 갱신과45개 공통 문서 연결 통과. 실제 메뉴 조작·캡처는 기존 화면 조작 제한으로 보류.",
+              "evidence": "../assets/menu-cleanup-20261101/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101133650886-v1.0.0.html",
     "postPath": "projects/turnroom/posts/2026-11-01-manual-20261101133650886-v1.0.0.md",
     "date": "2026-11-01T13:36:50.886Z",

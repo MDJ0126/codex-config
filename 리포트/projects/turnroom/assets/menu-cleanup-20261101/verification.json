@@ -1,0 +1,154 @@
+{
+  "at": "2026-11-01T14:03:23.058Z",
+  "menus": {
+    "at": "2026-11-01T14:00:45.998Z",
+    "passed": true,
+    "rootOrder": [
+      {
+        "name": "Design Data Table",
+        "priority": 100
+      },
+      {
+        "name": "Pixora",
+        "priority": 200
+      },
+      {
+        "name": "Pixel Camera",
+        "priority": 300
+      },
+      {
+        "name": "Entity Forge",
+        "priority": 400
+      },
+      {
+        "name": "Settings",
+        "priority": 1000
+      },
+      {
+        "name": "Windows",
+        "priority": 1001
+      },
+      {
+        "name": "Install Product Package...",
+        "priority": 1020
+      },
+      {
+        "name": "Development",
+        "priority": 2000
+      }
+    ],
+    "changedFiles": 36,
+    "menuEntries": 51,
+    "removedAliases": 11,
+    "preservedShortcuts": [
+      "%#F10",
+      "%#F11",
+      "%#F5",
+      "%#F6",
+      "%#F7",
+      "%#F8",
+      "%#F9"
+    ],
+    "actionBodiesUnchanged": true,
+    "validationPairsPreserved": true,
+    "nativeUnityExecuted": false,
+    "nativeQa": "Menu visibility, ordering, clicks and current screenshots remain pending under the existing desktop-operation restriction."
+  },
+  "compilation": {
+    "guiProcessStarted": false,
+    "assemblies": [
+      {
+        "name": "DesignDataTable.Runtime",
+        "exitCode": 0,
+        "sourceCount": 8
+      },
+      {
+        "name": "TurnRoom.PixelCamera.Runtime",
+        "exitCode": 0,
+        "sourceCount": 12
+      },
+      {
+        "name": "TurnRoom.Editor",
+        "exitCode": 0,
+        "sourceCount": 41
+      },
+      {
+        "name": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0,
+        "sourceCount": 7
+      },
+      {
+        "name": "Pixora.Editor",
+        "exitCode": 0,
+        "sourceCount": 44
+      },
+      {
+        "name": "DesignDataTable.Editor",
+        "exitCode": 0,
+        "sourceCount": 303
+      },
+      {
+        "name": "TurnRoom.Templete.Development.Editor",
+        "exitCode": 0,
+        "sourceCount": 5
+      },
+      {
+        "name": "TurnRoom.EntityForge.Runtime",
+        "exitCode": 0,
+        "sourceCount": 4
+      },
+      {
+        "name": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0,
+        "sourceCount": 10
+      },
+      {
+        "name": "DesignDataTable.Samples.Editor",
+        "exitCode": 0,
+        "sourceCount": 13
+      },
+      {
+        "name": "Pixora.Samples.Editor",
+        "exitCode": 0,
+        "sourceCount": 12
+      },
+      {
+        "name": "TurnRoom.PixelCamera.Development",
+        "exitCode": 0,
+        "sourceCount": 7
+      },
+      {
+        "name": "TurnRoom.PixelCamera.URP",
+        "exitCode": 0,
+        "sourceCount": 1
+      },
+      {
+        "name": "TurnRoom.PixelCamera.URP.Editor",
+        "exitCode": 0,
+        "sourceCount": 1
+      },
+      {
+        "name": "TurnRoom.EntityForge.Development.Editor",
+        "exitCode": 0,
+        "sourceCount": 5
+      }
+    ]
+  },
+  "documentation": {
+    "languages": 9,
+    "currentImages": 57,
+    "errors": 479,
+    "fullGuidePassed": false,
+    "captures": "Existing capture hashes preserved; native menu recapture pending."
+  },
+  "fileWriteRecovery": {
+    "observedError": "Windows user-mapped section open; truncation rejected",
+    "method": "Exact prepared files replaced atomically on the same volume and SHA-256 compared",
+    "verifiedActionBodies": 36
+  },
+  "lessons": {
+    "globalInstructions": "unchanged",
+    "projectNote": "Docs/Development/MenuLayout.md",
+    "reason": "Existing preservation, evidence and scope rules already apply."
+  }
+}
