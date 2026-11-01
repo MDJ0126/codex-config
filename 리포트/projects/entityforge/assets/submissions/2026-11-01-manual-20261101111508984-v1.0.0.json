@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "manual",
+    "title": "Entity Forge 기본 창 장식 재발 수정",
+    "summary": "기본 제목줄·탭 제거와 재열기·도메인 재로드 회귀를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "최초 수정 15~30분; 중단 후 재개 검증·마무리 10~20분",
+    "actualTime": "최초 시작 2026-11-01 19:21:53 Asia/Seoul, 중단 후 20:12:30 재개. 작업 중.",
+    "xerjEvidence": "Status: 노드 미실행. Search 복구 시 data/node.lock 사용 중으로 실패하여 현재 소스와 rg로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "entity-forge-frame-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Entity Forge가 기존 제품과 같은 공통 독립 프레임만 표시하도록 수정합니다.",
+    "completionCriteria": "기본 창 이전, 닫기·재열기, 반복 Open, 실제 스크립트 재로드 후 PopupMenu와 단일 창 유지; 실제 화면·9개 언어 가이드·패키지·공개 보고 갱신.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "창 수명 경로 수정",
+        "action": "기존 제품 Popup·custom-frame과 비교하여 기존 기본 창 이전 및 도메인 재로드 복원",
+        "expected": "기본 장식 없이 공통 제목줄 하나",
+        "qa": "실제 소스·Unity 컴파일 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 재발 회귀",
+        "action": "기본 창 이전·닫기 재열기·반복 Open·스크립트 재로드 실행",
+        "expected": "PopupMenu, customFrame=true, 창 하나; 도메인 식별자 변경",
+        "qa": "실제 Unity 상태 JSON과 네이티브 화면 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서·패키지·공개 기록",
+        "action": "검사한 실제 화면과 현재 소스 해시로 9개 언어 가이드·보고서·패키지 갱신",
+        "expected": "문서 링크·파일 대조·공개 개별 URL과 첨부 접근 성공",
+        "qa": "문서·패키지 검증과 공개 배포 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

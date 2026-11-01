@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "product": "Entity Forge",
+  "status": "verified-for-window-frame",
+  "uiLanguage": "en",
+  "captures": [
+    {
+      "file": "Images/EditorDark.png",
+      "capturedAt": "2026-11-01T11:18:38.6573429Z",
+      "sha256": "a86fd880528a62acbc78c5a6a24f5785a63fdc29035278637b9f7a536163a3d5",
+      "bytes": 76053,
+      "width": 1000,
+      "height": 680,
+      "uiLanguage": "en",
+      "observedScope": "Actual native Unity screen, shared frame only; no native title bar or docking tab; theme/layout visually inspected. Physical input and translated layouts not claimed.",
+      "sourceHashes": {
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "9209dba3370aadbb6dc2bac9eeaa45bbbfb5607f1cd57eee0b20b979ee15743e",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+      },
+      "loadedAssemblyHash": "4b22b10575229c036233db5e9812d1dd4a89b297bd1acaa939d7368ee9e3f8b4"
+    },
+    {
+      "file": "Images/EditorLight.png",
+      "capturedAt": "2026-11-01T11:18:45.9756323Z",
+      "sha256": "5d7b1766c8881eee4d82c979ee7d2719e3a9adaa30f946f47c438313a812acae",
+      "bytes": 75828,
+      "width": 1000,
+      "height": 680,
+      "uiLanguage": "en",
+      "observedScope": "Actual native Unity screen, shared frame only; no native title bar or docking tab; theme/layout visually inspected. Physical input and translated layouts not claimed.",
+      "sourceHashes": {
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "9209dba3370aadbb6dc2bac9eeaa45bbbfb5607f1cd57eee0b20b979ee15743e",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+      },
+      "loadedAssemblyHash": "4b22b10575229c036233db5e9812d1dd4a89b297bd1acaa939d7368ee9e3f8b4"
+    },
+    {
+      "file": "Images/EditorDarkNarrow.png",
+      "capturedAt": "2026-11-01T11:18:50.2149015Z",
+      "sha256": "9197505fe2936a262a6e6f06d3c5e2434ff929548bc7f979457eefa2b4ddd066",
+      "bytes": 72559,
+      "width": 720,
+      "height": 620,
+      "uiLanguage": "en",
+      "observedScope": "Actual native Unity screen, shared frame only; no native title bar or docking tab; theme/layout visually inspected. Physical input and translated layouts not claimed.",
+      "sourceHashes": {
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "9209dba3370aadbb6dc2bac9eeaa45bbbfb5607f1cd57eee0b20b979ee15743e",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+      },
+      "loadedAssemblyHash": "4b22b10575229c036233db5e9812d1dd4a89b297bd1acaa939d7368ee9e3f8b4"
+    },
+    {
+      "file": "Images/EditorLightNarrow.png",
+      "capturedAt": "2026-11-01T11:18:48.5082345Z",
+      "sha256": "a9cdf7942100dd4e5c7d7a532366598bf2e08f92bf3a2d4a3111bc43b7ea5eb9",
+      "bytes": 72202,
+      "width": 720,
+      "height": 620,
+      "uiLanguage": "en",
+      "observedScope": "Actual native Unity screen, shared frame only; no native title bar or docking tab; theme/layout visually inspected. Physical input and translated layouts not claimed.",
+      "sourceHashes": {
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "9209dba3370aadbb6dc2bac9eeaa45bbbfb5607f1cd57eee0b20b979ee15743e",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "f1eb4a8e215e630cc657134211e913665e5c5a911d806bc539eef4597cdd31f2",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "0d806b70d3472aa3f95b440944b047a0a2787459a686f77bfc548252e683516d"
+      },
+      "loadedAssemblyHash": "4b22b10575229c036233db5e9812d1dd4a89b297bd1acaa939d7368ee9e3f8b4"
+    }
+  ],
+  "remaining": "Other product QA, physical selector input and clean installation remain separately tracked."
+}
