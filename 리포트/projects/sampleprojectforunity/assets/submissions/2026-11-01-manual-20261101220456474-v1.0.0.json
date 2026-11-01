@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "title": "프로젝트 한글 커밋 지침과 검증된 구현 게시",
+    "summary": "프로젝트 AGENTS.md에 한글 커밋 원칙을 추가하고 기존 검증된 전투 구현을 main에 푸시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "이번 커밋·푸시의 남은 항목은 없습니다. 로컬 원시 로그와 도구 실패 자료는 보존하며 공개 커밋에 포함하지 않았습니다.",
+    "outcome": "프로젝트 main 커밋 [85eba531](https://github.com/MDJ0126/SampleProjectForUnity/commit/85eba5315c7a17d0346d4a774de5df3241e96537)을 푸시했습니다.",
+    "proposedTime": "2~5분",
+    "actualTime": "시작2026-11-02 07:03:28 KST. 프로젝트 푸시 완료와 최종 보고서 공개 시각은 채팅에 기록합니다.",
+    "xerjEvidence": "코드 심볼 검색 불필요. XERJ 도구 제공 없음. Git 원격·차이·지침 문장과 실제 명령 결과로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "unity-korean-commit-push-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "한글 커밋 지침 기록 및 이전 구현의 프로젝트 main 푸시",
+    "completionCriteria": "AGENTS.md 문장 확인, 한글 커밋, push 성공 및 원격 SHA 동일",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "지침 기록·커밋·푸시",
+        "action": "지침 문장 추가, 명시적 경로 대조 후 한글 커밋과 원격 푸시",
+        "expected": "지침 반영과 원격 SHA 동일",
+        "qa": "git diff·push·ls-remote 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "git fetch 후 기준 main 동일 확인. 커밋 전 명시적 파일 목록264개 대조, 코드/지침 diff --check 통과. git push origin main 성공 및 git ls-remote의 main SHA가85eba5315c7a17d0346d4a774de5df3241e96537과 동일함을 확인했습니다. 게임 동작은 이번 푸시에서 재실행하지 않았으며 [기존 구현·실행 검증 보고서](2026-11-01-result-20261101184318119-v1.0.0.html)의 실제 결과를 참조합니다. 이번 추가 변경은 지침 한 줄이며 화면 변화가 없으므로 별도 전후 스크린샷을 만들지 않았습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-01T22:04:51.324Z",
+        "summary": "프로젝트 게시 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "git fetch 후 기준 main 동일 확인. 커밋 전 명시적 파일 목록264개 대조, 코드/지침 diff --check 통과. git push origin main 성공 및 git ls-remote의 main SHA가85eba5315c7a17d0346d4a774de5df3241e96537과 동일함을 확인했습니다. 게임 동작은 이번 푸시에서 재실행하지 않았으며 [기존 구현·실행 검증 보고서](2026-11-01-result-20261101184318119-v1.0.0.html)의 실제 결과를 참조합니다. 이번 추가 변경은 지침 한 줄이며 화면 변화가 없으므로 별도 전후 스크린샷을 만들지 않았습니다.",
+            "evidence": "85eba5315c7a17d0346d4a774de5df3241e96537",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
