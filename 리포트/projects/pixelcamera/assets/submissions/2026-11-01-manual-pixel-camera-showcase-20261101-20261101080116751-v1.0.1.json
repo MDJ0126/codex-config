@@ -1,0 +1,164 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelcamera",
+    "kind": "manual",
+    "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
+    "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "네이티브 Play 키보드/마우스와 새 URP 장면/변경된 조명 재질 변환, 최종 신규 설치 검증 미실행. 스토어 키 이미지 신규 장면 반영은 실제 Affinity·포커스 제한 아래 대기. 기존 전역 폴더 재사용·증거 구분 규칙에 해당하므로 전역 추가 없음.",
+    "outcome": "세 주 예제·애니메이션·설명 UI·실제 Unity 오프스크린 검증·문서/패키지 갱신 완료. 네이티브 Play 입력·새 URP/신규 설치 검증은 대기.",
+    "proposedTime": "40~70분",
+    "actualTime": "2026-11-01 16:25:21 KST 시작. 구현·오프스크린 검증·문서·패키지 자료 작성 2026-11-01 17:01:04 KST (35분 43초). 공개 배포는 이후 확인하며 전체 네이티브 검증은 미완료.",
+    "xerjEvidence": "Status: XERJ node is not running. 포커스 제한을 유지하며 rg 및 현재 소스를 대조합니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-showcase-20261101",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "서로 다른 자산·실제 편집 가능한 애니메이션 클립·대조 설명을 갖춘 세 샘플로 교체하고 ProPixelizer와의 검증된 기능 차이를 설명",
+    "completionCriteria": "주 예제 씬 세 개, 고유한 모델/환경/클립, 실제 Unity 렌더 시각 검토와 두 시간대 포즈/픽셀 변화 검증, 설명형 HUD와 가이드·샘플 진입 메뉴·제출 후보 갱신, 기능 비교와 공개 보고. 포커스 제한으로 실행하지 못한 네이티브 UI·신규 프로세스 검증은 명시",
+    "previousManual": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공식 기능·현재 구현 대조",
+        "action": "ProPixelizer2.0.3 공식 문서와 현재 프리셋/셰이더/런타임 대조",
+        "expected": "지원·부분지원·부재·미확인을 구분한 근거 있는 비교",
+        "qa": "공식 URL 및 현재 소스의 항목별 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "독립된 세 아트·애니메이션 예제",
+        "action": "기존 Samples/Scenes·Artwork·Runtime 안에 정원/네온 배송/천문대 제작, 이전 씬 보존",
+        "expected": "서로 다른 주역/환경/머티리얼/실제 anim 클립과 관절 움직임",
+        "qa": "실제 Unity 제작·동일 카메라 두 시간대 렌더·시각 검토 후 수정",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "세 씬은 각각 별도 아트 폴더만 참조. 재질8/9/8개, 편집 가능한 실제 anim 클립3개. 각24포즈와 관절 변경 픽셀22,736/34,042/30,785 확인. 기존16씬 보존/고객 제외."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "설명·비교·진입 흐름",
+        "action": "챕터별 설정 이유와 원본 비교·정지/회전/외곽선 토글·기존 Samples 메뉴·가이드 적용",
+        "expected": "왜/무엇/사용할 때를 설명하고 세 예제로 바로 진입",
+        "qa": "클립/챕터 자산 연결·Overlay 구조·실제 값 변경·설명 대조, 네이티브 입력 미실행 구분",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "각3챕터, 원본/팔레트/정지/부드러운-12FPS 전환 실제 Unity API와 native UGUI 렌더/버튼 글자 geometry 통과. 소스 Samples메뉴3항목으로 교체. 실제 키보드/마우스 Play 라우팅은 미실행."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "패키지·문서·공개 검증",
+        "action": "주 샘플3개를 패키지에 반영·레거시 개발 자료 제외·가이드/스크린샷 기록·실제 화면 공개",
+        "expected": "검증 결과와 미실행 범위를 포함한 최신 제출 후보와 보고서",
+        "qa": "패키지 전수 바이트/메타/링크 검사·공개 배포 HTTP 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "9개 번역 가이드·motion preview·72개 실제 포즈·패키지582개 asset/meta 전수 대조 완료. 새 URP경로/신규 설치/최종 공개 확인 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "사용자 최신 지시에 따라 필수 예제 수를 약3개로 줄이고 품질에 집중합니다. 기존 씬은 Development 아래에 보존하고 고객 Samples 진입점을 재사용합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T07:34:09.1756769Z",
+        "summary": "실제 렌더 시각 QA 실패. 숫자/구조 검사 통과만으로 화면 품질을 통과 처리하지 않습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다.",
+            "evidence": "공식 문서와 현재 소스 대조",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "첫 렌더에서 하단 버튼 글자가 높이0으로 사라졌고 네온이 어두우며 천문대 기둥이 주역을 가렸습니다.",
+            "evidence": "로컬 showcase-qa-first.json 및 첫 렌더 관찰. 버튼 앵커/높이, 조명, 주역 크기·앞기둥 배치를 수정했습니다.",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-01T07:46:44.8914414Z",
+        "summary": "실제 렌더에서 발견한 버튼 높이0·어두운 네온·주역을 가리는 기둥을 수정하고 다시 촬영했습니다. 첫 QA JSON은 로컬에 보존합니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다.",
+            "evidence": "공식 publisher 문서 URL 및 Docs/Development/PixelCameraFeatureComparison.md",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "세 씬은 각각 별도 아트 폴더만 참조. 재질8/9/8개, 편집 가능한 실제 anim 클립3개. 각24포즈와 관절 변경 픽셀22,736/34,042/30,785 확인. 기존16씬 보존/고객 제외.",
+            "evidence": "showcase-qa.json; resource-isolation.json; 실제Guide/A/B및24포즈×3",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "각3챕터, 원본/팔레트/정지/부드러운-12FPS 전환 실제 Unity API와 native UGUI 렌더/버튼 글자 geometry 통과. 소스 Samples메뉴3항목으로 교체. 실제 키보드/마우스 Play 라우팅은 미실행.",
+            "evidence": "오프스크린 UGUI는 실제 렌더. 네이티브 키/마우스 라우팅을 증명하지 않으며 사용자 포커스 제한으로 보류.",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

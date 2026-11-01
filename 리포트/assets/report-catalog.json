@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixel Camera 세 애니메이션 쇼케이스와 ProPixelizer 기능 차이",
+    "summary": "반복16씬을 고유 자산·실제 클립·설명 UI가 있는3씬으로 교체했습니다. 실제 Unity 렌더·72포즈·동작 계약과 공식 기능 차이를 확인했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-result-20261101080118860-v1.0.0.html",
+    "date": "2026-11-01T08:01:18.860Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
+    "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-showcase-20261101-20261101080116751-v1.0.1.html",
+    "date": "2026-11-01T08:01:16.751Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
+    "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
+    "date": "2026-11-01T07:29:21.387Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "SceneControlManager·UIManager 구현과 씬 예제 검증",
     "summary": "기존 Scenes·AddressablesResources·Management·UI·SampleScene 구조로 통합하고 GUID·번들·실행을 재검증합니다.",
     "project": "sampleprojectforunity",
