@@ -1,5 +1,25 @@
 [
   {
+    "title": "Entity Forge 기본 선택창 누락과 제목·라벨 배치 수정",
+    "summary": "공통 필드 적용 시 선택 패널을 자동 연결하고 기본 명령 메뉴 직접 호출을 교체했습니다. 실제 화면 최종 QA는 게임 종료 후 대기입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-bug-20261101092521260-v1.0.0.html",
+    "date": "2026-11-01T09:25:21.260Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-forge-ui-template-20261101-20261101092250528-v1.0.1.html",
+    "date": "2026-11-01T09:22:50.528Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
     "summary": "시트 탭 우클릭 메뉴와 더블클릭 이름 변경을 실제 Unity에서 검사합니다.",
     "project": "designdatatable",
@@ -26,6 +46,16 @@
     "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101090916182-v1.0.0.html",
     "date": "2026-11-01T09:09:16.182Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 공통 선택창·레이아웃 재발 수정",
+    "summary": "제품 필드의 기본 선택창 노출과 제목·라벨 배치를 공통 경로에서 수정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-01-manual-20261101090024822-v1.0.0.html",
+    "date": "2026-11-01T09:00:24.822Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
