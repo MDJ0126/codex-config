@@ -1,0 +1,973 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>2.0.2 통합 QA · Project 폴더 무한 재임포트 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/designdatatable/assets/workbook-document-icon.png" alt="Design Data Table 로고"><span>턴룸 › Design Data Table</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>2.0.2 통합 QA · Project 폴더 무한 재임포트 수정</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">폴더 표시가 전체 XLSX 재임포트를 반복시키던 경로를 수정했습니다. 실제2000회 표시·색상 왕복·3370회귀를 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-01T08:07:59.383Z">2026년 11월 1일 오후 5:07 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Project 폴더의 반복 로딩을 수정하고 현재 동결 소스로 패키지를 갱신했습니다. 이 버그는 실행 검증했으며 전체 스토어 준비의 기존 잔여 사항은 유지합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>아이콘 그리기에서 임포트 예약을 제거했습니다. 색상·등록 변경만 명시적으로 갱신하고, 저장된 썸네일의 색상 상태를 비교합니다. 임포트 워커에서는 갱신을 예약하지 않으며, 실행 중 재진입은 합쳐 처리합니다. 임포터 버전7, 기존 원본·검색용 테이블 식별자는 유지합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>대상</th>
+<th>변경</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>창·설정·팝업</td>
+<td>비공개 ContainerWindow·HostView·m_Parent·ShowPopupWithMode 접근을 공개 EditorWindow와 같은 프로세스의 공식 Win32 창 API로 교체</td>
+</tr>
+<tr>
+<td>문서 선반</td>
+<td>Unity 상태바 내부 삽입을 공개 EditorWindow 선반으로 교체. 하단 상태바 위에 별도 얇은 행으로 표시</td>
+</tr>
+<tr>
+<td>호버·창 애니메이션</td>
+<td>기존 데이터·Undo·미리보기 기능을 유지하고 창 준비·숨김·최종 배치·최대화 경로 수정</td>
+</tr>
+<tr>
+<td>AI PNG</td>
+<td>GUIView.GrabPixels를 공개 SendEvent 렌더링·Win32 캡처로 교체</td>
+</tr>
+<tr>
+<td>스포이트</td>
+<td>Unity 비공개 EyeDropper 대신 사용자가 시작한 화면1픽셀 선택. 투명도 유지·Esc 취소</td>
+</tr>
+<tr>
+<td>프로젝트 아이콘</td>
+<td>비공개 ObjectListArea 후크 제거. 원본 XLSX의 공개 ScriptedImporter 아이콘 사용</td>
+</tr>
+<tr>
+<td>제출 정리</td>
+<td>누락 아이콘 메타40개 추가, 메뉴를 Tools/TurnRoom 아래로 정리, 혼합 줄바꿈 정리</td>
+</tr>
+<tr>
+<td>스토어 이미지</td>
+<td>예전 리본이 들어간 커버·카드·소셜 교체. 실제 Affinity3.3.1에서 새 원본3개·PNG 저장. 기존 아이콘은 그대로 재사용</td>
+</tr>
+</tbody></table>
+</div><p><a class="report-link" href="https://assetstore.unity.com/publishing/submission-guidelines">공식 제출 지침2.5.g</a>는 리플렉션 등으로 발견한 Unity Editor 내부 API 사용을 금지합니다. 자사 생성 데이터·직렬화 필드와 선택적 공개 Addressables API를 읽는 리플렉션은 분리해 검토했습니다.</p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/Cover.png" alt="Affinity로 갱신한 스토어 커버—검증 화면 대체용이 아닌 홍보 이미지" loading="lazy"><figcaption>Affinity로 갱신한 스토어 커버—검증 화면 대체용이 아닌 홍보 이미지</figcaption></figure></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>추가 확인</th>
+<th>수정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UI Template 메뉴</td>
+<td>같은 메서드의 중복 MenuItem 제거</td>
+</tr>
+<tr>
+<td>Win32 IO1224</td>
+<td>게임 데이터·Enum·로컬라이징 생성 C#을 임시 파일 완성 후 원자적 교체. 기존 소스를 직접 잘라 쓰지 않음</td>
+</tr>
+<tr>
+<td>복원 서랍 창</td>
+<td>핸들이 없는 복원 호스트 정리와28px 표면 재설정</td>
+</tr>
+</tbody></table>
+</div><div class="table-scroll"><table>
+<thead>
+<tr>
+<th>서식</th>
+<th>변경</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>표 디자인</td>
+<td>직접 셀 서식을 보존하는 적용과 색·글꼴·테두리를 정리하는 적용을 구분. 값·수식·숫자 표시 형식·보호 보존</td>
+</tr>
+<tr>
+<td>갤러리</td>
+<td>명시적 정리 버튼·우클릭 메뉴·정리 체크 옵션·9개 언어 안내</td>
+</tr>
+<tr>
+<td>그룹</td>
+<td>비활성 미연결 버튼을 기존 개체·그룹 선택 창에 연결</td>
+</tr>
+<tr>
+<td>가이드</td>
+<td>9개 언어 내용 갱신과 실제 서식 화면4개 교체. 다른 이미지 해시는 갱신하지 않음</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-4">검증</h2>
+<p>실제 Unity6000.0.83f1의11조건 실패0. 아이콘2000회 표시0임포트·동일색 캐시 초기화0·색상 변경34회·복원34회·원본SHA-256 동일. 실행 중 에디터 로그의5분 관찰에서0임포트. 기존3370조건·25씬·24테이블·Windows 빌드 통과. 공식31통과·3경고·0실패. 최종 패키지 1577개·61,700,014바이트, SHA-256 <code>59f20fdfe82a786ee9ff5b02c7abfe472f913f474d926da4bf6dc198c4d01bbe</code>.</p>
+<p><a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLoopQA.json">실제 임포트 계측</a> · <a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLiveLog.json">실행 중 로그 관찰</a> · <a class="report-link" href="../assets/project-icon-loop-20261101/ArchiveVerification.json">패키지 무결성</a> · <a class="report-link" href="../assets/project-icon-loop-20261101/CommentOnlySnapshotVerification.json">주석 차이 검증</a></p>
+<p><figure><img class="report-image" src="../assets/project-icon-loop-20261101/ProjectFolder-after.png" alt="수정 후 동일 ThreeD 폴더를 연 실제 Unity 화면" loading="lazy"><figcaption>수정 후 동일 ThreeD 폴더를 연 실제 Unity 화면</figcaption></figure></p>
+<p>PNG 원본221,674바이트를 유지했습니다. 작은 글자와 실제 상태를 보존하며 이미지 편집·재구성은 하지 않았습니다. 직접 갱신 콜백은 검사기에서 명시적으로 처리해 컨트롤 임포트의 대기 콜백을 측정과 분리했습니다.</p>
+<p>이전 서식·공개 API 근거는 기존 TC에 보존합니다. 이번 변경과 무관한 과거 검사를 새 실행으로 바꾸지 않았습니다.</p>
+<h3 id="section-5">TC-SUB-01 · 배포 범위와 무결성</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Unity 네이티브 패키지의 파일·메타·GUID·직렬화 참조를 동결 원본과 비교합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>의도한 고객용 파일만 포함되고 오류가 없어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최신1577파일·8037참조, 오류0. SHA-256 59f20fdfe82a786ee9ff5b02c7abfe472f913f474d926da4bf6dc198c4d01bbe</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/project-icon-loop-20261101/ArchiveVerification.json">최신 아카이브</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-6">TC-SUB-02 · 내부 API 교체와 컴파일</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>고객용 C#347개를 검사하고 세 어셈블리를 컴파일·참조 검사합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>명시적 Unity 내부 API 패턴이 제거되고 컴파일이 성공해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>명시적 패턴0, 세 어셈블리 컴파일 성공. 남은 자사 데이터·공개 API 리플렉션 검토.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/InternalApiCompliance.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-7">TC-SUB-03 · 씬 로드와 누락 스크립트</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>25개 샘플 씬을 실제 Unity에서 열고 각 하위 오브젝트의 스크립트를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>모든 씬이 열리고 누락 스크립트가 없어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>25개 씬 로드·누락 스크립트 검사 통과.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/NativeSubmissionQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-8">TC-SUB-04 · 생성 바이너리 데이터</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>24개 생성 테이블의 Load(byte[])로 실제 바이너리를 읽습니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>읽기 오류가 없어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>24개 테이블 역직렬화 통과.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/NativeSubmissionQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-9">TC-SUB-05 · 편집·Undo·Redo·저장</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>복사본 셀을 수정하고 Undo/Redo·저장·재열기를 실행합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>수정과 Undo 상태가 일치하고 저장값이 다시 열려야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>실제 Unity 검사 통과.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/NativeSubmissionQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-10">TC-SUB-06 · 미저장 값의 최소화·클릭 복원</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>수정한 문서를 최소화한 뒤 실제 선반 클릭으로 복원하고 Undo합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>값·Dirty·Undo가 보존되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>PUBLIC API DRAFT 유지, 복원 후 Undo로 깨끗한 상태 복구.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/shelf.png" alt="TC-SUB-06 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-06 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-11">TC-SUB-07 · 최소화·복원 반복</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>깨끗한 문서의 최소화와 복원을10회 반복합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>잘못된 Dirty나 값 변화가 없어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>10회 반복 통과.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-12">TC-SUB-08 · 호버 카드와 포커스</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>선반 위에 실제 포인터를 두고 미리보기·포커스를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>카드가 보이고 원래 포커스를 빼앗지 않아야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>실제 카드 표시와 원래 native foreground 유지 확인.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/hover.png" alt="TC-SUB-08 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-08 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-13">TC-SUB-09 · 최대화·원래 크기 복원</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실제 창을 최대화하고 다시 복원합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>확대와 원래 창 크기 복원이 일치해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>1920×1032 확대 후1350×800 원래 크기 복원.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-14">TC-SUB-10 · AI PNG 출력</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실제 워크북 범위를 공개 렌더링과 native 캡처로 출력합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>실제 표가 나오고 포커스·임시 창이 남지 않아야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>400×277 실제 PNG, foreground 동일, 임시 창 제거.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/preview.png" alt="TC-SUB-10 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-10 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-15">TC-SUB-11 · 스포이트 선택·취소</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실제 빨간 영역을 선택한 뒤 다시 선택을 시작해 Esc로 취소합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>색상·투명도·변경 이벤트와 취소가 정확해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>빨강 선택·알파0.6 유지·변경1회. Esc 추가 변경0회.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-16">TC-SUB-12 · 설정 창 표시</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>교체한 공개 API로 설정 창을 열고 실제 화면을 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>제목·설정 항목과 밝은 표면이 표시되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>실제 Workspace Settings 창 렌더링 확인. 첫 클릭·Esc 동작 전체를 통과했다고 확대 해석하지 않았습니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/PublicApiNativeQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/Settings-R3.png" alt="TC-SUB-12 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-12 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-17">TC-SUB-13 · 공식 Asset Store 검사</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>원본 Asset Store Tools12.0.0 검사를 고객용 두 경로에 실행합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>컴파일 오류·검사 실패0, 남은 경고를 공개해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>31통과·3경고·0실패, RanToCompletion.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/OfficialValidator.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-18">TC-SUB-14 · 허브24개 선택</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실제 Unity Play에서 각 카드 중심을 레이캐스트하고 Button.onClick을 실행해 씬을 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>카드와 연결된24개 씬이 각각 일치해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>24개 카드 모두 hit·연결된 씬 일치. 좁은640×480 초기 시도는 별도 실패 기록으로 보존.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/SampleHubQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/Hub-R3.png" alt="TC-SUB-14 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-14 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-19">TC-SUB-15 · Windows 실제 클릭</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실행 중 플레이어의 클라이언트·런타임 좌표로 실제 클릭하고 선택 대상을 계측합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>HubCard0가 선택되어 Coin Dash가 열려야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>런타임 mouse(140,571), hit=HubCard0, 이후 Coin Dash 확인.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/NativePointerQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/PlayerNative-R4.png" alt="TC-SUB-15 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-15 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-20">TC-SUB-16 · Windows 플레이어 빌드·표시</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>현재 동결본을 Windows로 빌드하고 게임 화면을 캡처합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>빌드가 성공하고 실제 게임 UI가 표시되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>네이티브 빌드 성공, Warehouse·Pinball 실제 화면 확인.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/NativeSubmissionQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/Warehouse-R3.png" alt="TC-SUB-16 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-16 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-21">TC-SUB-17 · Affinity 키 이미지와 원본</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>실제 Affinity에서 커버·카드·소셜을 제작·저장·PNG 출력하고 크기와 실제 이미지를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>예전 UI가 없어야 하며 편집 원본과 지정 크기 PNG가 있어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>Cover1950×1300, Card420×280, Social1200×630, 원본3개 저장. 아이콘160×160은 기존 것을 재사용.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/SubmissionHandoff.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/Cover.png" alt="TC-SUB-17 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-17 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-22">TC-SUB-18 · 제출 파일 정리</h3>
+<p>분류: 2.0.2 제출·공개 API 회귀 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Submission 폴더의 원고·미디어·원본·검증·해시를 확인합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>한 폴더에서 제출 파일과 지원 범위를 파악할 수 있어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>파일30개·SHA256SUMS·검사 메모·간단한 스토어 원고를 정리.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/SubmissionHandoff.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 레이아웃 대조가 아닌 제출·공개 API 회귀 검사입니다. 원본 이미지가 없는 항목은 실행 JSON으로 확인하며, 현재 화면은 해당 기능의 실제 캡처만 제공합니다.</p>
+<h3 id="section-23">TC-SUB-19 · 중복 메뉴 등록</h3>
+<p>분류: 추가 시작 오류 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>같은 메뉴 경로의 MenuItem 선언과 실제 Unity 재시작 로그를 검사합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>메뉴 선언1개, 중복 등록 오류0.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>같은 메서드의 중복 선언 제거, 최종 Unity 검사에서 중복 메뉴 오류 없음.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/StartupErrorQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: 코드·운영체제 파일 잠금 검사로, 원본 Excel 이미지 대조 대상이 아닙니다.</p>
+<h3 id="section-24">TC-SUB-20 · 매핑된 생성 소스 저장</h3>
+<p>분류: 추가 시작 오류 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>현재 저장 함수로 읽기 전용 메모리 매핑된 소스를 갱신합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>교체 성공·기존 매핑 보존·임시 파일0.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>직접 덮어쓰기 실패를 재현했고 교체 저장 성공, 기존 매핑 첫 문자 o 유지, 임시 파일0.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/GeneratedSourceLockQA.json">검증 JSON</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: 코드·운영체제 파일 잠금 검사로, 원본 Excel 이미지 대조 대상이 아닙니다.</p>
+<h3 id="section-25">TC-SUB-21 · 시작 레이아웃·최소화 복원</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>부분 확인</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>정상 종료·재시작 로그를 확인하고 실제 문서를 최소화·복원합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>잘못된 서랍 경고 없이 실제 호스트가 생성되고 복원되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>이전 회차에서 최소화·복원과 시작 로그를 확인했으나 새 폴더 캡처에 ChartGallery 레이아웃 저장 경고가 남아 전체 복원은 추가 확인이 필요합니다.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/StartupErrorQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-26">TC-SUB-22 · 표 스타일 색상 반영</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>직접 서식으로 가려진 표에 정리 적용 버튼의 GUI 이벤트를 보냅니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>새 헤더·줄무늬 색상이 실제 표시되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>기존FF1D684D에서FFE97132 주황으로 변경, 저장·재열기 유지.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/FormatTabsQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/format-table.png" alt="TC-SUB-22 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-22 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-27">TC-SUB-23 · 표 스타일 Undo·Redo</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>정리 적용 전후 스냅샷과 Undo/Redo를 비교합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>한 단계 Undo와 Redo로 정확한 상태가 복원되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>최종 실제 GUI 검사와 매트릭스의 세션 스냅샷 일치. 초기 실패도 근거에 보존.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/FormatTabsQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-28">TC-SUB-24 · 전체 프리셋 저장 회귀</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>Office60·사용자6·차트48·도형32·그림6종을 적용·저장·재열기합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>스타일·색상·값·수식·Undo 상태가 기대값과 일치해야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>227조건 통과, 실패0.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/FormatTabsQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-29">TC-SUB-25 · 차트·도형·그림 실제 서식</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>각 전용 탭의 프리셋에 실제 Unity GUI 마우스 이벤트를 보냅니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>선택 속성과 실제 화면이 변하고 저장되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>차트스타일6, 차트프레임156082, 도형채우기156082, 그림윤곽4472C4·3px 확인.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/FormatTabsQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/format-picture.png" alt="TC-SUB-25 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-25 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-30">TC-SUB-26 · 도형 그룹 버튼 연결</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>도형 서식의 그룹 버튼을 클릭합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>기존 개체·그룹 선택 창을 열어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>실제 Objects 창700×680 표시. 모든 그룹 변환의 완료를 뜻하지 않음.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/FormatTabsQA.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/submission-202-final-20261101/format-group-panel.png" alt="TC-SUB-26 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-26 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-31">TC-SUB-27 · 가이드 이미지 최신성</h3>
+<p>분류: 추가 오류·서식 실제 QA · 결과: <strong>실패</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>9개 언어 가이드를 재생성하고 기존 이미지의 실제 소스 해시를 검사합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>현재 이미지의 소스와 재촬영 상태가 확인되어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>468건이 남아 미통과. 재촬영한4개만 실제 근거로 교체.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/submission-202-final-20261101/GuideVerification.json">실행 근거</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Excel 원본 실행·촬영은 COM 클래스 미등록으로 수행하지 못했습니다. 현재 Unity 실행과 공개 GUI 이벤트·저장 결과를 대조한 검사이며 전체 Excel 화면 동일성 검사로 보고하지 않습니다.</p>
+<h3 id="section-32">TC-SUB-28 · 아이콘2000회 표시</h3>
+<p>분류: Project 폴더 재임포트 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>캐시를 비우고 실제 아이콘 경로를1000회씩 두 번 호출하며 임포트를 계측합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>표시·이후 대기로 임포트가 발생하지 않아야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>첫 표시0·마지막 표시/대기0, 새 임포트 예약 없음.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLoopQA.json">실행 계측</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/project-icon-loop-20261101/ProjectFolder-before.png" alt="TC-SUB-28 수정 전" loading="lazy"><figcaption>TC-SUB-28 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/project-icon-loop-20261101/ProjectFolder-after.png" alt="TC-SUB-28 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-28 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Unity Project 폴더의 동작 검사입니다. 실제 화면과 임포트 관찰자로 확인했으며 사진만으로 반복 중단을 판단하지 않았습니다.</p>
+<h3 id="section-33">TC-SUB-29 · 캐시 초기화·동일색</h3>
+<p>분류: Project 폴더 재임포트 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>메모리 캐시를 비우고 명시적 갱신 콜백을 처리합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>저장된 색상과 같으면 재임포트하지 않아야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>재임포트0, 저장된 네이티브 아이콘 상태 재사용.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLoopQA.json">실행 계측</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Unity Project 폴더의 동작 검사입니다. 실제 화면과 임포트 관찰자로 확인했으며 사진만으로 반복 중단을 판단하지 않았습니다.</p>
+<h3 id="section-34">TC-SUB-30 · 색상 변경·복원 유한성</h3>
+<p>분류: Project 폴더 재임포트 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>4종 색상을 변경·복원하고 실제 결과를 비교합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>34개 파일당 최대1회씩 갱신하고 요청한 색상이어야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>변경34회·복원34회, 모든 색상 일치·XLSX 원본 해시 동일.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLoopQA.json">실행 계측</a></td>
+</tr>
+</tbody></table>
+</div><p>화면 근거: Unity Project 폴더의 동작 검사입니다. 실제 화면과 임포트 관찰자로 확인했으며 사진만으로 반복 중단을 판단하지 않았습니다.</p>
+<h3 id="section-35">TC-SUB-31 · 실제 폴더·에디터 로그</h3>
+<p>분류: Project 폴더 재임포트 · 결과: <strong>통과</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>실행 절차</td>
+<td>동일 ThreeD 폴더를 열고 실행 중 에디터 로그를 관찰합니다.</td>
+</tr>
+<tr>
+<td>기대값</td>
+<td>폴더가 표시되고 반복 임포트가 멈춰야 합니다.</td>
+</tr>
+<tr>
+<td>실제 결과</td>
+<td>실제 폴더 표시. 수정 후 측정한5분의 XLSX 임포트0회.</td>
+</tr>
+<tr>
+<td>원본 출처·버전</td>
+<td><a class="report-link" href="../assets/project-icon-loop-20261101/ProjectIconLoopQA.json">실행 계측</a></td>
+</tr>
+</tbody></table>
+</div><p><strong>수정 전</strong></p>
+<p><figure><img class="report-image" src="../assets/project-icon-loop-20261101/ProjectFolder-before.png" alt="TC-SUB-31 수정 전" loading="lazy"><figcaption>TC-SUB-31 수정 전</figcaption></figure></p>
+<p><strong>수정 후 실제 실행</strong></p>
+<p><figure><img class="report-image" src="../assets/project-icon-loop-20261101/ProjectFolder-after.png" alt="TC-SUB-31 수정 후 실제 실행" loading="lazy"><figcaption>TC-SUB-31 수정 후 실제 실행</figcaption></figure></p>
+<p>화면 근거: Unity Project 폴더의 동작 검사입니다. 실제 화면과 임포트 관찰자로 확인했으며 사진만으로 반복 중단을 판단하지 않았습니다.</p>
+<h2 id="section-36">남은 사항</h2>
+<p>기존 전체 제출 준비는 미완료입니다. 이전 문서 이미지 검증468건을 처리하거나 최신 전체 계수를 재산정하지 않았습니다. 도형 정렬 미구현·일시정지 Excel 목표도 유지합니다. 실제 폴더 캡처 하단에 기존 ChartGallery 레이아웃 저장 경고가 있어 모든 창 복원이 해결됐다고 주장하지 않습니다. 첫 검사 대기 정체·대기 콜백 집계 실패·자동 한국어 주석 갱신으로 생긴 패키지346파일 차이를 보존했습니다.346파일은 주석행 이외가 같았고 동결 원본 복원 후 재내보냈습니다. 테스트의 전체3370조건 실행본과 최종본은 이 검증된 주석 차이만 있습니다. 사용자 프로젝트의 주석 언어 설정은 변경하지 않았습니다.</p>
+<h2 id="section-37">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-01 16:26:47 KST 시작,10–20분 예상. 검사 대기·컨트롤 콜백 집계·주석 자동 번역에 따른 패키지 차이 검증으로 초과를 진행 중 안내했습니다.</li>
+<li>실제로 완료된 시간: 코드·실행·패키지 검증 기록 2026-11-01 17:05:11 KST. 시작부터38분. 공개 게시 확인은 최종 채팅에 기록하며 기존 문서 검증은 여전히 미완료입니다.</li>
+<li>XERJ: 사용 — XERJ 서버를 복구하고 QueueNativeIconRefresh 검색을 호출했습니다. 현재 구현 누락으로 rg와 현재 소스·실행 로그를 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-01-result-20261101080759383-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=designdatatable&topic=qa&relatedReport=projects%2Fdesigndatatable%2Freports%2F2026-11-01-result-20261101080759383-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=designdatatable">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=designdatatable">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-36">남은 사항</a><a href="#section-37">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

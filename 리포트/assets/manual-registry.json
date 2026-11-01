@@ -64,20 +64,20 @@
     }
   },
   {
-    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-showcase-20261101-20261101080116751-v1.0.1.html",
-    "postPath": "projects/pixelcamera/posts/2026-11-01-manual-pixel-camera-showcase-20261101-20261101080116751-v1.0.1.md",
-    "date": "2026-11-01T08:01:16.751Z",
-    "version": "v1.0.1",
-    "project": "pixelcamera",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101080527408-v1.0.2.html",
+    "postPath": "projects/designdatatable/posts/2026-11-01-manual-submission-202-20261101-20261101080527408-v1.0.2.md",
+    "date": "2026-11-01T08:05:27.408Z",
+    "version": "v1.0.2",
+    "project": "designdatatable",
     "kind": "manual",
-    "manualId": "pixel-camera-showcase-20261101",
-    "round": 1,
+    "manualId": "submission-202-20261101",
+    "round": 3,
     "manual": {
       "schemaVersion": 2,
-      "project": "pixelcamera",
+      "project": "designdatatable",
       "kind": "manual",
-      "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
-      "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
+      "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+      "summary": "Project 창에서 반복되는 XLSX 재임포트를 수정하고 실제 아이콘 표시·색상·원본 불변·회귀 검증을 수행합니다.",
       "reporter": "",
       "assignee": "",
       "environment": "",
@@ -87,146 +87,264 @@
       "cause": "",
       "changes": "",
       "verification": "",
-      "remaining": "네이티브 Play 키보드/마우스와 새 URP 장면/변경된 조명 재질 변환, 최종 신규 설치 검증 미실행. 스토어 키 이미지 신규 장면 반영은 실제 Affinity·포커스 제한 아래 대기. 기존 전역 폴더 재사용·증거 구분 규칙에 해당하므로 전역 추가 없음.",
-      "outcome": "세 주 예제·애니메이션·설명 UI·실제 Unity 오프스크린 검증·문서/패키지 갱신 완료. 네이티브 Play 입력·새 URP/신규 설치 검증은 대기.",
-      "proposedTime": "40~70분",
-      "actualTime": "2026-11-01 16:25:21 KST 시작. 구현·오프스크린 검증·문서·패키지 자료 작성 2026-11-01 17:01:04 KST (35분 43초). 공개 배포는 이후 확인하며 전체 네이티브 검증은 미완료.",
-      "xerjEvidence": "Status: XERJ node is not running. 포커스 제한을 유지하며 rg 및 현재 소스를 대조합니다.",
+      "remaining": "기존 전체 제출 준비는 미완료입니다. 이전 문서 이미지 검증468건을 처리하거나 최신 전체 계수를 재산정하지 않았습니다. 도형 정렬 미구현·일시정지 Excel 목표도 유지합니다. 실제 폴더 캡처 하단에 기존 ChartGallery 레이아웃 저장 경고가 있어 모든 창 복원이 해결됐다고 주장하지 않습니다. 첫 검사 대기 정체·대기 콜백 집계 실패·자동 한국어 주석 갱신으로 생긴 패키지346파일 차이를 보존했습니다.346파일은 주석행 이외가 같았고 동결 원본 복원 후 재내보냈습니다. 테스트의 전체3370조건 실행본과 최종본은 이 검증된 주석 차이만 있습니다. 사용자 프로젝트의 주석 언어 설정은 변경하지 않았습니다.",
+      "outcome": "폴더 재임포트 버그는 수정·실행 검증했습니다. 기존 문서·창 복원 잔여로 전체 준비 완료는 아닙니다.",
+      "proposedTime": "16:26:47KST 시작,10–20분. 아이콘 표시가 임포트를 유발하지 않고 색상 갱신이 유한하며 XLSX 원본이 유지되는 것을 완료 기준으로 합니다.",
+      "actualTime": "코드·실행·패키지 검증 기록 2026-11-01 17:05:11 KST. 시작부터38분. 공개 게시 확인은 최종 채팅에 기록하며 기존 문서 검증은 여전히 미완료입니다.",
+      "xerjEvidence": "XERJ 서버를 복구해 QueueNativeIconRefresh 검색을 호출했습니다. 검색 후보에 현재 구현이 누락돼 rg와 실제 로그·현재 소스로 대조했습니다.",
       "priority": "normal",
       "severity": "normal",
-      "xerjUsage": "실패",
+      "xerjUsage": "사용",
       "type": "작업 메뉴얼",
-      "manualId": "pixel-camera-showcase-20261101",
-      "round": 1,
-      "phase": "initial",
+      "manualId": "submission-202-20261101",
+      "round": 3,
+      "phase": "followup",
       "execution": "sequential",
       "manualState": "qa",
-      "goal": "서로 다른 자산·실제 편집 가능한 애니메이션 클립·대조 설명을 갖춘 세 샘플로 교체하고 ProPixelizer와의 검증된 기능 차이를 설명",
-      "completionCriteria": "주 예제 씬 세 개, 고유한 모델/환경/클립, 실제 Unity 렌더 시각 검토와 두 시간대 포즈/픽셀 변화 검증, 설명형 HUD와 가이드·샘플 진입 메뉴·제출 후보 갱신, 기능 비교와 공개 보고. 포커스 제한으로 실행하지 못한 네이티브 UI·신규 프로세스 검증은 명시",
-      "previousManual": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
+      "goal": "현재 지원 범위의2.0.2 제출 패키지·간단한 스토어 원고·필수 검증과 공개 보고를 준비한다. 포털 제출은 수행하지 않는다.",
+      "completionCriteria": "공개 API 교체를 실행 검증하고, 네이티브 패키지·참조·메타데이터·새 프로젝트·공식 검사·현재 화면과 제출 자료·보고 링크를 확인한다.",
+      "previousManual": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101071202410-v1.0.1.html",
       "relatedDiscussions": [],
       "tasks": [
         {
           "id": "T01",
           "order": 1,
-          "title": "공식 기능·현재 구현 대조",
-          "action": "ProPixelizer2.0.3 공식 문서와 현재 프리셋/셰이더/런타임 대조",
-          "expected": "지원·부분지원·부재·미확인을 구분한 근거 있는 비교",
-          "qa": "공식 URL 및 현재 소스의 항목별 대조",
+          "title": "배포 범위·메타데이터 고정",
+          "action": "제품과 공유 의존성만 고정하고 개발·QA 파일을 제외한다. 누락 메타와 메뉴 경로를 수정한다.",
+          "expected": "동결 소스·메타·GUID·패키지 파일 일치",
+          "qa": "네이티브 아카이브를 원본 인벤토리와 대조한다.",
           "dependsOn": [],
           "status": "done",
-          "revision": 1,
-          "result": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다."
+          "revision": 2,
+          "result": "1577개 파일·8037참조, 동결 소스와 패키지 오류0."
         },
         {
           "id": "T02",
           "order": 2,
-          "title": "독립된 세 아트·애니메이션 예제",
-          "action": "기존 Samples/Scenes·Artwork·Runtime 안에 정원/네온 배송/천문대 제작, 이전 씬 보존",
-          "expected": "서로 다른 주역/환경/머티리얼/실제 anim 클립과 관절 움직임",
-          "qa": "실제 Unity 제작·동일 카메라 두 시간대 렌더·시각 검토 후 수정",
+          "title": "새 프로젝트·샘플·생성 데이터 검사",
+          "action": "새 Unity 프로젝트에서 컴파일·씬·바이너리·편집/Undo/Redo/저장과 Windows 빌드를 실행한다.",
+          "expected": "빌드와 실제 검사 실패0",
+          "qa": "현재 패키지를 만든 동일 스냅샷으로 검사한다.",
           "dependsOn": [
             "T01"
           ],
           "status": "done",
-          "revision": 1,
-          "result": "세 씬은 각각 별도 아트 폴더만 참조. 재질8/9/8개, 편집 가능한 실제 anim 클립3개. 각24포즈와 관절 변경 픽셀22,736/34,042/30,785 확인. 기존16씬 보존/고객 제외."
+          "revision": 2,
+          "result": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과."
         },
         {
           "id": "T03",
           "order": 3,
-          "title": "설명·비교·진입 흐름",
-          "action": "챕터별 설정 이유와 원본 비교·정지/회전/외곽선 토글·기존 Samples 메뉴·가이드 적용",
-          "expected": "왜/무엇/사용할 때를 설명하고 세 예제로 바로 진입",
-          "qa": "클립/챕터 자산 연결·Overlay 구조·실제 값 변경·설명 대조, 네이티브 입력 미실행 구분",
+          "title": "Unity 내부 API를 공개 API로 교체",
+          "action": "비공개 창·선반·스포이트·캡처·아이콘 접근을 공개 EditorWindow와 공식 Win32 API로 바꾼다. 추가 로그의 중복 메뉴·생성 소스의 매핑 파일 저장과 시작 시 서랍 생성 순서를 수정한다.",
+          "expected": "핵심 창 동작·PNG·색상 선택 보존과 공식 검사 실패0",
+          "qa": "실제 창·물리 클릭·색상·최대화·호버·복원·10회 반복과 소스·어셈블리 검사를 실행한다.",
           "dependsOn": [
             "T02"
           ],
-          "status": "qa",
-          "revision": 1,
-          "result": "각3챕터, 원본/팔레트/정지/부드러운-12FPS 전환 실제 Unity API와 native UGUI 렌더/버튼 글자 geometry 통과. 소스 Samples메뉴3항목으로 교체. 실제 키보드/마우스 Play 라우팅은 미실행."
+          "status": "done",
+          "revision": 3,
+          "result": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중."
         },
         {
           "id": "T04",
           "order": 4,
-          "title": "패키지·문서·공개 검증",
-          "action": "주 샘플3개를 패키지에 반영·레거시 개발 자료 제외·가이드/스크린샷 기록·실제 화면 공개",
-          "expected": "검증 결과와 미실행 범위를 포함한 최신 제출 후보와 보고서",
-          "qa": "패키지 전수 바이트/메타/링크 검사·공개 배포 HTTP 확인",
+          "title": "재촬영·제출 자료·공개 보고",
+          "action": "플레이어 선택 동작을 확인하고 실제 화면·간단한 스토어 원고·패키지와 검증 근거를 한 제출 폴더와 보고서에 모은다.",
+          "expected": "확인된 지원 범위와 파일·이미지·개별 공개 링크 일치",
+          "qa": "현재 플레이어·허브 선택과 파일 해시·사이트 본문·첨부를 확인한다.",
           "dependsOn": [
             "T03"
           ],
-          "status": "pending",
+          "status": "qa",
+          "revision": 3,
+          "result": "현재 제출본·원고·Affinity 원본·키 이미지·검증 자료 정리 완료. 공개 게시 확인 중."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "서식 적용 무반영 수정·실제 QA",
+          "action": "직접 셀 서식에 가려진 표 스타일 적용을 분리하고 전용 서식 탭의 프리셋을 실제 실행·저장·재열기한다.",
+          "expected": "표·차트·도형·그림 프리셋이 표시·저장되고 Undo/Redo가 복원된다.",
+          "qa": "실제 Unity GUI 이벤트·227조건 매트릭스·탭별 실제 화면을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
           "revision": 1,
-          "result": "9개 번역 가이드·motion preview·72개 실제 포즈·패키지582개 asset/meta 전수 대조 완료. 새 URP경로/신규 설치/최종 공개 확인 대기."
+          "result": "227조건 통과,5개 서식 탭 실제 적용·촬영, 그룹 관리 창 열기 확인. 정렬 미구현은 제한으로 기록."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "Project 폴더 무한 재임포트 수정",
+          "action": "아이콘 그리기에서 임포트를 제거하고 프로세스 간 유지되는 색상 상태·재진입 방지를 적용한다.",
+          "expected": "아이콘2000회 표시와 캐시 초기화에서 임포트0, 색상 변경은 파일당 최대1회, 원본 SHA-256 유지.",
+          "qa": "실제 Unity 임포트 관찰자와 저장된 아이콘·실행 중 에디터 로그·실제 폴더 화면 및 기존3370조건을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과."
         }
       ],
       "focusTasks": [
-        "T01",
-        "T02",
-        "T03",
-        "T04"
+        "T04",
+        "T06"
       ],
-      "scopeChange": "사용자 최신 지시에 따라 필수 예제 수를 약3개로 줄이고 품질에 집중합니다. 기존 씬은 Development 아래에 보존하고 고객 Samples 진입점을 재사용합니다.",
+      "scopeChange": "2026-11-01 11:57 KST 사용자가 기능을 유지한 공개 API 교체를 승인했습니다. 전체 Excel46TC 동일 구현 목표는 계속 일시정지이며 이번 제출 준비와 분리합니다. 15:23KST 추가 로그의 메뉴 중복·매핑 소스 저장·복원 서랍 창 문제를 같은 범위에서 수정하고 현재 버전 재QA를 수행했습니다. 사용자의15:45경 서식 무반영 제보로 T05를 추가하고 문서 검증 실패를 숨기지 않고 보존합니다. 16:26KST 사용자의 파일 폴더 무한 로딩 제보로 T06을 추가했습니다. 기존 미완료 문서 QA와 일시정지 Excel 목표를 완료로 바꾸지 않습니다.",
       "qaRuns": [
         {
           "id": "Q01",
           "kind": "step",
-          "at": "2026-11-01T07:34:09.1756769Z",
-          "summary": "실제 렌더 시각 QA 실패. 숫자/구조 검사 통과만으로 화면 품질을 통과 처리하지 않습니다.",
+          "at": "2026-11-01T03:56:55.759385+00:00",
+          "summary": "교체 중 선반 초기 렌더링 실패를 발견하고 보존했습니다.",
           "results": [
             {
-              "taskId": "T01",
-              "revision": 1,
-              "verdict": "pass",
-              "actual": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다.",
-              "evidence": "공식 문서와 현재 소스 대조",
-              "dependencies": {}
-            },
-            {
-              "taskId": "T02",
+              "taskId": "T03",
               "revision": 1,
               "verdict": "fail",
-              "actual": "첫 렌더에서 하단 버튼 글자가 높이0으로 사라졌고 네온이 어두우며 천문대 기둥이 주역을 가렸습니다.",
-              "evidence": "로컬 showcase-qa-first.json 및 첫 렌더 관찰. 버튼 앵커/높이, 조명, 주역 크기·앞기둥 배치를 수정했습니다.",
+              "actual": "초기 선반 캡처가 검게 나왔습니다. 준비·숨김·최종 네이티브 배치와 노출 검사 대상을 수정했습니다.",
+              "evidence": "로컬 PublicApi/public-shelf-fixed-r2.png 및 이전 시도 폴더",
               "dependencies": {
-                "T01": 1
+                "T02": 1
               }
             }
           ]
         },
         {
           "id": "Q02",
-          "kind": "step",
-          "at": "2026-11-01T07:46:44.8914414Z",
-          "summary": "실제 렌더에서 발견한 버튼 높이0·어두운 네온·주역을 가리는 기둥을 수정하고 다시 촬영했습니다. 첫 QA JSON은 로컬에 보존합니다.",
+          "kind": "regression",
+          "at": "2026-11-01T04:31:38.856063+00:00",
+          "summary": "현재 교체본의 소스·네이티브 실행·패키지·공식 검사 결과를 대조했습니다.",
           "results": [
             {
               "taskId": "T01",
               "revision": 1,
               "verdict": "pass",
-              "actual": "공식 ProPixelizer2.0.3 문서와 소스를 대조해 물체별 픽셀화·이동 안정화·재질/ShaderGraph/팔레트 저작의 부재 및 미검증 호환을 구분했습니다.",
-              "evidence": "공식 publisher 문서 URL 및 Docs/Development/PixelCameraFeatureComparison.md",
+              "actual": "1578개 파일·메타·GUID·8037참조 검사 오류0",
+              "evidence": "../assets/submission-202-20261101/ArchiveVerification.json",
               "dependencies": {}
             },
             {
               "taskId": "T02",
               "revision": 1,
               "verdict": "pass",
-              "actual": "세 씬은 각각 별도 아트 폴더만 참조. 재질8/9/8개, 편집 가능한 실제 anim 클립3개. 각24포즈와 관절 변경 픽셀22,736/34,042/30,785 확인. 기존16씬 보존/고객 제외.",
-              "evidence": "showcase-qa.json; resource-isolation.json; 실제Guide/A/B및24포즈×3",
+              "actual": "3370검증조건·25씬·24테이블·빌드 성공",
+              "evidence": "../assets/submission-202-20261101/NativeSubmissionQA.json",
               "dependencies": {
                 "T01": 1
               }
             },
             {
               "taskId": "T03",
-              "revision": 1,
-              "verdict": "not_run",
-              "actual": "각3챕터, 원본/팔레트/정지/부드러운-12FPS 전환 실제 Unity API와 native UGUI 렌더/버튼 글자 geometry 통과. 소스 Samples메뉴3항목으로 교체. 실제 키보드/마우스 Play 라우팅은 미실행.",
-              "evidence": "오프스크린 UGUI는 실제 렌더. 네이티브 키/마우스 라우팅을 증명하지 않으며 사용자 포커스 제한으로 보류.",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 창 동작·PNG·색상 선택과 10회 반복 통과, 공식31통과·3경고·0실패",
+              "evidence": "../assets/submission-202-20261101/PublicApiNativeQA.json / OfficialValidator.json",
               "dependencies": {
                 "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-01T06:34:44.5732382Z",
+          "summary": "서랍 초기 수정 후 재시작에서 레이아웃 경고가 재발해 시작 순서를 보완했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "핸들 정리와 hideFlags만 변경한 회차에서 시작 경고 재발. docked 준비 상태를 기다리도록 수정.",
+              "evidence": "../assets/submission-202-final-20261101/StartupErrorQA.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "regression",
+          "at": "2026-11-01T15:38:55.855989+09:00",
+          "summary": "현재 동결 버전의 전체 데이터·빌드·공식 검사와 파일 잠금 재현을 다시 실행했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "1577개 파일·8037참조, 동결 소스와 패키지 오류0.",
+              "evidence": "../assets/submission-202-final-20261101/ArchiveVerification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "15:36 회차3370조건·25씬·24테이블·Windows 빌드 통과.",
+              "evidence": "../assets/submission-202-final-20261101/NativeSubmissionQA.json",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "공개 API 회귀·추가 저장 오류 재현 통과. 마지막 정상 재시작 확인 중.",
+              "evidence": "../assets/submission-202-final-20261101/GeneratedSourceLockQA.json",
+              "dependencies": {
+                "T02": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "regression",
+          "at": "2026-11-01T07:11:30.218911+00:00",
+          "summary": "현재 코드와 최종 회귀를 확인하고 문서 검증 실패를 보존합니다.",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 GUI·227조건·저장 재열기와 Undo/Redo 통과",
+              "evidence": "../assets/submission-202-final-20261101/FormatTabsQA.json",
+              "dependencies": {
+                "T03": 3
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 3,
+              "verdict": "fail",
+              "actual": "9언어 내용과4개 화면 갱신. 기존 이미지 소스 해시·재촬영 검증468건 잔여.",
+              "evidence": "../assets/submission-202-final-20261101/GuideVerification.json",
+              "dependencies": {
+                "T03": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "regression",
+          "at": "2026-11-01T08:05:11.954341+00:00",
+          "summary": "현재 아이콘 코드와 실제 에디터·기존 회귀를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "11조건·2000회 표시·캐시 갱신0임포트·색상34회씩·원본불변·3370회귀 통과.",
+              "evidence": "../assets/project-icon-loop-20261101/ProjectIconLoopQA.json",
+              "dependencies": {
+                "T03": 3
               }
             }
           ]
@@ -892,115 +1010,6 @@
         "T04"
       ],
       "scopeChange": "",
-      "qaRuns": [],
-      "state": "progress"
-    }
-  },
-  {
-    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
-    "postPath": "projects/pixelcamera/posts/2026-11-01-manual-20261101072921387-v1.0.0.md",
-    "date": "2026-11-01T07:29:21.387Z",
-    "version": "v1.0.0",
-    "project": "pixelcamera",
-    "kind": "manual",
-    "manualId": "pixel-camera-showcase-20261101",
-    "round": 1,
-    "manual": {
-      "schemaVersion": 2,
-      "project": "pixelcamera",
-      "kind": "manual",
-      "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
-      "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
-      "reporter": "",
-      "assignee": "",
-      "environment": "",
-      "steps": "",
-      "expected": "",
-      "actual": "",
-      "cause": "",
-      "changes": "",
-      "verification": "",
-      "remaining": "작업 중. GUI 신규 실행·포커스 전환 및 Affinity 이미지 편집은 사용자 제한 아래 보류합니다.",
-      "outcome": "공식 ProPixelizer 문서 및 현재 소스 대조 후 샘플 개편 구현 중",
-      "proposedTime": "40~70분",
-      "actualTime": "2026-11-01 16:25:21 KST 시작",
-      "xerjEvidence": "Status: XERJ node is not running. 포커스 제한을 유지하며 rg 및 현재 소스를 대조합니다.",
-      "priority": "normal",
-      "severity": "normal",
-      "xerjUsage": "실패",
-      "type": "작업 메뉴얼",
-      "manualId": "pixel-camera-showcase-20261101",
-      "round": 1,
-      "phase": "initial",
-      "execution": "sequential",
-      "manualState": "active",
-      "goal": "서로 다른 자산·실제 편집 가능한 애니메이션 클립·대조 설명을 갖춘 세 샘플로 교체하고 ProPixelizer와의 검증된 기능 차이를 설명",
-      "completionCriteria": "주 예제 씬 세 개, 고유한 모델/환경/클립, 실제 Unity 렌더 시각 검토와 두 시간대 포즈/픽셀 변화 검증, 설명형 HUD와 가이드·샘플 진입 메뉴·제출 후보 갱신, 기능 비교와 공개 보고. 포커스 제한으로 실행하지 못한 네이티브 UI·신규 프로세스 검증은 명시",
-      "previousManual": "",
-      "relatedDiscussions": [],
-      "tasks": [
-        {
-          "id": "T01",
-          "order": 1,
-          "title": "공식 기능·현재 구현 대조",
-          "action": "ProPixelizer2.0.3 공식 문서와 현재 프리셋/셰이더/런타임 대조",
-          "expected": "지원·부분지원·부재·미확인을 구분한 근거 있는 비교",
-          "qa": "공식 URL 및 현재 소스의 항목별 대조",
-          "dependsOn": [],
-          "status": "doing",
-          "revision": 1,
-          "result": "공식 문서와 현재 카메라 중심 구현 대조 중"
-        },
-        {
-          "id": "T02",
-          "order": 2,
-          "title": "독립된 세 아트·애니메이션 예제",
-          "action": "기존 Samples/Scenes·Artwork·Runtime 안에 정원/네온 배송/천문대 제작, 이전 씬 보존",
-          "expected": "서로 다른 주역/환경/머티리얼/실제 anim 클립과 관절 움직임",
-          "qa": "실제 Unity 제작·동일 카메라 두 시간대 렌더·시각 검토 후 수정",
-          "dependsOn": [
-            "T01"
-          ],
-          "status": "pending",
-          "revision": 1,
-          "result": ""
-        },
-        {
-          "id": "T03",
-          "order": 3,
-          "title": "설명·비교·진입 흐름",
-          "action": "챕터별 설정 이유와 원본 비교·정지/회전/외곽선 토글·기존 Samples 메뉴·가이드 적용",
-          "expected": "왜/무엇/사용할 때를 설명하고 세 예제로 바로 진입",
-          "qa": "클립/챕터 자산 연결·Overlay 구조·실제 값 변경·설명 대조, 네이티브 입력 미실행 구분",
-          "dependsOn": [
-            "T02"
-          ],
-          "status": "pending",
-          "revision": 1,
-          "result": ""
-        },
-        {
-          "id": "T04",
-          "order": 4,
-          "title": "패키지·문서·공개 검증",
-          "action": "주 샘플3개를 패키지에 반영·레거시 개발 자료 제외·가이드/스크린샷 기록·실제 화면 공개",
-          "expected": "검증 결과와 미실행 범위를 포함한 최신 제출 후보와 보고서",
-          "qa": "패키지 전수 바이트/메타/링크 검사·공개 배포 HTTP 확인",
-          "dependsOn": [
-            "T03"
-          ],
-          "status": "pending",
-          "revision": 1,
-          "result": ""
-        }
-      ],
-      "focusTasks": [
-        "T01",
-        "T02",
-        "T03",
-        "T04"
-      ],
-      "scopeChange": "사용자 최신 지시에 따라 필수 예제 수를 약3개로 줄이고 품질에 집중합니다. 기존 씬은 Development 아래에 보존하고 고객 Samples 진입점을 재사용합니다.",
       "qaRuns": [],
       "state": "progress"
     }

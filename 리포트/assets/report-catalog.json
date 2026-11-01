@@ -20,21 +20,31 @@
     "replyTo": ""
   },
   {
-    "title": "Pixel Camera 세 애니메이션 쇼케이스와 ProPixelizer 기능 차이",
-    "summary": "반복16씬을 고유 자산·실제 클립·설명 UI가 있는3씬으로 교체했습니다. 실제 Unity 렌더·72포즈·동작 계약과 공식 기능 차이를 확인했습니다.",
-    "project": "pixelcamera",
-    "reportPath": "projects/pixelcamera/reports/2026-11-01-result-20261101080118860-v1.0.0.html",
-    "date": "2026-11-01T08:01:18.860Z",
+    "title": "Project 폴더 표시 중 XLSX 무한 재임포트",
+    "summary": "Project 아이콘 Repaint의 전체 재임포트 예약을 제거했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-bug-20261101080759813-v1.0.0.html",
+    "date": "2026-11-01T08:07:59.813Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "2.0.2 통합 QA · Project 폴더 무한 재임포트 수정",
+    "summary": "폴더 표시가 전체 XLSX 재임포트를 반복시키던 경로를 수정했습니다. 실제2000회 표시·색상 왕복·3370회귀를 확인했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-result-20261101080759383-v1.0.0.html",
+    "date": "2026-11-01T08:07:59.383Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""
   },
   {
-    "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
-    "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
-    "project": "pixelcamera",
-    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-showcase-20261101-20261101080116751-v1.0.1.html",
-    "date": "2026-11-01T08:01:16.751Z",
+    "title": "Design Data Table 2.0.2 제출 준비와 공개 API 교체",
+    "summary": "Project 창에서 반복되는 XLSX 재임포트를 수정하고 실제 아이콘 표시·색상·원본 불변·회귀 검증을 수행합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-01-manual-submission-202-20261101-20261101080527408-v1.0.2.html",
+    "date": "2026-11-01T08:05:27.408Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -85,16 +95,6 @@
     "project": "pengutown",
     "reportPath": "projects/pengutown/reports/2026-11-01-manual-20261101073905824-v1.0.0.html",
     "date": "2026-11-01T07:39:05.824Z",
-    "kind": "manual",
-    "relatedReport": "",
-    "replyTo": ""
-  },
-  {
-    "title": "Pixel Camera 세 개의 애니메이션 쇼케이스와 경쟁 기능 대조",
-    "summary": "반복된 16개 맵을 세 개의 독립된 아트·애니메이션·설명형 샘플로 개편합니다.",
-    "project": "pixelcamera",
-    "reportPath": "projects/pixelcamera/reports/2026-11-01-manual-20261101072921387-v1.0.0.html",
-    "date": "2026-11-01T07:29:21.387Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
