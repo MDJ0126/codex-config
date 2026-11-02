@@ -1,0 +1,148 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "판매 미디어 품질 정리 · DDT 스타일과 영상 사운드",
+    "summary": "DDT를 기준으로3제품 판매 이미지와4영상 사운드를 보강하고 지침·판매 초안에 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Pixora·Pixel Camera 편집 원본의 네이티브 재열기·재출력 대조와 판매자 페이지 미디어 교체·저장 후 재열기는 남아 있습니다. 화면 조작 재허용은 Entity Forge 원본 하나에 한정됐으므로 나머지를 임의로 열거나 포털을 조작하지 않았습니다. 기존 실제 Unity 캡처를 재사용했으며 최신 UI 전체 재촬영·9개 언어의 실제 배치 검증을 새로 완료한 것은 아닙니다. 최종 제출하지 않았고 전체 출시 준비 완료로 표시하지 않았습니다. 교훈: 실제 발견한 반복 렌더링·영역 클리핑·자원 제한 검증을 프로젝트에 기록하고, 공통 자원 점검 원칙만 전역에 추가했습니다. 다른 실행 중 대화가 자동 적용했다고 보고하지 않습니다.",
+    "outcome": "Pixora·Pixel Camera·Entity Forge는 각각 갤러리16장과 키 이미지4장을 준비했습니다. 실제 Affinity 편집 원본3개를 저장했고, DDT를 포함한60초1080p 영상4개에 배경음과 페이드를 적용했습니다. 사용자가 공통 음원 미리보기를 직접 듣고 음원·음량을 승인했습니다. 판매자 페이지 교체·제출은 실행하지 않았습니다.",
+    "proposedTime": "1~3시간",
+    "actualTime": "2026-11-02 17:35:25 KST 시작. 파일 제작·보완·비GUI 검증 고정20:09:17 KST(경과2시간33분52초). 19:20:35~19:43:46 화면 조작 중단 대기23분11초 포함. 소스 푸시 성공20:18:30 KST 확인. 공개 배포는 푸시와 별도 확인하며, 남은 재열기·포털 작업의 전체 완료 시각은 없습니다.",
+    "xerjEvidence": "Status node not running. 이번 작업은 매체·파일 대조 위주이며 필요한 UI 소스는 rg로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "store-media-quality-20261102",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "DDT 수준의 판매 이미지 세트와 들리는 영상, 재발 방지 지침 적용",
+    "completionCriteria": "모든 이미지 실제 Affinity 원본·출력 시각 QA,4영상 실제 오디오·청취, 포털 저장·재열기, 지침과 커밋·푸시·공개 보고 확인",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102084237813-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기존 판매 이미지·영상·포털 상태 대조",
+        "action": "DDT 기준·3제품 기존 자료·실제 포털 갤러리 수·영상 오디오 트랙·음원 권리 확인",
+        "expected": "원본·경로·개수·권리·실제 트랙 상태 기록",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [],
+        "status": "blocked",
+        "revision": 1,
+        "result": "기존 이미지·무음 영상·음원 권리 대조 완료. 실제 포털 갤러리 상태 대조는 화면 제한으로 대기."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "DDT 스타일의 제품별 이미지 보강",
+        "action": "실제 Affinity에서 3제품별16장 갤러리·커버/카드/아이콘/소셜과 편집 가능한 원본 제작, 실제 제품 자료로 시각 검토",
+        "expected": "DDT와 일관된 스타일, 의미 있는16장씩, 읽을 수 있는 실제 제품 화면, 원본 저장·재열기",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "60장 출력·시각 보완·원본3개 저장. Entity Forge 재열기 픽셀 일치. 나머지2원본 재열기 대기."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "4개 제품 영상 사운드 추가와 재생 검증",
+        "action": "기존 무음4영상에 합법 음원·필요 효과음·출처를 추가하고 오디오 레벨·무음·전체 디코드·실제 청취 확인",
+        "expected": "4영상 모두 실제 들리는 오디오와 페이드·레벨·출처·영상 동기 확인",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "4영상 음원·페이드·출처·디코드·신호·음량 검사 및 사용자12초 청취 승인 완료. 포털 플레이어 재확인 대기."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "프로젝트 지침 통합 및 판매 초안 반영·푸시",
+        "action": "중복 없는 프로젝트 규칙·매체 QA 계약 반영, 포털 저장·재열기, 명시적 커밋·Git Chunk·푸시와 공개 보고",
+        "expected": "규칙과 실제 결과물·판매 초안이 일치, 최종 제출은 실행하지 않음",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "프로젝트 지침·전역 자원 규칙 통합, 소스6b6d7d2c 푸시 완료. 공개 보고와 포털 미디어 교체 분리."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "사용자의 자원 절감·순차 처리 요구와 화면 조작 제한을 반영했습니다. 원래4개 작업·전체 완료 기준은 유지하고 미실행·재열기·포털 작업은 삭제하지 않습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T11:20:55.240Z",
+        "summary": "매체 파일 검사와 사용자 음원 승인, 화면 제한으로 남은 검증을 분리했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "기존 이미지·무음 영상·음원 권리 대조 완료. 실제 포털 갤러리 상태 대조는 화면 제한으로 대기.",
+            "evidence": "원본 파일 대조·audio-verification.json, 포털 미실행",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "60장 출력·시각 보완·원본3개 저장. Entity Forge 재열기 픽셀 일치. 나머지2원본 재열기 대기.",
+            "evidence": "Manifest.json·실제 출력 시각 검수·forge-reopen-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "4영상 음원·페이드·출처·디코드·신호·음량 검사 및 사용자12초 청취 승인 완료. 포털 플레이어 재확인 대기.",
+            "evidence": "audio-light-verification.json·사용자 청취 승인; 포털 미실행",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "프로젝트 지침·전역 자원 규칙 통합, 소스6b6d7d2c 푸시 완료. 공개 보고와 포털 미디어 교체 분리.",
+            "evidence": "프로젝트 커밋162개 경로 대조·푸시 로그, 포털 미실행",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

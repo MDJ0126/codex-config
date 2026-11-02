@@ -1,0 +1,130 @@
+{
+  "images": 60,
+  "videos": 4,
+  "masters": [
+    {
+      "product": "Pixora",
+      "file": "Docs/StoreMedia/Delivery-2026-11-02-Quality/Pixora/Editable/Pixora-Store-Gallery.af",
+      "bytes": 2297996,
+      "sha256": "c75a7042578781d509bd4a17ba024a6ca4b8deb66b36e737a5c328e49c165941",
+      "saved": true,
+      "reopenVerified": false
+    },
+    {
+      "product": "PixelCamera",
+      "file": "Docs/StoreMedia/Delivery-2026-11-02-Quality/PixelCamera/Editable/PixelCamera-Store-Gallery.af",
+      "bytes": 2988174,
+      "sha256": "565d1208313e49cd67b2dfde9b00479ce31ca47353e50f760e1b3a82193d244d",
+      "saved": true,
+      "reopenVerified": false
+    },
+    {
+      "product": "EntityForge",
+      "file": "Docs/StoreMedia/Delivery-2026-11-02-Quality/EntityForge/Editable/EntityForge-Store-Gallery.af",
+      "bytes": 11706494,
+      "sha256": "2167c76fc46e1d0314097c9ec8f09a4757bc98198c42f8b3be4e0e35d4e605c5",
+      "saved": true,
+      "reopenVerified": true
+    }
+  ],
+  "audio": {
+    "at": "2026-11-02T10:17:58.843538+00:00",
+    "records": [
+      {
+        "product": "DesignDataTable",
+        "decoded": true,
+        "threads": 1,
+        "priority": "BelowNormal",
+        "audioBitstreamHash": "SHA256=bcb57247a3307c4e3d082a3a7e448d957d9b801f2ca527863afd8f79b6011f59",
+        "silenceEvents": [
+          "silence_start: 0",
+          "silence_end: 0.824 | silence_duration: 0.824"
+        ],
+        "maxVolume": [
+          "-4.6 dB"
+        ]
+      },
+      {
+        "product": "Pixora",
+        "decoded": true,
+        "threads": 1,
+        "priority": "BelowNormal",
+        "audioBitstreamHash": "SHA256=bcb57247a3307c4e3d082a3a7e448d957d9b801f2ca527863afd8f79b6011f59",
+        "silenceEvents": [
+          "silence_start: 0",
+          "silence_end: 0.824 | silence_duration: 0.824"
+        ],
+        "maxVolume": [
+          "-4.6 dB"
+        ]
+      },
+      {
+        "product": "PixelCamera",
+        "decoded": true,
+        "threads": 1,
+        "priority": "BelowNormal",
+        "audioBitstreamHash": "SHA256=bcb57247a3307c4e3d082a3a7e448d957d9b801f2ca527863afd8f79b6011f59",
+        "silenceEvents": [
+          "silence_start: 0",
+          "silence_end: 0.824 | silence_duration: 0.824"
+        ],
+        "maxVolume": [
+          "-4.6 dB"
+        ]
+      },
+      {
+        "product": "EntityForge",
+        "decoded": true,
+        "threads": 1,
+        "priority": "BelowNormal",
+        "audioBitstreamHash": "SHA256=bcb57247a3307c4e3d082a3a7e448d957d9b801f2ca527863afd8f79b6011f59",
+        "silenceEvents": [
+          "silence_start: 0",
+          "silence_end: 0.824 | silence_duration: 0.824"
+        ],
+        "maxVolume": [
+          "-4.6 dB"
+        ]
+      }
+    ],
+    "sameAudioAcrossVideos": true,
+    "excerpt": "Docs\\Testing\\2026-11-02\\store-media-quality\\Promo-audio-preview.wav"
+  },
+  "resource": {
+    "CPUMask": 3,
+    "Priority": "BelowNormal",
+    "MemoryMB": 651,
+    "Responding": true,
+    "at": "2026-11-02T20:08:27.5453602+09:00"
+  },
+  "reopen": {
+    "product": "EntityForge",
+    "savedClosedReopened": true,
+    "checkedArtboard": "Icon",
+    "samePixels": true,
+    "actualRGBA": "fae25f5fca8b59de5babf93a1ee3ba37e1e4413c763aaaf87a7d78893bcb2085",
+    "expectedRGBA": "fae25f5fca8b59de5babf93a1ee3ba37e1e4413c763aaaf87a7d78893bcb2085",
+    "at": "2026-11-02T20:05:08.8002997+09:00"
+  },
+  "commitScope": {
+    "Commit": "6b6d7d2ce36933b5683e56ab6495d0ddf7707ba6",
+    "ExpectedFiles": 162,
+    "ActualFiles": 162,
+    "Unexpected": []
+  },
+  "visualQa": {
+    "at": "2026-11-02T11:09:16.168Z",
+    "state": "reviewed_outputs",
+    "method": "Inspected actual exported PNG layouts, typography, source/result framing and labels. Corrected discovered repeated views, wrong source pairs and crop leakage inside actual Affinity.",
+    "correctedForge": [
+      "04-Readiness",
+      "05-Exclusions",
+      "08-Measurements",
+      "13-Dark",
+      "14-Light",
+      "16-Global-Settings"
+    ],
+    "limits": "Recorded Unity UI captures reused; this is image-file review, not a fresh Unity execution pass or verification of every localized layout. Two native master reopen checks and saved publisher presentation remain pending."
+  },
+  "submissionReady": false
+}
