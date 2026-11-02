@@ -1,0 +1,426 @@
+{
+  "at": "2026-11-02T13:03:51.704Z",
+  "before": "Native LoadAssetAtPath<GameObject> null for CourierDrone/CargoRover/OreSalvage; 120 scene prefab references null, route arrays valid; actor script class loaded",
+  "repair": "Unity PrefabUtility.SaveAsPrefabAsset, same GUIDs, actual persistent root IDs applied to scene references",
+  "afterAssets": {
+    "utc": "2026-11-02T12:42:11.5384333Z",
+    "playing": false,
+    "assets": [
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/CourierDrone.prefab",
+        "guid": "e4d0f2e8492218ff361f93156e19ec1f",
+        "scriptClass": "",
+        "localId": 3102620515391473000,
+        "loaded": true,
+        "components": [
+          "UnityEngine.Transform",
+          "UnityEngine.MeshFilter",
+          "UnityEngine.MeshRenderer",
+          "TurnRoom.EntityForge.Samples.DispatchActor"
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/CargoRover.prefab",
+        "guid": "bd5d9866c49ef5c0522f3e4ac611ba1e",
+        "scriptClass": "",
+        "localId": 6968776975355646000,
+        "loaded": true,
+        "components": [
+          "UnityEngine.Transform",
+          "UnityEngine.MeshFilter",
+          "UnityEngine.MeshRenderer",
+          "TurnRoom.EntityForge.Samples.DispatchActor"
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/OreSalvage.prefab",
+        "guid": "0461c02561faf8a6cdf9c492e17e05b7",
+        "scriptClass": "",
+        "localId": 4188491312863520000,
+        "loaded": true,
+        "components": [
+          "UnityEngine.Transform",
+          "UnityEngine.MeshFilter",
+          "UnityEngine.MeshRenderer",
+          "UnityEngine.Rigidbody",
+          "UnityEngine.SphereCollider"
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Runtime/DispatchActor.cs",
+        "guid": "",
+        "scriptClass": "TurnRoom.EntityForge.Samples.DispatchActor",
+        "localId": 0,
+        "loaded": true,
+        "components": []
+      }
+    ],
+    "sessions": [
+      {
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "enabled": true,
+        "definitions": 120,
+        "invalid": []
+      }
+    ]
+  },
+  "observations": [
+    {
+      "scene": 0,
+      "early": {
+        "utc": "2026-11-02T12:57:30.5290481Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 6.061341762542725,
+        "minY": 2.2500267028808594,
+        "maxY": 4.249910831451416,
+        "active": 192,
+        "created": 192,
+        "retired": 0,
+        "objects": 192,
+        "bodies": 0,
+        "rendered": 192,
+        "first": {
+          "x": -8.584863662719727,
+          "y": 2.392681837081909,
+          "z": 5.8550214767456055
+        }
+      },
+      "moving": {
+        "utc": "2026-11-02T12:57:30.9077841Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 7.278842449188232,
+        "minY": 2.2504842281341553,
+        "maxY": 4.249945163726807,
+        "active": 228,
+        "created": 228,
+        "retired": 0,
+        "objects": 228,
+        "bodies": 0,
+        "rendered": 228,
+        "first": {
+          "x": -14.458656311035156,
+          "y": 2.728219509124756,
+          "z": -0.5038735866546631
+        }
+      },
+      "paused": {
+        "utc": "2026-11-02T12:57:31.5182516Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 7.278842449188232,
+        "minY": 2.2504842281341553,
+        "maxY": 4.249945163726807,
+        "active": 228,
+        "created": 228,
+        "retired": 0,
+        "objects": 228,
+        "bodies": 0,
+        "rendered": 228,
+        "first": {
+          "x": -14.458656311035156,
+          "y": 2.728219509124756,
+          "z": -0.5038735866546631
+        }
+      },
+      "burst": {
+        "utc": "2026-11-02T12:57:31.5238388Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 7.278842449188232,
+        "minY": 2.250145435333252,
+        "maxY": 4.249993324279785,
+        "active": 328,
+        "created": 328,
+        "retired": 0,
+        "objects": 328,
+        "bodies": 0,
+        "rendered": 328,
+        "first": {
+          "x": -14.458656311035156,
+          "y": 2.728219509124756,
+          "z": -0.5038735866546631
+        }
+      },
+      "late": {
+        "utc": "2026-11-02T12:57:38.2474908Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 14.001608848571777,
+        "minY": 2.2501416206359863,
+        "maxY": 4.249948024749756,
+        "active": 532,
+        "created": 532,
+        "retired": 0,
+        "objects": 532,
+        "bodies": 0,
+        "rendered": 532,
+        "first": {
+          "x": -8.051538467407227,
+          "y": 2.5669517517089844,
+          "z": 5.939230918884277
+        }
+      },
+      "restart": {
+        "utc": "2026-11-02T12:57:38.3440696Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "time": 0,
+        "minY": 2.258571147918701,
+        "maxY": 4.249042987823486,
+        "active": 12,
+        "created": 12,
+        "retired": 0,
+        "objects": 12,
+        "bodies": 0,
+        "rendered": 12,
+        "first": {
+          "x": -15,
+          "y": 2.5,
+          "z": -7
+        }
+      },
+      "moved": true
+    },
+    {
+      "scene": 1,
+      "early": {
+        "utc": "2026-11-02T12:57:46.5219427Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 6.105070114135742,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 56,
+        "created": 56,
+        "retired": 0,
+        "objects": 56,
+        "bodies": 0,
+        "rendered": 56,
+        "first": {
+          "x": 4.869513511657715,
+          "y": 0.20000000298023224,
+          "z": -12
+        }
+      },
+      "moving": {
+        "utc": "2026-11-02T12:57:46.8908372Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 7.3363447189331055,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 64,
+        "created": 64,
+        "retired": 0,
+        "objects": 64,
+        "bodies": 0,
+        "rendered": 64,
+        "first": {
+          "x": 19,
+          "y": 0.20000000298023224,
+          "z": 0.4650459289550781
+        }
+      },
+      "paused": {
+        "utc": "2026-11-02T12:57:47.4964683Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 7.3363447189331055,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 64,
+        "created": 64,
+        "retired": 0,
+        "objects": 64,
+        "bodies": 0,
+        "rendered": 64,
+        "first": {
+          "x": 19,
+          "y": 0.20000000298023224,
+          "z": 0.4650459289550781
+        }
+      },
+      "burst": {
+        "utc": "2026-11-02T12:57:47.5005092Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 7.3363447189331055,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 160,
+        "created": 160,
+        "retired": 0,
+        "objects": 160,
+        "bodies": 0,
+        "rendered": 160,
+        "first": {
+          "x": 19,
+          "y": 0.20000000298023224,
+          "z": 0.4650459289550781
+        }
+      },
+      "late": {
+        "utc": "2026-11-02T12:57:54.1691948Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 14.009926795959473,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 160,
+        "created": 168,
+        "retired": 8,
+        "objects": 160,
+        "bodies": 0,
+        "rendered": 160,
+        "first": {
+          "x": -5.03935432434082,
+          "y": 0.20000000298023224,
+          "z": -12
+        }
+      },
+      "restart": {
+        "utc": "2026-11-02T12:57:54.2562337Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "time": 0,
+        "minY": 0.20000000298023224,
+        "maxY": 0.20000000298023224,
+        "active": 8,
+        "created": 8,
+        "retired": 0,
+        "objects": 8,
+        "bodies": 0,
+        "rendered": 8,
+        "first": {
+          "x": -19,
+          "y": 0.20000000298023224,
+          "z": -12
+        }
+      },
+      "moved": true
+    },
+    {
+      "scene": 2,
+      "early": {
+        "utc": "2026-11-02T12:58:02.5211418Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 6.172811985015869,
+        "minY": 7.976194858551025,
+        "maxY": 9.800000190734863,
+        "active": 78,
+        "created": 78,
+        "retired": 0,
+        "objects": 78,
+        "bodies": 78,
+        "rendered": 78,
+        "first": {
+          "x": -6.794177055358887,
+          "y": 7.976194858551025,
+          "z": -4.766060829162598
+        }
+      },
+      "moving": {
+        "utc": "2026-11-02T12:58:02.8926906Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 7.387124061584473,
+        "minY": 7.899162292480469,
+        "maxY": 9.842082023620605,
+        "active": 90,
+        "created": 90,
+        "retired": 0,
+        "objects": 90,
+        "bodies": 90,
+        "rendered": 90,
+        "first": {
+          "x": -6.78861141204834,
+          "y": 7.948701858520508,
+          "z": -4.732337474822998
+        }
+      },
+      "paused": {
+        "utc": "2026-11-02T12:58:03.5035553Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 7.387124061584473,
+        "minY": 7.899162292480469,
+        "maxY": 9.842082023620605,
+        "active": 90,
+        "created": 90,
+        "retired": 0,
+        "objects": 90,
+        "bodies": 90,
+        "rendered": 90,
+        "first": {
+          "x": -6.78861141204834,
+          "y": 7.948701858520508,
+          "z": -4.732337474822998
+        }
+      },
+      "burst": {
+        "utc": "2026-11-02T12:58:03.5070796Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 7.387124061584473,
+        "minY": 7.899162292480469,
+        "maxY": 9.842082023620605,
+        "active": 180,
+        "created": 180,
+        "retired": 0,
+        "objects": 180,
+        "bodies": 180,
+        "rendered": 180,
+        "first": {
+          "x": -6.78861141204834,
+          "y": 7.948701858520508,
+          "z": -4.732337474822998
+        }
+      },
+      "late": {
+        "utc": "2026-11-02T12:58:10.1173560Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 14.0028657913208,
+        "minY": 0.15112042427062988,
+        "maxY": 0.7457389831542969,
+        "active": 180,
+        "created": 186,
+        "retired": 6,
+        "objects": 180,
+        "bodies": 180,
+        "rendered": 180,
+        "first": {
+          "x": 8.508001327514648,
+          "y": 0.4620077311992645,
+          "z": -11.135603904724121
+        }
+      },
+      "restart": {
+        "utc": "2026-11-02T12:58:10.2058751Z",
+        "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "time": 0,
+        "minY": 8,
+        "maxY": 9.800000190734863,
+        "active": 6,
+        "created": 6,
+        "retired": 0,
+        "objects": 6,
+        "bodies": 6,
+        "rendered": 6,
+        "first": {
+          "x": -6.800000190734863,
+          "y": 8,
+          "z": -4.800000190734863
+        }
+      },
+      "moved": true
+    }
+  ],
+  "rendering": "Native Game View PNG; Korean only; HUD backing camera clears stale text, readable large counter; physics boundary retains bodies",
+  "firstFailedRun": "Attempt1 harness wrongly expected +100 even at capacity; corrected clamp expectation. Attempt2 screenshots captured after immediate restart; phase separation added. Both attempts retained locally.",
+  "package": {
+    "at": "2026-11-02T13:01:48.577Z",
+    "method": "File-only standard Unity archive layout; source and metadata preserved",
+    "package": "Artifacts/EntityForge/TurnRoom-EntityForge-0.2.0-preview.unitypackage",
+    "bytes": 24529902,
+    "sha256": "54df038e5716f55f6df7536500d208bd0e23b983a161e41c20527e4e82625583",
+    "assets": 392,
+    "readback": "pass",
+    "currentSources": "byte-identical",
+    "developmentExcluded": true,
+    "nativeUnityExportExecuted": false,
+    "cleanUnityImport": "not executed: separate product installation QA",
+    "createdMeta": [
+      "Assets/TurnRoom/EntityForge/Documentation/Images/SampleDronePlay.png.meta",
+      "Assets/TurnRoom/EntityForge/Documentation/Images/SamplePhysicsPlay.png.meta",
+      "Assets/TurnRoom/EntityForge/Documentation/Images/SampleTrafficPlay.png.meta"
+    ]
+  },
+  "remaining": "Player build/install and performance gain for these changes not executed; other language layouts unverified"
+}
