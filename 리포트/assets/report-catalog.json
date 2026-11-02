@@ -1,5 +1,65 @@
 [
   {
+    "title": "4제품 판매 미디어 전수 수정·최종 재생 검증",
+    "summary": "DDT 패턴을 기준으로 누락·구형 영상과 썸네일·아이콘을 수정하고 실제 포털 재생까지 검증합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-media-repair-20261103-20261102194030690-v1.0.1.html",
+    "date": "2026-11-02T19:40:30.690Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 판매 영상·갤러리 교체 및 저장 검증",
+    "summary": "새 영상과 갤러리 16장·키 이미지 3개를 포털에 적용하고 새로고침으로 저장을 확인했습니다. 직접 청취는 미실행입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102194029962-v1.0.0.html",
+    "date": "2026-11-02T19:40:29.962Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 판매 영상·갤러리 교체 및 저장 검증",
+    "summary": "새 영상과 갤러리 16장·키 이미지 3개를 포털에 적용하고 새로고침으로 저장을 확인했습니다. 직접 청취는 미실행입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-02-result-20261102194029344-v1.0.0.html",
+    "date": "2026-11-02T19:40:29.344Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 판매 영상·갤러리 교체 및 저장 검증",
+    "summary": "새 영상과 갤러리 16장·키 이미지 3개를 포털에 적용하고 새로고침으로 저장을 확인했습니다. 직접 청취는 미실행입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-02-result-20261102194028613-v1.0.0.html",
+    "date": "2026-11-02T19:40:28.613Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 판매 영상·갤러리 교체 및 저장 검증",
+    "summary": "새 영상과 갤러리 16장·키 이미지 3개를 포털에 적용하고 새로고침으로 저장을 확인했습니다. 직접 청취는 미실행입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-02-result-20261102194027491-v1.0.0.html",
+    "date": "2026-11-02T19:40:27.491Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4제품 판매 미디어 전수 수정·최종 재생 검증",
+    "summary": "DDT 패턴을 기준으로 누락·구형 영상과 썸네일·아이콘을 수정하고 실제 포털 재생까지 검증합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102182012148-v1.0.0.html",
+    "date": "2026-11-02T18:20:12.148Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "4개 Unity 판매 초안 최신화와 무화면 제출 점검",
     "summary": "4개 제품 4개 언어 저장 대조와 갤러리 교체, 패키지 차이 및 Pixora 참조 수정 검토",
     "project": "turnroom",
