@@ -1,5 +1,25 @@
 [
   {
+    "title": "헤더 액션 아이콘·호버·포커스 연결",
+    "summary": "전역 설정과 사용 안내를 액션 버튼으로 구분하고 아이콘 및 상호작용 상태를 검증합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102171442444-v1.0.0.html",
+    "date": "2026-11-02T17:14:42.444Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 설정·사용 안내 호버와 포커스 및 톱니바퀴 아이콘",
+    "summary": "헤더 액션의 호버 배경과 포커스 테두리를 추가하고 전역 설정 앞에 기존 톱니바퀴를 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102171441871-v1.0.0.html",
+    "date": "2026-11-02T17:14:41.871Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
     "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
     "project": "entityforge",

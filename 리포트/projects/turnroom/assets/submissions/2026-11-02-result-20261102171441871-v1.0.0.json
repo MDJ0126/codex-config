@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "전역 설정·사용 안내 호버와 포커스 및 톱니바퀴 아이콘",
+    "summary": "헤더 액션의 호버 배경과 포커스 테두리를 추가하고 전역 설정 앞에 기존 톱니바퀴를 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 document-tabs 스타일이 Hover(clear,clear)를 적용하던 부분 뒤에 액션 전용 최종 스타일을 적용합니다. 상태는 기존 ConditionalWeakTable에서 한 번만 등록하고 PointerEnter/Leave와 FocusIn/Out으로 갱신합니다. 포인터가 떠나도 키보드 포커스가 남으면 강조를 유지하며 disabled는 강조하지 않습니다. Tab 탐색과 테마 상속을 유지합니다. 설정 아이콘은 기존 Affinity 카탈로그의 settings(53), 별도 테마 버튼은 palette(65)로 구분했습니다. 새 그림은 생성하지 않았습니다. 기존 로컬라이즈 캡션과 클릭 동작을 유지합니다.",
+    "verification": "[소스 검사 근거](../assets/header-actions-20261103/verification.json). 아이콘 카탈로그의 실제 이름/인덱스, 공통 버튼과 authored 사용 안내의 액션 클래스, 이벤트 4종과 최종 스타일 순서, 7개 어셈블리 컴파일 및 소스 해시를 확인했습니다. 패키지 400개 에셋 원본 바이트 대조 통과. SHA-256 c5e6963c016b65b8f0b8d89a9b409fdf33c0021932c3797bb5bb089e68636069. 화면 조작·에디터 명령·빌드는 실행하지 않았습니다.",
+    "remaining": "사용자 화면 조작 금지로 실제 호버·Tab 포커스·Enter/Space 클릭·다국어 폭 및 밝은/어두운 화면 검증은 미실행입니다. 전후 호버 화면도 확보하지 않았으며 실제 동작 검증 완료로 표시하지 않습니다. 교훈 검토: 문서 탭과 버튼 액션을 스타일에서 구분하고 테마 재적용 후 상호작용 상태가 덮이지 않게 합니다. 프로젝트 메뉴얼에 기록하고 전역 규칙 추가는 하지 않았습니다.",
+    "outcome": "전역 설정 버튼에 기존 settings 톱니바퀴와 번역된 캡션을 함께 배치했습니다. Entity Forge 사용 안내와 전역 설정 버튼은 호버 배경·포커스 배경/테두리를 적용합니다.",
+    "proposedTime": "3~5분 · 시작 2026-11-03 02:09:14 KST",
+    "actualTime": "소스·컴파일·패키지 반영 4분 21초 · 2026-11-03 02:13:35 KST. 기록 공개 배포는 이후 확인.",
+    "xerjEvidence": "Xerj.ps1 Status: XERJ node is not running. rg와 공통 스타일/아이콘 카탈로그를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
