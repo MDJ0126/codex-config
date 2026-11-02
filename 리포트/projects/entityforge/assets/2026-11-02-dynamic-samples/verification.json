@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-02T12:16:48.358Z",
+  "sourceCauseOfNoMotion": "unverified; no matching exception in inspected Unity Editor log",
+  "previousPopulation": "all definitions instantiated once in Start; no increasing population",
+  "scenes": [
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+      "scenario": 0,
+      "initialCount": 12,
+      "spawnBatch": 12,
+      "spawnInterval": 0.4,
+      "capacity": 600,
+      "instanceLifetime": 0,
+      "burstSize": 100,
+      "removedStaticProps": 48,
+      "editableCanvas": true,
+      "forgeAuthoringComponents": 0
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+      "scenario": 1,
+      "initialCount": 8,
+      "spawnBatch": 4,
+      "spawnInterval": 0.5,
+      "capacity": 160,
+      "instanceLifetime": 12,
+      "burstSize": 100,
+      "removedStaticProps": 0,
+      "editableCanvas": true,
+      "forgeAuthoringComponents": 0
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+      "scenario": 2,
+      "initialCount": 6,
+      "spawnBatch": 6,
+      "spawnInterval": 0.5,
+      "capacity": 180,
+      "instanceLifetime": 12,
+      "burstSize": 100,
+      "removedStaticProps": 232,
+      "editableCanvas": true,
+      "forgeAuthoringComponents": 0
+    }
+  ],
+  "assetChecks": {
+    "at": "2026-11-02T12:13:21.940Z",
+    "scenes": [
+      {
+        "name": "01-DroneHangar",
+        "documents": 211,
+        "buttons": [
+          "TogglePause",
+          "CycleSpeed",
+          "Restart",
+          "AddBurst"
+        ],
+        "localRefs": "pass"
+      },
+      {
+        "name": "02-CargoTraffic",
+        "documents": 211,
+        "buttons": [
+          "TogglePause",
+          "CycleSpeed",
+          "Restart",
+          "AddBurst"
+        ],
+        "localRefs": "pass"
+      },
+      {
+        "name": "03-SalvageYard",
+        "documents": 211,
+        "buttons": [
+          "TogglePause",
+          "CycleSpeed",
+          "Restart",
+          "AddBurst"
+        ],
+        "localRefs": "pass"
+      }
+    ],
+    "catalogKeys": 38,
+    "languages": 9,
+    "placeholderParity": true,
+    "fontGlyphsChecked": 535,
+    "fontMissing": [],
+    "nativeUnity": "pending: no focus permission"
+  },
+  "actualCodeTests": "PASS: ramp 12->72->600, capacity/burst, traffic retirement/conservation, rain timing/lifetime, pause/restart, actual DispatchActor.Evaluate moves >5 units in 1s using math stubs. Unity lifecycle/rendering/physics NOT executed.",
+  "compilationAssemblies": 7,
+  "sourceHashes": "current",
+  "ui": "editable scene/prefab Canvas, Inspector events TogglePause/CycleSpeed/Restart/AddBurst; no runtime UI construction",
+  "package": {
+    "at": "2026-11-02T12:14:30.069Z",
+    "method": "File-only standard Unity archive layout; source and metadata preserved",
+    "package": "Artifacts/EntityForge/TurnRoom-EntityForge-0.2.0-preview.unitypackage",
+    "bytes": 23774628,
+    "sha256": "e8f4424217484449d7a436c69c5bda89dd1229330162d2e6a9d4c9eea1206627",
+    "assets": 389,
+    "readback": "pass",
+    "currentSources": "byte-identical",
+    "developmentExcluded": true,
+    "nativeUnityExportExecuted": false,
+    "cleanUnityImport": "not executed: separate product installation QA",
+    "createdMeta": []
+  },
+  "native": "Unity Play/lifecycle/physical collision/camera/output/build/measurement NOT executed: user focus restriction"
+}

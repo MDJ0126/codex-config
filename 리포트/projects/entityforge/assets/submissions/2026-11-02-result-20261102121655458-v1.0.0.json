@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "result",
+    "title": "Entity Forge 예제: 드론 증가·차량 생성/제거·광석 물리 낙하",
+    "summary": "시작 때 한꺼번에 생성하던 예제를 순차 생성 3종으로 바꿨습니다. 현재·누적 생성·제거 수와 +100 개체 버튼을 연결했습니다. 코드/참조 검사는 통과, 실제 Unity Play·물리는 미검증입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 Start는 전체 프리팹을 한 번에 생성했으므로 개체가 점점 증가하지 않았습니다. 움직임이 없다는 사용자 관찰의 정확한 원인은 현재 소스/씬/확인한 로그만으로 확정하지 않았습니다. 이동 갱신은 세션에서 실제 생성 개체를 직접 갱신하도록 정리하고 unscaledDeltaTime을 사용했습니다. 독립 DispatchActor는 경로가 있으면 로컬 시간으로 이동하도록 했습니다.\n\nHUD의 큰 숫자는 실제 활성 생성 개체 수이며 현재·누적 생성·제거·FPS/ms를 함께 보여줍니다. 기존 측정 버튼은 +100 개체 추가로 바꾸고 Inspector 이벤트를 AddBurst에 연결했습니다. 이전 Measure 호출도 개체 추가로 연결돼 예제 버튼이 플레이어 빌드를 시작하지 않습니다. 일시정지·속도·재시작과 상한을 유지하며 물리 씬의 속도는 생성 간격을 조절합니다. 편집 상태 HUD는 실행 중으로 표시하지 않고 Play 안내를 보여줍니다. 정지된 차량 장식과 광석 장식을 정리해 동적 개체를 구분하기 쉽게 했습니다. 모델과 편집 가능한 Canvas/프리팹 구조는 유지했습니다.",
+    "verification": "실제 PopulationTimeline 소스를 .NET에서 실행해 드론 12→2초 후 72→최대 600, +100 상한, 차량 회수/수량 보존, 광석 생성 타이밍/수명, 일시정지·재시작을 검사했습니다. 실제 DispatchActor.Evaluate는 수학 스텁으로 실행해 1초 후 5단위 이상 위치 변화를 확인했습니다. Unity 프레임/렌더링/물리 실행을 대신하는 검증은 아닙니다. [실행 결과](../assets/2026-11-02-dynamic-samples/logic-tests.txt)\n\n7개 어셈블리 설치 Unity 참조 컴파일과 마지막 소스 해시 대조 통과. 3개 씬 내부 참조와 4개 Inspector 버튼 연결, 38개 문구×9언어/치환 인자, Noto 글리프 535개와 문서 126개 링크 검사 통과. 389개 에셋 패키지 원본/메타 byte readback 통과. [검사 JSON](../assets/2026-11-02-dynamic-samples/verification.json)",
+    "remaining": "사용자 화면 포커스 금지 조건으로 Unity/플레이어를 실행하거나 조작하지 않았습니다. 실제 Play에서 생성·이동·회수, Rigidbody 낙하/충돌/일시정지, 카메라·HUD·언어별 배치, 재시작 및 빌드 변환은 네이티브 미검증입니다. 정확한 원인과 수정 후 실제 화면·전후 캡처도 미확보입니다. 기존 문서 캡처 해시는 보존하며 새 성능 개선율을 측정했다고 보고하지 않습니다. 교훈 검토: 예제별로 첫 실행에서 관찰 가능한 동작과 실제 수량 피드백을 구분한다는 제품 기준을 메뉴얼에 기록했으며 새로운 전역 규칙 추가 없음.",
+    "outcome": "Drone Hangar는 12개에서 0.4초마다 12개씩 최대 600개까지 증가합니다. Cargo Traffic은 0.5초마다 차량 4개를 추가하고 각 차량을 12초 후 제거합니다. Salvage Yard는 광석 6개로 시작해 0.5초마다 6개를 높은 곳에 생성하며 Rigidbody·SphereCollider·바닥 BoxCollider를 통해 낙하/충돌하도록 구성했습니다. 광석도 12초 후 제거합니다. 세 동작은 네이티브 실행 검증 전입니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-02 20:58:33 KST 시작. 21:15:00 KST 구현·비GUI 검사·패키지 검증 완료(16분27초). 공개 배포 확인 별도. 네이티브 실행 검증 완료 시각은 없음.",
+    "xerjEvidence": "Xerj.ps1 Status 노드 미실행 확인 후 rg·현재 씬/프리팹/코드·확인 가능한 Editor 로그·실제 로직 실행으로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
