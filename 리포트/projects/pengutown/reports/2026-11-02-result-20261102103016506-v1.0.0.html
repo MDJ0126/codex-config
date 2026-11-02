@@ -1,0 +1,60 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>리얼 펭귄 모델 4종 — 외형과 실제 이동 애니메이션 비교 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">P</span><span>PenguTown</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>리얼 펭귄 모델 4종 — 외형과 실제 이동 애니메이션 비교</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">Rifat은 이동 클립과 LOD가 장점이며, Nyilonely는 황제펭귄 외형 대안입니다. VFX Grace는 고품질 기준이지만 실시간 게임용 추가 작업이 필요합니다.</p><div class="post-byline"><time datetime="2026-11-02T10:30:16.506Z">2026년 11월 2일 오후 7:30 KST</time><span>v1.0.0</span><span>검토</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>리얼한 펭귄 후보 4종의 판매자 설명과 공개 미리보기를 확인했습니다. 현재 게임의 모델은 교체하지 않았으며 구매·Unity 임포트·성능 검증은 실행하지 않았습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>후보</th>
+<th>확인한 가격</th>
+<th>제공 사양</th>
+<th>판단·미확인</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a class="report-link" href="https://www.fab.com/listings/411d0928-3110-404e-9ebe-c92215b0e9fa">RifatBilalov Penguin</a></td>
+<td>Personal ₩43,980 / Professional ₩131,960</td>
+<td>68개 애니메이션, walk·slip·swim·swim fast·swim up/down, IP/RM, FBX, 4 LOD 7,800~2,600 tris, 2K PBR</td>
+<td>게임 이동용 1순위. Unity 전용 패키지는 확인되지 않았습니다. 머티리얼·Generic 리그 매핑이 필요합니다. 전용 공중 다이빙 클립은 미확인입니다.</td>
+</tr>
+<tr>
+<td><a class="report-link" href="https://www.renderhub.com/nyilonelycompany/emperor-penguin">Nyilonelycompany Emperor Penguin</a></td>
+<td>정가 $50 / 조회 페이지 할인 $30</td>
+<td>Unity FBX, 9,916 tris, 13개 in-place 애니메이션, 4K PBR</td>
+<td>황제펭귄 외형 우선 대안. LOD·충돌체 없음. 13개 클립의 상세 이름과 미끄러짐·수영 포함 여부는 미확인입니다.</td>
+</tr>
+<tr>
+<td><a class="report-link" href="https://www.fab.com/listings/ebea4686-fd36-4f62-8091-24351c7fc81e">JUNNICHI SUKO Penguin</a></td>
+<td>시작 ₩33,710, 라이선스에 따라 ₩65,970까지</td>
+<td>아델리·아프리카펭귄, 59본, 40개 동작+12개 in-place, 중·저해상도 모델</td>
+<td>Unreal 패키지입니다. Unity에서 리그·클립 확보 및 로직 재구성이 필요합니다. 황제펭귄 모델은 아닙니다.</td>
+</tr>
+<tr>
+<td><a class="report-link" href="https://superhivemarket.com/products/emperor-penguin-animated--vfx-grace">VFX Grace Emperor Penguin — Blender</a></td>
+<td>Individual $260 / Team $780</td>
+<td>Blender/Cycles, 털, 4K UDIM, 24,034 polygons, WALK·GLIDING 두 루프</td>
+<td>외형 품질 기준. Unity용 털·텍스처·LOD 변환과 수영 애니메이션 추가가 필요합니다. 게임 적용 성능은 미확인입니다.</td>
+</tr>
+</tbody></table>
+</div><p>가격은 2026-11-02 조회값이며 지역·세금·할인·라이선스에 따라 달라집니다. Fab 후보는 Standard 라이선스의 Personal/Professional 조건을 확인해야 합니다. Nyilonely는 판매자 Extended Use, VFX Grace는 매출 기준별 Individual/Team 라이선스입니다. <a class="report-link" href="https://www.fab.com/eula">Fab 라이선스</a>.</p>
+<p><strong>Rifat — 이동 구현 우선 후보</strong></p>
+<p><figure><img class="report-image" src="../assets/research-20261102/rifat-penguin.jpg" alt="Rifat 판매자 공개 미리보기. 실제 Unity 실행 화면이 아닙니다." loading="lazy"><figcaption>Rifat 판매자 공개 미리보기. 실제 Unity 실행 화면이 아닙니다.</figcaption></figure></p>
+<p><strong>Nyilonelycompany — 황제펭귄 외형 대안</strong></p>
+<p><figure><img class="report-image" src="../assets/research-20261102/nyilo-emperor.jpg" alt="Nyilonelycompany 황제펭귄 판매자 공개 미리보기." loading="lazy"><figcaption>Nyilonelycompany 황제펭귄 판매자 공개 미리보기.</figcaption></figure></p>
+<p><strong>JUNNICHI SUKO — 다른 종과 군집용 후보</strong></p>
+<p><figure><img class="report-image" src="../assets/research-20261102/junnichi-penguins.jpg" alt="JUNNICHI SUKO 판매자 공개 미리보기의 아프리카펭귄." loading="lazy"><figcaption>JUNNICHI SUKO 판매자 공개 미리보기의 아프리카펭귄.</figcaption></figure></p>
+<p><strong>VFX Grace — 외형 목표 참고</strong></p>
+<p><figure><img class="report-image" src="../assets/research-20261102/vfx-grace-emperor.webp" alt="VFX Grace 판매자 공개 홍보 렌더. 배경 장면은 상품에 포함되지 않습니다." loading="lazy"><figcaption>VFX Grace 판매자 공개 홍보 렌더. 배경 장면은 상품에 포함되지 않습니다.</figcaption></figure></p>
+<p>마지막 홍보 이미지의 배경·구성 전체나 새끼 모델까지 제공된다고 판단하지 않았습니다. 판매자는 장면 미포함을 명시합니다. Blender 상품과 Maya 상품의 가격·폴리곤 사양은 서로 다르므로 혼용하지 않았습니다.</p>
+<p><a class="report-link" href="https://youtu.be/7sxf74aCWLU">Rifat 동작 영상</a> · <a class="report-link" href="https://youtu.be/unbi0OQTK7k">JUNNICHI 동작 영상</a></p>
+<h2 id="section-4">검증</h2>
+<p>판매자 본문·가격 선택 UI·포맷·애니메이션 목록을 확인했습니다. 미리보기 4장을 원본 그대로 내려받아 시각 확인했습니다. 파일은 각각 48,917 / 47,790 / 86,228 / 25,882바이트로 모두 200KB 미만입니다. 이미지 제작·편집·재압축은 하지 않았습니다. 이번 작업은 리소스 조사이며 게임 화면 변경이 없으므로 실행 전후 화면은 생성하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>구매 전 최종 클립 목록과 리그의 머리·날개 본을 확인해야 합니다. 모든 후보의 Unity 6000.0.83f1 실제 임포트·동작·GPU 성능은 미확인입니다. 리얼한 외형을 우선한다는 프로젝트 선호를 기록했습니다. 교훈 검토: 기존 검증 규칙과 중복되는 새 전역 규칙은 추가하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분 — 2026-11-02 19:16:23 KST 시작</li>
+<li>실제로 완료된 시간: 조사 원고 확정: 2026-11-02 19:30:15 KST. 공개 배포 검증은 연결된 실행 메뉴얼에서 별도 기록합니다.</li>
+<li>XERJ: 미사용 — 리소스 조사로 코드·심볼 검색 불필요</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-02-result-20261102103016506-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pengutown&topic=qa&relatedReport=projects%2Fpengutown%2Freports%2F2026-11-02-result-20261102103016506-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pengutown">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pengutown">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

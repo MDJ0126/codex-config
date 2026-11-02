@@ -1,5 +1,55 @@
 [
   {
+    "title": "리얼 펭귄·빙하 환경·사운드 리소스 조사",
+    "summary": "리얼한 펭귄 모델을 이미지와 비교하고 빙하·오로라·눈보라·군집·사운드와 확장 조건을 조사합니다.",
+    "project": "pengutown",
+    "reportPath": "projects/pengutown/reports/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103044052-v1.0.1.html",
+    "date": "2026-11-02T10:30:44.052Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "펭귄 실녹음 사운드와 비행·액세서리·말풍선 확장",
+    "summary": "황제·아델리펭귄 남극 녹음과 저렴한 작은펭귄 녹음을 구분했습니다. 확장 기능은 리그·이동 상태·편집 가능한 프리팹 조건으로 정리했습니다.",
+    "project": "pengutown",
+    "reportPath": "projects/pengutown/reports/2026-11-02-result-20261102103017432-v1.0.0.html",
+    "date": "2026-11-02T10:30:17.432Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "넓은 빙하·오로라·눈보라·펭귄 군집 리소스",
+    "summary": "고품질 빙하 최신 패키지는 Unity 6.3 URP/HDRP가 필요합니다. 현재 Unity 6.0 Built-in을 유지하는 경로도 함께 정리했습니다.",
+    "project": "pengutown",
+    "reportPath": "projects/pengutown/reports/2026-11-02-result-20261102103016976-v1.0.0.html",
+    "date": "2026-11-02T10:30:16.976Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "리얼 펭귄 모델 4종 — 외형과 실제 이동 애니메이션 비교",
+    "summary": "Rifat은 이동 클립과 LOD가 장점이며, Nyilonely는 황제펭귄 외형 대안입니다. VFX Grace는 고품질 기준이지만 실시간 게임용 추가 작업이 필요합니다.",
+    "project": "pengutown",
+    "reportPath": "projects/pengutown/reports/2026-11-02-result-20261102103016506-v1.0.0.html",
+    "date": "2026-11-02T10:30:16.506Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "리얼 펭귄·빙하 환경·사운드 리소스 조사",
+    "summary": "리얼한 펭귄 모델을 이미지와 비교하고 빙하·오로라·눈보라·군집·사운드와 확장 조건을 조사합니다.",
+    "project": "pengutown",
+    "reportPath": "projects/pengutown/reports/2026-11-02-manual-20261102101911723-v1.0.0.html",
+    "date": "2026-11-02T10:19:11.723Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
     "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
     "project": "entityforge",

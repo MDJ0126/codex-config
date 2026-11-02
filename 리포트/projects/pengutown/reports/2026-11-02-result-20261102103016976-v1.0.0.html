@@ -1,0 +1,64 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>넓은 빙하·오로라·눈보라·펭귄 군집 리소스 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/theme.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/discussions.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/manuals.css?v=f748d7a38e88"><link rel="stylesheet" href="../../../assets/copy-links.css?v=f748d7a38e88"><script defer src="../../../assets/copy-links.js?v=f748d7a38e88"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">P</span><span>PenguTown</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>넓은 빙하·오로라·눈보라·펭귄 군집 리소스</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">고품질 빙하 최신 패키지는 Unity 6.3 URP/HDRP가 필요합니다. 현재 Unity 6.0 Built-in을 유지하는 경로도 함께 정리했습니다.</p><div class="post-byline"><time datetime="2026-11-02T10:30:16.976Z">2026년 11월 2일 오후 7:30 KST</time><span>v1.0.0</span><span>검토</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>빙하·눈 재질·날씨·오로라·군집 이동 후보와 현재 프로젝트의 호환 차이를 확인했습니다. 실제 지형과 날씨를 게임에 적용한 결과는 아닙니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>현재 프로젝트는 Unity 6000.0.83f1, GraphicsSettings의 m_CustomRenderPipeline 값이 비어 있는 Built-in입니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>용도</th>
+<th>리소스·가격</th>
+<th>확인 내용과 제한</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>고품질 빙하</td>
+<td><a class="report-link" href="https://assetstore.unity.com/packages/3d/environments/landscapes/8k-arctic-landscape-pack-291741">8K Arctic Landscape Pack</a>, $34.99</td>
+<td>v2.0.0, 10종 8K 높이맵·눈/얼음/절벽 마스크·5개 표면. 최신판 요구사항 Unity 6.3+ URP/HDRP. 현재 6.0 Built-in에는 바로 적용할 수 없습니다.</td>
+</tr>
+<tr>
+<td>빙산·틈새·얼음 아치</td>
+<td><a class="report-link" href="https://www.fab.com/listings/da3055af-4a7a-4cc5-8000-07840649f9fc">Low Poly + Realistic Glacier</a></td>
+<td>16개 모델, 리얼 버전 978~5,786 tris·2K PBR, FBX/GLB. 제공 Unity 설정은 6.2+ 요구. 현재 버전 수동 임포트는 미검증입니다. 가격 미확인.</td>
+</tr>
+<tr>
+<td>무료 눈 재질</td>
+<td><a class="report-link" href="https://ambientcg.com/view?id=Snow013">ambientCG Snow013</a>, 무료</td>
+<td>사진 기반 PBR, 최대 8K. <a class="report-link" href="https://docs.ambientcg.com/license/">CC0</a>. 완성 지형이 아니라 재질입니다.</td>
+</tr>
+<tr>
+<td>통합 날씨</td>
+<td><a class="report-link" href="https://assetstore.unity.com/packages/tools/particles-effects/weather-maker-volumetric-clouds-and-weather-system-for-unity-60955">Weather Maker</a>, 정가 $49, 조회 할인 $24.50</td>
+<td>v8.1.3. 현재 호환표에 Unity 6000.0.68 Built-in/URP, HDRP 미지원. 눈·안개·오로라·날씨 구역. WebGL/OpenGL 미지원이므로 웹 배포용 선택에는 부적합합니다.</td>
+</tr>
+<tr>
+<td>오로라 별도 후보</td>
+<td><a class="report-link" href="https://kronnect.com/docs/skybox-plus/faq/">Skybox Plus 공식 FAQ</a></td>
+<td>Unity 2022.3+ 및 Unity 6 지원, Aurora Intensity 제공. 현재 프로젝트의 실제 렌더링·가격은 미확인입니다.</td>
+</tr>
+<tr>
+<td>오로라 직접 구현 참고</td>
+<td><a class="report-link" href="https://blog.roytheunissen.com/2022/09/17/aurora-borealis-a-breakdown/">Roy Theunissen 기술 해설</a></td>
+<td>Built-in의 raymarching 접근을 설명합니다. 무료 완제품 라이선스가 확인된 패키지로 소개하지 않습니다.</td>
+</tr>
+<tr>
+<td>군집 이동</td>
+<td><a class="report-link" href="https://assetstore.unity.com/packages/tools/behavior-ai/swarm-object-swarm-boid-fish-bird-framework-299091">Swarm BOID/Fish/Bird Framework</a>, $15/seat</td>
+<td>Unity 6000.0.24 Built-in, Jobs 기반 군집·웨이포인트. 경사진 육지 펭귄의 길찾기를 자동으로 해결하는 제품은 아닙니다.</td>
+</tr>
+</tbody></table>
+</div><p><strong>제안하는 월드 구성 — 아직 구현하지 않은 설계입니다.</strong></p>
+<p>시작 해안 → 넓은 평탄 빙원과 펭귄 무리 → 경사 미끄럼 구간 → 절벽 다이빙과 수중 통로 → 크레바스 → 밤의 오로라 관찰 지점을 연결하는 구성이 적합합니다. 2×2km부터 확장하는 방안이며, 특정 판매 패키지의 검증된 맵 크기라는 뜻은 아닙니다.</p>
+<p>육지 무리는 <a class="report-link" href="https://docs.unity3d.com/Packages/com.unity.ai.navigation@2.0/manual/index.html">Unity AI Navigation</a>의 경로 탐색에 리더 추종·서로 벌어지기를 결합하고, 수영·비행에는 3D 군집 이동을 별도로 적용하는 방안을 제안합니다. 멀리 있는 무리에는 LOD와 갱신 빈도 조절이 필요하며 몇 마리까지 가능한지는 실측 전입니다.</p>
+<p>현재 엔진을 유지하려면 <a class="report-link" href="https://docs.unity3d.com/6000.0/Documentation/Manual/terrain-CreateNeighborTerrains.html">Unity 6.0 인접 Terrain</a>+CC0 눈 재질+별도 빙산 모델이 후보입니다. 고품질 8K 패키지를 선택한다면 먼저 별도 검증 브랜치에서 Unity 6.3와 URP/HDRP의 지형·수면·캐릭터를 대조해야 합니다.</p>
+<h2 id="section-4">검증</h2>
+<p>현재 ProjectVersion·GraphicsSettings를 직접 확인했습니다. Unity Asset Store의 최신 요구사항·호환표, Fab 판매자 본문, 날씨·오로라 공식 문서를 대조했습니다. 8K 패키지의 과거 6000.0 호환 행과 최신 v2의 6.3 요구사항을 구분했습니다. 판매자 성능 주장이나 넓은 지형 구성을 실제 프로젝트 성능으로 보고하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>리소스 구매·다운로드·엔진 업그레이드·패키지 적용은 하지 않았습니다. 눈보라 가시거리·마찰·수면 부력·지형 스트리밍·군집 수는 적용 후 실측해야 합니다. HDRP 전환 시 Weather Maker를 그대로 사용할 수 없습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분 — 2026-11-02 19:16:23 KST 시작</li>
+<li>실제로 완료된 시간: 조사 원고 확정: 2026-11-02 19:30:15 KST. 공개 배포 검증은 연결된 실행 메뉴얼에서 별도 기록합니다.</li>
+<li>XERJ: 미사용 — 리소스 조사로 코드·심볼 검색 불필요</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-02-result-20261102103016976-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pengutown&topic=qa&relatedReport=projects%2Fpengutown%2Freports%2F2026-11-02-result-20261102103016976-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pengutown">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pengutown">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

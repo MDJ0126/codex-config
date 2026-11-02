@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pengutown",
+    "kind": "result",
+    "title": "펭귄 실녹음 사운드와 비행·액세서리·말풍선 확장",
+    "summary": "황제·아델리펭귄 남극 녹음과 저렴한 작은펭귄 녹음을 구분했습니다. 확장 기능은 리그·이동 상태·편집 가능한 프리팹 조건으로 정리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "| 사운드 | 가격·제공 내용 | 사용 판단 |\n| --- | --- | --- |\n| [Antarctic Soundscapes — Out There Audio](https://www.asoundeffect.com/sound-library/antarctic-soundscapes/) | 판매자 $50, 남극 현장 녹음 415개: 동물 258·쇄빙선 68·환경 50·해빙 39 | 황제·아델리펭귄과 빙하·바람을 함께 확보하는 1순위입니다. [제작자 자료](https://www.outthereaudio.com/soundeffects)와 [Fab 수록 목록](https://www.fab.com/listings/86ced1e6-c101-4adf-900f-f4a80a5ff0f5)을 확인했습니다. |\n| [Little Penguins Vocalizations — Free To Use Sounds](https://freetousesounds.bandcamp.com/album/little-penguins-vocalizations-sound-effects-library) | $5 이상, 26파일·약45분·192kHz/24bit, 태즈메이니아 실녹음 | 저예산 후보입니다. 작은펭귄 소리이므로 황제펭귄의 실제 울음과 동일하다고 소개하면 안 됩니다. |\n| [Sub-Antarctic Winds](https://www.asoundeffect.com/sound-library/sub-antarctic-winds/) | 판매자 $175, 108개 극지 바람 녹음 | 눈보라·광활한 공간의 바람 전용 후보입니다. 펭귄 울음 패키지는 아닙니다. |\n\n[A Sound Effect EULA](https://www.asoundeffect.com/license-agreement/)는 구매 음원을 게임 같은 다른 매체와 결합해 배포하는 사용을 허용하며 원본 음원 라이브러리 재배포는 제한합니다. [Free To Use Sounds EULA](https://www.freetousesounds.com/license-agreement)는 유료 Bandcamp 제품의 상업 게임 사용·평생 프로젝트 사용을 명시하지만 5인 초과 조직과 앱 개발 회사 등의 별도 문의 조항이 있으므로 해당 조건을 구매 전 대조해야 합니다. 무료 음원의 출처 표기 조건을 유료 제품에 혼동하지 않았습니다. 가격·세금·개별 제품 예외는 결제 전 재확인이 필요합니다.\n\n실제 게임 사운드는 근접 개체 울음 / 멀리 있는 군집 웅성거림 / 눈 발걸음 / 배 미끄럼 마찰 / 입수·기포 / 수중음 / 바람을 분리하는 방안을 제안합니다. 울음마다 거리·대기시간·변형을 두고 군집 전체가 동시에 같은 소리를 내지 않도록 해야 합니다. 청음·루프 편집·게임 믹싱은 아직 실행하지 않았습니다.\n\n| 나중 기능 | 모델 선택 때 확인할 조건 | 후속 구현 제안 |\n| --- | --- | --- |\n| 날아다니는 펭귄 | 날개 본과 변형 품질 | 지상·미끄럼·수영과 별도 비행 상태, 이륙·날갯짓·활공·착륙 애니메이션. 실존 펭귄 동작 클립에 비행이 있다고 가정하지 않습니다. |\n| 모자·고글·목도리·가방 | 머리·목·등 부착 본과 여유 공간 | 부착점별 장비 프리팹, 배로 엎드림·수영 시 관통 검사. 리얼한 기본 외형을 유지하면서 액세서리를 선택적으로 장착합니다. |\n| 말풍선·감정 표현 | 머리 위 표시점 | 편집 가능한 World Space Canvas/TMP 프리팹, 거리별 표시와 한글 폰트. 실제 네트워크 채팅은 별도 범위입니다. |\n| 무리 생활 | idle·회전·걷기·수영 전환 | 리더 따라가기, 모여 쉬기, 서로 부르기, 발자국·미끄럼 흔적·물기포를 순서대로 추가합니다. |\n\n추천 진행 순서는 리얼 펭귄 선정 → 빙하·수면의 시각 기준 확정 → 날씨·사운드 → 무리 행동 → 장비·말풍선 → 판타지 비행입니다.",
+    "verification": "제작자·판매처의 녹음 수·종·가격·포맷과 공식 EULA를 확인했습니다. 기능 확장은 구현 결과와 구분해 제안으로 기록했습니다. 사운드 플레이어의 실제 청음 및 Unity 재생은 미실행입니다.",
+    "remaining": "개별 음원 품질과 종별 울음을 직접 청음해 최종 선정해야 합니다. 비행·액세서리·말풍선은 이번 조사에서 구현하지 않았습니다. 교훈 검토: 종별 녹음과 모델 종을 일치시킬 필요는 프로젝트 상세에 기록했으며 일반 검증 규칙과 중복되는 전역 지침 추가는 없습니다.",
+    "outcome": "실녹음 사운드 후보 3종과 비행·액세서리·말풍선의 후속 구현 조건을 조사했습니다. 사운드 파일을 구매하거나 게임에 넣지는 않았습니다.",
+    "proposedTime": "15~25분 — 2026-11-02 19:16:23 KST 시작",
+    "actualTime": "조사 원고 확정: 2026-11-02 19:30:15 KST. 공개 배포 검증은 연결된 실행 메뉴얼에서 별도 기록합니다.",
+    "xerjEvidence": "리소스 조사로 코드·심볼 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "검토",
+    "state": "complete"
+  }
+}
