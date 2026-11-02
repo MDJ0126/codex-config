@@ -1,0 +1,96 @@
+{
+  "at": "2026-11-02T08:12:02.038Z",
+  "scenes": [
+    {
+      "file": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+      "objects": 859,
+      "actors": 120,
+      "buttonMethods": [
+        "TogglePause",
+        "CycleSpeed",
+        "Restart",
+        "Measure"
+      ],
+      "rigidbodies": 0,
+      "allLocalRefsResolve": true,
+      "sha256": "50d8fa117dbb0dcce6b9a359e3afb3d05f748749f9cffe6c77ca12b87869c8e3"
+    },
+    {
+      "file": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+      "objects": 841,
+      "actors": 126,
+      "buttonMethods": [
+        "TogglePause",
+        "CycleSpeed",
+        "Restart",
+        "Measure"
+      ],
+      "rigidbodies": 0,
+      "allLocalRefsResolve": true,
+      "sha256": "1151cd599d7185948d258587cff1e435b62349f7450d0f9717e61bb408db9a50"
+    },
+    {
+      "file": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+      "objects": 853,
+      "actors": 82,
+      "buttonMethods": [
+        "TogglePause",
+        "CycleSpeed",
+        "Restart",
+        "Measure"
+      ],
+      "rigidbodies": 8,
+      "allLocalRefsResolve": true,
+      "sha256": "b1bea4233e098c9aa5898bcfe752d318f938922a0283b353e41859dbdfb33e69"
+    }
+  ],
+  "languages": 9,
+  "translationEntries": 25,
+  "placeholderParity": true,
+  "fontGlyphsChecked": 434,
+  "fontMissingGlyphs": [],
+  "runtimeUiCreated": false,
+  "assemblies": [
+    {
+      "name": "TurnRoom.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Dots",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Development.Editor",
+      "exitCode": 0
+    }
+  ],
+  "simulation": {
+    "clock600Frames": "pass",
+    "pause": "pass",
+    "speed": "pass",
+    "restart": "pass",
+    "routeWaypoint": "pass",
+    "loopWrap": "pass",
+    "deliveryCrossing": "pass",
+    "weightedRouteSampling": "pass",
+    "weightedRouteWrap": "pass"
+  },
+  "performance": "No percentage measured for these new scenes. HUD uses only fingerprint-matching paired evidence.",
+  "nativeUnity": "not executed: user desktop focus restriction. UI click/visual/shader/player measurement pending."
+}
