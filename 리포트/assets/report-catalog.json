@@ -1,5 +1,25 @@
 [
   {
+    "title": "공통 창 최대화·복원 애니메이션 제거",
+    "summary": "캡처 표면을 통한 최대화 전환을 제거하고 실제 창을 즉시 전환합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-instant-maximize-20261102-20261102081821817-v1.0.2.html",
+    "date": "2026-11-02T08:18:21.817Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최대화·원래 크기 복원의 캡처 애니메이션 제거",
+    "summary": "최대화·원래 크기 복원에서 캡처 애니메이션을 제거하고 실제 Unity 창의 양방향 크기 전환과 전후 화면을 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102081652400-v1.0.0.html",
+    "date": "2026-11-02T08:16:52.400Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
     "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
     "project": "entityforge",
@@ -20,6 +40,26 @@
     "replyTo": ""
   },
   {
+    "title": "최대화·원래 크기 복원의 캡처 애니메이션 제거",
+    "summary": "창을 캡처 화면 뒤에 숨겨 전환하던 최대화 경로를 제거했습니다. 실제 창을 직접 전환하며 체감 지연의 화면 검증은 남아 있습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102074919374-v1.0.0.html",
+    "date": "2026-11-02T07:49:19.374Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 최대화·복원 애니메이션 제거",
+    "summary": "캡처 표면을 통한 최대화 전환을 제거하고 실제 창을 즉시 전환합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-instant-maximize-20261102-20261102074918874-v1.0.1.html",
+    "date": "2026-11-02T07:49:18.874Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
     "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
     "project": "entityforge",
@@ -36,6 +76,16 @@
     "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102074538398-v1.0.0.html",
     "date": "2026-11-02T07:45:38.398Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 최대화·복원 애니메이션 제거",
+    "summary": "캡처 표면을 통한 최대화 전환을 제거하고 실제 창을 즉시 전환합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102074522108-v1.0.0.html",
+    "date": "2026-11-02T07:45:22.108Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
