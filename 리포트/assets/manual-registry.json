@@ -1,5 +1,189 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-shelf-follow-20261102-20261102130313089-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-02-manual-shelf-follow-20261102-20261102130313089-v1.0.1.md",
+    "date": "2026-11-02T13:03:13.089Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shelf-follow-20261102",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "최소화 목록 하단 위치와 창 크기 동기화",
+      "summary": "실제 창 조절 중 목록 위치를 확인하고 하단 추종 지연을 수정합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "연속 물리 드래그·다른 DPI 미검증, 보고서 공개 확인 진행",
+      "outcome": "구현·컴파일과 실제 네이티브 전후 비교 완료; 연속 물리 드래그 미검증",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-02 22:03 KST 기준 약 22분 경과",
+      "xerjEvidence": "노드 미실행 및 Search 자동 시작 실패; rg 대체",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shelf-follow-20261102",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "Unity 창 이동·크기 변경 중 최소화 목록이 같은 하단 위치를 유지",
+      "completionCriteria": "원인 소스 대조, 컴파일, 실제 창 이동·크기 변경·최대화/복원 검증, 전후 캡처와 공개 보고서",
+      "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102130210861-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "추종 경로 수정",
+          "action": "현재 배치 계산과 갱신 시점 대조, 네이티브 추종 구현",
+          "expected": "주 창의 최신 client 하단 기준 배치",
+          "qa": "소스 대조·컴파일",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "3개 어셈블리 컴파일 및 실제 연속 창 변경의 좌표 오차 0px"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 화면 검증과 공개",
+          "action": "창 이동·크기 조절·최대화/복원 확인 및 전후 캡처 게시",
+          "expected": "지연 및 위치 회귀가 없는지 실제 검증",
+          "qa": "실제 입력과 화면·프레임 기록, 빌드·배포·외부 URL",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "실제 최대화·복원 및 연속 SetWindowPos 검사 확인; 물리 드래그 미검증"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-02T13:03:11.220Z",
+          "summary": "정적 및 실제 네이티브 창 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "3개 어셈블리 컴파일 및 실제 연속 창 변경의 좌표 오차 0px",
+              "evidence": "verification.json / static/result.json / before-follow.csv / after-follow.csv",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "실제 최대화·복원 및 연속 SetWindowPos 검사 확인; 물리 드래그 미검증",
+              "evidence": "5개 네이티브 변경 메시지에서 X/Y/width 0px; inSizing 샘플 미확보",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102130210861-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-02-manual-20261102130210861-v1.0.0.md",
+    "date": "2026-11-02T13:02:10.861Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shelf-follow-20261102",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "최소화 목록 하단 위치와 창 크기 동기화",
+      "summary": "실제 창 조절 중 목록 위치를 확인하고 하단 추종 지연을 수정합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-02 21:41:25 KST 시작",
+      "xerjEvidence": "노드 미실행 및 Search 자동 시작 실패; rg 대체",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shelf-follow-20261102",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "Unity 창 이동·크기 변경 중 최소화 목록이 같은 하단 위치를 유지",
+      "completionCriteria": "원인 소스 대조, 컴파일, 실제 창 이동·크기 변경·최대화/복원 검증, 전후 캡처와 공개 보고서",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "추종 경로 수정",
+          "action": "현재 배치 계산과 갱신 시점 대조, 네이티브 추종 구현",
+          "expected": "주 창의 최신 client 하단 기준 배치",
+          "qa": "소스 대조·컴파일",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "실제 화면 검증과 공개",
+          "action": "창 이동·크기 조절·최대화/복원 확인 및 전후 캡처 게시",
+          "expected": "지연 및 위치 회귀가 없는지 실제 검증",
+          "qa": "실제 입력과 화면·프레임 기록, 빌드·배포·외부 URL",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/entityforge/reports/2026-11-02-manual-entityforge-automatic-build-20261102-20261102121711117-v1.0.13.html",
     "postPath": "projects/entityforge/posts/2026-11-02-manual-entityforge-automatic-build-20261102-20261102121711117-v1.0.13.md",
     "date": "2026-11-02T12:17:11.117Z",
