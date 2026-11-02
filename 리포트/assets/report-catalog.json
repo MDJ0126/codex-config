@@ -1,5 +1,25 @@
 [
   {
+    "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
+    "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-manual-entityforge-automatic-build-20261102-20261102164701058-v1.0.20.html",
+    "date": "2026-11-02T16:47:01.058Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "좌측 설정 패널을 본문 높이까지 확장",
+    "summary": "내용 높이에서 끝나던 좌측 패널을 본문 뷰포트 최소 높이에 맞추도록 수정했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102164659929-v1.0.0.html",
+    "date": "2026-11-02T16:46:59.929Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "공통 창 리사이즈 입력 보강과 회귀 확인",
     "summary": "공통 핸들의 영역·커서·제어 가드를 수정하고 정적 검사와 네이티브 QA를 구분합니다.",
     "project": "turnroom",
