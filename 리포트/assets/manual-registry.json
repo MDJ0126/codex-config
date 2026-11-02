@@ -1,5 +1,194 @@
 [
   {
+    "reportPath": "projects/pengutown/reports/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103354111-v1.0.2.html",
+    "postPath": "projects/pengutown/posts/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103354111-v1.0.2.md",
+    "date": "2026-11-02T10:33:54.111Z",
+    "version": "v1.0.2",
+    "project": "pengutown",
+    "kind": "manual",
+    "manualId": "pengutown-realistic-resources-20261102",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pengutown",
+      "kind": "manual",
+      "title": "리얼 펭귄·빙하 환경·사운드 리소스 조사",
+      "summary": "리얼한 펭귄 모델을 이미지와 비교하고 빙하·오로라·눈보라·군집·사운드와 확장 조건을 조사합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "조사·공개 등록 완료. 구매·임포트·게임 적용·청음·성능 검증은 이번 조사 범위 밖이며 각 보고서에 미실행으로 기록했습니다.",
+      "outcome": "2026-11-02 19:16:23 KST 시작. 게임 변경이나 구매 없이 리소스를 조사합니다.",
+      "proposedTime": "15~25분",
+      "actualTime": "시작 2026-11-02 19:16:23 KST, 조사와 1차 공개 검증 완료 2026-11-02 19:33:53 KST, 1051초. 이 기록의 게시 확인은 최종 응답에서 구분합니다.",
+      "xerjEvidence": "리소스 조사이며 코드·심볼 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pengutown-realistic-resources-20261102",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "리얼 펭귄 후보 이미지·사양·출처, 넓은 빙하와 날씨·군집 이동·소리 리소스, 비행·액세서리·말풍선 확장 조건을 조사합니다.",
+      "completionCriteria": "판매자·공식 자료 확인, 확인·미확인 구분, 후보 이미지 확보 및 시각 확인, 공개 HTML 보고서·첨부의 실제 접근 확인",
+      "previousManual": "projects/pengutown/reports/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103044052-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "펭귄 모델과 이미지",
+          "action": "리얼한 후보의 원 판매자 페이지·리그·클립·가격·이미지를 확인합니다.",
+          "expected": "후보 4개 이상과 실제 제공 이미지, 게임용·영상용 차이를 기록합니다.",
+          "qa": "판매자 본문과 이미지·사양을 대조하고 Unity 미검증 항목을 구분합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "판매자 4종 본문·가격 UI·원본 미리보기 4장 시각 확인. report-models.json"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "빙하·날씨·군집",
+          "action": "빙하·오로라·눈보라·군집 이동 리소스와 파이프라인 조건을 확인합니다.",
+          "expected": "각 용도의 공식 후보와 Unity 버전·의존성·제한을 기록합니다.",
+          "qa": "판매자·공식 문서와 현재 프로젝트의 Unity 버전을 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "ProjectVersion·GraphicsSettings 및 각 판매자 최신 요구사항 대조. report-world.json"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "사운드·확장 조건",
+          "action": "실제 펭귄 녹음과 환경음, 비행·액세서리·말풍선 확장 조건을 조사합니다.",
+          "expected": "소리 출처·종·라이선스와 확장 조건을 제시합니다.",
+          "qa": "실제 제품 설명·라이선스·공식 문서로 확인합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "제작자 녹음 목록·종·공식 EULA 확인. report-audio.json"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고서 공개",
+          "action": "주제별 간결한 JSON v2 보고서와 이미지를 등록하고 빌드·게시합니다.",
+          "expected": "개별 공개 HTML과 이미지가 인증 없이 열립니다.",
+          "qa": "명시적 스테이징·푸시·Pages 배포·본문·이미지 HTTP를 확인합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "public-verification.json: Pages 성공 및 보고서 3개·첨부 4개 HTTP 200 확인"
+        }
+      ],
+      "focusTasks": [
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-02T10:30:43.634Z",
+          "summary": "주제별 판매자·공식 자료 대조를 마쳤으며 공개 배포는 진행 중입니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "판매자 4종 본문·가격 UI·원본 미리보기 4장 시각 확인. report-models.json",
+              "evidence": "판매자 4종 본문·가격 UI·원본 미리보기 4장 시각 확인. report-models.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "ProjectVersion·GraphicsSettings 및 각 판매자 최신 요구사항 대조. report-world.json",
+              "evidence": "ProjectVersion·GraphicsSettings 및 각 판매자 최신 요구사항 대조. report-world.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "제작자 녹음 목록·종·공식 EULA 확인. report-audio.json",
+              "evidence": "제작자 녹음 목록·종·공식 EULA 확인. report-audio.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-02T10:33:53.531Z",
+          "summary": "조사·보고서 공개의 전체 완료 기준을 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "판매자 4종 본문·가격 UI·원본 미리보기 4장 시각 확인. report-models.json",
+              "evidence": "판매자 4종 본문·가격 UI·원본 미리보기 4장 시각 확인. report-models.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "ProjectVersion·GraphicsSettings 및 각 판매자 최신 요구사항 대조. report-world.json",
+              "evidence": "ProjectVersion·GraphicsSettings 및 각 판매자 최신 요구사항 대조. report-world.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "제작자 녹음 목록·종·공식 EULA 확인. report-audio.json",
+              "evidence": "제작자 녹음 목록·종·공식 EULA 확인. report-audio.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "public-verification.json: Pages 성공 및 보고서 3개·첨부 4개 HTTP 200 확인",
+              "evidence": "public-verification.json: Pages 성공 및 보고서 3개·첨부 4개 HTTP 200 확인",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/pengutown/reports/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103044052-v1.0.1.html",
     "postPath": "projects/pengutown/posts/2026-11-02-manual-pengutown-realistic-resources-20261102-20261102103044052-v1.0.1.md",
     "date": "2026-11-02T10:30:44.052Z",
