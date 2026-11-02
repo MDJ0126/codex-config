@@ -1,0 +1,412 @@
+{
+  "at": "2026-11-02T05:41:48.777Z",
+  "reviewComplete": true,
+  "readyToSubmit": false,
+  "product": "DesignDataTable",
+  "package": {
+    "file": "Artifacts/TurnRoomPackages/TurnRoom-DesignDataTable.unitypackage",
+    "bytes": 65926984,
+    "sha256": "24bcbcc4affc275c1e383b02234f258fb252666e95ec28bcfb09fb46621e1d9e",
+    "files": 1609,
+    "sourceAndMetadataReadback": true,
+    "developmentExcluded": true
+  },
+  "nativeSharedChecks": 15,
+  "official": {
+    "product": "DesignDataTable",
+    "category": "Tools/Game Toolkits",
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 24,
+    "warning": 5,
+    "fail": 0,
+    "tests": [
+      {
+        "title": "Check Audio Clipping",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Colliders",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Compressed Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following .zip archives were found in the package content.\\n� Zip archives should contain the keyword 'source' in the file name\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c02c467fb15493041ab213a29cce110b-5615323950554712161-0\",\"GlobalObjectId_V1-1-8246543f264941cfab76151774f08fbc-5615323950554712161-0\",\"GlobalObjectId_V1-1-ecdce52e94500614480532cc3c1d90da-5615323950554712161-0\",\"GlobalObjectId_V1-1-2c3337ae9f4845b4b34540eb3437310c-5615323950554712161-0\",\"GlobalObjectId_V1-1-565e7e1ef092490b896689b0fcbefa2d-5615323950554712161-0\",\"GlobalObjectId_V1-1-2c881e3584c741c6858a7351d602e894-5615323950554712161-0\",\"GlobalObjectId_V1-1-62b08938a0d343c5a7fa87dc6c7ad7c6-5615323950554712161-0\",\"GlobalObjectId_V1-1-4dce7d8826e246b3b09f40c6e64b27b3-5615323950554712161-0\",\"GlobalObjectId_V1-1-adde9cf360e8471e934a4b161f03f76f-5615323950554712161-0\",\"GlobalObjectId_V1-1-1d24236e0be64c58a342124f506b9188-5615323950554712161-0\",\"GlobalObjectId_V1-1-cb14242d7a3e45dab8c246996b243fff-5615323950554712161-0\",\"GlobalObjectId_V1-1-da844a98e20d7334a805ef25c23f0cbf-5615323950554712161-0\",\"GlobalObjectId_V1-1-a6a1f75cc96d0ec488cfdf6a070fd786-5615323950554712161-0\",\"GlobalObjectId_V1-1-9a1da894f66dff04aa4aec55b2acc676-5615323950554712161-0\",\"GlobalObjectId_V1-1-b852d5fe8b043964bb265c6bc40905e3-5615323950554712161-0\",\"GlobalObjectId_V1-1-9cc7b93ba6a15ddcab9d021b16e04771-5615323950554712161-0\",\"GlobalObjectId_V1-1-f9b681b7a74b52fca5572326341eefe6-5615323950554712161-0\",\"GlobalObjectId_V1-1-eabfe20aa9f151b89a04d26de66db792-5615323950554712161-0\",\"GlobalObjectId_V1-1-7b525f71473859188fa66c5b2083bb6f-5615323950554712161-0\",\"GlobalObjectId_V1-1-00333ba7dd8e513b8dace2cf323307b4-5615323950554712161-0\",\"GlobalObjectId_V1-1-c52e2b7c35c95ce68f934add5a60dc0c-5615323950554712161-0\",\"GlobalObjectId_V1-1-32bf6ae3082e4f9e9b19fcf7aaf70468-5615323950554712161-0\",\"GlobalObjectId_V1-1-ca58ceb3daff48958503918e86aa33c4-5615323950554712161-0\",\"GlobalObjectId_V1-1-e24f5bc32c394997a1c2363f93f51321-5615323950554712161-0\",\"GlobalObjectId_V1-1-68b73266eb94434aa421c2086427aabb-5615323950554712161-0\",\"GlobalObjectId_V1-1-f072d0307eb44e92b97f2a59ecd6d2f3-5615323950554712161-0\",\"GlobalObjectId_V1-1-7dc3b8ec43c541b49af1cff6ce1faf69-5615323950554712161-0\",\"GlobalObjectId_V1-1-fa342e394d8e42e99421f4215c49d969-5615323950554712161-0\",\"GlobalObjectId_V1-1-8f6f39ef2b314c5283174505190e69dd-5615323950554712161-0\",\"GlobalObjectId_V1-1-595bd7f8c2534728b88fe2fa1ad2e96c-5615323950554712161-0\",\"GlobalObjectId_V1-1-6740f5d149754bb785a4b57744724821-5615323950554712161-0\",\"GlobalObjectId_V1-1-97bd162d0ec64d56b58790ae1b506646-5615323950554712161-0\",\"GlobalObjectId_V1-1-8ab0dc72501145d18d9e37b4641af73e-5615323950554712161-0\",\"GlobalObjectId_V1-1-5fe29de3bc3744a69029684715b0c0ea-5615323950554712161-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Demo Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c7bda21b54ae5d249a53b5e4bd1e3a97-102900000-0\",\"GlobalObjectId_V1-1-3508270c6c2da4644873e25a8644f32a-102900000-0\",\"GlobalObjectId_V1-1-f75cf5327590edc40827af0c99ef060e-102900000-0\",\"GlobalObjectId_V1-1-acc2ab7414da4e44d9ae3be2b59b1dfb-102900000-0\",\"GlobalObjectId_V1-1-4cafae631b7700345a86e2532e7f257a-102900000-0\",\"GlobalObjectId_V1-1-dde97a4b04de3ea48bc34fac1ff4110f-102900000-0\",\"GlobalObjectId_V1-1-155c9628494da5046b2e6075b45ec7e5-102900000-0\",\"GlobalObjectId_V1-1-ca8b8e10d283d20468c6a091ba5ef097-102900000-0\",\"GlobalObjectId_V1-1-ecfc6018670c1c840bb35c6e3c9a0f92-102900000-0\",\"GlobalObjectId_V1-1-015e7d275f8ad4a448799d1b249d074f-102900000-0\",\"GlobalObjectId_V1-1-3b5ee0d566448bf4bb9120ca67793eb4-102900000-0\",\"GlobalObjectId_V1-1-11871be3f6f34ec4ab3d0b3d5090e5c7-102900000-0\",\"GlobalObjectId_V1-1-d072e9156699573409ee61d68641859e-102900000-0\",\"GlobalObjectId_V1-1-b2f5e16264422e847ad26952fbd6cf39-102900000-0\",\"GlobalObjectId_V1-1-5877f07f46d12c144b3459b5533e2414-102900000-0\",\"GlobalObjectId_V1-1-e043bb3f34f246747b41ac55790a16c8-102900000-0\",\"GlobalObjectId_V1-1-5049187efa08c9645838cbcee1c59c22-102900000-0\",\"GlobalObjectId_V1-1-fe948fd864326f84a8899f1cc560875a-102900000-0\",\"GlobalObjectId_V1-1-3a84818c240c60b4fb37c4040493696c-102900000-0\",\"GlobalObjectId_V1-1-02ad67b5d0d17ec4dbb99763c2baa391-102900000-0\",\"GlobalObjectId_V1-1-582fda6c4aaf67e4bb044c40069f2b20-102900000-0\",\"GlobalObjectId_V1-1-461334e0c67fc3e42a2e278021ce0c40-102900000-0\",\"GlobalObjectId_V1-1-ea92ce90d25ae3c4095178157582252d-102900000-0\",\"GlobalObjectId_V1-1-b3fd65394db009c4ca15f63fda1762b7-102900000-0\",\"GlobalObjectId_V1-1-dea1917a1f16dd249903e689a90adf83-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Documentation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-a4e881857add44b98c8b30f84fd1e23a-4900000-0\",\"GlobalObjectId_V1-1-69c16bcb57044322aa843b5bbe499f05-4900000-0\",\"GlobalObjectId_V1-1-b11feef5659f4edca64c0177ab0e4633-4900000-0\",\"GlobalObjectId_V1-1-3bdaf0533c4d40b280ff259cc64377e6-4900000-0\",\"GlobalObjectId_V1-1-1d96c03d4c1b5b338d4667becee9c52d-4900000-0\",\"GlobalObjectId_V1-1-74072949769144fb96beab3993ad688e-4900000-0\",\"GlobalObjectId_V1-1-55e9d839fc6259c8a113bd93cf2f4181-4900000-0\",\"GlobalObjectId_V1-1-a2e1e8dabd095094a82b9ad48978fd1f-4900000-0\",\"GlobalObjectId_V1-1-f2a636c77b725249bd6fdf85fcb898b0-102900000-0\",\"GlobalObjectId_V1-1-56908098c0f35e959eb86a21f24abbde-4900000-0\",\"GlobalObjectId_V1-1-9feed61df724525eaf09c812fa73cc23-4900000-0\",\"GlobalObjectId_V1-1-45af433106b55d93ae2c1a723b0745b1-4900000-0\",\"GlobalObjectId_V1-1-933336bd4f6452f3afee48181e300e92-4900000-0\",\"GlobalObjectId_V1-1-96e09f98c6c24ca5892123aaf77ebdb5-102900000-0\",\"GlobalObjectId_V1-1-7a908d6f92305a32aa298905fe43398a-4900000-0\",\"GlobalObjectId_V1-1-5013fb0b5774501382a31b40a535e079-4900000-0\",\"GlobalObjectId_V1-1-e8616bae3dce501386689dcc0f9509f8-4900000-0\",\"GlobalObjectId_V1-1-65db5ecdacdd5a3baf03b23a55ef21fa-4900000-0\",\"GlobalObjectId_V1-1-552a6dc1b0ad42a9aa7b19d19e0ea1da-4900000-0\",\"GlobalObjectId_V1-1-9d1668a067314fddae14806260cdad52-4900000-0\",\"GlobalObjectId_V1-1-9c3717bc73b1431b8a7afab1de7d32b1-4900000-0\",\"GlobalObjectId_V1-1-7d9f9f5fcc6346cc9e05cad66013ecd7-4900000-0\",\"GlobalObjectId_V1-1-9682df72a217409ea48f7b3d1cff8a95-4900000-0\",\"GlobalObjectId_V1-1-6718712a4e6c44e6ae314be42a3c521a-4900000-0\",\"GlobalObjectId_V1-1-54c1960634a95ecfb03fd1fb012007ba-4900000-0\",\"GlobalObjectId_V1-1-5c70987615f47f24888eb47c765390e6-4900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Empty Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check File Menu Names",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts contain invalid MenuItem names:\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Settings'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c5ebd3925ea2e7b4bc16253143a377a1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Install Product Package...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-08367390f6ec42469b3146911f90104e-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-0df6034f27b54d1a87d8c6a96ee6b1af-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-288ddc2dc47fe0040ac4030a577ffce0-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Windows'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a678591c6996d714eb6c39dfe63c7b6a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Design Data Table/Create or Repair Mini Arcade'\\n(for method 'Install')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-564510bd7c5cdda4a95b3be0a9f5344b-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Design Data Table/Build Saved Scene Objects'\\n(for method 'BuildAll')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-251338228ef945a7a5401aed8789e6b9-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Design Data Table/Build Saved Scene Objects'\\n(for method 'BuildAll')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a5b70b53650e4f97b3b2cbb326551dbf-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Design Data Table/Build Saved Scene Objects'\\n(for method 'BuildAll')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-04d5e1bfc3fb4c239a7da8df260b87ff-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Documentation'\\n(for method 'OpenDocumentation')\\n\\n'TurnRoom/Design Data Table/About'\\n(for method 'About')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-922c72740edf55942a2918efc24ef87c-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Open Data Table'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-23023318f450fe84bb9c00b86f466e14-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Preferences...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-6656cbe1e0953df459c0ba9c91dbe973-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Preferences...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-22bb45a4c3844ec4a9181e8d1c0560bf-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Preferences...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-f3286fc0ddc848eabba6ea10cd798894-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Report a Bug'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-54cfe2a2b8b04624b8e9762eb9401063-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Design Data Table/Open Spreadsheet File...'\\n(for method 'ChooseFile')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-86e912d2a3c5442e846743732e36f497-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Line Endings",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-68dc48afbf024faea6863a1917d45efe-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check LODs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Mesh Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Assets",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Orientation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Types",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Normal Map Textures",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Particle Systems",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Path Lengths",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Prefab Transforms",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Script Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Shader Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Texture Dimensions",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following texture dimensions are not a power of 2:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-2cbf7c38e2cc4e24bfeb9c40b383005a-2800000-0\",\"GlobalObjectId_V1-1-d11caf43479d4da6ab3e39b4cb079f60-2800000-0\",\"GlobalObjectId_V1-1-eed310426c8b4e798f792df6ba74f0b5-2800000-0\",\"GlobalObjectId_V1-1-d1b87365c9234b7aaee2680488e1e2fe-2800000-0\",\"GlobalObjectId_V1-1-ad0a7d3883b346229448144ae6ab1d2a-2800000-0\",\"GlobalObjectId_V1-1-46fe4bff1df8408b97aa63f4d034f15b-2800000-0\",\"GlobalObjectId_V1-1-4a75ffa6cddd4f119139ae37e87e1f61-2800000-0\",\"GlobalObjectId_V1-1-960431176ec145928f976d926032e1a0-2800000-0\",\"GlobalObjectId_V1-1-d301f730b81f4c51a56409cbb57a17d8-2800000-0\",\"GlobalObjectId_V1-1-39963d4fb07c4f22884b8f2d93f282d7-2800000-0\",\"GlobalObjectId_V1-1-da5d76fc6a0b45df8a1adeafeb4c2a5c-2800000-0\",\"GlobalObjectId_V1-1-feb379cf8b344c51952b9679398ef12d-2800000-0\",\"GlobalObjectId_V1-1-fa3323e4fe2a47fd82bd0318add9fe11-2800000-0\",\"GlobalObjectId_V1-1-20028b836dd44a9fbe4f08cf669a6282-2800000-0\",\"GlobalObjectId_V1-1-b7127faca6de412abf93da239ef3402e-2800000-0\",\"GlobalObjectId_V1-1-f80a4751fcb84f75af44f504fa03215d-2800000-0\",\"GlobalObjectId_V1-1-1f4036d1cba543189a662b4c0fea7732-2800000-0\",\"GlobalObjectId_V1-1-2f801763110a4c18a23b31bfc0bb630b-2800000-0\",\"GlobalObjectId_V1-1-cba45c335cef43119eb1ce77100c225f-2800000-0\",\"GlobalObjectId_V1-1-28a2560322d44b1bb2bef234c80fd936-2800000-0\",\"GlobalObjectId_V1-1-38da9ebe02084926be4f5c32b6002b77-2800000-0\",\"GlobalObjectId_V1-1-8cea6cfec72e4e91af9c9381d13df1e4-2800000-0\",\"GlobalObjectId_V1-1-daf52af1e1194f0b84bfde7fccd09d0b-2800000-0\",\"GlobalObjectId_V1-1-9084bc1220eb44d6bbd8609037656553-2800000-0\",\"GlobalObjectId_V1-1-bbeb1a94ad6548bcbc4c12886057c6a0-2800000-0\",\"GlobalObjectId_V1-1-a19a925e7693494a9c6736eba125850f-2800000-0\",\"GlobalObjectId_V1-1-402b7798db704a23b9b73c4f1561a26e-2800000-0\",\"GlobalObjectId_V1-1-1212011f80664a40a1dfe90f87455c46-2800000-0\",\"GlobalObjectId_V1-1-6e429d80e8424b5ca42af21f636ab8d0-2800000-0\",\"GlobalObjectId_V1-1-9c68f6399577453bb00b7e0f5c9377d0-2800000-0\",\"GlobalObjectId_V1-1-fc5a91174b3a4bc39ea2d8a7ba86a421-2800000-0\",\"GlobalObjectId_V1-1-83dbfb115d9d4c1f9442e66cc08a9a60-2800000-0\",\"GlobalObjectId_V1-1-e5d27139ba8447a4a7494fa9781fec4a-2800000-0\",\"GlobalObjectId_V1-1-013f1990b7f94397bd1312c19bb91f1a-2800000-0\",\"GlobalObjectId_V1-1-4c77f75f33e74b4cae01ff4b77182450-2800000-0\",\"GlobalObjectId_V1-1-93af08d602544e448ef27ac3a7982e09-2800000-0\",\"GlobalObjectId_V1-1-556f333c89144a64826a6d61a62f2d38-2800000-0\",\"GlobalObjectId_V1-1-c6463cd87d814d8eb003b4895e742e60-2800000-0\",\"GlobalObjectId_V1-1-ccbc257f4f2644ab8e0aeb27d718051e-2800000-0\",\"GlobalObjectId_V1-1-f7891816497e43c8acc3c58095aeee8a-2800000-0\",\"GlobalObjectId_V1-1-88221c7d2fb240fb9e7c7eba5d2ae608-2800000-0\",\"GlobalObjectId_V1-1-a5e2ec9958f844b9a303317c42002bca-2800000-0\",\"GlobalObjectId_V1-1-abb12291f55e46f08d18c449b7a90c6f-2800000-0\",\"GlobalObjectId_V1-1-8b3c3c09ab934e629b2235c6fa3c0b68-2800000-0\",\"GlobalObjectId_V1-1-7a779f0fd4db45248e9a77699cf9146d-2800000-0\",\"GlobalObjectId_V1-1-c11ebcd69f354c1a85a835dd22e7f01e-2800000-0\",\"GlobalObjectId_V1-1-21a1a9a5245f4fb4bd7ea8f72b493ddd-2800000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Type Namespaces",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Executable Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JavaScript Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JPG Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-bbfc20389f08438183b8746a86e929be-2800000-0\",\"GlobalObjectId_V1-1-cf82f4b664cc4daaa2ebd65dcd74cca9-8900000-0\",\"GlobalObjectId_V1-1-4c6b071db2d543ab8cebae181f562262-2800000-0\",\"GlobalObjectId_V1-1-16e316f30a971e143bab16f9f2993a0e-2800000-0\",\"GlobalObjectId_V1-1-79a0809ea1a23fe4381c210adbfacf7c-2800000-0\",\"GlobalObjectId_V1-1-d112a77d25424381b4c71ae8b8096728-2800000-0\",\"GlobalObjectId_V1-1-6de38bd04d894dcb8a3fd9ab92c5f452-2800000-0\",\"GlobalObjectId_V1-1-a6bdd0371a9748969d6374accf251a6e-8900000-0\",\"GlobalObjectId_V1-1-3bd63302e55f4bcd969ab6599b37802c-2800000-0\",\"GlobalObjectId_V1-1-84d2af73461b112429609d9ebf83cdcc-2800000-0\",\"GlobalObjectId_V1-1-4a648bf94fc543d0a9473f0c2b584771-2800000-0\",\"GlobalObjectId_V1-1-d3c8671cfd6b4900814e6aee541efdb2-2800000-0\",\"GlobalObjectId_V1-1-a3a8e4011686434a887ba825d5fb4ba8-2800000-0\",\"GlobalObjectId_V1-1-98c43785693b4bd78988f70f6d760f62-2800000-0\",\"GlobalObjectId_V1-1-8aa4696528df42c5bd1dc67130dde2e4-8900000-0\",\"GlobalObjectId_V1-1-f3deda0fc5024774970560c832d8366b-2800000-0\",\"GlobalObjectId_V1-1-291dc18092f24e7a81175b57d3dfa3f0-8900000-0\",\"GlobalObjectId_V1-1-47929bfa707f416d8f027e864179b25c-8900000-0\",\"GlobalObjectId_V1-1-c321377b8669405b92940133f44c88ac-2800000-0\",\"GlobalObjectId_V1-1-d756ca6bfa524be5b35ffabc6798f552-8900000-0\",\"GlobalObjectId_V1-1-a7b1a21e25644e75924ffa5d1895b50f-8900000-0\",\"GlobalObjectId_V1-1-d3232ee0e2e84436b05a5d67e8fe2d84-8900000-0\",\"GlobalObjectId_V1-1-31d47ba443e34eac91960aaefe0a3417-8900000-0\",\"GlobalObjectId_V1-1-f549e40bf5884becafffec022210e44e-8900000-0\",\"GlobalObjectId_V1-1-4e612fd2119b45419d95b8cb5e9523f7-8900000-0\",\"GlobalObjectId_V1-1-9015f7a9c7264db99757f210a287bfbe-2800000-0\",\"GlobalObjectId_V1-1-10498cbe49614b56b42c00c46c9204dd-8900000-0\",\"GlobalObjectId_V1-1-a4284819f950490d98a10bd439d94924-2800000-0\",\"GlobalObjectId_V1-1-e18b2cc570e74249900fe71c48cfb626-8900000-0\",\"GlobalObjectId_V1-1-c57b6123cb904cdd8dd9f1f4dbdf94c2-8900000-0\",\"GlobalObjectId_V1-1-6df5d204921d459899de78d905801879-8900000-0\",\"GlobalObjectId_V1-1-e529b405c7834611894e0c38ac6d014f-8900000-0\",\"GlobalObjectId_V1-1-c90cb3eea0004ba998eb893f2484c8fd-8900000-0\",\"GlobalObjectId_V1-1-7475680befdc4844afffbfbab9af51cb-8900000-0\",\"GlobalObjectId_V1-1-e0e105ad2a364ea88fa78fad91ad8eb9-8900000-0\",\"GlobalObjectId_V1-1-4cc039627de04023a800b72ec5322113-8900000-0\",\"GlobalObjectId_V1-1-dc3842f559be4fe281ce0a9472a340d2-8900000-0\",\"GlobalObjectId_V1-1-80db294f440f403db411dab5adca230f-8900000-0\",\"GlobalObjectId_V1-1-5cc0e7c2db06409db12ce1b5bc35d3cf-8900000-0\",\"GlobalObjectId_V1-1-9e5fb4c515a3484a89cf982c33460afc-8900000-0\",\"GlobalObjectId_V1-1-7d423ec5ae134df6ae8501c5de84f384-8900000-0\",\"GlobalObjectId_V1-1-e91ab8b1b1124255990cc8114226a4ce-8900000-0\",\"GlobalObjectId_V1-1-bb3ee69d2c6b4db3b04270d1f188f169-8900000-0\",\"GlobalObjectId_V1-1-8edf07ecd14e4d34b5833c6f459ebb11-8900000-0\",\"GlobalObjectId_V1-1-d88078f469ef42b18e865ace14944e63-8900000-0\",\"GlobalObjectId_V1-1-b70b7c8602fd46f79da3e3770076c702-8900000-0\",\"GlobalObjectId_V1-1-2d1e6a2ceea74ce3b7334efde74b9ecf-8900000-0\",\"GlobalObjectId_V1-1-e8465bf2813043548381548caf837479-8900000-0\",\"GlobalObjectId_V1-1-5c31460a6ccd48e4973ff5588753dedd-8900000-0\",\"GlobalObjectId_V1-1-8a10ef7dba3a42509dc768dfbc3b18f1-8900000-0\",\"GlobalObjectId_V1-1-a323fae8aaf74f3cbe45bf7cb1fb6d14-8900000-0\",\"GlobalObjectId_V1-1-ece578ba31f744fb8c209d69009ff85a-8900000-0\",\"GlobalObjectId_V1-1-6edcf94f96cd4c16aa3266940b59c4a7-8900000-0\",\"GlobalObjectId_V1-1-4c3e66855ed34d348beddfc56477c6f3-8900000-0\",\"GlobalObjectId_V1-1-402c00d9e003491a8977d5977067cb21-8900000-0\",\"GlobalObjectId_V1-1-347d87628d924ebab6134f0b63522247-2800000-0\",\"GlobalObjectId_V1-1-c0c6d3a6e98e4727a46857a3a474c40b-2800000-0\",\"GlobalObjectId_V1-1-9aa4ea0c10352704daaf3d9ca76e97d3-2800000-0\",\"GlobalObjectId_V1-1-b514503a05ed4558a097ffba8c373627-8900000-0\",\"GlobalObjectId_V1-1-7bc41ac0840f4d6989d66d167b04734e-8900000-0\",\"GlobalObjectId_V1-1-54d9b191a98e4c4b9b09005e697c2689-8900000-0\",\"GlobalObjectId_V1-1-b64dd78a0f9143a8b7c8be2359f2c7d1-8900000-0\",\"GlobalObjectId_V1-1-664d98031ece40fe9b78e6c59203e9ca-8900000-0\",\"GlobalObjectId_V1-1-fd4b6859053d4359b3d8a92403713a35-8900000-0\",\"GlobalObjectId_V1-1-9cd86537923e4d38ae8b1bfc6eefeba9-8900000-0\",\"GlobalObjectId_V1-1-664528cfee5f4f27a5c0f786ac718afd-2800000-0\",\"GlobalObjectId_V1-1-1d430a7069c940da878c8726f525a21f-2800000-0\",\"GlobalObjectId_V1-1-d7cee4e557544c3ba9e1a89544905ec6-2800000-0\",\"GlobalObjectId_V1-1-a5abc30eefb9450c927ff37c0c928180-2800000-0\",\"GlobalObjectId_V1-1-2337071104ac4e18aa80e4af884d9e6b-2800000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Lossy Audio Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Mixamo Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove SpeedTree Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Video Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      }
+    ]
+  },
+  "upload": {
+    "product": "DesignDataTable",
+    "id": "publisher-final-DesignDataTable-1793596864909",
+    "passed": true,
+    "sha256": "24bcbcc4affc275c1e383b02234f258fb252666e95ec28bcfb09fb46621e1d9e",
+    "finishedUtc": "2026-11-02T05:24:36.4427056Z"
+  },
+  "portal": {
+    "product": "DesignDataTable",
+    "id": "1541556",
+    "at": "2026-11-02T05:39:43.756Z",
+    "submitEnabled": true,
+    "submitted": false,
+    "uploadLine": "  - paragraph: Nov 02, 2026 05:21 UTC, 804 files, 62.9 MB",
+    "fileCount": 804
+  },
+  "blockers": [
+    {
+      "products": [
+        "DesignDataTable",
+        "Pixora",
+        "PixelCamera",
+        "EntityForge"
+      ],
+      "rule": "2.5.1.a",
+      "evidence": "Official Check File Menu Names and actual MenuItem(\"TurnRoom/...\") source",
+      "action": "Place customer menus under Tools/TurnRoom or an existing Unity menu; update entry calls and documentation."
+    }
+  ],
+  "warningDisposition": [
+    {
+      "product": "DesignDataTable",
+      "title": "Check Compressed Files",
+      "paths": [
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/ArcadeText.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/BlocksSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/MiniGameBalance.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/PinballSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/PotionSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Arcade/RhythmSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleCharacter.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleDropItem.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleShopProduct.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Common/SampleSkill.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/CustomEnums/EnumAdventure.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Localization/GameLanguage.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/Enemies.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/Equipment.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/SharedEnums/ExampleEnums.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ChartGallery.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ClosedShapeGradientsUi.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/EmptyStringCoercion.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/GeneralSections.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/LocaleDefaultCalendar.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/Spreadsheets/ShapeCatalog.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/BowlingSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/CanyonSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/CourierSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/DefenseSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/DroneSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ExtraGamesText.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/GolfSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/LanderSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/MarbleSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/SkyboundSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ThreeDSettings.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/ThreeDText.xlsx",
+        "Assets/TurnRoom/DesignDataTable/Sample/Data/ThreeD/WarehouseSettings.xlsx"
+      ],
+      "disposition": "Inspect actual archive types: DDT XLSX are native spreadsheet inputs; Pixora source ZIP is explicitly source artwork."
+    },
+    {
+      "product": "DesignDataTable",
+      "title": "Check File Menu Names",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+        "Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/MiniGameSamplesBuilder.cs",
+        "Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/SampleSceneObjectsBuilder.cs",
+        "Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ExtraGameSharedUi.cs",
+        "Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ThreeDSharedUi.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/AboutPopup.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTableEditor.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferences.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesComments.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesShortcuts.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookBugReportWindow.cs",
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAssets.cs"
+      ],
+      "disposition": "Submission blocker: customer MenuItem paths start at TurnRoom; official2.5.1.a requires existing menus or Tools."
+    },
+    {
+      "product": "DesignDataTable",
+      "title": "Check Line Endings",
+      "paths": [
+        "Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/SettingsLocalization.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs"
+      ],
+      "disposition": "Style warning remains; not converted into zero-warning status."
+    },
+    {
+      "product": "DesignDataTable",
+      "title": "Check Texture Dimensions",
+      "paths": [
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/backdrop.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/brickOrange.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Candy/paddle.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal0.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal1.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal2.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal3.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal4.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal5.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal6.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/animal7.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Cards/backdrop.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Dungeon/room.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/barrel_red.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/barrier_red.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/car_blue_1.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/car_red_1.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/cone_straight.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/road.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/tree_large.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Race/tree_small.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor1.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor2.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor3.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/meteor4.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/playerShip1_blue.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Arcade/Resources/ArcadeArt/Space/playerShip3_red.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtBrick.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtCoin.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtEnum.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtFPS.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtMemory.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtMeteor.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtRPG.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtRunner.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtShop.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ArtSurvival.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbBrick.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbCoin.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbEnum.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbFPS.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbMemory.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbMeteor.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbRPG.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbRunner.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbShop.png",
+        "Assets/TurnRoom/DesignDataTable/Sample/Art/Interface/Resources/SampleArt/ThumbSurvival.png"
+      ],
+      "disposition": "Documentation/UI dimensions: conditionally power-of-two when appropriate; retain readable guide captures."
+    },
+    {
+      "product": "DesignDataTable",
+      "title": "Remove JPG Files",
+      "paths": [
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg",
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/addressables-table-registry-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/asset-create-menu-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/cell-format-categories-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/clipboard-range-paste-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/clipboard-sparse-paste-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/closed-shape-gradient-controls-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/closed-shape-gradient-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Collection-GeneratedRows.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/custom-object-tooltip-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/embedded-number-literals-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/empty-text-coercion-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/external-registration-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/formula-bar-game-fixed.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/formula-bar-viewer-fixed.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/game-data-tab-ko-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/general-section-format-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/HelpBox-DataTableFindError.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/HelpBox-DataTableFindInfo.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/index-zero-axis-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindEmpty.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindMissing.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindNarrow.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-FindResults.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-GeneratedTable.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/Inspector-TableTheme.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/locale-calendar-month-preview.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/localization-data-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/logical-text-coercion-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-brick.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-coin.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-enum-paused-ko.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-enum.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-0.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-1.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-2.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-3.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-4.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-5.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-6.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-7.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-8.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-9.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-10.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-11.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-12.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-extra-13.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-fps.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-hub.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-memory.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-meteor.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-original-game-ko.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-original-shop-ko.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-rpg.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-runner.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/mini-arcade-shop-paused-ko.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/object-properties-fill-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/ribbon-screen-tip-copy.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/selection-add-mode-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-catalog-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-custom-paths-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/shape-insert-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/sheet-tabs-curves-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/store-samples-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/taskbar-hover-peek-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/taskbar-hover-preview-ui.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-game-data-tools.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-game-home.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/unified-general-home.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/window-motion-minimized.jpg",
+        "Assets/TurnRoom/DesignDataTable/Documentation/images/window-motion-restored.jpg"
+      ],
+      "disposition": "Tool-category documentation/sample JPEG; official2.4.3.a allows Tools exception."
+    }
+  ],
+  "priceUsd": 19.99,
+  "priceConfirmed": true,
+  "submitted": false
+}

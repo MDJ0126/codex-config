@@ -1,0 +1,264 @@
+{
+  "at": "2026-11-02T05:41:48.777Z",
+  "reviewComplete": true,
+  "readyToSubmit": false,
+  "product": "PixelCamera",
+  "package": {
+    "file": "Artifacts/TurnRoomPackages/TurnRoom-PixelCamera.unitypackage",
+    "bytes": 34336232,
+    "sha256": "4eba62722e28e84f990ea47de9916de68332b13c94df7e92ab59b6568d5000a1",
+    "files": 677,
+    "sourceAndMetadataReadback": true,
+    "developmentExcluded": true
+  },
+  "nativeSharedChecks": 15,
+  "official": {
+    "product": "PixelCamera",
+    "category": "Tools/Camera",
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 25,
+    "warning": 4,
+    "fail": 0,
+    "tests": [
+      {
+        "title": "Check Audio Clipping",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Colliders",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Compressed Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No archives were found in the package content!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Demo Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-ce8ab7cc64d2f4c4dbc19492cf697a4d-102900000-0\",\"GlobalObjectId_V1-1-2294e6a540157c849ba858d4cd5ac196-102900000-0\",\"GlobalObjectId_V1-1-67a09736204276341ae0f1f0ce4ca050-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Documentation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-4420d10b9816478b8f6fd7ed47d26e84-4900000-0\",\"GlobalObjectId_V1-1-92548ad54eb043e2b635f7b040035414-4900000-0\",\"GlobalObjectId_V1-1-42ece0b02f964555bdb1b00b6b18a4e0-4900000-0\",\"GlobalObjectId_V1-1-f6f476563dc84067be0fc6b91c9ed7d2-4900000-0\",\"GlobalObjectId_V1-1-d9345a9febaa43ed9abebedf04305bee-4900000-0\",\"GlobalObjectId_V1-1-39447c0df1af459b92521eba70f96e7e-4900000-0\",\"GlobalObjectId_V1-1-9ac9403db19b4c3e96a5d2063132ce4d-4900000-0\",\"GlobalObjectId_V1-1-105c578da317413bb9f2af519e6abef9-4900000-0\",\"GlobalObjectId_V1-1-a2e9ae5217dd4fbd9ca584a1dd9a821a-4900000-0\",\"GlobalObjectId_V1-1-c8678b222a4f18640856c0c4fc172b2c-4900000-0\",\"GlobalObjectId_V1-1-170589343a4aa2245b5ce4e6688fd41c-4900000-0\",\"GlobalObjectId_V1-1-8cc71368977de7340a57608ce4d08442-4900000-0\",\"GlobalObjectId_V1-1-3b9d8fb33fa26474aa53a6a609abcefe-4900000-0\",\"GlobalObjectId_V1-1-735ac6ccc84fea74785a59a46b14c306-4900000-0\",\"GlobalObjectId_V1-1-d6280da2774376c48989d2ca51e34f00-4900000-0\",\"GlobalObjectId_V1-1-31611729128926d44a33e41786baa568-4900000-0\",\"GlobalObjectId_V1-1-8ee0922b7bf599c488b53a4ca20a4f35-4900000-0\",\"GlobalObjectId_V1-1-1f8d22f14e1bc2849915f110fb71dfdc-4900000-0\",\"GlobalObjectId_V1-1-eb727bf4337f4e29a81de27022f7e5a4-4900000-0\",\"GlobalObjectId_V1-1-0adcf8fe7b5bded4781082bc8be3f0ae-4900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Empty Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check File Menu Names",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts contain invalid MenuItem names:\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Settings'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c5ebd3925ea2e7b4bc16253143a377a1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Install Product Package...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-08367390f6ec42469b3146911f90104e-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-0df6034f27b54d1a87d8c6a96ee6b1af-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-288ddc2dc47fe0040ac4030a577ffce0-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Windows'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a678591c6996d714eb6c39dfe63c7b6a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixel Camera/Open'\\n(for method 'Open')\\n\\n'TurnRoom/Pixel Camera/Open Docked'\\n(for method 'OpenDocked')\\n\\n'TurnRoom/Pixel Camera/Documentation'\\n(for method 'OpenGuide')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-694aeb6932d613f40a9200f2637e3cea-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixel Camera/Open'\\n(for method 'Open')\\n\\n'TurnRoom/Pixel Camera/Open Docked'\\n(for method 'OpenDocked')\\n\\n'TurnRoom/Pixel Camera/Documentation'\\n(for method 'OpenGuide')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-007814d76fe5416c8f71fb6425787e3a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixel Camera/Samples/01 - Clockwork Garden'\\n(for method 'OpenGarden')\\n\\n'TurnRoom/Pixel Camera/Samples/02 - Neon Courier'\\n(for method 'OpenCourier')\\n\\n'TurnRoom/Pixel Camera/Samples/03 - Sunken Observatory'\\n(for method 'OpenObservatory')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-07a123afcd075c604b07b050774748af-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Line Endings",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-3d1534accb0c47a4db9bd64721e78a2d-11500000-0\",\"GlobalObjectId_V1-1-7329369cea608204796d1ddc75bf768c-11500000-0\",\"GlobalObjectId_V1-1-007814d76fe5416c8f71fb6425787e3a-11500000-0\",\"GlobalObjectId_V1-1-0c64d5e1d46f21a4bae1717a5cb59b65-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-694aeb6932d613f40a9200f2637e3cea-11500000-0\",\"GlobalObjectId_V1-1-deb72cddca4ec6342a5b3497e4878717-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check LODs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Mesh Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Assets",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Orientation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Types",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Normal Map Textures",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Particle Systems",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Path Lengths",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Prefab Transforms",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following prefabs' transforms do not fit the requirements\",\"MessageObjects\":[\"GlobalObjectId_V1-1-2895e2e4d895be54bb0e1c0a983e9edb-785274656605920743-0\",\"GlobalObjectId_V1-1-aab11b4f70426994bbe0e405f893d0d8-3371977168871810915-0\",\"GlobalObjectId_V1-1-7ae5318e1b078bb43a3a2b4f5f35de7f-445193011614258350-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Script Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Shader Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Texture Dimensions",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Type Namespaces",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Executable Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JavaScript Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JPG Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-034b330ef1604d3a88d29fd5ae68ca80-8900000-0\",\"GlobalObjectId_V1-1-63a22077ac784dd29a72d3cb337e1a46-8900000-0\",\"GlobalObjectId_V1-1-e87dc4cfe131486a8c139756beb51979-8900000-0\",\"GlobalObjectId_V1-1-63c8da9416b84b27b457d57d1457dc7f-8900000-0\",\"GlobalObjectId_V1-1-5bf27733e2404a0895c0b62f03d6d709-8900000-0\",\"GlobalObjectId_V1-1-7361cb13673e4254905049be66e0c7e5-8900000-0\",\"GlobalObjectId_V1-1-b0f94595528641c881bc34b9843e08e6-8900000-0\",\"GlobalObjectId_V1-1-9c4a9115ad6c4474b5cb19a2cb162b60-8900000-0\",\"GlobalObjectId_V1-1-2324330c5cc1ddd0a96d7797fa304fcb-8900000-0\",\"GlobalObjectId_V1-1-bc265a14b63c1eb8b6369683265abd44-8900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Lossy Audio Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Mixamo Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove SpeedTree Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Video Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      }
+    ]
+  },
+  "upload": {
+    "product": "PixelCamera",
+    "id": "publisher-final-PixelCamera-1793596688923",
+    "passed": true,
+    "sha256": "4eba62722e28e84f990ea47de9916de68332b13c94df7e92ab59b6568d5000a1",
+    "finishedUtc": "2026-11-02T05:19:59.2770230Z"
+  },
+  "portal": {
+    "product": "PixelCamera",
+    "id": "1541562",
+    "at": "2026-11-02T05:39:51.528Z",
+    "submitEnabled": true,
+    "submitted": false,
+    "uploadLine": "  - paragraph: Nov 02, 2026 05:18 UTC, 0 files, 32.7 MB",
+    "fileCount": 0
+  },
+  "blockers": [
+    {
+      "products": [
+        "DesignDataTable",
+        "Pixora",
+        "PixelCamera",
+        "EntityForge"
+      ],
+      "rule": "2.5.1.a",
+      "evidence": "Official Check File Menu Names and actual MenuItem(\"TurnRoom/...\") source",
+      "action": "Place customer menus under Tools/TurnRoom or an existing Unity menu; update entry calls and documentation."
+    }
+  ],
+  "warningDisposition": [
+    {
+      "product": "PixelCamera",
+      "title": "Check File Menu Names",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.Design.cs",
+        "Assets/TurnRoom/PixelCamera/Samples/Editor/PixelCameraSamplesMenu.cs"
+      ],
+      "disposition": "Submission blocker: customer MenuItem paths start at TurnRoom; official2.5.1.a requires existing menus or Tools."
+    },
+    {
+      "product": "PixelCamera",
+      "title": "Check Line Endings",
+      "paths": [
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraInspector.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoring.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.Design.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoringInspectors.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.cs",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraObjectInspector.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs"
+      ],
+      "disposition": "Style warning remains; not converted into zero-warning status."
+    },
+    {
+      "product": "PixelCamera",
+      "title": "Check Prefab Transforms",
+      "paths": [
+        "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ClockworkWren.prefab",
+        "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/MantaCourier.prefab",
+        "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/CelestialArmillary.prefab"
+      ],
+      "disposition": "Sample/model asset transform warning remains; needs review against2.4.d/e before submission."
+    },
+    {
+      "product": "PixelCamera",
+      "title": "Remove JPG Files",
+      "paths": [
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg",
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/Collection-LayerPopover.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/HelpBox-PixelCameraDark.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/HelpBox-PixelCameraDarkV2.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/HelpBox-PixelCameraLight.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/HelpBox-PixelCameraLightV2.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/Inspector-PixelPresetDark.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/Inspector-PixelPresetLight.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/Inspector-PixelPresetNarrow.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/SettingsDark.jpg",
+        "Assets/TurnRoom/PixelCamera/Documentation/Images/SettingsLight.jpg"
+      ],
+      "disposition": "Tool-category documentation/sample JPEG; official2.4.3.a allows Tools exception."
+    }
+  ],
+  "priceUsd": 4.99,
+  "priceConfirmed": true,
+  "submitted": false
+}
