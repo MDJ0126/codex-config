@@ -1,0 +1,122 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "전역 설정 제품 안내·스토어 버튼·업데이트 상태",
+    "summary": "구현·컴파일·실제 Unity UI 트리 검사 통과. 화면 조작이 중지되어 최신 캡처와 버튼 직접 클릭·Package Manager 선택 확인은 대기입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자가 물리 Escape로 Computer Use를 중지했습니다. 이후 화면 조작·Unity 재실행은 하지 않았습니다. 최종 화면 캡처, 실제 업데이트 버튼 클릭과 Package Manager 제품 선택, 실제 스토어 버튼 클릭, 최종 설명의 모든 언어·배율 배치는 확인 대기입니다.\n\n미출시 세 제품의 스토어 페이지는 공개 전까지 표시되지 않을 수 있습니다. 판매용 패키지는 이번 코드 변경 후 재포장하지 않았습니다.\n\n초기 CS0136/CS0029 컴파일 오류는 수정했습니다. 공통 스타일 파일 변경은 원복하고 전역 설정의 USS와 스타일 재적용으로 색상을 유지합니다. 확인되지 않은 상태를 완료로 표시하지 않았습니다. 교훈 검토: 기존 실제 화면 검증·캡처 해시 보존 규칙에 해당해 전역 지침 변경 없음.",
+    "outcome": "요청한 상태색·최신 버전 문구·스토어 버튼·조건부 업데이트 버튼과 이점 중심 설명을 구현했습니다. 전체 요청의 최종 화면·입력 검증까지 완료한 상태는 아닙니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "코드·검증 기록 정리 34분 52초, 2026-11-02 16:26:52 KST. 시작2026-11-02 15:52:00 KST. 사용자 추가 요청2회(기능 설명·조건부 업데이트 버튼과 이점 중심 문구)를 포함했습니다. 최종 화면·클릭 검증은 사용자 화면 조작 중지로 미완료입니다.",
+    "xerjEvidence": "XERJ Status: node not running. 기존 data-lock 문제를 보존하고 rg로 현재 구현과 제품 metadata를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "settings-store-actions-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "제품 상태를 명확하게 표시하고 구매하지 않은 사용자도 제품의 기능과 스토어를 확인하도록 개선",
+    "completionCriteria": "초록색 업데이트 가능·최신 버전 문구·4개 제품 스토어 버튼·5개 한 줄 안내, 실제 UI 상태/URL·9언어·실제 데이터 복원·푸시·공개 보고 확인",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102065934300-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "상태·제품 안내·스토어 진입 구현",
+        "action": "기존 목록 재사용→상태색과 문구→제품 설명9언어→스토어 버튼과 미설치 카탈로그→조건부 Package Manager 업데이트 버튼→이점 중심 설명",
+        "expected": "실제 출시 정보와 설치 상태를 보존하며 요청4개 적용 및 조건부 업데이트 버튼·최종 설명",
+        "qa": "현재 소스·카탈로그ID·번역 키·컴파일 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "최종 소스 실제 컴파일·현재 모듈 UI 트리·9언어·조건부 버튼·14카탈로그 검사 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 상태·입력·문서 검증",
+        "action": "실제 조회→현재/업데이트가능 시험값→색상·URL·설명 확인→실제 데이터 복원→캡처·문서·공개 보고→Package Manager 실제 제품 선택 확인",
+        "expected": "통제된 시험 상태와 실제 공개 버전을 구분하고 정상 상태 복원·업데이트 버튼 클릭과 최종 화면",
+        "qa": "로드 모듈·라벨·계산된색·버튼URL·실제 클릭·복원·현재 문서와 공개첨부 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "qa",
+        "revision": 2,
+        "result": "초기 화면·실제 상태값 검사 완료, 최종 캡처·직접 클릭은 사용자 Computer Use 중지로 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "작업 중 사용자 요청에 따라 제품별 한 줄 기능 설명과 미설치 제품의 스토어 진입도 추가합니다. 기존 요청3개는 유지합니다. 추가 사용자 요청: 업데이트 시에만 버튼을 표시해 Package Manager로 이동하고, 모든 제품 설명을 이점 중심으로 개선합니다. 최종 화면·클릭은 중지 신호로 미실행이며 범위를 삭제하지 않습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T06:57:31.295Z",
+        "summary": "초기 컴파일 실패 기록",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "CS0136 상태 변수 이름 충돌·CS0029 Color32/StyleColor 변환 오류",
+            "evidence": "실제 Unity Editor.log 오류 행 확인; 이후 현재 모듈 컴파일로 재검증",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-02T07:17:50.664Z",
+        "summary": "최종 실제 코드와 카탈로그 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종 소스 실제 컴파일·현재 모듈 UI 트리·9언어·조건부 버튼·14카탈로그 검사 통과",
+            "evidence": "최종 live/available native JSON 및 catalog-logic/result.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-02T07:18:30.536Z",
+        "summary": "화면 조작 중지 상태 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "초기 화면·실제 상태값 검사 완료, 최종 캡처·직접 클릭은 사용자 Computer Use 중지로 미실행",
+            "evidence": "Computer Use stopped by physical Escape; 이후 GUI 호출 중단",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

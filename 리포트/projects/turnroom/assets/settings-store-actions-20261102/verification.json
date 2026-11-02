@@ -1,0 +1,1074 @@
+{
+  "native": [
+    {
+      "file": "storeui-1793602915507-live.json",
+      "at": "2026-11-02T07:02:10.1782518Z",
+      "action": "live",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.1",
+      "passed": true,
+      "fixture": false,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "설치 버전이 더 새로움",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603033097-current.json",
+      "at": "2026-11-02T07:03:53.9329784Z",
+      "action": "current",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.2",
+      "passed": true,
+      "fixture": true,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "최신 버전",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603042579-available.json",
+      "at": "2026-11-02T07:04:03.3523143Z",
+      "action": "available",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.3",
+      "passed": true,
+      "fixture": true,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "업데이트 가능  2.0.3",
+          "color": "6ED39B",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": true,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603163208-available.json",
+      "at": "2026-11-02T07:06:03.9460685Z",
+      "action": "available",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.3",
+      "passed": true,
+      "fixture": true,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "업데이트 가능  2.0.3",
+          "color": "6ED39B",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": true,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603245050-light.json",
+      "at": "2026-11-02T07:07:25.8954932Z",
+      "action": "light",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.3",
+      "passed": true,
+      "fixture": true,
+      "light": true,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "282D32",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "업데이트 가능  2.0.3",
+          "color": "197343",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": true,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603246248-theme-refresh.json",
+      "at": "2026-11-02T07:07:27.1534816Z",
+      "action": "theme-refresh",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.3",
+      "passed": true,
+      "fixture": true,
+      "light": true,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "282D32",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "업데이트 가능  2.0.3",
+          "color": "197343",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": true,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603247407-current.json",
+      "at": "2026-11-02T07:07:28.2973456Z",
+      "action": "current",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.2",
+      "passed": true,
+      "fixture": true,
+      "light": true,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "282D32",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "최신 버전",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "282D32",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603253421-restore.json",
+      "at": "2026-11-02T07:07:34.2797047Z",
+      "action": "restore",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.1",
+      "passed": true,
+      "fixture": false,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "설치 버전이 더 새로움",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603254547-snapshot.json",
+      "at": "2026-11-02T07:07:35.4070855Z",
+      "action": "snapshot",
+      "module": "f8974ff6-7594-4f67-88ae-f8fff26fc087",
+      "error": "",
+      "publicVersion": "2.0.1",
+      "passed": true,
+      "fixture": false,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품의 공통 UI와 전역 설정",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집·게임 데이터 관리·C# 코드 생성",
+          "state": "설치 버전이 더 새로움",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지·3D 모델로 픽셀 아트와 애니메이션 제작",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라 화면과 선택한 오브젝트에 픽셀 스타일 적용",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 변환과 빌드 성능 비교",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603784114-live.json",
+      "at": "2026-11-02T07:16:27.9930567Z",
+      "action": "live",
+      "module": "cb717edd-d0cf-4544-b095-d57d0bb891e9",
+      "error": "",
+      "publicVersion": "2.0.1",
+      "passed": true,
+      "fixture": false,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품을 하나의 UI와 설정으로 편하게 관리하세요.",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집부터 게임 데이터·C# 코드 생성까지, 반복 작업을 줄이세요.",
+          "state": "설치 버전이 더 새로움",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 260,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지와 3D 모델을 픽셀 아트·애니메이션으로 손쉽게 완성하세요.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 329,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라와 오브젝트에 픽셀 감성을 더해 게임의 비주얼을 완성하세요.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 398,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 자동 변환으로 프로젝트 성능 최적화를 돕고, 전후 성능을 비교합니다.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 467,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    },
+    {
+      "file": "storeui-1793603788141-available.json",
+      "at": "2026-11-02T07:16:28.9458677Z",
+      "action": "available",
+      "module": "cb717edd-d0cf-4544-b095-d57d0bb891e9",
+      "error": "",
+      "publicVersion": "2.0.3",
+      "passed": true,
+      "fixture": true,
+      "light": false,
+      "translated": true,
+      "rows": [
+        {
+          "id": "templete",
+          "description": "턴룸 제품을 하나의 UI와 설정으로 편하게 관리하세요.",
+          "state": "제품과 함께 제공",
+          "color": "E1E6EA",
+          "url": "",
+          "button": "",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "id": "designdatatable",
+          "description": "스프레드시트 편집부터 게임 데이터·C# 코드 생성까지, 반복 작업을 줄이세요.",
+          "state": "업데이트 가능  2.0.3",
+          "color": "6ED39B",
+          "url": "https://marketplace.unity.com/packages/package/263724",
+          "button": "스토어로 이동",
+          "green": true,
+          "updateVisible": true,
+          "updateProduct": "263724",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 288,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixora",
+          "description": "이미지와 3D 모델을 픽셀 아트·애니메이션으로 손쉽게 완성하세요.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424614",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 351,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "pixelcamera",
+          "description": "카메라와 오브젝트에 픽셀 감성을 더해 게임의 비주얼을 완성하세요.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424618",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 420,
+            "width": 102,
+            "height": 28
+          }
+        },
+        {
+          "id": "entityforge",
+          "description": "지원 오브젝트의 DOTS 자동 변환으로 프로젝트 성능 최적화를 돕고, 전후 성능을 비교합니다.",
+          "state": "공개 버전 정보 없음",
+          "color": "E1E6EA",
+          "url": "https://marketplace.unity.com/packages/package/424622",
+          "button": "스토어로 이동",
+          "green": false,
+          "updateVisible": false,
+          "updateProduct": "",
+          "buttonBounds": {
+            "serializedVersion": "2",
+            "x": 496,
+            "y": 489,
+            "width": 102,
+            "height": 28
+          }
+        }
+      ]
+    }
+  ],
+  "catalog": {
+    "at": "2026-11-02T07:17:50.664Z",
+    "passed": true,
+    "assertions": 14,
+    "scope": "actual ReadInstalled with installed and empty-project working directories; no files moved",
+    "nativeUnityExecuted": false
+  },
+  "computerUseStopped": true,
+  "stopObservedAt": "2026-11-02T07:18:30.536Z",
+  "finalNativeModule": "cb717edd-d0cf-4544-b095-d57d0bb891e9",
+  "finalNativeAvailableVerified": true,
+  "finalNativeClickVerified": false,
+  "finalScreenCaptured": false,
+  "priorCaptureScope": "available.jpg and current.jpg show the first implementation before the conditional update button and benefit-copy revision; not final screenshots.",
+  "packageManagerApi": "UnityEditor.PackageManager.UI.Window.Open(string productId), public Unity6000.0 reference source",
+  "versionFilesChanged": false
+}
