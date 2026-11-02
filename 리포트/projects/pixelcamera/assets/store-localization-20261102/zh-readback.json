@@ -1,0 +1,15 @@
+{
+  "product": "PixelCamera",
+  "lang": "zh",
+  "at": "2026-11-02T04:35:09.079Z",
+  "url": "https://publisher.unity.com/packages/1541562/edit/translation?locale=zh-CN",
+  "passed": true,
+  "fields": [
+    "Pixel Camera",
+    "首次预览发布。",
+    "为Unity相机添加像素渲染、调色板颜色与描边，支持可复用预设和实时预览。",
+    "为3D场景赋予像素风格，同时保持叠加UI清晰。• 像素化整个相机画面或选中的不透明网格根对象• 调整像素大小、调色板、抖色、描边及网格对齐• 预览可复用预设，设置深度和后置渲染图层• 包含3个可交互展示场景面向Built-in及Unity 6 / URP 17 RenderGraph。不支持HDRP与XR。选中对象的透明渲染及自定义形变需要按项目验证。",
+    "已在Windows的Unity 6000.0.83f1验证。使用Built-in或URP 17 RenderGraph；URP需要随附的Pixel Camera Renderer Feature。选中对象模式使用不透明MeshRenderer／SkinnedMeshRenderer根对象上的Pixel Camera Object组件。额外渲染通道的开销请在目标设备上分析。包括调色板提取、LUT烘焙、自定义抖色矩阵、分段动画工具及九种语言的编辑器界面与指南。渲染、深度和动画限制请参阅随附指南。",
+    "使用OpenAI Codex辅助C#开发、测试、文档、翻译及基于Affinity的宣传素材准备。辅助生成的内容经审核后整合到产品中。产品的基本功能无需AI服务。"
+  ]
+}

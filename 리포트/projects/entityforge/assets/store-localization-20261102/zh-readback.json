@@ -1,0 +1,15 @@
+{
+  "product": "EntityForge",
+  "lang": "zh",
+  "at": "2026-11-02T04:35:16.183Z",
+  "url": "https://publisher.unity.com/packages/1541570/edit/translation?locale=zh-CN",
+  "passed": true,
+  "fields": [
+    "Entity Forge",
+    "首次预览发布。",
+    "保留GameObject制作流程，在播放器构建时将受支持的对象转换为DOTS实体，并提供场景验证与实际播放器性能对比。",
+    "沿用GameObject制作流程，为受支持的工作负载应用DOTS。• 标记支持的网格对象与生成器，在构建时转换• 构建前检查被排除的对象• 对比GameObject与DOTS播放器的实际测量结果• 包含10个示例场景、九种语言的编辑器界面与离线指南测量示例：随附Benchmark Grid的10,000对象测试中，平均帧时间从8.75ms降至2.56ms，约减少70.8%。这是进行实际画面渲染的Windows播放器特定测试结果，不保证所有项目获得同等提升。不会自动转换任意MonoBehaviour、物理系统或动画。",
+    "验证环境：Unity 6000.0.83f1、Entities 1.3.15、Windows x64、Built-in。需通过Package Manager单独安装Entities。支持具有正的统一缩放、单一子网格和材质及支持的Forge组件的活动根网格对象。编辑器Play保留GameObject，构建转换需主动启用。测试条件：10,000个对象，1280×720，每种方式600帧，Core i5-12400F／GeForce GTX 970／Windows 11。平均8.75→2.56ms，帧时间减少70.8%，并非FPS增长百分比。结果取决于场景、硬件及工作负载。",
+    "使用OpenAI Codex辅助C#开发、测试、文档、翻译及基于Affinity的宣传素材准备。辅助生成的内容经审核后整合到产品中。产品的基本功能无需AI服务。"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-02T04:18:25.801Z",
+  "passed": true,
+  "source": "Docs/Testing/2026-11-01/entity-forge/clean-install/Measurement/Comparison-20261101-122022-3d4f8cb7",
+  "baselineMs": 8.751211504936219,
+  "dotsMs": 2.5571143358945845,
+  "frameTimeReductionPercent": 70.77988191175342,
+  "reportedMeanDeltaMs": [
+    3.385543827505444e-7,
+    -2.6822090326561465e-8
+  ],
+  "meanToleranceMs": 0.00001,
+  "initialStrictToleranceCheck": "1e-9 rejected float serialization precision differences; raw values retained",
+  "samplesEach": 600,
+  "objects": 10000,
+  "width": 1280,
+  "height": 720,
+  "hardware": "12th Gen Intel(R) Core(TM) i5-12400F / NVIDIA GeForce GTX 970 / Windows 11  (10.0.26200)",
+  "unity": "6000.0.83f1",
+  "scope": "Historical actual rendered Windows player measurement, not remeasured this turn or a general guarantee"
+}
