@@ -1,10 +1,50 @@
 [
   {
+    "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
+    "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-manual-entityforge-automatic-build-20261102-20261102090050736-v1.0.5.html",
+    "date": "2026-11-02T09:00:50.736Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 프리팹 변환·상세 분석과 날짜별 CI 빌드 기록",
+    "summary": "안내를 일반 텍스트로 정리하고 상세 목록·프리팹 사본 변환·날짜별 CI 기록을 구현했습니다. 디자인도 카드와 버튼 중심에서 간결한 구획과 행으로 바꿨습니다. 컴파일/저장 코드 검사는 통과했으며 네이티브 빌드는 미검증입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102090050016-v1.0.0.html",
+    "date": "2026-11-02T09:00:50.016Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 곡선 광학 심볼 로고 교체",
+    "summary": "픽셀 카메라 그림을 곡선과 렌즈 심볼로 교체하고 실제 Affinity 원본·투명 컬러/흰색 PNG를 저장했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-02-result-20261102082815915-v1.0.0.html",
+    "date": "2026-11-02T08:28:15.915Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "다른 세션 성공 기록 확인 지침 적용",
     "summary": "사용 불가 판단 전 다른 세션 성공 기록을 확인합니다.",
     "project": "codex-config",
     "reportPath": "projects/codex-config/reports/2026-11-02-manual-cross-session-success-check-20261102082644709-v1.0.1.html",
     "date": "2026-11-02T08:26:44.709Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제출 전 메뉴·패키지 의존성·샘플 경고 정리",
+    "summary": "세 항목 소스 수정과 실제 대상16검사·스테이징15어셈블리 컴파일 통과. 최종 배포물 대조는 남아 있습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-submission-compliance-20261102-20261102082508660-v1.0.1.html",
+    "date": "2026-11-02T08:25:08.660Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -25,6 +65,16 @@
     "project": "codex-config",
     "reportPath": "projects/codex-config/reports/2026-11-02-result-20261102082403075-v1.0.0.html",
     "date": "2026-11-02T08:24:03.075Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Asset Store 제출 전 메뉴·의존성 안내·샘플 변환 경고 수정",
+    "summary": "Tools/TurnRoom 이전, 코드 설치 제거, 모델·프리팹 경고 수정. 공식 대상16검사·스테이징 소스15어셈블리 컴파일 통과.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102082111925-v1.0.0.html",
+    "date": "2026-11-02T08:21:11.925Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""
@@ -106,6 +156,16 @@
     "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102074538398-v1.0.0.html",
     "date": "2026-11-02T07:45:38.398Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제출 전 메뉴·패키지 의존성·샘플 경고 정리",
+    "summary": "세 가지 제출 검토 항목을 순차 수정하고 실제 Unity에서 재검증합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102074526217-v1.0.0.html",
+    "date": "2026-11-02T07:45:26.217Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },

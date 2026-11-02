@@ -1,0 +1,56 @@
+{
+  "utc": "2026-11-02T08:59:16.714Z",
+  "plainTextExplanation": true,
+  "heavyCardsRemoved": true,
+  "objectNamesAreLabels": true,
+  "analysisAndHistoryScrollLists": true,
+  "actionBindingsResolve": true,
+  "languages": 9,
+  "localizedKeys": 436,
+  "placeholderParity": true,
+  "sceneResults": [
+    {
+      "scene": "01-DroneHangar",
+      "prefabSpawns": 120,
+      "movingActorsPreplaced": 0,
+      "localReferences": "pass"
+    },
+    {
+      "scene": "02-CargoTraffic",
+      "prefabSpawns": 126,
+      "movingActorsPreplaced": 0,
+      "localReferences": "pass"
+    },
+    {
+      "scene": "03-SalvageYard",
+      "prefabSpawns": 82,
+      "movingActorsPreplaced": 0,
+      "localReferences": "pass"
+    }
+  ],
+  "prefabSamples": [
+    "CourierDrone.prefab",
+    "CargoRover.prefab",
+    "OreSalvage.prefab"
+  ],
+  "compileAssemblies": 7,
+  "compiledSourcesCurrent": true,
+  "journal": {
+    "utc": "2026-11-02T08:48:34.5468411+00:00",
+    "fixtureOnly": true,
+    "nativeUnityBuild": false,
+    "unicodeAndControlEscaping": "pass",
+    "nullForUnmeasured": "pass",
+    "progress50Percent": "pass",
+    "negativeEstimatePreserved": "pass",
+    "coverageSeparate": "pass",
+    "datedDistinctFiles": "pass",
+    "unsafeIdRejected": "pass",
+    "files": [
+      "C:\\Projects\\TurnRoom\\Docs\\Testing\\2026-11-02\\entity-forge\\prefab-history\\journal-tests\\2026-11-02\\serializer-fixture-001.json",
+      "C:\\Projects\\TurnRoom\\Docs\\Testing\\2026-11-02\\entity-forge\\prefab-history\\journal-tests\\2026-11-02\\serializer-fixture-002.json"
+    ]
+  },
+  "nativeUnityBuildAndPrefabExecution": "pending: user prohibits desktop focus and GUI process launches",
+  "performance": "Only matched paired-player estimates; no new runtime measurements claimed"
+}
