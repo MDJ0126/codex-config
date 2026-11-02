@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "제출 전 메뉴·패키지 의존성·샘플 경고 정리",
+    "summary": "세 가지 제출 검토 항목을 순차 수정하고 실제 Unity에서 재검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·검증 진행 전",
+    "outcome": "실행 전 계획",
+    "proposedTime": "20~40분",
+    "actualTime": "시작2026-11-02 16:42:36 KST",
+    "xerjEvidence": "node not running 및 Search startup failed; rg로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "submission-compliance-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "사용자가 지적한 제출 전 세 항목을 수정하고 검증·푸시",
+    "completionCriteria": "세 작업의 현재 버전 QA와 전체 회귀 통과, 실제 Unity 화면, 커밋·푸시·공개 보고서",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 메뉴를 Tools/TurnRoom으로 이동",
+        "action": "메뉴 등록·호출·문서 경로 대조 후 수정하고 컴파일·실제 메뉴 실행",
+        "expected": "최상위 TurnRoom 메뉴 없음, 기존 명령·검증 쌍·단축키 보존",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Entity Forge를 Package Manager 안내로 전환",
+        "action": "Client.Add 제거, 편집 가능한 버튼·9언어 안내·Package Manager 연결 후 manifest 불변 검사",
+        "expected": "코드 설치 없음, Package Manager에서 사용자가 직접 설치",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Pixora·Pixel Camera 샘플 경고 수정 및 공식 재검증",
+        "action": "공식 경고 판정 소스·에셋 비교 후 필요한 원본 및 빌더 수정, 실제 모델·프리팹·공식 검증기 회귀",
+        "expected": "경고 제거 또는 의도된 변환 근거와 실제 화면·정확한 잔여 경고 기록",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

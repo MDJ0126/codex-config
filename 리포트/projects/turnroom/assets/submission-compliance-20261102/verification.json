@@ -1,0 +1,1922 @@
+{
+  "native": [
+    {
+      "file": "compliance-1793605822021-official.json",
+      "at": "2026-11-02T07:51:15.5700370Z",
+      "module": "56c1b6c3-68c2-43ea-b0ad-01c1839e73a1",
+      "action": "official",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "DesignDataTable/Check Audio Clipping",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Colliders",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Compressed Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following .zip archives were found in the package content.\\n� Zip archives should contain the keyword 'source' in the file name\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c02c467fb15493041ab213a29cce110b-5615323950554712161-0\",\"GlobalObjectId_V1-1-8246543f264941cfab76151774f08fbc-5615323950554712161-0\",\"GlobalObjectId_V1-1-ecdce52e94500614480532cc3c1d90da-5615323950554712161-0\",\"GlobalObjectId_V1-1-2c3337ae9f4845b4b34540eb3437310c-5615323950554712161-0\",\"GlobalObjectId_V1-1-565e7e1ef092490b896689b0fcbefa2d-5615323950554712161-0\",\"GlobalObjectId_V1-1-2c881e3584c741c6858a7351d602e894-5615323950554712161-0\",\"GlobalObjectId_V1-1-62b08938a0d343c5a7fa87dc6c7ad7c6-5615323950554712161-0\",\"GlobalObjectId_V1-1-4dce7d8826e246b3b09f40c6e64b27b3-5615323950554712161-0\",\"GlobalObjectId_V1-1-adde9cf360e8471e934a4b161f03f76f-5615323950554712161-0\",\"GlobalObjectId_V1-1-1d24236e0be64c58a342124f506b9188-5615323950554712161-0\",\"GlobalObjectId_V1-1-cb14242d7a3e45dab8c246996b243fff-5615323950554712161-0\",\"GlobalObjectId_V1-1-da844a98e20d7334a805ef25c23f0cbf-5615323950554712161-0\",\"GlobalObjectId_V1-1-a6a1f75cc96d0ec488cfdf6a070fd786-5615323950554712161-0\",\"GlobalObjectId_V1-1-9a1da894f66dff04aa4aec55b2acc676-5615323950554712161-0\",\"GlobalObjectId_V1-1-b852d5fe8b043964bb265c6bc40905e3-5615323950554712161-0\",\"GlobalObjectId_V1-1-9cc7b93ba6a15ddcab9d021b16e04771-5615323950554712161-0\",\"GlobalObjectId_V1-1-f9b681b7a74b52fca5572326341eefe6-5615323950554712161-0\",\"GlobalObjectId_V1-1-eabfe20aa9f151b89a04d26de66db792-5615323950554712161-0\",\"GlobalObjectId_V1-1-7b525f71473859188fa66c5b2083bb6f-5615323950554712161-0\",\"GlobalObjectId_V1-1-00333ba7dd8e513b8dace2cf323307b4-5615323950554712161-0\",\"GlobalObjectId_V1-1-c52e2b7c35c95ce68f934add5a60dc0c-5615323950554712161-0\",\"GlobalObjectId_V1-1-32bf6ae3082e4f9e9b19fcf7aaf70468-5615323950554712161-0\",\"GlobalObjectId_V1-1-ca58ceb3daff48958503918e86aa33c4-5615323950554712161-0\",\"GlobalObjectId_V1-1-e24f5bc32c394997a1c2363f93f51321-5615323950554712161-0\",\"GlobalObjectId_V1-1-68b73266eb94434aa421c2086427aabb-5615323950554712161-0\",\"GlobalObjectId_V1-1-f072d0307eb44e92b97f2a59ecd6d2f3-5615323950554712161-0\",\"GlobalObjectId_V1-1-7dc3b8ec43c541b49af1cff6ce1faf69-5615323950554712161-0\",\"GlobalObjectId_V1-1-fa342e394d8e42e99421f4215c49d969-5615323950554712161-0\",\"GlobalObjectId_V1-1-8f6f39ef2b314c5283174505190e69dd-5615323950554712161-0\",\"GlobalObjectId_V1-1-595bd7f8c2534728b88fe2fa1ad2e96c-5615323950554712161-0\",\"GlobalObjectId_V1-1-6740f5d149754bb785a4b57744724821-5615323950554712161-0\",\"GlobalObjectId_V1-1-97bd162d0ec64d56b58790ae1b506646-5615323950554712161-0\",\"GlobalObjectId_V1-1-8ab0dc72501145d18d9e37b4641af73e-5615323950554712161-0\",\"GlobalObjectId_V1-1-5fe29de3bc3744a69029684715b0c0ea-5615323950554712161-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Demo Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-776cb64b9505ca84d98b515f965fe360-102900000-0\",\"GlobalObjectId_V1-1-c7bda21b54ae5d249a53b5e4bd1e3a97-102900000-0\",\"GlobalObjectId_V1-1-3508270c6c2da4644873e25a8644f32a-102900000-0\",\"GlobalObjectId_V1-1-f75cf5327590edc40827af0c99ef060e-102900000-0\",\"GlobalObjectId_V1-1-acc2ab7414da4e44d9ae3be2b59b1dfb-102900000-0\",\"GlobalObjectId_V1-1-4cafae631b7700345a86e2532e7f257a-102900000-0\",\"GlobalObjectId_V1-1-dde97a4b04de3ea48bc34fac1ff4110f-102900000-0\",\"GlobalObjectId_V1-1-155c9628494da5046b2e6075b45ec7e5-102900000-0\",\"GlobalObjectId_V1-1-ca8b8e10d283d20468c6a091ba5ef097-102900000-0\",\"GlobalObjectId_V1-1-ecfc6018670c1c840bb35c6e3c9a0f92-102900000-0\",\"GlobalObjectId_V1-1-015e7d275f8ad4a448799d1b249d074f-102900000-0\",\"GlobalObjectId_V1-1-3b5ee0d566448bf4bb9120ca67793eb4-102900000-0\",\"GlobalObjectId_V1-1-11871be3f6f34ec4ab3d0b3d5090e5c7-102900000-0\",\"GlobalObjectId_V1-1-d072e9156699573409ee61d68641859e-102900000-0\",\"GlobalObjectId_V1-1-b2f5e16264422e847ad26952fbd6cf39-102900000-0\",\"GlobalObjectId_V1-1-5877f07f46d12c144b3459b5533e2414-102900000-0\",\"GlobalObjectId_V1-1-e043bb3f34f246747b41ac55790a16c8-102900000-0\",\"GlobalObjectId_V1-1-5049187efa08c9645838cbcee1c59c22-102900000-0\",\"GlobalObjectId_V1-1-fe948fd864326f84a8899f1cc560875a-102900000-0\",\"GlobalObjectId_V1-1-3a84818c240c60b4fb37c4040493696c-102900000-0\",\"GlobalObjectId_V1-1-02ad67b5d0d17ec4dbb99763c2baa391-102900000-0\",\"GlobalObjectId_V1-1-582fda6c4aaf67e4bb044c40069f2b20-102900000-0\",\"GlobalObjectId_V1-1-461334e0c67fc3e42a2e278021ce0c40-102900000-0\",\"GlobalObjectId_V1-1-ea92ce90d25ae3c4095178157582252d-102900000-0\",\"GlobalObjectId_V1-1-b3fd65394db009c4ca15f63fda1762b7-102900000-0\",\"GlobalObjectId_V1-1-dea1917a1f16dd249903e689a90adf83-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Documentation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-a4e881857add44b98c8b30f84fd1e23a-4900000-0\",\"GlobalObjectId_V1-1-69c16bcb57044322aa843b5bbe499f05-4900000-0\",\"GlobalObjectId_V1-1-b11feef5659f4edca64c0177ab0e4633-4900000-0\",\"GlobalObjectId_V1-1-3bdaf0533c4d40b280ff259cc64377e6-4900000-0\",\"GlobalObjectId_V1-1-1d96c03d4c1b5b338d4667becee9c52d-4900000-0\",\"GlobalObjectId_V1-1-74072949769144fb96beab3993ad688e-4900000-0\",\"GlobalObjectId_V1-1-f2a636c77b725249bd6fdf85fcb898b0-102900000-0\",\"GlobalObjectId_V1-1-96e09f98c6c24ca5892123aaf77ebdb5-102900000-0\",\"GlobalObjectId_V1-1-65db5ecdacdd5a3baf03b23a55ef21fa-4900000-0\",\"GlobalObjectId_V1-1-552a6dc1b0ad42a9aa7b19d19e0ea1da-4900000-0\",\"GlobalObjectId_V1-1-9d1668a067314fddae14806260cdad52-4900000-0\",\"GlobalObjectId_V1-1-9c3717bc73b1431b8a7afab1de7d32b1-4900000-0\",\"GlobalObjectId_V1-1-7d9f9f5fcc6346cc9e05cad66013ecd7-4900000-0\",\"GlobalObjectId_V1-1-9682df72a217409ea48f7b3d1cff8a95-4900000-0\",\"GlobalObjectId_V1-1-6718712a4e6c44e6ae314be42a3c521a-4900000-0\",\"GlobalObjectId_V1-1-54c1960634a95ecfb03fd1fb012007ba-4900000-0\",\"GlobalObjectId_V1-1-5c70987615f47f24888eb47c765390e6-4900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Empty Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check File Menu Names",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Line Endings",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-68dc48afbf024faea6863a1917d45efe-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check LODs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Mesh Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Missing Components in Assets",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Missing Components in Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Model Orientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Model Types",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Normal Map Textures",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Particle Systems",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Path Lengths",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Prefab Transforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Script Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Shader Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Texture Dimensions",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following texture dimensions are not a power of 2:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-2cbf7c38e2cc4e24bfeb9c40b383005a-2800000-0\",\"GlobalObjectId_V1-1-d11caf43479d4da6ab3e39b4cb079f60-2800000-0\",\"GlobalObjectId_V1-1-eed310426c8b4e798f792df6ba74f0b5-2800000-0\",\"GlobalObjectId_V1-1-d1b87365c9234b7aaee2680488e1e2fe-2800000-0\",\"GlobalObjectId_V1-1-ad0a7d3883b346229448144ae6ab1d2a-2800000-0\",\"GlobalObjectId_V1-1-46fe4bff1df8408b97aa63f4d034f15b-2800000-0\",\"GlobalObjectId_V1-1-4a75ffa6cddd4f119139ae37e87e1f61-2800000-0\",\"GlobalObjectId_V1-1-960431176ec145928f976d926032e1a0-2800000-0\",\"GlobalObjectId_V1-1-d301f730b81f4c51a56409cbb57a17d8-2800000-0\",\"GlobalObjectId_V1-1-39963d4fb07c4f22884b8f2d93f282d7-2800000-0\",\"GlobalObjectId_V1-1-da5d76fc6a0b45df8a1adeafeb4c2a5c-2800000-0\",\"GlobalObjectId_V1-1-feb379cf8b344c51952b9679398ef12d-2800000-0\",\"GlobalObjectId_V1-1-fa3323e4fe2a47fd82bd0318add9fe11-2800000-0\",\"GlobalObjectId_V1-1-20028b836dd44a9fbe4f08cf669a6282-2800000-0\",\"GlobalObjectId_V1-1-b7127faca6de412abf93da239ef3402e-2800000-0\",\"GlobalObjectId_V1-1-f80a4751fcb84f75af44f504fa03215d-2800000-0\",\"GlobalObjectId_V1-1-1f4036d1cba543189a662b4c0fea7732-2800000-0\",\"GlobalObjectId_V1-1-2f801763110a4c18a23b31bfc0bb630b-2800000-0\",\"GlobalObjectId_V1-1-cba45c335cef43119eb1ce77100c225f-2800000-0\",\"GlobalObjectId_V1-1-28a2560322d44b1bb2bef234c80fd936-2800000-0\",\"GlobalObjectId_V1-1-38da9ebe02084926be4f5c32b6002b77-2800000-0\",\"GlobalObjectId_V1-1-8cea6cfec72e4e91af9c9381d13df1e4-2800000-0\",\"GlobalObjectId_V1-1-daf52af1e1194f0b84bfde7fccd09d0b-2800000-0\",\"GlobalObjectId_V1-1-9084bc1220eb44d6bbd8609037656553-2800000-0\",\"GlobalObjectId_V1-1-bbeb1a94ad6548bcbc4c12886057c6a0-2800000-0\",\"GlobalObjectId_V1-1-a19a925e7693494a9c6736eba125850f-2800000-0\",\"GlobalObjectId_V1-1-402b7798db704a23b9b73c4f1561a26e-2800000-0\",\"GlobalObjectId_V1-1-1212011f80664a40a1dfe90f87455c46-2800000-0\",\"GlobalObjectId_V1-1-6e429d80e8424b5ca42af21f636ab8d0-2800000-0\",\"GlobalObjectId_V1-1-9c68f6399577453bb00b7e0f5c9377d0-2800000-0\",\"GlobalObjectId_V1-1-fc5a91174b3a4bc39ea2d8a7ba86a421-2800000-0\",\"GlobalObjectId_V1-1-83dbfb115d9d4c1f9442e66cc08a9a60-2800000-0\",\"GlobalObjectId_V1-1-e5d27139ba8447a4a7494fa9781fec4a-2800000-0\",\"GlobalObjectId_V1-1-013f1990b7f94397bd1312c19bb91f1a-2800000-0\",\"GlobalObjectId_V1-1-4c77f75f33e74b4cae01ff4b77182450-2800000-0\",\"GlobalObjectId_V1-1-93af08d602544e448ef27ac3a7982e09-2800000-0\",\"GlobalObjectId_V1-1-556f333c89144a64826a6d61a62f2d38-2800000-0\",\"GlobalObjectId_V1-1-c6463cd87d814d8eb003b4895e742e60-2800000-0\",\"GlobalObjectId_V1-1-ccbc257f4f2644ab8e0aeb27d718051e-2800000-0\",\"GlobalObjectId_V1-1-f7891816497e43c8acc3c58095aeee8a-2800000-0\",\"GlobalObjectId_V1-1-88221c7d2fb240fb9e7c7eba5d2ae608-2800000-0\",\"GlobalObjectId_V1-1-a5e2ec9958f844b9a303317c42002bca-2800000-0\",\"GlobalObjectId_V1-1-abb12291f55e46f08d18c449b7a90c6f-2800000-0\",\"GlobalObjectId_V1-1-8b3c3c09ab934e629b2235c6fa3c0b68-2800000-0\",\"GlobalObjectId_V1-1-7a779f0fd4db45248e9a77699cf9146d-2800000-0\",\"GlobalObjectId_V1-1-c11ebcd69f354c1a85a835dd22e7f01e-2800000-0\",\"GlobalObjectId_V1-1-21a1a9a5245f4fb4bd7ea8f72b493ddd-2800000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Check Type Namespaces",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove Executable Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove JavaScript Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove JPG Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-b84d8212952dd8d4dbdb72031bfa9400-2800000-0\",\"GlobalObjectId_V1-1-a02956cc12d4ed446a381ff29593895a-2800000-0\",\"GlobalObjectId_V1-1-5816c1f3d5bd1f3d026419204f4953c9-8900000-0\",\"GlobalObjectId_V1-1-469106f7ce7a8419fb5db11667211da6-8900000-0\",\"GlobalObjectId_V1-1-a396fb352b65f9cb378d364d802cf1fc-8900000-0\",\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-de3290e99b16ff046ad8b92fc0bba042-2800000-0\",\"GlobalObjectId_V1-1-7af33c10e58a2f34d8c93dd2bf780eb3-2800000-0\",\"GlobalObjectId_V1-1-8d9e5831922ddbe408d529b612c462ed-2800000-0\",\"GlobalObjectId_V1-1-933c60e8b13ca9e4785834ef1311e2a8-2800000-0\",\"GlobalObjectId_V1-1-bbfc20389f08438183b8746a86e929be-2800000-0\",\"GlobalObjectId_V1-1-cf82f4b664cc4daaa2ebd65dcd74cca9-8900000-0\",\"GlobalObjectId_V1-1-4c6b071db2d543ab8cebae181f562262-2800000-0\",\"GlobalObjectId_V1-1-16e316f30a971e143bab16f9f2993a0e-2800000-0\",\"GlobalObjectId_V1-1-79a0809ea1a23fe4381c210adbfacf7c-2800000-0\",\"GlobalObjectId_V1-1-d112a77d25424381b4c71ae8b8096728-2800000-0\",\"GlobalObjectId_V1-1-6de38bd04d894dcb8a3fd9ab92c5f452-2800000-0\",\"GlobalObjectId_V1-1-a6bdd0371a9748969d6374accf251a6e-8900000-0\",\"GlobalObjectId_V1-1-3bd63302e55f4bcd969ab6599b37802c-2800000-0\",\"GlobalObjectId_V1-1-84d2af73461b112429609d9ebf83cdcc-2800000-0\",\"GlobalObjectId_V1-1-4a648bf94fc543d0a9473f0c2b584771-2800000-0\",\"GlobalObjectId_V1-1-d3c8671cfd6b4900814e6aee541efdb2-2800000-0\",\"GlobalObjectId_V1-1-a3a8e4011686434a887ba825d5fb4ba8-2800000-0\",\"GlobalObjectId_V1-1-98c43785693b4bd78988f70f6d760f62-2800000-0\",\"GlobalObjectId_V1-1-8aa4696528df42c5bd1dc67130dde2e4-8900000-0\",\"GlobalObjectId_V1-1-f3deda0fc5024774970560c832d8366b-2800000-0\",\"GlobalObjectId_V1-1-291dc18092f24e7a81175b57d3dfa3f0-8900000-0\",\"GlobalObjectId_V1-1-47929bfa707f416d8f027e864179b25c-8900000-0\",\"GlobalObjectId_V1-1-c321377b8669405b92940133f44c88ac-2800000-0\",\"GlobalObjectId_V1-1-d756ca6bfa524be5b35ffabc6798f552-8900000-0\",\"GlobalObjectId_V1-1-a7b1a21e25644e75924ffa5d1895b50f-8900000-0\",\"GlobalObjectId_V1-1-d3232ee0e2e84436b05a5d67e8fe2d84-8900000-0\",\"GlobalObjectId_V1-1-31d47ba443e34eac91960aaefe0a3417-8900000-0\",\"GlobalObjectId_V1-1-f549e40bf5884becafffec022210e44e-8900000-0\",\"GlobalObjectId_V1-1-4e612fd2119b45419d95b8cb5e9523f7-8900000-0\",\"GlobalObjectId_V1-1-9015f7a9c7264db99757f210a287bfbe-2800000-0\",\"GlobalObjectId_V1-1-10498cbe49614b56b42c00c46c9204dd-8900000-0\",\"GlobalObjectId_V1-1-a4284819f950490d98a10bd439d94924-2800000-0\",\"GlobalObjectId_V1-1-e18b2cc570e74249900fe71c48cfb626-8900000-0\",\"GlobalObjectId_V1-1-c57b6123cb904cdd8dd9f1f4dbdf94c2-8900000-0\",\"GlobalObjectId_V1-1-6df5d204921d459899de78d905801879-8900000-0\",\"GlobalObjectId_V1-1-e529b405c7834611894e0c38ac6d014f-8900000-0\",\"GlobalObjectId_V1-1-c90cb3eea0004ba998eb893f2484c8fd-8900000-0\",\"GlobalObjectId_V1-1-7475680befdc4844afffbfbab9af51cb-8900000-0\",\"GlobalObjectId_V1-1-e0e105ad2a364ea88fa78fad91ad8eb9-8900000-0\",\"GlobalObjectId_V1-1-4cc039627de04023a800b72ec5322113-8900000-0\",\"GlobalObjectId_V1-1-dc3842f559be4fe281ce0a9472a340d2-8900000-0\",\"GlobalObjectId_V1-1-80db294f440f403db411dab5adca230f-8900000-0\",\"GlobalObjectId_V1-1-5cc0e7c2db06409db12ce1b5bc35d3cf-8900000-0\",\"GlobalObjectId_V1-1-9e5fb4c515a3484a89cf982c33460afc-8900000-0\",\"GlobalObjectId_V1-1-7d423ec5ae134df6ae8501c5de84f384-8900000-0\",\"GlobalObjectId_V1-1-e91ab8b1b1124255990cc8114226a4ce-8900000-0\",\"GlobalObjectId_V1-1-bb3ee69d2c6b4db3b04270d1f188f169-8900000-0\",\"GlobalObjectId_V1-1-8edf07ecd14e4d34b5833c6f459ebb11-8900000-0\",\"GlobalObjectId_V1-1-d88078f469ef42b18e865ace14944e63-8900000-0\",\"GlobalObjectId_V1-1-b70b7c8602fd46f79da3e3770076c702-8900000-0\",\"GlobalObjectId_V1-1-2d1e6a2ceea74ce3b7334efde74b9ecf-8900000-0\",\"GlobalObjectId_V1-1-e8465bf2813043548381548caf837479-8900000-0\",\"GlobalObjectId_V1-1-5c31460a6ccd48e4973ff5588753dedd-8900000-0\",\"GlobalObjectId_V1-1-8a10ef7dba3a42509dc768dfbc3b18f1-8900000-0\",\"GlobalObjectId_V1-1-a323fae8aaf74f3cbe45bf7cb1fb6d14-8900000-0\",\"GlobalObjectId_V1-1-ece578ba31f744fb8c209d69009ff85a-8900000-0\",\"GlobalObjectId_V1-1-6edcf94f96cd4c16aa3266940b59c4a7-8900000-0\",\"GlobalObjectId_V1-1-4c3e66855ed34d348beddfc56477c6f3-8900000-0\",\"GlobalObjectId_V1-1-402c00d9e003491a8977d5977067cb21-8900000-0\",\"GlobalObjectId_V1-1-347d87628d924ebab6134f0b63522247-2800000-0\",\"GlobalObjectId_V1-1-c0c6d3a6e98e4727a46857a3a474c40b-2800000-0\",\"GlobalObjectId_V1-1-9aa4ea0c10352704daaf3d9ca76e97d3-2800000-0\",\"GlobalObjectId_V1-1-b514503a05ed4558a097ffba8c373627-8900000-0\",\"GlobalObjectId_V1-1-7bc41ac0840f4d6989d66d167b04734e-8900000-0\",\"GlobalObjectId_V1-1-54d9b191a98e4c4b9b09005e697c2689-8900000-0\",\"GlobalObjectId_V1-1-b64dd78a0f9143a8b7c8be2359f2c7d1-8900000-0\",\"GlobalObjectId_V1-1-664d98031ece40fe9b78e6c59203e9ca-8900000-0\",\"GlobalObjectId_V1-1-fd4b6859053d4359b3d8a92403713a35-8900000-0\",\"GlobalObjectId_V1-1-9cd86537923e4d38ae8b1bfc6eefeba9-8900000-0\",\"GlobalObjectId_V1-1-664528cfee5f4f27a5c0f786ac718afd-2800000-0\",\"GlobalObjectId_V1-1-1d430a7069c940da878c8726f525a21f-2800000-0\",\"GlobalObjectId_V1-1-d7cee4e557544c3ba9e1a89544905ec6-2800000-0\",\"GlobalObjectId_V1-1-a5abc30eefb9450c927ff37c0c928180-2800000-0\",\"GlobalObjectId_V1-1-2337071104ac4e18aa80e4af884d9e6b-2800000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove Lossy Audio Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove Mixamo Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove SpeedTree Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/Remove Video Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Audio Clipping",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Colliders",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Compressed Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following archives of allowed format were found in the package content.\\nPlease make sure they adhere to the nested archive guidelines:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-99d0f08b5dcd0df4d936e0b81528d045-102900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Demo Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-776cb64b9505ca84d98b515f965fe360-102900000-0\",\"GlobalObjectId_V1-1-5338646a06f38b242a62dc63ea226446-102900000-0\",\"GlobalObjectId_V1-1-a0c5bc3a681438f47883fa4eec3bec74-102900000-0\",\"GlobalObjectId_V1-1-c3146ed1afe91ce4fa75196ad5bf00f6-102900000-0\",\"GlobalObjectId_V1-1-b18f66eb0682b2241894467751152629-102900000-0\",\"GlobalObjectId_V1-1-0afb9dae43a7873409dda39ee7065ff6-102900000-0\",\"GlobalObjectId_V1-1-27838632f6654184d914ed29a315d082-102900000-0\",\"GlobalObjectId_V1-1-62c0b43be8839774eb0187853dcead32-102900000-0\",\"GlobalObjectId_V1-1-606ff6c157faca9478dc697bda6a1375-102900000-0\",\"GlobalObjectId_V1-1-4e4f07d588d6ed64a8d38b8c47467b8d-102900000-0\",\"GlobalObjectId_V1-1-64b7010ab84395e4295a6ea9806070c1-102900000-0\",\"GlobalObjectId_V1-1-0b1093cfd76e559468be28c9e2303a50-102900000-0\",\"GlobalObjectId_V1-1-ab8140b0c020c074c918b324eada3ca5-102900000-0\",\"GlobalObjectId_V1-1-271ac8cfade1bb949a92e6101c33284e-102900000-0\",\"GlobalObjectId_V1-1-2574abce32a2ad3408bda529790e5645-102900000-0\",\"GlobalObjectId_V1-1-e7100bbb30788704b9890dad36230f7f-102900000-0\",\"GlobalObjectId_V1-1-a29ba9082cddb8f42a08a9752f49e3f9-102900000-0\",\"GlobalObjectId_V1-1-a4143a52dd96f1a438735b211e3a9927-102900000-0\",\"GlobalObjectId_V1-1-0a66334d4ba29564c960fff0a347da35-102900000-0\",\"GlobalObjectId_V1-1-67aa9d3571457794084f05380d9dc1d4-102900000-0\",\"GlobalObjectId_V1-1-78a373089cc4ccb4e9e3645e763521b7-102900000-0\",\"GlobalObjectId_V1-1-ff0b607cc70294144b6e9298713729e5-102900000-0\",\"GlobalObjectId_V1-1-fee3e2f2d4fc5e84da575857231e88e7-102900000-0\",\"GlobalObjectId_V1-1-c30e028d8a4bf92459efd7bf5c0343f2-102900000-0\",\"GlobalObjectId_V1-1-f227b796e40eb2b42ba0d2a26e83672b-102900000-0\",\"GlobalObjectId_V1-1-ba8eef969b82ffb4d9ffc409345c91de-102900000-0\",\"GlobalObjectId_V1-1-94d03b4bfbf35714f9ae28e94a809114-102900000-0\",\"GlobalObjectId_V1-1-65c2f588381889646956ebe7f512d5c1-102900000-0\",\"GlobalObjectId_V1-1-5f5937f93582fb2498bc0af8e7504a92-102900000-0\",\"GlobalObjectId_V1-1-6276de82bb9153c4598304ed99a93741-102900000-0\",\"GlobalObjectId_V1-1-4f6c87fbb1c86684286be2a1876e2734-102900000-0\",\"GlobalObjectId_V1-1-58b82b5edc3fb3d45922256a3fdd7239-102900000-0\",\"GlobalObjectId_V1-1-33a43aae9aa96dd45b60bd6e11350566-102900000-0\",\"GlobalObjectId_V1-1-840a691d51cb5044db114554d3975e76-102900000-0\",\"GlobalObjectId_V1-1-3cc9ba2ae0c9f7d41949b16b6aece5d3-102900000-0\",\"GlobalObjectId_V1-1-13b32e8422b941047aa1ff7b41648d7a-102900000-0\",\"GlobalObjectId_V1-1-1da912946fc6e734dae89bccb4c3ad89-102900000-0\",\"GlobalObjectId_V1-1-e4f0c67d93a9935468dd7577affd8205-102900000-0\",\"GlobalObjectId_V1-1-53368d8fa1784014c9acc7b4a2ae72af-102900000-0\",\"GlobalObjectId_V1-1-58441c40b07de0a4883b30461a29831d-102900000-0\",\"GlobalObjectId_V1-1-8e6829d3ec431ad46859f7ef3907bcef-102900000-0\",\"GlobalObjectId_V1-1-165eb7ce8d7c55f46b7a7a6c23239b3b-102900000-0\",\"GlobalObjectId_V1-1-fe58359571ff11342b9206dc2cc5e7bd-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Documentation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-cb38eab14c5f9cb45896f05e6528a652-4900000-0\",\"GlobalObjectId_V1-1-456f4ea9fbe713943a72508c630351c7-4900000-0\",\"GlobalObjectId_V1-1-e18c83feba80f4141a7a8826dea7d8c5-4900000-0\",\"GlobalObjectId_V1-1-38c6d303146b1dc4990e2ef73bf97ef9-4900000-0\",\"GlobalObjectId_V1-1-08a352f7c6ed20245bddb9c7fb174985-4900000-0\",\"GlobalObjectId_V1-1-57d60ad62581b4347a2da8178d77ce8e-4900000-0\",\"GlobalObjectId_V1-1-268ec4cc06d48d5439bd79695089db0a-4900000-0\",\"GlobalObjectId_V1-1-5daf99d907464c540b9bfc454620442b-4900000-0\",\"GlobalObjectId_V1-1-0c9af9694624b2341ad23577e803590f-4900000-0\",\"GlobalObjectId_V1-1-3f51b1d0c964efe41a6b4131d9d69699-4900000-0\",\"GlobalObjectId_V1-1-cf1a0529fb4032f448c5fec5a7cda1f6-4900000-0\",\"GlobalObjectId_V1-1-4cb00e298d02ab2489a2c21bc9771c71-4900000-0\",\"GlobalObjectId_V1-1-38b231f9d172ffa40a8bf5c932bebd4c-4900000-0\",\"GlobalObjectId_V1-1-dcb491c8af976f141aa3462c6901d9f8-4900000-0\",\"GlobalObjectId_V1-1-ea9acc13b1349d7469fd6256401b014a-4900000-0\",\"GlobalObjectId_V1-1-fd801adeb3f783f4797ecaf4d127b1be-4900000-0\",\"GlobalObjectId_V1-1-a5dfb19b53778004e8392ce93ee3cce1-4900000-0\",\"GlobalObjectId_V1-1-7d69dfeb9b9f8a14ea81c48f8e0d2aec-4900000-0\",\"GlobalObjectId_V1-1-2c74522bd55311c43bd0675df982f7ed-4900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Empty Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check File Menu Names",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Line Endings",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-46c76eb8bc5a7034497c2624a5ad8e3a-11500000-0\",\"GlobalObjectId_V1-1-d0303e57c074edf459c1afd1bc66ddae-11500000-0\",\"GlobalObjectId_V1-1-73d4065b28604b608343cf15eccb3d42-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-ba8ab31f8c4cfb74e988a477b1d16f00-11500000-0\",\"GlobalObjectId_V1-1-126c3811f54a477baacb66ebf719a37a-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check LODs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Mesh Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Missing Components in Assets",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Missing Components in Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Model Orientation",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following models have incorrect rotation\",\"MessageObjects\":[\"GlobalObjectId_V1-1-ea9386da846aed5428811c3c14fa1579-919132149155446097-0\",\"GlobalObjectId_V1-1-274be65a232573e4398806e4f985ca1a-919132149155446097-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Model Types",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Normal Map Textures",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Particle Systems",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Path Lengths",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Prefab Transforms",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following prefabs' transforms do not fit the requirements\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c30809350dd43904bad4e466623fa697-3532502833293090360-0\",\"GlobalObjectId_V1-1-b9f59ba415b933d468a70a5522b61f74-33503299005557383-0\",\"GlobalObjectId_V1-1-aaaadf1499b153b44827a59cf4be64b4-3688394238114099099-0\",\"GlobalObjectId_V1-1-bf129177892bb4f42ace6f473016f570-7149494407460420894-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Script Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Shader Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Texture Dimensions",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Check Type Namespaces",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove Executable Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove JavaScript Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove JPG Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-b84d8212952dd8d4dbdb72031bfa9400-2800000-0\",\"GlobalObjectId_V1-1-a02956cc12d4ed446a381ff29593895a-2800000-0\",\"GlobalObjectId_V1-1-5816c1f3d5bd1f3d026419204f4953c9-8900000-0\",\"GlobalObjectId_V1-1-469106f7ce7a8419fb5db11667211da6-8900000-0\",\"GlobalObjectId_V1-1-a396fb352b65f9cb378d364d802cf1fc-8900000-0\",\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-b4579404f7aa4a98965fa2d73901817c-8900000-0\",\"GlobalObjectId_V1-1-d47e38bb6df64f6bbda217eead58f68e-8900000-0\",\"GlobalObjectId_V1-1-6f3ec4631b384f61908f9fd67b929266-8900000-0\",\"GlobalObjectId_V1-1-b362c9fe501a45479954bbcb823ba769-8900000-0\",\"GlobalObjectId_V1-1-2e5f7cc688d24941b9eb1637e78a40b3-8900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove Lossy Audio Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove Mixamo Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove SpeedTree Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/Remove Video Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Audio Clipping",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Colliders",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Compressed Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No archives were found in the package content!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Demo Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-776cb64b9505ca84d98b515f965fe360-102900000-0\",\"GlobalObjectId_V1-1-dd8059f09c661894fbc8d5343226f844-102900000-0\",\"GlobalObjectId_V1-1-2e081faf8de415f43b9033d168e442cc-102900000-0\",\"GlobalObjectId_V1-1-e4fd14b54e68f6143be2cd5088e51367-102900000-0\",\"GlobalObjectId_V1-1-eb3dedd3681b29f42b4a722ceb73e554-102900000-0\",\"GlobalObjectId_V1-1-33f7918cf4464ad41af0c0ede65c5bc9-102900000-0\",\"GlobalObjectId_V1-1-c2d371f021c7d03458de006e7f72ab32-102900000-0\",\"GlobalObjectId_V1-1-06e8064146c130642b9c6af434f7b833-102900000-0\",\"GlobalObjectId_V1-1-fb7730c8f6eba05459a502e0f9d26954-102900000-0\",\"GlobalObjectId_V1-1-23fe68f32f59bb849aa957f46709541b-102900000-0\",\"GlobalObjectId_V1-1-de576684b06acc44ca93d41331477720-102900000-0\",\"GlobalObjectId_V1-1-0339edbc82575118318f53f9964c33f0-102900000-0\",\"GlobalObjectId_V1-1-1f934d7e38b4e3cf40bd384d559c4d06-102900000-0\",\"GlobalObjectId_V1-1-61ca5943136fbaa09a70817de6029520-102900000-0\",\"GlobalObjectId_V1-1-7f761abf5e63f0332eb51c549d1d727f-102900000-0\",\"GlobalObjectId_V1-1-157a6698246d11c9d9437c898ae29d0a-102900000-0\",\"GlobalObjectId_V1-1-d030a90b7872fb04051d3c3eee818fd0-102900000-0\",\"GlobalObjectId_V1-1-ce8ab7cc64d2f4c4dbc19492cf697a4d-102900000-0\",\"GlobalObjectId_V1-1-2294e6a540157c849ba858d4cd5ac196-102900000-0\",\"GlobalObjectId_V1-1-67a09736204276341ae0f1f0ce4ca050-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Documentation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-33510014a613423c84854adf0efcfc73-4900000-0\",\"GlobalObjectId_V1-1-4420d10b9816478b8f6fd7ed47d26e84-4900000-0\",\"GlobalObjectId_V1-1-92548ad54eb043e2b635f7b040035414-4900000-0\",\"GlobalObjectId_V1-1-42ece0b02f964555bdb1b00b6b18a4e0-4900000-0\",\"GlobalObjectId_V1-1-f6f476563dc84067be0fc6b91c9ed7d2-4900000-0\",\"GlobalObjectId_V1-1-d9345a9febaa43ed9abebedf04305bee-4900000-0\",\"GlobalObjectId_V1-1-39447c0df1af459b92521eba70f96e7e-4900000-0\",\"GlobalObjectId_V1-1-9ac9403db19b4c3e96a5d2063132ce4d-4900000-0\",\"GlobalObjectId_V1-1-105c578da317413bb9f2af519e6abef9-4900000-0\",\"GlobalObjectId_V1-1-a2e9ae5217dd4fbd9ca584a1dd9a821a-4900000-0\",\"GlobalObjectId_V1-1-c8678b222a4f18640856c0c4fc172b2c-4900000-0\",\"GlobalObjectId_V1-1-170589343a4aa2245b5ce4e6688fd41c-4900000-0\",\"GlobalObjectId_V1-1-8cc71368977de7340a57608ce4d08442-4900000-0\",\"GlobalObjectId_V1-1-3b9d8fb33fa26474aa53a6a609abcefe-4900000-0\",\"GlobalObjectId_V1-1-735ac6ccc84fea74785a59a46b14c306-4900000-0\",\"GlobalObjectId_V1-1-d6280da2774376c48989d2ca51e34f00-4900000-0\",\"GlobalObjectId_V1-1-31611729128926d44a33e41786baa568-4900000-0\",\"GlobalObjectId_V1-1-8ee0922b7bf599c488b53a4ca20a4f35-4900000-0\",\"GlobalObjectId_V1-1-1f8d22f14e1bc2849915f110fb71dfdc-4900000-0\",\"GlobalObjectId_V1-1-eb727bf4337f4e29a81de27022f7e5a4-4900000-0\",\"GlobalObjectId_V1-1-0adcf8fe7b5bded4781082bc8be3f0ae-4900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Empty Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check File Menu Names",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Line Endings",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-3d1534accb0c47a4db9bd64721e78a2d-11500000-0\",\"GlobalObjectId_V1-1-deb72cddca4ec6342a5b3497e4878717-11500000-0\",\"GlobalObjectId_V1-1-7329369cea608204796d1ddc75bf768c-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-007814d76fe5416c8f71fb6425787e3a-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\",\"GlobalObjectId_V1-1-0c64d5e1d46f21a4bae1717a5cb59b65-11500000-0\",\"GlobalObjectId_V1-1-694aeb6932d613f40a9200f2637e3cea-11500000-0\",\"GlobalObjectId_V1-1-5d567ba44dfed0b4293af96c6088abe8-11500000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check LODs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Mesh Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Missing Components in Assets",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Missing Components in Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Model Orientation",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following models have incorrect rotation\",\"MessageObjects\":[\"GlobalObjectId_V1-1-9f6b77203edbf675e682e098a39be385-919132149155446097-0\",\"GlobalObjectId_V1-1-b9026d7942d39ae29754561956d772df-919132149155446097-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Model Types",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Normal Map Textures",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Particle Systems",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Path Lengths",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Prefab Transforms",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following prefabs' transforms do not fit the requirements\",\"MessageObjects\":[\"GlobalObjectId_V1-1-2895e2e4d895be54bb0e1c0a983e9edb-785274656605920743-0\",\"GlobalObjectId_V1-1-aab11b4f70426994bbe0e405f893d0d8-3371977168871810915-0\",\"GlobalObjectId_V1-1-7ae5318e1b078bb43a3a2b4f5f35de7f-445193011614258350-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Script Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Shader Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Texture Dimensions",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Check Type Namespaces",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove Executable Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove JavaScript Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove JPG Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-b84d8212952dd8d4dbdb72031bfa9400-2800000-0\",\"GlobalObjectId_V1-1-a02956cc12d4ed446a381ff29593895a-2800000-0\",\"GlobalObjectId_V1-1-5816c1f3d5bd1f3d026419204f4953c9-8900000-0\",\"GlobalObjectId_V1-1-469106f7ce7a8419fb5db11667211da6-8900000-0\",\"GlobalObjectId_V1-1-a396fb352b65f9cb378d364d802cf1fc-8900000-0\",\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-034b330ef1604d3a88d29fd5ae68ca80-8900000-0\",\"GlobalObjectId_V1-1-63a22077ac784dd29a72d3cb337e1a46-8900000-0\",\"GlobalObjectId_V1-1-e87dc4cfe131486a8c139756beb51979-8900000-0\",\"GlobalObjectId_V1-1-63c8da9416b84b27b457d57d1457dc7f-8900000-0\",\"GlobalObjectId_V1-1-5bf27733e2404a0895c0b62f03d6d709-8900000-0\",\"GlobalObjectId_V1-1-7361cb13673e4254905049be66e0c7e5-8900000-0\",\"GlobalObjectId_V1-1-b0f94595528641c881bc34b9843e08e6-8900000-0\",\"GlobalObjectId_V1-1-9c4a9115ad6c4474b5cb19a2cb162b60-8900000-0\",\"GlobalObjectId_V1-1-2324330c5cc1ddd0a96d7797fa304fcb-8900000-0\",\"GlobalObjectId_V1-1-bc265a14b63c1eb8b6369683265abd44-8900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove Lossy Audio Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove Mixamo Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove SpeedTree Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/Remove Video Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Audio Clipping",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Colliders",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Compressed Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No archives were found in the package content!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Demo Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-776cb64b9505ca84d98b515f965fe360-102900000-0\",\"GlobalObjectId_V1-1-214e2beeb546f7c795ada546c67fac03-102900000-0\",\"GlobalObjectId_V1-1-85e345b7c964c4a1d4297845df53933c-102900000-0\",\"GlobalObjectId_V1-1-6774d196f4e81f2120c5a59e296f4da8-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Documentation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-8e156d6bda0c4a745965406c2f2986df-4900000-0\",\"GlobalObjectId_V1-1-8b61b9e38c4edf1429cda4900c5dc601-4900000-0\",\"GlobalObjectId_V1-1-ff6ed78cb3fa5314fbc5dcd13cb19ac3-4900000-0\",\"GlobalObjectId_V1-1-04deffae653110f41b394b69c0210f06-4900000-0\",\"GlobalObjectId_V1-1-5cf83abb903a7be4b8e0a25a2283adcd-4900000-0\",\"GlobalObjectId_V1-1-b33b6d2717b700345b306eacebeeeba6-4900000-0\",\"GlobalObjectId_V1-1-54dd691ef19b34942aac2e0f544f0dfa-4900000-0\",\"GlobalObjectId_V1-1-489c7e60b4f8e384bb566cedc58a5ec2-4900000-0\",\"GlobalObjectId_V1-1-f5d069be511f4ec43bdb1701b7b1b54b-4900000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Empty Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check File Menu Names",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Line Endings",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7afbf96ed4e248cc84e21db8a754c8b0-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-a87b47bb67a6a774ba0a48c71f0986f1-11500000-0\",\"GlobalObjectId_V1-1-6e1fb2a912a36034abcccc0ad0f95b41-11500000-0\",\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check LODs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Mesh Prefabs",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Missing Components in Assets",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Missing Components in Scenes",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Model Orientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Model Types",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Normal Map Textures",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Particle Systems",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Path Lengths",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Prefab Transforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Script Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Shader Compilation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Texture Dimensions",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Check Type Namespaces",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove Executable Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove JavaScript Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove JPG Files",
+          "detail": "Warning {\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-b84d8212952dd8d4dbdb72031bfa9400-2800000-0\",\"GlobalObjectId_V1-1-a02956cc12d4ed446a381ff29593895a-2800000-0\",\"GlobalObjectId_V1-1-5816c1f3d5bd1f3d026419204f4953c9-8900000-0\",\"GlobalObjectId_V1-1-469106f7ce7a8419fb5db11667211da6-8900000-0\",\"GlobalObjectId_V1-1-a396fb352b65f9cb378d364d802cf1fc-8900000-0\",\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-5e7da657b18938c46b57b98038f09621-2800000-0\",\"GlobalObjectId_V1-1-a6afd4ad097ff8145859e87226bcd0a0-2800000-0\",\"GlobalObjectId_V1-1-3d4455103b960ae49a4059bb7d781dfc-2800000-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove Lossy Audio Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove Mixamo Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove SpeedTree Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/Remove Video Files",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606071581-normalize.json",
+      "at": "2026-11-02T07:54:31.5982299Z",
+      "module": "56c1b6c3-68c2-43ea-b0ad-01c1839e73a1",
+      "action": "normalize",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/01-Image/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10000.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/02-Palette/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10016.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/03-Model/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10032.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/04-Parts/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10048.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10064.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10080.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/07-Tone/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10096.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10112.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/09-Alpha/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10128.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/10-BatchProfile/ExampleStage.prefab",
+          "detail": "Removed stage-only world offset (10144.00, 0.00, 0.00); camera and geometry share the same parent, preserving relative layout.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ClockworkWren.prefab",
+          "detail": "Identity root added; original child, animation paths and mesh world matrices retained.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/MantaCourier.prefab",
+          "detail": "Identity root added; original child, animation paths and mesh world matrices retained.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/CelestialArmillary.prefab",
+          "detail": "Identity root added; original child, animation paths and mesh world matrices retained.",
+          "passed": true
+        },
+        {
+          "name": "Prefab normalization finished",
+          "detail": "Existing scene files and project settings were not rewritten.",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606163049-targeted.json",
+      "at": "2026-11-02T07:56:03.0600404Z",
+      "module": "56c1b6c3-68c2-43ea-b0ad-01c1839e73a1",
+      "action": "targeted",
+      "error": "System.Exception: Unknown command\r\n  at TurnRoom.Editor.SubmissionComplianceQA.Poll () [0x00239] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\Templete\\Development\\Editor\\SubmissionComplianceQA.cs:46 ",
+      "passed": false,
+      "checks": []
+    },
+    {
+      "file": "compliance-1793606295663-targeted.json",
+      "at": "2026-11-02T07:58:15.7350610Z",
+      "module": "26eb4f7d-9151-4540-8f3a-d26ae93d8104",
+      "action": "targeted",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "name": "DesignDataTable/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckModelOrientation",
+          "detail": "VariableSeverityIssue {\"Result\":4,\"Messages\":[{\"Text\":\"The following models have incorrect rotation\",\"MessageObjects\":[\"GlobalObjectId_V1-1-9f6b77203edbf675e682e098a39be385-919132149155446097-0\",\"GlobalObjectId_V1-1-b9026d7942d39ae29754561956d772df-919132149155446097-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": false
+        },
+        {
+          "name": "EntityForge/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606431086-inspect.json",
+      "at": "2026-11-02T08:00:31.1004707Z",
+      "module": "77075dee-d4db-4d52-9635-3e0e7374f463",
+      "action": "inspect",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Active scene",
+          "detail": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/01-Image/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/02-Palette/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/03-Model/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/04-Parts/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/Animation/Full_1Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/Animation/Full_2Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/Animation/Full_3Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/Animation/Full_8Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/Animation/FullAnimated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/Animation/Full_1Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/Animation/Full_2Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/Animation/Full_3Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/Animation/Full_8Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/Animation/FullAnimated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/06-Sheet/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/07-Tone/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/Animation/Full_1Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/Animation/Full_2Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/Animation/Full_3Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/Animation/Full_8Animated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/Animation/FullAnimated.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/09-Alpha/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/Pixora/Samples/Tutorials/10-BatchProfile/ExampleStage.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ClockworkWren.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ClockworkWren.prefab/animation paths",
+          "detail": "ClockworkWren; all curve paths resolve from the original animation owner.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ShowcaseGuide.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/MantaCourier.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/MantaCourier.prefab/animation paths",
+          "detail": "MantaCourier; all curve paths resolve from the original animation owner.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/ShowcaseGuide.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Prefabs/ClockworkKingfisher.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Prefabs/CourierDrone.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Prefabs/SurveyorKit.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/Prefabs/TidewatchObservatory.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/CelestialArmillary.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/CelestialArmillary.prefab/animation paths",
+          "detail": "CelestialArmillary; all curve paths resolve from the original animation owner.",
+          "passed": true
+        },
+        {
+          "name": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/ShowcaseGuide.prefab",
+          "detail": "Actual imported root transform (0.00, 0.00, 0.00) (1.00, 1.00, 1.00)",
+          "passed": true
+        },
+        {
+          "name": "ClockworkKingfisher",
+          "detail": "Actual imported mesh-local rotations are identity.",
+          "passed": true
+        },
+        {
+          "name": "TidewatchObservatory",
+          "detail": "Actual imported mesh-local rotations are identity.",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606465059-targeted.json",
+      "at": "2026-11-02T08:01:05.0696615Z",
+      "module": "77075dee-d4db-4d52-9635-3e0e7374f463",
+      "action": "targeted",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "name": "DesignDataTable/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckModelOrientation",
+          "detail": "VariableSeverityIssue {\"Result\":4,\"Messages\":[{\"Text\":\"The following models have incorrect rotation\",\"MessageObjects\":[\"GlobalObjectId_V1-1-9f6b77203edbf675e682e098a39be385-919132149155446097-0\",\"GlobalObjectId_V1-1-b9026d7942d39ae29754561956d772df-919132149155446097-0\"],\"SerializedClickAction\":\"0\"}]}",
+          "passed": false
+        },
+        {
+          "name": "EntityForge/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606471059-dependencies.json",
+      "at": "2026-11-02T08:01:11.1417402Z",
+      "module": "77075dee-d4db-4d52-9635-3e0e7374f463",
+      "action": "dependencies",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Package Manager opens without changing manifest",
+          "detail": "Public Window.Open(com.unity.entities); no installation requested.",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606480245-menus.json",
+      "at": "2026-11-02T08:01:20.2712619Z",
+      "module": "77075dee-d4db-4d52-9635-3e0e7374f463",
+      "action": "menus",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Tools/TurnRoom/Settings",
+          "detail": "Actual Unity menu invocation",
+          "passed": true
+        },
+        {
+          "name": "Tools/TurnRoom/Entity Forge/Open",
+          "detail": "Actual Unity menu invocation",
+          "passed": true
+        },
+        {
+          "name": "Tools/TurnRoom/Pixel Camera/Open",
+          "detail": "Actual Unity menu invocation",
+          "passed": true
+        },
+        {
+          "name": "Tools/TurnRoom/Pixora/Studio",
+          "detail": "Actual Unity menu invocation",
+          "passed": true
+        },
+        {
+          "name": "Tools/TurnRoom/Design Data Table/Open Data Table",
+          "detail": "Actual Unity menu invocation",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606693551-targeted.json",
+      "at": "2026-11-02T08:04:53.5717105Z",
+      "module": "afc11080-ebe4-4fa0-bf8d-7c91ba58e870",
+      "action": "targeted",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "DesignDataTable/release scope",
+          "detail": "Assets/TurnRoom/Templete\\Documentation;Assets/TurnRoom/Templete\\Editor;Assets/TurnRoom/Templete\\Runtime;Assets/TurnRoom/DesignDataTable\\Documentation;Assets/TurnRoom/DesignDataTable\\Generated;Assets/TurnRoom/DesignDataTable\\Integrations;Assets/TurnRoom/DesignDataTable\\Resources;Assets/TurnRoom/DesignDataTable\\Sample;Assets/TurnRoom/DesignDataTable\\Scripts;Assets/TurnRoom/DesignDataTable\\ThirdParty",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "DesignDataTable/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/release scope",
+          "detail": "Assets/TurnRoom/Templete\\Documentation;Assets/TurnRoom/Templete\\Editor;Assets/TurnRoom/Templete\\Runtime;Assets/TurnRoom/Pixora\\Documentation;Assets/TurnRoom/Pixora\\Editor;Assets/TurnRoom/Pixora\\Samples;Assets/TurnRoom/Pixora\\Source",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "Pixora/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/release scope",
+          "detail": "Assets/TurnRoom/Templete\\Documentation;Assets/TurnRoom/Templete\\Editor;Assets/TurnRoom/Templete\\Runtime;Assets/TurnRoom/PixelCamera\\Documentation;Assets/TurnRoom/PixelCamera\\Editor;Assets/TurnRoom/PixelCamera\\Integrations;Assets/TurnRoom/PixelCamera\\Runtime;Assets/TurnRoom/PixelCamera\\Samples",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "PixelCamera/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/release scope",
+          "detail": "Assets/TurnRoom/Templete\\Documentation;Assets/TurnRoom/Templete\\Editor;Assets/TurnRoom/Templete\\Runtime;Assets/TurnRoom/EntityForge\\Documentation;Assets/TurnRoom/EntityForge\\Dots;Assets/TurnRoom/EntityForge\\Editor;Assets/TurnRoom/EntityForge\\Runtime;Assets/TurnRoom/EntityForge\\Samples",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckFileMenuNames",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckLineEndings",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckPrefabTransforms",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        },
+        {
+          "name": "EntityForge/CheckModelOrientation",
+          "detail": "Pass {\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793606719330-export.json",
+      "at": "2026-11-02T08:05:19.3395026Z",
+      "module": "afc11080-ebe4-4fa0-bf8d-7c91ba58e870",
+      "action": "export",
+      "error": "System.IO.IOException: Win32 IO returned 1224. Path: C:\\Projects\\TurnRoom\\Artifacts\\TurnRoomPackages\\manifest.json\r\n  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <0bf5fd6723884ebdacdfd1f46b78d44f>:0 \r\n  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <0bf5fd6723884ebdacdfd1f46b78d44f>:0 \r\n  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)\r\n  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <0bf5fd6723884ebdacdfd1f46b78d44f>:0 \r\n  at System.IO.StreamWriter..ctor (System.String path) [0x00008] in <0bf5fd6723884ebdacdfd1f46b78d44f>:0 \r\n  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string)\r\n  at System.IO.File.WriteAllText (System.String path, System.String contents) [0x00026] in <0bf5fd6723884ebdacdfd1f46b78d44f>:0 \r\n  at TurnRoom.Editor.PackageExporter.Export () [0x0017c] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\Templete\\Development\\Editor\\PackageExporter.cs:69 \r\n  at TurnRoom.Editor.SubmissionComplianceQA.Poll () [0x0016a] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\Templete\\Development\\Editor\\SubmissionComplianceQA.cs:35 ",
+      "passed": false,
+      "checks": []
+    },
+    {
+      "file": "compliance-1793607124114-export-manifest.json",
+      "at": "2026-11-02T08:12:04.1253101Z",
+      "module": "afc11080-ebe4-4fa0-bf8d-7c91ba58e870",
+      "action": "export-manifest",
+      "error": "System.Exception: Unknown command\r\n  at TurnRoom.Editor.SubmissionComplianceQA.Poll () [0x002a0] in C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\Templete\\Development\\Editor\\SubmissionComplianceQA.cs:49 ",
+      "passed": false,
+      "checks": []
+    },
+    {
+      "file": "compliance-1793607204190-export-manifest.json",
+      "at": "2026-11-02T08:16:03.7580470Z",
+      "module": "5a3e8263-00d0-4afc-87ed-3b080c563bd8",
+      "action": "export-manifest",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Manifest atomic replacement",
+          "detail": "Actual temporary-file replacement after Win32 1224.",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "compliance-1793607406881-dependencies.json",
+      "at": "2026-11-02T08:16:46.9000459Z",
+      "module": "5a3e8263-00d0-4afc-87ed-3b080c563bd8",
+      "action": "dependencies",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "name": "Package Manager opens without changing manifest",
+          "detail": "Public Window.Open(com.unity.entities); no installation requested.",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "stagedCompilation": {
+    "at": "2026-11-02T08:12:54.211Z",
+    "guiProcessStarted": false,
+    "runtimeExecuted": false,
+    "results": [
+      {
+        "assembly": "DesignDataTable.Runtime",
+        "exitCode": 0,
+        "sourceCount": 8,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/DataLoader.cs": "cd42048120891d79c9571962d8bc3fb2206f23178493b887c26eedb1f2318a78",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/GeneratedDataAsset.cs": "9dae07f98cc9b2d67c412043fd0aff8da84fe3e0af0511b8abe6b7a8cb7af5b7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/IData.cs": "817107206300c285c59eae63605bc19395e815c03df0aff17b5aa6f1a9834a5d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/ITable.cs": "04df6bbaff386665284fc4e563f6ee5b7a5f8f6a3774e09ced43db3a3dd84276",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/LocalizationData.cs": "d616c36f6d7fe83b3d1da24db0deaf54684f2a969babfb130172dc3e8392447f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Singleton.cs": "aa6a9eb243d8aa68aaa2d5299ab6380dee5f3302daa23a3ae090027420666779",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/TableBinaryDelivery.cs": "b746cdb415e5baf9f4b80d7d5ed84ff75c3fe835eac75772abee5e865a168d1f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/TableManagement.cs": "2329ff2d569dd6020655c1ebe93a031d8d502665b37fe39107f5d663afe83317"
+        }
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Runtime",
+        "exitCode": 0,
+        "sourceCount": 12,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraAnimationBakeSettings.cs": "cf1d4c52463d32752d0b5505de938c2aa6c9d3236da1bdf8e0f6e9bc20b6ef92",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraDitherPattern.cs": "de441c42e8ed3a74826d1db6e60e25867f24bcf528ca30edc2a088cdccc4d1dd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraEffect.cs": "a66a010bdee507f6db711a061e3cfb56531820ef2ebc34c260b76ac6084adb48",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraGridMath.cs": "9e32d4aa4c8b7def7e2e8e20e7b1935117171882ec75ea302fb1ceb10ccc0c33",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObject.cs": "34aafba6d12f9a5f4beddeb1a495868397f6849c9a76d780acbac64b8ec4da9f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObjectFrame.cs": "bb6674afe7e689904d2256763c065af39a3b738e9fdcf689340f891057da959b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObjectRenderer.cs": "24c5d00373cce192657b0ef474046becf0c9e417f5ecf7a180a427987f6841c2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPalette.cs": "57b37ab394d1630a587ea6088dd04e7d7c0ff81b31029c8d4cf8aeda793bf676",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPaletteAlgorithms.cs": "f1106ee15c967e02d07b72e27eabca814df7e2f30510356f2f9a077c30679f27",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPreset.cs": "ca0c4e4de22a560d19c3641443c7fe3b6666393c48146eed7576b437cad242b8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraRenderUtility.cs": "0c9e8f7bb5563a85c3f28c19a995a54b95184364b7ba5049363af2bf6a76e278",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Runtime/PixelCameraSteppedAnimator.cs": "50a4414fbe873ba04306d766bb3e2da69da10fb71c0532f33c6151403b42598e"
+        }
+      },
+      {
+        "assembly": "TurnRoom.Editor",
+        "exitCode": 0,
+        "sourceCount": 45,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/AssetStoreLegacyPage.cs": "4850dc7b47083dcff3dabfed244ddcc35f5e3d031eb0649fa5ecbb58d936f952",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/AssetStorePage.cs": "b1530c6cb6e04648539eb29bb0ab0293e96c975f0f547f22fe0ed2b345125d09",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/ColorSelection.cs": "1a2c9f4a98c022a759a69357b9cb1f00ac687c04745b194e08c5b87fd7385dfd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/EditHistory.cs": "a136a2c80ff201d1643c934801396afb16bd58dfa5f4f71cdfcb56103853a278",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/PackageLayout.cs": "51577792d7c5190bbfd29db07b7fcb6277dbfe071886ac884adf8a39bf80130e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/ScreenTips.cs": "3ea7176101f5ba4754efbbd20f08becdb3f1f817d27dee4b73ed04a4f8be3ab5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateAssetInspector.cs": "40ba3326991440422ceee4392767107c3ed50e958a6afd3d3b28b2afe11bf43d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateCommonText.cs": "668b0181eda9fbda216f9f87ba1dc6ebd18201fccb3feae97b740754f9150760",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateControlFaces.cs": "317c12d19cb4d09d43ff22a0044cdbaa6b503b25298a752b256fa8bafdde7d75",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateEnumField.cs": "fb40b9fe9dabccd963c2f7ed40a22e67584a273b9e96fec1e8d743aec72709d9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs": "e73282f3575aa008e4339b32cef1d98fd656d74b00c37ee6774e9ef58453a01a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateHelpBox.cs": "4dc4265e08bf5a777e8b11fb94da5a430bea33d1b8ca89736c4c8479ac15b112",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateIcon.cs": "67609de9563f2758531f73e60dbb7cfbc6581ad9b5fea434eea11f0f4880f8cf",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateIcons.cs": "c4c99ce077fadfc102158d2e2a5699706002850012c7cce72f90b5931a1057df",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateImporterInspector.cs": "6f159ff58d74fffc1b7c99072bc8ea10a5bda613782bad9b6458a05b8c11ec19",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs": "3d50bd43b77106ae81cae595516ae3324e67174ddee7a0510a1a6fc8cb076487",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateInspectorUI.cs": "5529e177b4a673c61c50fab788324989a51d62fff65b30546b890778551dc654",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateLanguage.cs": "15b698a1acbc116851f5f0cd7fe7ca3f11f6fb7bae70a6f11a03bd310b52f2ae",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateMaskField.cs": "c46f8728381e2f85082115c46ea2cbf54481e1c01bf5f5af34c83f496b6ccfe8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs": "2ec6ade1ae9c49067fdca4985ba5922df70835182ffbcce6500bacdca1505ada",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateProductUpdates.cs": "d0ec79ff944ffa1f8c0cbb3f2cd3b0b904c13c94e8ec992f1d5f4e8c3f18706d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplatePropertyCollection.cs": "a60840a5bd5decd90504ed649fa13369576c1a375e93a9be4450e813cf4a2a84",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateTextCatalog.cs": "b4b03211ed1a1ed927202574592e8649a3cf27a41043c8a58d8cbfaa9c5b257e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TemplateWindow.cs": "97daeaa419dae48f7266c6d568a2277726d3dea208472cb595f7299e830ac605",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TempleteImportGuard.cs": "b0fae08b076486160e4cb2795dd64c408f045fcb99e8b41c19608ac67fdf5b5b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs": "d88b953cefc520e0e37afdabd48730e42a68a72ca3030a4c5faa7e9144737504",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/TempleteVersion.cs": "51f86ffb01f4fd7115a55f904b973abdfe0bd45c0507db7fa756d3b3133e4e10",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/ToolWindow.cs": "456bcf22fd74928912a0e89e6aa9af99c25ca99091173f8759f7a5ba6d691a28",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplate.cs": "e0f55c565d7e0b19842de2b2d9acd75d436e3a361e214d15f994b2fce02efe1d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs": "db74ea0592e1df0fe3ae45747cffe5ff1057d759a10201a5c8fa3ac03008561a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplateFields.cs": "9daffaf504c66aaa9f87075d9edb8290c756c0d395f1b558e6a174b96e8891ec",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplateSettings.cs": "206d378ed170a6ea3685c61546f76f7c45dd67c59ebcdeba5c74795e0d1963d6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplateSettingsInspector.cs": "a66c99bf1a661e72a63acb4fcb7875e2e09de14f72daed6af33d25effae62c7f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs": "f019730ba277ac8babe354624624c47ee17392c4f45f55365c0c8e1cd7779707",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowControls.cs": "aa84cdda1fabbb677d2465d39e4be6e92114e80705b0151e12cb9a8f98eea990",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowFocus.cs": "9dcb0e95fbc208b8bbf66e8073e6d3da80df27d8e587346368abdfbce30c0eaa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowFrame.cs": "6c1ca2abb36720470e6c1c69456df77005befe025cf58b24b8d278bc3d675c25",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowFrame.Focus.cs": "95490dd40ea1f0fe2f06bdfcb0a9703a05e015f4b3bb170cddd312c7064da0f2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowFrame.Placement.cs": "b5d5cf086cc9a7dc2ed6f63b1f7e7ca96928253711c75b39ee35250872acee4a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowFrame.Restack.cs": "4b58540daa979a3d7c2b02e010fc96df7ff1d8a3132ced14b93b5e5fc7640a58",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowList.cs": "ee3a8732548c1e11bcc71223317adf4091e3175a27ae031c1af74d5bd7571712",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs": "4c96129e18be089657130d7b620fcb50d2a3381f8e1451fdcd74bd1b786e1bf3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowPresentationScope.cs": "d4fe24e00c289f7bdcd77495cef5794ce888fc4bbf3c502207eea8b390253c25",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowServices.cs": "890c77978282652ef16de7c31dc0417c1f4eab905a1e7af9b917220687f986b1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Editor/WindowTheme.cs": "c7c6d4d78bec09e2c26222b8c884a8b63f288b81330bee60e1a950f1a7eb38a6"
+        }
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0,
+        "sourceCount": 8,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoring.cs": "85a3ca6f6dabf26d601ee290b0a1a02dfd554a933f04faf406bdae41095e6b39",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoringInspectors.cs": "c87a1e47dd08eef4c1ff0ebd7023369b772a971a7997a5eb8d35f3ac3bf6128d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraInspector.cs": "f2b3907a0e1c439ddfc6fa7c02c706673a5cda142de937679ab2747439d6e30c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraObjectInspector.cs": "accf39e0c3f5f15a1ef00f5e5cf3fe589aaccc33d79ed91969d01cf57ecbeeae",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraText.cs": "198ba299b716fc55e6b777342a160d8c7942c192d62c3b9ba94eb0aa4803d7a4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraTheme.cs": "ceac53a0e598efa3fd8f6b5ec7d69546c00d83b0d54086afce7a102f7daffdfd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.cs": "eed53d8035de95fedc15dad716eb3e063ec88ff7f463d1f5fbff6e1ad4575c08",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.Design.cs": "9e224d4c487439ea6073b7f54e242c90a43068f046cc5883ec88b2c6a7b9b353"
+        }
+      },
+      {
+        "assembly": "Pixora.Editor",
+        "exitCode": 0,
+        "sourceCount": 44,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Capture/ModelCapture.cs": "9fbd5ea2afb39656fd38ed60b15c5bc5d1ae467bc8f78d34276e1f9978aedcb4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Conversion/PaletteUtility.cs": "736c2f59d8f782a1ca630a95125bbcc9d2932463d023589e2a4ede0ebf6160cb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Conversion/PixelConverter.cs": "61694772ab80f3f5a9d325431fe497b0fd80d44cb75f6764e974cab807854f0c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Conversion/TextureOwner.cs": "74e80c397e4728d1add577f7de7542806d84e8d547f3e51a752661faf629f004",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Conversion/ToneMatcher.cs": "98534c89a3a8b07fe0aac5a0350c4ccac3463af29d7d55f35a97b477b6e3c4f7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Export/BatchExporter.cs": "9ffa0c195e3854145f0b8ca259fef067436d2a605c71c51e13252b802c4f5f3d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Export/PixelExporter.cs": "7ac94de9e4c3e02d7dffd8a8fc669bda62274756e0208acb1d6f4f518e8e80f1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Export/SpriteAnimationExporter.cs": "9aaca3460bda55c5a6f03c86c7229d2445ae352865bb6508041ecd4616ab4d06",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Localization/ExampleCommentLocalization.cs": "a67e71cb74aad28fa12cbfc247f3358ce256b2252fb0c9a7d38690aa20bf96c1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Localization/PixoraLocalization.cs": "b5d4dc79e907e5a34d23230498b91f7fa839496d7eb689c2ce48c7c81804e6e7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Localization/PixoraPreferences.cs": "30a62edf8a7b54b839dad8e0cb3e96de57ae9c9c83f0c21149484f2cce689040",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/PixelArtProfile.cs": "8c80922476fef2e8cc23ffd9cfa52b4eed636286031fe802288f18d5d1e7a354",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/PixelPalette.cs": "1462addb321bd5d6e33cc06bc7810c51e8695b1a99c9b5c619f0898c0c4194e4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/PixoraWork.cs": "1eed504693312fa89a9d67e5cfe2a4560368b4d00823b32c5faed603cde44aee",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/PixoraWorkInspector.cs": "d625095c3e63e7947d84815b045eb31015ea8a1612c89f64d872f6cf66b84db4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/ProfileStorage.cs": "645b0988a7c9e9d46a75110807822502aa30d6756ddd49b1d3e908d9825e6e62",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Profiles/WorkStorage.cs": "200eea65d3bcb888d9791f3488f2c720a8ee953b0c327cc854c58679fc0b63ec",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraSetupWindow.cs": "730ff65befee4beea32ce2608ed590b66e9d91b4542a46df8b5ef1bc007b9230",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraTutorial.cs": "e4221715e11b5db63b145038d8f525b3b58e5e0285b9e9f90f45bf53f3e92d52",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraTutorialWindow.cs": "6e35c91922aa12868559f620c2e18f0a487931d926b184fe18e7e963a480269d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialArtwork.cs": "ec6f5fd27958bb4826723104514516ba0663185ead3c838f52831ea597eacadf",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialAssets.cs": "c5a2e934b5580d72462d44db1c92602afa8044ffb30eca8bbeeeb7cf8e005527",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialBuilder.cs": "ba7da5234e7fbf676b72fd1954e98db530976f67bbb3ef840a6d53218ce4b9f4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialSceneListener.cs": "b43dc743dcdb546ed6069275a572d3e2efdc2e480a4e9c69fde90fc47b8702d3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Verification/FrameToneVerification.cs": "3e8f4e2683cd1569be6ffd52bad45e5e0d8a3bb3b8aac68977783ccac62ef9fa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Verification/PixoraVerification.cs": "532ea898bf2d0c29213cc84f8bae366bd3a5e6dce7e0af07f4dffad6b53127b9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Verification/TurnRoomVerification.cs": "9c0b52188deacc48ac5dcb0fd0166a906aa9418a2988dfb830f92945ad3848ea",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Verification/TutorialQualityVerification.cs": "7d9e729e33f26b8c4fe7e5b873942e32c8699b98e6c221b8d735c09a4e7b1d8f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Verification/TutorialVerification.cs": "7d2077ec389b9a0c054f77eedaa43564b3234a8e09d881e0b0da5907af146a27",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixelPreview.cs": "99ba80d3793ca7ee7e80de0284d0537d3f74347fecc35a67bdb95fbb90468e2a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraBrand.cs": "9c9105b6c8b75a499b0af61aa82bbaac47d6ab32616ad020e7531739f2cba93d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraChoiceField.cs": "13d6c0019ca4cf0d640dc67866ce9860d9802a3f60e5f7dc51c3c8eaf16bacfa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraIcon.cs": "a491466b338855cb22614107077bbf4dbf7a45a00113d6545a16961792287865",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraPopup.cs": "b708fbee3f70b6d66b8de3c991651a4bfb11cba25ef8089ac0cbb5c87db6bc23",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraToolWindow.cs": "fe480b6fa9ed861afee44ddc5ce51f96c628805c5a223b4b575b322a8b11d1b9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.cs": "a88233fe7132f597984f10ba75d510e7d34ea64fcedb234439c3fbe1d0540908",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Demos.cs": "c4458b9f99a8940b07f83cdd2ddac9e662f76b37d5270073f736f553b6385436",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.History.cs": "3e037d5990f527d813faeaaa771c995097e86d1b03315d547e7bb7a858b06305",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Ribbon.cs": "c382441494af24babd95b6a74289e2466a897cd789c117b0523a1fa38c97078c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Sessions.cs": "70ec6347e8d1c06d4c1f11c758492351e66aa34e0d6273c7494595bea038d199",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Work.cs": "46e4c942d5b35479f3273ffacac72089f29e8ddc66e48894adb0e956f69c1962",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindowChrome.cs": "b51404bb774b927e35c8b28decf45c39807d32a2e4281e4fb3cf7cd5b4206c43",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/PixoraWindowFrame.cs": "9c325a35e9879af9f6dce2607c2f53a0c817c45b0bf5592138dd987d25ad87e6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Editor/Window/SpriteSheetWindow.cs": "86f254bf1f9a2aca2d57920ad429335a42c99a94818629394d2ed16b673cc75e"
+        }
+      },
+      {
+        "assembly": "DesignDataTable.Editor",
+        "exitCode": 0,
+        "sourceCount": 303,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/AssemblyInfo.cs": "7988d7f1f6afd734495c81bb5d3717eeddeefdde3438e94c10a88c9c6b566dcc",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/CellClipboardSnapshot.cs": "913688abaeea7941cb686789b769a6aeb2e89393e0adafece6e2f5c29d42d4f1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/CellSelectionSet.cs": "4ca530eb835f9734efa252edbbaa4cb36e9a5ad3bab4aa95932f34d7c45fb97c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/ClipboardBorderAnimation.cs": "27d1c82811d4c7c4363d5402e68bc2eb510d747768678bed7abbf80f36045f7c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/ClipboardOutlineState.cs": "53002a61d3f1b8f58b4aeae70007a961c29746bdd7f9f9fb63f4d6c03a204c39",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/CodeCommentLocalization.cs": "8674cc7af1e815e30786f2d8fe0ca458b1238e3866b7e0d2808aa92c9ae020bb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/CodeCommentSettings.cs": "ff91eb0d178b5b3f9152614fbb6124b46fbbdfbf3e4d785ae6c2d23707e8692c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/ColumnAutoFit.cs": "61ed7e30a52e055a6a9be3b26c513c69fe24411a49393880fdb0d723cb787437",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Config.cs": "0fb8f50d2c70bd571a278d89b8c9020d7c30da80ca7a9755a12563c702154ac5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/CsvCodec.cs": "17e967bd94e69228f95cae7ef3135a94f2ae09e3654a97687f751e85a1767117",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/DimensionResizeBatch.cs": "aa00e0b126f6935940b0da2ecff804e1610336012e076071f13a31696b266c8d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaEngine.cs": "7cbb37f99931f3ccbc7c9facd398e7f35094212c180c7778ba341284d4e5ce21",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaReferenceToggle.cs": "124ec34b6a58413ac22b45e25db94cf4df9dd5a6dfc6af337f13c9161611e299",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/FormulaText.cs": "13b71c125bfe311d19bd4756295134896cb49e461bb020f145873dc6399c87c7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/GeneratedDataAssetInspector.cs": "e98b3ceb9579b136f307ededa03c881b81c580eab51ca1d720614dd17125f317",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/GeneratedSourceDocumentation.cs": "601d068734cb3aa07241d187b34bd5bf2bb586da10e73e2215f4200373317edb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/GlobalEnumWorkbook.cs": "14d1d103efcd82c114a3598fe50b2f4d0dcc0051fdcb477e5e258fa7c8d84f95",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/HeaderSelectionSet.cs": "879aff02b155d4c40ed8381d3510b7e14e8bd8b95b84c5add164cf4e50b59d6f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalEnumWorkbook.cs": "6ac183afd27da1b935013ff31d89bd449458a7c7187f2a8f65e7450d0fc14ba0",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/AdvancedLanguageTable.cs": "1b261691fc82f733fc313e418ac9deb64b8530d053ba400c528cf67c7753c309",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/CustomEnumsLanguageTable.cs": "b28f96648b0940c97b22ec51a1417109bc1031e9fe2c2e6b299f43863ad2eae3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/EditorLanguageTable.cs": "cc18d48cd065a160a2db21451df2559d25e783adeced58a41d216c7e215b428a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/GameValidationLanguageTable.cs": "9c191f486b3a2198a41a90119807da8022259c3b0b72fbf9ebe1d1f0fbfd434d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/LocalizationDataLanguageTable.cs": "7f198570b468676342ae4f22075fe212b705b6c6ee00fd8eb26a0847813e6ed4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/RibbonHelpLanguageTable.cs": "73e390c55dd1a3d80bc4f27be547a0dc5a812e415b0c7fa179898e3eb15b692a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/SettingsLanguageTable.cs": "b64a3b4e4d82d2cd461ef1f351d7ae5f93a2bdeefb780b23abfef627c30f258c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/SettingsLocalization.cs": "73d2346c1eca0c5a3ab2d210c5eab3c532728dd67e4e75b6cabab90559b6678e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/WorkbookSchemaLanguageTable.cs": "c75bf42e9bbed7e68e532e4b1f38f286667b94e08cc2e4ae81a06ed5f041e4e2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Localization/WorkbookShortcutLanguageTable.cs": "325f123cd786b1c54153bcae1d7741c8f2be0b0522b771d90bdde5c90ce4d861",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalizationWorkbook.cs": "a256c591be9393024cd7ea5daeb5d85d4f95e80a829ba1b68650031262e3e23e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/LocalizationWorkbookCompiler.cs": "6f0b89b9274f6fb49c28f0aa0b4aa2b05600d7e4b1456af863c1b07e3511a321",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/PasteSpecial.cs": "9cbb275292009fb17e09f194efa885148d6815bf984a7164757aa8435d57c91a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/ProblemLabels.cs": "10e81c30c81817bb779e4acf47c32094279f92426e1dd8f30e77e7abc58db212",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/QuickFormula.cs": "8bd89d86775f66dc4cb6fbeda52fe938a809f751e6b6bc437982a1b032b729e4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/ScriptableObjectExport.cs": "20741970030e88de4326be3fb6a3c8084a1fd4414ff27f0132b6c3781774a3b8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionSpecial.cs": "cfa364e3d919224e84f343467fc4ecc910f46432cc0e8af9f6eccaf137462a55",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionSummary.cs": "0d681f0ec596c30590965d09c34752d8a082def697b7ffcc8693c2ccc9dd6308",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SelectionTraversal.cs": "812c6d4bd08a2617ed25686b97183ddd536d098cb64ef1a9f12deab19db2fe04",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetAddress.cs": "a5ebf62333d14b7a72d94149696832895d1970fb8d9ad507a1bca10648057644",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetNavigation.cs": "927021d90d0c9cc7def8312540585616fe95e9c8f6a77093e0abb46c22aaf821",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetViewport.cs": "5e46d987461d8317ffdfe3810274e38617226f7928396227f5edd785c0a5e864",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/SheetVisibility.cs": "ab92bc5bb8a1b69bd4cea92ac5414f09aa4e314b79edef9d7ad8a08e7810cba7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableAutoFill.cs": "f5ac3174c89594dea1a73a1e50431a75d34fccb3b3d0f8c79fb0704978b87bba",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableClipboard.cs": "d679faa772b1f77fdbdc148291403ead74687b2243bb9970cd50fdfe5896213f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableCreator.cs": "109a4c74fa528071c6c40d1c53a8cff0c265e41031aa0814d5646e96fa2db9ad",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableCut.cs": "67d355942ab348371c3bd435f549792a256b9e16e8fc5de0b5c1606d70885391",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableDelivery.cs": "13d63bc956e3368c81c85a3781e1b910fac49ea8b3110532108f9f5a85083a85",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableDiagnostics.cs": "c005e95914ee5556877418818b0f8ab4c8ef6a79456a4678c636cfa3b8cfd837",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableExport.cs": "329f6b4fb62ff68c012f36c6a0b32a4c668fd308bb9bf4e93cac88ac80c6993e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableFilters.cs": "905a17711317323a1983892acfa8195c6c7607c0297dcfad46c011835412aab5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableImport.cs": "8e507107c731d40b820b53c680849e3147bde93fefd787fa31f38c3e903b6acd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Cell.cs": "cf04b2017ea8f1de067d6ac2355e5de4ba6507f9d2ff2986d58c669570698d61",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Column.cs": "07f826eea9ebc34d2183b311e1728c3665220055d4cc12dce46490c45b539743",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/Row.cs": "4dc6db05fca274e6d667df5eda2847f26095052a8805e34bd89ae29739448af9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableInfo/TableInfo.cs": "08812aae70db577afbb20d44a6bdb80e104f385f5607919fa85c3aa06a621632",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableManagementEditor.cs": "aaf4d974c0a26c4475511f9f83597037c4a413ce17c20c25f29de9be1d369858",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableManagementEditorExtension.cs": "eb0b62c0e84d03115cf7de5276184b98eea40151d44e0b466c6328ac0bf00b1f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TablePaths.cs": "d9491a1934efefe6d9d34e4fe5bedf08b7b5c46b7d96a34af0872ad782effd35",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableRowLayout.cs": "115c1b70853ea4e79525964ca2cee43995947f9fc244dcf72d9de27c6b07dd0e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableSearch.cs": "dac0d60d087230f0d6a71c5d9fa096a6759fb89b2746db9ad3a365b331dc0333",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableStructure.cs": "da08388aefe63822eae92326b6dbd642349a4d01678ac5a43a302b7de1870f49",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/TableWorkbook.cs": "322031c4966dc41aca9d3973e97f09defaed74b4231ef031697e293075d03e17",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Theme/TableTheme.cs": "775d9c895c7d66b9a5435fcc9c3e7cda94de5cce18e6eaf14e853925bdaa3109",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Theme/TableThemeEditor.cs": "14a6e2e6422c3c7096e974c259ccc00f74b7e525823fbbaf97e5d0e46bfe26d9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Utils.cs": "870fedcf273b9eeb76bd1ea9fb898df46d41920616fe3907f82f0eb592aa5538",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/AboutPopup.cs": "9820def2abd927ca486e5e8a224a26133d00b934457dfb0b6143906fe9582fa1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/ColumnFilterPopup.cs": "eb8acf9cb3c71db54dd74a11b70b012bbbccf90bda953b38b38e194ef454dafa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTableEditor.cs": "c3d81de6fdc0070ebe62acf16cb8fa560c5b952813752842a3dec1c02206a9d6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferences.cs": "56257ab2e4149ab462f4f7b3503d42d1e4cd5730a701f4da9a701aaf06953a1f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesComments.cs": "e7ef183c8f9bdb7000b98ab72d8dd9d99a7a98fa1a7288f8ef8f83b3ae4807ce",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/DataTablePreferencesShortcuts.cs": "b50da026887a538c2821c37d0566eb4376ed351b2f873fb7e0bef6080846db7e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FindPopup.cs": "a2143897d77067ed4bed19dc981278c0f0fabf625574e1655c07755c27a94f1d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FindReplacePopup.cs": "f09aab2ab9c97d99a65c90548f91a5077a9a8095de061d6daa869dfa5a9f25be",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/FormulaHelpPopup.cs": "b2d1f2ca56fa54834d3d34d6a1c71f48313716602c138000f0f96549d5eb163d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/PasteSpecialPopup.cs": "4ba82e29b0f2f71b730ab2c6d29027d322b2518c92021c32ad2c04cceddf08c6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/RibbonHelp.cs": "42eee558fcc35e950f9241cc5f1ffd787f87559662e4f1c38051b5490cdaf0c8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SelectPopup.cs": "45bb586040c6e3a8335ca25fc47488787d06ee0762341142505943f73e552434",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbon.cs": "4da896f406b15598980cd6cda5b74a47331e6346182d31935f9d4c48e1aecbcd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetRibbonIcons.cs": "a1d14cbc168965da77598cdd75b42511ff0942de47dd10e1811906fc9a87168a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/SpreadsheetScreenTip.cs": "852269139244a74936b57ec8841dfa58063ec7d286a21b5a84cdc3a9ced95fc1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/TableDiagnosticsPopup.cs": "34facadbe032b4f1949ae45c5619fcb57d0de1264fde8cc6d6d0bcbff832b816",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/ValueInputPopup.cs": "8274bdd9f1e99eb3d8f908176386b33664c8c5d4a7f4262deee2b8117d302e1f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WindowPlacement.cs": "e52cb6dd2d951ce3ec2c7c6f3ab2f196f395534caf0a17653820c8a66f24a2b0",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookAlignmentControls.cs": "690583f6e896828146962277b509dac4d3c192ecb1a4d7a7ab59d67371a3dc0f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookAutomationPreview.cs": "e33fc27163ce7a828341f7b747c280222d6cd6771783b64098192f8ea60bf04e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookBorderGUI.cs": "d3206d078278aa6abf716e10d5f223ee592b5e07dc5cfe2f6c0c2910dc8a5c4a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookBugReportWindow.cs": "7bd8624a218330ec9ae6cb39125a3802852945497943043c1dd340f0791e87ef",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookCellStylePopup.cs": "566f1afc4d5461e61bf982131afcbbc89d53fb88fb2842a50babdf8a5f72e045",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookCellTextGUI.cs": "36d46dc6bc72f6177b077b4aefa9408d07d481ad32b203cc8b9282d03117c4e7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartFramePopup.cs": "e07c670346f3e35ac74e38445b042dae1f15c4682c8e62288618d6b7b263066a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartGUI.cs": "fc5118b25300500e4d4505a732cc0f07a6f4210e93778b259c6e4bb089265fd2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartLayoutGallery.cs": "8b3b7438c2b362633ccc49f689748fcadf89e341ac3bbd31e7a10f83ba9ccb6a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartPopup.cs": "3628d55e3af8149926f952b2dc5982e81f2003705cbf7a147e6ff5465cab0e99",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartStylePopup.cs": "c67e6ff5940572931b12602de8e395c3845eec9dc7f988fef5de5850f4837960",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookChartTypePopup.cs": "cb051d92c7ea1197da628bdf2be0b9c8605e510aae243bd9d2419288d35a396b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookConditionalPopup.cs": "a97ea97be8c0d0233ddb12f497380d07dd761ecd577a9f1a692a149913646fb2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookControls.cs": "28f82d7f98d8ed0e5275e52bd6573503a7d453f7e29470cb2e7915d9cfbc5a8f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarGUI.cs": "573d3aac17c2534343fc1375aec51435d238bdde704aabf832f57c18acfac985",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDataBarPopup.cs": "f75639cca2f53add035996eec43de4945d4e5d44ef065782fa9ec7f59f62e1e9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDebugPopup.cs": "f4df253a68854dd9f63cb256bf3833452ee70f95a50d8160aa92e2f88062ed2d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingGUI.cs": "fd38ab7a134c9d134be8ddd0c2db2a0b0c6258f713a8fd63186937e48b2fd46e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookDrawingStylePopup.cs": "81ffbe151bb69c644a25b87382023aadda14397491ae54df467dccbcac3c655b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookExcelShortcuts.cs": "67eade706940f5e61743d7c74543e01a9fa08b4e9b5a72f8a0786ea3fa2680eb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookFillControls.cs": "4c92a3f602c8e4c29acfb714510e065cddb03d5e24af48a3c9981a6c7415a166",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookFontMetadataControls.cs": "e933095d0c39afe639773ee0f886b6d76eaae7c5a91e3014583891d986c35562",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookGradientGUI.cs": "09ac99a365e9e67b3749c22ef11ba19c3bb587b6cc81fc5e5662aaa67224c89d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookHoverPreview.cs": "5f53acd7d766bd2d1b8d4f81e49bde067b947136283fbff7ac03fa01ad931640",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookHoverTiming.cs": "31801c34bc400461797e1cd8cf305f89b56eafd0afbc33d91f8b872e5063b1f7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookIconGUI.cs": "41f9ec78bdc7df16f6ef4768b21fe7e7a0091cbe93daec20531ac37ec1b70ca2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookIconPopup.cs": "4c6163bfa599a2ea6ab580c1f46440fd1e123ae7892a613f9fb47e05e9978c78",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookInsertContentPopup.cs": "7d3c8a3a65381902dc89e151eaa7ba7ae36dc2a872aa757a619b24a957400ef7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookInteractionMetrics.cs": "ae568da851f8aaf12f059937ef5da461bff8170555e5d1b5c1c094610d3edc20",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookMinimizeAnimation.cs": "7303fd8ff83768d7ad862e44564a4d59bdafc72cfdde12c7ed94b74018735fac",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookMinimizedShelf.cs": "a03b2ddb0356f53c504d801693f44ded98241c15def2faeeedbdf13cd87e840a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookMoveChartPopup.cs": "e6b9b22051810dce4fd22dcd2baa3a2ae0f7ebf16bf3851d218083cc702ec084",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNamePopup.cs": "b42b0e907ca4b09c5e20b2264315ee768717754b9c354018aa9b6ece447708bd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativePreview.cs": "948bbf7ffe960ac3dfe087738de4b81f6e15d8774e6235649682ec7705874b81",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.cs": "547a26aaaf3c4ece717406b25876833603611263df943ae75650d820655af393",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.Focus.cs": "a2566fdb61a77148bc60afd293496a70fe6ad60ec957627e8f6bee36a3e3d872",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.FocusRead.cs": "f7b9f3e84e73a799b918e9e05cf3f3a760c23d7b17e7c2847a996238c8893af0",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookNativeWindow.Keyboard.cs": "6a246a6e06a39a944b4bd5d84bd192af7f40a81c468c52578a8c31ac7ff05d56",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookObjectPopup.cs": "9005e51c8501c264cd3721cc3411977914387071e14666be601d406a9a60e028",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookOfficeTableStylePopup.cs": "39910095197e7f5fdde6e04dbcba3d596fd8f0a18723f54cbfea0ec20fe1ffcb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPageLayoutPopup.cs": "fa8a0294a0db72d8b105f8ea4f9177f36f33ef3b40e580ca0cc56af2ab6ffc6c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPolygonGUI.cs": "a5c10fdf2e3769afa5f72ea8a4f42c0eafbbfc29f4e2343c0b40c1b516e7fad0",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPopup.cs": "f5d9edb29c511bd57659288f85bb322f18ef962db560f9a532fc724438407f34",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPresentationScope.cs": "75d2aa8c34abeb52122fe370872b2992107ceb045957dee697a09d336a225548",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookPreviewLease.cs": "dbd450f798cad8e0c5c18d70e3fc2f8696b52c8ad0eeacc671c20634bc411174",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRegistrationPopup.cs": "aef9feb9330222699ad6ba5b4e3fd61a84d280b2424d270efe8a0ae115b6d680",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRenderCache.cs": "233e93fa57d79569d537f84009ff479b07167274d727c3f8f4f9510d9d0c86bd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookResizeTablePopup.cs": "ae2c06302ed5d7d544c2253976e35f4d6b8e9fbf047b07d8e87cc9009d90eb81",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRibbonAccessKeys.cs": "5fd98078075960df700793d9952eab186ff8786a69e205674da3003e074af771",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRibbonColorPopup.cs": "bdaaed29b7f7c9d61a6c5b8908a76252ce95408a5334592185785d39bfdb5a68",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookRibbonMenu.cs": "cf187c1fc926d9d41e95323021eb6f07d71defdce79ba81e5408fb033f2107e7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookSchemaUI.cs": "2d3b8620c8af6af31eb57c97a8b32dd6307a3fc962ec45f46ef00ac52e2b6699",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShapeGallery.cs": "ad109ab9e98b21a368450c650baf49cbebc75bb6d8d84ce504348f9e2934e8c9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShapeGUI.cs": "598e5d17f5aad49b261e9e77b969589e45107bd1b1734d006cf7ca927f8ce836",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookSheetTabGUI.cs": "4f2c200914133983657b1b5e6bd3b0120495e82fbe95672bfa92696f677f90f6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShelfWindow.cs": "3101b4cb6d5b9d81a90c96ad8afaccd2ea0aaedcb765194209e94f017cb99a2a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookShortcutCatalog.cs": "4c92a3bea245a5158829a036a3829fc681489cb010835b289e14c4fcc1fb3d2d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookStatisticsPopup.cs": "972246095631bc6f0cada9e7ea84a280d7bff4de122e5e5c75d08de361612e09",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookStatusBarLayout.cs": "5ab308b1f5690413ac184019bd3781b4aa572dbe589afd9128cbbd68bdeb3dba",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarLayout.cs": "38811c74d151bd123a9b4bd38a5af308c0b86e85bdf65938719b2ee3305e623d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTaskbarMenu.cs": "cdbcfc7642abc08b9d02c4d207f253e0ac4d9e7c07ed687dc42a34fde32f729d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTextDecoration.cs": "9bc02499d5e4ebbb52e06e0d4b877834b69223d2be9109f4bf9caf2ce1ae1f7a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookToolPopups.cs": "35d641eac732ec3d499d0f5b433506ca434d6f554c11ae2bbd0d775171a3e501",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookToolWindow.cs": "2c0e25e1b37fd8c67fb6651fb55e80420a7340bc1c6194f6aa00331bfe4ddcac",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTurnRoomBridge.cs": "894dffe7d95bdf8da32f14f7e2cc0df3da580c85cd486839a496ef6b127eb66d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookTypePicker.cs": "1c9d9e75eee565cc8c859cb91988a9a6372892b4de5394f59b60f536854719a8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewer.cs": "1d464d89f09b08ff9c4e92de129b6880808d2b6517b06de1a4245b1ed66cc3a1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerChartDesign.cs": "2370a0151ff8fcbd55235b8d8057c7d78dae8c5541fe03f467acf35334269ef7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerChartSheet.cs": "5fe16c9d3b647ae84a2b7835fa172c6dcffd11d8b8e508c48b91cf2dd359045d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerChrome.cs": "140739462870d8792aabb3087b64c6062153435fcc8cc1445311fbe7c8b05af4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerClosing.cs": "cd151be5cbd83145bf3b6295054942562d3476c690c603bfbb383018cf35fc49",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerContextRibbon.cs": "f03e0c677f45b02eb790a5c41f4334fb6dcd4764f77f6e82c3075f9353fbd3e5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerDrawingArrange.cs": "7a9c40d6e38bcb96f63ea957b11e6cbfbfe3235350de10f4aa9b2547681de227",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerDrawingDesign.cs": "38cfbd61edd439ac9a8c951ceff05203c06fa329799481d35ad452e24e509128",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerEditing.cs": "a460c00b32b86ec3efb612dc4c93ed81858a1528c5f9c7895e35585c249b5d5d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGameTools.cs": "943c6e78c3f7f3c68688f6611ff7b44862aef1f5df68108c80a33866457b27b3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerGrid.cs": "4f413052e62edbce99b357bd55a411ba641aa40e33a03d55223916e3991baa91",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerHomeRibbon.cs": "d63f66ad1426816a861bfd2098e173162ba8f52663684bc4d0a21071fd2e8077",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerIme.cs": "3a3f47fe8d3b4242865df1be4a6ebbc87c12cf5e682cec1b65dfbba073d2b35f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerInsert.cs": "d892388abcd5a9aa6c2a8233609021e5d7878b48714b5491a542c71e419056c1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerLocalization.cs": "ca70c7673bf7a86d61d780447a3dbaaaa05d9d129a9993187c5c72f2b6d51333",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerMissingSource.cs": "388c909662388b75de0b384e84f85942a03b8b8324fb5620dd5a86358420e523",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerObjects.cs": "6165279dccc9853609f58c826793ca914f7209261690e083a18617f20417ffc5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerPageLayoutRibbon.cs": "d85d5487ea03fecf688dc089dd166a88ab96972865262bbdc6b7c7c675407ef7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerPictureDesign.cs": "5190ec2125c71bdfe89afbb41f9a487ae37e3445d28f39f19ceb2645fef60c88",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerPlayNotice.cs": "7e464d09e54e09d7a55d5542f719503b219487a9091af6126b97664fba958924",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerProblems.cs": "9769675338d770887655bd9d45cfb6ac52fc2153ff4c627f1482674588b2c1ce",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRecovery.cs": "506bd4ca8ad6bdcde0dfbe54d35ecaff3eec1c479883da6030ffd4bad2da3088",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerReferences.cs": "fb49036e8a594c3173f83a17d8527b7d43252a28aa5abbfe7cbd98621f940671",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRibbonActions.cs": "26d4534968c12dd4f0de15afb7bd25c1ddddae442e6621f92a658375c8c13760",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerRibbonNavigation.cs": "a3238ed73709ebc1784f4cb3c213631f6411a8b53fddcaf240039d803a7e2fb5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerShortcuts.cs": "b0b93e0f271b95b6c6b6d2931fffe244818e2ee77bddc6970da5a30bd8d1b44a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerTableDesign.cs": "b1b6163cd5070db578c43565c6403bf72b1374e4c5ceaa560a63f27b23408ab9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerTitleSearch.cs": "3597a840033e6358b8a74f3fc39ba347fb40988a6bd4f3100fdaee9e72da9741",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerUsage.cs": "7efcc4554c954bfc8f837b7a93fdf209986aa23a23190d05f15baa5266adca87",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookViewerValidation.cs": "2540f902afea02bec53cd055d21bddca40c03bec385fb87d5682c4cc46fa8d5d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookWindowMotion.cs": "7df350b042dd1063c9c6dcde0e2698d343659c4b03ad99965a49ab3f60c86c8c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkbookWindowTheme.cs": "f66abacf8e357719f33b4c82969a8961daa3d76598be5f2264e0cde6ffe9118d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/Window/WorkspaceFileMenu.cs": "86ba1a4e59b9454d2904c47b716049fa18267ff9711f07318b6b914c5549ab61",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAlignmentFormat.cs": "25075add0e4aa221ac9aea85f03c8c606c9e5a919fab1a36694238c2bca510ff",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAssets.cs": "64039f6d44906e144e424e80bfa72d52095b1465915d16009cbba9b26f255462",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomation.cs": "54a35ee079a89f78beb0e2da2a70d4ecc5b35bbdd4f91ff0eb051546458f8be3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomationApi.cs": "6f77fc5de21d93e433195771d622ea6b3acf52a51eb876989f560f7ae5b83b52",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookAutomationContracts.cs": "76f2537439ae661b9442059699b21711cd0dd548102e0d6b27b225545c099b3f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBorderFormat.cs": "d5aa127058afd2bf4b7cc7b14b750854b7e3850160452b12fd1b49a2e88666e4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBubbleCharts.cs": "ac3366efb43693854e2177a8375a95b3948e1fd97b47b54121fef0e2e5d9b784",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookBubbleEditing.cs": "5d498aba2e57d59be1cb507e18f25b7ab0aab68d304493bd730b75eecaf451bf",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculation.cs": "b071c614f7f8974877a4b1b5917fcb5a28cdc527982ce54e954f7a2f9c3802bd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationArrayMath.cs": "eeb88b415955e6f1340f4c95b5cc93964b87641da796b85bd49ef9ef7ea7c8da",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationArrays.cs": "65c27a050f179ed24f56ad3a8e95f9720fbac6cf814a66502f4c5fedb76e6337",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationBindings.cs": "01eb7e3ac93be817e5376041e4a2e281c62ca76be80c4b37dc3ba4a3d77935b2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLambda.cs": "ba0c306946009c034009d1a6c6110c7458399e3c472149bfe3d7e6f433010501",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLambdaArrays.cs": "b63315cba7ff50069805a295787de59aef6caeee80173ede54be9608ae006867",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationLookups.cs": "faa8bd8b7a1b4676bec006de90ddb3af4f0c7f800f22b17cebd0c500fdef4df6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationRanges.cs": "e60bc4518bb72024936de558b47acb973015855d36ea6dae17439d8b352da077",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationSpills.cs": "11e80262f0ea939046dafeef06d84f2d79e59b24ce95d7552da480ffde4090fe",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationSubtotal.cs": "22b0dee220a437f7f7dcb8d126d9d4fcbd76f61b756ed2d17de301b68c0cb0cb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationTables.cs": "08b5b6219668c8fbb6a9d90efa84e17049956f167f9dce01c5ac0b27716d1eb1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCalculationText.cs": "7b1399568c066d14e4925c9011f5986dd7adc0b86d56c7649c2d55a84c3c7eb8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCellDuplicates.cs": "b90c25ce6b2a27f489a7a465e8d9e46e7ce005c4514b89f171cfb29d312d13aa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartEditing.cs": "b78ecea240e96b6c142df3e6013ee3b1eff5cd68f597bd4055058891c4c65d04",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartMath.cs": "8aacdb6ffe8087e0ba4012b733fd0a5af7d13c28f355641d6fbcfac40c718fa9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartParts.cs": "575a1f451a17c8b77ae9e062f3ffc3939fa18410ab3d7d33c6e361146ecbf222",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartPresentationEditing.cs": "dd28929e74f21c4f6d38dc609c654ffb55ce7b95ca209115a2dcc56a650bf7c1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartQuickLayout.cs": "80d1a1809afd49ffda8e9bf0b57e5c6c0ccd03b2c1aac92ab97658a18ec2a08e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartRibbonOperations.cs": "58b5bedaa31092a076e2bce1f313d8ab12234e05764d6694b34696b716159533",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCharts.cs": "3d5602dbb18410a748919945f919134a1690fa4c5d5cf6b6d6eeb2b0d011e727",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartSeriesLayers.cs": "3a92a912f0c4194222315371c935be37ed804964cad96f315a39e6c10a35813d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartSheets.cs": "b54b9a627638330ab7ec46cc18b78440214bac062886695ddfd6c08651791dd6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartStyleFormatting.cs": "a1719a5e1f04fdf5ed9961f1fbf6287e64beb545435b37dc70e9bfd7ac1fc3ea",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartTranspose.cs": "0adc30becb1e679001ddd094840e06666a796c2a523dba9324f60e941c6b2ad5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookChartTypeChange.cs": "7ad95154d7413d06fe73df3083337eee7197aad05c28c46d94f91dc9727c69c1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorFilters.cs": "259a76c2ca4036fc51292886626edb3a648cb932c52774e802247834855970f5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColors.cs": "2e24cdf8a279a4de8f1b885ae1a5d1d6349c03d7aff733b9f66eba68f372a37e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorScaleEditing.cs": "24d553af9aef0fa07933f471e54e846a719cdf33bc75efbd72e9dfeb4064d040",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColorScales.cs": "8abfaf9490eaa910b64e2d7a8950fd900bdcbb22de2d7170e4dd15cacc7a320f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookColumnTypes.cs": "019f25b47e2deebad21522e3f90714a8339d91a49efc0194c454c5152d0de281",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalEditing.cs": "7744193f9324ad48d549cd17998c4af6c972d1ae4680474b64565b05284a43ce",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalFont.cs": "df435e60e9644568117746eae257ec9eaa751baad4f6c218f6cb30e74354d3d1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalFormats.cs": "5988b911eb8260fedb82d26985d93cbc9133565e5d662c829d068c182d35fbc7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConditionalNumberFormat.cs": "7daac0600d472fc9912a0da768250dedf24f92d9a8aec9e8aca941d2e3e7a2e7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookConversion.cs": "0063ad1f0f09756159acf2e6dd5490f2316c82af8e2bcec6eadba2d70457d8fc",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookCustomEnums.cs": "947a6fad7a8b67047a8b92f7f705a7fd5f0a32b07078cafe4160bef62388b8cd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDataBarEditing.cs": "22ea933e2f6b8fd508dd7275cc27426b09b64333be40edfc119c0cd33fd98c29",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDataBars.cs": "38cb27369054228bac4f51e65782eed6028aa40ad3da9305faaf8c31cf971b83",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDebugContext.cs": "0249cce0122e7f3ecaf0eb509460dd342edeac54894899bfd8a6ead3d81b84ff",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDiagnostics.cs": "c228ce5e345b4b862e97d30bf4c705eba3f09a22fc5fe3d495653c5f5e1bbe06",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawingAffine.cs": "193ba02a9eb90155a2167e214d95217fc4499647c90172767c7d305165d88df5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawingGroups.cs": "a4706997a20208cb78ea96343fad01a93e1ecc7f90b2d15424ad104842e41eed",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawingQuickStyles.cs": "b8a5be3a31e7df8361a8f86a36368bf3d1a665f3d424c752e64d16250703ae1f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookDrawings.cs": "54b1075704a4c60d8c1957b03c72048e2fc9a8600e809c0de817e33a38466cd3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookEditingOperations.cs": "dd01826c8b6b1218e48f871843add2435360f400a9c4af512e0c2e2eedb86d85",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookEditSession.cs": "95f2863f4e1fd0d5271d14083518ff0b987196b0d25abdf4f659acb23bec26fe",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookExtendedDataBars.cs": "e31d76dfbc5f4b7ace7977ffd1b305fb541f0c7958056a3b11c2b3456ab77cfb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookExtendedIcons.cs": "49c2635529096561ef684934c99e9bbdafd253e9d09a6671de8f6741a501f2e3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFeatures.cs": "6e3433c613828aec6ce252773a04668130ce340ee6308ee740e0dc6bc4e45689",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFilePaths.cs": "352a7c2b5dbaee9ddf9b87a67abdaf2009c43d7ed8bbcf3dfb523e679cb13064",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillColors.cs": "baa2c9c480c22dc5692e0cf4bcd7bc5137b0f3b605645abee74d3f90eab9cb05",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillFormat.cs": "b5f14b2358b07bc2ae76fd66945ff2afa21f23e2ce2b08b37f47028782a2d6c4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillPaint.cs": "6b51bd2a4a1bd353e150293ab526a81195f4cd54a6842c4d3471293308069c52",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFillReading.cs": "5c83fcacfceb2285117a921abb2609772f108381c0347868e2d408d89fe37649",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFontMetadata.cs": "801451e687d0dacb206eb74aa6e1441adcda826402ce07389e34104615aab3e5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFormatting.cs": "ae1d2e22f93ffd80c66c02a7fb65ea66654d9f9e8e1021603f22f4f319028c66",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookFrameGeometry.cs": "141b5dbd8e26e7cf3c1e92c95ab2b490e5d715e590de2cfb44d0a62528ac35ab",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGameMode.cs": "c45ff26dff0e5ed4c3505ba86203c4956f39e6c26252e55b9e277f10af230474",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGameValidation.cs": "abd3e39237ace2e12a7c28727aead67b92815eb5431dd2f9b92d2be9013b093e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookGradientFill.cs": "c945ae98b9dfa396fff58aec0e66cb66b211481b0b3884ddea2acdd604660693",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookHealth.cs": "f4714cf9ac710167a7bf00d81343f5affd54dc7208165b4f90aedc4335165cac",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookHomeFormatting.cs": "c1f26225365c81c2742ec0fd029109354dc83c50661e28545fd6dc12a504e04f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconEditing.cs": "53c9c9aedb8115ff66c18d7a3a3df690d3c46202d21a543998c403eccd2b13e9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconFilters.cs": "f51001ca78315919f9608b51599d01edd2a2db4007959ae1778f27544289f8ec",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookIconSets.cs": "b66ecc820f2bd672338f62245469fddc4559b6782e5a85776e59fac8e161b086",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookInsertContent.cs": "3bf58f7d2f224cc5620e46f005911e0f574f535a5986543a18f629ef9d974fe2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookLocalEnums.cs": "f9ed3dba8b86367217aedcf15bf188b83a368029f7838200faca10cc429c8441",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookMissingSource.cs": "8a88c387df9f22e5311f8ad6c902ddfd3fd50ea30fd4a532c0b7e467d6233ab4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookNames.cs": "ee8781c30a45a2341c135a4822af1ab3eb2d37facf1644a9a38f39df5319f4a5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjectGesture.cs": "40e06729f3ad00c7a5bc1a9c8ec879d1d7ca5e30f3bc1840cd1914649a040756",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjectGrouping.cs": "abb6dc9e2b1dbf72aac159109153f31c843ad20585ee971e13c2c7d317cec4d7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookObjects.cs": "f5613f3af0ec92f78215c976a8228b2f8b6485df40a39a641a278eef7d0aa9ec",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookOfficeCellStyles.cs": "4a9e6243ab8a02171c2c612b933c18a21072a5deff52a038a9a1c31d3029e599",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookOfficeTableEditing.cs": "141ccd98a63763bcb0ac8359993844385083086f8b6ebcd1d774070d071595c0",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookOfficeTableStyles.cs": "6524d17d09551cf983ba15e467b2e4b711b5f6933b3a5180e27a740ca29dcbe9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPackage.cs": "079c262428e7394e8a2807bdca8a156752a3050db4a9f76975b8511fa5242393",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPageLayout.cs": "a83cbdd5eacb40ea726a9b2271314c7208f5a331d4dff0203725d98a37d2b2de",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPageTools.cs": "7ae66778ef6a196199634fa91d288a4043c432a3f8012b3fc01d0d6fd7388da7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPictureStyles.cs": "84300d2b4beb4a85d299983a3bfee6503a62ebacfedd151f571e2d3195b54cff",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPreservation.cs": "bb7f8c6a0c7e7974553f1b77b39e91512ef9c4e716ac1394b8c3a9c64deb006b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookPresetDefinitions.cs": "819f2d0b6283deb9fe0e638ac297e087ce2fc4d38aeb836a4f434b0c3021e4a4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookProblems.cs": "e264ebfde01c5a9d87bbfbea37c3608f8eead4a2bcc1b1174299c35500baa6cb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookReader.cs": "217b0c81b3a0f784c317062a4206fdf159b1dd845e2e780895d9082781e3f491",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookRecovery.cs": "d84b84492595f8f0d854a8c3756e837cb9bbfa9ed698bc07f3168363d183bfc4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookRegistration.cs": "d29b835afcfc218fa0043dd0c9d972bce070eea8bb458b4e8ef733f520a9cfaa",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookScaleFormula.cs": "f88f375b236431de1b2ab5da45bd630f0542b2636072abe99c4b154d59ed5778",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSearch.cs": "a99d8f47d5365df1984d087831ac99768ca0e803619f0ac916be1b527f087d1b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapeGeometry.cs": "51e63ac77e3d5d13d4e83a3f5c6b26ed23c1f51d80595e5b0c86fd3c1b8c63cb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapePresets.cs": "55b88bffb1d85c5be3f37b869bd55eb47a015df065ada375a512faa24f567c6a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShapeRaster.cs": "2a1aa52f21d4cbec6f5b8c13f8276df44a3a71da0080fed58f4f71ebf0b7c901",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSharedFormulas.cs": "24104c129c26dd641d2195ee8d0c7abe44d0db3d7d23f9bd3cdfb0c88d7b2490",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSheetReference.cs": "5757040a4b53495a0691af2dc8bc8579a18fa12f0646d365071c3d7c37ac2fb8",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookShortcutOperations.cs": "e5a8f212c301713a896087032b12c90e228360f77c548d36e48753feb97ef7de",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSourceImporter.cs": "d7144ae597ead16e97f2cb240f3177f1741c02e788b6d855ae5eeb81a1e8fa9f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSourceInspector.cs": "4f9d9a6b5c6ac3a45bd99056505c9bbb6921ebbe85fabc101358e2f7dd52c4b5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSpillClipboard.cs": "5ca02ab7f1c88d160fdd271352c61d7f0f690b9733ae00358e261b56a632a5be",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSpillStorage.cs": "3130d0155d4329f2fe0bdb357c22dc694d5e494b3195a10527ff5ba48373803d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockCharts.cs": "7c40bb17c404b5b1e004777ee685094d6e3e2ecae3dbd67241dc913b785979d4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockDates.cs": "a157567627cfa2baccf3bfd433368909fa3c7e7bb9c293335a1203defc3bc188",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStockEditing.cs": "a7524f3ba7e045dfffada63e58fe2786382df74e24a804064520e8aed2b60323",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookStructure.cs": "f8ef836692277e0f53c5400cbef1a01dd86d3767ad0be002fc501ec93baebffe",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookSummary.cs": "3a18f12b9c29db8c151f0412ad3ad1172017b72654c80dcbaade2beb0d3ba7eb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableDesign.cs": "89dcde58525242486ea0bcd96085766f7f33667d49460cd8b15838942d59abb3",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableFiltering.cs": "2ff6be93462ac78602879a0d5bb5ef16e314fba575aae440aaedd78a0e5daa10",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableFormatMaterialization.cs": "066c1fa9b247abd50d17f4ba03629ef727ff660e2892258f6b88e6a34c183482",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableHeaders.cs": "c8ca0c9cb4a796b19d3c3fce366a0d14d4af56798b4f7d3adf3439041ba13180",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableNames.cs": "829a633864ab9d99a40537054b745c539f0fb6f2e6d4c54becfffddc2da5b042",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableReferences.cs": "f62c15410bd7c8420e50eaccda16ad5f1a312e3c6f915ba2649cc20689243cc6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableResize.cs": "7a5c01e8fe5b391b1db09d80f02d953e8e209836f9089817bed2b2476b623dc1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableStyleColors.cs": "0e880b7207ba732de2f4f74df2a75ce72ec1326677b32367c073d77b72e3ba3d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookTableTotals.cs": "c2854cc3e2f68dd619621d3e91d2d44580fe4cf34bcf5c8bf483ffbb9d5464e4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkbookXmlText.cs": "8bcaa7ca018b433c42b791e428d6b20b9b789b39c7cf44a24a0c73ff6dbdf8b9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Scripts/Editor/WorkspaceSettings.cs": "240a13c111e63737b2eb3b4929db12de6c3960a775b199efda4ae81b0f9071d0"
+        }
+      },
+      {
+        "assembly": "TurnRoom.Templete.Development.Editor",
+        "exitCode": 0,
+        "sourceCount": 14,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/AssetStoreUpdateChecks.cs": "0e9acbdf38b16a591aa896065b076b62ef52bd466d4d7769b0249e5b06473f33",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/CompactTooltipQA.cs": "a0a69d45c6ae2891d7139afabbe191ba11f236f0d51cb24f3309fe7ac0d0bf83",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/PackageExporter.cs": "f2bdfa3e8ee8dcf9da398d70e6cae29e731742750c97e1ae1b002eef9059de5e",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/ProductLocalizationChecks.cs": "6765d0da882b30324d05b2ddb8c1b9d1e50d85a62f4f7aa82da10038a3506243",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/PublisherDraftHost.cs": "84d654596b54bb31962ce42d73087aae416a4f3e0d5a42d3272179a9782fb284",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/ReleasePipelineHost.cs": "9c4708b60691beed0c3dc5f7457457b83d15427e5b2bbb93558f863039c29f45",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/ReleasePresentationHost.cs": "ae99bf2fb1d25a2064561849ba854e8f1b56e9d6c3f722968148c6ac6cfcd06a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SettingsRefreshQA.cs": "0dac17e233ea5029e5c0c8e8a1b180f2933db97ad679f26aee67e8b15231d738",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SettingsStoreActionsQA.cs": "4bd63befa907547ecf3d32b7be3b33d5f9415e25f61f0771ab82690907bc5232",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SharedHelpBoxQA.cs": "2e2b0679fd5e6e4461479459d4ea07222f58fb6ee10fd317b84f41ece08c5884",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SharedInspectorQA.cs": "db24b4cb828dfdaee05b84bd250359fff94a5bcdaf4e8d0a28bc9b8e0902a21a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SharedPropertyListQA.cs": "450839873b4bb6415b05eecbbe20f620f03f3e96ed0e184f380caec9a15d1c53",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/SubmissionComplianceQA.cs": "ad650b923d65a9f23a5d9d4297d2fee3e427821d83525b0b1c964d1b9e234485",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Templete/Development/Editor/TemplateGallery.cs": "00af5ef6e9ef55c667f46ca043a90ca397b846a93289dedb8f7154282a86af13"
+        }
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Runtime",
+        "exitCode": 0,
+        "sourceCount": 4,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Runtime/ForgeBatch.cs": "1e5e984ae3da98a034f46a943bca0f7babdf7bef0dd768d66af1cbb67c361de4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Runtime/ForgeObject.cs": "323064deb56662db96ad8e571f09f7e7fb18e4eefcca6a921aeacd1638bb3bf5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Runtime/ForgePlayerProbe.cs": "e2fae6e5e510a298bf10ad07975e0c05821f5b17ab27baede9cbe1ff912a755b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Runtime/ForgeSpawner.cs": "59a976c94fdeeb88048d1b5681e74234563823ec9794052cdaebeb467de3bb68"
+        }
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0,
+        "sourceCount": 10,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkEvidence.cs": "d749fdcfcf244221c7cc4ebca40ddd7867da03a4a5886bb68d8bb3c1e396f424",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkImport.cs": "6f2fe1a01272aac62e59a4d615573f705177f587897f63ddfb05ec3b267e3294",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkRunner.cs": "8582bec424c7eb130b098a05545adf0fe17c111445a3acd815983b3fa2d7736b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeBuildSettings.cs": "1f4df74bee04b4c7d37e5ef7a7e8b6ff589494cfb37fc430618a3936e408b20a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeConversion.cs": "d5ed37447418a3986eb9465bd808357d73a59fdad1a07f1177cc0e95a3c5d3e5",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeDependencies.cs": "50bf61b658fed92bf1c397d0bb95867186c2ff6bb9717e44e98c796805d5b6c7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgePlayerBuild.cs": "48cc1a4b8b4f89df77eba5be69d5b625617f2ef30f0e45173bc280390067144d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeText.cs": "9af426dee7708620445bc8772ddf8dc0c10ee293f13bf7187c1afcd3594a4070",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "03e5a81dfccef9ebab07f31a3aae67203fd8d4b0f242d3ac526d22a90f29e7f1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.cs": "cb46eb54dbb88111bb686487d41b97c309c515c08a30273ee56673ac738085b5"
+        }
+      },
+      {
+        "assembly": "DesignDataTable.Samples.Editor",
+        "exitCode": 0,
+        "sourceCount": 13,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/LegacySampleLanguage.cs": "afb2873ed05e063ad4d7e535f4e391ef64432a3eb0d23f200327ded3d416ca93",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/MiniArcadeLanguage.cs": "1e7aefba63b0b7a0f8ee305e135692984e55777205aacd645d95b84eb2cc0e38",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/MiniGameSamplesBuilder.cs": "8113103388006f3cfcdee11300279e7ef28c03799061204efecb3305d1627305",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/SampleDataFileBridge.cs": "50bb2ff4b165a11c788dd278817756c778ef84898b98203cf2816b3dfd9c0843",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Arcade/SampleSceneObjectsBuilder.cs": "df92ff1199312b86d90368ca2367fee8f6b8e31d57f62cec8e7c4b7debca11e4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/AutoPlay/AutoPlaySamplesBuilder.cs": "32e1e3303b8b055fb52fadf5ab0a0c34b4be4988912d045dc4e24655e79d33bf",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/CustomEnums/EnumSampleLanguage.cs": "b805b1205f6efffcb43d6c342a8aef7de1c339200e26d6151efab2f6ed947f15",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/SampleRevisionLanguage.cs": "256cc4b512531f5c9112c4f4cf271f2979513257389dbbd6ebac5b8b4a3462d9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ExtraGamesBuilder.cs": "9bc7a1a5fb4861ea29e928c0fad914e11976355e593292de597990d5ea1d646f",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ExtraGameSharedUi.cs": "876775aa369224de3dbb24ed5bddccda7b1c84fd7d1fd1f5ee960efeb8578fad",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ThreeDSamplesBuilder.cs": "028cc75c197036cb99c498c19bf5c566d4556dbe6af53d5da75b11a3ddd5a944",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/ThreeD/ThreeDSharedUi.cs": "a001b198833a378fd217dad6495834e9a860a6c9c433bcca9280d47b5df3401d",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/DesignDataTable/Sample/Editor/Visuals/SampleVisualPolish.cs": "5d4a0cf507738ff32a0e98e83dfb254b4a988aeeaebc43fdf94ca252600530d0"
+        }
+      },
+      {
+        "assembly": "Pixora.Samples.Editor",
+        "exitCode": 0,
+        "sourceCount": 12,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example1.cs": "ba07df70d22f25fea649000e2feffb85b8258d6be9d171ab66fb85a32f274da7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example10.cs": "5bf472b377592db0fd7af436485d11cbec6a688d370f4ddcb1805f594e73c12a",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example2.cs": "de0f5ebe5175355aebd2419f6619f395b2f7340871d9f934f74928e32f50123c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example3.cs": "295d4552ca7be1e52cf84aec89afa6f5170a15271ab0ced6bf7920f4ef8ed2f9",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example4.cs": "8f3bdf0b91130813b6c4ef879fe5f08eac0fa42f663177ebbad8c1530dc7ebe6",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example5.cs": "6c9f75f6efcea8dacf2681cc91c0eca310cf2519bfb30ad5c682ca0500efbafb",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example6.cs": "59a0a5a6e4e31bc17f4836286b5d7493e9864026099615e7c9302873cbf8df8b",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example7.cs": "868ecd5886a7b532f9fac754cd32bba18d44472a8b7ffde3c4c92dc40eae940c",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example8.cs": "b9c43ad1c3ded181c50dfae2f4490e3dfda27a9ed8ac5c996c9041c9bcc18851",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/Example9.cs": "da523c75250ce89031a5b6d669a26db3e6cc934842df6e5856fdb324238c6fcd",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/WalkthroughBuilder.cs": "c57ed749560cea8a1f997a5bebe233450bab5ac6d689ab18cbb5c1ef6650db93",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/Pixora/Samples/Examples/Editor/WalkthroughScenesWindow.cs": "82927a09e17542c3f0b5983ee8de3626c985c769eadcc5431d976f57fd3ac817"
+        }
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Development",
+        "exitCode": 0,
+        "sourceCount": 7,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraInteractiveQA.cs": "55a02348c0ac6a683c932f91fa4307ee800cdb79695dabdd4807a909d3ae32f4",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraLiveQA.cs": "1b08e7507c2e6169723328e8dbdc5a1672562dfc28477ad45eb3e7767497c4d7",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraPaidQA.cs": "fb8d018dee4b0d1d6cecec2ac839f36cc1ba568cf393d35a9c01b02a8b710822",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraQA.cs": "1129c5a692a99dcccb1535de5e335121b4f11445e51ac6ad61b996eebaf35038",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraShowcaseBuilder.cs": "c88ed6308b9b2b1d48351d847defefc9ef7c62db4e7a061a2995c98f9125cfb2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraShowcaseQA.cs": "1b0f589b1111c38c97c302f691a7b853bf87113a67679a47ad6486e3bf1b0ee1",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraWindowOcclusionQA.cs": "67380e5e41ce76f2f8c345850daa9114c236af079a3655846255f7517df43e5f"
+        }
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP",
+        "exitCode": 0,
+        "sourceCount": 1,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs": "9fa1aec0e15bbfabefd7f788552eabda5585d02ab7f5eb6b5d77119813d01f63"
+        }
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP.Editor",
+        "exitCode": 0,
+        "sourceCount": 1,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/PixelCamera/Integrations/URP/Editor/PixelCameraURPSetup.cs": "2317a97e9fa665217e7fe80a2af493b6336f427fd05d4a2aa0ac9904c535d614"
+        }
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Development.Editor",
+        "exitCode": 0,
+        "sourceCount": 5,
+        "sourceHashes": {
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Development/Editor/ForgeFrameReview.cs": "e3dd81112ddf95fe0deea23673a2c9d8edd0423e07b547a22d2431db3adc51a2",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Development/Editor/ForgeNativeReview.cs": "c93d0cbb8df349f0c8bd7e688d2a68f07874b24d7f9e70d4daf7eb81ba0a3d90",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Development/Editor/ForgePackage.cs": "915e7981dee09e1f671e166d7f2b4275ccdabb5b066c36a9250cd2ac27e6ac74",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Development/Editor/ForgeQA.cs": "c925aa7054e32ef700acc3a86716bcac944bc2ec0d6d9d3bc70f6ee409fbfcda",
+          ".local/SubmissionComplianceStaged/Assets/TurnRoom/EntityForge/Development/Editor/ForgeUIReview.cs": "874cbfa732608e25144b696db800786e08840a87bdd1f0552a344b8590e3fd9a"
+        }
+      }
+    ]
+  },
+  "model": {
+    "blender": "5.2.3 LTS",
+    "records": [
+      {
+        "model": "ClockworkKingfisher",
+        "meshCount": 21,
+        "maximumWorldVertexError": 1.4901161193847656e-8,
+        "identityRotations": true
+      },
+      {
+        "model": "TidewatchObservatory",
+        "meshCount": 20,
+        "maximumWorldVertexError": 2.9802322387695312e-8,
+        "identityRotations": true
+      }
+    ]
+  },
+  "prefabIds": [
+    {
+      "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/ClockworkGarden/ClockworkWren.prefab",
+      "oldIds": 122,
+      "preservedIds": 122,
+      "newIdentityRoot": "9100000000000000001"
+    },
+    {
+      "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/NeonCourier/MantaCourier.prefab",
+      "oldIds": 142,
+      "preservedIds": 142,
+      "newIdentityRoot": "9100000000000000001"
+    },
+    {
+      "path": "Assets/TurnRoom/PixelCamera/Samples/Artwork/SunkenObservatory/CelestialArmillary.prefab",
+      "oldIds": 156,
+      "preservedIds": 156,
+      "newIdentityRoot": "9100000000000000001"
+    }
+  ]
+}

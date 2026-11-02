@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "제출 전 메뉴·패키지 의존성·샘플 경고 정리",
+    "summary": "세 항목 소스 수정과 실제 대상16검사·스테이징15어셈블리 컴파일 통과. 최종 배포물 대조는 남아 있습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "신규 배포물 최종 소스 포함 대조·새 설치·포털 재업로드. 대상 경고 수정과 컴파일은 통과.",
+    "outcome": "세 항목 소스 수정과 실제 대상16검사·스테이징15어셈블리 컴파일 통과. 최종 배포물 대조는 남아 있습니다.",
+    "proposedTime": "20~40분",
+    "actualTime": "소스 푸시5220e85a 완료. 공개 보고서 검증 진행 중. 시작2026-11-02 16:42:36 KST.",
+    "xerjEvidence": "node not running 및 Search startup failed; rg로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "submission-compliance-20261102",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "사용자가 지적한 제출 전 세 항목을 수정하고 검증·푸시",
+    "completionCriteria": "세 작업의 현재 버전 QA와 전체 회귀 통과, 실제 Unity 화면, 커밋·푸시·공개 보고서",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102074526217-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 메뉴를 Tools/TurnRoom으로 이동",
+        "action": "메뉴 등록·호출·문서 경로 대조 후 수정하고 컴파일·실제 메뉴 실행",
+        "expected": "최상위 TurnRoom 메뉴 없음, 기존 명령·검증 쌍·단축키 보존",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "새 메뉴5개 실제 실행 및 공식 메뉴명 검사4제품 Pass"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Entity Forge를 Package Manager 안내로 전환",
+        "action": "Client.Add 제거, 편집 가능한 버튼·9언어 안내·Package Manager 연결 후 manifest 불변 검사",
+        "expected": "코드 설치 없음, Package Manager에서 사용자가 직접 설치",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Client.Add 제거, 실제 Entities 선택·manifest 불변 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Pixora·Pixel Camera 샘플 경고 수정 및 공식 재검증",
+        "action": "공식 경고 판정 소스·에셋 비교 후 필요한 원본 및 빌더 수정, 실제 모델·프리팹·공식 검증기 회귀",
+        "expected": "경고 제거 또는 의도된 변환 근거와 실제 화면·정확한 잔여 경고 기록",
+        "qa": "수정 전 원본 보존→컴파일→실제 Unity 동작→회귀 및 마지막 소스/배포물 대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "대상 모델·프리팹 경고 통과. 마지막 문서 수정 이후 배포물 전체 대조는 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T08:04:53.571Z",
+        "summary": "실제 대상 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 메뉴5개 실제 실행 및 공식 메뉴명 검사4제품 Pass",
+            "evidence": "submission-compliance-20261102/verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Client.Add 제거, 실제 Entities 선택·manifest 불변 확인",
+            "evidence": "submission-compliance-20261102/verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "대상 모델·프리팹 경고 통과. 마지막 문서 수정 이후 배포물 전체 대조는 미실행",
+            "evidence": "submission-compliance-20261102/verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
