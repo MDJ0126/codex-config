@@ -1,5 +1,75 @@
 [
   {
+    "title": "Entity Forge 0.1.1-preview · 언어·검증·판매 초안",
+    "summary": "최종 패키지·실제 실행 영상·Affinity 원본과 제출 전 판매 초안 저장을 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102002826429-v1.0.0.html",
+    "date": "2026-11-02T00:28:26.429Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 0.6.1-preview · 언어·검증·판매 초안",
+    "summary": "최종 패키지·실제 실행 영상·Affinity 원본과 제출 전 판매 초안 저장을 확인했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-02-result-20261102002825728-v1.0.0.html",
+    "date": "2026-11-02T00:28:25.728Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 1.0.0 · 언어·검증·판매 초안",
+    "summary": "최종 패키지·실제 실행 영상·Affinity 원본과 제출 전 판매 초안 저장을 확인했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-02-result-20261102002825103-v1.0.0.html",
+    "date": "2026-11-02T00:28:25.103Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table 2.0.2 · 언어·검증·판매 초안",
+    "summary": "최종 패키지·실제 실행 영상·Affinity 원본과 제출 전 판매 초안 저장을 확인했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-02-result-20261102002824558-v1.0.0.html",
+    "date": "2026-11-02T00:28:24.558Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "턴룸 전역 설정 · 공통 언어와 Asset Store 업데이트 확인",
+    "summary": "전역 언어·제품 버전·스토어 확인을 한 창에 모으고 배포 목록 주소 입력을 제거했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102000759082-v1.0.0.html",
+    "date": "2026-11-02T00:07:59.082Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "새 설치 중 이전 폴더에 설정 에셋을 만들던 오류",
+    "summary": "현재 제품 경로를 사용하고 아직 가져오는 중인 기존 설정 파일을 보존합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-02-bug-20261102000558023-v1.0.0.html",
+    "date": "2026-11-02T00:05:58.023Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "선택 오브젝트 합성에서 일부 메시가 보이지 않던 문제",
+    "summary": "동일한 실제 렌더 검사에서 누락된 오브젝트가 다시 보이며 상태 복원도 통과했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-02-bug-20261102000435193-v1.0.0.html",
+    "date": "2026-11-02T00:04:35.193Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "전후 비교는 가능하면 짧은 GIF로 보고",
     "summary": "실제 화면 GIF를 우선 보여주는 선호를 전역 지침·작성 가이드에 반영했습니다.",
     "project": "codex-config",
