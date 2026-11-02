@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "file": "settings-1793598963412-open.json",
+      "at": "2026-11-02T05:56:13.1434935Z",
+      "action": "open",
+      "module": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+      "checkedAt": "2026-11-02 05:56:13Z",
+      "tooltip": "",
+      "starts": 1,
+      "busy": false,
+      "iconOnly": true,
+      "enabled": true,
+      "automaticRequested": true,
+      "width": 28,
+      "height": 28
+    },
+    {
+      "file": "settings-1793599000421-rebuild.json",
+      "at": "2026-11-02T05:56:41.1460886Z",
+      "action": "rebuild",
+      "module": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+      "checkedAt": "2026-11-02 05:56:13Z",
+      "tooltip": "",
+      "starts": 0,
+      "busy": false,
+      "iconOnly": true,
+      "enabled": true,
+      "automaticRequested": true,
+      "width": 28,
+      "height": 28
+    },
+    {
+      "file": "settings-1793599001323-arm.json",
+      "at": "2026-11-02T05:56:42.0392126Z",
+      "action": "arm",
+      "module": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+      "checkedAt": "2026-11-02 05:56:13Z",
+      "tooltip": "",
+      "starts": 0,
+      "busy": false,
+      "iconOnly": true,
+      "enabled": true,
+      "automaticRequested": true,
+      "width": 28,
+      "height": 28
+    },
+    {
+      "file": "settings-1793599066745-snapshot.json",
+      "at": "2026-11-02T05:57:47.4557253Z",
+      "action": "snapshot",
+      "module": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+      "checkedAt": "2026-11-02 05:57:45Z",
+      "tooltip": "",
+      "starts": 1,
+      "busy": false,
+      "iconOnly": true,
+      "enabled": true,
+      "automaticRequested": true,
+      "width": 28,
+      "height": 28
+    },
+    {
+      "file": "settings-1793599110935-open.json",
+      "at": "2026-11-02T05:58:33.4794380Z",
+      "action": "open",
+      "module": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+      "checkedAt": "2026-11-02 05:58:33Z",
+      "tooltip": "",
+      "starts": 1,
+      "busy": false,
+      "iconOnly": true,
+      "enabled": true,
+      "automaticRequested": true,
+      "width": 28,
+      "height": 28
+    }
+  ],
+  "manualClick": "Actual sky click on observed main-window screenshot at the refresh icon; ChangedAt advanced and exactly one request cycle observed.",
+  "capture": "Actual 620x700 Windows popup captures; unchanged JPEG bytes. Korean UI, before active title bar and after inactive title bar; no image editing.",
+  "xerj": "Failed: node data lock; used current-source rg searches instead."
+}
