@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-11-02-manual-cross-session-success-check-20261102082644709-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-02-manual-cross-session-success-check-20261102082644709-v1.0.1.md",
+    "date": "2026-11-02T08:26:44.709Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "cross-session-success-check",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "다른 세션 성공 기록 확인 지침 적용",
+      "summary": "사용 불가 판단 전 다른 세션 성공 기록을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "전역 지침·설치본·푸시·공개 배포·본문 확인 완료",
+      "proposedTime": "2~4분",
+      "actualTime": "시작 2026-11-02 17:20:37 KST · 공개 확인 17:26:17 KST (5분 40초) · 최종 메뉴얼 배포 포함 시간은 채팅에 기록",
+      "xerjEvidence": "코드 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "cross-session-success-check",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "사용자의 재지적 전에 이전 성공 절차 확인",
+      "completionCriteria": "설치본 동기화·요구 문구·빌드·푸시·공개 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-02-manual-20261102082427697-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "지침 적용과 보고서 공개",
+          "action": "설치본 동기화·요구 문구·빌드·푸시·공개 확인",
+          "expected": "설치본 동기화·요구 문구·빌드·푸시·공개 확인",
+          "qa": "해시·본문·공개 URL 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "전역 지침·설치본·푸시·공개 배포·본문 확인 완료"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-02T08:26:44.0908076Z",
+          "summary": "전역 지침 및 공개 결과 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "설치본 해시 일치·게시 내용 동일·780개 빌드·27998개 링크·배포 성공·보고서 HTTP200 및 본문 확인",
+              "evidence": "커밋 c3062443 / Actions 41412888187 / https://mdj0126.github.io/codex-config/projects/codex-config/reports/2026-11-02-result-20261102082403075-v1.0.0.html",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-11-02-manual-20261102082427697-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-11-02-manual-20261102082427697-v1.0.0.md",
     "date": "2026-11-02T08:24:27.697Z",
