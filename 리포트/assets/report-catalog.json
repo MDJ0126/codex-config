@@ -1,5 +1,25 @@
 [
   {
+    "title": "공통 창 리사이즈 입력 보강과 회귀 확인",
+    "summary": "공통 핸들의 영역·커서·제어 가드를 수정하고 정적 검사와 네이티브 QA를 구분합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102155330452-v1.0.0.html",
+    "date": "2026-11-02T15:53:30.452Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 가장자리 리사이즈 입력 영역과 커서 보강",
+    "summary": "공통 리사이즈 영역을 넓히고 방향 커서를 추가했으며 최소화·최대화 창 검색 의존을 분리했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-result-20261102155329560-v1.0.0.html",
+    "date": "2026-11-02T15:53:29.560Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
     "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
     "project": "entityforge",

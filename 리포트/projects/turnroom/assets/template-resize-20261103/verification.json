@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-02T15:52:12.794Z",
+  "checks": [
+    "eight non-overlapping mathematical perimeter regions; center excluded",
+    "8px edges and 14px corners",
+    "four resize cursor directions; cursor rectangle limited to hovered grip",
+    "floating/non-maximized guard without native minimize/maximize availability gate",
+    "seven assemblies compile; current source hashes match"
+  ],
+  "nativeMouse": "not executed: screen control prohibited",
+  "limitation": "geometry model and source checks are not a native pointer hit-test",
+  "focusChanged": false,
+  "buildExecuted": false
+}
