@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-02T10:31:03.191Z",
+  "cause": "ListView.set_bindItem synchronously refreshes old source indices while callback captured replacement filtered rows; user stack + source match",
+  "fix": "initialize callback once; resolve current itemsSource with bounds guard; source/selection update without replacing callback",
+  "filters": "left aligned All objects / Unsupported tabs",
+  "feedback": "hover tint, selected tint/left stripe, full selected path, keyboard focus and Enter/Space locating",
+  "regression": "isolated .NET model reproduced original ArgumentOutOfRangeException; stable current-source binder survived 100 alternating full/empty shrink/grow cycles and invalid indices",
+  "nativeUI": "not executed: desktop focus restriction",
+  "compilationAssemblies": 7,
+  "compiledSourceHashes": "current",
+  "uiLocaleKeys": 453,
+  "languages": 9,
+  "package": {
+    "at": "2026-11-02T10:30:29.881Z",
+    "method": "File-only standard Unity archive layout; source and metadata preserved",
+    "package": "Artifacts/EntityForge/TurnRoom-EntityForge-0.2.0-preview.unitypackage",
+    "bytes": 23779856,
+    "sha256": "f00da48ef491bd9d6db20ee52d965c0bc27844cf2af7e1b6ba1520791b826d08",
+    "assets": 388,
+    "readback": "pass",
+    "currentSources": "byte-identical",
+    "developmentExcluded": true,
+    "nativeUnityExportExecuted": false,
+    "cleanUnityImport": "not executed: separate product installation QA",
+    "createdMeta": []
+  }
+}
