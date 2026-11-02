@@ -1,0 +1,47 @@
+{
+  "dirty": false,
+  "query": "한글 English 입력 확인",
+  "maximizeRestore": true,
+  "assembly": "58587f00-4a7d-418d-bcce-6ec5f9fdc38f",
+  "checks": [
+    {
+      "case": "Native Hangul composition/edit,English switch,Backspace/Delete,select-all and clipboard",
+      "compositionAfter": "하",
+      "compositionBefore": "한",
+      "pass": true
+    }
+  ],
+  "inline": false,
+  "formula": false,
+  "objects": 2,
+  "pass": true,
+  "utc": "2026-11-01T12:30:03.2038223Z",
+  "session": "13KCOxlvZqrtcxT5Fp/w0w4YqYqj1vTyl/BoYiMR6A8=",
+  "charts": 7,
+  "burstSamples": [
+    {
+      "inputEvents": 400,
+      "injectionMs": 147.1701,
+      "totalMs": 733.1328,
+      "characters": 200,
+      "round": 1,
+      "pass": true
+    },
+    {
+      "inputEvents": 400,
+      "injectionMs": 125.3796,
+      "totalMs": 480.2767,
+      "characters": 200,
+      "round": 2,
+      "pass": true
+    },
+    {
+      "inputEvents": 400,
+      "injectionMs": 126.5098,
+      "totalMs": 587.5445,
+      "characters": 200,
+      "round": 3,
+      "pass": true
+    }
+  ]
+}

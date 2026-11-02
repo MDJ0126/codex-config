@@ -1,0 +1,15 @@
+{
+  "product": "PixelCamera",
+  "lang": "ko",
+  "at": "2026-11-02T04:35:06.019Z",
+  "url": "https://publisher.unity.com/packages/1541562/edit/translation?locale=ko-KR",
+  "passed": true,
+  "fields": [
+    "Pixel Camera",
+    "첫 프리뷰 출시",
+    "Unity 카메라에 픽셀 렌더링·팔레트 색상·외곽선을 적용합니다. 재사용 가능한 프리셋과 실시간 미리보기를 제공합니다.",
+    "3D 씬에 픽셀 스타일을 적용하고 오버레이 UI는 선명하게 유지하세요.• 전체 카메라 또는 선택한 불투명 메시 루트만 픽셀화• 픽셀 크기·팔레트·디더링·외곽선·그리드 스냅 조절• 프리셋 미리보기와 깊이·후순위 렌더링 레이어 설정• 인터랙티브 쇼케이스 씬 3개 포함Built-in과 Unity 6 / URP 17 RenderGraph용입니다. HDRP·XR은 지원하지 않습니다. 선택 오브젝트의 투명도와 사용자 지정 변형은 프로젝트별 검증이 필요합니다.",
+    "Windows의 Unity 6000.0.83f1에서 검증했습니다. Built-in 또는 URP 17 RenderGraph를 사용하며, URP에는 포함된 Pixel Camera Renderer Feature가 필요합니다.선택 오브젝트 모드는 불투명 MeshRenderer·SkinnedMeshRenderer 루트의 Pixel Camera Object 컴포넌트를 사용합니다. 추가 렌더 패스의 비용은 대상 장치에서 프로파일링하세요.팔레트 추출, LUT 베이킹, 사용자 디더 행렬, 단계식 애니메이션 도구, 9개 언어 에디터 UI·가이드를 포함합니다. 렌더링·깊이·애니메이션 제한은 동봉 가이드를 확인하세요.",
+    "OpenAI Codex가 C# 개발, 테스트, 문서, 번역과 Affinity 기반 마케팅 자료 준비를 보조했습니다. 보조 결과는 검토 후 제품에 반영했습니다. 제품의 기본 기능 실행에 AI 서비스는 필요하지 않습니다."
+  ]
+}

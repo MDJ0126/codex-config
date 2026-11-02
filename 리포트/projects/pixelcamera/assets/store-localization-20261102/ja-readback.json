@@ -1,0 +1,15 @@
+{
+  "product": "PixelCamera",
+  "lang": "ja",
+  "at": "2026-11-02T04:35:07.751Z",
+  "url": "https://publisher.unity.com/packages/1541562/edit/translation?locale=ja-JP",
+  "passed": true,
+  "fields": [
+    "Pixel Camera",
+    "初回プレビューリリース。",
+    "Unityのカメラにピクセル描画、パレット色、輪郭線を追加。再利用可能なプリセットとライブプレビューを備えています。",
+    "3Dシーンをピクセルスタイルで描画し、オーバーレイUIの鮮明さを維持します。• カメラ全体または選択した不透明メッシュのルートをピクセル化• ピクセルサイズ、パレット、ディザ、輪郭、グリッドスナップを調整• プリセットのプレビューと深度・後段描画レイヤーの設定• 操作できるショーケースシーン3個を収録Built-inおよびUnity 6 / URP 17 RenderGraph向けです。HDRPとXRは非対応。選択オブジェクトの透明描画と独自変形はプロジェクトごとの検証が必要です。",
+    "Windows、Unity 6000.0.83f1で検証。Built-inまたはURP 17 RenderGraphを使用し、URPでは同梱のPixel Camera Renderer Featureが必要です。選択モードは不透明なMeshRenderer／SkinnedMeshRendererルートのPixel Camera Objectを使用します。追加描画パスの負荷は対象機器で確認してください。パレット抽出、LUTベイク、独自ディザ行列、段階的アニメーションツール、9言語のエディターUIとガイドを収録。描画、深度、アニメーションの制限は同梱ガイドをご覧ください。",
+    "OpenAI CodexをC#開発、テスト、ドキュメント、翻訳、Affinityによる販促資料の準備に使用しました。生成内容は確認して製品に組み込みました。製品の基本機能にAIサービスは不要です。"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "전후 비교는 가능하면 짧은 GIF로 보고",
+    "summary": "실제 화면 GIF를 우선 보여주는 선호를 전역 지침·작성 가이드에 반영했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전·후 표시와 충분한 확인 시간을 두고 빠른 점멸을 피합니다. 정지 전후 사진도 함께 제공하며 가독성을 유지해 용량을 줄입니다.",
+    "verification": "지침 동기화, 723개 보고서 빌드·26,502개 링크 검사와 [공개 작성 가이드](../../../guide/index.html) 본문 확인을 마쳤습니다.",
+    "remaining": "이번 작업은 문서 변경으로 GIF를 제작하지 않았습니다. 실제 제작 시 Affinity의 지원 기능을 확인하며, 지원 제한이 있으면 이유와 정지 비교를 제공합니다. 다른 도구로 임의 대체하지 않습니다.\n\n교훈 검토: 통합 — 실제 전후 비교 기준에 GIF 우선 선호를 추가했습니다.",
+    "outcome": "앞으로 가능하면 전후 전환이나 수정 동작을 짧은 GIF로 보여드립니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "시작 2026-11-02 07:05:11 KST · 기준 공개 확인 2026-11-01T22:07:49.346Z · 최종 보고서 배포 확인 시각은 채팅에 표기",
+    "xerjEvidence": "코드 검색 불필요 — 지침·문서 수정",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}

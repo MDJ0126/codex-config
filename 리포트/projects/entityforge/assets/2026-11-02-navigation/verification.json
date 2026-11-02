@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-02T07:44:21.404Z",
+  "tabs": [
+    "tab-conversion",
+    "tab-measurements",
+    "tab-guide"
+  ],
+  "authoredNames": 32,
+  "persistentActionsResolve": true,
+  "tabSelectionContainsExternalActions": false,
+  "buildProfileShortcutRemoved": true,
+  "settingsCaption": "{ \"settings\", new[] { \"Global Settings\", \"전역 설정\", \"グローバル設定\", \"全局设置\", \"全域設定\", \"Configuración global\", \"Paramètres globaux\", \"Globale Einstellungen\", \"Configurações globais\" } },",
+  "localizationEntries": 412,
+  "languages": 9,
+  "nativeUI": "pending: user prohibits desktop focus and new GUI processes",
+  "windowClosingRootCause": "unconfirmed without native reproduction; tab path no longer invokes external actions",
+  "sourceHashes": {
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "4a374aca2e4f4ad8ae07141208c6ebb3b7a28b1f5f60d75d593d4803c9903da5",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml": "feb9048231d5b424b324bd14591a816a2d335838353fb50603c22e11aebe495d",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss": "df0cfb53a796b304b0803d5b43328fe5d6ba90656887361f1f7d64fb9aaf5d7c",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.asset": "e193b1024b4ad09c0eb7ff0d9304df35c96d5fba11b8be62f2c0a62eab0af5a0",
+    "Assets/TurnRoom/EntityForge/Editor/Localization/UI.json": "30ffea52ee4ec79563c92c691e5285026c940af42f20d59e652843ac71680ba2"
+  }
+}

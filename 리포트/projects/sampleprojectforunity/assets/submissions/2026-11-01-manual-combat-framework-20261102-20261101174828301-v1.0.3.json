@@ -1,0 +1,275 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "manual",
+    "title": "공통 전투 프레임워크·무기 전환·Unity Behavior AI 구현 및 점검",
+    "summary": "10시간은 최대 예산이며 구현과 필수 검증이 끝나면 즉시 종료합니다. 공통 전투와 실제 Unity Behavior 연결을 진행합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "그래픽 플레이어 화면·추가 AI 총기/인스턴스 격리·기존 씬/검기 회귀·최종 문서/공개 보고·임시 도구 정리",
+    "outcome": "핵심 전투·Behavior·장비 연계 구현 및34개 Play 검사 완료. 현재 그래픽 빌드와 최종 회귀·본체 분리 검증 진행.",
+    "proposedTime": "초기60~100분 예상, 최대10시간. 사용자 정정에 따라 완료 즉시 종료",
+    "actualTime": "2026-11-02 01:46:15 KST 작업 시작, 마감11:46:15 KST",
+    "xerjEvidence": "XERJ MCP와 프로젝트 검색 스크립트가 없어 rg 사용. 설치된 Behavior1.0.16 문서·소스와 현재 코드로 검증.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "combat-framework-20261102",
+    "round": 4,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "공통 무기 스왑·뽑기/수납·근접/원거리 공격·Unity Behavior 기반 AI 교전·사망과 CharacterStage 선택 연계를 간단하고 재사용 가능한 프레임워크로 구현하고 실제로 검증한다.",
+    "completionCriteria": "기존 변경 보존, 공통 API와 간소화 수치 대조, 실제 Behavior authoring/runtime 그래프 및 NavMesh 연결, Stage 선택과 Playground 장착·전투·사망·재시작, 공격/전환/입력/예외 경로 회귀와 필수 반복 실행, 실제 화면, 상세 문서·보고서·메뉴얼의 공개 배포 확인. 기한2026-11-02 11:46:15 KST 이전 필수 완료.",
+    "previousManual": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101174011275-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 구조·기준 점검",
+        "action": "코드·에셋·설치 Behavior1.0.16·프리팹·기존 QA를 조사하고 기준 파일과 스크립트 수를 기록한다.",
+        "expected": "재사용 경로와 구체적인 결함 근거, 컴파일 기준 확보",
+        "qa": "설치 문서/소스·직렬화 참조·Unity 컴파일 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "Unity6000.0.83f1 원본 컴파일 성공, 세 씬 missingScripts0. Behavior1.0.16 실제 설치·소스 확인. 자체 C#95/런타임87, 8117행 기준 기록."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "공통 소유권·상태 API 정리",
+        "action": "플레이어/AI 빙의를 분리하고 체력·공격 취소·사망·초기화 계약을 간소화한다.",
+        "expected": "AI가 카메라/PlayerInput 없이 동작, 음수 피해/중복 사망/무효 상태 안전",
+        "qa": "소유권·생명주기·체력 경계와 기존 입력 회귀",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 Play에서 카메라/입력 분리·체력 경계·사망 후 공격 거부·빙의 해제·재시작 복원 통과. 실제 Buff 소스에서 종료 중 목록 수정 예외를 재현하고 수정 후8개 검사 통과."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "무기 스왑·뽑기·수납",
+        "action": "기존 Pawn 장비 목록과 소켓을 재사용해 선택·장착·수납·공격 중 교체 정책을 연결하고 빈 클래스를 통합한다.",
+        "expected": "검/총 전환, 손·수납 위치와 단일 활성 무기, 잘못된 요청 안전",
+        "qa": "반복 교체·공격/피격 중 교체·해제·소유자 변경·시각 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 보유 검/총 선택,30회 교체 후 목록 불변, 타 소유자·무효 인덱스 거부, 손/등 수납 소켓과 공격 차단 통과."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "근접·원거리 공통 전투",
+        "action": "총 발사·조준·장애물·대미지와 기존 근접 히트박스를 공통 공격/쿨다운/사망 흐름에 연결한다.",
+        "expected": "플레이어와 AI가 동일 공격 API 사용, 사망 후 공격/피해 중단",
+        "qa": "실제 물리 충돌·총구 차폐·자가/팀 판정·중복 히트·취소/사망 회귀",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 총구 레이·장애물·아군 차폐·탄약/장전과 Behavior 근접 피해·사망 처리를 실제 Play에서 확인."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "Unity Behavior 실제 AI",
+        "action": "기존 AIController와 최소 전투 액션으로 탐색·접근·공격 그래프와 NavMesh를 연결한다.",
+        "expected": "BehaviorGraphAgent의 실제 그래프가 교전을 제어, 도달 불가/표적 소실 처리",
+        "qa": "그래프 authoring/runtime·Blackboard·탐색/접근/공격/사망·서로 다른 인스턴스 검증",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 authoring/runtime 그래프와 공유 Target으로7m 접근 후 근접 피해·승리까지 확인."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "씬·오브젝트 UI 연계",
+        "action": "CharacterStage 장비 선택·정면 미리보기와 Playground 실제 장착·교전·재시작을 연결한다.",
+        "expected": "편집 가능한 씬/프리팹 UI와 Inspector 이벤트, 공유 선택 데이터와 실제 장착 일치",
+        "qa": "Stage 왕복·선택 반영·실제 입력·메뉴/모달·전투/사망/재시작 화면",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Stage의 실제 Inspector 버튼으로 총 장착 미리보기, Playground 선택 반영, 반복 왕복과 단일 매니저 확인."
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "간소화·회귀·지속 실행",
+        "action": "관련 코드를 재검토하고 빈 클래스와 중복 상태를 제거한 뒤 실제 경계·씬 왕복·전투 반복 및 기존 기능 회귀를 수행한다. 명시적 asmdef로 역할을 분리하고 샘플·QA를 제거한 격리 복제본에서 본체 컴파일과 씬·프로젝트 설정 보존을 검증한다.",
+        "expected": "스크립트 수와 역할 전후 대조, 실제 실패 보존과 수정 후 통과, 반복 실행에서 그래프·참조 안정성",
+        "qa": "초기화·파괴·무기 교체·씬 왕복 반복, 실제 AI 교전과 사격, 기존 씬 UI 및 무기 궤적 회귀 어셈블리 의존 방향과 제거 후 본체 컴파일·설정 해시 대조.",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "doing",
+        "revision": 3,
+        "result": "본체 소스만 복제하여 Unity6000.0.83f1 Roslyn으로 Runtime/Editor 단독 컴파일 통과. 예제 Editor 메뉴까지 별도 어셈블리로 분리하고 최종 전체 빌드·회귀 진행 중."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "상세 문서·공개 결과",
+        "action": "구조·사용법·설정·수정 이유·검증과 제한을 상세 보고하고 실제 화면·메뉴얼을 공개한다.",
+        "expected": "문서 검사·임시 도구 정리·개별 보고서/첨부/최종 메뉴얼 공개 확인",
+        "qa": "소스/에셋 대조·문서/링크·스테이징 범위·푸시/배포/외부 본문/첨부 검증",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T02:16:22+09:00",
+        "summary": "원본 기준 검사 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "격리 복제본에서 원본 Unity 컴파일과 Splash/Playground/CharacterStage 누락 스크립트 검사 통과",
+            "evidence": "docs/verification/combat/baseline-editor.json; Logs/combat-baseline.log",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-02T02:26:59+09:00",
+        "summary": "전투 첫 Play 검사: 수납 소켓 누락 확인, 수정 후 재검사 진행",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "6개 검사 후 수납 부모 검증 실패. 저장 프리팹 holsterSocket fileID0 확인. 옵션 Chest 본 대신 실제 Spine 본에 저장하도록 수정 중",
+            "evidence": "docs/verification/combat/editor-1/results.json; RobotKyle.prefab holsterSocket",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-02T02:29:35+09:00",
+        "summary": "수납 수정 후 공통 상태·장비 검사 통과",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "체력·사망·빙의 해제와 초기화 실제 Play 확인; 순수 체력/버프 소스8개 검사 통과",
+            "evidence": "editor-3/results.json; pure-results.json; baseline-buff.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "손/수납 소켓, 무효·외부 장비 거부,30회 교체와 장전 취소 통과",
+            "evidence": "docs/verification/combat/editor-3/results.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-02T02:38:35+09:00",
+        "summary": "Behavior 실행 진단 실패를 보존하고 공유 블랙보드 빌드 순서 수정 중",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "실제 적 탐색은 성공하지만 접근이 진행되지 않음. 저장 runtime graph의 Target 미포함과 inline 변수 직렬화 확인. SerializeReference 및 블랙보드 버전 갱신 후 그래프 빌드 순서로 수정 중",
+            "evidence": "editor-6/results.json; editor-8/results.json; CombatBehavior.asset; 설치 패키지 GraphAssetProcessor.cs",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-02T02:40:10.1871682+09:00",
+        "summary": "공통 전투·Behavior AI·Stage 연계34개 실제 Play 통과",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 히트스캔·차폐·아군·쿨다운·장전·근접 피해·사망/복원 통과",
+            "evidence": "docs/verification/combat/editor-9/results.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "저장 그래프의 Target 공유 후 적 탐색→7m 접근→공격→사망까지 실제 실행, 오류0",
+            "evidence": "editor-9/results.json trace; CombatBehavior.asset",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Stage 직렬화 버튼·실제 장비 미리보기·다음 씬 장착 반영·반복 왕복의 단일 매니저 통과",
+            "evidence": "docs/verification/combat/editor-9/results.json",
+            "dependencies": {
+              "T05": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

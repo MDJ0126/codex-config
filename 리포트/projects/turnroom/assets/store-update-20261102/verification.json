@@ -1,0 +1,92 @@
+{
+  "at": "2026-11-01T15:46:37.012Z",
+  "logic": {
+    "passed": true,
+    "assertions": 98,
+    "nativeUnityExecuted": false,
+    "scope": "actual Store parser, fetched public body, per-product transport with isolated Unity API adapters and SemVer",
+    "at": "2026-11-01T15:37:06.549Z"
+  },
+  "native": {
+    "revision": "store-page-v1",
+    "atUtc": "2026-11-01T15:41:15.6160715Z",
+    "unity": "6000.0.83f1",
+    "moduleId": "cd23c309-d4f1-43bc-9a92-9dfb59e0ef5f",
+    "passed": true,
+    "urlFieldRemoved": true,
+    "publicBodyParsed": true,
+    "nativeRequestFinished": true,
+    "storeVersionVerified": false,
+    "storeError": "The public Store page did not contain one unambiguous latest version.",
+    "scenePreserved": true,
+    "selectionPreserved": true,
+    "foregroundPreserved": true
+  },
+  "compilation": [
+    {
+      "assembly": "DesignDataTable.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0,
+      "sourceCount": 12
+    },
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sourceCount": 42
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceCount": 7
+    },
+    {
+      "assembly": "Pixora.Editor",
+      "exitCode": 0,
+      "sourceCount": 44
+    },
+    {
+      "assembly": "DesignDataTable.Editor",
+      "exitCode": 0,
+      "sourceCount": 303
+    },
+    {
+      "assembly": "TurnRoom.Templete.Development.Editor",
+      "exitCode": 0,
+      "sourceCount": 7
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0,
+      "sourceCount": 4
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0,
+      "sourceCount": 10
+    }
+  ],
+  "capture": {
+    "at": "2026-11-01T15:45:27.909Z",
+    "method": "Read-only PrintWindow through InvokeDesignNative.ps1 capture branch",
+    "targetProcess": 2908,
+    "observedWindowTitle": "TurnRoom Settings",
+    "windowActivation": false,
+    "keyboardMouse": false,
+    "guiProcessLaunched": false,
+    "succeeded": false,
+    "error": "PrintWindow returned failure; no image produced. No focus-changing retry.",
+    "existingCaptureHashesPreserved": true
+  },
+  "registeredProductIds": {
+    "designdatatable": 263724,
+    "pixora": null,
+    "pixelcamera": null,
+    "entityforge": null
+  },
+  "otherWork": "Original overnight product/media goal remains paused",
+  "lessons": "Global instructions unchanged; public-page identity and response verification follow existing evidence rules."
+}

@@ -1,0 +1,335 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Entity Forge 제품 개발 · 빌드 시 DOTS 변환",
+    "summary": "GameObject 개발, 빌드 변환, 비교 측정 기반 예상 개선율과 Templete 제품 적용을 구현합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "요청한 지원 범위 내 남은 작업 없음. Windows/Unity 6000.0.83f1/Built-in 외 조합과 번역 UI 배치 전체는 미검증. 교훈은 Architecture.md에 통합했으며 전역 규칙은 중복 추가하지 않았습니다.",
+    "outcome": "전체 7개 작업의 구현·실제 새 설치·일반/DOTS 플레이어·개선율 UI·재시작·문서·패키지·공개 보고서 배포 및 외부 접근 검증을 완료했습니다.",
+    "proposedTime": "최초 2~4시간; 이번 새 설치·최종 QA 재개 40~70분",
+    "actualTime": "전체 필수 구현·검증 및 결과 보고서 공개 확인: 2026-11-01 21:29:39 Asia/Seoul. 시작 20:31:03부터 실제 3517초. 최종 메뉴얼 게시 확인은 마지막 전달 시각에 구분합니다.",
+    "xerjEvidence": "현재 노드 미실행, 기존 잠금 오류로 rg 및 현재 소스 대조 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "entity-forge-product",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "GameObject로 이동·회전·스폰·수명을 작성하고 빌드 결과에서 ECS/DOTS로 실행하는 독립 제품을 만듭니다.",
+    "completionCriteria": "빌드 전용 변환·지원 제외·실제 플레이어 실행·비교 측정과 예상 표시·Templete UI·Affinity 로고·샘플 10개·9개 언어 가이드·실제 화면·패키지 설치·공개 보고서 검증을 완료합니다.",
+    "previousManual": "projects/turnroom/reports/2026-11-01-manual-entity-forge-product-20261101122504590-v1.0.3.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "제품 구조와 변환 계약",
+        "action": "기존 Templete와 Unity·Entities 의존성 확인; 지원 범위와 제외 조건 정의",
+        "expected": "원본 씬 보존 및 지원 범위 확인",
+        "qa": "실제 소스·공식 패키지 메타데이터 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "계약·지원 제외와 Templete 의존성 대조"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "GameObject 기능과 DOTS 런타임",
+        "action": "이동·회전·스폰·수명과 Burst Job 처리·인스턴스 렌더링 구현",
+        "expected": "일반/변환 실행의 기능 대응",
+        "qa": "실제 Unity 컴파일·상태 및 수명 테스트",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "설치본 10개 샘플 실행·실제 기능 플레이어 26개 대조"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "빌드 변환과 참조 보존",
+        "action": "빌드 씬 복사본만 변환; 제외 이유와 빌드 실패 처리",
+        "expected": "원본 해시 불변·지원 대상만 변환",
+        "qa": "일반/DOTS 플레이어 빌드·실행 및 잘못된 입력 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "원본 씬 보존·실제 GO/DOTS 개체 수·잘못된 캐시 빌드 차단"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "성능 비교와 예상 개선율",
+        "action": "플레이어 프레임 수집·동일 조건 비교·근거 무효화",
+        "expected": "빌드 시 근거 있는 예상 또는 산정 불가 표시",
+        "qa": "실제 비교 실행·불일치/음수/잘못된 표본 거부",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "각 600개 정상 렌더링 프레임·현재 근거 UI·재시작 및 근거 사용 빌드"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "Templete 제품 UI와 로고",
+        "action": "Templete 창·Inspector·헬프박스 적용, 정적 UXML/USS 및 Inspector 이벤트 자산 작성, 실제 Affinity 로고 제작·적용",
+        "expected": "공통 디자인 및 실제 로고 표시",
+        "qa": "실제 Unity 화면·라이트/다크·Affinity 재열기 출력 대조; 실제 선택·취소·검색 Enter 바인딩 및 씬 전환 캐시 무효화 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 4,
+        "result": "편집 가능한 테마·8개 이벤트·물리 선택 입력·씬 무효화·실제 4화면·기존 Affinity 원본"
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "샘플과 다국어 문서",
+        "action": "기능·조합 샘플 10개, 9개 언어 가이드·실제 화면",
+        "expected": "설치부터 확장·문제 해결까지 문서화",
+        "qa": "샘플 실행·스크린샷 해시·문서 링크 확인",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "10개 설치 샘플·9개 언어 가이드·171개 로컬 링크·현재 캡처 해시"
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "제품 패키지와 최종 QA·공개 보고",
+        "action": "개발 파일 제외 패키지 생성·새 프로젝트 설치·보고서 게시",
+        "expected": "설치·동작·보고서 외부 접근 성공",
+        "qa": "원본과 빌드 대조·회귀 QA·공개 URL 본문 확인",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "네이티브 패키지 325파일·설치본 650개 대조, Pages 803f65e 배포 성공 및 개별 본문/실행 화면/첨부 HTTP 200 확인"
+      }
+    ],
+    "focusTasks": [
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "scopeChange": "원래 7개 작업과 이전 QA를 보존합니다. 새 승인으로 GUI 보류를 해제하고 T05 revision 3에서 창 재발 수정과 남은 이벤트·표시 검증을 포함합니다. T05 revision 4는 제품 고유 테마, 프리팹 컴포넌트 선택, 씬 분석 무효화와 실제 입력 대조를 포함합니다. 전체 7개 완료 기준과 이전 QA를 보존합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T09:26:28.661Z",
+        "summary": "Templete 1.5.0 API와 Unity 6000.0.83f1·Entities 1.3.15 및 지원 범위를 실제 소스·공식 패키지에서 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Templete 1.5.0 API와 Unity 6000.0.83f1·Entities 1.3.15 및 지원 범위를 실제 소스·공식 패키지에서 대조했습니다.",
+            "evidence": "현재 소스 및 공식 Entities 1.3.15 메타데이터",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-01T09:26:28.661Z",
+        "summary": "실제 Unity에서 이동·네이티브 회전 대조·일괄/시간제 스폰·수명 및 안전 검사와 10개 샘플의 원본 보존 검사가 통과했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Unity에서 이동·네이티브 회전 대조·일괄/시간제 스폰·수명 및 안전 검사와 10개 샘플의 원본 보존 검사가 통과했습니다.",
+            "evidence": "Unity 실제 실행 로그의 FORGE PASS 및 플레이어 빌드·실행 기록",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-01T09:26:28.661Z",
+        "summary": "일반/변환 Windows 플레이어 빌드 성공. 씬 캐시 문제를 재현하고 CleanBuildCache 및 잘못된 빌드 차단으로 보호했으며 실제 개체 수로 변환을 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "일반/변환 Windows 플레이어 빌드 성공. 씬 캐시 문제를 재현하고 CleanBuildCache 및 잘못된 빌드 차단으로 보호했으며 실제 개체 수로 변환을 확인했습니다.",
+            "evidence": "Unity 실제 실행 로그의 FORGE PASS 및 플레이어 빌드·실행 기록",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-01T09:26:28.661Z",
+        "summary": "정상 렌더링 플레이어에서 각 600프레임과 10,000개 개체를 비교하고 원시 평균·동일 입력·현재 지문 대조와 예상 에셋 저장이 통과했습니다.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "정상 렌더링 플레이어에서 각 600프레임과 10,000개 개체를 비교하고 원시 평균·동일 입력·현재 지문 대조와 예상 에셋 저장이 통과했습니다.",
+            "evidence": "실제 비교 JSON·런타임 개체 수·paired-estimate valid=True 및 보존 로그",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-01T09:26:28.661Z",
+        "summary": "사용자 데스크톱 사용으로 실제 UI 검증 보류",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 2,
+            "verdict": "blocked",
+            "actual": "로고 PNG 및 실제 Affinity 저장·닫기·재열기 출력 동일성 검증 완료. UXML/USS·Inspector 이벤트 8개·정적 컴파일 완료. 사용자 화면 사용 금지로 실제 UI·이벤트 호출 검증 보류.",
+            "evidence": "명시적 화면 조작 금지. ScreenshotManifest는 pending과 빈 캡처 목록을 유지합니다.",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "regression",
+        "at": "2026-11-01T12:24:56.516Z",
+        "summary": "설치본 최신 UI·실제 입력·문서와 패키지 회귀 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 4,
+            "verdict": "pass",
+            "actual": "편집 가능한 테마·8개 이벤트·물리 선택 입력·씬 무효화·실제 4화면·기존 Affinity 원본",
+            "evidence": "clean-install/core.json; Functional/verification.json; estimate-ui.json; reopened-estimate.json; estimated-build.json; native-input-final.json; ScreenshotManifest.json; installed-package-readback.json",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "10개 설치 샘플·9개 언어 가이드·171개 로컬 링크·현재 캡처 해시",
+            "evidence": "clean-install/core.json; Functional/verification.json; estimate-ui.json; reopened-estimate.json; estimated-build.json; native-input-final.json; ScreenshotManifest.json; installed-package-readback.json",
+            "dependencies": {
+              "T05": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "final",
+        "at": "2026-11-01T12:29:39.725Z",
+        "summary": "원래 전체 7개 작업의 현재 버전 최종 QA 통과 및 공개 배포 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "계약·지원 제외와 Templete 의존성 대조",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "설치본 10개 샘플 실행·실제 기능 플레이어 26개 대조",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 씬 보존·실제 GO/DOTS 개체 수·잘못된 캐시 빌드 차단",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "각 600개 정상 렌더링 프레임·현재 근거 UI·재시작 및 근거 사용 빌드",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 4,
+            "verdict": "pass",
+            "actual": "편집 가능한 테마·8개 이벤트·물리 선택 입력·씬 무효화·실제 4화면·기존 Affinity 원본",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "10개 설치 샘플·9개 언어 가이드·171개 로컬 링크·현재 캡처 해시",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T05": 4
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "네이티브 패키지 325파일·설치본 650개 대조, Pages 803f65e 배포 성공 및 개별 본문/실행 화면/첨부 HTTP 200 확인",
+            "evidence": "clean-install/core.json (42); Functional/verification.json (26); final-measurement.json (600 samples each, 70.7799%); reopened-estimate.json; estimated-build.json; build-estimate-line.txt; native-input-final.json; current ScreenshotManifest.json; installed-package-readback.json; public-verification.json — https://mdj0126.github.io/codex-config/projects/entityforge/reports/2026-11-01-result-20261101122527634-v1.0.0.html",
+            "dependencies": {
+              "T06": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

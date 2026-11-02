@@ -1,0 +1,98 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "전역 설정 새로고침 버튼과 자동1회 확인",
+    "summary": "구현과 실제 Unity QA·9개 언어 안내 갱신 완료",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공개 Asset Store 메타데이터를 가져오지 못한 제품은 기존처럼 확인 불가로 표시합니다. 자동 요청 실행은 공개 버전 조회 성공을 보장하지 않습니다. 모든 언어·명암·DPI 조합의 시각 검증은 하지 않았습니다. 이번 소스 변경은 기존 판매 초안의 업로드 패키지에 재반영하지 않았으므로 최종 제출 전 재포장·대조가 필요합니다.\n\n초기 PrintWindow 캡처 실패는 보존했고 실제 computer-use의 창 캡처로 대체했습니다. 기본 Python 실행 별칭 실패와 문서 파일 잠금은 실제 설치 Python 및 임시 파일 교체 방식으로 해결해 재검사했습니다. 교훈 검토: 기존 산출물 대조·오류 근거·화면 캡처 규칙으로 충분해 전역 지침 변경 없음.",
+    "outcome": "Unity6000.0.83f1에서 컴파일·실제 자동 확인·재그리기 중복 방지·실제 아이콘 클릭을 검증했습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "실제 9분 44초, 구현·검증 확인 2026-11-02 15:01:42 KST. 시작2026-11-02 14:51:59 KST. 공개 배포 확인은 이후 별도 수행합니다.",
+    "xerjEvidence": "Status는 node not running, Search 시작은 data directory lock으로 실패했습니다. 기존 잠금을 삭제하거나 프로세스를 종료하지 않고 rg로 현재 소스·UXML·USS를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "settings-refresh-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "전역 설정을 아이콘 버튼으로 정리하고 창을 열 때 자동1회 확인",
+    "completionCriteria": "실제 로드된 코드에서 자동1회·중복 방지·마우스 수동 새로고침, 전후 실제 화면 및9개 언어 안내 검사",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "설정 UI와 창별 자동 요청 구현",
+        "action": "현재 소스·UXML확인→아이콘 배치→창별 실행 가드→실제 Unity 컴파일",
+        "expected": "28px 아이콘과 자동1회 확인",
+        "qa": "실제 모듈·버튼 치수·아이콘·열기/재그리기 요청 수 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "자동1회·3회 재그리기0회·28px 아이콘 검증"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 입력·재열기와 문서 검증",
+        "action": "실제 아이콘 클릭→다시 열기→캡처→9개 언어 안내 갱신·링크 검사",
+        "expected": "수동1회와 재열기1회, 실제 전후 화면과9개 언어 안내",
+        "qa": "실제 클릭 후 요청 수·확인 시각 대조, 문서 생성·검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 클릭1회·재열기1회·9언어57이미지 오류0·45링크 검사"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-02T06:01:42.607Z",
+        "summary": "실제 Unity 실행과 현재 문서 전체 최종 QA",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "두 번의 새 창에서 각1회, 추가 재그리기0회",
+            "evidence": "settings-refresh-20261102/native-checks.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 클릭1회, 재열기1회,9개언어 문서와45개링크 검사",
+            "evidence": "실제 전후620x700캡처 및 BuildLocalizedDocs.py / VerifyLocalizedDocs.py 실행 결과",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

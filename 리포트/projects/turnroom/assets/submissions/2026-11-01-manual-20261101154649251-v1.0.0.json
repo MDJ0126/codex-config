@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Store 직접 업데이트 확인과 주소 없는 전역 설정",
+    "summary": "배포 목록 주소 입력·요청을 제거하고 제품별 Unity Asset Store 공개 페이지의 버전을 직접 확인하도록 변경했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Store ID가 확인되지 않은3개 제품은 등록 ID를 확정한 뒤 조회할 수 있습니다. Store 사이트 형식·공개 접근이 바뀌면 확인 불가로 처리되며 공개 버전을 추측하지 않습니다. 실제 화면 캡처·물리 입력·전체 언어 배치 검증은 미완료입니다. 자동 컴파일 설정·마우스/키보드·창 활성화·GUI 신규 실행을 하지 않았습니다. 교훈 검토: 전역 지침 변경 없음. 실제 응답을 검증하는 기존 원칙으로 처리했습니다.",
+    "outcome": "Templete1.7.1에 주소 없는 Store 업데이트 확인을 구현했습니다. 현재 확인된 등록 ID만 조회하며 Templete는 제품과 함께 제공, ID가 없는 제품은 등록 정보 없음으로 표시합니다. 이전4개 제품·영상 작업은 일시정지 상태를 유지합니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-02 00:29:49 KST 시작. 00:45:28 KST까지 구현·정적/격리·Unity 내부 검증 완료(15분39초). 공개 보고서 배포 확인은 이어서 수행합니다. 실제 화면 캡처는 실패하여 미검증입니다.",
+    "xerjEvidence": "기존 설정 소스·공식 Store 공개 응답과 로컬 설정 파일을 직접 대조했습니다. XERJ 서버는 이전 확인에서 미실행 상태이며 이번 작업에서는 호출하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-store-update-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "배포 목록 주소를 제거하고 각 제품의 Store 공개 버전을 직접 확인합니다.",
+    "completionCriteria": "주소 입력·별도 서버 요청 제거, 제품 ID 검증, 제품별 상태·오류·버전 비교, 현재 코드·문서·실제 UI 검증과 공개 보고를 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "주소 없는 Store 업데이트 확인",
+        "action": "기존 주소 필드·요청을 제거하고 공개 제품 ID·버전 검사와 상태 UI·9개 언어 안내를 수정한 뒤 정적·격리·Unity 내부·실제 화면을 검증합니다.",
+        "expected": "제품별 공개 버전을 검증하며 미등록·실패·모호함을 최신으로 표시하지 않습니다.",
+        "qa": "실제 공개 HTML,98개 로직 검사,9개 어셈블리,실제 JsonUtility·UXML·비동기 요청·포커스 보존,현재 화면과 공개 보고를 대조합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "구현·정적/격리·실제 Unity 내부 검증 통과. 비활성 캡처는 실패했고 현재 화면·물리 입력 검증은 미완료."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-01T15:46:37.028Z",
+        "summary": "코드·실제 응답·Unity 내부 검증을 수행했으며 실제 새 캡처는 실패했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "코드·로직·Native 내부 검증은 통과, 실제 화면 검증은 미실행.",
+            "evidence": "../assets/store-update-20261102/verification.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

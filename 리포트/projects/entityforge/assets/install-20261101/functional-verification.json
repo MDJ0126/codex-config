@@ -1,0 +1,111 @@
+{
+  "at": "2026-11-01T11:54:47.441Z",
+  "passed": true,
+  "checks": [
+    {
+      "label": "Correct rendered player variants",
+      "passed": true
+    },
+    {
+      "label": "Same permanent population at frame 10",
+      "passed": true
+    },
+    {
+      "label": "Actual GO/entity conversion at frame 10",
+      "passed": true
+    },
+    {
+      "label": "Burst/timed spawn and lifetime counts match at frame 10",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic movement at frame 10",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic local rotation at frame 10",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic movement at frame 10",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic local rotation at frame 10",
+      "passed": true
+    },
+    {
+      "label": "Paired transform equivalence at frame 10",
+      "passed": true
+    },
+    {
+      "label": "Same permanent population at frame 30",
+      "passed": true
+    },
+    {
+      "label": "Actual GO/entity conversion at frame 30",
+      "passed": true
+    },
+    {
+      "label": "Burst/timed spawn and lifetime counts match at frame 30",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic movement at frame 30",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic local rotation at frame 30",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic movement at frame 30",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic local rotation at frame 30",
+      "passed": true
+    },
+    {
+      "label": "Paired transform equivalence at frame 30",
+      "passed": true
+    },
+    {
+      "label": "Same permanent population at frame 90",
+      "passed": true
+    },
+    {
+      "label": "Actual GO/entity conversion at frame 90",
+      "passed": true
+    },
+    {
+      "label": "Burst/timed spawn and lifetime counts match at frame 90",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic movement at frame 90",
+      "passed": true
+    },
+    {
+      "label": "GameObject analytic local rotation at frame 90",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic movement at frame 90",
+      "passed": true
+    },
+    {
+      "label": "DOTS analytic local rotation at frame 90",
+      "passed": true
+    },
+    {
+      "label": "Paired transform equivalence at frame 90",
+      "passed": true
+    },
+    {
+      "label": "All 26 finite spawns expired without respawning",
+      "passed": true
+    }
+  ],
+  "scope": "Actual normal rendered release players from a native package installed in a fresh project; fixed captureFramerate simulation for deterministic functional comparison, not used for performance measurement."
+}

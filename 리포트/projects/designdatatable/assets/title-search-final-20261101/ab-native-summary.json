@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "inline": false,
+      "injectionMs": 121.5558,
+      "totalMs": 21989.9716,
+      "mode": "imgui",
+      "length": 200,
+      "dirty": false,
+      "session": "13KCOxlvZqrtcxT5Fp/w0w4YqYqj1vTyl/BoYiMR6A8=",
+      "pass": true,
+      "assembly": "57c7d9f9-e504-48d9-9783-2b926f40bda4",
+      "formula": false
+    },
+    {
+      "inline": false,
+      "injectionMs": 151.9101,
+      "totalMs": 757.6859,
+      "mode": "retained",
+      "length": 200,
+      "dirty": false,
+      "session": "13KCOxlvZqrtcxT5Fp/w0w4YqYqj1vTyl/BoYiMR6A8=",
+      "pass": true,
+      "assembly": "57c7d9f9-e504-48d9-9783-2b926f40bda4",
+      "formula": false
+    }
+  ],
+  "pass": true,
+  "utc": "2026-11-01T11:52:59.8512575Z",
+  "method": "Same process,source,English mode,and400 Win32 physical keyboard events in one SendInput call"
+}

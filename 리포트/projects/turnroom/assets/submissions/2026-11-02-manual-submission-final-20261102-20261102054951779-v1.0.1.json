@@ -1,0 +1,140 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "4개 제품 제출 전 최종 점검",
+    "summary": "제출 전 검토 완료·제출 보류. 최신 패키지는 재업로드했으며 공통 메뉴·Forge 외부 설치 코드 수정이 필요합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "제품 제출 전: 공통 메뉴 위치2.5.1.a, Forge 외부 UPM 코드 설치2.5.1.e 수정, 모델·프리팹 및 줄바꿈 경고 점검, 포털 파일 집계 재확인. 최종 Submit 미실행. 교훈은 기존 산출물 대조 규칙에 통합·푸시.",
+    "outcome": "제출 전 검토 완료·제출 보류. 최신 패키지는 재업로드했으며 공통 메뉴·Forge 외부 설치 코드 수정이 필요합니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "최종 검토 46분 58초, 확인 2026-11-02 14:49:51 KST. 최초10~20분 예상 초과: 재포장·새 설치·재업로드와 공식 정책 경고 대조·공개 배포 확인.",
+    "xerjEvidence": "TitleNameLeft 검색 후 현재3개 파일과 기존 패키지 hash 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "submission-final-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "4개 판매 초안과 실제 업로드 패키지의 마지막 누락을 검사·수정하고 제출 가능 여부를 확인합니다.",
+    "completionCriteria": "최신 공통 수정 포함 패키지·새 설치·SDK 업로드, 실제 포털 필드/번역/미디어/의존성/버전/가격 점검, 제출 미실행, 푸시·공개 보고",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102050841033-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "최신 패키지 반영과 검증",
+        "action": "이전 패키지 보존→최신3파일 포함 재포장→해시 고정→새 설치→SDK 업로드",
+        "expected": "4개 패키지 모두 최신 공통 소스 일치와 설치·업로드 성공",
+        "qa": "패키지 내부 전 파일/meta hash, 새 Unity12검사, SDK receipt hash 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "누락된 공통3파일 포함 재포장, 전파일/meta 대조, 새 설치15검사와4개 SDK hash 대조 통과. 최초 manifest 잠금 오류 기록 보존."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "판매 초안 최종 점검과 전달",
+        "action": "4개 초안의 설명·번역·미디어·의존성·버전·가격·경고와 공개 보고를 대조",
+        "expected": "누락 해결 또는 미확인 상태를 구분한 제출 가능 판정",
+        "qa": "실제 포털 저장값·파일 집계·제출 버튼·공개 URL 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 판매 초안·번역72필드·확정가격·미디어·공식116검사 점검. 오류0·경고18, 정책 수정2종과 포털 집계 미완료를 구분해 제출 보류 판정. 공개4보고서 및 첨부 검증."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T05:37:24.390Z",
+        "summary": "초기 누락과 export 명령 실패 보존",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존 패키지 공통3파일 누락; 재수출 마지막 manifest 덮어쓰기 Win32 1224 오류",
+            "evidence": "source-package-differences.json / export-native.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-02T05:49:51.350Z",
+        "summary": "산출물의 실제 결과 및 공개 보고 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "누락된 공통3파일 포함 재포장, 전파일/meta 대조, 새 설치15검사와4개 SDK hash 대조 통과. 최초 manifest 잠금 오류 기록 보존.",
+            "evidence": "package-audit.json / native-package-install.json / uploads-final.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 판매 초안·번역72필드·확정가격·미디어·공식116검사 점검. 오류0·경고18, 정책 수정2종과 포털 집계 미완료를 구분해 제출 보류 판정. 공개4보고서 및 첨부 검증.",
+            "evidence": "official-validation.json / submission-findings.json / public-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-11-02T05:49:51.419Z",
+        "summary": "전체 최종 검토 완료. 제품 제출 승인이나 정책 수정 완료를 의미하지 않습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "누락된 공통3파일 포함 재포장, 전파일/meta 대조, 새 설치15검사와4개 SDK hash 대조 통과. 최초 manifest 잠금 오류 기록 보존.",
+            "evidence": "installed-final-readback.json / git-chunk-readback.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 판매 초안·번역72필드·확정가격·미디어·공식116검사 점검. 오류0·경고18, 정책 수정2종과 포털 집계 미완료를 구분해 제출 보류 판정. 공개4보고서 및 첨부 검증.",
+            "evidence": "portal-final-counts.json / pricing-confirmed.json / public-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

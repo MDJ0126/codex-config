@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "4개 판매 페이지 번역과 Entity Forge 성능 수치 보강",
+    "summary": "포털의 한국어·일본어·중국어 누락을 채우고 실측 성능 설명을 보강합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "30~60분",
+    "actualTime": "시작2026-11-02 13:15:15 KST",
+    "xerjEvidence": "TemplateTextCatalog XERJ 검색 후 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "store-localization-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "판매 페이지 번역 누락과 제품 UI 미반영 범위를 확인·수정합니다.",
+    "completionCriteria": "4개 제품 포털 지원 번역 저장·재열기, Entity Forge 원시 측정 검증과 수치 반영, UI 누락 범위 점검·수정, 푸시·공개 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실측 수치와 누락 확인",
+        "action": "원시600프레임 쌍과 포털 현 상태를 확인",
+        "expected": "검증된 수치·환경과 실제 누락 목록",
+        "qa": "원시 프레임 평균 재계산과 포털 원문 읽기",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "4개 제품 판매 번역 저장",
+        "action": "한국어·일본어·중국어로 핵심 필드 작성·저장·재열기",
+        "expected": "12개 번역의 값이 저장돼 유지됨",
+        "qa": "언어별 제목·요약·설명·기술정보를 읽어 원문과 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "제품 UI 점검과 전달",
+        "action": "언어 반영 누락 범위 점검·수정 및 보고·푸시",
+        "expected": "확인된 누락 해결과 검증 근거 공개",
+        "qa": "실제 제품 UI·번역 무결성 검사·외부 보고 접근",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

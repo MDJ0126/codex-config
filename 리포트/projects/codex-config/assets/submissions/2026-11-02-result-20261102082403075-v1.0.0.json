@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "스킬·연결 사용 불가 판단 전 다른 세션 확인",
+    "summary": "사용자 재지적 전에 이전 세션의 성공 절차를 확인하도록 전역 지침에 추가했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "다른 세션의 실제 성공 기록·도구·설정·명령·복구 절차를 먼저 확인하고 현재 환경에서 검증·재사용합니다. 접근 제한은 명시하되 확인 전 불가능으로 단정하지 않습니다. 교훈 검토: 추가 — 사용자의 명시적 요구, 모든 스킬·도구·연결에 적용.",
+    "verification": "설치본과 저장소 AGENTS.md SHA-256 일치. 기존 지침 대조 후 요구 문구 1개 추가. 문서 변경이므로 실제 실행 화면 없음.",
+    "remaining": "이미 실행 중인 다른 세션의 자동 반영은 검증하지 않았습니다. 공개 배포 결과는 최종 채팅에서 확인합니다.",
+    "outcome": "전역 지침과 설치본 반영·해시 일치 확인",
+    "proposedTime": "2~4분",
+    "actualTime": "시작 2026-11-02 17:20:37 KST · 지침 적용 및 보고서 작성 2026-11-02T17:23:55.8877586+09:00 · 배포 포함 총시간은 최종 채팅에 기록",
+    "xerjEvidence": "코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}

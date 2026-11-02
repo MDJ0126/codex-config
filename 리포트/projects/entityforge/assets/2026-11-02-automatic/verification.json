@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-02T07:27:17.100Z",
+  "assemblies": [
+    {
+      "name": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Dots",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.EntityForge.Development.Editor",
+      "exitCode": 0
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+      "objects": 1085,
+      "uniqueIds": true,
+      "sha256": "dcd27e7f5aa73bcb0d947d1ec05c38e8a9ae63b7aa40bbf6cc4364b90fe3a4f7"
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+      "objects": 733,
+      "uniqueIds": true,
+      "sha256": "970ad1375ad0a5c0fc4f72d8b34155fe0da1db4bbd85fab2d6762bb9d30f71e9"
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+      "objects": 981,
+      "uniqueIds": true,
+      "sha256": "3d50bd047acb709eb7dc1c44baf8286b1d5541aa738f8423ddb82a909f1a0c86"
+    }
+  ],
+  "localizationEntries": 403,
+  "languages": 9,
+  "localLinksAndImages": 126,
+  "nativeUnityBuild": "pending: user prohibits GUI process launch/focus",
+  "performance": "unmeasured for automatic proxy mode",
+  "screenshots": "historical only; recapture pending",
+  "sourceModel": "actual Blender 5.2.3 LTS editable blend and rendered preview",
+  "globalInstructions": "No new global rule: existing focus and artifact-freeze rules cover this task."
+}

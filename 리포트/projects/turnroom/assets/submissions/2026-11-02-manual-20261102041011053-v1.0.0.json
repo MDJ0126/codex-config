@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "아이콘 없는 공통 제목줄 여백",
+    "summary": "빈 아이콘 영역을 제거하고 아이콘 있는 창의 배치를 보존합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-02 13:02:55 KST 시작",
+    "xerjEvidence": "권한 있는 실행으로 TitleNameLeft 검색 성공, 현재 소스와 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "title-without-icon-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기본 프레임에서 아이콘 없는 창의 제목을 왼쪽으로 당깁니다.",
+    "completionCriteria": "공통 코드 수정, 실제 Unity 전후 캡처와 아이콘 창 회귀 확인, 커밋·푸시·공개 보고서 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 여백 수정과 실제 화면 검증",
+        "action": "null 아이콘 계약과 공통 좌표를 수정한 뒤 전역 설정·아이콘 창을 실제 비교합니다.",
+        "expected": "아이콘 없음 제목12px, 아이콘 있음 기존 좌표 유지",
+        "qa": "실제 Unity 로드 모듈과 제목 bounds, 전후 캡처·아이콘 창 배치를 확인합니다.",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

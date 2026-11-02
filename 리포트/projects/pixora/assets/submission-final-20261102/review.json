@@ -1,0 +1,284 @@
+{
+  "at": "2026-11-02T05:41:48.777Z",
+  "reviewComplete": true,
+  "readyToSubmit": false,
+  "product": "Pixora",
+  "package": {
+    "file": "Artifacts/TurnRoomPackages/TurnRoom-Pixora.unitypackage",
+    "bytes": 19894558,
+    "sha256": "1fd35dbbc0f03aa2100e7706ff257dd49ab659ccb3038ad1489ad251fd0bb8f7",
+    "files": 1866,
+    "sourceAndMetadataReadback": true,
+    "developmentExcluded": true
+  },
+  "nativeSharedChecks": 15,
+  "official": {
+    "product": "Pixora",
+    "category": "Tools/Painting",
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 23,
+    "warning": 6,
+    "fail": 0,
+    "tests": [
+      {
+        "title": "Check Audio Clipping",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Colliders",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Compressed Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following archives of allowed format were found in the package content.\\nPlease make sure they adhere to the nested archive guidelines:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-99d0f08b5dcd0df4d936e0b81528d045-102900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Demo Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a4143a52dd96f1a438735b211e3a9927-102900000-0\",\"GlobalObjectId_V1-1-0a66334d4ba29564c960fff0a347da35-102900000-0\",\"GlobalObjectId_V1-1-67aa9d3571457794084f05380d9dc1d4-102900000-0\",\"GlobalObjectId_V1-1-78a373089cc4ccb4e9e3645e763521b7-102900000-0\",\"GlobalObjectId_V1-1-ff0b607cc70294144b6e9298713729e5-102900000-0\",\"GlobalObjectId_V1-1-fee3e2f2d4fc5e84da575857231e88e7-102900000-0\",\"GlobalObjectId_V1-1-c30e028d8a4bf92459efd7bf5c0343f2-102900000-0\",\"GlobalObjectId_V1-1-f227b796e40eb2b42ba0d2a26e83672b-102900000-0\",\"GlobalObjectId_V1-1-ba8eef969b82ffb4d9ffc409345c91de-102900000-0\",\"GlobalObjectId_V1-1-94d03b4bfbf35714f9ae28e94a809114-102900000-0\",\"GlobalObjectId_V1-1-65c2f588381889646956ebe7f512d5c1-102900000-0\",\"GlobalObjectId_V1-1-5f5937f93582fb2498bc0af8e7504a92-102900000-0\",\"GlobalObjectId_V1-1-6276de82bb9153c4598304ed99a93741-102900000-0\",\"GlobalObjectId_V1-1-4f6c87fbb1c86684286be2a1876e2734-102900000-0\",\"GlobalObjectId_V1-1-58b82b5edc3fb3d45922256a3fdd7239-102900000-0\",\"GlobalObjectId_V1-1-33a43aae9aa96dd45b60bd6e11350566-102900000-0\",\"GlobalObjectId_V1-1-840a691d51cb5044db114554d3975e76-102900000-0\",\"GlobalObjectId_V1-1-3cc9ba2ae0c9f7d41949b16b6aece5d3-102900000-0\",\"GlobalObjectId_V1-1-13b32e8422b941047aa1ff7b41648d7a-102900000-0\",\"GlobalObjectId_V1-1-1da912946fc6e734dae89bccb4c3ad89-102900000-0\",\"GlobalObjectId_V1-1-e4f0c67d93a9935468dd7577affd8205-102900000-0\",\"GlobalObjectId_V1-1-53368d8fa1784014c9acc7b4a2ae72af-102900000-0\",\"GlobalObjectId_V1-1-58441c40b07de0a4883b30461a29831d-102900000-0\",\"GlobalObjectId_V1-1-8e6829d3ec431ad46859f7ef3907bcef-102900000-0\",\"GlobalObjectId_V1-1-165eb7ce8d7c55f46b7a7a6c23239b3b-102900000-0\",\"GlobalObjectId_V1-1-fe58359571ff11342b9206dc2cc5e7bd-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Documentation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-cb38eab14c5f9cb45896f05e6528a652-4900000-0\",\"GlobalObjectId_V1-1-456f4ea9fbe713943a72508c630351c7-4900000-0\",\"GlobalObjectId_V1-1-e18c83feba80f4141a7a8826dea7d8c5-4900000-0\",\"GlobalObjectId_V1-1-38c6d303146b1dc4990e2ef73bf97ef9-4900000-0\",\"GlobalObjectId_V1-1-08a352f7c6ed20245bddb9c7fb174985-4900000-0\",\"GlobalObjectId_V1-1-57d60ad62581b4347a2da8178d77ce8e-4900000-0\",\"GlobalObjectId_V1-1-268ec4cc06d48d5439bd79695089db0a-4900000-0\",\"GlobalObjectId_V1-1-5daf99d907464c540b9bfc454620442b-4900000-0\",\"GlobalObjectId_V1-1-0c9af9694624b2341ad23577e803590f-4900000-0\",\"GlobalObjectId_V1-1-3f51b1d0c964efe41a6b4131d9d69699-4900000-0\",\"GlobalObjectId_V1-1-cf1a0529fb4032f448c5fec5a7cda1f6-4900000-0\",\"GlobalObjectId_V1-1-4cb00e298d02ab2489a2c21bc9771c71-4900000-0\",\"GlobalObjectId_V1-1-38b231f9d172ffa40a8bf5c932bebd4c-4900000-0\",\"GlobalObjectId_V1-1-dcb491c8af976f141aa3462c6901d9f8-4900000-0\",\"GlobalObjectId_V1-1-ea9acc13b1349d7469fd6256401b014a-4900000-0\",\"GlobalObjectId_V1-1-fd801adeb3f783f4797ecaf4d127b1be-4900000-0\",\"GlobalObjectId_V1-1-a5dfb19b53778004e8392ce93ee3cce1-4900000-0\",\"GlobalObjectId_V1-1-7d69dfeb9b9f8a14ea81c48f8e0d2aec-4900000-0\",\"GlobalObjectId_V1-1-2c74522bd55311c43bd0675df982f7ed-4900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Empty Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check File Menu Names",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts contain invalid MenuItem names:\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Settings'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c5ebd3925ea2e7b4bc16253143a377a1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Install Product Package...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-08367390f6ec42469b3146911f90104e-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-0df6034f27b54d1a87d8c6a96ee6b1af-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-288ddc2dc47fe0040ac4030a577ffce0-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Windows'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a678591c6996d714eb6c39dfe63c7b6a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Product Settings'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-8fe6b3a511969164898c2d69868c11fb-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Examples/Step-by-step Guide %#F7'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-123bf4465ab872f46bf3b4c3026a0293-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Pixora/Rebuild Usage Examples'\\n(for method 'Build')\\n\\n'TurnRoom/Development/Pixora/Rebuild Ten Example Scenes'\\n(for method 'RebuildScenes')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-d0303e57c074edf459c1afd1bc66ddae-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-3c7efa11e4ce1334eb9ae5f710e139d1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-46c76eb8bc5a7034497c2624a5ad8e3a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-708e2bc8524a4a84952dcdceb2a0f6be-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-1ab489cd9e2b5b5408b560e65a9be403-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a7cb29dd4df549f4eaa384187535089e-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Duplicate Studio'\\n(for method 'DuplicateActiveStudio')\\n\\n'TurnRoom/Pixora/Restore Saved Work'\\n(for method 'RestoreSavedWork')\\n\\n'TurnRoom/Pixora/Studio %#F5'\\n(for method 'Open')\\n\\n'TurnRoom/Pixora/New Studio'\\n(for method 'OpenNewStudio')\\n\\n'TurnRoom/Pixora/Examples/Image Demo'\\n(for method 'OpenDemo')\\n\\n'TurnRoom/Pixora/Examples/Tone Matching Demo %#F11'\\n(for method 'OpenToneDemo')\\n\\n'TurnRoom/Pixora/Documentation'\\n(for method 'OpenDocumentation')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-38481e8f3bfd43c284af5ef5736e2d41-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Examples/Walking Sprite Demo %#F8'\\n(for method 'OpenWalkingDemo')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-72b7b7f38c8649c45af6fda32d3523c4-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Pixora/Build Step-by-step Sample Scenes'\\n(for method 'Build')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-384cdb12f6cb40b38044bfb657e8be12-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Pixora/Examples/Sample Scenes'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-21c43ba9a79042f1a7b8a816f068d31a-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Line Endings",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\",\"GlobalObjectId_V1-1-ba8ab31f8c4cfb74e988a477b1d16f00-11500000-0\",\"GlobalObjectId_V1-1-126c3811f54a477baacb66ebf719a37a-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-46c76eb8bc5a7034497c2624a5ad8e3a-11500000-0\",\"GlobalObjectId_V1-1-73d4065b28604b608343cf15eccb3d42-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check LODs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Mesh Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Assets",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Orientation",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following models have incorrect rotation\",\"MessageObjects\":[\"GlobalObjectId_V1-1-ea9386da846aed5428811c3c14fa1579-919132149155446097-0\",\"GlobalObjectId_V1-1-274be65a232573e4398806e4f985ca1a-919132149155446097-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Types",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Normal Map Textures",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Particle Systems",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Path Lengths",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Prefab Transforms",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following prefabs' transforms do not fit the requirements\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c30809350dd43904bad4e466623fa697-3532502833293090360-0\",\"GlobalObjectId_V1-1-b9f59ba415b933d468a70a5522b61f74-33503299005557383-0\",\"GlobalObjectId_V1-1-aaaadf1499b153b44827a59cf4be64b4-3688394238114099099-0\",\"GlobalObjectId_V1-1-bf129177892bb4f42ace6f473016f570-7149494407460420894-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Script Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Shader Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Texture Dimensions",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Type Namespaces",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Executable Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JavaScript Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JPG Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-b4579404f7aa4a98965fa2d73901817c-8900000-0\",\"GlobalObjectId_V1-1-d47e38bb6df64f6bbda217eead58f68e-8900000-0\",\"GlobalObjectId_V1-1-6f3ec4631b384f61908f9fd67b929266-8900000-0\",\"GlobalObjectId_V1-1-b362c9fe501a45479954bbcb823ba769-8900000-0\",\"GlobalObjectId_V1-1-2e5f7cc688d24941b9eb1637e78a40b3-8900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Lossy Audio Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Mixamo Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove SpeedTree Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Video Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      }
+    ]
+  },
+  "upload": {
+    "product": "Pixora",
+    "id": "publisher-final-Pixora-1793596799752",
+    "passed": true,
+    "sha256": "1fd35dbbc0f03aa2100e7706ff257dd49ab659ccb3038ad1489ad251fd0bb8f7",
+    "finishedUtc": "2026-11-02T05:21:04.3290637Z"
+  },
+  "portal": {
+    "product": "Pixora",
+    "id": "1541558",
+    "at": "2026-11-02T05:39:47.508Z",
+    "submitEnabled": true,
+    "submitted": false,
+    "uploadLine": "  - paragraph: Nov 02, 2026 05:20 UTC, 0 files, 19.0 MB",
+    "fileCount": 0
+  },
+  "blockers": [
+    {
+      "products": [
+        "DesignDataTable",
+        "Pixora",
+        "PixelCamera",
+        "EntityForge"
+      ],
+      "rule": "2.5.1.a",
+      "evidence": "Official Check File Menu Names and actual MenuItem(\"TurnRoom/...\") source",
+      "action": "Place customer menus under Tools/TurnRoom or an existing Unity menu; update entry calls and documentation."
+    }
+  ],
+  "warningDisposition": [
+    {
+      "product": "Pixora",
+      "title": "Check Compressed Files",
+      "paths": [
+        "Assets/TurnRoom/Pixora/Source/Pixora-Art-Source.zip"
+      ],
+      "disposition": "Inspect actual archive types: DDT XLSX are native spreadsheet inputs; Pixora source ZIP is explicitly source artwork."
+    },
+    {
+      "product": "Pixora",
+      "title": "Check File Menu Names",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+        "Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraSetupWindow.cs",
+        "Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraTutorialWindow.cs",
+        "Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialBuilder.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Demos.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.History.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Ribbon.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Sessions.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Work.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/SpriteSheetWindow.cs",
+        "Assets/TurnRoom/Pixora/Samples/Examples/Editor/WalkthroughBuilder.cs",
+        "Assets/TurnRoom/Pixora/Samples/Examples/Editor/WalkthroughScenesWindow.cs"
+      ],
+      "disposition": "Submission blocker: customer MenuItem paths start at TurnRoom; official2.5.1.a requires existing menus or Tools."
+    },
+    {
+      "product": "Pixora",
+      "title": "Check Line Endings",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs",
+        "Assets/TurnRoom/Pixora/Editor/Localization/PixoraLocalization.cs",
+        "Assets/TurnRoom/Pixora/Editor/Profiles/PixoraWork.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs",
+        "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.Demos.cs",
+        "Assets/TurnRoom/Pixora/Editor/Profiles/WorkStorage.cs"
+      ],
+      "disposition": "Style warning remains; not converted into zero-warning status."
+    },
+    {
+      "product": "Pixora",
+      "title": "Check Model Orientation",
+      "paths": [
+        "Assets/TurnRoom/Pixora/Samples/Artwork/Models/ClockworkKingfisher.fbx",
+        "Assets/TurnRoom/Pixora/Samples/Artwork/Models/TidewatchObservatory.fbx"
+      ],
+      "disposition": "Sample/model asset transform warning remains; needs review against2.4.d/e before submission."
+    },
+    {
+      "product": "Pixora",
+      "title": "Check Prefab Transforms",
+      "paths": [
+        "Assets/TurnRoom/Pixora/Samples/Tutorials/03-Model/ExampleStage.prefab",
+        "Assets/TurnRoom/Pixora/Samples/Tutorials/04-Parts/ExampleStage.prefab",
+        "Assets/TurnRoom/Pixora/Samples/Tutorials/05-Animation/ExampleStage.prefab",
+        "Assets/TurnRoom/Pixora/Samples/Tutorials/08-Equipment/ExampleStage.prefab"
+      ],
+      "disposition": "Sample/model asset transform warning remains; needs review against2.4.d/e before submission."
+    },
+    {
+      "product": "Pixora",
+      "title": "Remove JPG Files",
+      "paths": [
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg",
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg",
+        "Assets/TurnRoom/Pixora/Documentation/Images/Collection-ProfileDark.jpg",
+        "Assets/TurnRoom/Pixora/Documentation/Images/Collection-ProfileLight.jpg",
+        "Assets/TurnRoom/Pixora/Documentation/Images/HelpBox-PixoraInspectorKo.jpg",
+        "Assets/TurnRoom/Pixora/Documentation/Images/Inspector-PixoraProfile.jpg",
+        "Assets/TurnRoom/Pixora/Documentation/Images/Inspector-PixoraWork.jpg"
+      ],
+      "disposition": "Tool-category documentation/sample JPEG; official2.4.3.a allows Tools exception."
+    }
+  ],
+  "priceUsd": 4.99,
+  "priceConfirmed": true,
+  "submitted": false
+}

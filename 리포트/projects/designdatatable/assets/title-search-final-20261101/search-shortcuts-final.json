@@ -1,0 +1,25 @@
+{
+  "utc": "2026-11-01T12:33:12.3724789Z",
+  "rows": [
+    {
+      "inline": false,
+      "replace": false,
+      "mode": "find",
+      "pass": true,
+      "query": "Rewards",
+      "formula": false,
+      "dirty": false
+    },
+    {
+      "inline": false,
+      "replace": true,
+      "mode": "replace",
+      "pass": true,
+      "query": "Rewards",
+      "formula": false,
+      "dirty": false
+    }
+  ],
+  "pass": true,
+  "assembly": "58587f00-4a7d-418d-bcce-6ec5f9fdc38f"
+}

@@ -1,0 +1,249 @@
+{
+  "at": "2026-11-02T05:41:48.777Z",
+  "reviewComplete": true,
+  "readyToSubmit": false,
+  "product": "EntityForge",
+  "package": {
+    "file": "Artifacts/TurnRoomPackages/TurnRoom-EntityForge.unitypackage",
+    "bytes": 10054549,
+    "sha256": "3038491bcaab44b5de5e990be1bf12d2a81cd020ccd0c85aa7f9e5ce240c818a",
+    "files": 355,
+    "sourceAndMetadataReadback": true,
+    "developmentExcluded": true
+  },
+  "nativeSharedChecks": 15,
+  "official": {
+    "product": "EntityForge",
+    "category": "Tools/Utilities",
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 26,
+    "warning": 3,
+    "fail": 0,
+    "tests": [
+      {
+        "title": "Check Audio Clipping",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Colliders",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Compressed Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No archives were found in the package content!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Demo Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-1fb347354bae6e747acd7b43d2b855f6-102900000-0\",\"GlobalObjectId_V1-1-d0138ef59086d6647b36a5fc97688ec6-102900000-0\",\"GlobalObjectId_V1-1-b2d3be7150e475a4cb0b45ba294da894-102900000-0\",\"GlobalObjectId_V1-1-5d2a873ffc973eb4ebc640fcd84357cb-102900000-0\",\"GlobalObjectId_V1-1-188de169b7b451442b65b6494bec35c5-102900000-0\",\"GlobalObjectId_V1-1-dc672e0a68312794c8f5bb8f1e8f9414-102900000-0\",\"GlobalObjectId_V1-1-84a8b2708e3876c4db564208c6f93997-102900000-0\",\"GlobalObjectId_V1-1-f8ce58a9b0fae6049a7517549d64344f-102900000-0\",\"GlobalObjectId_V1-1-c91117f7f37f9a946815c1d0f252266c-102900000-0\",\"GlobalObjectId_V1-1-1126954d7f6fb074aa69e7e16b25cc78-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Documentation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-8e156d6bda0c4a745965406c2f2986df-4900000-0\",\"GlobalObjectId_V1-1-8b61b9e38c4edf1429cda4900c5dc601-4900000-0\",\"GlobalObjectId_V1-1-ff6ed78cb3fa5314fbc5dcd13cb19ac3-4900000-0\",\"GlobalObjectId_V1-1-04deffae653110f41b394b69c0210f06-4900000-0\",\"GlobalObjectId_V1-1-5cf83abb903a7be4b8e0a25a2283adcd-4900000-0\",\"GlobalObjectId_V1-1-b33b6d2717b700345b306eacebeeeba6-4900000-0\",\"GlobalObjectId_V1-1-54dd691ef19b34942aac2e0f544f0dfa-4900000-0\",\"GlobalObjectId_V1-1-489c7e60b4f8e384bb566cedc58a5ec2-4900000-0\",\"GlobalObjectId_V1-1-f5d069be511f4ec43bdb1701b7b1b54b-4900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Empty Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check File Menu Names",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts contain invalid MenuItem names:\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Settings'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-c5ebd3925ea2e7b4bc16253143a377a1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Install Product Package...'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-08367390f6ec42469b3146911f90104e-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-0df6034f27b54d1a87d8c6a96ee6b1af-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Development/Shared UI/Select Template Asset'\\n(for method 'SelectTemplate')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-288ddc2dc47fe0040ac4030a577ffce0-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Windows'\\n(for method 'Open')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a678591c6996d714eb6c39dfe63c7b6a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Entity Forge/Measure Active Scene'\\n(for method 'Start')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-26cd41f0af07c5447bf387a79456735a-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Entity Forge/Install Entities Dependency'\\n(for method 'Install')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-d7ebee19f0de7dc4eb8cdaf78f42a118-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Entity Forge/Build Player'\\n(for method 'Build')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-d16153f29c68e43489be2c5dc8bffc58-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Entity Forge/Open'\\n(for method 'Open')\\n\\n'TurnRoom/Entity Forge/Documentation'\\n(for method 'OpenGuide')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-a87b47bb67a6a774ba0a48c71f0986f1-11500000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"'TurnRoom/Entity Forge/Samples/Create or Repair Scenes'\\n(for method 'CreateFromMenu')\\n\",\"MessageObjects\":[\"GlobalObjectId_V1-1-6e1fb2a912a36034abcccc0ad0f95b41-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Line Endings",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following scripts have inconsistent line endings:\",\"MessageObjects\":[\"GlobalObjectId_V1-1-360a823cab234175a9d58a4052f1209b-11500000-0\",\"GlobalObjectId_V1-1-26356370bd014da2ac07b3e60af8cf74-11500000-0\",\"GlobalObjectId_V1-1-a87b47bb67a6a774ba0a48c71f0986f1-11500000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check LODs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Mesh Prefabs",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Assets",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Missing Components in Scenes",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Orientation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Model Types",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Normal Map Textures",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Particle Systems",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Path Lengths",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Prefab Transforms",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Script Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Shader Compilation",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Texture Dimensions",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Check Type Namespaces",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Executable Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JavaScript Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove JPG Files",
+        "status": "Warning",
+        "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Lossy Audio Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Mixamo Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove SpeedTree Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      },
+      {
+        "title": "Remove Video Files",
+        "status": "Pass",
+        "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+      }
+    ]
+  },
+  "upload": {
+    "product": "EntityForge",
+    "id": "publisher-final-EntityForge-1793596652823",
+    "passed": true,
+    "sha256": "3038491bcaab44b5de5e990be1bf12d2a81cd020ccd0c85aa7f9e5ce240c818a",
+    "finishedUtc": "2026-11-02T05:18:08.4911309Z"
+  },
+  "portal": {
+    "product": "EntityForge",
+    "id": "1541570",
+    "at": "2026-11-02T05:39:56.256Z",
+    "submitEnabled": true,
+    "submitted": false,
+    "uploadLine": "  - paragraph: Nov 02, 2026 05:17 UTC, 355 files, 9.6 MB",
+    "fileCount": 355
+  },
+  "blockers": [
+    {
+      "products": [
+        "DesignDataTable",
+        "Pixora",
+        "PixelCamera",
+        "EntityForge"
+      ],
+      "rule": "2.5.1.a",
+      "evidence": "Official Check File Menu Names and actual MenuItem(\"TurnRoom/...\") source",
+      "action": "Place customer menus under Tools/TurnRoom or an existing Unity menu; update entry calls and documentation."
+    },
+    {
+      "products": [
+        "EntityForge"
+      ],
+      "rule": "2.5.1.e",
+      "evidence": "Assets/TurnRoom/EntityForge/Editor/ForgeDependencies.cs:16 Client.Add(\"com.unity.entities@1.3.15\")",
+      "action": "Replace programmatic external UPM installation with instructions and opening Package Manager; retain explicit dependency disclosure."
+    }
+  ],
+  "warningDisposition": [
+    {
+      "product": "EntityForge",
+      "title": "Check File Menu Names",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplate.cs",
+        "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "Assets/TurnRoom/Templete/Editor/WindowList.cs",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkRunner.cs",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeDependencies.cs",
+        "Assets/TurnRoom/EntityForge/Editor/ForgePlayerBuild.cs",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs",
+        "Assets/TurnRoom/EntityForge/Samples/Editor/ForgeSamples.cs"
+      ],
+      "disposition": "Submission blocker: customer MenuItem paths start at TurnRoom; official2.5.1.a requires existing menus or Tools."
+    },
+    {
+      "product": "EntityForge",
+      "title": "Check Line Endings",
+      "paths": [
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs",
+        "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs"
+      ],
+      "disposition": "Style warning remains; not converted into zero-warning status."
+    },
+    {
+      "product": "EntityForge",
+      "title": "Remove JPG Files",
+      "paths": [
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-DarkWide.jpg",
+        "Assets/TurnRoom/Templete/Documentation/Images/HelpBox-LightWide.jpg"
+      ],
+      "disposition": "Tool-category documentation/sample JPEG; official2.4.3.a allows Tools exception."
+    }
+  ],
+  "priceUsd": 4.99,
+  "priceConfirmed": true,
+  "submitted": false
+}

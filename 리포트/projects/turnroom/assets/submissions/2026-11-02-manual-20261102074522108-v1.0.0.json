@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "공통 창 최대화·복원 애니메이션 제거",
+    "summary": "캡처 표면을 통한 최대화 전환을 제거하고 실제 창을 즉시 전환합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "수정·검증 진행",
+    "outcome": "수정 진행",
+    "proposedTime": "10~20분",
+    "actualTime": "시작 2026-11-02 16:44:01 KST",
+    "xerjEvidence": "Status: XERJ node is not running; 해당 호출 경로는 rg로 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "instant-maximize-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "최대화와 원래 크기 복원에서 캡처·숨김·지연 애니메이션을 제거",
+    "completionCriteria": "공통 호스트와 standalone 경로 대조, 최대화 애니메이션 경로 제거, 컴파일·라우팅 검사와 문서·공개 기록; 실제 화면 검증 여부 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "최대화 전환 경로 제거",
+        "action": "공통 호스트·직접 호출 조사, 최대화 캡처 애니메이션 제거",
+        "expected": "최대화·원래 크기 복원은 실제 창을 직접 전환",
+        "qa": "호출 경로와 삭제된 캡처·숨김 경로 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "정적·실행 검증",
+        "action": "현재 소스 컴파일과 라우팅 회귀 검사, 실제 화면 검증 제한 기록",
+        "expected": "원래 최소화 복원 경로를 보존하고 최대화에 캡처 표면을 만들지 않음",
+        "qa": "C# 컴파일·호출 경로 검사; 실제 UI 미실행은 구분",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서·공개 기록",
+        "action": "동작 설명과 보고서 갱신 및 배포 확인",
+        "expected": "수정과 검증 범위를 개별 URL에서 확인",
+        "qa": "빌드·링크·배포·익명 접근",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

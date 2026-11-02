@@ -1,0 +1,71 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Asset Store 업데이트 조회 실패 수정",
+    "summary": "실제 DDT 응답 형식과 파서를 대조해 수정하고 Unity에서 버전 비교 확인",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "파서 수정과 실제 Unity 검증 진행",
+    "outcome": "실제 DDT 공개 응답에서 기존 ReactDOMrender 형식과 ProductVersion2.0.1을 확인했습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "시작2026-11-02 15:32:00 KST",
+    "xerjEvidence": "Status: node not running. 최근 data directory lock 오류로 현재 코드와 공개 응답은 rg/직접 구조 대조로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "update-check-fix-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "DDT 최신 공개 버전 확인 불가 원인 수정",
+    "completionCriteria": "실제 공개 응답을 안전하게 해석하고 다른 제품·잘못된 버전을 거부, 현재 Unity에서2.0.1과 설치2.0.2 비교·실제 화면·푸시·공개 보고",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실제 응답과 파서 수정",
+        "action": "공개GET 응답 확인→제품 ID 및 currentVersion 참조를 검증하는 기존 형식 지원→회귀 테스트",
+        "expected": "해당 제품의 공개 버전만 읽고 잘못된 참조는 거부",
+        "qa": "실제 응답·다른 제품·잘못된 ID·충돌·누락·기존 형식과 새 형식 검사",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "현재 Unity 조회와 결과 확인",
+        "action": "컴파일→실제 네트워크 조회→버전 비교와 실제 화면→문서 및 공개 보고",
+        "expected": "DDT 공개2.0.1 및 설치2.0.2 비교 완료",
+        "qa": "실제 로드 모듈·ProductError·Latest·비교 결과·UI 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
