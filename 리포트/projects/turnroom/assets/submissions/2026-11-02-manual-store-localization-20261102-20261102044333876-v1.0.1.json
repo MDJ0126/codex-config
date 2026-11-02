@@ -1,0 +1,209 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "4개 판매 페이지 번역과 Entity Forge 성능 수치 보강",
+    "summary": "포털의 한국어·일본어·중국어 누락을 채우고 실측 성능 설명을 보강합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "최종 제출·심사는 소유자 단계. 긴 변경 이력 미저장 원인은 미확인이며 실제 저장되는 간결한 문구로 마무리했습니다. 이번 요청은 판매 페이지로 확인돼 제품 UI 추가 변경은 하지 않았습니다. 이 메뉴얼 자체의 마지막 배포 확인은 전달 직전에 수행합니다.",
+    "outcome": "판매 초안4개를3개 번역/72필드까지 서버 대조했고 Entity Forge 실측 수치와 조건을 설명했습니다. 소스·규칙 푸시 및4개 개별 보고서·32첨부 외부 접근을 확인했습니다. 제출하지 않았습니다.",
+    "proposedTime": "30~60분",
+    "actualTime": "공동작업 28분 18초. 시작2026-11-02 13:15:15 KST. 제품결과 공개검증 확인 2026-11-02 13:43:33 KST.",
+    "xerjEvidence": "TemplateTextCatalog XERJ 검색 후 현재 소스 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "store-localization-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "4개 에셋 스토어 판매 페이지의 번역 누락을 채우고 Entity Forge에 검증된 성능 수치를 설명합니다.",
+    "completionCriteria": "4개 제품 한국어·일본어·중국어6개 필드 저장 및 서버 재열기 대조, Entity Forge 원시 성능 수치 검증과4개 언어 반영, 최종 제출 없이 저장, 소스·전역규칙 푸시와 개별 공개보고서·첨부 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실측 수치와 누락 확인",
+        "action": "같은 fingerprint·환경의 원시600프레임 쌍을 평균내고 저장된 float 평균과1e-5ms 이내인지 확인",
+        "expected": "검증된 수치·환경과 실제 누락 목록",
+        "qa": "원시 배열600개, fingerprint·해상도·하드웨어 일치, 평균 차이1e-5ms 이내와70.8% 계산을 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "실제 렌더링 플레이어 측정 평균8.7512115→2.5571143ms,70.7798819% 감소 재계산"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "4개 제품 판매 번역 저장",
+        "action": "한국어·일본어·중국어 판매6개 필드를 저장하고 전체 새 로딩으로 대조. 프리뷰 변경 이력은 실제 저장되는 간결한 첫 출시 문구를 사용",
+        "expected": "12개 번역의 값이 저장돼 유지됨",
+        "qa": "언어별 제목·요약·설명·기술정보를 읽어 원문과 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "4개 제품12개 번역72필드 새 서버 로딩 일치. DDT 과거 변경 이력 보존. Forge 영어+번역3개에실측 조건·수치 저장"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "판매 초안 검증·푸시·공개 전달",
+        "action": "사용자 명시 판매 페이지 범위의 저장값·화면·푸시와 개별 공개 보고서를 확인",
+        "expected": "최종 제출 없이4개 판매 초안 저장, 소스와 지침 푸시, 개별 보고서·첨부 외부 접근",
+        "qa": "새 서버 저장값·최종 제출 미실행·공개 본문4개와첨부32개의 실제GET 대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "소스94a1a4fe·지침5562033b·보고52a161f8 푸시. Actions41389833367 publish/Deploy success. 공개4본문·32첨부 접근 및내용/해시 대조 통과"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자가 에셋 스토어 판매 페이지로 범위를 명시했습니다. 초기 전체3개 작업 목록은 유지하며 T03을 판매 페이지 전달로 구체화했습니다. 원시 float 직렬화 차이의1e-5ms 허용 기준을 T01 r2에 명시하고, 긴 변경 이력 미저장 후 새 프리뷰 제품의 간결한 첫 출시 문구로 T02 r2를 재검증했습니다. 실패 기록과 기능 본문은 보존했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T04:18:25.801Z",
+        "summary": "기록 검토: 최초 원시 평균의 과도하게 엄격한 오차 비교 실패",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "실제 float 평균 직렬화 차이 약3.4e-7ms가1e-9ms 기준을 초과",
+            "evidence": "benchmark-verification.json의 initialStrictToleranceCheck",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-02T04:18:25.801Z",
+        "summary": "원시 평균과 검증 가능한 오차 범위 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 렌더링 플레이어 측정 평균8.7512115→2.5571143ms,70.7798819% 감소 재계산",
+            "evidence": "benchmark-verification.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-02T04:28:20.858Z",
+        "summary": "최초 실제 서버 재열기에서 저장값 차이 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "중국어 제목과 일부 프리뷰 변경 이력이 이전값/빈값으로 남음",
+            "evidence": "Publisher/server-readback-failure-ddt-zh.json, server-failure-Pixora-zh.json, server-save-repairs.json",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-02T04:35:17.114Z",
+        "summary": "수정 후 전체 새 로딩 대조",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "4개 제품12개 번역72필드 새 서버 로딩 일치. DDT 과거 변경 이력 보존. Forge 영어+번역3개에실측 조건·수치 저장",
+            "evidence": "Publisher/server-reload-verification.json",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "regression",
+        "at": "2026-11-02T04:43:33.466Z",
+        "summary": "소스·규칙 푸시와 공개 보고서 확인",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "소스94a1a4fe·지침5562033b·보고52a161f8 푸시. Actions41389833367 publish/Deploy success. 공개4본문·32첨부 접근 및내용/해시 대조 통과",
+            "evidence": "public-verification.json, global-rules-verification.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "final",
+        "at": "2026-11-02T04:43:33.466Z",
+        "summary": "원래3개 작업의 현재 수정 버전 최종 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 렌더링 플레이어 측정 평균8.7512115→2.5571143ms,70.7798819% 감소 재계산",
+            "evidence": "benchmark-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "4개 제품12개 번역72필드 새 서버 로딩 일치. DDT 과거 변경 이력 보존. Forge 영어+번역3개에실측 조건·수치 저장",
+            "evidence": "Publisher/server-reload-verification.json",
+            "dependencies": {
+              "T01": 2
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "소스94a1a4fe·지침5562033b·보고52a161f8 푸시. Actions41389833367 publish/Deploy success. 공개4본문·32첨부 접근 및내용/해시 대조 통과",
+            "evidence": "public-verification.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
