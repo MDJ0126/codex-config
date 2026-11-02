@@ -1,5 +1,25 @@
 [
   {
+    "title": "DDT 업데이트 확인 불가 · 기존 Asset Store 응답 해석 수정",
+    "summary": "기존 Store 응답 형식을 지원해 실제 Unity에서 공개2.0.1 조회 성공과 설치2.0.2 비교를 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-bug-20261102064225238-v1.0.0.html",
+    "date": "2026-11-02T06:42:25.238Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Asset Store 업데이트 조회 실패 수정",
+    "summary": "실제 DDT 응답 형식과 파서를 대조해 수정하고 Unity에서 버전 비교 확인",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-02-manual-20261102063407985-v1.0.0.html",
+    "date": "2026-11-02T06:34:07.985Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "이름 전용 툴팁 간소화",
     "summary": "이름만 있는 툴팁은 글자 폭에 맞춘 작은 중립색 라벨입니다. 설명·단축키가 있는 툴팁은 기존 상세 카드를 유지합니다.",
     "project": "turnroom",

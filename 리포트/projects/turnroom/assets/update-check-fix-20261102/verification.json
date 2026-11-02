@@ -1,0 +1,66 @@
+{
+  "native": {
+    "revision": "store-page-v1",
+    "atUtc": "2026-11-02T06:37:39.2323545Z",
+    "unity": "6000.0.83f1",
+    "moduleId": "b400c09d-4b6c-4242-b322-374e8d5f2f3b",
+    "error": "",
+    "storeError": "",
+    "currentVersion": "2.0.1",
+    "passed": true,
+    "urlFieldRemoved": true,
+    "publicBodyParsed": true,
+    "nativeRequestFinished": true,
+    "scenePreserved": true,
+    "selectionPreserved": true,
+    "foregroundPreserved": true,
+    "scene": -1264
+  },
+  "logic": {
+    "at": "2026-11-02T06:37:11.856Z",
+    "passed": true,
+    "assertions": 19,
+    "publicVersion": "2.0.1",
+    "nativeUnityExecuted": false
+  },
+  "publicFetch": {
+    "at": "2026-11-02T06:32:35.787Z",
+    "results": [
+      {
+        "requested": "https://marketplace.unity.com/packages/package/263724",
+        "url": "https://marketplace.unity.com/packages/tools/game-toolkits/design-data-table-spreadsheet-game-data-editor-263724",
+        "status": 200,
+        "bytes": 267163,
+        "canonical": "<link rel=\"canonical\" href=\"https://marketplace.unity.com/packages/tools/game-toolkits/design-data-table-spreadsheet-game-data-editor-263724\">",
+        "title": "Design Data Table – Spreadsheet &amp; Game Data Editor | Game Toolkits | Unity Asset Store",
+        "versionKeys": []
+      },
+      {
+        "requested": "https://assetstore.unity.com/packages/package/263724",
+        "url": "https://assetstore.unity.com/packages/tools/game-toolkits/design-data-table-spreadsheet-game-data-editor-263724",
+        "status": 200,
+        "bytes": 267148,
+        "canonical": "<link rel=\"canonical\" href=\"https://assetstore.unity.com/packages/tools/game-toolkits/design-data-table-spreadsheet-game-data-editor-263724\">",
+        "title": "Design Data Table – Spreadsheet &amp; Game Data Editor | Game Toolkits | Unity Asset Store",
+        "versionKeys": []
+      }
+    ]
+  },
+  "before": {
+    "revision": "store-page-v1",
+    "atUtc": "2026-11-02T06:03:22.5964224Z",
+    "unity": "6000.0.83f1",
+    "moduleId": "0d1cd127-7b8e-45a1-8fac-c9c8320ff521",
+    "error": "",
+    "storeError": "The public Store page did not contain one unambiguous latest version.",
+    "currentVersion": "",
+    "passed": true,
+    "urlFieldRemoved": true,
+    "publicBodyParsed": true,
+    "nativeRequestFinished": true,
+    "scenePreserved": true,
+    "selectionPreserved": true,
+    "foregroundPreserved": true,
+    "scene": -1264
+  }
+}
