@@ -1,0 +1,60 @@
+{
+  "product": "DesignDataTable",
+  "readback": [
+    {
+      "product": "DesignDataTable",
+      "lang": "ko",
+      "changelog": "2.0.2\n• 공통 컨트롤·선택기·Inspector 정리\n• 최대화·복원 직접 전환, 문서 목록을 Unity 콘솔 상태줄 아래로 복원\n• 통합문서 생성·복구와 Tools/TurnRoom 메뉴 정리\n2.0.1: 지원 도형·목록 미리보기·편집 사용성 개선\n2.0.0: 스프레드시트·타입 지정 게임 데이터 작업 공간\n1.0.1: 구형 에디터 검색 수정\n1.0.0: 최초 출시",
+      "description": "Unity를 벗어나지 않고 게임 데이터를 제작하고 밸런스를 조정하세요.\n\n\n\n\n• 지원되는 수식·서식·필터·차트로 XLSX·CSV 편집\n• 타입 지정 게임 테이블 정의·검증과 C# 클래스·바이너리 생성\n• 임시 저장·백업·복구와 선택적 Addressables·AI 연동\n• 샘플 씬과 9개 언어 오프라인 가이드 포함\n\n\n\n\n스프레드시트 기능은 문서화된 범위만 지원합니다. XLS·매크로·암호화 통합 문서는 지원하지 않습니다.\n\n\n공통 테마 컨트롤·에셋 Inspector를 정리하고 최대화·복원은 직접 전환합니다. 문서 목록은 Unity 콘솔 상태줄 아래에 표시됩니다.",
+      "technical": "검증 환경: Windows의 Unity 6000.0.83f1, Built-in 샘플 씬. 샘플에는 Unity uGUI·2D Sprite가 필요합니다. Addressables는 선택 사항이며 별도 설치합니다.\n\n\n영어·한국어·일본어·중국어 간체/번체·스페인어·프랑스어·독일어·브라질 포르투갈어 UI·가이드를 포함합니다.\n\n\n지원 수식과 파일 보존 제한은 동봉 가이드를 확인하세요. macOS·WebGL·IL2CPP 런타임 호환성은 검증되지 않았습니다. 외부 샘플 아트·글꼴의 고지는 Third-Party Notices.txt에 있습니다.",
+      "passed": true
+    },
+    {
+      "product": "DesignDataTable",
+      "lang": "en",
+      "version": "2.0.2",
+      "changelog": "2.0.2\n• Shared editor controls, selectors and Inspectors refined.\n• Direct maximize/restore; document shelf restored below Unity’s console/status line.\n• Workbook creation/recovery and Tools/TurnRoom menu entries improved.\n2.0.1: Expanded supported shapes, shelf previews and workbook usability.\n2.0.0: Spreadsheet and typed game-data workspace.\n1.0.1: Older-editor search fixes.\n1.0.0: Initial release.",
+      "description": "Build and balance game data without leaving Unity.\n\n\n\n\n• Edit XLSX/CSV files with supported formulas, formatting, filters and charts.\n• Define typed game tables, validate records and generate C# classes and binary data.\n• Use drafts, backups and recovery, with optional Addressables and AI integrations.\n• Includes sample scenes and offline guides in nine languages.\n\n\n\n\nSupports a documented spreadsheet subset. XLS, macros and encrypted workbooks are not supported.\n\n\nShared theme-aware controls and asset Inspectors; direct maximize/restore, with the document shelf below Unity’s console/status line.",
+      "passed": true
+    },
+    {
+      "product": "DesignDataTable",
+      "lang": "zh",
+      "changelog": "2.0.2\n• 改进统一控件、选择面板及Inspector\n• 最大化与恢复直接切换，文档列表恢复至控制台状态行下方\n• 改进工作簿创建、恢复及Tools/TurnRoom菜单\n2.0.1：改进支持的形状、列表预览和编辑体验\n2.0.0：电子表格与类型化游戏数据工作区\n1.0.1：修复旧编辑器搜索\n1.0.0：首次发布",
+      "description": "无需离开Unity即可制作和平衡游戏数据。\n\n\n\n\n• 使用支持的公式、格式、筛选和图表编辑XLSX与CSV\n• 定义及验证带类型的数据表，生成C#类与二进制数据\n• 提供草稿、备份、恢复及可选Addressables与AI集成\n• 包含示例场景及九种语言的离线指南\n\n\n\n\n仅支持文档列明的电子表格功能。不支持XLS、宏及加密工作簿。\n\n\n统一主题控件和资源Inspector，最大化与恢复直接切换。文档列表位于Unity控制台状态行下方。",
+      "technical": "验证环境：Windows、Unity 6000.0.83f1、Built-in示例场景。示例需要Unity uGUI与2D Sprite。Addressables为可选项，需另行安装。\n\n\n包含英语、韩语、日语、简体与繁体中文、西班牙语、法语、德语和巴西葡萄牙语界面与指南。\n\n\n支持的公式及文件保留限制请参阅随附指南。macOS、WebGL、IL2CPP运行时兼容性尚未验证。第三方示例美术与字体声明见Third-Party Notices.txt。",
+      "passed": true
+    },
+    {
+      "product": "DesignDataTable",
+      "lang": "ja",
+      "changelog": "2.0.2\n• 共通コントロール・選択パネル・Inspectorを改善\n• 最大化と復元を直接切替。文書リストをコンソール状態行の下へ復元\n• ブック作成・復旧とTools/TurnRoomメニューを整理\n2.0.1: 対応図形・一覧プレビュー・編集操作を改善\n2.0.0: 表計算と型付きゲームデータの作業環境\n1.0.1: 旧エディター検索を修正\n1.0.0: 初回リリース",
+      "description": "Unityを離れずにゲームデータを制作し、バランスを調整します。\n\n\n\n\n• 対応する数式、書式、フィルター、チャートでXLSX・CSVを編集\n• 型付きテーブルの定義・検証、C#クラスとバイナリ生成\n• 下書き、バックアップ、復元、任意のAddressables・AI連携\n• サンプルシーンと9言語のオフラインガイドを収録\n\n\n\n\n表計算機能はドキュメントに記載の範囲をサポートします。XLS、マクロ、暗号化されたブックは非対応です。\n\n\n共通テーマのコントロールとアセットInspectorを整理。最大化・復元は直接切替し、文書リストはUnityコンソールのステータス行の下に表示します。",
+      "technical": "検証環境：Windows、Unity 6000.0.83f1、Built-inのサンプルシーン。サンプルにはUnity uGUIと2D Spriteが必要です。Addressablesは任意で別途インストールします。\n\n\n英語、韓国語、日本語、簡体字・繁体字中国語、スペイン語、フランス語、ドイツ語、ブラジルポルトガル語のUIとガイドを収録。\n\n\n対応数式とファイル保持の制限は同梱ガイドをご覧ください。macOS、WebGL、IL2CPPランタイム互換性は未検証です。外部アート・フォントの告知はThird-Party Notices.txtに記載しています。",
+      "passed": true
+    }
+  ],
+  "media": {
+    "product": "DesignDataTable",
+    "screenshots": 14,
+    "videos": 1,
+    "keyImages": 3,
+    "galleryTarget": 16
+  },
+  "candidate": {
+    "product": "DesignDataTable",
+    "version": "2.0.2",
+    "path": "Artifacts/TurnRoomPackages/Candidates/2026-11-03/TurnRoom-DesignDataTable-2.0.2.unitypackage",
+    "sha256": "4b15d5aa0e205b914d9f418ba891fe1427e6c112d8d1fae02ed9c5b829b1cdbc",
+    "bytes": 62412882,
+    "files": 1617,
+    "developmentExcluded": true,
+    "metadataComplete": true,
+    "archiveReadbackPassed": true,
+    "currentSourceAndMetadataMatch": true,
+    "nativeExport": false,
+    "nativeFreshImport": "not run: no new GUI process allowed",
+    "inventoryDifference": "All eligible tutorial files retained; native dependency-pruned tutorial inventory not reproduced"
+  },
+  "submitted": false
+}

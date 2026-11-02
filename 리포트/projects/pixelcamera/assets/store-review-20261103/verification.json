@@ -1,0 +1,60 @@
+{
+  "product": "PixelCamera",
+  "readback": [
+    {
+      "product": "PixelCamera",
+      "lang": "en",
+      "version": "0.6.1-preview",
+      "changelog": "First release",
+      "description": "Give 3D scenes a controlled pixel style while keeping overlay UI sharp.\n\n\n\n\n• Pixelate the full camera or selected opaque mesh roots.\n• Adjust pixel size, palette, dithering, outlines and grid snapping.\n• Preview reusable presets and control depth and late-rendered layers.\n• Includes three interactive showcase scenes.\n\n\n\n\nDesigned for Built-in and Unity 6 / URP 17 RenderGraph. HDRP and XR are not supported. Selected-object transparency and custom deformation require project-specific validation.\n\n\nShared theme-aware controls and asset Inspectors; direct maximize/restore, with the document shelf below Unity’s console/status line.",
+      "passed": true
+    },
+    {
+      "product": "PixelCamera",
+      "lang": "zh",
+      "changelog": "首次预览发布。",
+      "description": "为3D场景赋予像素风格，同时保持叠加UI清晰。\n\n\n\n\n• 像素化整个相机画面或选中的不透明网格根对象\n• 调整像素大小、调色板、抖色、描边及网格对齐\n• 预览可复用预设，设置深度和后置渲染图层\n• 包含3个可交互展示场景\n\n\n\n\n面向Built-in及Unity 6 / URP 17 RenderGraph。不支持HDRP与XR。选中对象的透明渲染及自定义形变需要按项目验证。\n\n\n统一主题控件和资源Inspector，最大化与恢复直接切换。文档列表位于Unity控制台状态行下方。",
+      "technical": "已在Windows的Unity 6000.0.83f1验证。使用Built-in或URP 17 RenderGraph；URP需要随附的Pixel Camera Renderer Feature。\n\n\n选中对象模式使用不透明MeshRenderer／SkinnedMeshRenderer根对象上的Pixel Camera Object组件。额外渲染通道的开销请在目标设备上分析。\n\n\n包括调色板提取、LUT烘焙、自定义抖色矩阵、分段动画工具及九种语言的编辑器界面与指南。渲染、深度和动画限制请参阅随附指南。",
+      "passed": true
+    },
+    {
+      "product": "PixelCamera",
+      "lang": "ja",
+      "changelog": "初回プレビューリリース。",
+      "description": "3Dシーンをピクセルスタイルで描画し、オーバーレイUIの鮮明さを維持します。\n\n\n\n\n• カメラ全体または選択した不透明メッシュのルートをピクセル化\n• ピクセルサイズ、パレット、ディザ、輪郭、グリッドスナップを調整\n• プリセットのプレビューと深度・後段描画レイヤーの設定\n• 操作できるショーケースシーン3個を収録\n\n\n\n\nBuilt-inおよびUnity 6 / URP 17 RenderGraph向けです。HDRPとXRは非対応。選択オブジェクトの透明描画と独自変形はプロジェクトごとの検証が必要です。\n\n\n共通テーマのコントロールとアセットInspectorを整理。最大化・復元は直接切替し、文書リストはUnityコンソールのステータス行の下に表示します。",
+      "technical": "Windows、Unity 6000.0.83f1で検証。Built-inまたはURP 17 RenderGraphを使用し、URPでは同梱のPixel Camera Renderer Featureが必要です。\n\n\n選択モードは不透明なMeshRenderer／SkinnedMeshRendererルートのPixel Camera Objectを使用します。追加描画パスの負荷は対象機器で確認してください。\n\n\nパレット抽出、LUTベイク、独自ディザ行列、段階的アニメーションツール、9言語のエディターUIとガイドを収録。描画、深度、アニメーションの制限は同梱ガイドをご覧ください。",
+      "passed": true
+    },
+    {
+      "product": "PixelCamera",
+      "lang": "ko",
+      "changelog": "첫 프리뷰 출시.",
+      "description": "3D 씬에 픽셀 스타일을 적용하고 오버레이 UI는 선명하게 유지하세요.\n\n\n\n\n• 전체 카메라 또는 선택한 불투명 메시 루트만 픽셀화\n• 픽셀 크기·팔레트·디더링·외곽선·그리드 스냅 조절\n• 프리셋 미리보기와 깊이·후순위 렌더링 레이어 설정\n• 인터랙티브 쇼케이스 씬 3개 포함\n\n\n\n\nBuilt-in과 Unity 6 / URP 17 RenderGraph용입니다. HDRP·XR은 지원하지 않습니다. 선택 오브젝트의 투명도와 사용자 지정 변형은 프로젝트별 검증이 필요합니다.\n\n\n공통 테마 컨트롤·에셋 Inspector를 정리하고 최대화·복원은 직접 전환합니다. 문서 목록은 Unity 콘솔 상태줄 아래에 표시됩니다.",
+      "technical": "Windows의 Unity 6000.0.83f1에서 검증했습니다. Built-in 또는 URP 17 RenderGraph를 사용하며, URP에는 포함된 Pixel Camera Renderer Feature가 필요합니다.\n\n\n선택 오브젝트 모드는 불투명 MeshRenderer·SkinnedMeshRenderer 루트의 Pixel Camera Object 컴포넌트를 사용합니다. 추가 렌더 패스의 비용은 대상 장치에서 프로파일링하세요.\n\n\n팔레트 추출, LUT 베이킹, 사용자 디더 행렬, 단계식 애니메이션 도구, 9개 언어 에디터 UI·가이드를 포함합니다. 렌더링·깊이·애니메이션 제한은 동봉 가이드를 확인하세요.",
+      "passed": true
+    }
+  ],
+  "media": {
+    "product": "PixelCamera",
+    "screenshots": 16,
+    "videos": 1,
+    "keyImages": 3,
+    "galleryTarget": 16
+  },
+  "candidate": {
+    "product": "PixelCamera",
+    "version": "0.6.1-preview",
+    "path": "Artifacts/TurnRoomPackages/Candidates/2026-11-03/TurnRoom-PixelCamera-0.6.1-preview.unitypackage",
+    "sha256": "4aa1a9009856baa04b792910c9ed603c64ea9cd6bb7639652a6159f6583a21fa",
+    "bytes": 33178623,
+    "files": 699,
+    "developmentExcluded": true,
+    "metadataComplete": true,
+    "archiveReadbackPassed": true,
+    "currentSourceAndMetadataMatch": true,
+    "nativeExport": false,
+    "nativeFreshImport": "not run: no new GUI process allowed",
+    "inventoryDifference": "All eligible tutorial files retained; native dependency-pruned tutorial inventory not reproduced"
+  },
+  "submitted": false
+}

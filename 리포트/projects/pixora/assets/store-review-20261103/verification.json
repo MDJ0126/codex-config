@@ -1,0 +1,60 @@
+{
+  "product": "Pixora",
+  "readback": [
+    {
+      "product": "Pixora",
+      "lang": "en",
+      "version": "1.0.0",
+      "changelog": "1.0.0\nInitial release: pixel-art creation, palettes, editable work documents, model capture and batch export. Shared theme-aware editor controls and Inspectors refined; document shelf placed below Unity’s console/status line.",
+      "description": "Create pixel assets in a focused Unity workspace.\n\n\n\n\n• Convert images using size, palette, dithering and outline controls.\n• Capture 3D models, animation directions and separate object parts.\n• Export PNG sprites and sheets, or process batches with reusable profiles.\n• Save editable work documents and continue refining your results.\n\n\n\n\nIncludes ten guided sample workflows and offline documentation. Source assets are preserved.\n\n\nShared theme-aware controls and asset Inspectors; direct maximize/restore, with the document shelf below Unity’s console/status line.",
+      "passed": true
+    },
+    {
+      "product": "Pixora",
+      "lang": "zh",
+      "changelog": "1.0.0\n首次发布：像素画制作、调色板、可编辑工作文档、模型捕获及批量导出。统一主题控件与Inspector，文档列表位于Unity控制台状态行下方。",
+      "description": "在Unity专用工作区内制作像素资源。\n\n\n\n\n• 使用尺寸、调色板、抖色及描边设置转换图像\n• 捕捉3D模型的动画、多个方向及独立对象部件\n• 导出PNG精灵与图集，并用可复用配置批量处理\n• 保存可编辑工作文档，稍后继续调整\n\n\n\n\n包含10个分步示例工作流程及离线指南，并保留源资源。\n\n\n统一主题控件和资源Inspector，最大化与恢复直接切换。文档列表位于Unity控制台状态行下方。",
+      "technical": "Unity 6编辑器工具，已在Windows的Unity 6000.0.83f1验证。\n输出：PNG精灵与图集、可编辑Pixora工作资源及可复用配置。\n界面与指南支持九种语言，示例源码注释语言可单独选择。\n3D捕捉取决于模型、材质及动画；捕捉与导出限制请参阅随附指南。转换和捕捉无需付费AI服务。",
+      "passed": true
+    },
+    {
+      "product": "Pixora",
+      "lang": "ja",
+      "changelog": "1.0.0\n初回リリース：ピクセルアート制作、パレット、編集可能な作業文書、モデル撮影、一括出力。共通テーマのコントロールとInspectorを整理し、文書リストをUnityコンソール状態行の下に配置。",
+      "description": "Unity内の専用ワークスペースでピクセルアセットを制作します。\n\n\n\n\n• サイズ、パレット、ディザ、輪郭を指定して画像を変換\n• 3Dモデルのアニメーション、方向、個別パーツを撮影\n• PNGスプライト・シート出力とプロファイルによる一括処理\n• 編集可能な作業ドキュメントに保存し、後から調整を再開\n\n\n\n\n手順付きサンプル10個とオフラインガイドを収録。元のアセットは保持します。\n\n\n共通テーマのコントロールとアセットInspectorを整理。最大化・復元は直接切替し、文書リストはUnityコンソールのステータス行の下に表示します。",
+      "technical": "Unity 6用エディターツール。WindowsのUnity 6000.0.83f1で検証。\n出力：PNGスプライト・シート、編集可能なPixora作業アセット、再利用プロファイル。\nUIとガイドは9言語対応。サンプルソースのコメント言語は別に選択できます。\n3D撮影はモデル、マテリアル、アニメーションに依存します。制限は同梱ガイドをご覧ください。変換と撮影に有料AIサービスは不要です。",
+      "passed": true
+    },
+    {
+      "product": "Pixora",
+      "lang": "ko",
+      "changelog": "1.0.0\n최초 출시: 픽셀 아트 제작, 팔레트, 편집 가능한 작업 문서, 모델 캡처와 일괄 내보내기. 공통 테마 컨트롤·Inspector를 정리하고 문서 목록을 Unity 콘솔 상태줄 아래에 배치했습니다.",
+      "description": "Unity 안의 전용 작업 공간에서 픽셀 에셋을 제작하세요.\n\n\n\n\n• 크기·팔레트·디더링·외곽선 설정으로 이미지 변환\n• 3D 모델의 애니메이션·방향·오브젝트 파트 캡처\n• PNG 스프라이트·시트 출력과 재사용 프로필 기반 배치 처리\n• 편집 가능한 작업 문서를 저장해 이어서 수정\n\n\n\n\n단계별 샘플 작업 10개와 오프라인 가이드를 포함합니다. 원본 에셋은 보존합니다.\n\n\n공통 테마 컨트롤·에셋 Inspector를 정리하고 최대화·복원은 직접 전환합니다. 문서 목록은 Unity 콘솔 상태줄 아래에 표시됩니다.",
+      "technical": "Unity 6 에디터 도구입니다. Windows의 Unity 6000.0.83f1에서 검증했습니다.\n출력: PNG 스프라이트·시트, 편집 가능한 Pixora 작업 에셋, 재사용 프로필.\nUI·가이드는 9개 언어를 지원하며 예제 소스 주석 언어는 별도로 선택합니다.\n3D 캡처 결과는 모델·머티리얼·애니메이션에 따라 달라집니다. 캡처·출력 제한은 동봉 가이드를 확인하세요. 변환·캡처에 유료 AI 서비스가 필요하지 않습니다.",
+      "passed": true
+    }
+  ],
+  "media": {
+    "product": "Pixora",
+    "screenshots": 16,
+    "videos": 1,
+    "keyImages": 3,
+    "galleryTarget": 16
+  },
+  "candidate": {
+    "product": "Pixora",
+    "version": "1.0.0",
+    "path": "Artifacts/TurnRoomPackages/Candidates/2026-11-03-r2/TurnRoom-Pixora-1.0.0.unitypackage",
+    "sha256": "17b1db8bbbf8d8a2b485e630b9ae64e8b4ff085fa0605704c90ac3a4c5aef97b",
+    "bytes": 18067086,
+    "files": 1989,
+    "developmentExcluded": true,
+    "metadataComplete": true,
+    "archiveReadbackPassed": true,
+    "currentSourceAndMetadataMatch": true,
+    "nativeExport": false,
+    "nativeFreshImport": "not run: no new GUI process allowed",
+    "inventoryDifference": "All eligible tutorial files retained; native dependency-pruned tutorial inventory not reproduced"
+  },
+  "submitted": false
+}

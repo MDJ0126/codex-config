@@ -1,0 +1,60 @@
+{
+  "product": "EntityForge",
+  "readback": [
+    {
+      "product": "EntityForge",
+      "lang": "en",
+      "version": "0.2.0-preview",
+      "changelog": "First release",
+      "description": "Prepare supported Unity scene rendering for DOTS with an automatic rendering-proxy workflow.\n• Analyze eligible renderers and exclusions.\n• Import measurements and compare paired player evidence.\n• Explore three editable scenes with moving/spawning examples.\nCustom MonoBehaviours, physics and animation are not automatically converted. This is a pre-release tool; current player-build and performance validation is incomplete. No speedup percentage is guaranteed.\n\n\nShared theme-aware controls and asset Inspectors; direct maximize/restore, with the document shelf below Unity’s console/status line.",
+      "passed": true
+    },
+    {
+      "product": "EntityForge",
+      "lang": "zh",
+      "changelog": "首次预览发布。",
+      "description": "通过自动渲染代理准备支持的Unity场景渲染DOTS转换。\n• 分析目标Renderer和排除项\n• 导入测量结果并比较同条件玩家数据\n• 3个包含移动与生成的可编辑示例\n不会自动转换自定义MonoBehaviour、物理或动画。当前预览的玩家构建和性能验证尚未完成，不承诺提升百分比。\n\n\n统一主题控件和资源Inspector，最大化与恢复直接切换。文档列表位于Unity控制台状态行下方。",
+      "technical": "目标：Windows / Unity 6000.0.83f1 / Entities 1.3.15。用户通过Package Manager安装可选包。\n支持的渲染转换与自定义逻辑分开；Editor Play与玩家构建路径不同。\n当前版本仅通过源码编译和部分示例检查，全新安装、实际玩家构建及同条件性能测量尚未完成。\n包含9种UI语言及离线文档。支持的Renderer与排除条件请见随附文档。",
+      "passed": true
+    },
+    {
+      "product": "EntityForge",
+      "lang": "ja",
+      "changelog": "初回プレビューリリース。",
+      "description": "自動描画プロキシで対応Unityシーン描画のDOTS変換を準備します。\n• 対象Rendererと除外条件を分析\n• 測定値を読み込み同条件のプレイヤー結果を比較\n• 移動・生成を含む編集可能な3つの例\n独自MonoBehaviour・物理・アニメーションは自動変換しません。現プレビューのプレイヤービルド・性能検証は未完了で、改善率を保証しません。\n\n\n共通テーマのコントロールとアセットInspectorを整理。最大化・復元は直接切替し、文書リストはUnityコンソールのステータス行の下に表示します。",
+      "technical": "対象：Windows / Unity 6000.0.83f1 / Entities 1.3.15。追加パッケージは利用者がPackage Managerで導入します。\n対応描画と独自ロジックは別です。Editor Playとプレイヤーで変換経路が異なります。\n現版の検証はソースコンパイルと一部サンプルのみ。新規導入・実プレイヤービルド・同条件性能測定は未完了です。\n9言語UIとオフライン文書を同梱。対応Rendererと除外条件は付属文書をご確認ください。",
+      "passed": true
+    },
+    {
+      "product": "EntityForge",
+      "lang": "ko",
+      "changelog": "첫 프리뷰 출시.",
+      "description": "자동 렌더링 프록시 작업 흐름으로 지원되는 Unity 씬 렌더링의 DOTS 전환을 준비하세요.\n• 변환 대상 렌더러와 제외 항목 분석\n• 측정값 가져오기와 동일 조건 플레이어 결과 비교\n• 이동·생성이 포함된 편집 가능한 샘플 씬 3개\n사용자 MonoBehaviour·물리·애니메이션은 자동 변환하지 않습니다. 프리릴리스 도구이며 현재 플레이어 빌드·성능 검증은 미완료입니다. 성능 개선율을 보장하지 않습니다.\n\n\n공통 테마 컨트롤·에셋 Inspector를 정리하고 최대화·복원은 직접 전환합니다. 문서 목록은 Unity 콘솔 상태줄 아래에 표시됩니다.",
+      "technical": "프리뷰 대상: Windows / Unity 6000.0.83f1 / Entities 1.3.15. 선택 패키지는 사용자가 Package Manager에서 설치합니다.\n지원 렌더링 변환과 사용자 게임플레이 로직은 구분됩니다. Editor Play와 플레이어 빌드의 변환 경로가 다릅니다.\n현재 자동 프록시 버전은 소스 컴파일·일부 샘플 검사 범위이며 새 설치·실제 플레이어 빌드·동일 조건 성능 측정은 남아 있습니다.\n9개 UI 언어와 오프라인 문서를 포함합니다. 지원 렌더러·제외 조건은 동봉 문서를 확인하세요.",
+      "passed": true
+    }
+  ],
+  "media": {
+    "product": "EntityForge",
+    "screenshots": 16,
+    "videos": 1,
+    "keyImages": 3,
+    "galleryTarget": 16
+  },
+  "candidate": {
+    "product": "EntityForge",
+    "version": "0.2.0-preview",
+    "path": "Artifacts/TurnRoomPackages/Candidates/2026-11-03/TurnRoom-EntityForge-0.2.0-preview.unitypackage",
+    "sha256": "89558c30135a69a52ed72c7c2a67b877db9b1e529aca81f02774b183e799044d",
+    "bytes": 24544524,
+    "files": 399,
+    "developmentExcluded": true,
+    "metadataComplete": true,
+    "archiveReadbackPassed": true,
+    "currentSourceAndMetadataMatch": true,
+    "nativeExport": false,
+    "nativeFreshImport": "not run: no new GUI process allowed",
+    "inventoryDifference": "All eligible tutorial files retained; native dependency-pruned tutorial inventory not reproduced"
+  },
+  "submitted": false
+}
