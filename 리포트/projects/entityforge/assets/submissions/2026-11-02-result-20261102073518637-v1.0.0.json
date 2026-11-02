@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "result",
+    "title": "Entity Forge 사용자 가이드 파비콘 누락 수정",
+    "summary": "9개 언어 가이드에 기존 로고 PNG 파비콘을 적용하고 생성 코드·패키지에 반영했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "UserGuide 9개와 UpdateAutomaticDocs.mjs 생성 코드에 상대 경로 ../Editor/Art/EntityForgeLogo.png를 적용했습니다. 새 이미지 제작이나 GUI 실행은 하지 않았습니다. 파일 방식 0.2.0 preview 패키지를 재생성하고 생성 완료 후 모든 포함 파일을 읽어 대조했습니다.",
+    "verification": "가이드 9개 각각 favicon 선언 1개, 로고 파일 존재·PNG 시그니처·256×256 크기·동일 SHA-256을 검사했습니다. 문서 로컬 링크 126개 통과. 패키지 358개 포함 파일 readback 통과. 패키지 SHA-256: 73c0f0d1c9940a29854f2df315a9061ba755205c71fc1d7bd2b2fa1978a0896f. [검사 JSON](../assets/2026-11-02-favicon/verification.json)",
+    "remaining": "사용자가 컴퓨터를 사용 중이므로 브라우저를 실행하거나 화면을 조작하지 않았습니다. 실제 탭 파비콘의 전후 캡처·브라우저 캐시 반영은 미검증입니다. 네이티브 Unity import는 이번 수정에서 실행하지 않았습니다. 기존 로고 재사용으로 새 디자인 도구 작업은 불필요했습니다. 교훈 검토: 재생성 코드에도 수정 반영하는 기존 검증 원칙 적용, 전역 지침 변경 없음.",
+    "outcome": "사용자 가이드 HTML에 rel=\"icon\" 선언이 없음을 소스로 확인하고 9개 문서에 추가했습니다. 기존 Affinity 제작 로고(256×256 PNG)를 수정 없이 재사용했습니다.",
+    "proposedTime": "2~5분",
+    "actualTime": "2026-11-02 16:34:00 KST 시작, 16:34:32 KST 파일 수정·패키지 대조 완료(32초). 공개 배포 확인 별도 진행.",
+    "xerjEvidence": "Xerj.ps1 Status: node is not running. rg 및 현재 HTML/생성 코드 대조로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
