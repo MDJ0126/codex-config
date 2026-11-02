@@ -1,0 +1,130 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Asset Store 업데이트 조회 실패 수정",
+    "summary": "DDT 업데이트 조회 실패 해결·실제 공개2.0.1 비교·푸시 및 공개 보고 검증 완료",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "미출시 세 제품은 공개 버전 없음이 정상입니다. 최종 제출 전 이번 소스 변경을 판매용 패키지에 재반영해야 합니다. 모든 언어·DPI 조합 시각 검증은 미실행입니다. 교훈 검토: 기존 실제 응답 검증 규칙으로 충분해 전역 지침 변경 없음.",
+    "outcome": "DDT 업데이트 조회 실패 해결·실제 공개2.0.1 비교·푸시 및 공개 보고 검증 완료",
+    "proposedTime": "5~10분",
+    "actualTime": "검토·공개 보고 확인 13분 8초, 2026-11-02 15:45:08 KST. 시작15:32:00 KST. 최초5~10분 예상 초과: 실제 응답 파서·19회귀 검사·실제 Unity 조회·안내 및 공개 배포 확인.",
+    "xerjEvidence": "Status: node not running. 최근 data directory lock 오류로 현재 코드와 공개 응답은 rg/직접 구조 대조로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "update-check-fix-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "DDT 최신 공개 버전 확인 불가 원인 수정",
+    "completionCriteria": "실제 공개 응답을 안전하게 해석하고 다른 제품·잘못된 버전을 거부, 현재 Unity에서2.0.1과 설치2.0.2 비교·실제 화면·푸시·공개 보고",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102063407985-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실제 응답과 파서 수정",
+        "action": "공개GET 응답 확인→제품 ID 및 currentVersion 참조를 검증하는 기존 형식 지원→회귀 테스트",
+        "expected": "해당 제품의 공개 버전만 읽고 잘못된 참조는 거부",
+        "qa": "실제 응답·다른 제품·잘못된 ID·충돌·누락·기존 형식과 새 형식 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 응답2종 및19회귀 검사에서2.0.1 조회와 잘못된 참조 거부 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "현재 Unity 조회와 결과 확인",
+        "action": "컴파일→실제 네트워크 조회→버전 비교와 실제 화면→문서 및 공개 보고",
+        "expected": "DDT 공개2.0.1 및 설치2.0.2 비교 완료",
+        "qa": "실제 로드 모듈·ProductError·Latest·비교 결과·UI 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 Unity 공개2.0.1·설치2.0.2 비교, 오류 없음·씬/선택 보존·9언어 문서·공개 본문/첨부 대조 통과"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T06:03:22.5964224Z",
+        "summary": "수정 전 보존된 실제 Unity 실패 로그",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "The public Store page did not contain one unambiguous latest version.",
+            "evidence": "before-native.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-02T06:37:39.2323545Z",
+        "summary": "현재 파서의 실제 네트워크 조회 성공",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 응답2종 및19회귀 검사에서2.0.1 조회와 잘못된 참조 거부 통과",
+            "evidence": "logic/result.json / native-result.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-11-02T06:45:08.012Z",
+        "summary": "실제 UI·문서 및 공개 배포 결과 최종 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 응답2종 및19회귀 검사에서2.0.1 조회와 잘못된 참조 거부 통과",
+            "evidence": "native-result.json / after.jpg / public-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Unity 공개2.0.1·설치2.0.2 비교, 오류 없음·씬/선택 보존·9언어 문서·공개 본문/첨부 대조 통과",
+            "evidence": "native-result.json / after.jpg / public-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
