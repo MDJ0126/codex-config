@@ -1,5 +1,35 @@
 [
   {
+    "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
+    "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-manual-entityforge-automatic-build-20261102-20261102072931383-v1.0.1.html",
+    "date": "2026-11-02T07:29:31.383Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 일반 빌드 자동 연결과 모델 예제 축소",
+    "summary": "일반 Unity 빌드와 컴포넌트 없는 자동 대상 탐지, 구분되는 모델 예제 3개를 구현합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-manual-20261102072856443-v1.0.0.html",
+    "date": "2026-11-02T07:28:56.443Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 일반 빌드 연결·자동 렌더링과 모델 예제 3개",
+    "summary": "구현과 비GUI 검사는 끝났으며 실제 Unity 빌드·모델 표시·성능 측정은 화면 포커스 금지로 보류했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-02-result-20261102072837546-v1.0.0.html",
+    "date": "2026-11-02T07:28:37.546Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "전역 설정 제품 안내·스토어 버튼·업데이트 상태",
     "summary": "구현·컴파일·실제 Unity UI 트리 검사 통과. 화면 조작이 중지되어 최신 캡처와 버튼 직접 클릭·Package Manager 선택 확인은 대기입니다.",
     "project": "turnroom",
