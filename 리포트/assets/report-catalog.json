@@ -1,5 +1,55 @@
 [
   {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103170222871-v1.0.7.html",
+    "date": "2026-11-03T17:02:22.871Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 미구현 기능 추가와 예제·통합 패키지 갱신",
+    "summary": "빌보드·UV 변형·색 영역·구름 투영·주광 그림자 수신과 디버그 표시를 구현했습니다. 정적 검사는 통과했으며 새 씬 외형·GIF는 미검증입니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103170222314-v1.0.0.html",
+    "date": "2026-11-03T17:02:22.314Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 전용 로고와 판매 초안 적용",
+    "summary": "실제 Affinity 로고 이미지를 제품에 연결하고 셀러 아이콘·카드를 저장했습니다. 원본 .af 저장과 Unity 화면 검증은 남아 있습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103170221600-v1.0.0.html",
+    "date": "2026-11-03T17:02:21.600Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "3인 벤치·캐릭터 선택·로컬 소셜 기능 파일 구현",
+    "summary": "18석·16종 외형·입장·닉네임·대화·상태·프로필·동작·AI·기본 운영을 파일로 구현했습니다. 컴파일·정적 검사는 통과했고 실제 Unity 실행은 화면 허용 대기입니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-result-20261103164911014-v1.0.0.html",
+    "date": "2026-11-03T16:49:11.014Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "멀티플레이 제외 로컬 소셜 광장 구현",
+    "summary": "3인 벤치·입장·캐릭터 선택·대화·상태·프로필·동작·AI·기본 운영을 구현합니다. 화면 조작은 나중으로 지정됐습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-solo-social-20261104-20261103164910301-v1.0.1.html",
+    "date": "2026-11-03T16:49:10.301Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Affinity 저장 권한 오류는 프로젝트 폴더 복구 후 검증",
     "summary": "권한 오류 보고로 중단하지 않고, 해당 프로젝트 권한을 직접 복구한 뒤 실제 저장·재열기까지 검증하도록 지시했습니다.",
     "project": "codex-config",
@@ -56,6 +106,16 @@
     "reportPath": "projects/pixora/reports/2026-11-03-result-20261103155831898-v1.0.0.html",
     "date": "2026-11-03T15:58:31.898Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "멀티플레이 제외 로컬 소셜 광장 구현",
+    "summary": "3인 벤치·입장·캐릭터 선택·대화·상태·프로필·동작·AI·기본 운영을 구현합니다. 화면 조작은 나중으로 지정됐습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-20261103154105043-v1.0.0.html",
+    "date": "2026-11-03T15:41:05.043Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },

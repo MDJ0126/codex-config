@@ -1,0 +1,144 @@
+{
+  "at": "2026-11-03T16:54:50.873Z",
+  "passed": true,
+  "scope": "Static asset/source checks; not native Unity import, scene execution or visual quality",
+  "checks": [
+    {
+      "name": "new asset GUIDs are unique and every asset has metadata",
+      "passed": true
+    },
+    {
+      "name": "all scene/profile/material references resolve to known source assets",
+      "passed": true
+    },
+    {
+      "name": "scene object links and camera references are complete",
+      "passed": true
+    },
+    {
+      "name": "seven mesh buffers have consistent layout, indices, finite bounds and nondegenerate faces",
+      "passed": true
+    },
+    {
+      "name": "ten standalone examples have no Camera/Pixora product GUIDs",
+      "passed": true
+    },
+    {
+      "name": "core Runtime does not reference samples/editor/other products",
+      "passed": true
+    },
+    {
+      "name": "editor/sample/integration assemblies have explicit dependency direction",
+      "passed": true
+    },
+    {
+      "name": "9-language catalogs have full values and matching placeholders",
+      "passed": true
+    },
+    {
+      "name": "authored UXML text keys are localized",
+      "passed": true
+    },
+    {
+      "name": "9 guides and screenshot manifest preserve native QA as pending",
+      "passed": true
+    },
+    {
+      "name": "no import-time scene changes, package installs, forbidden picker calls or generated runtime UI",
+      "passed": true
+    },
+    {
+      "name": "vegetation material references a Shader asset with serialized type 3",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/ScreenshotManifest.json": "8e62e47c58b7dffb0cfdbd3afd636ca4dca7787a08563b842e43a54b59be9901",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.de.md": "7f1dc15368cec3e8e0034cfd2f3773ebf5a58eded393c52a458919afc3af8885",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.en.md": "a4a97ffd3539feb7d06beccae38bad1b0f7d02d090622e7261d4cafeeb395938",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.es.md": "5b5e4c254a398862e1326c79e60dbcc52e4f88e59380688313f3e8b0ddf6a78a",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.fr.md": "7f9f6014a89fe1e0320675fb7d7911c17cbac06da7a67b601d492bc862e76b23",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.ja.md": "aba403d089d6ef0be310ecfef76087658e3aac7ff7b145b76fb6eb28de153779",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.ko.md": "6751fe04f3e4e67112af157d7f07a5378bac045bfd0dc89bd47dbfd1285bf84f",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.pt-BR.md": "ca966afa5f4f1d76b258ad82a03d720fabeacc85a453759e1145e08a842112b2",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.zh-Hans.md": "6919716d1ef687a8024b6292b664e493a46640dcacf398c40d186481860c09e2",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/Source/UserGuide.zh-Hant.md": "d5563fe8d26b68abefc514fee59548dbe76a219e5fb22ab6d8c89f32e279fbd6",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html": "979819e8528ad73e761ec9ed23ab7c5ef482c74a2e735043efe9fbf01260bb48",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html": "e3c1a066c22fefc03d53a4b9384bdb6acaefa27ce58f3fb71e662d5806c953ce",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html": "9a02e877f8d0282362dacca721f560a0f7b056bf0d51797e9f70ff7fd6ccd68d",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html": "ce07d368a82362cca4e77eb305346c213040a475b0898d775776a922c6a8d260",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html": "a91aaff2ad22e35722e6fd209947a57fd594e883869851649a0ba120e7e70090",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html": "d92ce5808d86fa27633924a6510eb19a51546d7d5f297eabbd720d95a616b73f",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html": "4f55163bfae3ea25bec1ea9ef05851bebfd2076b60d0871806d91af0de7a3328",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html": "dd8dcd9d103a431ee5d5bb15953107e0f6e7e8f96385d7b269a71bd10a6c9020",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html": "e8e8d4111b987cae0cf170fa6fe8cbc8b75d7ccbe0a61c09c4e59bbfef175fa1",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageAuthoring.cs": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.asset": "3ec4b87f53341429c0418fc72a0e9da0f9a4dad295f4668409e28c629585bd42",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.cs": "06275b8852fd08613e413ad57e1b0ae174f228c80197d93b31333222bff7af21",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs": "651dd61bf6347fbcd442696016e4ec1f876f6f9c2e80bfcc18e6f999f2c71e9a",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.uxml": "f624ace99f98ef6829b1e952b411da0e4d49433aada727d56c81ae075646e0f6",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/Localization/UI.json": "ba191a7ea15758fb180b15e4ac60b5482609477d719e9a940db9c47cc83463ac",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/TurnRoom.PixelFoliage.Editor.asmdef": "a752413d5ea1e8683172171d7fb382faa21f661b02cf5792666be72cf36d43f1",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Editor/FoliagePixelCameraLink.cs": "256c951168e62c8c56ab5a75fa4f02bb37a9dbbbebeb897ae0953d6a157981a1",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Editor/TurnRoom.PixelFoliage.PixelCamera.Editor.asmdef": "33f0539fe70249839540fb7f6899668c1268b543fe7bb8484d29fe9f89e493e7",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/README.md": "3b39e97e162753be4a9d59ebc37117becc18f677f1df44d270bbc73fc35b7222",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Presets/SoftGarden-4px.asset": "79aba6567b0b2a559d65619856c94b4d3c83bc4a8c3e0aeae69122bb6ab8d65f",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Presets/SoftGarden-Lightweight.asset": "faba9e831315fb2d5ffe16cdf2d56a0fb849c132df17d051ba2752e0c5bb7ea9",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/11-PixelCameraGarden.unity": "70ee6d526070bf4549014da0a07ecb0fec58aac82e6649164158053cd9dc9317",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/Pixora/Editor/FoliagePixoraImport.cs": "03b06c2c7864de290e5b554567d36415ca54f0d32df3cd0ec65a09657e8086e8",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/Pixora/Editor/TurnRoom.PixelFoliage.Pixora.Editor.asmdef": "b313533987efaae3c628134c2fdd927a8d0acf1298fdcf70a84393ed03481cd1",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/Pixora/README.md": "8404a9c2d56ed6124e9150613cfe8305d065c34d001085399d44374917d58efa",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageContactHistory.cs": "9354b4d90a6e993ed530c7093c4c8c6a4ce8d490d582c177ad81962d0e4159cf",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageInteractor.cs": "d99170014910354bddc3c13cf1ddd1b449a680378a5cc02e949b3f41945c7a25",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageMath.cs": "2ee125a5c02fa130dfd6c35bfb8864d0fc0f4fe99e1a6f38db8e669f31499603",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliagePatch.cs": "d7735f939bd6f2768e1b7f8bcb3f11049df1da0ff57883b072cb53e7c1bc5c3f",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageProfile.cs": "b4369cbd857f5df59c66afc4c11dca8fdb6067bd766593a77dfd1870605209c8",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageRenderer.cs": "4d4463b1cf2e946450dba11b9875105d27d84da84f95a9d07e6a24c2f6aff207",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageWorld.cs": "f590f85da85281a1170abb63e9302690caa6a769014124688cd5f432f54f6a48",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/Shaders/FoliageCommon.hlsl": "48291f71c4d017dfa549923e3ecc860f043e8aa07fdc77eeaf8b070a424c6f9e",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/Shaders/PixelFoliage.shader": "93a95f8ee85e12474e26bae6770a1846785955d5b175681a81544fd90edeff33",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/TurnRoom.PixelFoliage.Runtime.asmdef": "bad92abaecfda6cd999f44444ee6563b3eacf380bde705347a86060be9f46987",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Examples.json": "ff0c955ae0e6b4dfc1b701a83d3f302bc0a9134cf63def57f2f8486a1a8f82b4",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Materials/SoftVegetation.mat": "cc5c451cfba8fe7842ce17b31e0f81d23897216bf12f75df27ebf0f3487410d7",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/BranchingTree.asset": "211b6028aabce0448a961dde9d183bd3d7db52d19890384744f76d23cfaa39f5",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/GardenVisitor.asset": "d515c8b50e0df09d95ca28d3fb3f9c6c7b2131fc329357ae4d882372d81aed79",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/IvoryDaisy.asset": "6cfd5b2efd2972f287d68253a9b500dca243785ccafe1700366de032124b4642",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/MeadowGrass.asset": "9884f3887ea40ead28b81f4816066ad1a009f3616683e99a83ddde9aac0bc0c8",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/MeadowIsland.asset": "daa21795d6dc14200efcf9a566c853570b5953523e0715acf4dcf8835bfc1839",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/RoseBlossom.asset": "2a593d2aa0d250c5dc65325bd62c5929a3145a3a6a1b65492ddfcebb2f9ae3be",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/RoundedShrub.asset": "1e103fa153cfaebbe91e405b23ca85c48ec50d94494cc54f82414c3f4274828c",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/BranchingTree.asset": "0665ba45e036a995e7bbae4be6897a631fc48466ba20f0973b8830b6e06bc60d",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/GardenVisitor.asset": "89041269f16a3a4ca9076355289e69a2f4594da462a984e9088aba5a470bacb2",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/IvoryDaisy.asset": "f7ff21d11100d84cc00deb4ce6d1e3f38f2f82d3d8e5222387b5da21f0111902",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/MeadowGrass.asset": "b45c816406c5b31211cecf77fcc49457140dfac15e19766e675d77c32a470104",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/MeadowGrassFullBillboard.asset": "d34f13b1e3728c1cea8c78fd89e1cad23dd26bcb5a93193f01f1299beb6ceb5c",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/MeadowIsland.asset": "66278e1baf5dcba4075d45fe466f34d0a8828830e905267feb250de4c0fd7609",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/RoseBlossom.asset": "cab9b7dc5258d8d2864323a6036d8c3ce597bac834e0a703392c3717d08d3ba3",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/RoundedShrub.asset": "a26058daf2232b67716c568639408390c491c1e9d2445c398e5848605026ec05",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs": "556890505748efdf4add7bfc104239d2958faef02381d06869f9e8e9775112bc",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Runtime/TurnRoom.PixelFoliage.Samples.asmdef": "0997df83e4b0ff8a95236cf6b333facdfef3d1413541050dcdda6e47b3e2af03",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity": "144e7cdb28592c923b828c54aa1d93c320dfea6c6a7b22bce95040c98b37e21e",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity": "eae1ed069d6bc3d257e651c2d95998ae33a9bf03c7bd2febf76095b0778c060c",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity": "7fe35492c11ab6ffe2c4222f1f4ebd0fd6aca3cfe2e3d60d486ce3652fec4f4e",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity": "9e25c27eec9e616e81ff186ef4cc5c61be6a0b78c916e16f8e839c7334e2c203",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/05-ContactTrail.unity": "3caf05a655e12259afbb3071c06c3ec62aceb158ee5dfca99138453724242c38",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity": "b81330c611742edcc0a24e415fcbce09a96c291abfefb2fa884169570ada2cc8",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/07-SharedGusts.unity": "3b3dfdcad390be405669b77790e1ffaae1a204aef2bf34e677b5a749aa86f0b6",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/08-CloudLight.unity": "a660f17c789b7680f4919f581044a392bc834250f00a0013872d3d24707cdb08",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/09-MixedGarden.unity": "26df1dc360780e9cdad8a9cb112e1f4f6f44c319d64a56696367653d865b93f0",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity": "2ea0827cccf6813ac5bc095222f3c1b6a8019f8634229e069c8711ecfc40e12c",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/TempleteRequirement.json": "8caad3b625a422a8e14a927db35b1e9c5cebb0915333ab200198f504a703108e",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Third-Party Notices.txt": "6179566f7e78db89e85664d240f0a7a1449eafa102a0e4a85f231102215ed3bc",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Version.json": "c4395345b6b8c0b5b72b84dceb15586f1b89e80777c963b5825f8731e86c8c93",
+    "Assets/TurnRoom/PixoraStudio/Suite/Editor/Localization/UI.json": "7a8f2ef188d8eca246c4eb15823da41a721f42296360339182ab64cc269f5a5e",
+    "Assets/TurnRoom/PixoraStudio/Suite/Editor/PixelToolerWindow.cs": "357fd968bf551cd2e40bb0ad537a0e3e2edacadf3d61c2c74f9fbdb21284226e",
+    "Assets/TurnRoom/PixoraStudio/Suite/Editor/PixelToolerWindow.uxml": "5d17ba613aa9038d6aa0c69bfde68c9ca03fb468492e3606096ba1e9a773179d",
+    "Assets/TurnRoom/PixoraStudio/Suite/Editor/TurnRoom.PixelTooler.Editor.asmdef": "5f0ef1ad50d16ae5d0d24f4fd9fd5e6dc7b1bab9aeaaebaf514e398a7b9dabd8"
+  },
+  "settingsHashes": {
+    "ProjectSettings/EditorBuildSettings.asset": "9cfdcabee4917761b02eaf37dd030e0f4ed8964f6e080615df7c22e4e8175d31",
+    "ProjectSettings/GraphicsSettings.asset": "5f5cd6a00c1a66ff784c53bc5bf938bc61dd29a81fb95273cd424d4bcbde2283",
+    "ProjectSettings/ProjectVersion.txt": "b8d1e8361aaa0ba749c5b93a88aa587841bdfbc5d499850d972b4de8abd1d330",
+    "Packages/manifest.json": "4dffaf1b125b22fd95b4253df39b84220d1add420cc68425e5237e2eb1af16c3"
+  }
+}

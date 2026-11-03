@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-03T16:55:31.502856+00:00",
+  "method": "Frozen source bytes packed into Unitypackage-compatible tar/gzip, archive and current source SHA256 readback; not Unity-native export or release approval",
+  "packages": [
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Camera-Review.unitypackage",
+      "bytes": 33173915,
+      "sha256": "bb753accd300c0219dbf8c25f7fbe0806a741aa5529dffd7f9e66a48b316a929",
+      "assets": 764,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Pixora-Review.unitypackage",
+      "bytes": 17942944,
+      "sha256": "4c0d1c54752285d715bb13c6258cc1a139f393790f76251227affb828469a74a",
+      "assets": 2105,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Review.unitypackage",
+      "bytes": 8931230,
+      "sha256": "29356b71b36643fb170121387cb8711783b83ed62b92ab05743af495f5adb32e",
+      "assets": 408,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Core-Review.unitypackage",
+      "bytes": 8875939,
+      "sha256": "88d39ca5f4532ef46efb32ccca97a17088a96a55d4b7e4dd0fe5f2a582aa479f",
+      "assets": 373,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixoraStudio-Review.unitypackage",
+      "bytes": 42415810,
+      "sha256": "3bf7e480f19f747a76571071407241e5a65ff13c90b3cf85251f6308e37c2971",
+      "assets": 2649,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    }
+  ]
+}
