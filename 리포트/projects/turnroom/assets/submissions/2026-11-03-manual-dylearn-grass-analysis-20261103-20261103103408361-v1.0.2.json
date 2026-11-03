@@ -1,0 +1,114 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "픽셀 잔디 데모 분석 실행 메뉴얼",
+    "summary": "Godot 잔디 셰이더와 Pixel Camera 소스를 대조했습니다. 독립 식생 모듈과 카메라 연동을 권하며 실행 성능은 미검증입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "### 표현을 구성하는 기술\n\n| 요소 | 소스에서 확인한 처리 | Unity 적용 제안 |\n| --- | --- | --- |\n| 풀의 모양 | 카메라 방향을 향하는 quad billboard + nearest 텍스처 + 알파 절단 | 픽셀 스프라이트를 얹는 인스턴스 메시 |\n| 넓게 흐르는 바람 | 다른 방향·속도·스케일의 두 노이즈를 곱해 회전 생성 | 월드 좌표 바람 필드 공유 |\n| 작은 흔들림 | 개별 위치 seed를 가진 사인파 회전 | 공통 바람에 개체별 움직임 추가 |\n| 손그림 리듬 | 위치별 phase를 더한 시간을 round(time * FPS) / FPS로 양자화 | 렌더 FPS와 별도로 식생 애니메이션 FPS 제어 |\n| 앞뒤로 눕는 인상 | 바람·캐릭터 방향과 카메라 방향에 따라 UV 폭을 변경 | 실제 원근 카메라 대신 재질의 가짜 원근 처리 |\n| 자연스러운 색 덩어리 | 월드 노이즈로 3개 색 영역, 드문 accent 스프라이트 선택 | 바닥·풀 색 패턴의 좌표와 스케일 일치 |\n| 부드러운 명암 | 계단형 toon 경계 일부에 smoothstep 혼합 | 픽셀 윤곽을 흐리지 않고 명암 경계만 부드럽게 |\n| 구름 그림자 | 광원 방향으로 가상 구름 평면에 투영해 노이즈 조명 계산 | 풀·바닥에 같은 월드 조명 마스크 |\n| 접촉 반응 | 최대 64개 위치·반경을 전달하고 카메라 축 방향으로 회전 합산 | 소수 캐릭터 배열 또는 넓은 장면용 상호작용 필드 |\n\n근거: [Grass.gdshader](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Shaders/Grass.gdshader), [구름 include](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Shaders/clouds.gdshaderinc), [CharacterManager](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Scripts/CharacterManager.gd).\n\n### 카메라와의 관계\n\nDemo.tscn은 640×360 SubViewport, orthographic projection=1, 카메라 size=6.085를 저장합니다. MultiMesh는 40,000개 할당, 30,000개 표시를 설정합니다. 이 숫자는 성능 벤치마크가 아닙니다. 저장 재질의 잔디 애니메이션은 5 FPS이며 CharacterManager의 위치 전달 기본값은 10 Hz입니다. 게임 전체가 5 FPS라는 뜻은 아닙니다. 사용자 첨부의 1·3·5·7 FPS가 정확히 어느 스위치인지 영상 확인은 못 했습니다.\n\n카메라는 해상도·투영·화면의 픽셀 격자를 결정하고, 셰이더는 풀 모양·바람·접촉·명암을 결정합니다. billboard와 가짜 원근은 카메라 방향을 사용하므로 완전히 무관하지 않습니다. 카메라 필터만 추가해도 이 잔디가 생성되는 것은 아닙니다.\n\n현재 PixelCameraEffect.cs는 저해상도 RenderTexture와 Point 필터, 격자 안정화를 구현하고 PixelCameraPreset.cs는 해상도·팔레트·외곽선 설정을 제공합니다. PixelCameraSteppedAnimator.cs는 Unity Animator를 일정 간격으로 평가합니다. 이는 GPU 셰이더 TIME을 단계화하지 않으므로 잔디에는 별도의 시간 uniform이 필요합니다. PixelCamera Runtime·Integrations에서 grass/wind/billboard/character_positions 검색은 일치하지 않았습니다. 다른 제품 전체의 기능 부재까지 주장하지 않습니다.\n\n### 기존 도구와 선택\n\n| 후보 | 확인한 역할 | 판단 |\n| --- | --- | --- |\n| Dylearn 원본 | Godot 픽셀 잔디 소스와 아트 | 학습·이식 기준에 가장 직접적이나 Unity 재구현 필요 |\n| [Stylized Grass Shader](https://discussions.unity.com/t/stylized-grass-shader-unity-6-support-now-available/771327) | 제작자가 Unity 6 지원 안내, 바람·굴곡·지면 색 혼합을 소개 | 빠른 Unity 실험 후보. 원본 픽셀 미감·현재 프로젝트 결합은 별도 QA 필요 |\n| [ProPixelizer](https://propixelizer.github.io/docs/technical/propixelizer-camera/) | 카메라 격자 스냅, 전체/선택 픽셀화, 월드 픽셀 크기 | 잔디 생성 도구가 아니며 기존 Pixel Camera와 역할이 겹침 |\n| [Bramreth Godot grass](https://github.com/bramreth/Godot-4-3D-Stylized-Grass) | Godot 4 + Blender 잔디 튜토리얼 | 다른 잔디 구성 학습용이며 Unity 즉시 설치용 아님 |\n\n상용 에셋 구매는 수행하지 않았습니다. 상용 에셋을 게임에 쓰는 것과 자체 판매 패키지에 재배포하는 것은 구분해야 합니다.\n\n### 제품화 제안 — 미구현 후보\n\n1. 우선 자체 아트의 작은 잔디 장면을 기존 Pixel Camera와 결합해 비교합니다. 연속/5/8/12 FPS, phase 동기/분산, hard/soft toon, 구름 켜기/끄기를 같은 카메라에서 비교하는 것이 적절합니다.\n2. 결과가 좋으면 독립적인 픽셀 식생 제품으로 분리합니다. 핵심은 billboard 식생, 페인팅/배치, 공통 바람, 캐릭터 반응, 스타일 프리셋, 거리별 표시와 카메라 선택 통합입니다. 카메라 없이도 동작하고 Pixel Camera는 선택 연동으로 두는 구성이 적절합니다.\n3. 확장 후보는 꽃밭·밀밭·갈대·관목·나뭇잎·깃발이며, 공통 바람과 단계화 시간을 재사용할 수 있습니다. 눈·모래 발자국은 누적 상태가 필요해 현재 순간적인 접촉 회전보다 별도 구현 범위가 큽니다. 물은 반사·깊이·투명 처리 때문에 초기 범위와 분리하는 것이 좋습니다.\n\n이는 기술 구조에 근거한 제안이며 상품성·판매량·프레임 성능은 미확인입니다. 신규 제품을 채택할 경우 기존 프로젝트의 9개 언어, 샘플 격리, 자체 로고, 문서와 실행 QA 요구를 적용해야 합니다.\n\n### 라이선스 확인\n\n[LICENSE.txt](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/LICENSE.txt)는 코드를 MIT, 아트를 CC BY 4.0으로 구분합니다. MIT 코드 사용 시 저작권·허가문을 보존하며, 아트에는 저작자·라이선스 링크·변경 표시가 요구됩니다. Waterfowl 로고·브랜드는 제외합니다. 동시에 4항에 상당한 독창적 수정 없는 아트 단독 재배포·재판매 금지 문구가 있습니다. CC BY 표준 안내만 보고 판매 패키지 재배포를 확정할 수 없으므로 자체 아트를 사용하거나 권리자에게 조건을 명확히 확인하는 방향을 제안합니다.",
+    "verification": "원본 저장소를 내려받아 커밋·project.godot·Demo.tscn·Grass/Floor/Toon/Cloud 셰이더와 CharacterManager 소스를 직접 대조했습니다. 기존 Pixel Camera Runtime 소스와 비교했습니다. 공식 제작자 안내와 ProPixelizer 문서를 확인했습니다.\n\nGodot 실행 파일은 PATH 조회에서 발견되지 않았으며 추가 설치나 GUI 실행을 하지 않았습니다. 프레임 성능, 실제 GPU 동작, Unity 동일 영상 재현과 회전 카메라에서의 품질은 미검증입니다. 이번 결과는 소스 분석 보고서이며 원본 실행 스크린샷이나 전후 품질 비교가 없습니다.\n\n교훈 검토: 전역 지침 변경 없음. 라이선스 원문 확인과 실행/소스 검증 구분은 기존 규칙에 포함되며, 이 저장소의 특별 문구는 이번 보고서에 한정해 기록합니다.",
+    "remaining": "분석 요청과 최초 공개 검증 완료. Unity 구현·실행 성능 검증은 후속 후보입니다.",
+    "outcome": "분석은 완료했습니다. Unity로 유사한 표현을 구현할 수 있는 구조이며, 카메라 픽셀화와 식생 셰이더를 분리해 결합하는 방향을 제안합니다. Unity 이식·실행·성능 측정은 이번 분석에 포함하지 않았고 완료로 표시하지 않습니다.\n\n원본은 Godot 4.4 / Forward Plus를 선언한 3D 픽셀 잔디 데모입니다. 확인한 커밋은 7486b9b99834d95c4287cc917971b3d74ba37d8c입니다. 완성 게임이나 Unity 패키지가 아닌 스크립트·셰이더·모델·텍스처·시연 씬입니다.\n\n[원본 저장소](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo) · [제공 영상](https://www.youtube.com/watch?v=OxsuWDtjuGw)\n\n영상 페이지를 도구로 가져오지 못했습니다. 영상 전체 시청·음성·시간별 효과 대응은 미확인입니다. 사용자 첨부 화면과 실제 저장소 소스로 분석했습니다. 에디터 실행 화면은 수집하지 않았으며 시각 재현 통과를 주장하지 않습니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "시작 2026-11-03 19:24:22 KST, 분석·최초 공개 검증 완료 2026-11-03 19:33:58 KST, 약 577초. 완료 기록의 공개 반영은 후속 푸시합니다.",
+    "xerjEvidence": "Xerj.ps1 Status: node not running. Search 실행은 startup failed. 외부 Godot와 PixelCamera Runtime은 인덱스 범위 밖이므로 현재 파일을 rg와 직접 읽기로 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "dylearn-grass-analysis-20261103",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "원본 기술·카메라 역할·Unity 적용과 제품 후보를 검토합니다.",
+    "completionCriteria": "소스·라이선스 대조, 유사 사례 비교, 제한 명시 및 공개 보고서 확인",
+    "previousManual": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103045693-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원본과 기존 구현 분석",
+        "action": "원본 소스와 설정·라이선스 및 PixelCamera Runtime을 대조합니다.",
+        "expected": "확인 사실과 미확인을 분리한 분석",
+        "qa": "원문 경로와 설정값을 분석 본문과 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "원본 커밋·씬·셰이더·라이선스와 기존 PixelCamera 소스를 대조하고 분석 본문을 작성했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "분석 보고서 공개 검증",
+        "action": "JSON 보고서 생성·빌드·검사·커밋·푸시 후 공개 본문 확인",
+        "expected": "개별 HTTPS 보고서 접근",
+        "qa": "배포 상태와 공개 URL 본문 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "826aefd 배포 성공, 개별 보고서 HTTP 200 및 제목·커밋·미검증 문구 확인. 로컬 14개 테스트 파일과 링크·필터·원문 보존 검사 통과."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T10:30:28.537Z",
+        "summary": "소스 분석 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "640×360, orthographic, 30000 표시 설정, phase 양자화·UV 변형과 원본 LICENSE 조항을 대조했습니다. 영상 전체와 실행 성능은 미확인으로 보존했습니다.",
+            "evidence": "원본 7486b9b99834d95c4287cc917971b3d74ba37d8c 및 분석 보고서",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-03T10:33:58.702Z",
+        "summary": "소스 분석 및 공개 전달 전체 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 커밋·씬·셰이더·라이선스와 기존 PixelCamera 소스를 대조하고 분석 본문을 작성했습니다.",
+            "evidence": "원본 소스 대조와 source-checks.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "826aefd 배포 성공, 개별 보고서 HTTP 200 및 제목·커밋·미검증 문구 확인. 로컬 14개 테스트 파일과 링크·필터·원문 보존 검사 통과.",
+            "evidence": "https://github.com/MDJ0126/codex-config/actions/runs/41619952208 및 공개 보고서 HTTP 200",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
