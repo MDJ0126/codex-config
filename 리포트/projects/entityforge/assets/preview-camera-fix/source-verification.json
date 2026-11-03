@@ -1,0 +1,47 @@
+{
+  "utc": "2026-11-02T14:24:59.502Z",
+  "scope": "actual serialized scene camera settings and source selector; no Unity rendering executed",
+  "scenes": [
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+      "previousSelection": {
+        "name": "HUD clear camera",
+        "mask": 0,
+        "depth": -100
+      },
+      "filteredSelection": {
+        "name": "Camera",
+        "mask": 4294967295,
+        "depth": 0
+      }
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+      "previousSelection": {
+        "name": "HUD clear camera",
+        "mask": 0,
+        "depth": -100
+      },
+      "filteredSelection": {
+        "name": "Camera",
+        "mask": 4294967295,
+        "depth": 0
+      }
+    },
+    {
+      "scene": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+      "previousSelection": {
+        "name": "HUD clear camera",
+        "mask": 0,
+        "depth": -100
+      },
+      "filteredSelection": {
+        "name": "Camera",
+        "mask": 4294967295,
+        "depth": 0
+      }
+    }
+  ],
+  "screenManipulated": false,
+  "buildExecuted": false
+}

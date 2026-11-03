@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-02T10:45:43.341Z",
+  "sceneDescription": "현재 씬을 분석합니다.",
+  "button": "upper right beside scene/prefab tabs; rerun retained",
+  "progress": "native Unity EditorUtility.DisplayProgressBar; owned cleanup on completion/error/mode change/disable",
+  "completedState": "description areas hidden; no inline 100% gauge",
+  "nativeUI": "not executed: focus restriction",
+  "compilationAssemblies": 7,
+  "sourceHashes": "current",
+  "localizedKeys": 455,
+  "languages": 9,
+  "package": {
+    "at": "2026-11-02T10:45:12.700Z",
+    "method": "File-only standard Unity archive layout; source and metadata preserved",
+    "package": "Artifacts/EntityForge/TurnRoom-EntityForge-0.2.0-preview.unitypackage",
+    "bytes": 23779756,
+    "sha256": "11f0359350344e5d518f87ff2f4077a6b72005199949df9357eebcb23dc84777",
+    "assets": 388,
+    "readback": "pass",
+    "currentSources": "byte-identical",
+    "developmentExcluded": true,
+    "nativeUnityExportExecuted": false,
+    "cleanUnityImport": "not executed: separate product installation QA",
+    "createdMeta": []
+  }
+}

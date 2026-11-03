@@ -1,0 +1,31 @@
+{
+  "before": {
+    "samples": 5,
+    "maxX": 138,
+    "maxY": 160,
+    "maxWidth": 836
+  },
+  "after": {
+    "samples": 5,
+    "maxX": 0,
+    "maxY": 0,
+    "maxWidth": 0
+  },
+  "sourceHashes": {
+    "Scripts/Editor/Window/WorkbookNativeWindow.Shelf.cs": "ff476715ac8fba39d8706cbe76d6a520b75e54e003591079cb73e45477a4013d",
+    "Scripts/Editor/Window/WorkbookShelfWindow.cs": "394a9e3bee56cb99175a5005a02d02d33bf2c808fe1026f411505c05d18544de",
+    "Scripts/Editor/Window/WorkbookMinimizedShelf.cs": "32a51240c1729fce3f001246d78d8e06126f05e9fe8f74062f67b7ae2a2c9093"
+  },
+  "loadedBefore": {
+    "utc": "2026-11-02T12:54:13.5796521Z",
+    "mvid": "1bc069b1-9c6d-454e-b66c-22ee101e6f1d",
+    "samples": 5
+  },
+  "loadedAfter": {
+    "utc": "2026-11-02T12:55:02.4987289Z",
+    "mvid": "948cecd8-fa33-40b8-99c4-7dc83eb7bb0f",
+    "samples": 5
+  },
+  "scope": "Native button input plus four synchronous SetWindowPos operations inside one editor update; not continuous physical drag",
+  "review": "Actual before and after screenshots inspected; English only; 100% DPI only"
+}

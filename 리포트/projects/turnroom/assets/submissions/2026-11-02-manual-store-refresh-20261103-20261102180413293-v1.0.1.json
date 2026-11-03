@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "4개 Unity 판매 초안 최신화와 무화면 제출 점검",
+    "summary": "4개 제품 4개 언어 저장 대조와 갤러리 교체, 패키지 차이 및 Pixora 참조 수정 검토",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "보고서 공개 확인. 제출 전 최신 패키지 네이티브 설치·검증·업로드, DDT 갤러리 2장, 영상 실제 청취와 교체 및 일부 Affinity 원본 검증.",
+    "outcome": "販売 초안 저장·재열기 대조 완료, 제출 필수 잔여 검사 식별",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-03 01:48:38 KST 시작, 03:04 KST 약75분 경과, 공개 확인 중",
+    "xerjEvidence": "노드 미실행; 기존 API·소스·실행 기록 직접 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "store-refresh-20261103",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "DDT·Pixora·Pixel Camera·Entity Forge 판매 초안 최신화와 저장값 확인",
+    "completionCriteria": "현재 소스·패키지·초안 대조, 포털4개 언어 판매 초안 저장·재열기 대조, 미실행 검증 구분, 최종 Submit 미실행과 공개 보고",
+    "previousManual": "projects/turnroom/reports/2026-11-02-manual-20261102165609628-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 산출물과 검증 범위 확인",
+        "action": "4개 제품 소스·패키지·판매 초안 및 기존 SDK 연결 대조",
+        "expected": "최신 버전·패키지 불일치·검증 제한 식별",
+        "qa": "현재 파일 해시·포털 저장값·기존 검증 근거 비교",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "기존 업로드와 소스 불일치 확인, 파일 후보 해시 재읽기 및 정적 참조 검사 수행"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "판매 초안 최신화",
+        "action": "검증 범위에 맞는 간결한 영어·한국어·일본어·중국어 초안 저장",
+        "expected": "4제품 판매 정보 저장 후 재열기 값 일치",
+        "qa": "실제 포털4언어 저장값 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "첫 변경 이력 저장 실패 기록 보존. 짧은 출시 이력으로 수정 후 16개 제품/언어 조합 최종 저장값 일치"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "무화면 릴리스 점검과 공개",
+        "action": "안전한 파일·SDK 검사와 남은 제한 기록, 개별 보고 공개",
+        "expected": "최종 제출 없이 실제 완료 범위 공개",
+        "qa": "파일/검사 결과와 HTML 빌드·배포·본문 접근",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "HTML 공개 배포 확인 진행 중. 네이티브 설치·공식 Validator·영상 청취는 화면 조작 금지 조건으로 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-02T18:04:12.779Z",
+        "summary": "현재 상태와 포털 저장 재읽기 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 업로드와 소스 불일치 확인, 파일 후보 해시 재읽기 및 정적 참조 검사 수행",
+            "evidence": "각 제품 보고서 verification.json 및 static-release-review.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "첫 변경 이력 저장 실패 기록 보존. 짧은 출시 이력으로 수정 후 16개 제품/언어 조합 최종 저장값 일치",
+            "evidence": "portal-readback.json 최종 레코드",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "HTML 공개 배포 확인 진행 중. 네이티브 설치·공식 Validator·영상 청취는 화면 조작 금지 조건으로 미실행",
+            "evidence": "대상 Unity 호스트 소멸 및 공식 Validator 진행창/프로세스 실행 소스 확인",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

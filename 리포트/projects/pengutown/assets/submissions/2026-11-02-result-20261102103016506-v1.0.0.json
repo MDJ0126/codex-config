@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pengutown",
+    "kind": "result",
+    "title": "리얼 펭귄 모델 4종 — 외형과 실제 이동 애니메이션 비교",
+    "summary": "Rifat은 이동 클립과 LOD가 장점이며, Nyilonely는 황제펭귄 외형 대안입니다. VFX Grace는 고품질 기준이지만 실시간 게임용 추가 작업이 필요합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "| 후보 | 확인한 가격 | 제공 사양 | 판단·미확인 |\n| --- | --- | --- | --- |\n| [RifatBilalov Penguin](https://www.fab.com/listings/411d0928-3110-404e-9ebe-c92215b0e9fa) | Personal ₩43,980 / Professional ₩131,960 | 68개 애니메이션, walk·slip·swim·swim fast·swim up/down, IP/RM, FBX, 4 LOD 7,800~2,600 tris, 2K PBR | 게임 이동용 1순위. Unity 전용 패키지는 확인되지 않았습니다. 머티리얼·Generic 리그 매핑이 필요합니다. 전용 공중 다이빙 클립은 미확인입니다. |\n| [Nyilonelycompany Emperor Penguin](https://www.renderhub.com/nyilonelycompany/emperor-penguin) | 정가 $50 / 조회 페이지 할인 $30 | Unity FBX, 9,916 tris, 13개 in-place 애니메이션, 4K PBR | 황제펭귄 외형 우선 대안. LOD·충돌체 없음. 13개 클립의 상세 이름과 미끄러짐·수영 포함 여부는 미확인입니다. |\n| [JUNNICHI SUKO Penguin](https://www.fab.com/listings/ebea4686-fd36-4f62-8091-24351c7fc81e) | 시작 ₩33,710, 라이선스에 따라 ₩65,970까지 | 아델리·아프리카펭귄, 59본, 40개 동작+12개 in-place, 중·저해상도 모델 | Unreal 패키지입니다. Unity에서 리그·클립 확보 및 로직 재구성이 필요합니다. 황제펭귄 모델은 아닙니다. |\n| [VFX Grace Emperor Penguin — Blender](https://superhivemarket.com/products/emperor-penguin-animated--vfx-grace) | Individual $260 / Team $780 | Blender/Cycles, 털, 4K UDIM, 24,034 polygons, WALK·GLIDING 두 루프 | 외형 품질 기준. Unity용 털·텍스처·LOD 변환과 수영 애니메이션 추가가 필요합니다. 게임 적용 성능은 미확인입니다. |\n\n가격은 2026-11-02 조회값이며 지역·세금·할인·라이선스에 따라 달라집니다. Fab 후보는 Standard 라이선스의 Personal/Professional 조건을 확인해야 합니다. Nyilonely는 판매자 Extended Use, VFX Grace는 매출 기준별 Individual/Team 라이선스입니다. [Fab 라이선스](https://www.fab.com/eula).\n\n**Rifat — 이동 구현 우선 후보**\n\n![Rifat 판매자 공개 미리보기. 실제 Unity 실행 화면이 아닙니다.](../assets/research-20261102/rifat-penguin.jpg)\n\n**Nyilonelycompany — 황제펭귄 외형 대안**\n\n![Nyilonelycompany 황제펭귄 판매자 공개 미리보기.](../assets/research-20261102/nyilo-emperor.jpg)\n\n**JUNNICHI SUKO — 다른 종과 군집용 후보**\n\n![JUNNICHI SUKO 판매자 공개 미리보기의 아프리카펭귄.](../assets/research-20261102/junnichi-penguins.jpg)\n\n**VFX Grace — 외형 목표 참고**\n\n![VFX Grace 판매자 공개 홍보 렌더. 배경 장면은 상품에 포함되지 않습니다.](../assets/research-20261102/vfx-grace-emperor.webp)\n\n마지막 홍보 이미지의 배경·구성 전체나 새끼 모델까지 제공된다고 판단하지 않았습니다. 판매자는 장면 미포함을 명시합니다. Blender 상품과 Maya 상품의 가격·폴리곤 사양은 서로 다르므로 혼용하지 않았습니다.\n\n[Rifat 동작 영상](https://youtu.be/7sxf74aCWLU) · [JUNNICHI 동작 영상](https://youtu.be/unbi0OQTK7k)",
+    "verification": "판매자 본문·가격 선택 UI·포맷·애니메이션 목록을 확인했습니다. 미리보기 4장을 원본 그대로 내려받아 시각 확인했습니다. 파일은 각각 48,917 / 47,790 / 86,228 / 25,882바이트로 모두 200KB 미만입니다. 이미지 제작·편집·재압축은 하지 않았습니다. 이번 작업은 리소스 조사이며 게임 화면 변경이 없으므로 실행 전후 화면은 생성하지 않았습니다.",
+    "remaining": "구매 전 최종 클립 목록과 리그의 머리·날개 본을 확인해야 합니다. 모든 후보의 Unity 6000.0.83f1 실제 임포트·동작·GPU 성능은 미확인입니다. 리얼한 외형을 우선한다는 프로젝트 선호를 기록했습니다. 교훈 검토: 기존 검증 규칙과 중복되는 새 전역 규칙은 추가하지 않았습니다.",
+    "outcome": "리얼한 펭귄 후보 4종의 판매자 설명과 공개 미리보기를 확인했습니다. 현재 게임의 모델은 교체하지 않았으며 구매·Unity 임포트·성능 검증은 실행하지 않았습니다.",
+    "proposedTime": "15~25분 — 2026-11-02 19:16:23 KST 시작",
+    "actualTime": "조사 원고 확정: 2026-11-02 19:30:15 KST. 공개 배포 검증은 연결된 실행 메뉴얼에서 별도 기록합니다.",
+    "xerjEvidence": "리소스 조사로 코드·심볼 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "검토",
+    "state": "complete"
+  }
+}

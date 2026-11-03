@@ -1,0 +1,101 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "판매 미디어 품질 정리 · DDT 스타일과 영상 사운드",
+    "summary": "DDT를 기준으로3제품 판매 이미지와4영상 사운드를 보강하고 지침·판매 초안에 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "제작·오디오·포털·지침 적용 진행 전",
+    "outcome": "자료 확인 진행 중",
+    "proposedTime": "1~3시간",
+    "actualTime": "시작2026-11-02 17:35:25 KST",
+    "xerjEvidence": "Status node not running. 이번 작업은 매체·파일 대조 위주이며 필요한 UI 소스는 rg로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "store-media-quality-20261102",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "DDT 수준의 판매 이미지 세트와 들리는 영상, 재발 방지 지침 적용",
+    "completionCriteria": "모든 이미지 실제 Affinity 원본·출력 시각 QA,4영상 실제 오디오·청취, 포털 저장·재열기, 지침과 커밋·푸시·공개 보고 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기존 판매 이미지·영상·포털 상태 대조",
+        "action": "DDT 기준·3제품 기존 자료·실제 포털 갤러리 수·영상 오디오 트랙·음원 권리 확인",
+        "expected": "원본·경로·개수·권리·실제 트랙 상태 기록",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "DDT 스타일의 제품별 이미지 보강",
+        "action": "실제 Affinity에서 3제품별16장 갤러리·커버/카드/아이콘/소셜과 편집 가능한 원본 제작, 실제 제품 자료로 시각 검토",
+        "expected": "DDT와 일관된 스타일, 의미 있는16장씩, 읽을 수 있는 실제 제품 화면, 원본 저장·재열기",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "4개 제품 영상 사운드 추가와 재생 검증",
+        "action": "기존 무음4영상에 합법 음원·필요 효과음·출처를 추가하고 오디오 레벨·무음·전체 디코드·실제 청취 확인",
+        "expected": "4영상 모두 실제 들리는 오디오와 페이드·레벨·출처·영상 동기 확인",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "프로젝트 지침 통합 및 판매 초안 반영·푸시",
+        "action": "중복 없는 프로젝트 규칙·매체 QA 계약 반영, 포털 저장·재열기, 명시적 커밋·Git Chunk·푸시와 공개 보고",
+        "expected": "규칙과 실제 결과물·판매 초안이 일치, 최종 제출은 실행하지 않음",
+        "qa": "원본과 결과 대조→실제 도구 검증→오류 수정→재QA 및 인접 제품 회귀",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
