@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "외부 리소스 원본 보존 지침 반영 메뉴얼",
+    "summary": "외부 원본 수정 금지와 프로젝트 별도 확장 원칙을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "시작 2026-11-04 05:18:18 KST",
+    "xerjEvidence": "코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "external-original-policy-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "외부 에셋·패키지·API·SDK 원본 수정 금지 명시",
+    "completionCriteria": "지침 설치본 일치, 커밋·푸시, 공개 보고서 본문 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "지침 반영과 공개 검증",
+        "action": "지침 추가, 설치본 대조, JSON 보고서 생성, 빌드·링크 검사, 커밋·푸시, 공개 URL 확인",
+        "expected": "원본 수정 금지와 별도 확장 원칙이 설치본과 원격에 존재",
+        "qa": "해시 및 diff 대조, 빌드·링크 검사와 공개 본문 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
