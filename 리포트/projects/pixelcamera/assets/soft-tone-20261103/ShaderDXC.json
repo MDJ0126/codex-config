@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-03T10:22:55.398763+00:00",
+  "passed": true,
+  "compiler": "Actual Unity-bundled dxcompiler.dll, SM6, HLSL2018, legacy macro expansion",
+  "entry": "ToonShadowVertex",
+  "scope": "URP instanced punctual shadow vertex; static compile only, not Unity import/runtime",
+  "hresult": 0,
+  "message": "warning: DXIL signing library (dxil.dll,libdxil.so) not found.  Resulting DXIL will not be signed for use in release environments.\r\n\n",
+  "inputSha256": "f3d888b00a9b0c3d5f0bc2bc88a06e65826a8144ab3c826de3a4dcfe97e185df",
+  "shaderSha256": "ad830ee5d2f7b6a6df3c43c5b6a1c413e23179684f5883680cd56a72f82c0d57",
+  "compilerSha256": "61aa89f5a61672dc734ec2dfc362f47871de12eee716c687c59c4262569ebbd3"
+}

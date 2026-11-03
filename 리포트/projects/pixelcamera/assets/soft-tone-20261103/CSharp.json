@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-03T10:23:56.929Z",
+  "guiProcessStarted": false,
+  "runtimeExecuted": false,
+  "assemblies": [
+    {
+      "name": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraAnimationBakeSettings.cs": "01c8672bbc42f1168358c12667367a50e118682ac8c89e4dba0aeca9b1dd0704",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraDitherPattern.cs": "9715c173dbbb60cee4ab9f3a8e18e47e032ff6c7fd5cdee6009929cfbb3dd576",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraEffect.cs": "a66a010bdee507f6db711a061e3cfb56531820ef2ebc34c260b76ac6084adb48",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraGridMath.cs": "34071d9b7bd42f7201f607f507057a40fb69e9368f3cb53cb957a6d786f03a0b",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObject.cs": "34aafba6d12f9a5f4beddeb1a495868397f6849c9a76d780acbac64b8ec4da9f",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObjectFrame.cs": "bb6674afe7e689904d2256763c065af39a3b738e9fdcf689340f891057da959b",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraObjectRenderer.cs": "24c5d00373cce192657b0ef474046becf0c9e417f5ecf7a180a427987f6841c2",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPalette.cs": "57b37ab394d1630a587ea6088dd04e7d7c0ff81b31029c8d4cf8aeda793bf676",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPaletteAlgorithms.cs": "62cae0ccfe78163b84ba208f277e86db0865d2e7690654391bae94704eaba142",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraPreset.cs": "c43835b1e6d037fd91decd9624c6908d99054f942b7d07ff2160dcf527afc172",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraRenderUtility.cs": "3075468dbe1851e711cd11aa04ce81426caaa4a2ac0fff2bb914d7298c7f495e",
+        "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraSteppedAnimator.cs": "9bc905ef9eb2ae2a77eba424fff56d5f844a913c70683a068f0b5284e59da5ba"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Samples",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Samples/Runtime/OutpostCameraController.cs": "4ffeeef55c0d4091c682f7815e1b8f6a0bc5cb50d90f9ec6e38db012b361b5cb",
+        "Assets/TurnRoom/PixelCamera/Samples/Runtime/PixelCameraSampleHud.cs": "02d8a1772543703d1e96a21d2ed319db95f960119bcecc1ef6bc9eaf9df1d1a3",
+        "Assets/TurnRoom/PixelCamera/Samples/Runtime/ShowcaseControls.cs": "0e1ef5454e6292d610edbc3312b7cd473ee837a6bbc33d49433d381ea8106586",
+        "Assets/TurnRoom/PixelCamera/Samples/Runtime/ShowcaseMotion.cs": "e870b239dbcd0962de281f414a44014b446f2ce87d52dea4d53befa2c136bc55",
+        "Assets/TurnRoom/PixelCamera/Samples/Runtime/ShowcaseTour.cs": "34b0afff833f29d010636250a1829433c5809176e7e10e807f6143b2305a655e"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoring.cs": "7cafa0d5f57b0e3e0f1d807d5987eeda7725bf04dba9bf54240080bdee42d0bb",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraAuthoringInspectors.cs": "c87588e7a2abb1e3129f1c6d88630767e06185688e5b527c80494faebec01ae8",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraInspector.cs": "64ea938173ecdde8734dfc4fc70269a83dd82cc22eac40e3837ee029ce579767",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraObjectInspector.cs": "f455dc6e5dd719e6ddeeb56eb683581bbaf5a2b29ac8a092a98050e7ed3d03b7",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraText.cs": "803b7cefc08a3b4c1f53ddbed476c68ba671a579cced9889ac8578c29a8358ea",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraTheme.cs": "92ed5e1361022c881ccc62c5ee56c7cb4747393dcb08a20393d36682489eb56d",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.cs": "e5ce4fc1ac3acfc85ce9e9c50a091451bb88e0fe695ec944c10010e62389fef7",
+        "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.Design.cs": "baeeaaaf9e5ceee6ba9abc90ab49167fa893b9fb0fe96963e5f07cd26daacf3f"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Development",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraInteractiveQA.cs": "1dd5c5833d344f4ec40ba6ccb3ce1733104c10b85125f6b4475715655338e214",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraLiveQA.cs": "1b08e7507c2e6169723328e8dbdc5a1672562dfc28477ad45eb3e7767497c4d7",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraPaidQA.cs": "10d1ebe7739bf19237f0da4b2670d046bd009e81a0c541e400da86f33744f1da",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraQA.cs": "c02228686f3c748cda49ec46b10f75dd40c826ed7956edaa5671feaf1b7008d7",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraShowcaseBuilder.cs": "46747cfc99595019b809265781a89f9a4a332e1b901d256cd88a9771e042d0cc",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraShowcaseQA.cs": "1b0f589b1111c38c97c302f691a7b853bf87113a67679a47ad6486e3bf1b0ee1",
+        "Assets/TurnRoom/PixelCamera/Development/Editor/PixelCameraWindowOcclusionQA.cs": "83d3dcd9ef1bfae4882be01cf16e1325716c5d2112fb11bc4ab0aedc35cbc769"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.URP",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs": "9fa1aec0e15bbfabefd7f788552eabda5585d02ab7f5eb6b5d77119813d01f63"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.URP.Editor",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixelCamera/Integrations/URP/Editor/PixelCameraURPSetup.cs": "f9d6d63df5d46e38117749d3f4dd5fc04ac15a0cb0748aeacbc886d5f2140e96"
+      }
+    }
+  ]
+}

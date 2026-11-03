@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelcamera",
+    "kind": "result",
+    "title": "Pixel Camera 부드러운 톤 기본값과 예제 스타일 조정",
+    "summary": "툰 명암 전환·wrap,2/4px·옅은 색상 외곽선·주변광·팔레트 기본값을 조정했습니다. 정적 검사 통과, 실제 시각 QA는 미실행입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "|변경|적용|\n|---|---|\n|툰 명암|Light transition softness .8, diffuse wrap .15,5단계.0 soft/0 wrap이면 기존 hard band 계산 사용|\n|그림자|툰 기본 tint를(.48,.56,.64)로 변경|\n|예제 시작|전체 불투명 메시를 private soft Toon으로 비교. V로 저장된 원본 재질 복원. 투명/cutout 보존|\n|픽셀·외곽선|기본4/8→2/4px, 색상 외곽선 alpha .42, O on/off 유지|\n|장면|3테마 주변광·배경을 밝히고 재질 색·금속·광택 대비 완화|\n|프리셋·문서|9프리셋의 팔레트 .28·색단계256·기본 디더OFF.9언어 soft-tone 안내 추가|\n\n예제 재생성 도구도 같은 픽셀/외곽선/주변광 기본값으로 맞췄습니다. 기존 씬·오브젝트 ID·형상·애니메이션·버튼 이벤트는 보존했습니다.",
+    "verification": "현재 소스6어셈블리 정적 컴파일 통과.18셰이더 항목 중17FXC 통과; 기존 vendor instancing 매크로 실패1개는 동일 input SHA로 실제 Unity DXC 정적 컴파일 통과. 실패 로그 보존.3씬을 허용된 설정 줄을 제외하고 변경 전과 완전히 대조해 ID·형상·애니메이션 연결 보존 확인.3UI프리팹은 정적 문구만 변경하고 이벤트 동일.9프리셋 값 검사.528528점 CPU 명암 수학 참조의 유한성/범위/단조성 검사. 이는 실제 GPU 이미지 평가가 아닙니다.\n\n[씬·수학 QA](../assets/soft-tone-20261103/AssetAndMathQA.json) · [C#](../assets/soft-tone-20261103/CSharp.json) · [FXC](../assets/soft-tone-20261103/ShaderFXC.json) · [DXC](../assets/soft-tone-20261103/ShaderDXC.json)",
+    "remaining": "사용자 포커스/컴퓨터 유즈 제한을 지켜 Unity 신규 실행·창 활성화·마우스/키 입력은 하지 않았습니다. 변경 전후 실제 실행 캡처와 두 파이프라인의 시각 품질, V재질복원/O토글 실제 입력 QA는 미실행입니다. 기존 스크린샷·캡처 해시는 보존하고 최신 시각 증거로 재사용하지 않았습니다. 현재 후보 패키지는 재포장하지 않았으며 SubmissionStatus에 새 소스 미반영을 표시했습니다. 구현 완료와 전체 제품 제출 완료를 구분합니다. 교훈 검토: 파일 매핑 덮어쓰기 오류 후 상태를 확인하고 임시 파일→원자적 교체로 수정했습니다. 일반 보존·실패후검증 지침과 중복되어 전역 규칙 추가 없음.",
+    "outcome": "부드러운 톤을 목표로 셰이더·프리셋·세 예제 소스를 변경했습니다. 실제 화면이 목표 품질에 도달했다고 확인한 상태는 아닙니다. 픽셀 격자와 점 필터는 유지하며 블러를 추가하지 않았습니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-03 19:18:05 KST 시작. 구현·정적 QA와 문서 적용 후 보고 게시 진행. 실제 시각 검증 완료 시각은 없습니다.",
+    "xerjEvidence": "Status에서 XERJ node is not running. rg와 현재 파일/컴파일 로그를 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}

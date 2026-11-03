@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-03T10:23:43.300341+00:00",
+  "passed": true,
+  "scope": "Serialized preservation, static shader compilation and CPU numerical reference only; no native Unity rendering",
+  "scenes": [
+    {
+      "scene": "01-ClockworkGarden.unity",
+      "objectIdsGeometryAnimationBindingsPreserved": true,
+      "pixelSizes": [
+        2,
+        4
+      ],
+      "autoRotate": true,
+      "softToonDefault": true
+    },
+    {
+      "scene": "02-NeonCourier.unity",
+      "objectIdsGeometryAnimationBindingsPreserved": true,
+      "pixelSizes": [
+        2,
+        4
+      ],
+      "autoRotate": true,
+      "softToonDefault": true
+    },
+    {
+      "scene": "03-SunkenObservatory.unity",
+      "objectIdsGeometryAnimationBindingsPreserved": true,
+      "pixelSizes": [
+        2,
+        4
+      ],
+      "autoRotate": true,
+      "softToonDefault": true
+    }
+  ],
+  "presets": 9,
+  "prefabPersistentEventsPreserved": true,
+  "numericalReferencePoints": 528528,
+  "fxcSuccess": 17,
+  "dxcAlternative": 1,
+  "retainedFxcFailure": "C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelCamera\\Runtime\\Resources\\TurnRoom\\PixelCamera\\PixelCameraToon.shader(1309,12-54): error X3004: undeclared identifier 'UNITY_BUILTINS_WITH_WORLDTOOBJECTARRAYArray'\n",
+  "nativeVisualQA": "not run",
+  "shaderSourceHash": "ad830ee5d2f7b6a6df3c43c5b6a1c413e23179684f5883680cd56a72f82c0d57"
+}
