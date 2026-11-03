@@ -1,0 +1,52 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>오후의 틈 — PC 웹 1인 광장 이동·착석 시제품 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">오</span><span>오후의 틈</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>오후의 틈 — PC 웹 1인 광장 이동·착석 시제품</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">두 polyperfect 에셋으로 카페 광장을 만들고 Chrome·Edge 이동·착석과 실제 백그라운드 탭 복귀·성능을 검증했습니다.</p><div class="post-byline"><time datetime="2026-11-03T13:37:53.400Z">2026년 11월 3일 오후 10:37 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>PC 웹용 1인 광장을 구현하고 실제 브라우저 QA를 완료했습니다. WASD·방향키·바닥 클릭으로 이동하고, 벤치 근처에서 E 키나 버튼으로 착석·기립할 수 있습니다.</p>
+<p><figure><img class="report-image" src="../assets/web-standing.png" alt="실제 웹 광장과 이동 조작 UI" loading="lazy"><figcaption>실제 웹 광장과 이동 조작 UI</figcaption></figure>
+Chrome에서 실행한 실제 광장입니다. 카페·나무·벤치는 Low Poly Epic City, 방문자는 Low Poly Animated People 에셋입니다.</p>
+<p><figure><img class="report-image" src="../assets/web-seated.png" alt="실제 벤치 착석 동작" loading="lazy"><figcaption>실제 벤치 착석 동작</figcaption></figure>
+E 키로 착석한 상태입니다. 착석 중 이동은 제한되며 기립하면 이동할 수 있습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>작은 광장·카페·벤치 3개만 선별했으며 씬·UI·버튼 이벤트를 편집 가능한 Unity 오브젝트로 저장했습니다. 원본 에셋과 데모 씬은 보존했습니다. Runtime과 Editor 코드는 어셈블리를 분리했습니다.</p>
+<p>첫 웹 빌드에서 UI만 보이고 WebGL sampler mismatch가 발생했습니다. 실시간 그림자를 제외한 설정으로 재빌드한 뒤 3D 표시와 그리기 오류 해소를 확인했습니다. 엔진 내부의 근본 원인은 단정하지 않습니다.</p>
+<p><figure><img class="report-image" src="../assets/web-before.png" alt="수정 전 동일 해상도의 실제 웹 화면" loading="lazy"><figcaption>수정 전 동일 해상도의 실제 웹 화면</figcaption></figure>
+수정 전에는 UI만 표시되었습니다. 위의 수정 후 화면과 같은 1440×900 브라우저 캡처입니다.</p>
+<p>한글 UI 폰트는 Nanum Gothic OFL 원본 2,054,744바이트에서 사용하는 글리프 73,616바이트로 줄였습니다. 최종 파일 전체는 17,505,239바이트입니다. 자산별 해시는 첨부에 보존했습니다.</p>
+<h2 id="section-4">검증</h2>
+<p>Unity 6000.0.83f1 / URP 17.0.4, Windows PC, NVIDIA GTX 970 / D3D11에서 실제 웹 빌드를 실행했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>브라우저</th>
+<th>실제 버전</th>
+<th>중앙 FPS</th>
+<th>p95 프레임 시간</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chrome</td>
+<td>156.0.8078.80</td>
+<td>30.01</td>
+<td>34.00 ms</td>
+</tr>
+<tr>
+<td>Edge</td>
+<td>156.0.4314.58</td>
+<td>30.01</td>
+<td>34.00 ms</td>
+</tr>
+</tbody></table>
+</div><p>실제 키보드·마우스로 이동, 먼 곳에서 착석 방지, 벤치 3곳의 착석·기립, 착석 중 이동 방지, 버튼 연결을 검사했습니다. 브라우저 예외·WebGL 그리기 오류는 없었습니다. 엔진 초기화 경고는 원본 QA에 보존했으며 경고가 전혀 없다고 보고하지 않습니다.</p>
+<p>Playwright의 기본 포커스 에뮬레이션이 가시성 검증에 개입하는 것을 설치 소스에서 확인하여, 실제 탭 숨김·복귀 검증은 포커스 강제가 없는 별도 Chrome CDP 연결로 실행했습니다. document.visibilityState=hidden, 런타임 hidden=true, 목표 5 FPS와 복귀 후 30 FPS·이동을 확인했습니다. 해당 측정 뷰포트는 1424×905, DPR 1입니다.</p>
+<p>렌더러 작업 CPU는 전경 11.60% → 숨김 0.08%입니다. 이는 한 코어 기준 Chromium TaskDuration 측정이며 전체 PC·GPU 사용률과 다릅니다. WebAssembly 힙은 96,665,600바이트였습니다.</p>
+<p><a class="report-link" href="../assets/chrome-qa.json">Chrome QA</a> · <a class="report-link" href="../assets/edge-qa.json">Edge QA</a> · <a class="report-link" href="../assets/visibility-qa.json">실제 탭·CPU·메모리 측정</a> · <a class="report-link" href="../assets/build-manifest.json">최종 빌드·소스 해시</a></p>
+<h2 id="section-5">남은 사항</h2>
+<p>서버 배포·다중 접속·채팅·프로필은 이후 단계입니다. 이번 시제품은 로컬 HTTP 서버에서 확인했습니다. 단기 성능 측정이며 수 시간 이상의 안정성·모바일·다른 GPU는 미검증입니다. 실시간 그림자는 사용하지 않습니다.</p>
+<p>Affinity MCP 연결이 ECONNREFUSED여서 캡처 편집·압축과 GIF 변환은 실행하지 않았습니다. 실제 브라우저 원본 PNG를 첨부했습니다. 공식 프로젝트 로고는 미등록(null)입니다.</p>
+<p>교훈 검토: 전역 지침 변경 없음. 기존의 실제 실행·설정 검증 원칙을 적용했으며, Playwright 포커스 강제와 Unity 웹 초기화 시점에 관한 구체적인 근거는 이 프로젝트에 보존합니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 30~60분</li>
+<li>실제로 완료된 시간: 구현·웹 QA: 66분 49초, 2026-11-03 22:37:42 KST 완료. 공개 배포·외부 접근 확인은 게시 후 별도 검증합니다.</li>
+<li>XERJ: 미사용 — XERJ 연결 도구·프로젝트 검색 스크립트 미제공. rg 검색 결과를 현재 소스·설정·실제 웹 실행으로 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-03-result-20261103133753400-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=afternoon-pause&topic=qa&relatedReport=projects%2Fafternoon-pause%2Freports%2F2026-11-03-result-20261103133753400-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=afternoon-pause">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=afternoon-pause">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

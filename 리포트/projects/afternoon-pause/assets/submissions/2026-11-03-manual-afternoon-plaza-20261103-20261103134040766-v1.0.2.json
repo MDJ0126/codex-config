@@ -1,0 +1,164 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "중앙 보고서 커밋·푸시·Pages 배포 및 개별 URL·첨부 외부 접근 확인",
+    "outcome": "1인 웹 광장 구현과 Chrome·Edge·실제 탭 전환 QA 완료, 공개 보고 검증 대기",
+    "proposedTime": "30~60분",
+    "actualTime": "시작 2026-11-03 21:30:53 KST, 기록 시점 2026-11-03T13:40:39.281Z, 실제 경과 69.8분. 보고서 공개 검증 진행 중",
+    "xerjEvidence": "연결 도구 미제공으로 rg 직접 검색",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "afternoon-plaza-20261103",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "PC 웹용 1인 광장 이동·착석 시제품",
+    "completionCriteria": "두 에셋의 실제 씬, 충돌·이동·착석·기립, 웹 빌드, 실제 브라우저 조작·성능·백그라운드 복귀 검증, 공개 결과 보고",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103125929806-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "환경·에셋 확인",
+        "action": "엔진·Web 모듈·프리팹·클립 확인",
+        "expected": "필요 에셋과 실행 경로 확인",
+        "qa": "실제 설치·프리팹·클립 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "Unity 6000.0.83f1·WebGLSupport·두 에셋과 세 휴머노이드 클립 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "광장과 이동·착석 구현",
+        "action": "씬 구성·이동·충돌·착석·기립 연결",
+        "expected": "편집 가능한 씬과 상호작용",
+        "qa": "브라우저 키보드·마우스 입력과 애니메이션 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "두 에셋·벤치 3곳·이동·착석·기립·충돌·편집 가능한 씬 검증 완료"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "웹 빌드·성능 QA",
+        "action": "웹 빌드 후 전경·백그라운드 측정",
+        "expected": "오류 없이 이동·착석·복귀, 측정값 보존",
+        "qa": "빌드 로그·브라우저 오류·실제 프레임과 자원 사용 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "고정 Web 빌드에서 Chrome·Edge 30.01 FPS, 실제 탭 숨김·복귀·이동·CPU 측정 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "결과 보고 공개",
+        "action": "실제 캡처와 측정 근거 등록·배포",
+        "expected": "개별 보고서 HTTPS 접근",
+        "qa": "배포 상태·본문·첨부·목록 링크 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "원본 JSON·HTML·실제 캡처 생성 및 목록·필터·링크 검사 통과, 배포 대기"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T12:43:02.800Z",
+        "summary": "환경·에셋 실물과 생성 씬 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "엔진·Web 모듈·에셋·클립 확인",
+            "evidence": "ProjectVersion.txt, scene-audit.txt",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T21:55:00+09:00",
+        "summary": "첫 웹 실행에서 3D 렌더링 실패 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "UI와 입력 상태는 동작하나 3D 장면이 표시되지 않음. WebGL sampler mismatch 경고 확인.",
+            "evidence": "web-before-render-fix.png, web-before-render-fix.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-03T13:40:39.281Z",
+        "summary": "최종 고정 빌드의 브라우저 실행·성능 QA 통과",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Chrome·Edge 각각 이동·착석·기립·충돌 등 14개 검사 통과",
+            "evidence": "chrome-qa.json, edge-qa.json, 실제 웹 캡처",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "중앙 30.01 FPS / p95 34ms. 실제 탭 hidden 상태·복귀·복귀 후 이동 통과. 렌더러 CPU 11.60%→0.08%",
+            "evidence": "visibility-qa.json, build-manifest.json, 빌드 해시 재검사",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

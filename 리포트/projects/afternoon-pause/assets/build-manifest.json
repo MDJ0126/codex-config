@@ -1,0 +1,73 @@
+{
+  "capturedAt": "2026-11-03T13:32:38.733Z",
+  "buildSummary": {
+    "result": "Succeeded",
+    "bytes": 17505239,
+    "seconds": 7.1891655
+  },
+  "totalBytes": 17505239,
+  "build": [
+    {
+      "file": "Builds/Web/Build/Web.data.gz",
+      "bytes": 6010606,
+      "sha256": "df9e4a7649f0f8464cd54cdc2b1700027a65dab82f0980fde3866b77d99cf4cc"
+    },
+    {
+      "file": "Builds/Web/Build/Web.framework.js.gz",
+      "bytes": 89062,
+      "sha256": "bcd1dd07ecff07a97cec8e7985a7f0a2380f7114863b66f097cc20ec8198a985"
+    },
+    {
+      "file": "Builds/Web/Build/Web.loader.js",
+      "bytes": 26455,
+      "sha256": "4ebe5a73f5663b5796db2472bcf5c7ddd82bfb81775fe2c2516d1795cfdc4fd3"
+    },
+    {
+      "file": "Builds/Web/Build/Web.wasm.gz",
+      "bytes": 11376656,
+      "sha256": "d32f24bc46906a033f8e7fca625cec94a53f742e085cae39a54383e00412e9d9"
+    },
+    {
+      "file": "Builds/Web/index.html",
+      "bytes": 2460,
+      "sha256": "6bc40d6e90e6f1fae394ae8c85eac2ec9dec1a050b507bef6d9816bc1bb68327"
+    }
+  ],
+  "source": [
+    {
+      "file": "Assets/Scripts/AfternoonPause.Runtime.asmdef",
+      "bytes": 104,
+      "sha256": "478b5f3a5ab2120c81cefbdd21e52cf62062272a5a16a44039875bfa50f6a9c9"
+    },
+    {
+      "file": "Assets/Scripts/PlazaPlayer.cs",
+      "bytes": 4597,
+      "sha256": "a94b95c1e63f7556166563c72ccfe9d9c533979782eeb599e6efd99cedd2c1d4"
+    },
+    {
+      "file": "Assets/Scripts/PlazaSeat.cs",
+      "bytes": 210,
+      "sha256": "ed9b4ac055da62671f5b216447a1c8c449a6c3eb1cb6d018fee0ad8ddc4f71a6"
+    },
+    {
+      "file": "Assets/Scripts/PlazaSession.cs",
+      "bytes": 4379,
+      "sha256": "c46287733b0aa3d3ecfe68bf51bbe9d8c6b2bf873363f854db7813e28912b2dc"
+    },
+    {
+      "file": "Assets/Plugins/WebGL/PauseBridge.jslib",
+      "bytes": 1158,
+      "sha256": "bee7baf7b2a173c052e9ac590c7ec37dc01e5be629c810253248c17733a04830"
+    },
+    {
+      "file": "Assets/WebGLTemplates/AfternoonPause/index.html",
+      "bytes": 2569,
+      "sha256": "6c9d0e3c69e90b93af002f31a0099444d84c6869b6b242e76e54843cf06791e2"
+    },
+    {
+      "file": "Assets/Scenes/AfternoonPlaza.unity",
+      "bytes": 136371,
+      "sha256": "80743b7ca8825799c1261f5df4efa7c80779eba3a34221df78e47727624ff800"
+    }
+  ]
+}
