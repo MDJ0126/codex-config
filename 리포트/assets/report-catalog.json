@@ -1,5 +1,35 @@
 [
   {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052242132-v1.0.5.html",
+    "date": "2026-11-03T05:22:42.132Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "빌드 기록을 날짜·상태·변환 개수의 요약 행으로 정리",
+    "summary": "JSON 파일명 대신 빌드 시각, 플랫폼, 변환 개수와 상태 배지를 한 줄에 표시합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103052210136-v1.0.0.html",
+    "date": "2026-11-03T05:22:10.136Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052149944-v1.0.4.html",
+    "date": "2026-11-03T05:21:49.944Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "보고서 상단에 프로젝트별 활동 잔디 추가",
     "summary": "최근 1년 게시물 활동을 잔디로 보여주고, 날짜를 누르면 해당 글만 표시합니다.",
     "project": "codex-config",
