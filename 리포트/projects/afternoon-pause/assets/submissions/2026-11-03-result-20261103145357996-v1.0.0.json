@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "result",
+    "title": "TPS 캐릭터 구조·확장 광장·배회 AI 구현 — 실행 검증 대기",
+    "summary": "SampleProjectForUnity 구조로 TPS와 배회 AI를 구현했습니다. 컴파일·직렬화 검사는 통과했으며 실제 웹 실행·성능은 화면 사용 제한으로 대기합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "실제 C:/Projects/SampleProjectForUnity 지침과 소스를 참고했습니다. Actor → Pawn → Character와 독립 PawnController → PlayerController/AIController 구조를 적용했습니다. Movement·애니메이션·착석·SpringArm/TPS 카메라를 분리하고 프로젝트 프리팹 4개와 CharacterDefinition 4개를 저장했습니다. 자세한 편집 위치와 샘플 대비 구조는 [architecture.md](../assets/tps-20261103/architecture.md)에 있습니다.\n\nTPS는 카메라 상대 WASD 이동, 우클릭 회전, 휠 거리 조절, E 착석 전환과 카메라 충돌 코드를 포함합니다. 광장은 24×19에서 48×38로 넓혔고 좌석은 3개에서 6개로 늘렸습니다. NPC 12개 인스턴스를 준비해 기본 6명을 활성화하며 구운 NavMesh로 목적지 이동·대기하도록 구성했습니다. 실제 동작은 미확인입니다.\n\n부하를 줄이기 위해 공유 Animator·프로젝트 프리팹, 화면 밖 애니메이션 컬링, 구운 NavMesh, 경로 도착·대기·정체 시에만 목적지 재계산, 탭 숨김 시 이동·AI 중단을 구현했습니다. 이 구현만으로 성능 합격을 판단하지 않습니다.\n\n교훈 검토: 실제 사용자가 지정한 샘플 경로와 작성 기준을 프로젝트 AGENTS.md에 기록했습니다. 화면 조작 중단과 미검증 구분은 기존 전역 규칙에 있으므로 전역 지침은 변경하지 않았습니다. 임시 자동 씬 작성·빌드 감시 스크립트는 제거했습니다.",
+    "verification": "Unity 6000.0.83f1의 Roslyn을 사용해 Runtime 20개와 Editor 1개 소스를 각각 컴파일했고 모두 종료 코드 0입니다. Unity 프로세스는 이 검사에서 실행하지 않았습니다. [static-compile.json](../assets/tps-20261103/static-compile.json)\n\n읽기 전용 씬·프리팹·설정 직렬화 검사 35개가 통과했습니다. 원근 카메라 FOV 55, 소유 Pawn 참조, UI Inspector 이벤트, 공유 Animator, 기본 인원 6·최대 12, NavMesh 참조를 확인했습니다. 이는 플레이 검증이 아닙니다. [asset-validation.json](../assets/tps-20261103/asset-validation.json) / [scene-audit.json](../assets/tps-20261103/scene-audit.json)\n\nWebGL 플러그인과 템플릿 JavaScript 구문 검사를 통과했습니다. 브라우저 실행은 하지 않았습니다. [web-syntax.json](../assets/tps-20261103/web-syntax.json)\n\n최종 소스·씬·프리팹 해시: [source-manifest.json](../assets/tps-20261103/source-manifest.json)\n\n새 TPS 실행 화면은 촬영하지 않았습니다. 사용자의 화면 조작 금지 요청 이후 화면 조작·Unity 또는 브라우저 신규 실행을 중단했습니다. 이전 등각 시점 화면을 새 TPS 결과로 사용하지 않으며 전후 화면 검증은 미완료입니다. 기존 Builds/Web와 WebBaseline은 이전 등각 시점 빌드입니다.",
+    "remaining": "화면 사용 허용 이후 새 Web 빌드, TPS 이동·카메라·착석·기립·AI 배회·충돌·탭 복귀 실행, 0/6/12명 FPS·CPU·메모리·빌드 크기 측정, 실제 전후 화면 캡처와 최종 공개 보고가 남았습니다.\n\n맵의 면적은 4배지만 그것만으로 부하를 단정할 수 없습니다. 새 장면의 캐릭터·애니메이션·경로 계산·그리기 비용은 미측정입니다. 기존 등각 시점 빌드의 30 FPS·17.5MB 결과를 이번 TPS 빌드 수치로 사용하지 않습니다. 화면 제한이 해제되면 저장된 씬으로 빌드한 뒤 같은 조건에서 0/6/12명을 비교합니다.",
+    "outcome": "구현과 정적 검사는 끝났습니다. 사용자께서 화면을 사용 중이므로 새 웹 빌드·게임 조작·성능 측정은 미실행이며 전체 요청은 미완료입니다.",
+    "proposedTime": "40~70분 — 전체 구현·웹 실행 QA 예상. 화면 제한으로 실제 실행 QA는 대기합니다.",
+    "actualTime": "2026-11-03 23:02:26 KST 시작. 구현·정적 검사 기록 시점 2026-11-03 23:53:45 KST, 경과 51.3분. 전체 요청은 실제 웹 실행 QA 대기로 미완료입니다.",
+    "xerjEvidence": "XERJ 도구 미제공. rg 검색과 실제 SampleProjectForUnity 소스·설정·기존 채팅 기록 대조를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}

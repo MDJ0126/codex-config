@@ -1,0 +1,242 @@
+{
+  "at": "2026-11-03T14:47:42.327Z",
+  "kind": "serialized-assets-static-validation",
+  "executedPlayer": false,
+  "checks": [
+    {
+      "name": "TPS perspective and FOV",
+      "passed": true,
+      "actual": {
+        "orthographic": "0",
+        "fov": "55"
+      }
+    },
+    {
+      "name": "Controller and session references",
+      "passed": true,
+      "actual": {
+        "controller": "1335183387",
+        "sessionPlayer": "1335183387",
+        "camera": "1962844756"
+      }
+    },
+    {
+      "name": "Possessed Pawn reference is present",
+      "passed": true,
+      "actual": "1592178595"
+    },
+    {
+      "name": "Independent session, HUD, monitor",
+      "passed": true,
+      "actual": {
+        "hud": true,
+        "monitor": true
+      }
+    },
+    {
+      "name": "HUD _statusText",
+      "passed": true,
+      "actual": "1068229915"
+    },
+    {
+      "name": "HUD _hintText",
+      "passed": true,
+      "actual": "2082809106"
+    },
+    {
+      "name": "HUD _performanceText",
+      "passed": true,
+      "actual": "168173439"
+    },
+    {
+      "name": "HUD _seatButton",
+      "passed": true,
+      "actual": "1651203000"
+    },
+    {
+      "name": "HUD _seatLabel",
+      "passed": true,
+      "actual": "1092292654"
+    },
+    {
+      "name": "Button Inspector listener",
+      "passed": true,
+      "actual": "Serialized persistent callback"
+    },
+    {
+      "name": "Character layer named",
+      "passed": true,
+      "actual": "Layer 8 Characters"
+    },
+    {
+      "name": "PlayerVisitor common components",
+      "passed": true,
+      "actual": "PlayerVisitor"
+    },
+    {
+      "name": "PlayerVisitor shared Animator",
+      "passed": true,
+      "actual": "5c648cfd4aefd434eb84860733f66e94"
+    },
+    {
+      "name": "PlayerVisitor no vendor behaviour scripts",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "PlayerVisitor ownership and native agent",
+      "passed": true,
+      "actual": {
+        "agents": 0,
+        "owner": null
+      }
+    },
+    {
+      "name": "PlayerVisitor definition points to project prefab",
+      "passed": true,
+      "actual": "{fileID: 6467983917355142681, guid: b5663f2bd701c754d9ef75513bc8929f, type: 3}"
+    },
+    {
+      "name": "NpcBusiness common components",
+      "passed": true,
+      "actual": "NpcBusiness"
+    },
+    {
+      "name": "NpcBusiness shared Animator",
+      "passed": true,
+      "actual": "5c648cfd4aefd434eb84860733f66e94"
+    },
+    {
+      "name": "NpcBusiness no vendor behaviour scripts",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "NpcBusiness ownership and native agent",
+      "passed": true,
+      "actual": {
+        "agents": 1,
+        "owner": "953248958936714215"
+      }
+    },
+    {
+      "name": "NpcBusiness definition points to project prefab",
+      "passed": true,
+      "actual": "{fileID: 5601646817846149338, guid: 75ab6b337e4295e439aba81547e0e231, type: 3}"
+    },
+    {
+      "name": "NpcCasual common components",
+      "passed": true,
+      "actual": "NpcCasual"
+    },
+    {
+      "name": "NpcCasual shared Animator",
+      "passed": true,
+      "actual": "5c648cfd4aefd434eb84860733f66e94"
+    },
+    {
+      "name": "NpcCasual no vendor behaviour scripts",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "NpcCasual ownership and native agent",
+      "passed": true,
+      "actual": {
+        "agents": 1,
+        "owner": "4857756510209045796"
+      }
+    },
+    {
+      "name": "NpcCasual definition points to project prefab",
+      "passed": true,
+      "actual": "{fileID: 5963388689187277054, guid: 8eb3138205e728d4c8335a53ba80baa7, type: 3}"
+    },
+    {
+      "name": "NpcOffice common components",
+      "passed": true,
+      "actual": "NpcOffice"
+    },
+    {
+      "name": "NpcOffice shared Animator",
+      "passed": true,
+      "actual": "5c648cfd4aefd434eb84860733f66e94"
+    },
+    {
+      "name": "NpcOffice no vendor behaviour scripts",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "NpcOffice ownership and native agent",
+      "passed": true,
+      "actual": {
+        "agents": 1,
+        "owner": "3445902096753488101"
+      }
+    },
+    {
+      "name": "NpcOffice definition points to project prefab",
+      "passed": true,
+      "actual": "{fileID: 5783359976994495439, guid: cfa91978d62417e4e9afe387f44e72e7, type: 3}"
+    },
+    {
+      "name": "Crowd capacity and default count",
+      "passed": true,
+      "actual": {
+        "capacity": 12,
+        "default": "6"
+      }
+    },
+    {
+      "name": "Expanded map and baked navigation",
+      "passed": true,
+      "actual": {
+        "mapWidth": 48,
+        "mapDepth": 38,
+        "npcCapacity": 12,
+        "npcDefault": 6,
+        "seats": 6,
+        "navMeshTriangles": 263,
+        "playerPrefab": "Assets/Prefabs/Characters/PlayerVisitor.prefab"
+      }
+    },
+    {
+      "name": "Navigation asset is referenced",
+      "passed": true,
+      "actual": "6e5969b723b12b74999cd2204fa69c1f"
+    },
+    {
+      "name": "Temporary authoring tools removed",
+      "passed": true,
+      "actual": "No authoring/watcher code in Assets"
+    }
+  ],
+  "prefabs": [
+    {
+      "name": "PlayerVisitor",
+      "sharedAnimator": true,
+      "agentCount": 0,
+      "sourceBytes": 94099
+    },
+    {
+      "name": "NpcBusiness",
+      "sharedAnimator": true,
+      "agentCount": 1,
+      "sourceBytes": 95161
+    },
+    {
+      "name": "NpcCasual",
+      "sharedAnimator": true,
+      "agentCount": 1,
+      "sourceBytes": 95187
+    },
+    {
+      "name": "NpcOffice",
+      "sharedAnimator": true,
+      "agentCount": 1,
+      "sourceBytes": 94824
+    }
+  ],
+  "passed": true
+}

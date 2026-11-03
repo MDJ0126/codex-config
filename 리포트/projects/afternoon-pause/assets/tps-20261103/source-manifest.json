@@ -1,0 +1,190 @@
+{
+  "at": "2026-11-03T14:53:45.808Z",
+  "files": [
+    {
+      "path": "Assets/Scripts/AfternoonPause.Runtime.asmdef",
+      "bytes": 104,
+      "sha256": "478b5f3a5ab2120c81cefbdd21e52cf62062272a5a16a44039875bfa50f6a9c9"
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "bytes": 3423,
+      "sha256": "32ab54177f8cdca1a261232954f8d2c7ec51c3e7f6084c116ac07fff823a32b1"
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "bytes": 442,
+      "sha256": "ffa6423ac1433e22bcea26d3297daeb85c2df250ba0027a8648eb187625efaa0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "bytes": 746,
+      "sha256": "8c27c708d2204b556a5a11b5818e05d35bb50125f6977e8049cf493e629ca1f9"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+      "bytes": 6572,
+      "sha256": "ee09ebfb5efd60cf0512197e5e66fee4eee21c703bf0f2aa8ebb8a0147c6fe3f"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+      "bytes": 230,
+      "sha256": "f2b1296edf40c0eafc44d9d89fa8cd4aa173bb22eb1ef403e9141d1fcdffedd0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "bytes": 1157,
+      "sha256": "34bc630633a172933a2bc586a5f51bf861e50486fc231e448ed0f2d8f204d56d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "bytes": 2120,
+      "sha256": "4a878c59362033c13fd8e37b4042a8e47d66d86153704aa37615f5a7db9deb24"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+      "bytes": 534,
+      "sha256": "90ae22bc0ea45984aa27d4cea39ceb85b31cc7e49f8eb2ef60715383ac6a6ea4"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+      "bytes": 2369,
+      "sha256": "a9b3d61f2c549bfc604397219765674f4d8caedb3ad20443f70cc82d9ac84804"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+      "bytes": 716,
+      "sha256": "f2c108e6d8b9ce40726469659b86aad736624939b7d10cc8ee87252de5c35564"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "bytes": 3249,
+      "sha256": "37972e37d0b6e29d5cc4fa320f16e85e8b651cd2262389a150388a30f499ae8a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "bytes": 1344,
+      "sha256": "68d25a9eb19691fd0b989cb0893f15b5c1756b92cfd9b6df625342c1d943ecef"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "bytes": 2396,
+      "sha256": "6f8767df194f2c804c7ee5d632af9599e40ed7ae80bd63e730676dcd42394b25"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "bytes": 4192,
+      "sha256": "1cffae835df28c7739037cd27889cedccb5b40f6d9cb0421435981c89670930e"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+      "bytes": 863,
+      "sha256": "b81b63a4693522b15b4a78786c02a5275cef4fff2762b1edbcc683cb83e18612"
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+      "bytes": 340,
+      "sha256": "34edb680cebece9a2372276a7afa30388caeda6caa14d322e75db9eb427c5f64"
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs",
+      "bytes": 2116,
+      "sha256": "f7464c8727e15f693d510f22b5dbc9075842f4900d6643f302f450dab726fe24"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+      "bytes": 7333,
+      "sha256": "e12da8a886e638c81cb2e89861cf21f0274d7c2869892ff5ee8de9d0407533f5"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs",
+      "bytes": 1667,
+      "sha256": "b37075e03070368ad1d70e4982fc633bd6858845744aed036f7ca69699f8e525"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs",
+      "bytes": 1710,
+      "sha256": "22bd85f387a5a653cd1495268e712ad1277f67e841740b1e1906d955740710f2"
+    },
+    {
+      "path": "Assets/Editor/AfternoonPause.Editor.asmdef",
+      "bytes": 200,
+      "sha256": "b32db17d4c81ec7ed7a9d05791455d65ed89d22ccb071a32e16f98bd83411874"
+    },
+    {
+      "path": "Assets/Editor/PlazaBuilder.cs",
+      "bytes": 2222,
+      "sha256": "9ccdc8d36553556474267748062ab44be2fa04230b13ec67e0cf19d3b5c806ad"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcBusiness.prefab",
+      "bytes": 95161,
+      "sha256": "88149c0029b83acaff42608a05d8a285336d8f75f4a3df996b7a07dd02f795e2"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcCasual.prefab",
+      "bytes": 95187,
+      "sha256": "20481c0e49ab782aec03745929bf2a954b9b5ed27f47c6e13471e31913fa8e23"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcOffice.prefab",
+      "bytes": 94824,
+      "sha256": "b80a3a5892d3d4c45e0e9d36a64a1cf7fed0c00e2c4c191afe9a6938f6272aae"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PlayerVisitor.prefab",
+      "bytes": 94099,
+      "sha256": "a4c4efbf74197e4f21d910dff9a45bc0813a37085d1740844f50bb11cf85126d"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcBusiness.asset",
+      "bytes": 665,
+      "sha256": "144e1c659cc6c8ede6fc2ce3abfb03f43b2a9a621cb4a5ba25b89f17d433ec0e"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcCasual.asset",
+      "bytes": 663,
+      "sha256": "03c4ba7edaba7c2da766b5c2499e5e5141d73c545263c3e00356eb31d9ba341f"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcOffice.asset",
+      "bytes": 663,
+      "sha256": "2627ed814afd776c25a7c306fa3c03aa65337d2daa1c56858a7d0ee3807a0f1b"
+    },
+    {
+      "path": "Assets/Settings/Characters/PlayerVisitor.asset",
+      "bytes": 630,
+      "sha256": "9a5f816acfdefc5e5512f07aaa2d990f53025df0310280ef6b8f30165b0fe45f"
+    },
+    {
+      "path": "Assets/Scenes/AfternoonPlaza.unity",
+      "bytes": 309315,
+      "sha256": "ed24469767e40955570135ad119fa26966ee0151c23c14dc7aa72b974477b4f8"
+    },
+    {
+      "path": "Assets/Settings/Plaza/NavMesh-Plaza.asset",
+      "bytes": 25320,
+      "sha256": "2e7d1bd9b7727116acfb073c66dcae23c6bb04ecc704ce4639a0cc933dd54378"
+    },
+    {
+      "path": "Assets/Plugins/WebGL/PauseBridge.jslib",
+      "bytes": 1532,
+      "sha256": "a3e15527329195487d54f775249a954ae732313a72b954db00b7dfc366242fe5"
+    },
+    {
+      "path": "Assets/WebGLTemplates/AfternoonPause/index.html",
+      "bytes": 2639,
+      "sha256": "73784cf563e2f8defdec27c7d0c06dda4ae2369bf756bfd56b53563d798b95a7"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1924,
+      "sha256": "c15b4984f525c7834797184e0b83f85d91dfb058c5df27d4e2e57d8c2daf1d6c"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 5012,
+      "sha256": "2bc391d3c0f3bcaa0812aff0c5318f419ff4f05dec5eadb7572a68cd6c603bab"
+    }
+  ]
+}

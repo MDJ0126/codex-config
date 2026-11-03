@@ -1,0 +1,22 @@
+{
+  "kind": "standalone-csharp-compile",
+  "unityLaunched": false,
+  "results": [
+    {
+      "assembly": "Runtime",
+      "sourceCount": 20,
+      "startedAt": "2026-11-03T14:43:00.377Z",
+      "finishedAt": "2026-11-03T14:43:03.406Z",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "assembly": "Editor",
+      "sourceCount": 1,
+      "startedAt": "2026-11-03T14:43:03.434Z",
+      "finishedAt": "2026-11-03T14:43:06.423Z",
+      "exitCode": 0,
+      "passed": true
+    }
+  ]
+}

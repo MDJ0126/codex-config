@@ -1,0 +1,281 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "TPS·캐릭터 구조·拡張 맵·AI·웹 QA·공개 보고 진행",
+    "outcome": "샘플 프로젝트의 실제 지침과 구조 확인, 구현 시작",
+    "proposedTime": "40~70분",
+    "actualTime": "2026-11-03 23:02:26 KST 시작, 진행 중",
+    "xerjEvidence": "XERJ 도구 미제공. SampleProjectForUnity 소스·문서·실제 세션 기록과 rg 검색으로 대조한다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "afternoon-plaza-20261103",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "SampleProjectForUnity 구조를 따르는 PC TPS 광장, 배회 AI, 확장 맵과 실제 웹 성능 검증",
+    "completionCriteria": "두 에셋의 실제 씬, 충돌·이동·착석·기립, 웹 빌드, 실제 브라우저 조작·성능·백그라운드 복귀 검증, 공개 결과 보고 / TPS 카메라 회전·추적·충돌, Pawn/Controller 분리·캐릭터 프리팹 관리, 확장 맵과 AI 배회, 0·6·12명 실제 웹 비교, 공개 결과 보고",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103134648646-v1.0.3.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "환경·에셋 확인",
+        "action": "엔진·Web 모듈·프리팹·클립 확인",
+        "expected": "필요 에셋과 실행 경로 확인",
+        "qa": "실제 설치·프리팹·클립 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "Unity 6000.0.83f1·WebGLSupport·두 에셋과 세 휴머노이드 클립 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "광장과 이동·착석 구현",
+        "action": "씬 구성·이동·충돌·착석·기립 연결",
+        "expected": "편집 가능한 씬과 상호작용",
+        "qa": "브라우저 키보드·마우스 입력과 애니메이션 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "두 에셋·벤치 3곳·이동·착석·기립·충돌·편집 가능한 씬 검증 완료"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "웹 빌드·성능 QA",
+        "action": "웹 빌드 후 전경·백그라운드 측정",
+        "expected": "오류 없이 이동·착석·복귀, 측정값 보존",
+        "qa": "빌드 로그·브라우저 오류·실제 프레임과 자원 사용 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "고정 Web 빌드에서 Chrome·Edge 30.01 FPS, 실제 탭 숨김·복귀·이동·CPU 측정 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "결과 보고 공개",
+        "action": "실제 캡처와 측정 근거 등록·배포",
+        "expected": "개별 보고서 HTTPS 접근",
+        "qa": "배포 상태·본문·첨부·목록 링크 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "해당 커밋 Pages 배포 성공과 개별 보고서·첨부 200 응답 확인"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "샘플 구조·지침 대조",
+        "action": "SampleProjectForUnity 지침·캐릭터·컨트롤러·카메라 소스를 대조한다.",
+        "expected": "역할·상속·네이밍 기준과 참조 경로를 기록한다.",
+        "qa": "문서·실제 소스·세션 지시 대조",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "TPS와 캐릭터 구조 적용",
+        "action": "Pawn/Controller·Movement·애니메이션·착석·SpringArm/TPS 카메라로 분리한다.",
+        "expected": "TPS 추적·회전·충돌 및 기존 이동·착석·기립 유지",
+        "qa": "실제 웹 입력, 소유권, 씬·프리팹 참조, 카메라 거리·회전 확인",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "광장 확장과 AI 배회",
+        "action": "48×38 광장, 공유 캐릭터 프리팹·정적 NavMesh·기본 6명 배회 AI를 구성한다.",
+        "expected": "AI가 유효한 경로로 이동·대기하고 장애물을 통과하지 않는다.",
+        "qa": "실제 위치·NavMesh 상태·경로 완료·프리팹 공유 확인",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "웹 회귀·인원별 성능 QA",
+        "action": "고정 빌드에서 0·6·12명과 이전 빌드의 실제 성능을 비교한다.",
+        "expected": "기본 6명 30 FPS 목표, p95 50ms 이내 및 탭 복귀 정상",
+        "qa": "Chrome·Edge 조작·실제 탭·CPU·메모리·빌드 크기·원본 화면 비교",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "공개 결과 전달",
+        "action": "결과·전후 실제 화면·구조 문서·QA를 게시한다.",
+        "expected": "배포 성공과 개별 HTTPS 본문·첨부 접근 확인",
+        "qa": "목록·필터·링크 및 공개 파일 해시 대조",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09"
+    ],
+    "scopeChange": "사용자 요청에 따라 SampleProjectForUnity 캐릭터 구조·작성 지침을 적용하고 TPS 카메라, 확장 광장, 배회 AI와 인원별 웹 성능 비교를 추가한다. 기존 작업·QA 기록은 보존한다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T12:43:02.800Z",
+        "summary": "환경·에셋 실물과 생성 씬 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "엔진·Web 모듈·에셋·클립 확인",
+            "evidence": "ProjectVersion.txt, scene-audit.txt",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T21:55:00+09:00",
+        "summary": "첫 웹 실행에서 3D 렌더링 실패 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "UI와 입력 상태는 동작하나 3D 장면이 표시되지 않음. WebGL sampler mismatch 경고 확인.",
+            "evidence": "web-before-render-fix.png, web-before-render-fix.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-03T13:40:39.281Z",
+        "summary": "최종 고정 빌드의 브라우저 실행·성능 QA 통과",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Chrome·Edge 각각 이동·착석·기립·충돌 등 14개 검사 통과",
+            "evidence": "chrome-qa.json, edge-qa.json, 실제 웹 캡처",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "중앙 30.01 FPS / p95 34ms. 실제 탭 hidden 상태·복귀·복귀 후 이동 통과. 렌더러 CPU 11.60%→0.08%",
+            "evidence": "visibility-qa.json, build-manifest.json, 빌드 해시 재검사",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-03T13:46:47.081Z",
+        "summary": "전체 현재 버전 최종 QA 및 공개 전달 검증 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity 6000.0.83f1·WebGLSupport·두 에셋과 세 휴머노이드 클립 확인",
+            "evidence": "최종 브라우저 QA·빌드 해시·실제 화면",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "두 에셋·벤치 3곳·이동·착석·기립·충돌·편집 가능한 씬 검증 완료",
+            "evidence": "최종 브라우저 QA·빌드 해시·실제 화면",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "고정 Web 빌드에서 Chrome·Edge 30.01 FPS, 실제 탭 숨김·복귀·이동·CPU 측정 통과",
+            "evidence": "최종 브라우저 QA·빌드 해시·실제 화면",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "해당 커밋 Pages 배포 성공과 개별 보고서·첨부 200 응답 확인",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-result-20261103133753400-v1.0.0.html",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
