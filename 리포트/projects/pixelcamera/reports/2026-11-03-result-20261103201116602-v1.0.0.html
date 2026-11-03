@@ -1,0 +1,118 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Camera 전체19예제 — 따뜻한 파스텔·풍성한 정원 보강 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixelcamera/assets/logo.png" alt="Pixel Camera 로고"><span>턴룸 › Pixel Camera</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Camera 전체19예제 — 따뜻한 파스텔·풍성한 정원 보강</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">고객용3씬과 개발용16씬의 조명·재질을 부드럽게 조정하고 나무·관목·꽃과 이끼 동상을 추가했습니다. 전체 실제 Unity 전후를 첨부합니다.</p><div class="post-byline"><time datetime="2026-11-03T20:11:16.602Z">2026년 11월 4일 오전 5:11 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>고객용 Clockwork Garden·Neon Courier·Sunken Observatory와 개발 Legacy16씬을 수정하고 전부 실제 Unity에서 실행·촬영했습니다. 독립 Camera 패키지의 장식은 자체 메시·재질이며 Foliage 런타임을 요구하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>기존 카메라·프리셋·효과 시연·오브젝트 ID를 유지했습니다. 주요3씬은 섬 안쪽 후면을 원호로 채웠고 개발16씬은 원래 시연 영역 뒤에 정원 경계를 추가했습니다. 과노출을 실제 화면에서 확인한 뒤 조명을 낮춰 재촬영했습니다.</p>
+<p>GIF는 변경 전→후를 각1.8초씩 보여주는 정지 비교입니다. 바람 동작 영상이 아닙니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/camera-comparison.gif" alt="변경 전후 GIF" loading="lazy"><figcaption>변경 전후 GIF</figcaption></figure></p>
+<h3 id="section-4">01-Basic</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/00-before.png" alt="01-Basic 변경 전" loading="lazy"><figcaption>01-Basic 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/00-after-v2.png" alt="01-Basic 변경 후" loading="lazy"><figcaption>01-Basic 변경 후</figcaption></figure></p>
+<h3 id="section-5">02-CoarsePixels</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/01-before.png" alt="02-CoarsePixels 변경 전" loading="lazy"><figcaption>02-CoarsePixels 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/01-after-v2.png" alt="02-CoarsePixels 변경 후" loading="lazy"><figcaption>02-CoarsePixels 변경 후</figcaption></figure></p>
+<h3 id="section-6">03-FinePixels</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/02-before.png" alt="03-FinePixels 변경 전" loading="lazy"><figcaption>03-FinePixels 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/02-after-v2.png" alt="03-FinePixels 변경 후" loading="lazy"><figcaption>03-FinePixels 변경 후</figcaption></figure></p>
+<h3 id="section-7">04-Zoom</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/03-before.png" alt="04-Zoom 변경 전" loading="lazy"><figcaption>04-Zoom 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/03-after-v2.png" alt="04-Zoom 변경 후" loading="lazy"><figcaption>04-Zoom 변경 후</figcaption></figure></p>
+<h3 id="section-8">05-LimitedPalette</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/04-before.png" alt="05-LimitedPalette 변경 전" loading="lazy"><figcaption>05-LimitedPalette 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/04-after-v2.png" alt="05-LimitedPalette 변경 후" loading="lazy"><figcaption>05-LimitedPalette 변경 후</figcaption></figure></p>
+<h3 id="section-9">06-Dithering</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/05-before.png" alt="06-Dithering 변경 전" loading="lazy"><figcaption>06-Dithering 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/05-after-v2.png" alt="06-Dithering 변경 후" loading="lazy"><figcaption>06-Dithering 변경 후</figcaption></figure></p>
+<h3 id="section-10">07-Clipping</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/06-before.png" alt="07-Clipping 변경 전" loading="lazy"><figcaption>07-Clipping 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/06-after-v2.png" alt="07-Clipping 변경 후" loading="lazy"><figcaption>07-Clipping 변경 후</figcaption></figure></p>
+<h3 id="section-11">08-WallOcclusion</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/07-before.png" alt="08-WallOcclusion 변경 전" loading="lazy"><figcaption>08-WallOcclusion 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/07-after-v2.png" alt="08-WallOcclusion 변경 후" loading="lazy"><figcaption>08-WallOcclusion 변경 후</figcaption></figure></p>
+<h3 id="section-12">09-ThroughWalls</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/08-before.png" alt="09-ThroughWalls 변경 전" loading="lazy"><figcaption>09-ThroughWalls 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/08-after-v2.png" alt="09-ThroughWalls 변경 후" loading="lazy"><figcaption>09-ThroughWalls 변경 후</figcaption></figure></p>
+<h3 id="section-13">10-Perspective</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/09-before.png" alt="10-Perspective 변경 전" loading="lazy"><figcaption>10-Perspective 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/09-after-v2.png" alt="10-Perspective 변경 후" loading="lazy"><figcaption>10-Perspective 변경 후</figcaption></figure></p>
+<h3 id="section-14">11-TidewatchOutpost</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/10-before.png" alt="11-TidewatchOutpost 변경 전" loading="lazy"><figcaption>11-TidewatchOutpost 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/10-after-v2.png" alt="11-TidewatchOutpost 변경 후" loading="lazy"><figcaption>11-TidewatchOutpost 변경 후</figcaption></figure></p>
+<h3 id="section-15">12-OutpostStreet</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/11-before.png" alt="12-OutpostStreet 변경 전" loading="lazy"><figcaption>12-OutpostStreet 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/11-after-v2.png" alt="12-OutpostStreet 변경 후" loading="lazy"><figcaption>12-OutpostStreet 변경 후</figcaption></figure></p>
+<h3 id="section-16">13-PixelOutlines</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/12-before.png" alt="13-PixelOutlines 변경 전" loading="lazy"><figcaption>13-PixelOutlines 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/12-after-v2.png" alt="13-PixelOutlines 변경 후" loading="lazy"><figcaption>13-PixelOutlines 변경 후</figcaption></figure></p>
+<h3 id="section-17">14-PaletteMapping</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/13-before.png" alt="14-PaletteMapping 변경 전" loading="lazy"><figcaption>14-PaletteMapping 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/13-after-v2.png" alt="14-PaletteMapping 변경 후" loading="lazy"><figcaption>14-PaletteMapping 변경 후</figcaption></figure></p>
+<h3 id="section-18">15-StablePixelGrid</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/14-before.png" alt="15-StablePixelGrid 변경 전" loading="lazy"><figcaption>15-StablePixelGrid 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/14-after-v2.png" alt="15-StablePixelGrid 변경 후" loading="lazy"><figcaption>15-StablePixelGrid 변경 후</figcaption></figure></p>
+<h3 id="section-19">16-CompleteStyle</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/15-before.png" alt="16-CompleteStyle 변경 전" loading="lazy"><figcaption>16-CompleteStyle 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/15-after-v2.png" alt="16-CompleteStyle 변경 후" loading="lazy"><figcaption>16-CompleteStyle 변경 후</figcaption></figure></p>
+<h3 id="section-20">01-ClockworkGarden</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/16-before.png" alt="01-ClockworkGarden 변경 전" loading="lazy"><figcaption>01-ClockworkGarden 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/16-after-v2.png" alt="01-ClockworkGarden 변경 후" loading="lazy"><figcaption>01-ClockworkGarden 변경 후</figcaption></figure></p>
+<h3 id="section-21">02-NeonCourier</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/17-before.png" alt="02-NeonCourier 변경 전" loading="lazy"><figcaption>02-NeonCourier 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/17-after-v2.png" alt="02-NeonCourier 변경 후" loading="lazy"><figcaption>02-NeonCourier 변경 후</figcaption></figure></p>
+<h3 id="section-22">03-SunkenObservatory</h3>
+<p>변경 전: 기존 배치와 색감입니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/18-before.png" alt="03-SunkenObservatory 변경 전" loading="lazy"><figcaption>03-SunkenObservatory 변경 전</figcaption></figure></p>
+<p>변경 후: 따뜻한 배경·재질과 추가 식생·동상을 확인합니다. 기존 효과에 따라 외곽선·제한 팔레트는 유지됩니다.</p>
+<p><figure><img class="report-image" src="../assets/pastel-20261104/18-after-v2.png" alt="03-SunkenObservatory 변경 후" loading="lazy"><figcaption>03-SunkenObservatory 변경 후</figcaption></figure></p>
+<h2 id="section-23">검증</h2>
+<p>Unity6000.0.83f1 Built-in,격리된 Play mode에서 Camera.Render로800×500 실제 PNG64개(32씬 전후)를 확보했습니다. 최종32화면은 개별 시각 검토했습니다. 첫 밝기 실패본은 로컬에 별도로 보존했습니다. 최종 실행 로그에서 CS컴파일·셰이더 오류·실행 예외가 검출되지 않았습니다. 원래 씬 ID·Transform·Camera·기능 컴포넌트·GUID·프로젝트 설정 보존 검사를 통과했습니다. Bloom의 명시적 변경은 보존 검사의 예외입니다. 렌더에 쓰인433개 소스가 최종 촬영 QA 프로젝트와 SHA256 일치했습니다. 식생6어셈블리 컴파일·12개 셰이더 진입점 컴파일·12개 에셋 검사를 통과했습니다.</p>
+<p>전후의 애니메이션 시점은 약간 다를 수 있습니다. 동일 픽셀/완전히 동일한 실행 포즈 비교를 주장하지 않습니다. 에디터 UI 촬영이 아닌 실제 게임 카메라 화면입니다. 이미지 최적화: 원본 PNG 그대로 사용했으며 숲2장은200KB 목표보다 크지만 잎·수면 검증 세부를 보존했습니다. GIF는 ScreenToGif2.43.2 실제 인코더로 제작했습니다.</p>
+<p><a class="report-link" href="../assets/pastel-20261104/native-audit.json">Native 해시·촬영 근거</a> · <a class="report-link" href="../assets/pastel-20261104/preservation.json">기존 씬 보존 검사</a></p>
+<p>검토 패키지는 소스 고정 후 전체 재생성·아카이브 SHA256 대조했습니다.</p>
+<p>PixelTooler-Camera-Review.unitypackage: 783assets,33318599bytes,SHA256 05bff1280ed26231e497187c04e24a9d14bc869b6d72ffd24dc22641032ce2ff</p>
+<p>PixoraStudio-Review.unitypackage: 2741assets,43700202bytes,SHA256 61af242fb8ea05b5ec13f2ec282fe37d096de0c138267131a7bf0e1654232617</p>
+<h2 id="section-24">남은 사항</h2>
+<p>이번 예제 수정·Built-in 실제 화면 검증은 완료했습니다. 원본 참고 이미지와 완전히 동일한 예술적 품질이라는 판정은 하지 않았습니다. 전체 제품 출시 승인·공식 Validator·샘플 제거 설치·9언어 실제 에디터 UI 전환·URP/플랫폼 성능 검증·Affinity 편집 원본 저장은 기존 미완료 작업으로 유지합니다. 나무·장식 증가로 렌더링 비용은 늘 수 있으며 경량화로 소개하지 않습니다. 수면 반사·Bloom은 Built-in 전용 샘플입니다. 교훈 검토: 과노출은 실제 렌더로 확인 후 수정했으며, 기존 실행/전후 검증 지침으로 충분하여 전역 지침 변경 없음.</p>
+<h2 id="section-25">작업 시간</h2>
+<ul>
+<li>제안 시간: 25~40분</li>
+<li>실제로 완료된 시간: 실제 구현·전체 실행 검증 완료 확인:25분11초,2026-11-04 05:10:11 KST. 시작04:45:00 KST. 이후 보고서 공개 배포 확인 시간은 최종 채팅에 별도 기록합니다.</li>
+<li>XERJ: 사용 — XERJ Status와 OnRenderImage 검색을 실행했습니다. 관련 Runtime·셰이더·Python은 인덱스 범위 밖이므로 rg와 현재 소스 및 실제 Unity 렌더로 검증했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-03-result-20261103201116602-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelcamera&topic=qa&relatedReport=projects%2Fpixelcamera%2Freports%2F2026-11-03-result-20261103201116602-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelcamera">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelcamera">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-23">검증</a><a href="#section-24">남은 사항</a><a href="#section-25">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

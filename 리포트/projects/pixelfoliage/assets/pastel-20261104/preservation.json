@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "scope": "32 original scene object IDs, camera transforms/settings, original behaviour components, GUIDs and project settings; original materials/colours intentionally changed",
+  "results": [
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/01-Basic.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/02-CoarsePixels.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/03-FinePixels.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/04-Zoom.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/05-LimitedPalette.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/06-Dithering.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/07-Clipping.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/08-WallOcclusion.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/09-ThroughWalls.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/10-Perspective.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/11-TidewatchOutpost.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/12-OutpostStreet.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/13-PixelOutlines.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/14-PaletteMapping.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/15-StablePixelGrid.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/LegacySamples/Scenes/16-CompleteStyle.unity",
+      "originalIds": 661,
+      "addedBlocks": 252,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/01-ClockworkGarden.unity",
+      "originalIds": 520,
+      "addedBlocks": 324,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/02-NeonCourier.unity",
+      "originalIds": 602,
+      "addedBlocks": 324,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/03-SunkenObservatory.unity",
+      "originalIds": 484,
+      "addedBlocks": 324,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/11-PixelCameraGarden.unity",
+      "originalIds": 40,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/13-PixelCameraWoodland.unity",
+      "originalIds": 280,
+      "addedBlocks": 144,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity",
+      "originalIds": 36,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity",
+      "originalIds": 36,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity",
+      "originalIds": 33,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity",
+      "originalIds": 30,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/05-ContactTrail.unity",
+      "originalIds": 33,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity",
+      "originalIds": 48,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/07-SharedGusts.unity",
+      "originalIds": 42,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/08-CloudLight.unity",
+      "originalIds": 36,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/09-MixedGarden.unity",
+      "originalIds": 39,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity",
+      "originalIds": 58,
+      "addedBlocks": 27,
+      "passed": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/12-PrismaticWoodland.unity",
+      "originalIds": 279,
+      "addedBlocks": 144,
+      "passed": true
+    }
+  ]
+}
