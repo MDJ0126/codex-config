@@ -1,0 +1,198 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "개선 후 실제 씬·UI 검증과 새 비교 GIF는 사용자 화면 조작 재허용 전까지 보류합니다. 이전 실패·미실행을 통과 처리하지 않습니다.",
+    "outcome": "이번 촬영의 화면 조작 허용과 ScreenToGif 사용 승인을 이어 적용합니다.",
+    "proposedTime": "60~100분",
+    "actualTime": "이번 상세 대조·공개 보고 확인: 9분8초, 2026-11-03 23:34:46 KST. 제안10~20분. 기존 개선 후 실제 화면 QA는 별도 미완료·보류입니다.",
+    "xerjEvidence": "XERJ 노드 재접속 후 TemplateAssetInspector.cs:12 검색 및 소스 대조. Runtime은 인덱스 범위 밖 직접 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 메뉴얼",
+    "manualId": "foliage-polish-20261103",
+    "round": 5,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "풍성한 식생·유닛 잔류 반응·공통 UI·카메라 전후 실제 비교",
+    "completionCriteria": "구현·실제 Unity 검증·비교 GIF·갱신 패키지 해시 대조·공개 보고서 및 원본 기능별 차이·검증 수준 대조표의 공개 보고",
+    "previousManual": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103142828723-v1.0.3.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원본과 현재 동작 대조",
+        "action": "원본 FPS·상호작용·렌더 경로와 현재 코드를 대조",
+        "expected": "원본 방식과 Camera/식생 책임 구분",
+        "qa": "소스 라인·설정 실제 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "원본 Demo.tscn640x360·3배표시, QuadMesh/MultiMesh30000표시, CharacterManager10Hz와 Grass 시간 양자화 소스 대조"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "풍성한 식생과 반응·갱신 최적화",
+        "action": "메시·배치·바람·잔류 접촉과 CPU 갱신 간격 개선",
+        "expected": "밀도 개선과 유닛 뒤 잔류 반응·갱신 횟수 근거",
+        "qa": "컴파일·정적 검사·실제 실행",
+        "dependsOn": [],
+        "status": "blocked",
+        "revision": 1,
+        "result": "형태·바람·잔류 접촉·10Hz 수집 구현 및20,619 단언 통과. 사용자가 화면 조작 중단을 요청하여 현재 소스의 실제 씬 QA 보류"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "식생 공통 UI 템플릿 적용 확인",
+        "action": "창과 Inspector에 공통 템플릿·언어·설정을 적용",
+        "expected": "실제 창·Inspector의 공통 스타일과9언어 전환",
+        "qa": "Unity에서 열기·언어·필드 선택 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "공통 창·Inspector 그룹·최소 크기·줄바꿈·92키9언어 반영. 현재 화면 검증 보류"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "실제 전후 비교 GIF",
+        "action": "같은 시간·카메라로 이전/개선 및 Camera 끔/켬 촬영",
+        "expected": "식생 개선·카메라 적용·접촉과 바람 GIF",
+        "qa": "프레임·캡처 원본·화면 직접 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "화면 중단 전 기준09씬 Camera OFF/ON48프레임씩 확보하고 ScreenToGif 비교 GIF 생성. 개선 후 촬영은 보류"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "패키지·문서·보고서 게시",
+        "action": "개선 소스와 패키지 대조 후 보고서·메뉴얼 게시",
+        "expected": "검증 근거와 공개 비교 GIF",
+        "qa": "빌드·링크·해시·배포·공개 접근 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "검토 패키지3종 현재 소스 해시 대조 및3671b98f 보고서 공개 배포·본문·GIF/PNG3개 해시 확인. 최신 개선 실행 화면은 미검증으로 명시"
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "원본 기능과 현재 구현 상세 대조",
+        "action": "원본과 현재 코드·설정·이전 실행 근거를 대조해 구현 차이와 상태를 표로 게시",
+        "expected": "차이가 설명된 기능 대조표·근거 링크·공개 보고",
+        "qa": "원본 커밋과 현재 소스 해시·라인, 주장과 실제 검사 수준, 게시 본문과 첨부 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "표현13항목·렌더/갱신/제품6항목을 원본7486b9b와현재fb79b35f 기준으로 대조. 원본의3색 영역·UV 가짜 원근·높이/광원 투영·조명 차이와 검증 수준을 명시하고 공개 본문·15개 소스 해시 확인"
+      }
+    ],
+    "focusTasks": [
+      "T02",
+      "T06"
+    ],
+    "scopeChange": "사용자가 원본 기능과 현재 구현의 차이를 별도 대조표로 보고하도록 추가 요청했습니다. 기존 개선·실제 화면 QA 작업을 보존하고T06을 추가합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T14:19:16.3116039Z",
+        "summary": "소스 대조와 정적 검증 완료, 최신 사용자 지시로 실제 화면 QA 보류",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 Demo.tscn640x360·3배표시, QuadMesh/MultiMesh30000표시, CharacterManager10Hz와 Grass 시간 양자화 소스 대조",
+            "evidence": "원본 Scenes/Demo.tscn:446-447, Scripts/CharacterManager.gd:12-24, Shaders/Grass.gdshader:154-164",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "형태·바람·잔류 접촉·10Hz 수집 구현 및20,619 단언 통과. 사용자가 화면 조작 중단을 요청하여 현재 소스의 실제 씬 QA 보류",
+            "evidence": "compile-final/math/result.json, shaders/result.json 및 dxc.json, 사용자 최신 화면 조작 중단 지시",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "소스·컴파일·언어 키 검사는 통과했으나 실제 현재 UI 전환·선택 QA는 미실행",
+            "evidence": "현재 UI 캡처 미확보",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "현재 개선 소스의 새 비교 촬영 보류. 기준 소스Camera 비교 GIF만 확보",
+            "evidence": "native-before/09-MixedGarden/done.json, exports/manifest.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "패키지 대조 통과, 공개 배포 대기",
+            "evidence": "Artifacts/PixelTooler/Review/manifest.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T14:22:27.8136856Z",
+        "summary": "공개 보고와 실제 기준 영상 첨부 검증, 현재 개선 화면 QA는 보류 유지",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "검토 패키지3종 현재 소스 해시 대조 및3671b98f 보고서 공개 배포·본문·GIF/PNG3개 해시 확인. 최신 개선 실행 화면은 미검증으로 명시",
+            "evidence": "projects/pixelfoliage/reports/2026-11-03-result-20261103141824519-v1.0.0.html 및 public-verification.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-03T14:34:46.0277916Z",
+        "summary": "추가 요청한 원본 기능 상세 대조와 공개 검증 완료. 기존 실제 화면 QA 보류 유지",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "표현13항목·렌더/갱신/제품6항목을 원본7486b9b와현재fb79b35f 기준으로 대조. 원본의3색 영역·UV 가짜 원근·높이/광원 투영·조명 차이와 검증 수준을 명시하고 공개 본문·15개 소스 해시 확인",
+            "evidence": "projects/pixelfoliage/reports/2026-11-03-result-20261103143106296-v1.0.0.html, assets/comparison-20261103/source-evidence.json 및 public-verification.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}
