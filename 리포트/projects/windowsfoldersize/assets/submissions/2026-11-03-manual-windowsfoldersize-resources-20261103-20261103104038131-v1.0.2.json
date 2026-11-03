@@ -1,0 +1,200 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+    "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "설치및실제Explorer GUI검증은별도보류.공개완료를설치성공으로간주하지않음.",
+    "outcome": "구현·native QA·MSI검증·공개보고·GitHub릴리스배포완료.설치·GUI QA는사용자화면제어금지로제외한범위유지.",
+    "proposedTime": "5~10분",
+    "actualTime": "최적화19:16:44KST시작,공개검증19:35:09KST.추가릴리스19:36:07KST시작,릴리스공개19:38:41KST(2분34초).추가공개보고검증진행.",
+    "xerjEvidence": "XERJ도구없음,rg사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "windowsfoldersize-resources-20261103",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "파일별 차액 갱신을 유지하며 메모리와 CPU 부담 줄이기",
+    "completionCriteria": "디스크 인덱스 차액/이름변경/삭제/재시작 정확성, 메모리·CPU 실측, 빌드·MSI검증·단일dist·공개보고. 사용자화면제어금지로 설치와GUI적용은보류.",
+    "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103103005748-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "디스크 인덱스 및 제한 구현",
+        "action": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+        "expected": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "회귀와 자원 측정",
+        "action": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+        "expected": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "빌드와 공개 보고",
+        "action": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+        "expected": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "GitHub 릴리스 배포",
+        "action": "고정MSI·SHA256을Actions태그배포로업로드하고공개다운로드해시대조",
+        "expected": "릴리스공개·Actions성공·로컬/다운로드SHA256일치",
+        "qa": "GitHub API·공개다운로드·SHA256·로컬Git상태확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean."
+      }
+    ],
+    "focusTasks": [
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "사용자가1.0.16 GitHub 릴리스배포를추가요청하여T04를추가.기존작업·QA보존.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T10:29:54.354Z",
+        "summary": "자원 및 정확성 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+            "evidence": "agent.cpp/disk_index.hpp/build 결과",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+            "evidence": "resource_test 전체 및 최종quick, broker_resource_test 실제 실행",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T10:40:32.148Z",
+        "summary": "공개보고및릴리스배포확인",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인.",
+            "evidence": "Pages배포성공·공개HTML/PNG HTTP200",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean.",
+            "evidence": "GitHubActions41620963081·릴리스API·다운로드SHA256",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-11-03T10:40:32.154Z",
+        "summary": "구현·회귀·공개보고·릴리스전체완료기준대조;설치제외범위유지",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+            "evidence": "해당실행·배포근거",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+            "evidence": "실행시험출력",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인.",
+            "evidence": "해당실행·배포근거",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean.",
+            "evidence": "공개다운로드및Actions",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
