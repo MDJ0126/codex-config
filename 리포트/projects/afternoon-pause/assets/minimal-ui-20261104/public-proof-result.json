@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-03T20:15:10.449Z",
+  "sha": "92f282c62539686cfe0b8a9ef61d93680d27b9de",
+  "workflow": "https://github.com/MDJ0126/codex-config/actions/runs/41709920629",
+  "checks": [
+    {
+      "name": "result",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-result-20261103200727326-v1.0.0.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-manual-minimal-ui-follow-20261104-20261103200726724-v1.0.1.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "after-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "animation-list.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "architecture.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "authoring-fixed-error.txt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "baseline-harness-old-expectation.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "baseline-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "chat-collapsed.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compile-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "entry-error.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "feature-status.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-audit.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "follow-close.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-first-pass.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-nameplates-pass.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "image-manifest.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "interactive-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual-mouse-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual-selected.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "pointer-selected.png",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "listed": true,
+  "passed": true
+}
