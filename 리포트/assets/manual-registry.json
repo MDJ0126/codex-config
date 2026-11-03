@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-tooltip-spacing-20261103053549855-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-activity-tooltip-spacing-20261103053549855-v1.0.1.md",
+    "date": "2026-11-03T05:35:49.855Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-tooltip-spacing",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 제목 툴팁·균일 간격 수정",
+      "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "제목 툴팁·균일 간격 구현과 공개 검증 완료",
+      "proposedTime": "5~8분",
+      "actualTime": "시작 2026-11-03 14:31:37 KST · 기능 공개 확인 2026-11-03T05:35:48.516Z · 최종 기록 배포 시각은 채팅에 표기",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-tooltip-spacing",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "completionCriteria": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103053237547-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "툴팁·간격 구현 및 검증",
+          "action": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "expected": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "브라우저19개·자동 테스트48개·공개5개 통과. 제목·빈 날짜·균일 간격·화면 경계·키보드·필터 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T05:35:48.515Z",
+          "summary": "툴팁·간격·기존 필터 최종 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "브라우저19개·자동 테스트48개·공개5개 통과. 제목·빈 날짜·균일 간격·화면 경계·키보드·필터 확인.",
+              "evidence": "b7bfb120; assets/activity-tooltip-2026-11-03/browser-qa.json 및 public-qa.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103053237547-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103053237547-v1.0.0.md",
     "date": "2026-11-03T05:32:37.547Z",
