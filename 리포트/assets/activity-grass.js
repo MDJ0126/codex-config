@@ -1,4 +1,4 @@
-import {activityCalendar} from './activity-core.mjs';
+import {activityCalendar} from './activity-core.mjs?v=full-weeks-1';
 export function createActivityGrass(section,onSelect){
  const grid=section.querySelector('.activity-grid'),months=section.querySelector('.activity-months'),detail=section.querySelector('[data-activity-detail]');
  const popup=document.createElement('div');popup.id='activity-tooltip';popup.className='activity-tooltip';popup.setAttribute('role','region');popup.setAttribute('aria-label','날짜별 보고서 미리보기');popup.hidden=true;document.body.append(popup);
@@ -18,12 +18,12 @@ export function createActivityGrass(section,onSelect){
    lastRows=rows.slice();calendar=activityCalendar(rows);hide();dayMap=new Map();grid.replaceChildren();months.replaceChildren();const byDate=new Map();for(const row of rows){if(!byDate.has(row.date))byDate.set(row.date,[]);byDate.get(row.date).push(row);}let lastMonth='';
    for(const [i,day]of calendar.days.entries()){
     if(i%7===0){const label=document.createElement('span'),month=day.date.slice(0,7);label.textContent=month!==lastMonth?Number(day.date.slice(5,7))+'월':'';lastMonth=month;months.append(label);}
-    const cell=document.createElement('button'),items=byDate.get(day.date)||[];cell.type='button';cell.className='activity-day';cell.dataset.date=day.date;cell.dataset.level=day.level;cell.dataset.count=day.count;cell.disabled=!day.inRange;cell.setAttribute('aria-label',day.date+' · '+day.count+'건'+(items.length?' · '+items.slice(0,5).map(r=>r.title).join(', '):''));cell.setAttribute('aria-controls',popup.id);cell.setAttribute('aria-expanded','false');
+    const cell=document.createElement('button'),items=byDate.get(day.date)||[];cell.type='button';cell.className='activity-day';cell.dataset.date=day.date;cell.dataset.level=day.level;cell.dataset.count=day.count;cell.disabled=!day.inRange;cell.dataset.inRange=String(day.inRange);cell.setAttribute('aria-label',day.date+(day.inRange?' · '+day.count+'건':' · 집계 기간 밖 · 비활성')+(items.length?' · '+items.slice(0,5).map(r=>r.title).join(', '):''));cell.setAttribute('aria-controls',popup.id);cell.setAttribute('aria-expanded','false');
     const panel=document.createElement('div'),heading=document.createElement('strong');heading.textContent=day.date+' · '+day.count+'건';panel.append(heading);
     for(const item of items.slice(0,5)){const link=document.createElement('a');link.className='activity-report-link';link.textContent=item.title||'제목 없음';link.href=item.href;panel.append(link);}
     if(items.length>5){const more=document.createElement('button');more.className='activity-more';more.textContent='외 '+(items.length-5)+'건 · 그날 보고서 전체 보기';more.addEventListener('click',()=>{onSelect(day.date);hide();});panel.append(more);}
     if(!items.length){const empty=document.createElement('div');empty.textContent='작성된 보고서가 없습니다.';panel.append(empty);}
-    const entry={cell,panel,count:day.count,width:0,height:0};dayMap.set(day.date,entry);cell.addEventListener('mouseenter',()=>show(entry));cell.addEventListener('mouseleave',scheduleClose);cell.addEventListener('focus',()=>show(entry));cell.addEventListener('blur',scheduleClose);cell.addEventListener('click',()=>onSelect(selected===day.date?'':day.date));grid.append(cell);
+    const entry={cell,panel,count:day.count,width:0,height:0};dayMap.set(day.date,entry);cell.addEventListener('mouseenter',()=>{if(day.inRange)show(entry);});cell.addEventListener('mouseleave',scheduleClose);cell.addEventListener('focus',()=>{if(day.inRange)show(entry);});cell.addEventListener('blur',scheduleClose);cell.addEventListener('click',()=>{if(day.inRange)onSelect(selected===day.date?'':day.date);});grid.append(cell);
    }
    section.querySelector('[data-activity-total]').textContent=calendar.total+'건';section.querySelector('[data-activity-range]').textContent=`최근 1년 · 활동 ${calendar.activeDays}일 · KST`;section.querySelector('.activity-scroll').scrollLeft=section.querySelector('.activity-scroll').scrollWidth;
   }
