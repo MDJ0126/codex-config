@@ -1,5 +1,25 @@
 [
   {
+    "title": "Affinity 저장 권한 오류는 프로젝트 폴더 복구 후 검증",
+    "summary": "권한 오류 보고로 중단하지 않고, 해당 프로젝트 권한을 직접 복구한 뒤 실제 저장·재열기까지 검증하도록 지시했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103163654142-v1.0.0.html",
+    "date": "2026-11-03T16:36:54.142Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity 저장 권한 복구 지침",
+    "summary": "권한 오류 발생 시 프로젝트 폴더 권한을 원인별로 복구하고 실제 저장까지 검증하도록 합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-affinity-project-permission-recovery-20261103163653314-v1.0.1.html",
+    "date": "2026-11-03T16:36:53.314Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Affinity 저장 권한 복구 지침",
     "summary": "권한 오류 발생 시 프로젝트 폴더 권한을 원인별로 복구하고 실제 저장까지 검증하도록 합니다.",
     "project": "codex-config",

@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-affinity-project-permission-recovery-20261103163653314-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-affinity-project-permission-recovery-20261103163653314-v1.0.1.md",
+    "date": "2026-11-03T16:36:53.314Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "affinity-project-permission-recovery",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "Affinity 저장 권한 복구 지침",
+      "summary": "권한 오류 발생 시 프로젝트 폴더 권한을 원인별로 복구하고 실제 저장까지 검증하도록 합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음. 실제 프로젝트 폴더 권한을 바꾸거나 저장 장애를 복구한 작업은 아닙니다.",
+      "outcome": "권한 오류 복구 지침·설치본 동기화·공개 본문 확인 완료",
+      "proposedTime": "3~5분",
+      "actualTime": "시작 2026-11-04 01:33:01 KST · 지침 공개 확인 2026-11-03T16:36:52.345Z · 최종 기록 배포 확인은 채팅에 표기",
+      "xerjEvidence": "코드 검색 불필요 — 지침·문서 수정",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "affinity-project-permission-recovery",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "저장 오류를 반복·방치하지 않고 프로젝트 범위의 권한 복구와 실제 저장 검증을 공통화합니다.",
+      "completionCriteria": "전역 지침·공개 가이드 통합, 설치본 동기화·빌드·푸시·배포·공개 본문 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103163406898-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "복구 지침 통합·동기화·공개",
+          "action": "전역 지침·공개 가이드 통합, 설치본 동기화·빌드·푸시·배포·공개 본문 확인",
+          "expected": "전역 지침·공개 가이드 통합, 설치본 동기화·빌드·푸시·배포·공개 본문 확인",
+          "qa": "사용자 요구·기존 예외·프로젝트 경계·실제 저장 검증 의무·동일 해시·공개 본문 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "지침3곳 동일 SHA256·945개 빌드·33,344개 링크 검사·공개 가이드2곳과 원격 지침 본문 확인"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T16:36:52.343Z",
+          "summary": "요구·범위·동기화·공개 문구 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "지침3곳 동일 SHA256·945개 빌드·33,344개 링크 검사·공개 가이드2곳과 원격 지침 본문 확인",
+              "evidence": "548f2dc0; SHA256 0EE1256B33236040655A204814E26713EA82107CD063BD173BB28EE0E327E9CF; assets/permission-policy-2026-11-04/public-qa.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103163406898-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103163406898-v1.0.0.md",
     "date": "2026-11-03T16:34:06.898Z",
