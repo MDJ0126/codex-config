@@ -1,0 +1,328 @@
+{
+  "sourceCommit": "65c7a77d",
+  "files": [
+    {
+      "sha256": "D99170014910354BDDC3C13CF1DDD1B449A680378A5CC02E949B3F41945C7A25",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageInteractor.cs"
+    },
+    {
+      "sha256": "26ED66888EEDE05ABC333BB442759586CBD7F728E911087866ED0E533BC8CB16",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageInteractor.cs.meta"
+    },
+    {
+      "sha256": "0CE437D814B622F4A6D6093AD8D891F4F48F567DED07B90F90E5E3B1CDC408BA",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageMath.cs"
+    },
+    {
+      "sha256": "40DDD3F1B99B3AA134B9EB9A9D7A762E119A204322D07E5D34EB675717705051",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageMath.cs.meta"
+    },
+    {
+      "sha256": "2777D5F6FB33199C924DD6683B9CCA39D17FF1A0E603726EA7A96958F3F7DDD1",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs"
+    },
+    {
+      "sha256": "F29D1C60B00F3E79AC6511B6DBB453DEFFC395E75DEAA265A39B549C595DEC89",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs.meta"
+    },
+    {
+      "sha256": "F9007A0391459963BEA76537B33312949E2517FB030EC3763F0B7AE4B2F5DC9A",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageProfile.cs"
+    },
+    {
+      "sha256": "72D926A8DAB453631DD50D9865E7D954C93F0997A7B91269CDEC244EC7F4297C",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageProfile.cs.meta"
+    },
+    {
+      "sha256": "4D4463B1CF2E946450DBA11B9875105D27D84DA84F95A9D07E6A24C2F6AFF207",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageRenderer.cs"
+    },
+    {
+      "sha256": "94C7EAF3133F632FC46F51DC263B94A068E93E11E629A131DA0F7EC290465F8B",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageRenderer.cs.meta"
+    },
+    {
+      "sha256": "6C0A560A7978674AEC96B44F83475C64AB30F285B351835CC92F499CA25F7CC7",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs"
+    },
+    {
+      "sha256": "17B59E791A56290AB09B2F6F60FC2394DAE362E61DC1BFFA2E236FCE043AC6D4",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs.meta"
+    },
+    {
+      "sha256": "92A35D5C84F66B15A69B16DF2484B9E4BF1FC5DCB352CFBC5769624EA3C3285A",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders.meta"
+    },
+    {
+      "sha256": "BAD92ABAECFDA6CD999F44444EE6563B3EACF380BDE705347A86060BE9F46987",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/TurnRoom.PixelFoliage.Runtime.asmdef"
+    },
+    {
+      "sha256": "1DA8AA9C651F599B05F1B4DFDF6A2DC4E9B2910237280B26C3CAFC1938628EF1",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/TurnRoom.PixelFoliage.Runtime.asmdef.meta"
+    },
+    {
+      "sha256": "DDD5BE8E26BD143EE9D3E60644D61761BE8F5873C5791472D89EC805782E2D75",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/FoliageCommon.hlsl"
+    },
+    {
+      "sha256": "29345FC01B58D5B570EEA79BA6B1CE7D73060FBE08F5B728E346C76213AE1F8D",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/FoliageCommon.hlsl.meta"
+    },
+    {
+      "sha256": "FA037FDCA7C254D74BE4D45E8BD74B597CC4EBCE3687A44E3DEB493E317BCCC2",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader"
+    },
+    {
+      "sha256": "B1340680DABE262BA0C3CEF3785B4F20B1B386576BC4FA68E75F7A699FDAF80C",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader.meta"
+    },
+    {
+      "sha256": "5233597C5D4AA73E95AD387661F005F1981B21EE4AF4C50730C60CDD1D935106",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Examples.json"
+    },
+    {
+      "sha256": "8AF8D49DE1EF7E3FEB901CBBF63258F345E5A7194694A5FAC37C34AEC3437010",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Examples.json.meta"
+    },
+    {
+      "sha256": "4ECF1BF927890FEE04D452FB1654B877E5464793EB2A7A2CAEDC7662C9653736",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Materials.meta"
+    },
+    {
+      "sha256": "23884CD8292FC01194CC91DCC145531F69A94D1B685B5DC6E3043D3D391E2923",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models.meta"
+    },
+    {
+      "sha256": "0EC40731AA807A46CACCE0673A335927DF7FD748A2C4CCEBD75A951568A8EAA2",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles.meta"
+    },
+    {
+      "sha256": "D169304CE203BAF43CA80E218E5E5CC9DE5CC1E1B6C0C08B3585475395921736",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Runtime.meta"
+    },
+    {
+      "sha256": "2F9F6EC07508DEA97788E2064746569CD3189681C817D1FD2F31FFA5CD06199A",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes.meta"
+    },
+    {
+      "sha256": "8F9E48985962116B1FE31174B525C9A8EA892B84C8486FB9C75CF8EEEDD0678C",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Materials/SoftVegetation.mat"
+    },
+    {
+      "sha256": "8486DDE74218C8B6F052E7E72B130BEB7F21C868ED3140715629730E06606307",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Materials/SoftVegetation.mat.meta"
+    },
+    {
+      "sha256": "436E6A6CC857B6D5310B5A4D12F78D47608D3E474320EE7BF515A204BAF09DD1",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/BranchingTree.asset"
+    },
+    {
+      "sha256": "0523546153A2B558577415885DF80552B2939FCD97CA3A8B1E951D814E58DD16",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/BranchingTree.asset.meta"
+    },
+    {
+      "sha256": "D515C8B50E0DF09D95CA28D3FB3F9C6C7B2131FC329357AE4D882372D81AED79",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/GardenVisitor.asset"
+    },
+    {
+      "sha256": "928C71C796CECDF5838916554AD343B8A712B3BBE107B83110D56FC63E855362",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/GardenVisitor.asset.meta"
+    },
+    {
+      "sha256": "8D2270F3D86B433FB1DF0843B25C43B34D6BCFB0261DC9E60C5F537C6388CFD4",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/IvoryDaisy.asset"
+    },
+    {
+      "sha256": "B92F166A42A1F49A922B6944EC708DAFD2F757CB5D029A94E5E022C5611EFE2B",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/IvoryDaisy.asset.meta"
+    },
+    {
+      "sha256": "48C1D77095A2320159D46EA15F2335BA3622CC5DD56E6333D5F4248F009CEDD9",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowGrass.asset"
+    },
+    {
+      "sha256": "1D82FE47ECDF5C8DED45800DE50DBF53597105DC6515F59ED6B3D03E47F7AAE3",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowGrass.asset.meta"
+    },
+    {
+      "sha256": "DAA21795D6DC14200EFCF9A566C853570B5953523E0715ACF4DCF8835BFC1839",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowIsland.asset"
+    },
+    {
+      "sha256": "884B4DCC5DB9FB35C27332B7323FC134BA0A23F144BCDB57445C27DB2F3BF634",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowIsland.asset.meta"
+    },
+    {
+      "sha256": "0E0FB1B3E98F1C98FEC419D3B2BCFBE4FF615769D2218287D83FED9B5E294524",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/RoseBlossom.asset"
+    },
+    {
+      "sha256": "98DC6CC1B104524DD1E2CEE77B8F15F434560BFD10EF8EA46EF1C74638146247",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/RoseBlossom.asset.meta"
+    },
+    {
+      "sha256": "6A053165A6C595BC9080CA34E483BAA9843D81C3C26EAE29B68DF3EFA31BB67A",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/RoundedShrub.asset"
+    },
+    {
+      "sha256": "4FD776C9F16E3E8207BC095AC3E834EC6F965497776272D7CC2F340AB8ADB4AC",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Models/RoundedShrub.asset.meta"
+    },
+    {
+      "sha256": "DFF8783CCF892E63658720EC47B44BD0CE897CD30617AB6FD035E765CFA93265",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/BranchingTree.asset"
+    },
+    {
+      "sha256": "81D5BCE899FC7A1B7217E1917441EA65E44C75F7416B36B09B06555358A7F26A",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/BranchingTree.asset.meta"
+    },
+    {
+      "sha256": "A83ED4AD3D2D3DA5EA7F2B6EC40D679BCBD3EF9E7EAEF82AF03CC013F35FCDA0",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/GardenVisitor.asset"
+    },
+    {
+      "sha256": "1ABB9196405CA6A397C9B815B3FEDF24B4FB4E577F6E1B9FF39BEFEEB9478E46",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/GardenVisitor.asset.meta"
+    },
+    {
+      "sha256": "43D4CF34B1F11EC1816BA714B5CF825CC8EBE1D5290AC65F7E64CC63EA7CFFD9",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/IvoryDaisy.asset"
+    },
+    {
+      "sha256": "54D3BE664B39711C6C1545BD115F62CF778B05A1994082BBA83C77DD5E7FF5F4",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/IvoryDaisy.asset.meta"
+    },
+    {
+      "sha256": "BBBAF0D876BAAB4F2E68BB5510237761A50CC45756995089C389DC2F4B16DEBE",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowGrass.asset"
+    },
+    {
+      "sha256": "97181C4C2910777482BAED5773008EF39386B94EA90C2A50E292CD305EDD487C",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowGrass.asset.meta"
+    },
+    {
+      "sha256": "859755EA04897720181B0D3AB7DE5D700198ADD5C26E2722EE4CC3DABDA8BB57",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowIsland.asset"
+    },
+    {
+      "sha256": "790B9F2C55BC4B200CD35B2E59938DF6AC9F0222D9A79E9D586F6FA37F145B07",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowIsland.asset.meta"
+    },
+    {
+      "sha256": "B54E54A48345B04BD135338D310F9BCDC8EC5D4CBC6DC61C28F9C45DD0D445CA",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoseBlossom.asset"
+    },
+    {
+      "sha256": "E4D9D2139E1C03F95ADBF2E36C855B585701EFA74446BA2C5F082A774B828419",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoseBlossom.asset.meta"
+    },
+    {
+      "sha256": "CF5054314D5B041FAE88DE78EEBAB6488B5FDD876DAB9F4552506C0FE190B791",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoundedShrub.asset"
+    },
+    {
+      "sha256": "91CFC124D2FA405041EF7D304870D3DE1EC17BD16D1C7AE65C3FEBEC0F40DCE6",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoundedShrub.asset.meta"
+    },
+    {
+      "sha256": "556890505748EFDF4ADD7BFC104239D2958FAEF02381D06869F9E8E9775112BC",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs"
+    },
+    {
+      "sha256": "9C2F1C2194B27648FB2AB11CFCFD74F6ABB7FE12A18F9F16C84180AB66D7DAFF",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs.meta"
+    },
+    {
+      "sha256": "0997DF83E4B0FF8A95236CF6B333FACDFEF3D1413541050DCDDA6E47B3E2AF03",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Runtime/TurnRoom.PixelFoliage.Samples.asmdef"
+    },
+    {
+      "sha256": "7594FEA81A723A7AD7361408F51BE64A922593A4C2107BE2E545937CF84A3EED",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Runtime/TurnRoom.PixelFoliage.Samples.asmdef.meta"
+    },
+    {
+      "sha256": "B59A949033E5918CFB4BF0AD624E7F7AB1C29192583C47B9B8FF4533C44CF7F8",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity"
+    },
+    {
+      "sha256": "60A95CA4DE70A9EAB1D70D463281EF687E2758C2AC16510AFA4E1453E1A807E2",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity.meta"
+    },
+    {
+      "sha256": "87F805F9DAEB3FCFB1BC8F97D39339DEF0AF67777C61887F76F24D647AAC7A7B",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity"
+    },
+    {
+      "sha256": "1634C72B788C9C5030D7806612568D87ED71205E0011F28E137420121FCFB125",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity.meta"
+    },
+    {
+      "sha256": "9717F86476B410BC3A3FD7983A54F9413CABEE1E52CD9F2004210DDE00DBC260",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity"
+    },
+    {
+      "sha256": "F32B1CD6F3211FF128AA5DE8E013FB4C41F2739C5302BE2D75CB1C0A91E03CE4",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity.meta"
+    },
+    {
+      "sha256": "FB70BE820A5F148C3E3EA4559799BE4EF83F704A1E020B5F925FEEF2138301B6",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity"
+    },
+    {
+      "sha256": "488A6C2D63CA57F9B5AB2FF450344732F67327E0CDC2E93142C7D0B7988486DF",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity.meta"
+    },
+    {
+      "sha256": "CA9A9C64F50C90E688D621D12427BE9B17E523ABAD49CFAB96C1B914F4C9B1E5",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/05-ContactTrail.unity"
+    },
+    {
+      "sha256": "AB9EC4906882CE8FF2D733A3E1A2924641B1E2BB9B732E932D938F64080643B6",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/05-ContactTrail.unity.meta"
+    },
+    {
+      "sha256": "B540E98398F7FCC2B55B2C37E27E80252C60089AE83C60C28876DBF39DFDD2BF",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity"
+    },
+    {
+      "sha256": "87388A539523EBCFAA72732FC19113804B60D297C22D10888E13FDC1514819D5",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity.meta"
+    },
+    {
+      "sha256": "8A986464F392BB307E3E3BB38E899C7B312A722B2B523EFC8B1CDEFCABE88584",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/07-SharedGusts.unity"
+    },
+    {
+      "sha256": "00E5AA49DBC0C1A83038AAD500779D0B00CD95C1A45ADCEA094AE8A6C26C95B4",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/07-SharedGusts.unity.meta"
+    },
+    {
+      "sha256": "C769CB00C7D882FB4A730BB6D487CC596C77A85609D16CEF52E75E2F7C6567D3",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/08-CloudLight.unity"
+    },
+    {
+      "sha256": "230C46245C4697C6D00A8F6084D9AA941878280C2C594A301D3CC5AB165D374C",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/08-CloudLight.unity.meta"
+    },
+    {
+      "sha256": "F842E1981712836A74F7B1E856D23034D45E9B029B8059A04409521E9AE9F5EE",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/09-MixedGarden.unity"
+    },
+    {
+      "sha256": "FD1695B4C0AF825EA10CC9E722FDC7BEF32D7FE492B49846A49F7E46A18CF2B1",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/09-MixedGarden.unity.meta"
+    },
+    {
+      "sha256": "9658B0C9B3E6A7CDD267D790545246D219983068243A91278368C7EF0A200D11",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity"
+    },
+    {
+      "sha256": "9E81D1428BF46D06CBEE3B23369E89780C01A9A7BE4146360A580BE5E2C1A266",
+      "path": "Assets/TurnRoom/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity.meta"
+    }
+  ],
+  "matchedFiles": 80,
+  "at": "2026-11-03T13:27:39.7623111Z",
+  "scope": "Foliage Runtime and Samples copied into native capture project"
+}

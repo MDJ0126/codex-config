@@ -1,0 +1,139 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "title": "식생11개 씬 실제 촬영과 결과 보고 갱신",
+    "summary": "실제 Unity 씬11개를 실행해 촬영하고 GIF 가능 여부를 확인한 뒤 공개 보고서를 갱신합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "이번 촬영·보고서 갱신 요청의 남은 작업 없음. 제품 전체 출시 QA와 로고 등은 기존 제품 메뉴얼에서 계속 관리합니다. 교훈 검토: 기존 실제 실행 검증 원칙과 중복되어 전역 지침 변경 없음.",
+    "outcome": "사용자가 이번 촬영의 화면 조작을 허용했습니다.",
+    "proposedTime": "20~40분",
+    "actualTime": "실제 촬영·공개검증 완료: 25분25초, 2026-11-03 22:29:26 KST. 메뉴얼 최종 게시 검증은 채팅 최종 시각에 별도 표기합니다.",
+    "xerjEvidence": "촬영·보고서 갱신으로 코드 검색 불필요. 실행 오류 수정 시 별도 기록합니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "foliage-capture-20261103",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "씬별 실제 실행 화면과 가능한 GIF를 결과 보고서에 반영",
+    "completionCriteria": "11개 씬 실행·시각 확인·정지 캡처, 지원되는 GIF 또는 명시한 제한, 첨부 검증 및 공개 배포",
+    "previousManual": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-capture-20261103-20261103132528041-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "Unity 실행과11개 씬 촬영",
+        "action": "별도 프로젝트에서 같은 소스의 씬을 Play하고 실제 출력 프레임을 보존",
+        "expected": "11개 씬 캡처와 실행 근거",
+        "qa": "렌더 화면을 직접 검사하고 씬·소스·프레임을 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "Unity6000.0.83f1 DX11 Built-in에서11개 씬 실제 Play·재촬영 및 정지 화면 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "이미지·GIF 확인 및 최적화",
+        "action": "사용자가 지정한 설치 ScreenToGif2.43.2 인코더 API로 실제 프레임을 GIF로 묶고 원본 PNG 보존",
+        "expected": "실제 움직임을 보존한 첨부 또는 확인한 도구 제한",
+        "qa": "출력 크기·바이트·프레임·실제 표시 품질 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "11개 GIF 각각960x540·24개 서로 다른 프레임 디코딩 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "결과 보고서 갱신·게시",
+        "action": "기존 보고서의 새 버전에 씬별 근거를 첨부하고 검사·푸시·외부접근 확인",
+        "expected": "새 개별 HTTPS 보고서와11개 씬 첨부",
+        "qa": "실제 공개 본문·각 첨부·배포 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "25471d5f Pages 배포 성공, 공개 본문과22개 첨부 SHA256 대조 통과"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자가 ScreenToGif를 지정하여 T02의 도구를 변경했습니다. 원본 프레임·완료 기준은 유지합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T13:25:26.1988641Z",
+        "summary": "11개 실행과 ScreenToGif 출력 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 DX11 Built-in에서11개 씬 실제 Play·재촬영 및 정지 화면 확인",
+            "evidence": "native-r2/complete.json 및11개 실제 정지 화면",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "11개 GIF 각각960x540·24개 서로 다른 프레임 디코딩 확인",
+            "evidence": "exports/manifest.json 및 animation-validation.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-03T13:29:26.1905451Z",
+        "summary": "실제 씬 촬영·파일검증·공개 배포 전체 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 DX11 Built-in에서11개 씬 실제 Play·재촬영 및 정지 화면 확인",
+            "evidence": "projects/pixelfoliage/reports/2026-11-03-PixelFoliage-scene-captures-v1.0.1.html 및 public-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "11개 GIF 각각960x540·24개 서로 다른 프레임 디코딩 확인",
+            "evidence": "projects/pixelfoliage/reports/2026-11-03-PixelFoliage-scene-captures-v1.0.1.html 및 public-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "25471d5f Pages 배포 성공, 공개 본문과22개 첨부 SHA256 대조 통과",
+            "evidence": "projects/pixelfoliage/reports/2026-11-03-PixelFoliage-scene-captures-v1.0.1.html 및 public-verification.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
