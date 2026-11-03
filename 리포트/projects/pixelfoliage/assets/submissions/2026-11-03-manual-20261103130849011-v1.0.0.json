@@ -1,0 +1,82 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "title": "식생11개 씬 실제 촬영과 결과 보고 갱신",
+    "summary": "실제 Unity 씬11개를 실행해 촬영하고 GIF 가능 여부를 확인한 뒤 공개 보고서를 갱신합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실행·촬영·내보내기·공개 검증 진행 전",
+    "outcome": "사용자가 이번 촬영의 화면 조작을 허용했습니다.",
+    "proposedTime": "20~40분",
+    "actualTime": "시작2026-11-03 22:04:01 KST",
+    "xerjEvidence": "촬영·보고서 갱신으로 코드 검색 불필요. 실행 오류 수정 시 별도 기록합니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "foliage-capture-20261103",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "씬별 실제 실행 화면과 가능한 GIF를 결과 보고서에 반영",
+    "completionCriteria": "11개 씬 실행·시각 확인·정지 캡처, 지원되는 GIF 또는 명시한 제한, 첨부 검증 및 공개 배포",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "Unity 실행과11개 씬 촬영",
+        "action": "별도 프로젝트에서 같은 소스의 씬을 Play하고 실제 출력 프레임을 보존",
+        "expected": "11개 씬 캡처와 실행 근거",
+        "qa": "렌더 화면을 직접 검사하고 씬·소스·프레임을 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "이미지·GIF 확인 및 최적화",
+        "action": "Affinity에서 실제 내보내기를 확인하고 가능한 GIF와 정지 이미지를 준비",
+        "expected": "실제 움직임을 보존한 첨부 또는 확인한 도구 제한",
+        "qa": "출력 크기·바이트·프레임·실제 표시 품질 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "결과 보고서 갱신·게시",
+        "action": "기존 보고서의 새 버전에 씬별 근거를 첨부하고 검사·푸시·외부접근 확인",
+        "expected": "새 개별 HTTPS 보고서와11개 씬 첨부",
+        "qa": "실제 공개 본문·각 첨부·배포 결과 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
