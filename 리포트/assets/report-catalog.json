@@ -3,6 +3,26 @@
     "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
     "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
     "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103050625958-v1.0.2.html",
+    "date": "2026-11-03T05:06:25.958Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity 빌드 성공 후 기록이 unknown으로 남는 문제 수정",
+    "summary": "빌드 종료 뒤 최종 BuildReport를 읽도록 변경하고 실제 Windows 재빌드에서 succeeded 기록을 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-bug-20261103050535878-v1.0.0.html",
+    "date": "2026-11-03T05:05:35.878Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
     "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.html",
     "date": "2026-11-03T04:58:57.114Z",
     "kind": "manual",
