@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "result",
+    "title": "Prismatic Woodland — 참고 이미지 기반 숲·절벽 예제",
+    "summary": "다색 수관·관목·고사리·꽃·절벽·덩굴을 구성한 독립 씬과 같은 구도의 Pixel Camera 씬을 추가했습니다. 정적 검사는 통과했으며 실제 외형은 미검증입니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "| 참고 구성 | 이번 예제 | 현재 확인 |\n| --- | --- | --- |\n| 정면에 가까운 숲 단면 | 직교 카메라, 아래보기7도, 크기9, 위치(0,7,-30) | 직렬화 값·투영 계산 |\n| 노랑·금색·진녹색·청록·분홍 수관 |8가지 수목 색상과 편집 가능한 잎/줄기 메시 | 메시·프로필·배치 |\n| 여러 층의 하층 식생 |5가지 관목45개,4가지 고사리840개,꽃 군락380개 | 배치 설정 |\n| 아래로 드러난 절벽 | 현무암 기둥·층·상단 잔디와3개 선돌 | 메시·씬 참조 |\n| 늘어진 식생 |9개 덩굴 묶음 | 정적 메시; 덩굴 바람은 미구현 |\n| 청록 배경과 작은 빛 | 대기 평면·상단 아치·발광 입자/수관 halo |4개 셰이더 진입점 컴파일 |\n| 픽셀 표현 | 동일 씬에 Full Camera360p 프리셋 추가 | 씬 차이 대조; 실제 비교 미실행 |\n\n권장 화면비는16:10이며16:9도 사용할 수 있습니다. 기존 예제 찾기 버튼으로 같은 Samples/Scenes 폴더에 접근합니다. 새 루트나 별도 제품 창을 만들지 않았고, 씬은 자동으로 열리지 않습니다. 9언어 가이드와 예제 목록을 갱신했습니다.\n\n카메라 이전 단계부터 수목·하층 식생·바람·절벽이 존재합니다. Pixel Camera는 최종 화면을 픽셀화하는 선택 모듈이며, 숲 지오메트리나 식생 바람을 생성하는 역할은 아닙니다.",
+    "verification": "기존 샘플·메타데이터62개와 프로젝트/렌더링/패키지 설정 해시가 유지됐습니다. 두 씬은 선택 PixelCamera 컴포넌트와 프리셋을 제외하면 동일합니다. 26개 새 메시의 좌표·UV 유한성, bounds, 인덱스 용량과9언어 안내를 검사했습니다. 별도 식생 자산/어셈블리/언어 검사12개도 통과했습니다. 실제 Unity6000.0.83f1 헤더와 Windows D3DCompile로 대기·발광 셰이더의 정점/픽셀4개 진입점을 컴파일했습니다. 네이티브 Unity 임포트나 GPU 실행을 대신하지 않습니다.\n\n[씬 검사](../assets/prismatic-woodland/scene-checks.json) · [셰이더 검사](../assets/prismatic-woodland/shader-checks.json) · [자산 검사](../assets/prismatic-woodland/asset-checks.json) · [구성 목록](../assets/prismatic-woodland/scene-inventory.json) · [QA 실패와 재검사 이력](../assets/prismatic-woodland/qa-history.json)\n\n통합/식생 검토 패키지를 생성한 뒤 실제 archive를 다시 읽어 현재 소스와 metadata SHA-256을 대조했습니다. [패키지 크기·해시·검증 범위](../assets/prismatic-woodland/package-summary.json). 공식 Validator·Unity 설치 검증은 포함하지 않습니다.\n\n교훈 검토: 기존 분류·식생 Runtime을 재사용하고, 픽셀 전후 씬은 동일 조건을 보존했습니다. 기존 전역 지침과 중복되어 전역 지침 변경은 없습니다. 프로젝트 문서에 씬 범위와 검증 제한을 추가했습니다.",
+    "remaining": "사용자의 Unity 화면 조작·신규 GUI 실행 중단 지시를 유지했습니다. 따라서 실제 실행 화면·수정 전후 캡처·GIF는 촬영하지 않았습니다. 결과 이미지를 대신 그려 검증 화면으로 사용하지 않았습니다. 실제 외형, 참고 이미지와의 유사도, 색감·광량·밀도, Built-in/URP 렌더, 프레임률과 메모리, 픽셀 카메라 전후는 미검증입니다.\n\n대기와 halo는 샘플 재질 효과이며 전체 화면 Bloom·체적광이 아닙니다. 절벽과 덩굴은 정적이고, 수목·고사리·꽃·관목은 기존 식생 바람을 사용합니다. 추가 패키지나 이미지 텍스처는 요구하지 않습니다. URP의 Pixel Camera Renderer Feature는 사용자가 기존 방식으로 설정해야 합니다.\n\n이 씬은 상업 출시 완료 상태가 아닙니다. 실제 렌더에서 참고 구도와 비교한 뒤 외형을 조정하고 GIF로 확인하는 단계가 남아 있습니다.",
+    "outcome": "식생 Samples 안에 `12-PrismaticWoodland.unity`를 추가하고, 선택 통합에 `13-PixelCameraWoodland.unity`를 추가했습니다. 참고 이미지의 구도·구성 요소를 따라 새 3D 메시와 색상을 작성했습니다. 참고 이미지 자체는 제품이나 보고서에 재배포하지 않았습니다. 실제 Unity 화면 비교가 없어 동일한 외형이나 유사도를 달성했다고 판정하지 않습니다.",
+    "proposedTime": "씬 구성·정적 검증·공개 보고20~35분",
+    "actualTime": "2026-11-04 03:04:01 KST 시작, 16분 경과한 구현·정적 검증 기록. 실제 Unity 렌더/GIF는 미완료이므로 전체 완료 시각이 아닙니다.",
+    "xerjEvidence": "초기 로컬 연결 실패·기존 데이터 잠금을 확인한 후 기존 서버로 접속해 FindAssetPath 검색을 실행했습니다. 결과는 공유 Editor 후보였고 대상 Python·셰이더·식생 Runtime은 인덱스 밖이어서 현재 소스를 rg/직접 읽기로 확인했습니다. 인덱스 갱신은 주장하지 않습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

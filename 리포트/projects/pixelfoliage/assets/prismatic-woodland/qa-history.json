@@ -1,0 +1,15 @@
+{
+  "runs": [
+    {
+      "result": "fail",
+      "scope": "paired scene comparison",
+      "actual": "The verifier initially removed an LF-only component line from a CRLF scene; it failed to remove the optional camera line.",
+      "fix": "Match the actual CRLF or LF line terminator; no scene contents changed to satisfy the check."
+    },
+    {
+      "result": "pass",
+      "scope": "paired scene comparison and other static checks",
+      "evidence": "scene-checks.json"
+    }
+  ]
+}

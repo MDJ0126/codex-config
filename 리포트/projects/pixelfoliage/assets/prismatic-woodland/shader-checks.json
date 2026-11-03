@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-03T18:12:21.214981+00:00",
+  "passed": true,
+  "scope": "Actual Unity6000.0.83f1 header preprocessing and D3DCompile SM5; not native shader import/render",
+  "entries": [
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Shaders/WoodlandAtmosphere.shader",
+      "entry": "WoodlandVertex",
+      "target": "vs_5_0",
+      "defines": "",
+      "hresult": 0,
+      "bytecodeBytes": 2180,
+      "messages": "",
+      "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Shaders/WoodlandAtmosphere.shader",
+      "entry": "WoodlandFragment",
+      "target": "ps_5_0",
+      "defines": "",
+      "hresult": 0,
+      "bytecodeBytes": 1652,
+      "messages": "",
+      "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Shaders/WoodlandGlow.shader",
+      "entry": "WoodlandGlowVertex",
+      "target": "vs_5_0",
+      "defines": "",
+      "hresult": 0,
+      "bytecodeBytes": 3140,
+      "messages": "",
+      "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Shaders/WoodlandGlow.shader",
+      "entry": "WoodlandGlowFragment",
+      "target": "ps_5_0",
+      "defines": "",
+      "hresult": 0,
+      "bytecodeBytes": 936,
+      "messages": "",
+      "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+    }
+  ],
+  "sourceHashes": {
+    "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Samples\\Shaders\\WoodlandAtmosphere.shader": "031fcebaa18509cd2eed74d1eb0e75a2e8980e985e46be70265236f5203fdb00",
+    "UnityCG.cginc": "b3eaeccf5d1ead844abb5c1023367ed06a000882089bb46c38e87e385bd28f5e",
+    "UnityShaderVariables.cginc": "e6e421c3c64550c886eed2ca9c0442093305393c87d89004a0436feabf65b90c",
+    "HLSLSupport.cginc": "f8bd801346280b53bb1f64baa761ad55f6a44be5de701c7580f47bd116eded64",
+    "UnityShaderUtilities.cginc": "99aee089004d6476edac833d57b080acb6523e6cfe583e660e7ebab0cf056b79",
+    "UnityInstancing.cginc": "fcb9305be528bf0ed08cf410535fb6379d6c672ee06356d24b807f373550c37e",
+    "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Samples\\Shaders\\WoodlandGlow.shader": "65be5c2baead8f83e6ae55b9d868aafa20eab1e8d24e82845bb8ea898e1a8b02"
+  }
+}

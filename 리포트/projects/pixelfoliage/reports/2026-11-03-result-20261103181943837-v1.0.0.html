@@ -1,0 +1,66 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Prismatic Woodland — 참고 이미지 기반 숲·절벽 예제 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">P</span><span>턴룸 › Pixel Foliage</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Prismatic Woodland — 참고 이미지 기반 숲·절벽 예제</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">다색 수관·관목·고사리·꽃·절벽·덩굴을 구성한 독립 씬과 같은 구도의 Pixel Camera 씬을 추가했습니다. 정적 검사는 통과했으며 실제 외형은 미검증입니다.</p><div class="post-byline"><time datetime="2026-11-03T18:19:43.837Z">2026년 11월 4일 오전 3:19 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>식생 Samples 안에 <code>12-PrismaticWoodland.unity</code>를 추가하고, 선택 통합에 <code>13-PixelCameraWoodland.unity</code>를 추가했습니다. 참고 이미지의 구도·구성 요소를 따라 새 3D 메시와 색상을 작성했습니다. 참고 이미지 자체는 제품이나 보고서에 재배포하지 않았습니다. 실제 Unity 화면 비교가 없어 동일한 외형이나 유사도를 달성했다고 판정하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>참고 구성</th>
+<th>이번 예제</th>
+<th>현재 확인</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>정면에 가까운 숲 단면</td>
+<td>직교 카메라, 아래보기7도, 크기9, 위치(0,7,-30)</td>
+<td>직렬화 값·투영 계산</td>
+</tr>
+<tr>
+<td>노랑·금색·진녹색·청록·분홍 수관</td>
+<td>8가지 수목 색상과 편집 가능한 잎/줄기 메시</td>
+<td>메시·프로필·배치</td>
+</tr>
+<tr>
+<td>여러 층의 하층 식생</td>
+<td>5가지 관목45개,4가지 고사리840개,꽃 군락380개</td>
+<td>배치 설정</td>
+</tr>
+<tr>
+<td>아래로 드러난 절벽</td>
+<td>현무암 기둥·층·상단 잔디와3개 선돌</td>
+<td>메시·씬 참조</td>
+</tr>
+<tr>
+<td>늘어진 식생</td>
+<td>9개 덩굴 묶음</td>
+<td>정적 메시; 덩굴 바람은 미구현</td>
+</tr>
+<tr>
+<td>청록 배경과 작은 빛</td>
+<td>대기 평면·상단 아치·발광 입자/수관 halo</td>
+<td>4개 셰이더 진입점 컴파일</td>
+</tr>
+<tr>
+<td>픽셀 표현</td>
+<td>동일 씬에 Full Camera360p 프리셋 추가</td>
+<td>씬 차이 대조; 실제 비교 미실행</td>
+</tr>
+</tbody></table>
+</div><p>권장 화면비는16:10이며16:9도 사용할 수 있습니다. 기존 예제 찾기 버튼으로 같은 Samples/Scenes 폴더에 접근합니다. 새 루트나 별도 제품 창을 만들지 않았고, 씬은 자동으로 열리지 않습니다. 9언어 가이드와 예제 목록을 갱신했습니다.</p>
+<p>카메라 이전 단계부터 수목·하층 식생·바람·절벽이 존재합니다. Pixel Camera는 최종 화면을 픽셀화하는 선택 모듈이며, 숲 지오메트리나 식생 바람을 생성하는 역할은 아닙니다.</p>
+<h2 id="section-4">검증</h2>
+<p>기존 샘플·메타데이터62개와 프로젝트/렌더링/패키지 설정 해시가 유지됐습니다. 두 씬은 선택 PixelCamera 컴포넌트와 프리셋을 제외하면 동일합니다. 26개 새 메시의 좌표·UV 유한성, bounds, 인덱스 용량과9언어 안내를 검사했습니다. 별도 식생 자산/어셈블리/언어 검사12개도 통과했습니다. 실제 Unity6000.0.83f1 헤더와 Windows D3DCompile로 대기·발광 셰이더의 정점/픽셀4개 진입점을 컴파일했습니다. 네이티브 Unity 임포트나 GPU 실행을 대신하지 않습니다.</p>
+<p><a class="report-link" href="../assets/prismatic-woodland/scene-checks.json">씬 검사</a> · <a class="report-link" href="../assets/prismatic-woodland/shader-checks.json">셰이더 검사</a> · <a class="report-link" href="../assets/prismatic-woodland/asset-checks.json">자산 검사</a> · <a class="report-link" href="../assets/prismatic-woodland/scene-inventory.json">구성 목록</a> · <a class="report-link" href="../assets/prismatic-woodland/qa-history.json">QA 실패와 재검사 이력</a></p>
+<p>통합/식생 검토 패키지를 생성한 뒤 실제 archive를 다시 읽어 현재 소스와 metadata SHA-256을 대조했습니다. <a class="report-link" href="../assets/prismatic-woodland/package-summary.json">패키지 크기·해시·검증 범위</a>. 공식 Validator·Unity 설치 검증은 포함하지 않습니다.</p>
+<p>교훈 검토: 기존 분류·식생 Runtime을 재사용하고, 픽셀 전후 씬은 동일 조건을 보존했습니다. 기존 전역 지침과 중복되어 전역 지침 변경은 없습니다. 프로젝트 문서에 씬 범위와 검증 제한을 추가했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>사용자의 Unity 화면 조작·신규 GUI 실행 중단 지시를 유지했습니다. 따라서 실제 실행 화면·수정 전후 캡처·GIF는 촬영하지 않았습니다. 결과 이미지를 대신 그려 검증 화면으로 사용하지 않았습니다. 실제 외형, 참고 이미지와의 유사도, 색감·광량·밀도, Built-in/URP 렌더, 프레임률과 메모리, 픽셀 카메라 전후는 미검증입니다.</p>
+<p>대기와 halo는 샘플 재질 효과이며 전체 화면 Bloom·체적광이 아닙니다. 절벽과 덩굴은 정적이고, 수목·고사리·꽃·관목은 기존 식생 바람을 사용합니다. 추가 패키지나 이미지 텍스처는 요구하지 않습니다. URP의 Pixel Camera Renderer Feature는 사용자가 기존 방식으로 설정해야 합니다.</p>
+<p>이 씬은 상업 출시 완료 상태가 아닙니다. 실제 렌더에서 참고 구도와 비교한 뒤 외형을 조정하고 GIF로 확인하는 단계가 남아 있습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 씬 구성·정적 검증·공개 보고20~35분</li>
+<li>실제로 완료된 시간: 2026-11-04 03:04:01 KST 시작, 16분 경과한 구현·정적 검증 기록. 실제 Unity 렌더/GIF는 미완료이므로 전체 완료 시각이 아닙니다.</li>
+<li>XERJ: 사용 — 초기 로컬 연결 실패·기존 데이터 잠금을 확인한 후 기존 서버로 접속해 FindAssetPath 검색을 실행했습니다. 결과는 공유 Editor 후보였고 대상 Python·셰이더·식생 Runtime은 인덱스 밖이어서 현재 소스를 rg/직접 읽기로 확인했습니다. 인덱스 갱신은 주장하지 않습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-03-result-20261103181943837-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelfoliage&topic=qa&relatedReport=projects%2Fpixelfoliage%2Freports%2F2026-11-03-result-20261103181943837-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelfoliage">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelfoliage">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

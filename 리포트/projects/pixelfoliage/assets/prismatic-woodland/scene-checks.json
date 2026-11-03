@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-03T18:16:49.668Z",
+  "passed": true,
+  "scope": "Static serialized scene/mesh checks; no native rendering or reference similarity validation",
+  "checks": [
+    {
+      "name": "all pre-existing sample assets/metadata and project/pipeline/package settings unchanged",
+      "pass": true,
+      "files": 62
+    },
+    {
+      "name": "before/after example is byte-identical except optional PixelCamera component and preset",
+      "pass": true
+    },
+    {
+      "name": "frontal orthographic framing, continuous wind and strip placements",
+      "pass": true
+    },
+    {
+      "name": "26 new editable meshes have finite geometry/UVs, valid bounds and 16-bit index capacity",
+      "pass": true,
+      "models": 26,
+      "meshTriangles": 28767
+    },
+    {
+      "name": "9 localized guides identify standalone and optional Camera scenes with native limitations",
+      "pass": true
+    }
+  ],
+  "sceneSha256": "bab5df2bbf3b357315c65db42c70fab10c77c6b76d96352a96a616ca0f289b9e",
+  "pairedSha256": "f771cd7aaf45142e234f07760e1466001bd3bc9cd30fef8558ca0c5a0800bd1b"
+}
