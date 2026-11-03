@@ -64,6 +64,112 @@
     }
   },
   {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103033505440-v1.0.0.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-20261103033505440-v1.0.0.md",
+    "date": "2026-11-03T03:35:05.440Z",
+    "version": "v1.0.0",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-status-review-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "Entity Forge 현재 범위와 개발 목록 검토",
+      "summary": "구현과 검증 이력을 분리하고 원래 목표 대비 후속 개발 항목을 정리합니다.",
+      "reporter": "Codex",
+      "assignee": "Codex",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "제품 후속 개발과 실제 검증 항목은 위 우선순위 목록에 있습니다. 실제 화면을 변경하거나 실행한 작업이 없는 소스/기록 검토이므로 새 실행 화면은 캡처하지 않았습니다. 교훈 검토: 구버전 명시형 측정과 최신 자동/프리팹 경로를 구분해 근거를 적용합니다. 기존 검증 범위 명시 지침과 중복되므로 전역 변경 없음.",
+      "outcome": "현재 버전은 0.2.0-preview입니다. 자동 탐지/빌드 연결/렌더링 프록시와 명시적 ECS 이동·회전·스폰·수명, 분석·프리팹 사본·로그·샘플 UI가 구현되어 있습니다. 컴포넌트 없는 일반 스크립트 로직의 ECS 자동 변환과 근거 없는 신규 프로젝트 성능 예측은 미구현입니다.",
+      "proposedTime": "소스·목록 3~5분, 공개 기록 포함 5~10분 · 시작 2026-11-03 12:27:45 KST",
+      "actualTime": "소스와 과거 원시 측정/현재 패키지 대조 4분 16초 · 2026-11-03 12:32:01 KST. 목록 문서화·공개 기록은 이후 완료.",
+      "xerjEvidence": "Xerj.ps1 Status: XERJ node is not running. rg 및 실제 C#·원시 측정·로그·패키지 해시로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-status-review-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "현재 소스/실제 기록을 기준으로 구현 범위·검증 경계·후속 개발 우선순위를 정리",
+      "completionCriteria": "자동/명시형 경로와 한계를 소스로 대조, 과거/최신 검증 자료를 구분, 후속 개발 목록을 근거와 함께 작성",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "현재 범위와 검증 대조",
+          "action": "핵심 소스·로그·원시 측정·패키지를 확인",
+          "expected": "자동/명시형, 과거/현재 검증이 명확히 구분됨",
+          "qa": "실제 소스 해시·원시 평균·패키지 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스와 기록 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "후속 개발 목록 정리",
+          "action": "원래 요구와 현재 경계를 비교해 우선순위 작성",
+          "expected": "구현/검증/확장 항목과 우선순위가 분리됨",
+          "qa": "backlog.json과 소스 근거 및 보고서 내용을 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 기능 8개 영역과 우선순위 8개 정리"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "검토만 수행하며 제품 코드는 변경하지 않고 화면/실행/빌드는 하지 않습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T03:35:04.329Z",
+          "summary": "범위 검토와 후속 목록 대조 완료; 제품 QA 완료는 아님",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "소스/로그와 과거 원시600프레임 평균 및 패키지400개 대조",
+              "evidence": "../assets/status-review-20261103/evidence.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 기능·확장/검증 과제와 근거 적용 범위를 목록에 반영",
+              "evidence": "../assets/status-review-20261103/evidence.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-02-manual-media-repair-20261103-20261102194030690-v1.0.1.html",
     "postPath": "projects/turnroom/posts/2026-11-02-manual-media-repair-20261103-20261102194030690-v1.0.1.md",
     "date": "2026-11-02T19:40:30.690Z",

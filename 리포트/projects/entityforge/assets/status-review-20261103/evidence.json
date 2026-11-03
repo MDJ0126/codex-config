@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-03T03:31:59.164Z",
+  "reviewOnly": true,
+  "newUnityRun": false,
+  "newBuild": false,
+  "sourceHashes": {
+    "Assets/TurnRoom/EntityForge/Editor/ForgeAutomaticConversion.cs": "d3ed57cd3729e115b8bd9ed4e1ac3882d0dcc2d2bec3b3158cff7a5c494df660",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeConversion.cs": "5db92c9565b0dfe214ff7d5162e7a4ff90b94a6ea2db569d4d3b9d2efb2e8f44",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeBuildSettings.cs": "36b6a978afef49bc9b3ef2a77c7523959629f100dc58b7541fe8f6d00b6e6e13",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeUnityBuild.cs": "93591d6260ad5385e94d59a187424de45437cb58f852ded210a3fca55ca36ace",
+    "Assets/TurnRoom/EntityForge/Editor/ForgePrefabBuildCache.cs": "a74b8526eb5b4535e3573551393a85992e9ba0fdbff133d2a65de3b9547d5b7b",
+    "Assets/TurnRoom/EntityForge/Editor/ForgePrefabScope.cs": "218c9ea53d25a8841a31202a388038cbd144bc9fa6169943843d0790800c3ce0",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeActiveSceneBuild.cs": "636a8d02077fb3efb49f3d2700d22c4bd76ef7631176ec1d46a940c2771fd8e9",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkImport.cs": "e527d5aadaa4814bd31caf5ce36f8132d0b2fd5faa273158a7ae6a3f99aa3d3d",
+    "Assets/TurnRoom/EntityForge/Editor/ForgeBuildHistory.cs": "34fda3bc02d3a090b6dfc219c471d5f823b588209cd4b975bda4ca25c42b8f7e",
+    "Assets/TurnRoom/EntityForge/Runtime/ForgePrefabInstance.cs": "9cb07a373782c18bc0f366515d0b136aec4290d71935088b2931f3bfc2d97116",
+    "Assets/TurnRoom/EntityForge/Dots/ForgeDotsBackend.cs": "f9430c5f91055ca7c8b61bcee515a55341fe53d5b8a1218a5052f29836bdadfe"
+  },
+  "historicalBenchmark": {
+    "date": "2026-11-01",
+    "scope": "old marked-object BenchmarkGrid; not the current automatic rendering proxy",
+    "objects": 10000,
+    "samplesEach": 600,
+    "baselineFrameMs": 8.751211504936219,
+    "convertedFrameMs": 2.5571143358945845,
+    "reductionPercent": 70.77988191175342,
+    "meansRecomputed": true
+  },
+  "latestObservedBuild": {
+    "file": "Logs/EntityForge/BuildHistory/2026-11-02/20261102-132912-947-3fd2341d.json",
+    "conversionEnabled": false,
+    "plannedScenes": 1,
+    "processedScenes": 1,
+    "status": "unknown; separate dated scene-list preservation evidence records a successful PC build"
+  },
+  "package": {
+    "assets": 400,
+    "sha256": "c5e6963c016b65b8f0b8d89a9b409fdf33c0021932c3797bb5bb089e68636069",
+    "currentSourcesMatch": true,
+    "fileMatches": true
+  },
+  "limits": [
+    "automatic discovery retains GameObjects/scripts/physics; only rendering proxy",
+    "ForgeObject/ForgeSpawner opt-in behavior is separate from automatic path",
+    "single mesh/submesh/material and positive uniform hierarchy restrictions",
+    "Resources/Addressables/AssetBundle loading needs integration",
+    "measurement logic exists; no estimate without matching provenance",
+    "latest sample/mobile/native UI regressions unverified; Android/iOS test buttons intentionally disabled"
+  ]
+}
