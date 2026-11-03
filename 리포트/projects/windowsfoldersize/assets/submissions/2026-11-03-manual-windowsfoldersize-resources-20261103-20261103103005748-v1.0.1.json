@@ -1,0 +1,113 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+    "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "설치·GUI QA는 사용자제어금지로보류. 공개배포검증진행.",
+    "outcome": "구현과 회귀 검증 진행 중입니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-03 19:16:44 KST 시작.19:28경 구현·검증·MSI·소스푸시.공개보고검증진행.",
+    "xerjEvidence": "XERJ도구없음,rg사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "windowsfoldersize-resources-20261103",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "파일별 차액 갱신을 유지하며 메모리와 CPU 부담 줄이기",
+    "completionCriteria": "디스크 인덱스 차액/이름변경/삭제/재시작 정확성, 메모리·CPU 실측, 빌드·MSI검증·단일dist·공개보고. 사용자화면제어금지로 설치와GUI적용은보류.",
+    "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103102205573-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "디스크 인덱스 및 제한 구현",
+        "action": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+        "expected": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "회귀와 자원 측정",
+        "action": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+        "expected": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "빌드와 공개 보고",
+        "action": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+        "expected": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+        "qa": "실행결과·정확한합계·자원측정·배포대조",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "native빌드·MSI ICE0, dist16 MSI+SHA256고정. 소스푸시완료, 공개보고검증진행."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T10:29:54.354Z",
+        "summary": "자원 및 정확성 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+            "evidence": "agent.cpp/disk_index.hpp/build 결과",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+            "evidence": "resource_test 전체 및 최종quick, broker_resource_test 실제 실행",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
