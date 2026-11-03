@@ -1,0 +1,47 @@
+{
+  "images": [
+    {
+      "name": "before-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 178839,
+      "edited": false
+    },
+    {
+      "name": "after-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 200656,
+      "edited": false
+    },
+    {
+      "name": "animation-list.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 268213,
+      "edited": false
+    },
+    {
+      "name": "three-seats.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 237292,
+      "edited": false
+    },
+    {
+      "name": "seated.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 222223,
+      "edited": false
+    },
+    {
+      "name": "running.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 250170,
+      "edited": false
+    }
+  ],
+  "note": "실제 Unity ScreenCapture 원본 PNG. 텍스트 판독을 위해 원본 해상도 유지. 200KB 목표 초과 이미지는 217~262KiB 수준이며 이미지 편집·재인코딩 미실행. 가짜 화면·이미지 생성 없음."
+}

@@ -1,0 +1,32 @@
+{
+    "at": "2026-11-04T03:42:59.8326067+09:00",
+    "finishedAt": "2026-11-04T03:43:05.9707547+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "reply-before",
+    "failure": "System.InvalidOperationException: 이동 중 직접 AI 응답 유지\r\n  at AfternoonPause.Editor.ControlsPlayQA.Check (System.String name, System.Boolean passed) [0x00050] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\ControlsPlayQA.cs:383 \r\n  at AfternoonPause.Editor.ControlsPlayQA+<Run>d__13.MoveNext () [0x002a6] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\ControlsPlayQA.cs:168 \r\n  at AfternoonPause.Editor.ControlsPlayQA.Tick () [0x000de] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\ControlsPlayQA.cs:69 ",
+    "passed": false,
+    "preferencesRestored": true,
+    "sampledClips": 0,
+    "walkDistance": 0.0,
+    "runDistance": 0.0,
+    "checks": [
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        },
+        {
+            "name": "직접 응답 요청",
+            "passed": true
+        },
+        {
+            "name": "응답 대상 예약",
+            "passed": true
+        },
+        {
+            "name": "이동 중 직접 AI 응답 유지",
+            "passed": false
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}

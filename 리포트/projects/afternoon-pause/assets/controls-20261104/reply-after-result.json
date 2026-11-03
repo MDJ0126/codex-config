@@ -1,0 +1,32 @@
+{
+    "at": "2026-11-04T03:44:22.7641913+09:00",
+    "finishedAt": "2026-11-04T03:44:28.9027371+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "reply-after",
+    "failure": "",
+    "passed": true,
+    "preferencesRestored": true,
+    "sampledClips": 0,
+    "walkDistance": 0.0,
+    "runDistance": 0.0,
+    "checks": [
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        },
+        {
+            "name": "직접 응답 요청",
+            "passed": true
+        },
+        {
+            "name": "응답 대상 예약",
+            "passed": true
+        },
+        {
+            "name": "이동 중 직접 AI 응답 유지",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}

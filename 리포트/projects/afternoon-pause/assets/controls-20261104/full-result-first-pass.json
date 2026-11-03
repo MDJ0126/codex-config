@@ -1,0 +1,1452 @@
+{
+    "at": "2026-11-04T03:35:28.9477438+09:00",
+    "finishedAt": "2026-11-04T03:36:11.2827976+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "full",
+    "failure": "",
+    "passed": true,
+    "preferencesRestored": true,
+    "sampledClips": 147,
+    "walkDistance": 1.3979592323303223,
+    "runDistance": 2.612482786178589,
+    "checks": [
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        },
+        {
+            "name": "씬 스크립트 누락 없음",
+            "passed": true
+        },
+        {
+            "name": "휠 줌인",
+            "passed": true
+        },
+        {
+            "name": "휠 줌아웃",
+            "passed": true
+        },
+        {
+            "name": "최소 줌 거리",
+            "passed": true
+        },
+        {
+            "name": "최대 줌 거리",
+            "passed": true
+        },
+        {
+            "name": "Enter 채팅 포커스",
+            "passed": true
+        },
+        {
+            "name": "채팅 입력 중 이동 차단",
+            "passed": true
+        },
+        {
+            "name": "Enter 전송 1회",
+            "passed": true
+        },
+        {
+            "name": "전송 후 포커스 반환",
+            "passed": true
+        },
+        {
+            "name": "Esc 채팅 포커스 해제",
+            "passed": true
+        },
+        {
+            "name": "Shift 달리기 속도",
+            "passed": true
+        },
+        {
+            "name": "달리기 애니메이션",
+            "passed": true
+        },
+        {
+            "name": "내 캐릭터 원형 1개",
+            "passed": true
+        },
+        {
+            "name": "지면 원형 추적",
+            "passed": true
+        },
+        {
+            "name": "텍스처 없는 원형",
+            "passed": true
+        },
+        {
+            "name": "애니메이션 검색",
+            "passed": true
+        },
+        {
+            "name": "검색 빈 결과",
+            "passed": true
+        },
+        {
+            "name": "전체 클립 목록",
+            "passed": true
+        },
+        {
+            "name": "동작 다음 페이지",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Blow_Kiss",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Blow_Kiss",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Cleaning_Sweeping-Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Cleaning_Sweeping-Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Cleaning_Table",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Cleaning_Table",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Drinking-Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Drinking-Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Holding_Bag-Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Holding_Bag-Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Holding_Box-Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Holding_Box-Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Idle-Sitting_Bench",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Idle-Sitting_Bench",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Idle_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Idle_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Idle_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Idle_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Down-Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Down-Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Down-Sleeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Down-Sleeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Down_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Down_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Laying_Mobile_Texting-Laying_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Laying_Mobile_Texting-Laying_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Make_Ok_Gesture",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Make_Ok_Gesture",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Mobile_Texting-Sitting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Mobile_Texting-Sitting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting-Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting-Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting-Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting-Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting-Mobile",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting-Mobile",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Bench_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Bench_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Drinking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Drinking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Eating_Bowl",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Eating_Bowl",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Eating_Plate",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Eating_Plate",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Floor_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Floor_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Sofa_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Sofa_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Sitting_Using_Computer",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Sitting_Using_Computer",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Dancing",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Dancing",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Mobile_Calling",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Mobile_Calling",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Shouting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Shouting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Singing",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Singing",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Standing_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Standing_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Thumbs_Up_Gesture",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Thumbs_Up_Gesture",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Vomiting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Vomiting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking-Holding_Bag",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking-Holding_Bag",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking-Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking-Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking-Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking-Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking-Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking-Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Drinking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Drinking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Mobile_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Mobile_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Walking_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Walking_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Blow_Kiss",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Blow_Kiss",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Cleaning_Sweeping_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Cleaning_Sweeping_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Cleaning_Table",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Cleaning_Table",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Drinking_Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Drinking_Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Holding_Bag_Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Holding_Bag_Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Holding_Box_Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Holding_Box_Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Idle_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Idle_Cleaning_Sweeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Idle_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Idle_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Idle_Sitting_Bench",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Idle_Sitting_Bench",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Down_Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Down_Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Down_Resting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Down_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Down_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Down_Sleeping1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Down_Sleeping1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Laying_Mobile_Texting_Laying_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Laying_Mobile_Texting_Laying_Sleeping",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Make_Ok_Gesture",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Make_Ok_Gesture",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Mobile_Texting_Sitting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Mobile_Texting_Sitting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Bench_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Bench_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Changing_Channels",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Changing_Channels1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Changing_Channels1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Drinking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Drinking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Eating_Bowl",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Eating_Bowl",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Eating_Plate",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Eating_Plate",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Floor_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Floor_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Mobile",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Mobile",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Sofa_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Sofa_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Sitting_Using_Computer",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Sitting_Using_Computer",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Dancing",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Dancing",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Mobile_Calling",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Mobile_Calling",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Shouting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Shouting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Singing",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Singing",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Standing_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Standing_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Thumbs_Up_Gesture",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Thumbs_Up_Gesture",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Vomiting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Vomiting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Drinking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Drinking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Holding_Bag",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Holding_Bag",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Holding_Box",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Holding_Box1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Holding_Box1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Holding_Drink",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Holding_Drink1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Holding_Drink1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Mobile_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Mobile_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Mobile_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Animation_Set_Walking_Talking",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Animation_Set_Walking_Talking",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 공통 · Common_Walk",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 공통 · Common_Walk",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Kick_LeftFoot",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Kick_LeftFoot",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Punch_LeftHand",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Punch_LeftHand",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Punch_RightHand",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Punch_RightHand",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Boxer_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Boxer_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Boxer_Punch_1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Boxer_Punch_1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Death",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Death",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Death_Slashed",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Death_Slashed",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Death_Stabbed ",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Death_Stabbed ",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Idle_Crouching",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Idle_Crouching",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Idle_Generic",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Idle_Generic",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Idle_HardDay",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Idle_HardDay",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Idle_Texting",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Idle_Texting",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Idle_Waving",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Idle_Waving",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Run_InPlace",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Run_InPlace",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Running-Jump",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Running-Jump",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Standing-Jump",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Standing-Jump",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Walk_Crouching",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Walk_Crouching",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Walk_InPlace_Female",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Walk_InPlace_Female",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Walk_Left",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Walk_Left",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Walk_Male",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Walk_Male",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Ninja_Run",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Ninja_Run",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate Slash",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate Slash",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate Slash",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate Slash",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_DrawSword",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_DrawSword",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_DrawSword",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_DrawSword",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Run",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Run",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Stab",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Stab",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Stab",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Stab",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Pirate_Walk",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Pirate_Walk",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Wizard_Attack",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Wizard_Attack",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Wizard_Attack_2",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Wizard_Attack_2",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Wizard_Idle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Wizard_Idle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie_Attack",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie_Attack",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie_Idle_1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie_Idle_1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie_Idle_1",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie_Idle_1",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie_Idle_2",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie_Idle_2",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie_Run",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie_Run",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 제자리 · Zombie Walk",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 제자리 · Zombie Walk",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 도시 · T-Pose",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 도시 · T-Pose",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 도시 · idle_standing",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 도시 · idle_standing",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 도시 · run-cycle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 도시 · run-cycle",
+            "passed": true
+        },
+        {
+            "name": "클립 연결 도시 · walk_cycle",
+            "passed": true
+        },
+        {
+            "name": "실제 클립 샘플 도시 · walk_cycle",
+            "passed": true
+        },
+        {
+            "name": "반복 동작 실행",
+            "passed": true
+        },
+        {
+            "name": "동작 중단 후 Idle",
+            "passed": true
+        },
+        {
+            "name": "착석 회귀",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 0",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 0",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 1",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 1",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 2",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 2",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 3",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 3",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 4",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 4",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 5",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 5",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 6",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 6",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 7",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 7",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 8",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 8",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 9",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 9",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 10",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 10",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 11",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 11",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 12",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 12",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 13",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 13",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 14",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 14",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 15",
+            "passed": true
+        },
+        {
+            "name": "외형 교체 중 점유 보존 15",
+            "passed": true
+        },
+        {
+            "name": "자리 비움",
+            "passed": true
+        },
+        {
+            "name": "상태 복귀",
+            "passed": true
+        },
+        {
+            "name": "프로필 저장",
+            "passed": true
+        },
+        {
+            "name": "프로필 UI",
+            "passed": true
+        },
+        {
+            "name": "대표 이미지 실제 디코딩",
+            "passed": true
+        },
+        {
+            "name": "차단 저장",
+            "passed": true
+        },
+        {
+            "name": "차단 AI 메시지 거부",
+            "passed": true
+        },
+        {
+            "name": "차단 해제",
+            "passed": true
+        },
+        {
+            "name": "로컬 신고 저장",
+            "passed": true
+        },
+        {
+            "name": "최종 게임 오류 없음",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}
