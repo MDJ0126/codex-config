@@ -1,0 +1,1 @@
+The first static checker expected manager.DestroyEntity(releaseBuffer.AsArray()) but the production source correctly calls world.EntityManager.DestroyEntity(...). The assertion failed; the checker was corrected and rerun. No product source was changed for this assertion correction.
