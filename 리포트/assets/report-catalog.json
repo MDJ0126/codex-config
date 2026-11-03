@@ -3,6 +3,56 @@
     "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
     "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
     "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103202530932-v1.0.14.html",
+    "date": "2026-11-03T20:25:30.932Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Camera 예제3개 이전 디자인 복원·폐기된16개 제거",
+    "summary": "고객용3개로 정리된 Camera에 개발 Legacy16개를 다시 수정 대상으로 포함한 잘못을 바로잡았습니다. Camera만 이전 디자인으로 복원하고 식생은 유지했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103202530506-v1.0.0.html",
+    "date": "2026-11-03T20:25:30.506Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "외부 에셋·패키지·API·SDK 원본 수정 금지",
+    "summary": "외부 원본을 직접 수정하지 않고 상속·컴포지션·래퍼 등으로 확장하도록 전역 지침에 명시했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103202012703-v1.0.0.html",
+    "date": "2026-11-03T20:20:12.703Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "외부 리소스 원본 보존 지침 반영 메뉴얼",
+    "summary": "외부 원본 수정 금지와 프로젝트 별도 확장 원칙을 적용합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103202012327-v1.0.0.html",
+    "date": "2026-11-03T20:20:12.327Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "1920×1080 미니멀 UI와 상대 선택·따라가기",
+    "summary": "광장 시야를 확보하는 UI와 상대 선택·경로 따라가기를 적용하고 실제 Unity에서 검사합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-minimal-ui-follow-20261104-20261103201524448-v1.0.2.html",
+    "date": "2026-11-03T20:15:24.448Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
     "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103201148498-v1.0.13.html",
     "date": "2026-11-03T20:11:48.498Z",
     "kind": "manual",
