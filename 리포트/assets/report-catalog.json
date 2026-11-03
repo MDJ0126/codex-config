@@ -3,6 +3,26 @@
     "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
     "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
     "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.html",
+    "date": "2026-11-03T04:58:57.114Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 실제 자동 변환 검증과 빌드 기록 오류 수정",
+    "summary": "일반 GameObject 1만 개의 Windows 자동 변환과 최신 패키지 설치를 확인했습니다. 이번 부하에서는 프레임 시간 개선이 없었습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103045838631-v1.0.0.html",
+    "date": "2026-11-03T04:58:38.631Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
     "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103041415347-v1.0.0.html",
     "date": "2026-11-03T04:14:15.347Z",
     "kind": "manual",
