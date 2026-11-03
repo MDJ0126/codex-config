@@ -1,0 +1,57 @@
+{
+  "product": "Pixora",
+  "version": "1.0.0",
+  "price": "$4.99",
+  "bytes": 20470743,
+  "sha256": "35ebbb385de19f9209eea0ce9ce6a634b3d34e8bd6e6deda5b9a21b9ec7f4f22",
+  "sourceMismatches": [],
+  "frozenUnchanged": true,
+  "uploadedHashMatches": true,
+  "nativeFreshImport": {
+    "passed": true,
+    "allFourProductsInstalled": true,
+    "assertions": 12,
+    "unity": "6000.0.83f1"
+  },
+  "officialValidator": {
+    "sdk": "11.3.1",
+    "pass": 27,
+    "warnings": 2,
+    "fail": 0,
+    "warningNames": [
+      "Check Compressed Files",
+      "Remove JPG Files"
+    ]
+  },
+  "coreCompile": {
+    "assemblies": 13,
+    "excludedProductSamplesOrDevelopmentReferences": 0,
+    "passed": true,
+    "nativeSampleRemoval": false
+  },
+  "audioAudition": {
+    "source": "explicit user confirmation during current task",
+    "allFourNoIssues": true,
+    "assistantListened": false
+  },
+  "portal": {
+    "uploadLine": "Nov 03, 2026 07:27 UTC, 718 files, 19.5 MB",
+    "media": {
+      "images": 16,
+      "videos": 1,
+      "keys": 3
+    },
+    "releaseVersionReadback": "1.0.0",
+    "submitted": false
+  },
+  "uploadReceipt": {
+    "id": "final-upload-Pixora-1793690817877",
+    "atUtc": "2026-11-03T07:26:57.8985272Z",
+    "finishedUtc": "2026-11-03T07:28:01.9756809Z",
+    "stage": "complete",
+    "uploadStatus": "Success",
+    "packageSha256": "35ebbb385de19f9209eea0ce9ce6a634b3d34e8bd6e6deda5b9a21b9ec7f4f22",
+    "passed": true
+  },
+  "guiApproval": "pending: automatic review rejected new interactive Unity launch without renewed explicit permission"
+}
