@@ -1,0 +1,856 @@
+{
+  "at": "2026-11-03T16:52:47.430Z",
+  "executedUnity": false,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2657,
+      "sha256": "48fcb936012fbc07e97dd6ac1e97545d88810da33c448bdf6800d7a32e1d67b9"
+    },
+    {
+      "path": "Assets/Editor/AfternoonPause.Editor.asmdef",
+      "bytes": 200,
+      "sha256": "b32db17d4c81ec7ed7a9d05791455d65ed89d22ccb071a32e16f98bd83411874"
+    },
+    {
+      "path": "Assets/Editor/PlazaBuilder.cs",
+      "bytes": 2222,
+      "sha256": "9ccdc8d36553556474267748062ab44be2fa04230b13ec67e0cf19d3b5c806ad"
+    },
+    {
+      "path": "Assets/Fonts/PlazaKorean.ttf",
+      "bytes": 1956516,
+      "sha256": "5d1f9713a6941079868094e27268d0898dcca95f44ab5f92574540daeb3911cc"
+    },
+    {
+      "path": "Assets/Plugins/WebGL/PauseBridge.jslib",
+      "bytes": 2391,
+      "sha256": "8eb507c33ae4628362ca0e3c09d0efbf33c7849d9a5d2754e0ab951db1c83b29"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models.meta",
+      "bytes": 172,
+      "sha256": "dd4f76b7def0e6c5ead9567631b853d63e3bf2e17c65c9c26ad75f0cb50ccc0a"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_business.prefab",
+      "bytes": 88950,
+      "sha256": "70c73799875f5298d86210ca27d27a86a906c207303b78bd7f0ea86b91a37ef1"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_business.prefab.meta",
+      "bytes": 154,
+      "sha256": "840aefff42344c2c4abf2217e79d1b6490d40662ea8b7561c2cf2b64aa8d1ba9"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_carpenter.prefab",
+      "bytes": 88576,
+      "sha256": "6339da23225fd8a802fd02d898f12f3adfeb6ef6ca318c9cddd823b2d3984948"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_carpenter.prefab.meta",
+      "bytes": 154,
+      "sha256": "bb095d704d5be90e72caab46f08f4cf81c0443f38aa496ce9e79fd97fd443799"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_casual.prefab",
+      "bytes": 88961,
+      "sha256": "96ee6fde7953ab08c8729a5cf2bcb81c054b5e8915bfedcc12f684ccc99afaa8"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_casual.prefab.meta",
+      "bytes": 154,
+      "sha256": "53829c8d3933400293f85fc6990f10c92ab18834685a578ca85ccdb6434b9764"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_chef.prefab",
+      "bytes": 88946,
+      "sha256": "86d05fa6455389d22a932eee99343158a8cb37bc9f5f5b34023e9a916aa2a108"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_chef.prefab.meta",
+      "bytes": 154,
+      "sha256": "3221525d8f8effded1d78ff9d87088193955a5fded39473c0634862dec24ea25"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_coat_winter.prefab",
+      "bytes": 89078,
+      "sha256": "82b67c18c09dae4934b666bb013256d642ddd2e122118d9ada5b61bf40ba7132"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_coat_winter.prefab.meta",
+      "bytes": 154,
+      "sha256": "daa2049fd7ab0f356b7dcab72bc53c042b441bff60792031ea8b93b48ef3eedf"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_doctor.prefab",
+      "bytes": 88962,
+      "sha256": "273f91719bf5ff6683e88a05e966ff92f03e4e168faf5ff3ad64ef8825a84699"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_doctor.prefab.meta",
+      "bytes": 154,
+      "sha256": "a3f98bc62ffe42ff61c0319d4bf206c2cc047acf9fd8c706893b3a6249527121"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_reporter.prefab",
+      "bytes": 88580,
+      "sha256": "98cd3117501b40d79c5b0c87ed4c9d3df9aafce660172b14a69ab6580d085ad3"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_reporter.prefab.meta",
+      "bytes": 154,
+      "sha256": "354ea1be83bea201d52a52e90b8bc7bd9226c53122831d61e1cb28e0a9881a0d"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_scientist.prefab",
+      "bytes": 90769,
+      "sha256": "f27c231917e6d507652fee01786f6d3cd015e3c40f06a93d30023106151336b9"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/man_scientist.prefab.meta",
+      "bytes": 154,
+      "sha256": "b058293530bba4b01793c468ae975e2a38086d9c7114063f65bc475d8bc78a95"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_business.prefab",
+      "bytes": 88605,
+      "sha256": "3ad7edfd593d577aa8b4511eb6fe9795586f277f598189f11587543918492f34"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_business.prefab.meta",
+      "bytes": 154,
+      "sha256": "d27b27e3bffcbef0738787a0cab3cdda649a2e5a84cf1d40144bb9bdad9fda3b"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_carpenter.prefab",
+      "bytes": 88613,
+      "sha256": "7452872954d584d1e9af4f9c47bd8e3c404d85e5a22081110c6d6ae6fe6e3c6e"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_carpenter.prefab.meta",
+      "bytes": 154,
+      "sha256": "ce55d54bc107687cc8c551c5b4b441326345d22df950173c14e75414354912be"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_casual.prefab",
+      "bytes": 88515,
+      "sha256": "52b8c7c891a462da945a2f81aa17ac7ee04214b94f263015f2dcbdfa67edb558"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_casual.prefab.meta",
+      "bytes": 154,
+      "sha256": "d0e5a2205e66125331c13f52b655e6bf687e8ea1406a3736c76313746269c9a2"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_chef.prefab",
+      "bytes": 88566,
+      "sha256": "83d1fdfdf4edb839805cb44647b9152b36b73409b4f6e5c32a4515583294bb35"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_chef.prefab.meta",
+      "bytes": 154,
+      "sha256": "c026cc637b823b08e4ede571296c98c48725566756a031c2a9e7e8c0a0bb1dff"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_coat_winter.prefab",
+      "bytes": 89015,
+      "sha256": "4a99e78f9b49003b3cd83ca5c8e44949b1877192528ece3f6b8180dd65535d3d"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_coat_winter.prefab.meta",
+      "bytes": 154,
+      "sha256": "1585a375d850cc29116dc32d2062da66b4bfb570104cf223c36d6689bfacdcd8"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_doctor.prefab",
+      "bytes": 88594,
+      "sha256": "74c21d2169962b1c0e0151f25d368d4c26a3dddd60b0963b457fe80ca9e71258"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_doctor.prefab.meta",
+      "bytes": 154,
+      "sha256": "a3d137f9d461ed0efa401e5a7a59e20851b77e5bd706b2a62561c36608fd7750"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_reporter.prefab",
+      "bytes": 88582,
+      "sha256": "f4cb063bcd7076ba47328e56801d6069bbdd562ff8bbc1b9d1cb373e664b248d"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_reporter.prefab.meta",
+      "bytes": 154,
+      "sha256": "bbb2a0addf956bef6cf2c726b750c8d725875f0560f98e12b17d811031383782"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_scientist.prefab",
+      "bytes": 88612,
+      "sha256": "9c9644ee076b90d02f6b2b943a8779be8748ffa9940c8730a101763a0092f8c1"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/Models/woman_scientist.prefab.meta",
+      "bytes": 154,
+      "sha256": "2215a72f77f73e9a72047e11ba1eec82401468e7b16aba324c96e6759bed5e8a"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcBusiness.prefab",
+      "bytes": 96761,
+      "sha256": "d26dcac030ca9094b1181504f9535507da327e6f5601689d54791f0b2f0fe6ed"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcBusiness.prefab.meta",
+      "bytes": 154,
+      "sha256": "5a90d64597e85476abcc01bd1c972e91a4ad848e871cac03e9fca503c3943fe2"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcCasual.prefab",
+      "bytes": 96788,
+      "sha256": "0958c9d748fd073ea790bfe985852db8f670aa4a6fbef770836e33552c7276e2"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcCasual.prefab.meta",
+      "bytes": 154,
+      "sha256": "be20b885c4cfd166d24d9a463792538b6a6d5ad90f800cebcbb0c5ed54f30b1b"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcOffice.prefab",
+      "bytes": 96424,
+      "sha256": "1e15b5edfc3b6bc13d0197a6449843e9eca3a6949d5225bb57b3c54bca710fda"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/NpcOffice.prefab.meta",
+      "bytes": 154,
+      "sha256": "e8cda8722dda0ca81b53b186c15f3fdd175197e0f24e78ed36fc3eff8bb2d9ca"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PlayerVisitor.prefab",
+      "bytes": 95700,
+      "sha256": "8c1308e7cf159cafd4bf6326bc88ccb5559fee6eae6ff28f598e12c6be248783"
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PlayerVisitor.prefab.meta",
+      "bytes": 154,
+      "sha256": "50734ef8524d35c009884ce9ace62aaba20cb9bcfacc0cf9daa4bf98350f5bda"
+    },
+    {
+      "path": "Assets/Prefabs/UI/VisitorNameplate.prefab",
+      "bytes": 11051,
+      "sha256": "6f0cb55b25ad1c9189ec79f68136979819f73d01c58e34be96ddf6e8cda74283"
+    },
+    {
+      "path": "Assets/Prefabs/UI/VisitorNameplate.prefab.meta",
+      "bytes": 154,
+      "sha256": "2ea9ca5b28f0fc26524e5092e0c50ba5c5cb5810b0998a8329b27eb26e6afd20"
+    },
+    {
+      "path": "Assets/Scenes/AfternoonPlaza.unity",
+      "bytes": 827092,
+      "sha256": "f0fa37618f15fb8bca6e5a4e786bd88a233039a15887b5abf80542ee086b8928"
+    },
+    {
+      "path": "Assets/Scripts/AfternoonPause.Runtime.asmdef",
+      "bytes": 104,
+      "sha256": "478b5f3a5ab2120c81cefbdd21e52cf62062272a5a16a44039875bfa50f6a9c9"
+    },
+    {
+      "path": "Assets/Scripts/AfternoonPause.Runtime.asmdef.meta",
+      "bytes": 166,
+      "sha256": "7a059f255683f473d2049d1598c4a5b6f2db65a8dc85552453a2c1de4e3b3b66"
+    },
+    {
+      "path": "Assets/Scripts/Common.meta",
+      "bytes": 172,
+      "sha256": "00b23f2117a4d9404705a5e9681d1f9db5c4267610e7ad812cab83c4ffc46379"
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "bytes": 3719,
+      "sha256": "9dfaf80f474077556bee90536297fbc31651ebbcb49ffe2ec7500e79004f7ab8"
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs.meta",
+      "bytes": 59,
+      "sha256": "9092c7c34be70cc9b0d4daee948f50575f6fbec5614c121bf823891770e5a863"
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "bytes": 442,
+      "sha256": "ffa6423ac1433e22bcea26d3297daeb85c2df250ba0027a8648eb187625efaa0"
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs.meta",
+      "bytes": 59,
+      "sha256": "bbba226bf98387cbda353079e7bb3e583c8cbc3d25c7a3c671b991602392f1d8"
+    },
+    {
+      "path": "Assets/Scripts/InGame.meta",
+      "bytes": 172,
+      "sha256": "002c00620281de1679fb87c41ae1342f2935d67498589202c3e7e39e6e85b322"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object.meta",
+      "bytes": 172,
+      "sha256": "3c905d7fa5808b823901258ea4674e2af6e4e0d4a58eb5049f84f7e6c86a2749"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI.meta",
+      "bytes": 172,
+      "sha256": "9a9340cf8d2617cc147787d3d08c631473bcb2282a792da7a31d6930613d1572"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+      "bytes": 8281,
+      "sha256": "49314a500698142a3bc7ac9076bd4330f6d27d697fda7ccba72ba7285fc671f1"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs.meta",
+      "bytes": 59,
+      "sha256": "bb83ddd4dd2c591745c30ad7bb258a722b25093ebb128dd0a7be3878cde01f16"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+      "bytes": 5315,
+      "sha256": "c185968efa816a88f5aa1cb07559a57434c0f77686bf4092fb47e7d4dbfeb5ff"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs.meta",
+      "bytes": 59,
+      "sha256": "5990fc8cf17ee6d80623056c44a450c859d42e7a5f7fb42aab1bc8e534a00f8e"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "bytes": 746,
+      "sha256": "8c27c708d2204b556a5a11b5818e05d35bb50125f6977e8049cf493e629ca1f9"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs.meta",
+      "bytes": 59,
+      "sha256": "4d09a5b6baa5639dc2da24fbfa605520b1966b3328492911995fdc8677b4380d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn.meta",
+      "bytes": 172,
+      "sha256": "bd15edd615719dfd87c138b4c8666a84d34ad35223adac764c0fca0d7db52e09"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character.meta",
+      "bytes": 172,
+      "sha256": "21a6590801c814a6374c4a11f0fd5072a62ef264d94a0dbdc36bc0f6c26018d5"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "bytes": 1451,
+      "sha256": "1a611790ce055ce444d64d8e915112fe035c4db421c8a7a4dda5c896500c9443"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs.meta",
+      "bytes": 59,
+      "sha256": "10b9ef0ee660923157e522f77ab2e86017cfe97728922bcc97420fc77716ad78"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "bytes": 3347,
+      "sha256": "f94867e514e6497b0036355f0a02511febdeb84dcb69233346c22311bfe05f26"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs.meta",
+      "bytes": 59,
+      "sha256": "81d8d284c69a31ae4c11142fbb955d2cb0c8b276a86d9593f03d1077209e00e3"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+      "bytes": 1650,
+      "sha256": "e0d5263288431dfe937c51e3b882e4e9bd6a0ee527b141ffa46da6860ac2af7a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs.meta",
+      "bytes": 59,
+      "sha256": "ef382a388fda15aedf327bed6ed3a8983b7170bf6c1c78b13d2f58f3d323556f"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+      "bytes": 573,
+      "sha256": "e10ef986efce561cb8dbb6273bcf5daf810050a14c1ba668cfd184657d168156"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs.meta",
+      "bytes": 59,
+      "sha256": "48f52f42f8b66171050f02a3be65e69a6532e1b2849fb70ba3d21e3fb2c8d6a4"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+      "bytes": 4315,
+      "sha256": "b642909574592526a4cae9d5b25a03920ebdf65b87da16f01f784f44e33efb60"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs.meta",
+      "bytes": 59,
+      "sha256": "6ab5cc30f4ff27c8de6fc6c1346ae1ae7f2f343225295b3486500e080a3e610a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+      "bytes": 1034,
+      "sha256": "cdd4d6a9eecf566a5ce434b869573279c83a79fbf41b2d39bf30f4bf70c6da58"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs.meta",
+      "bytes": 59,
+      "sha256": "e285393a46a9c751e457f006b434281481e7588fed1e69b848e12850862e6e5d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+      "bytes": 3541,
+      "sha256": "c5b6c50f1815a3c530bb26e7c331bdbb22a770bf9e89293cf3f9a8d8691cb3e0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs.meta",
+      "bytes": 59,
+      "sha256": "bdc0c38409a4bb1be39fe6503cf7bda85b560e3e871faa0adaa4b92e59d05ab1"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "bytes": 3249,
+      "sha256": "37972e37d0b6e29d5cc4fa320f16e85e8b651cd2262389a150388a30f499ae8a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs.meta",
+      "bytes": 59,
+      "sha256": "c8a28183dd1f1701fb06f4bfd39fa58f54d60c779fc5c5aa223e8b057b60a598"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "bytes": 1344,
+      "sha256": "68d25a9eb19691fd0b989cb0893f15b5c1756b92cfd9b6df625342c1d943ecef"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs.meta",
+      "bytes": 59,
+      "sha256": "c1596df83a8abf988a0ea3909925cff7529d095a623ff5309dc7eb86ea6ce3c5"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "bytes": 2396,
+      "sha256": "6f8767df194f2c804c7ee5d632af9599e40ed7ae80bd63e730676dcd42394b25"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs.meta",
+      "bytes": 59,
+      "sha256": "f250ade3a8953be3140dafec67aeae1aa464e24e7a5e2c158aea9a196c38785b"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "bytes": 5720,
+      "sha256": "1ecba937df3480d2502f5fe60ecad6449429196ea854d24c2d1e5c785363d383"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs.meta",
+      "bytes": 59,
+      "sha256": "7857c032af7e30d98ce1a72e01f94e8a050f876874db89553ec59c32d32739b1"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+      "bytes": 863,
+      "sha256": "b81b63a4693522b15b4a78786c02a5275cef4fff2762b1edbcc683cb83e18612"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs.meta",
+      "bytes": 59,
+      "sha256": "dd8cc693195f486124c6bcd11ee5ba770256095fac5dcf6007e9ea5d26f86926"
+    },
+    {
+      "path": "Assets/Scripts/InGame/World.meta",
+      "bytes": 172,
+      "sha256": "77a0f2ea61d4fe7306a259138a65621c9f54d0a09b51c8463b4dc83894e05905"
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+      "bytes": 2554,
+      "sha256": "81782ed9f829351044c67bdf2115288ca92755ae750e9ab70ae00053aac3e8fe"
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs.meta",
+      "bytes": 59,
+      "sha256": "31c0331a3f51d86af96e730e38d2a654d8896fac8715828c434e345fc8f0c08c"
+    },
+    {
+      "path": "Assets/Scripts/Management.meta",
+      "bytes": 172,
+      "sha256": "151ed014f98f104d0ef6826afad3e084e77b1a99a38d44c92dc94cf0e2a45a65"
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs",
+      "bytes": 2198,
+      "sha256": "a93a86a9e50ceb1a98b7eafb5cd601025793e2ec860af9756eaac3534b5778b5"
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs.meta",
+      "bytes": 59,
+      "sha256": "0ad8f1f23ddc912b8ea29818947cc3380061a334aad1584a65221bb5c8fb9070"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaChat.cs",
+      "bytes": 5708,
+      "sha256": "1d30d386810ddbcce0cef4512931a7e258eb4f806230a195623b734a58a8ae06"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaChat.cs.meta",
+      "bytes": 59,
+      "sha256": "10a28267afe7932986dc88bafdfe7db4b17c135aa7ff251aba7665631c91150c"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+      "bytes": 7672,
+      "sha256": "bd498761f29194266a049572d595b596321cc0370e9df72e7fcf6ad459c1434c"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs.meta",
+      "bytes": 59,
+      "sha256": "1413401c9fac825f577146522d45322e119b978c6ef5d6f0283858d4ee9c1bbd"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs",
+      "bytes": 1727,
+      "sha256": "501770bf97d2d9795129f5c4e188022e2470b1dd626dbc99aafe286a14512463"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs.meta",
+      "bytes": 59,
+      "sha256": "bcfce6279d2d7962f3b43e1e5bc2a0478efd8ccbec136fb0240f40fd6ba4b784"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+      "bytes": 9981,
+      "sha256": "72f538d7afc780bd63a0376173cee86b321d3c32d34b0b71e85c7998d20fcac6"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSocialWorld.cs.meta",
+      "bytes": 59,
+      "sha256": "0fa646d00c29be72d4710d17004e41edc29004ad9b058107ec838617488da781"
+    },
+    {
+      "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+      "bytes": 3169,
+      "sha256": "9963d73ab2baeef479b1073cdbd91203303a8c893a6aca755701cbab5f2dbbeb"
+    },
+    {
+      "path": "Assets/Scripts/Management/ProfileImageRules.cs.meta",
+      "bytes": 243,
+      "sha256": "ae67c949c629ee113baca13b62bf57654d56aaef38f52d7d7e5573a055b49c4e"
+    },
+    {
+      "path": "Assets/Scripts/Management/SocialRules.cs",
+      "bytes": 3994,
+      "sha256": "d6d26a219de12702ecc0489391ece662930e3e66352eb6d0abcff0ba1d4afb7f"
+    },
+    {
+      "path": "Assets/Scripts/Management/SocialRules.cs.meta",
+      "bytes": 59,
+      "sha256": "ccec7d2e1170b713702f6db6cde4985d3bc2df660e5671dd74aac89842f977c6"
+    },
+    {
+      "path": "Assets/Scripts/Management/VisitorProfile.cs",
+      "bytes": 690,
+      "sha256": "00047bb001dc94485250f96802580ecbc8652de9d7763c672fc220dfb2612c8d"
+    },
+    {
+      "path": "Assets/Scripts/Management/VisitorProfile.cs.meta",
+      "bytes": 59,
+      "sha256": "fc09535fa210f1824962a9d19fec071a4dd3ca4c2ce6947ed44c0cb266a007b6"
+    },
+    {
+      "path": "Assets/Scripts/UI.meta",
+      "bytes": 172,
+      "sha256": "9a6d655c12a6104e90b3764e577cec3c80986513cd30d0e8efe26e463d51f4f8"
+    },
+    {
+      "path": "Assets/Scripts/UI/CharacterStage.cs",
+      "bytes": 1626,
+      "sha256": "bfabd0c1cdcc4da7c916c8751d5491d019fa45c7de6392c26ceb6844a5fa3a22"
+    },
+    {
+      "path": "Assets/Scripts/UI/CharacterStage.cs.meta",
+      "bytes": 59,
+      "sha256": "b30742e4d25b85ad5dfe480b8ffbf7f792a3c84df154b25824309ce57f7c162f"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs",
+      "bytes": 1710,
+      "sha256": "22bd85f387a5a653cd1495268e712ad1277f67e841740b1e1906d955740710f2"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs.meta",
+      "bytes": 59,
+      "sha256": "b1ce862940a650d36504ea143ddf23ebe364ce8f0d466d40fce7ac6bf0ef584a"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+      "bytes": 2356,
+      "sha256": "15d1d91d2da543cf563d4a8a0573282d9ab3d6a0d0d79174f43e87aadc9a9ec6"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaNameplate.cs.meta",
+      "bytes": 59,
+      "sha256": "72fc4101116d7f5a8d456e7f7fe7f0322ba605579eb30cca8597a5aa1c1955f4"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+      "bytes": 4685,
+      "sha256": "5769bd167386243fd9f512b0fdc55f2326fe31eb32edc28dd58e4146f0a68e32"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaProfileImage.cs.meta",
+      "bytes": 243,
+      "sha256": "ffeef1f10271db12a3d952b0d8ce606b213750e6cd166dc25a83f82adf204f93"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+      "bytes": 17829,
+      "sha256": "2d3357a30f3025ea1622b631da459e8e549472f1ae54c67bffc8387e2dc58616"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaSocialHUD.cs.meta",
+      "bytes": 243,
+      "sha256": "1e63fbc9cc01cb42edf0e0ae32e8a05dc344898036118568790fb7286f14705e"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog.meta",
+      "bytes": 172,
+      "sha256": "13d5623c3419b7b1dbc6253938255ef24f7ea45990950608c7f82da2c93b3c63"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_business.asset",
+      "bytes": 666,
+      "sha256": "d443d92a770ccb8e4de756255f6d4f6b13e90dafe0997c15c4003452edcf385a"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_business.asset.meta",
+      "bytes": 189,
+      "sha256": "630a890718a8d132a501abc2e8bdb31807a9406bc97e2d0c35b78e461fea2039"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_carpenter.asset",
+      "bytes": 667,
+      "sha256": "159d3ef8189db8ceacf67fe473b2635b850608b629edb475a49efbcba4ca9448"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_carpenter.asset.meta",
+      "bytes": 189,
+      "sha256": "2165363d20533b83428f63509cdffe5c307405d25adb964dd54fa831a5de2750"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_casual.asset",
+      "bytes": 667,
+      "sha256": "8c62a24bae45ae0b4381369ca028f9a40996afb9881b443f7d16c35897463f0c"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_casual.asset.meta",
+      "bytes": 189,
+      "sha256": "c56f1aa14ff0b1c5cb527d9eac622de0f9a81ef6a7df98110db7372c10a7d282"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_chef.asset",
+      "bytes": 662,
+      "sha256": "43877d46642fdbfce7a9d147b6fb736a95711229e17fd0fec8fab8e8bd947cc3"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_chef.asset.meta",
+      "bytes": 189,
+      "sha256": "df84fc3074aa3c88ed4a1842dee29afa8b407974ce0b4643ab239e781d0ca2c7"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_coat_winter.asset",
+      "bytes": 668,
+      "sha256": "5b815e734c4ffee32bb0c140f9e666880ce6a91c2a1a6cf18af32043790d065f"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_coat_winter.asset.meta",
+      "bytes": 189,
+      "sha256": "6ddbf250aad530c806d6365c5197ad258c844335b95285f0224dfd3811bbfa80"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_doctor.asset",
+      "bytes": 664,
+      "sha256": "faf1d55d87d0c4b5bc9665bde491ca43d2ae51003dabca059fd967046e7b57e7"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_doctor.asset.meta",
+      "bytes": 189,
+      "sha256": "6c491b82cba31f754c8b92efac9ba43e43ca963b35cce0c01f147465a52a31ed"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_reporter.asset",
+      "bytes": 666,
+      "sha256": "64f9f6696c1b3bb521f88047b272c848ade00af1b7b5dc52daa98a5933fef898"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_reporter.asset.meta",
+      "bytes": 189,
+      "sha256": "3935966378b4e2049d8b4573f569b7b06ea819280b56fe38d8516308c880b1dd"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_scientist.asset",
+      "bytes": 670,
+      "sha256": "dee3e2a2cd5b757f63581e91353ecc13ae8ab7945d4e47fb4b8a2415d50463f7"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/man_scientist.asset.meta",
+      "bytes": 189,
+      "sha256": "85a44fa96cb4adba6cb2c5639290e409989d18fd6555416c52112bf195384fc9"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_business.asset",
+      "bytes": 668,
+      "sha256": "1b91e572a02a9125123b721f3422854118c1213ec388c67d8faf67d4add72aa9"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_business.asset.meta",
+      "bytes": 189,
+      "sha256": "361a330d7b8d9c403c22bfa8a728917c67230a2e69d2e2753f1ce0e3c745e346"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_carpenter.asset",
+      "bytes": 668,
+      "sha256": "45cf7cb7765354e0d9cdaba89dfdd83350dcee734154855963c7181bd83b8397"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_carpenter.asset.meta",
+      "bytes": 189,
+      "sha256": "95709e719e95087c5e825a9306080521ad39c1a6c60fd09fa050fd11a744f435"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_casual.asset",
+      "bytes": 669,
+      "sha256": "0ce7a3e8d6dd994225562c2d500311d58df2488620ac1d2dc6080326134e0229"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_casual.asset.meta",
+      "bytes": 189,
+      "sha256": "523b287870bd48fd969af2bc7a799fc6d40c8e85ff5b7f56a30d2f149e3ed034"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_chef.asset",
+      "bytes": 664,
+      "sha256": "1c8c499e2897e13f6f7749f480e4282c91e06388972e553bd90648aa5511a3c0"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_chef.asset.meta",
+      "bytes": 189,
+      "sha256": "7cfd4a85aeca92528052150aeeda89cdf19d06e8b6aa8e5c8a396dddcc4a6a01"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_coat_winter.asset",
+      "bytes": 671,
+      "sha256": "37f192b9465cb0d639d1a8bfbf1f25f509c12f451efe0f4c9e1c75fdcea9b88e"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_coat_winter.asset.meta",
+      "bytes": 189,
+      "sha256": "550ae84abd7897789075aa25388785c5c5bb080926a821aef027a50cba4ad3d0"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_doctor.asset",
+      "bytes": 665,
+      "sha256": "ff52572eb033c43aab9fef8ecfcc3f6c9d3cc1b2f08fbc6a6137eabd8a4f0744"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_doctor.asset.meta",
+      "bytes": 189,
+      "sha256": "65ad48ae33130b9b96ddee398c7b9e7959a6b6dd77925d06fb4e69b77c430a7b"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_reporter.asset",
+      "bytes": 668,
+      "sha256": "f876ecfd330d6ac5c69c58113b789025a0628c16f8c06244b99da5634b6bbb08"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_reporter.asset.meta",
+      "bytes": 189,
+      "sha256": "3e3116d3ee4d4c82e582ac1f59a441ccdb18a2ebab7aa5f41cc486cfe7ff6a4f"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_scientist.asset",
+      "bytes": 672,
+      "sha256": "db3ae704649a3c0e9f26d2d5a166a4ac02f4eaeb6868016737e6f12bd3971c20"
+    },
+    {
+      "path": "Assets/Settings/Characters/Catalog/woman_scientist.asset.meta",
+      "bytes": 189,
+      "sha256": "e3261fa3a488273d958fdf3a5b4d98fff0c3db72edb77f476550530dffc80ef8"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcBusiness.asset",
+      "bytes": 665,
+      "sha256": "144e1c659cc6c8ede6fc2ce3abfb03f43b2a9a621cb4a5ba25b89f17d433ec0e"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcBusiness.asset.meta",
+      "bytes": 189,
+      "sha256": "3cf369bd2d2a25a0d8fe65b3dfaefdbf205ff34a1e8d78d23ead539784275a77"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcCasual.asset",
+      "bytes": 663,
+      "sha256": "03c4ba7edaba7c2da766b5c2499e5e5141d73c545263c3e00356eb31d9ba341f"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcCasual.asset.meta",
+      "bytes": 189,
+      "sha256": "f9521421672f2760d404e94ae612a245589b6804b13187ea7bc174aecd75e159"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcOffice.asset",
+      "bytes": 663,
+      "sha256": "2627ed814afd776c25a7c306fa3c03aa65337d2daa1c56858a7d0ee3807a0f1b"
+    },
+    {
+      "path": "Assets/Settings/Characters/NpcOffice.asset.meta",
+      "bytes": 189,
+      "sha256": "9f71a3824b74da5342beac08a7088e8c5d17e09a7497d3f5443aaab81f79b755"
+    },
+    {
+      "path": "Assets/Settings/Characters/PlayerVisitor.asset",
+      "bytes": 630,
+      "sha256": "9a5f816acfdefc5e5512f07aaa2d990f53025df0310280ef6b8f30165b0fe45f"
+    },
+    {
+      "path": "Assets/Settings/Characters/PlayerVisitor.asset.meta",
+      "bytes": 189,
+      "sha256": "555c9a860a9444cff38c2ae1e8bb3e156f55d1b35339ab19e3d8452b9860b001"
+    },
+    {
+      "path": "Assets/Settings/Plaza/CharacterStage.renderTexture",
+      "bytes": 856,
+      "sha256": "d831c908075dbb4782eedc708604e71121e98b7b539f32aee82ebf9ef9cb4707"
+    },
+    {
+      "path": "Assets/Settings/Plaza/Visitor.controller",
+      "bytes": 5924,
+      "sha256": "1645aaabb90f3d92a89ae8c57d6a57ac589e377918b36e50d2789c8be5133996"
+    },
+    {
+      "path": "ProjectSettings/TagManager.asset",
+      "bytes": 681,
+      "sha256": "bfc3bd2e93ebe14fc5c36ec379ddc84a5fff3fcae274f9b56bf4a9056e4050a4"
+    },
+    {
+      "path": "Tools/README.md",
+      "bytes": 2278,
+      "sha256": "6bce105ef5d81542db04a79816ec763986a49f92c336175c5328ada622a0eac7"
+    },
+    {
+      "path": "Tools/subset-font.py",
+      "bytes": 1544,
+      "sha256": "fdff928174fb77c56a954a9af34dbcf33dcc2379187a1aed838fa8ea832a3b93"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 7133,
+      "sha256": "0e70d74eeb67e84ab2a66ef81a798177e036f7815cf4011db42c6ef3f78f1403"
+    },
+    {
+      "path": "docs/feature-status.md",
+      "bytes": 5838,
+      "sha256": "a9c01526879df84efbf4546d73f068bdd39c4526bd9376e510405bbb561c5263"
+    }
+  ]
+}
