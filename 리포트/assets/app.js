@@ -1,4 +1,4 @@
-import {createActivityGrass} from './activity-grass.js';
+import {createActivityGrass} from './activity-grass.js?v=tooltip-1';
 import {trackerCounts} from './tracker-counts.mjs';
 import {chooseStage} from './stage-state.mjs';
 import {matchesRecord} from './filter-core.mjs?v=project-tree-1';
@@ -16,3 +16,4 @@ document.querySelector('#search').addEventListener('input',update);
 document.querySelector('#reset-filters').addEventListener('click',()=>{Object.assign(filters,{type:'전체',project:'전체',group:'all',stage:'all',query:'',date:''});document.querySelector('#search').value='';for(const list of [buttons,projectButtons,groupButtons])select(list,list[0]);select(stageButtons,stageButtons.find(x=>x.dataset.stageFilter==='all'));update();});
 function restoreFilters(){const params=new URLSearchParams(location.search);Object.assign(filters,{type:'전체',project:'전체',group:'all',stage:'all',query:'',date:''});for(const [key,list,attr]of [['type',buttons,'filter'],['project',projectButtons,'projectFilter'],['group',groupButtons,'groupFilter'],['stage',stageButtons,'stageFilter']])if(list.some(b=>b.dataset[attr]===params.get(key)))filters[key]=params.get(key);if(/^\d{4}-\d{2}-\d{2}$/.test(params.get('date')||''))filters.date=params.get('date');if(filters.stage!=='all'){filters.group='bug';filters.type='버그';}document.querySelector('#search').value=params.get('q')||'';for(const [list,key,attr]of [[buttons,'type','filter'],[projectButtons,'project','projectFilter'],[groupButtons,'group','groupFilter'],[stageButtons,'stage','stageFilter']])select(list,list.find(b=>b.dataset[attr]===filters[key]));update();}
 window.addEventListener('popstate',restoreFilters);restoreFilters();
+

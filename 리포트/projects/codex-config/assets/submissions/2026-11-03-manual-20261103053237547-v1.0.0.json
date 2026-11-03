@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "잔디 제목 툴팁·균일 간격 수정",
+    "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "기존 소스에서 space-between으로 가로 간격이 늘어난 원인을 확인하고 수정합니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "시작 2026-11-03 14:31:37 KST · 진행 중",
+    "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "activity-tooltip-spacing",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+    "completionCriteria": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "툴팁·간격 구현 및 검증",
+        "action": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+        "expected": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+        "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
