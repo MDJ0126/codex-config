@@ -1,5 +1,35 @@
 [
   {
+    "title": "Entity Forge 현재 범위와 개발 목록 검토",
+    "summary": "구현과 검증 이력을 분리하고 원래 목표 대비 후속 개발 항목을 정리합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103033505440-v1.0.0.html",
+    "date": "2026-11-03T03:35:05.440Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 구현 범위와 후속 개발 목록",
+    "summary": "자동 렌더링 최적화와 명시적 ECS 동작을 구분하고 최신 검증 공백과 후속 개발 순서를 정리했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103033504876-v1.0.0.html",
+    "date": "2026-11-03T03:35:04.876Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "ProPixelizer 2.0.3 대비 Pixel Camera 구현·검증 현황",
+    "summary": "기본 기능군은 구현됐지만 Pixel Expansion·전용Graph SubTarget·투명 합성과 고급 셰이더/실행검증 격차가 남아 있습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103032836164-v1.0.0.html",
+    "date": "2026-11-03T03:28:36.164Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "4제품 판매 미디어 전수 수정·최종 재생 검증",
     "summary": "DDT 패턴을 기준으로 누락·구형 영상과 썸네일·아이콘을 수정하고 실제 포털 재생까지 검증합니다.",
     "project": "turnroom",
