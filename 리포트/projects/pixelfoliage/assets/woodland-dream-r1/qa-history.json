@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "name": "native-v1",
+      "result": "fail",
+      "observation": "Camera output was uniform white after the new bloom effect was introduced.",
+      "verifiedChange": "Added _MainTex and _BloomTex texture properties to the bloom shader."
+    },
+    {
+      "name": "native-v2",
+      "result": "pass",
+      "observation": "Same scene rendered normally with bright canopies and real river reflection after texture declarations were added."
+    },
+    {
+      "name": "native-v3",
+      "result": "pass",
+      "observation": "Reduced fern density/tint and reflection distortion; final raw and Pixel Camera captures each contain24 distinct frames."
+    }
+  ],
+  "scope": "Actual Unity image review, preserved local failed/review captures; not a performance benchmark"
+}

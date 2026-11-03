@@ -1,5 +1,546 @@
 [
   {
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103193417693-v1.0.12.html",
+    "postPath": "projects/pixelfoliage/posts/2026-11-03-manual-foliage-polish-20261103-20261103193417693-v1.0.12.md",
+    "date": "2026-11-03T19:34:17.693Z",
+    "version": "v1.0.12",
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "manualId": "foliage-polish-20261103",
+    "round": 13,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixelfoliage",
+      "kind": "manual",
+      "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+      "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Affinity .af 저장·재열기·PNG/SVG, Unity 씬/UI/설치·공식 Validator·GIF, 커버/갤러리와 통합 업로드 검증은 남음. 참고 숲 예제 구현 및 실제 외형 비교. T13 구현은 끝났으며 실제 씬 렌더·참고 외형/GIF 검증은 남음. 이번두 숲의촬영은완료. 참고외형보완과나머지기존QA는유지. 강물·반사·밝은 조명 보완과 실제 촬영은완료. 원본 질감/수형의 최종판정과 전체제품출시QA는유지.",
+      "outcome": "사용자 정정에 따라 앞쪽 절벽이 강조되던 구성을 강물·반사로 바꾸고, 몽환적인 밝은 수관과 청록 하늘·빛 번짐을 구현했습니다. 기존의 어두운 결과는 필요한 수면·조명 표현을 누락한 상태였으며, 이번 실제 Unity 렌더에서 새 표현을 확인했습니다. 원본과 픽셀 단위로 동일하게 재현했다는 판정은 아닙니다.",
+      "proposedTime": "구현·실제 렌더 보완15~25분",
+      "actualTime": "2026-11-04 04:12:45 KST 계측 시작. 최종 두 씬 촬영04:24:30 KST(11분45초). 이후 문서·패키지/프레임 검증·공개 보고서 배포를 추가 진행.",
+      "xerjEvidence": "XERJ 연결 및 OnRenderImage 검색 확인. 관련 샘플 Runtime·Python·셰이더는 인덱스 밖이어서 현재 소스와 실제 Unity 실행으로 검증했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "foliage-polish-20261103",
+      "round": 13,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "모듈 창을 유지하는 Pixora Studio 통합 → 미구현 기능 → 실제 검증·예제 → 판매 페이지 수정",
+      "completionCriteria": "구현·실제 Unity 검증·비교 GIF·갱신 패키지 해시 대조·공개 보고서 및 원본 기능별 차이·검증 수준 대조표의 공개 보고; 모듈별 창 보존, 통합 패키지, 미구현 기능 및 판매 초안 저장 검증",
+      "previousManual": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103190303047-v1.0.11.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원본과 현재 동작 대조",
+          "action": "원본 FPS·상호작용·렌더 경로와 현재 코드를 대조",
+          "expected": "원본 방식과 Camera/식생 책임 구분",
+          "qa": "소스 라인·설정 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "원본 Demo.tscn640x360·3배표시, QuadMesh/MultiMesh30000표시, CharacterManager10Hz와 Grass 시간 양자화 소스 대조"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "풍성한 식생과 반응·갱신 최적화",
+          "action": "메시·배치·바람·잔류 접촉과 CPU 갱신 간격 개선",
+          "expected": "밀도 개선과 유닛 뒤 잔류 반응·갱신 횟수 근거",
+          "qa": "컴파일·정적 검사·실제 실행",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "형태·바람·잔류 접촉·10Hz 수집 구현 및20,619 단언 통과. 사용자가 화면 조작 중단을 요청하여 현재 소스의 실제 씬 QA 보류"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "식생 공통 UI 템플릿 적용 확인",
+          "action": "창과 Inspector에 공통 템플릿·언어·설정을 적용",
+          "expected": "실제 창·Inspector의 공통 스타일과9언어 전환",
+          "qa": "Unity에서 열기·언어·필드 선택 확인",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "공통 창·Inspector 그룹·최소 크기·줄바꿈·92키9언어 반영. 현재 화면 검증 보류"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "실제 전후 비교 GIF",
+          "action": "같은 시간·카메라로 이전/개선 및 Camera 끔/켬 촬영",
+          "expected": "식생 개선·카메라 적용·접촉과 바람 GIF",
+          "qa": "프레임·캡처 원본·화면 직접 대조",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "화면 중단 전 기준09씬 Camera OFF/ON48프레임씩 확보하고 ScreenToGif 비교 GIF 생성. 개선 후 촬영은 보류"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "패키지·문서·보고서 게시",
+          "action": "개선 소스와 패키지 대조 후 보고서·메뉴얼 게시",
+          "expected": "검증 근거와 공개 비교 GIF",
+          "qa": "빌드·링크·해시·배포·공개 접근 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "검토 패키지3종 현재 소스 해시 대조 및3671b98f 보고서 공개 배포·본문·GIF/PNG3개 해시 확인. 최신 개선 실행 화면은 미검증으로 명시"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "원본 기능과 현재 구현 상세 대조",
+          "action": "원본과 현재 코드·설정·이전 실행 근거를 대조해 구현 차이와 상태를 표로 게시",
+          "expected": "차이가 설명된 기능 대조표·근거 링크·공개 보고",
+          "qa": "원본 커밋과 현재 소스 해시·라인, 주장과 실제 검사 수준, 게시 본문과 첨부 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "표현13항목·렌더/갱신/제품6항목을 원본7486b9b와현재fb79b35f 기준으로 대조. 원본의3색 영역·UV 가짜 원근·높이/광원 투영·조명 차이와 검증 수준을 명시하고 공개 본문·15개 소스 해시 확인"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "모듈 창을 유지한 제품 통합 구현",
+          "action": "기존 overview 명칭·메뉴 라우팅·패키지 레시피 및 기존 exporter 통합",
+          "expected": "독립 창과 기존 식별자를 유지하는 Pixora Studio 패키지",
+          "qa": "6개 어셈블리와 exporter 정적 컴파일, 에셋12검사, 메뉴 대상·GUID·패키지 소스 해시 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "6개 어셈블리·exporter 컴파일과12개 에셋 검사 통과. 3개 메뉴 대상과 validator, 기존 진입 클래스·overview GUID 보존 확인. 통합2644개 에셋의 실제 archive/current source SHA256 대조 통과. 네이티브 클릭은 T03에서 보류."
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "통합 후 원본 대비 미구현 기능 구현",
+          "action": "전체 빌보드·UV 변형·색상 군집·투영 구름·파이프라인 조명 구현",
+          "expected": "확정 기능별 코드와 검증 근거",
+          "qa": "기능별 정적 검사 후 실제 Unity 원본 대조; 성능은 측정",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "전체 빌보드·UV·색 영역·구름 투영·주광 그림자 수신·debug 구현, 정적 컴파일·수학 검사 통과. 네이티브 QA 미실행."
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "검증 결과에 맞춘 판매 페이지 초안 수정",
+          "action": "설명서·Affinity 브랜드 자료와 포털 지원 언어별 판매 필드 수정",
+          "expected": "Pixora Studio 초안 저장 후 재열기 대조; 최종 제출 별도 승인",
+          "qa": "저장값 재확인, 실제 미디어·호환 버전·권리 검증",
+          "dependsOn": [
+            "T04",
+            "T08"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "실제 제품 폴더 통합과 경로 수정",
+          "action": "PixoraStudio 루트로 이동, module 폴더 수용, 모든 meta 보존, 현재 코드/설정 경로 수정",
+          "expected": "루트에 기존 네 폴더가 남지 않고 통합 루트에서 참조와 컴파일 유지",
+          "qa": "이동 전후 전체 metadata 해시, 코드 경로 및 샘플/빌드 설정 참조, 정적 컴파일과 패키지 archive 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Pixora를 PixoraStudio로 변경하고 Camera·Foliage·Suite를 하위로 옮겼습니다. 파일·GUID 보존과 정적 컴파일·패키지 대조를 통과했습니다."
+        },
+        {
+          "id": "T11",
+          "order": 11,
+          "title": "Pixora Studio 전용 로고 제작",
+          "action": "실제 Affinity CLI·SDK 연결로 전용 벡터 원본·출력·브랜드 적용",
+          "expected": "편집 가능한 원본과 실제 크기 품질·재열기 검증",
+          "qa": "실제 Affinity 저장→재열기→export 및 화면·파일 대조",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "실제 Affinity 벡터 작성과 JPEG 렌더·제품 연결·셀러 아이콘/카드 저장. .af 저장·재열기 권한 오류 미해결."
+        },
+        {
+          "id": "T12",
+          "order": 12,
+          "title": "기존 셀러 초안4언어 통합 문구 정리",
+          "action": "기존 Pixora 초안에 통합 이름·세 모듈·검증 한계 반영",
+          "expected": "4언어 실제 저장·재열기 대조, 최종 제출 금지",
+          "qa": "전체 새로고침 후6개 번역 필드 대조 및 실제 전후 캡처",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 Pixora 판매 초안을 Pixora Studio로 바꾸고 4언어 설명·기술정보·변경 이력을 저장·재열기 대조했습니다. 새 로고는 실제 Affinity 연결이 없어 미제작입니다."
+        },
+        {
+          "id": "T13",
+          "order": 13,
+          "title": "참고 이미지 기반 다색 숲·절벽 예제",
+          "action": "기존 Samples 분류에 편집 가능한 수목·초화·절벽·덩굴과 대기 셰이더, 정면 카메라 및 선택 Pixel Camera 씬 작성",
+          "expected": "새 독립 예제와 선택 통합 예제, 기존 씬/GUID/설정 보존, 정적 검사 및 실제 렌더 비교",
+          "qa": "기존 에셋 해시 보존·새 메시 범위/인덱스·참조·카메라 구도·셰이더 컴파일·패키지 archive 대조, 네이티브 렌더는 화면 제한 해제 후",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "강물·반사·밝은 빛·수목 밀도 수정은 실제 화면으로 확인했습니다. 원본과 동일한 질감/수형까지의 최종 재현 판정은 남습니다."
+        },
+        {
+          "id": "T14",
+          "order": 14,
+          "title": "Image Studio의3D→2D 픽셀 변환 판매 설명 명확화",
+          "action": "4언어 Image Studio 설명에 입력3D 모델·애니메이션과 출력2D 픽셀 스프라이트·PNG 시트 명시",
+          "expected": "4언어 판매 초안 저장·새로고침·재열기 대조 일치",
+          "qa": "실제 포털 설명 읽기·문구 수정·저장·재열기 값 대조와 전후 화면 확인",
+          "dependsOn": [
+            "T12"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "4언어 설명 수정·저장·재열기 대조 통과. 원문 모듈 이름 및 다른 모듈 설명 유지."
+        },
+        {
+          "id": "T15",
+          "order": 15,
+          "title": "별도 Pixel Camera 판매 초안 삭제",
+          "action": "정확한 Draft와영구 삭제 조건 확인·사용자 실행 직전 확인·삭제·전체 새로고침 대조",
+          "expected": "Pixel Camera 별도 초안은 사라지고 Pixora Studio와 다른 판매 항목 보존",
+          "qa": "실제 All packages 재열기에서 전체4개·Draft3개·Published1개와 Pixora Studio 행 확인",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "별도 Pixel Camera0.6.1-preview 판매 초안(상품424618 / 초안1541562)을 영구 삭제했습니다. 전체 새로고침 후 목록에서 사라졌으며 Pixora Studio 초안은 유지됩니다."
+        },
+        {
+          "id": "T16",
+          "order": 16,
+          "title": "숲 예제 실제 정지 화면·GIF 촬영",
+          "action": "같은 현재 소스의 격리 QA에서두 씬 Play·PNG 촬영·ScreenToGif API 인코딩·원본/프레임/로그 대조",
+          "expected": "실제 기본/Camera 화면과 움직이는 전후 GIF, 현재 소스·Unity 실행 근거와 확인된 외형 차이 보고",
+          "qa": "98개 소스 해시·각24개 PNG·48프레임 GIF·960×600·실행 로그·직접 시각 확인",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제Unity에서두 씬을 촬영하고 정지 PNG·48프레임 GIF와 실행/해시 검증을 완료했습니다."
+        },
+        {
+          "id": "T17",
+          "order": 17,
+          "title": "몽환적 숲·강물과 반사·밝은 조명 보완",
+          "action": "샘플전용 수면반사·카메라 Bloom,하늘·수목층·하층밀도 수정 후 같은 실제Unity환경에서 재촬영",
+          "expected": "강물과 실제반사가 보이고 이전보다 밝고 풍성한숲, 전후 실제이미지·GIF·의존성검증",
+          "qa": "실제render반사텍스처·cameraeffect·오류로그·sourcehash, Built-in 두씬 캡처와 이전파일대조",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 강물 반사·Bloom·밝은 하늘·30그루 수목을 구현하고 두 씬 재촬영·정적 검사·패키지 대조를 통과했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T13",
+        "T17"
+      ],
+      "scopeChange": "사용자가 실제 Assets 폴더 통합을 요청함. Pixora를 PixoraStudio로 변경하고 Camera/Foliage/기존 PixelTooler 진입창을 하위로 이동. 기존 작업·QA 보존. 추가로 사용자가 전용 로고와 셀러 정리를 요청하여 T11·T12 추가. 기존 미구현과 QA는 보존. 이번 회차: 사용자 승인으로 Affinity 프로젝트 폴더 한 곳의 접근 권한·앱 재시작 허용. 원문 모듈 이름 유지 형식 정정. 기존 완료 기준·QA는 유지. 사용자 참고 이미지 기반의 독립 숲 예제와 선택 Pixel Camera 연결 버전을 T13에 추가. 기존 미완료·QA 유지. 사용자 정정: Image Studio의3D→2D 변환을4언어 판매 설명에 명시하는 T14 추가. 기존 미완료 범위 유지. 사용자 영구 삭제 확인 후 별도 Pixel Camera 판매 초안만 제거하는 T15 추가. 프로젝트 모듈과 Pixora Studio는 보존. 사용자 명시적 승인으로 이번 숲 촬영의Unity 실행·씬 전환 제한 해제. T16 실제 촬영 추가. 기존 전체 미완료 범위는 유지. 사용자 정정: 하단은강물·반사로 구성하고 몽환적 하늘·밝은빛·수목밀도 보완. 샘플전용Built-in 수면반사·Bloom과 실제재촬영을T17추가. 기존전체QA보존.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T14:19:16.3116039Z",
+          "summary": "소스 대조와 정적 검증 완료, 최신 사용자 지시로 실제 화면 QA 보류",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 Demo.tscn640x360·3배표시, QuadMesh/MultiMesh30000표시, CharacterManager10Hz와 Grass 시간 양자화 소스 대조",
+              "evidence": "원본 Scenes/Demo.tscn:446-447, Scripts/CharacterManager.gd:12-24, Shaders/Grass.gdshader:154-164",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "형태·바람·잔류 접촉·10Hz 수집 구현 및20,619 단언 통과. 사용자가 화면 조작 중단을 요청하여 현재 소스의 실제 씬 QA 보류",
+              "evidence": "compile-final/math/result.json, shaders/result.json 및 dxc.json, 사용자 최신 화면 조작 중단 지시",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "소스·컴파일·언어 키 검사는 통과했으나 실제 현재 UI 전환·선택 QA는 미실행",
+              "evidence": "현재 UI 캡처 미확보",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "현재 개선 소스의 새 비교 촬영 보류. 기준 소스Camera 비교 GIF만 확보",
+              "evidence": "native-before/09-MixedGarden/done.json, exports/manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "패키지 대조 통과, 공개 배포 대기",
+              "evidence": "Artifacts/PixelTooler/Review/manifest.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T14:22:27.8136856Z",
+          "summary": "공개 보고와 실제 기준 영상 첨부 검증, 현재 개선 화면 QA는 보류 유지",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "검토 패키지3종 현재 소스 해시 대조 및3671b98f 보고서 공개 배포·본문·GIF/PNG3개 해시 확인. 최신 개선 실행 화면은 미검증으로 명시",
+              "evidence": "projects/pixelfoliage/reports/2026-11-03-result-20261103141824519-v1.0.0.html 및 public-verification.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T14:34:46.0277916Z",
+          "summary": "추가 요청한 원본 기능 상세 대조와 공개 검증 완료. 기존 실제 화면 QA 보류 유지",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "표현13항목·렌더/갱신/제품6항목을 원본7486b9b와현재fb79b35f 기준으로 대조. 원본의3색 영역·UV 가짜 원근·높이/광원 투영·조명 차이와 검증 수준을 명시하고 공개 본문·15개 소스 해시 확인",
+              "evidence": "projects/pixelfoliage/reports/2026-11-03-result-20261103143106296-v1.0.0.html, assets/comparison-20261103/source-evidence.json 및 public-verification.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T15:11:36.962Z",
+          "summary": "제품 통합 정적 검사와 패키지 소스 대조",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "6개 어셈블리·exporter 컴파일과12개 에셋 검사 통과. 3개 메뉴 대상과 validator, 기존 진입 클래스·overview GUID 보존 확인. 통합2644개 에셋의 실제 archive/current source SHA256 대조 통과. 네이티브 클릭은 T03에서 보류.",
+              "evidence": "Docs/Testing/2026-11-04/pixora-studio/compile/result.json, integration-checks.json; Artifacts/PixelTooler/Review/manifest.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T15:58:15.755Z",
+          "summary": "실제 폴더 통합 검사와 셀러 저장값 대조; 로고 연결 제한",
+          "results": [
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Pixora를 PixoraStudio로 변경하고 Camera·Foliage·Suite를 하위로 옮겼습니다. 파일·GUID 보존과 정적 컴파일·패키지 대조를 통과했습니다.",
+              "evidence": "migration.json, compile/result.json, shared-compile/result.json, 최종 package manifest",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T11",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "실제 Affinity 연결거부·프로세스 미확인. 로고 제작하지 않음.",
+              "evidence": "CLI doctor/status ECONNREFUSED, 실제 프로세스·앱 목록 확인",
+              "dependencies": {
+                "T10": 1
+              }
+            },
+            {
+              "taskId": "T12",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "4언어 저장·전체 새로고침 후내용 대조, 실제 캡처3개 확보",
+              "evidence": "seller-readback.json, seller-before/after.png",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T17:02:05.295Z",
+          "summary": "구현·정적 검사와 셀러 저장 확인; 네이티브 검증 제한 보존",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "전체 빌보드·UV·색 영역·구름 투영·주광 그림자 수신·debug 구현, 정적 컴파일·수학 검사 통과. 네이티브 QA 미실행.",
+              "evidence": "20,628 수학 단언, 정적 컴파일·셰이더 검사; 사용자 Unity 화면 조작 중단",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T11",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "실제 Affinity 벡터 작성과 JPEG 렌더·제품 연결·셀러 아이콘/카드 저장. .af 저장·재열기 권한 오류 미해결.",
+              "evidence": "실제 Affinity render_spread, save-after-acl.json PERMISSION_DENIED",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "step",
+          "at": "2026-11-03T18:19:39.090Z",
+          "summary": "숲 예제 구현·정적 검사 통과, 실제 렌더링은 화면 제한으로 보류",
+          "results": [
+            {
+              "taskId": "T13",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "참고 숲과 같은 조건의 선택 Pixel Camera 씬 구현,5개 구성/보존 검사·12개 자산 검사·4개 셰이더 컴파일 통과. 실제 렌더·참고 유사도·GIF는 미검증.",
+              "evidence": "scene-checks.json, shader-checks.json, asset-checks.json, package-summary.json; Unity GUI 조작 중단 지시",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-03T18:28:40.751Z",
+          "summary": "Image Studio3D→2D 설명 저장값 확인",
+          "results": [
+            {
+              "taskId": "T14",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "4언어 설명 수정·저장·재열기 대조 통과. 원문 모듈 이름 및 다른 모듈 설명 유지.",
+              "evidence": "image-studio-copy/readback.json 및 실제 before/after.png",
+              "dependencies": {
+                "T12": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "step",
+          "at": "2026-11-03T18:42:48.475Z",
+          "summary": "승인된 별도 초안 삭제 후 새로고침 대조",
+          "results": [
+            {
+              "taskId": "T15",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "별도 Pixel Camera0.6.1-preview 판매 초안(상품424618 / 초안1541562)을 영구 삭제했습니다. 전체 새로고침 후 목록에서 사라졌으며 Pixora Studio 초안은 유지됩니다.",
+              "evidence": "camera-seller-removal/result.json 및 실제 before/after.png",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-03T18:56:45.1069532Z",
+          "summary": "실제 촬영 통과; 참고 이미지 동일 외형은 미달",
+          "results": [
+            {
+              "taskId": "T13",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "두 씬 실제 렌더는 성공했습니다. 참고 이미지 대비 하층의 밝은 점 과밀·수관/배경/빛 표현 차이를 확인해 외형 보완은 남습니다.",
+              "evidence": "직접 확인한 raw/000.png, pixel/000.png 및 사용자 참고 이미지",
+              "dependencies": {
+                "T10": 1
+              }
+            },
+            {
+              "taskId": "T16",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제Unity에서두 씬을 촬영하고 정지 PNG·48프레임 GIF와 실행/해시 검증을 완료했습니다.",
+              "evidence": "native-audit.json, raw/done.json, pixel/done.json, gif-manifest.json",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-03T19:34:10.180Z",
+          "summary": "수면·조명·수목 보완 실제 재촬영과 검증",
+          "results": [
+            {
+              "taskId": "T17",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 강물 반사·Bloom·밝은 하늘·30그루 수목을 구현하고 두 씬 재촬영·정적 검사·패키지 대조를 통과했습니다.",
+              "evidence": "native-v3/native-audit.json, 원본 PNG·ScreenToGif 전후 GIF,12개 shader entries, 검토 package manifest",
+              "dependencies": {
+                "T10": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103190456152-v1.0.3.html",
     "postPath": "projects/afternoon-pause/posts/2026-11-03-manual-controls-animation-20261104-20261103190456152-v1.0.3.md",
     "date": "2026-11-03T19:04:56.152Z",
