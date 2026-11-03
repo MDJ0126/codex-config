@@ -1,5 +1,25 @@
 [
   {
+    "title": "보고서 상단에 프로젝트별 활동 잔디 추가",
+    "summary": "최근 1년 게시물 활동을 잔디로 보여주고, 날짜를 누르면 해당 글만 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103051959698-v1.0.0.html",
+    "date": "2026-11-03T05:19:59.698Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 활동 잔디 추가",
+    "summary": "보고서 제목과 분류 탭 사이에 최근 1년 활동을 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-report-activity-grass-20261103051959034-v1.0.1.html",
+    "date": "2026-11-03T05:19:59.034Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
     "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
     "project": "entityforge",
