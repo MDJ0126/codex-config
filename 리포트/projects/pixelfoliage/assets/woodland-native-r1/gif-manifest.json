@@ -1,0 +1,29 @@
+{
+  "tool": "Installed ScreenToGif2.43.2 public LegacyEncoder API",
+  "gifs": [
+    {
+      "frames": 24,
+      "name": "raw",
+      "bytes": 5092618,
+      "sha256": "095832AB1F59AEE71831CF8186663C39134BB7F315EB57A769EEC22BB9B7C41F"
+    },
+    {
+      "frames": 24,
+      "name": "pixel",
+      "bytes": 5025906,
+      "sha256": "4ECB4EF69A8028E5B014F5173C9E8AAF430F437156924044481DE7DF18A0106E"
+    },
+    {
+      "frames": 48,
+      "name": "comparison",
+      "bytes": 10118491,
+      "sha256": "A63241054537BBF6687EB02D52EA969BC002334EC654D43DF0132A12E2997A49"
+    }
+  ],
+  "at": "2026-11-03T18:58:38.3920055+00:00",
+  "width": 960,
+  "height": 600,
+  "assembly": "ScreenToGif.Util, Version=2.43.2.0, Culture=neutral, PublicKeyToken=null",
+  "encoderSha256": "5582507DFF87F1BC551E07189291B28B38F3C294B01BCB8AADC5A5E6BEB4D3A4",
+  "comparison": "First2seconds Camera off, next2seconds Camera on. Shared wind uses matching manual times; pollen uses normal Unity time. GIF12fps is not a performance measurement."
+}

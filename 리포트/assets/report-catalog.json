@@ -1,5 +1,85 @@
 [
   {
+    "title": "조작·달리기·선택 표시·전체 애니메이션과 Unity QA",
+    "summary": "휠·Enter·Shift·원형 표시·전체 캐릭터 클립을 구현하고 실제 Unity에서 회귀 QA합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103190456152-v1.0.3.html",
+    "date": "2026-11-03T19:04:56.152Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103190303047-v1.0.11.html",
+    "date": "2026-11-03T19:03:03.047Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 실제 Unity 촬영과 Pixel Camera 전후 GIF",
+    "summary": "Unity6000.0.83f1·DX11·Built-in에서 두 숲 씬을 Play·촬영했습니다. 전후 정지 화면과 실제 움직임 GIF를 공개하며 참고 이미지 대비 외형 차이도 기록합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103190302554-v1.0.0.html",
+    "date": "2026-11-03T19:03:02.554Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "조작·달리기·선택 표시·전체 애니메이션과 Unity QA",
+    "summary": "휠·Enter·Shift·원형 표시·전체 캐릭터 클립을 구현하고 실제 Unity에서 회귀 QA합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103190059890-v1.0.2.html",
+    "date": "2026-11-03T19:00:59.890Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전체147개 동작·비루프 반복 보완과 최종 Unity QA515개",
+    "summary": "휠·채팅 포커스·Shift 달리기·지면 원형·147개 동작을 구현하고, 비루프 클립 두 번째 주기를 포함한 최종 Play515개 검사를 통과했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-result-20261103190059283-v1.0.0.html",
+    "date": "2026-11-03T19:00:59.283Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "이동하면 사라지던 로컬 AI 직접 답장 수정",
+    "summary": "직접 답장 예약이 일상 발화의 거리·쿨다운 조건에 막히는 문제를 실제 Play에서 재현하고 수정했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-bug-20261103185829401-v1.0.0.html",
+    "date": "2026-11-03T18:58:29.401Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "휠·채팅 포커스·달리기·원형 표시·147개 동작과 Unity QA",
+    "summary": "새 조작과 전체 호환 캐릭터 클립을 구현하고 실제 Unity Play513개 검사를 통과했습니다. 추가로 UI 잘림과 AI 직접 답장 누락을 수정했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-result-20261103185644039-v1.0.0.html",
+    "date": "2026-11-03T18:56:44.039Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "조작·달리기·선택 표시·전체 애니메이션과 Unity QA",
+    "summary": "휠·Enter·Shift·원형 표시·전체 캐릭터 클립을 구현하고 실제 Unity에서 회귀 QA합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103185643612-v1.0.1.html",
+    "date": "2026-11-03T18:56:43.612Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
     "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
     "project": "pixelfoliage",
@@ -56,6 +136,16 @@
     "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103181943837-v1.0.0.html",
     "date": "2026-11-03T18:19:43.837Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "조작·달리기·선택 표시·전체 애니메이션과 Unity QA",
+    "summary": "휠·Enter·Shift·원형 표시·전체 캐릭터 클립을 구현하고 실제 Unity에서 회귀 QA합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-20261103181934600-v1.0.0.html",
+    "date": "2026-11-03T18:19:34.600Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
