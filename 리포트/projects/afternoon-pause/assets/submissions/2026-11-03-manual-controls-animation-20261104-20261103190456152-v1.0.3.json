@@ -1,0 +1,385 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "조작·달리기·선택 표시·전체 애니메이션과 Unity QA",
+    "summary": "휠·Enter·Shift·원형 표시·전체 캐릭터 클립을 구현하고 실제 Unity에서 회귀 QA합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "현재 요청의 파일 구현·Unity QA·공개 결과 전달 완료. 물리 키보드 원시 이벤트 미관찰·새 웹 성능/장시간/IME·전체 길이 미술 품질은 보고서의 명시된 미확인 범위이며 통과로 표시하지 않습니다.",
+    "outcome": "구현·최종 Play515개·컴파일·정리·실제 보고서 공개 접근까지 확인했습니다.",
+    "proposedTime": "40~70분",
+    "actualTime": "2026-11-04 03:11:28 KST 시작 → 2026-11-04 04:04:55 KST 구현·QA·결과 공개 접근 완료 (53분27초). 완료 메뉴얼의 후속 배포 확인은 별도 로컬 public-proof에 보존합니다.",
+    "xerjEvidence": "XERJ MCP 미제공. rg·현재 소스·실제 설치 패키지와 Unity 에셋 API로 대조한다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "controls-animation-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "새 조작·원형 표시·모든 호환 캐릭터 애니메이션 구현과 실제 Unity QA",
+    "completionCriteria": "휠 줌, Enter 채팅 선택·전송·Esc 해제, Shift 달리기·Run 애니메이션, 내 캐릭터 지면 원형, 임포트된 모든 호환 캐릭터 애니메이션 목록·검색·재생·반복·중단, 기존 소셜 회귀, 임시 도구 제거, 공개 보고와 추가 작업 명시",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103190059890-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "입력·이동 보강",
+        "action": "Input System 설정에 맞는 휠 줌, Enter 포커스/전송·Esc 해제, Shift 달리기를 구현한다.",
+        "expected": "실제 입력에서 줌·포커스·걷기/달리기 속도·입력 중 이동 방지 확인",
+        "qa": "실제 입력에서 줌·포커스·걷기/달리기 속도·입력 중 이동 방지 확인을 실행 결과로 검사한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 Play515개·마지막 Runtime 소스 재컴파일·해시 일치 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "발밑 원형 표시",
+        "action": "로컬 캐릭터에만 지면을 따르는 편집 가능한 원형 표시를 저장한다.",
+        "expected": "걷기·달리기·착석·외형 교체에서 지면 표시 유지",
+        "qa": "걷기·달리기·착석·외형 교체에서 지면 표시 유지을 실행 결과로 검사한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 Play515개·마지막 Runtime 소스 재컴파일·해시 일치 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "전체 캐릭터 애니메이션",
+        "action": "임포트된 캐릭터 클립 전체의 실제 목록을 추출하고 검색·페이지·반복·중단을 연결한다.",
+        "expected": "모든 호환 클립 포함·원본 보존·실제 재생·Idle 복귀·달리기 확인",
+        "qa": "모든 호환 클립 포함·원본 보존·실제 재생·Idle 복귀·달리기 확인을 실행 결과로 검사한다. 비루프 클립의 원래 길이 이후 두 번째 주기 재생도 검사한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "최종 Play515개·마지막 Runtime 소스 재컴파일·해시 일치 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "정적·실제 Unity QA",
+        "action": "컴파일 후 기존 소셜 기능과 새 조작·전체 클립을 실제 Play에서 검사한다.",
+        "expected": "오류0·실제 동작·스크린샷·회귀 근거 보존",
+        "qa": "오류0·실제 동작·스크린샷·회귀 근거 보존을 실행 결과로 검사한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 Play515개·마지막 Runtime 소스 재컴파일·해시 일치 통과"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "임시 도구 정리·문서",
+        "action": "사용한 작성·QA 도구를 제거하고 본체 재컴파일·추가 작업을 기록한다.",
+        "expected": "실제 씬·프리팹 유지·자동 요청 제거·최종 소스 일치",
+        "qa": "실제 씬·프리팹 유지·자동 요청 제거·최종 소스 일치을 실행 결과로 검사한다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 Play515개·마지막 Runtime 소스 재컴파일·해시 일치 통과"
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "공개 결과 전달",
+        "action": "현재 버전 결과를 중앙 아카이브에 등록하고 공개 배포를 검증한다.",
+        "expected": "개별 HTTPS 본문·실제 화면·첨부·목록 확인",
+        "qa": "개별 HTTPS 본문·실제 화면·첨부·목록 확인을 실행 결과로 검사한다.",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "GitHub Pages 성공·개별 보고서/버그/메뉴얼HTTP200·실제 화면/QA 첨부 Git blob 해시 일치·목록 확인"
+      }
+    ],
+    "focusTasks": [
+      "T06"
+    ],
+    "scopeChange": "새 요청으로 입력·원형·달리기·전체 애니메이션을 추가하며 실제 Unity 화면 사용이 승인됐다. 이전 웹 빌드는 이번 변경의 검증으로 사용하지 않는다. 원본 루프 설정이 꺼진 클립 반복을 보완하고 T03 r2 및 영향 범위를 재검사했다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T03:36:11.2827976+09:00",
+        "summary": "1차 Play359개 통과 후 레이아웃 수정. AI 직접 응답 누락은 별도 실제 재현으로 발견",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity Play 입력 시스템·원형·147개 클립 샘플 통과",
+            "evidence": "../assets/controls-20261104/full-result-first-pass.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity Play 입력 시스템·원형·147개 클립 샘플 통과",
+            "evidence": "../assets/controls-20261104/full-result-first-pass.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity Play 입력 시스템·원형·147개 클립 샘플 통과",
+            "evidence": "../assets/controls-20261104/full-result-first-pass.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T03:42:59.8326067+09:00",
+        "summary": "AI 직접 답장 이동 후 누락 재현",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "직접 응답 대기 중 멀어지면 답장 누락",
+            "evidence": "../assets/controls-20261104/reply-before-result.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-11-04T03:44:28.9027371+09:00",
+        "summary": "직접 응답의 거리·일상 발화 쿨다운 의존 제거 후 재검사 통과",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "동일 재현에서 직접 답장 유지·오류0",
+            "evidence": "../assets/controls-20261104/reply-after-result.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-04T03:51:17.8078527+09:00",
+        "summary": "147클립 샘플·루트 이동 억제·3인 좌석·16종 교체·소셜·배치513개 통과. 오류0·경고0",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 실제 Play513개·저장값 복원. 물리 Enter는 미확인",
+            "evidence": "../assets/controls-20261104/full-result.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 실제 Play513개·저장값 복원. 물리 Enter는 미확인",
+            "evidence": "../assets/controls-20261104/full-result.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 실제 Play513개·저장값 복원. 물리 Enter는 미확인",
+            "evidence": "../assets/controls-20261104/full-result.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity6000.0.83f1 실제 Play513개·저장값 복원. 물리 Enter는 미확인",
+            "evidence": "../assets/controls-20261104/full-result.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-03T18:56:42.711Z",
+        "summary": "임시 도구·요청 제거 후 Runtime33/RuntimeEditor33/Editor1 재컴파일 통과·현재 소스 해시 일치",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "편집 가능한 씬·Inspector 이벤트 유지. 임시 도구 제거·원본 씬 백업 보존",
+            "evidence": "../assets/controls-20261104/final-audit.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "regression",
+        "at": "2026-11-03T19:00:59.316Z",
+        "summary": "비루프 두 번째 주기 포함515개·저장값 복원·최종 컴파일·임시 도구 정리",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 버전 Play515개·최종 컴파일 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 버전 Play515개·최종 컴파일 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재 버전 Play515개·최종 컴파일 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 버전 Play515개·최종 컴파일 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T03": 2
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 버전 Play515개·최종 컴파일 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "final",
+        "at": "2026-11-03T19:04:55.301Z",
+        "summary": "현재 소스의 Play515개·최종 컴파일·정리 및 결과/근거 공개 접근을 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 현재 버전515개·컴파일·소스 해시·임시 도구 제거 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 현재 버전515개·컴파일·소스 해시·임시 도구 제거 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종 현재 버전515개·컴파일·소스 해시·임시 도구 제거 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 현재 버전515개·컴파일·소스 해시·임시 도구 제거 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T03": 2
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 현재 버전515개·컴파일·소스 해시·임시 도구 제거 통과",
+            "evidence": "../assets/controls-final-20261104/full-result.json / compile-result.json / final-audit-515.json",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 보고서·버그·메뉴얼HTTP200·첨부 해시·목록·GitHub Pages 성공",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-result-20261103190059283-v1.0.0.html / https://github.com/MDJ0126/codex-config/actions/runs/41699383198",
+            "dependencies": {
+              "T05": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

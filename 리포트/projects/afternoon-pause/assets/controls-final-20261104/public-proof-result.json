@@ -1,0 +1,162 @@
+{
+  "at": "2026-11-03T19:04:49.138Z",
+  "sha": "93a6336786101f522869ac01b4e6e6f737887250",
+  "workflow": "https://github.com/MDJ0126/codex-config/actions/runs/41699383198",
+  "checks": [
+    {
+      "name": "result",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-result-20261103190059283-v1.0.0.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-manual-controls-animation-20261104-20261103190059890-v1.0.2.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "bug",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-03-bug-20261103185829401-v1.0.0.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "after-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "animation-list.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "architecture.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "baseline-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compile-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "feature-status.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-audit.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-result-first-pass.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "image-manifest.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "inventory.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual-input-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "reply-after-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "reply-before-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "running.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "seated.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "three-seats.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "after-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "animation-list.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "architecture.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compile-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "feature-status.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-audit-515.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "seated.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "three-seats.png",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "listed": true,
+  "passed": true
+}
