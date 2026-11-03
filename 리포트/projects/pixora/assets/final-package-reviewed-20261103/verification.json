@@ -1,0 +1,100 @@
+{
+  "product": "Pixora",
+  "package": {
+    "version": "1.0.0",
+    "bytes": 20470743,
+    "sha256": "35ebbb385de19f9209eea0ce9ce6a634b3d34e8bd6e6deda5b9a21b9ec7f4f22",
+    "sourceDifferences": [],
+    "uploaded": "Success",
+    "uploadedShaMatches": true,
+    "finishedUtc": "2026-11-03T07:28:01.9756809Z"
+  },
+  "officialValidator": {
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 27,
+    "warning": 2,
+    "fail": 0
+  },
+  "portal": {
+    "product": "Pixora",
+    "id": "1541558",
+    "uploadLine": "- paragraph: Nov 03, 2026 07:27 UTC, 1877 files, 19.5 MB"
+  },
+  "finalFreshInstallPassed": true,
+  "coreAssembliesWithoutSampleReferences": {
+    "at": "2026-11-03T09:07:05.430Z",
+    "kind": "actual Roslyn compiler using fresh Unity response files, sample/development references forbidden",
+    "nativeSampleRemovalExecuted": false,
+    "unityStarted": false,
+    "passed": true,
+    "assemblies": [
+      {
+        "assembly": "TurnRoom.Templete.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Generated",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "Pixora.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Dots",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      }
+    ]
+  },
+  "submitted": false
+}

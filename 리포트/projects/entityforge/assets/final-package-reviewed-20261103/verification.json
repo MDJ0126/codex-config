@@ -1,0 +1,134 @@
+{
+  "product": "EntityForge",
+  "package": {
+    "version": "0.3.1-preview",
+    "bytes": 25191902,
+    "sha256": "a42da44a3e2beb61f61c46c2f11652ab6ac1f90708d4035b7ef721abed02e215",
+    "sourceDifferences": [],
+    "uploaded": "Success",
+    "uploadedShaMatches": true,
+    "finishedUtc": "2026-11-03T08:59:41.4302629Z"
+  },
+  "officialValidator": {
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 27,
+    "warning": 2,
+    "fail": 0
+  },
+  "portal": {
+    "product": "EntityForge",
+    "id": "1541570",
+    "uploadLine": "- paragraph: Nov 03, 2026 08:58 UTC, 406 files, 24.0 MB",
+    "freeAsset": true
+  },
+  "finalFreshInstallPassed": true,
+  "coreAssembliesWithoutSampleReferences": {
+    "at": "2026-11-03T09:07:05.430Z",
+    "kind": "actual Roslyn compiler using fresh Unity response files, sample/development references forbidden",
+    "nativeSampleRemovalExecuted": false,
+    "unityStarted": false,
+    "passed": true,
+    "assemblies": [
+      {
+        "assembly": "TurnRoom.Templete.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Generated",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "DesignDataTable.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "Pixora.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.PixelCamera.URP.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Runtime",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Dots",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      },
+      {
+        "assembly": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0,
+        "sampleOrDevelopmentReferences": 0
+      }
+    ]
+  },
+  "submitted": false,
+  "mixedPlayerComparison": {
+    "passed": true,
+    "checks": [
+      {
+        "frame": 10,
+        "motionAndExpiryParity": true,
+        "sourceGameObjectsRetained": 1024,
+        "sourceSuppressed": true,
+        "proxyPages": 2,
+        "drawCalls": 3
+      },
+      {
+        "frame": 30,
+        "motionAndExpiryParity": true,
+        "sourceGameObjectsRetained": 1024,
+        "sourceSuppressed": true,
+        "proxyPages": 2,
+        "drawCalls": 3
+      },
+      {
+        "frame": 90,
+        "motionAndExpiryParity": true,
+        "sourceGameObjectsRetained": 1024,
+        "sourceSuppressed": true,
+        "proxyPages": 2,
+        "drawCalls": 3
+      }
+    ],
+    "actualVisiblePlayerScreenshotsByteIdentical": true,
+    "screenshotSha256": "99596d84d99160055186f94869463854f9143f2009ccedef9c3c99ceca057dc0",
+    "performanceMeasured": false,
+    "qualification": "Deterministic 90-frame functionality and rendering comparison; not a frame-time speedup benchmark."
+  }
+}
