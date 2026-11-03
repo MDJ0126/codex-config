@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-03T15:55:45.031Z",
+  "submitted": false,
+  "packageUploaded": false,
+  "en": {
+    "name": "Pixora Studio",
+    "summary": "Create pixel assets, render pixel-styled scenes and author animated vegetation in Unity. One suite with independent Image Studio, Pixel Camera and Foliage windows.",
+    "description": "Pixora Studio brings three modular workflows into one Unity toolset.\n\nImage Studio: convert images and capture models or animations as pixel sprites and sprite sheets, with reusable palettes and editable work documents.\n\nPixel Camera: apply pixel rendering, palette and outline controls to a full camera or supported selected objects.\n\nFoliage: place grass, flowers and shrubs with shared wind and character contact response, using profiles that can extend to trees.\n\nEach module keeps its own window. Use the common overview to open the workflow you need. Shared editor support and offline guides are included.\n\nThis draft is being updated for the integrated suite. The combined package, new artwork and final native validation are pending; the currently uploaded package is the previous Pixora build.",
+    "technical": "Development target: Unity 6000.0.83f1 on Windows. Previous module examples were checked with Built-in rendering; the reorganized suite still requires clean-install and native regression validation.\n\nRuntime and Editor modules remain separated. Shared TurnRoom editor support is bundled. Optional URP paths require compatible packages and renderer setup; HDRP, XR and mobile performance are not claimed.\n\nPlant animation stepping and contact update intervals are distinct from rendering frame rate. No performance improvement is claimed without paired measurements.\n\nImage outputs include PNG sprites and sheets, editable work assets and reusable profiles. Product UI supports nine languages; final layout regression remains pending. No paid AI service is required.",
+    "changelog": "Integration draft: reorganize Image Studio, Pixel Camera and Foliage as Pixora Studio while retaining separate module windows. Combined-package upload, new artwork and final native validation are pending. The uploaded file is the previous Pixora build."
+  },
+  "translations": {
+    "ko-KR": {
+      "name": "Pixora Studio",
+      "changelog": "통합 초안: 이미지 제작·Pixel Camera·식생 도구를 Pixora Studio로 구성합니다. 모듈별 창은 유지합니다. 통합 패키지 업로드·새 로고·최종 실행 검증은 대기 중입니다.",
+      "summary": "Unity에서 픽셀 에셋 제작, 장면 픽셀 렌더링과 움직이는 식생 배치를 연결하세요. 이미지 제작·Pixel Camera·식생 도구를 독립 창으로 사용하는 통합 제품입니다.",
+      "description": "Pixora Studio는 세 가지 작업을 하나의 Unity 도구 모음으로 제공합니다.\n\n이미지 제작: 이미지 변환과 모델·애니메이션 캡처, 팔레트, 편집 가능한 작업 문서, PNG 스프라이트·시트 출력.\n\nPixel Camera: 화면 전체 또는 지원하는 선택 오브젝트의 픽셀 표현·팔레트·외곽선 설정.\n\n식생: 잔디·꽃·관목 배치, 공유 바람과 캐릭터 접촉 반응, 나무로 확장할 수 있는 프로필.\n\n각 모듈의 창은 독립적으로 사용하며 공통 진입창에서 열 수 있습니다. 공유 에디터와 오프라인 가이드를 포함합니다.\n\n현재는 통합 제품으로 정리 중인 판매 초안입니다. 업로드된 파일은 이전 Pixora 빌드이며, 통합 패키지·새 로고·최종 실행 검증은 대기 중입니다.",
+      "technical": "개발 대상: Windows, Unity 6000.0.83f1. 기존 모듈 예제는 Built-in에서 확인했으며, 폴더 통합 후 클린 설치와 실제 실행 회귀 검증은 남아 있습니다.\n\n공유 TurnRoom 에디터가 포함됩니다. URP 경로는 호환 패키지와 Renderer 설정이 필요합니다. HDRP·XR·모바일 성능은 보장하지 않습니다.\n\n식생 애니메이션 단계와 접촉 갱신 간격은 렌더 프레임률과 별개입니다. UI는 9개 언어를 지원하며 최종 배치 검증은 대기 중입니다. 유료 AI 서비스가 필요하지 않습니다.",
+      "ai": "OpenAI Codex가 C# 개발, 테스트, 문서, 번역과 마케팅 준비를 보조했습니다. 제품 실행에 유료 AI 서비스는 필요하지 않습니다.",
+      "readback": "pass"
+    },
+    "ja-JP": {
+      "name": "Pixora Studio",
+      "changelog": "統合ドラフト：画像制作、Pixel Camera、植生をPixora Studioにまとめます。モジュール別ウィンドウを維持します。統合パッケージのアップロード、新ロゴ、最終動作検証は未完了です。",
+      "summary": "Unityでピクセル素材の制作、シーンのピクセル描画、動く植生の配置を連携。画像制作・Pixel Camera・植生を独立したウィンドウで使える統合ツールです。",
+      "description": "Pixora Studioは三つのワークフローを一つのUnityツールセットにまとめます。\n\n画像制作：画像変換、モデルとアニメーションの撮影、パレット、編集可能な作業文書、PNGスプライトとシートの出力。\n\nPixel Camera：画面全体または対応する選択オブジェクトのピクセル描画、パレット、輪郭の調整。\n\n植生：草・花・低木の配置、共通の風とキャラクター接触反応、樹木へ拡張できるプロファイル。\n\n各モジュールのウィンドウは独立し、共通の概要画面から開けます。共通エディターとオフラインガイドを同梱。\n\n現在は統合製品に向けた販売ドラフトです。アップロード済みファイルは従来のPixoraビルドで、統合パッケージ・新ロゴ・最終検証は未完了です。",
+      "technical": "開発対象：Windows、Unity 6000.0.83f1。既存モジュールの例はBuilt-inで確認しましたが、フォルダー統合後の新規インストールと実動作の回帰検証は未完了です。\n\n共通TurnRoomエディターを同梱。URPには対応パッケージとRenderer設定が必要です。HDRP、XR、モバイル性能は保証しません。\n\n植生アニメーションの段階化と接触更新間隔は描画フレームレートとは別です。UIは9言語対応で、最終レイアウト検証は未完了です。有料AIサービスは不要です。",
+      "ai": "OpenAI CodexがC#開発、テスト、文書、翻訳、販促準備を支援しました。製品の実行に有料AIサービスは不要です。",
+      "readback": "pass"
+    },
+    "zh-CN": {
+      "name": "Pixora Studio",
+      "changelog": "整合草稿：将图像制作、Pixel Camera和植被工具整合为Pixora Studio，各模块保留独立窗口。整合包上传、新标志及最终运行验证尚未完成。",
+      "summary": "在Unity中连接像素资源制作、场景像素渲染和动态植被布置。图像制作、Pixel Camera及植被模块各有独立窗口。",
+      "description": "Pixora Studio将三种工作流程整合为一套Unity工具。\n\n图像制作：图像转换、模型与动画捕获、调色板、可编辑工作文档、PNG精灵与图集导出。\n\nPixel Camera：为整个画面或支持的选定对象设置像素渲染、调色板与描边。\n\n植被：布置草、花和灌木，使用共享风场与角色接触反应，配置可扩展至树木。\n\n各模块使用独立窗口，可从共用入口打开。包含共享编辑器及离线指南。\n\n目前为整合产品的销售草稿。已上传文件仍为之前的Pixora版本；整合包、新标志及最终验证尚未完成。",
+      "technical": "开发目标：Windows，Unity 6000.0.83f1。既有模块示例在Built-in下检查过；文件夹整合后的全新安装和实际运行回归验证尚未完成。\n\n包含共享TurnRoom编辑器。URP需要兼容的软件包和Renderer配置。不保证HDRP、XR及移动端性能。\n\n植被动画步进和接触更新间隔与渲染帧率不同。界面支持九种语言，最终布局验证尚未完成。无需付费AI服务。",
+      "ai": "OpenAI Codex辅助C#开发、测试、文档、翻译及宣传准备。运行产品无需付费AI服务。",
+      "readback": "pass"
+    }
+  }
+}
