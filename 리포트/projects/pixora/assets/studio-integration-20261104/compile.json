@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-03T15:08:02.963Z",
+  "guiProcessStarted": false,
+  "runtimeExecuted": false,
+  "results": [
+    {
+      "name": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageContactHistory.cs": "9354b4d90a6e993ed530c7093c4c8c6a4ce8d490d582c177ad81962d0e4159cf",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageInteractor.cs": "d99170014910354bddc3c13cf1ddd1b449a680378a5cc02e949b3f41945c7a25",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageMath.cs": "801dd1f1f1f71f1173dacfc4c685d01f3ab7fc9cc6a7b5a349eb5e353eed3681",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs": "d7735f939bd6f2768e1b7f8bcb3f11049df1da0ff57883b072cb53e7c1bc5c3f",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageProfile.cs": "f9007a0391459963bea76537b33312949e2517fb030ec3763f0b7ae4b2f5dc9a",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageRenderer.cs": "4d4463b1cf2e946450dba11b9875105d27d84da84f95a9d07e6a24c2f6aff207",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs": "2da513ff3a5de05170c12196f738885c04a5b8629b67c39ec658a1c601e683fe"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageAuthoring.cs": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageTheme.cs": "e92ce9329dd9b73ccd52da5e9fbdd39db99fe578ec1fe799d97a0cf759ca6f8b",
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageWindow.cs": "a382ad159befbaeb12df58ff17d9224b93d40faa69a8016966482057f5b8efc3"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Samples",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs": "556890505748efdf4add7bfc104239d2958faef02381d06869f9e8e9775112bc"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.PixelCamera.Editor",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Editor/FoliagePixelCameraLink.cs": "256c951168e62c8c56ab5a75fa4f02bb37a9dbbbebeb897ae0953d6a157981a1"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Pixora.Editor",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Integrations/Pixora/Editor/FoliagePixoraImport.cs": "03b06c2c7864de290e5b554567d36415ca54f0d32df3cd0ec65a09657e8086e8"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Family",
+      "exitCode": 0,
+      "sources": {
+        "C:/Projects/TurnRoom/Assets/TurnRoom/PixelTooler/Editor/PixelToolerWindow.cs": "8c50bd04a5ca29bb0fa88882fd289618e05d92e2a97356805596072c161ca36c"
+      }
+    }
+  ]
+}

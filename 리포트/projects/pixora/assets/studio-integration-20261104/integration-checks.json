@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-03T15:10:35.879Z",
+  "passed": true,
+  "checks": [
+    "Three menu routes resolve to existing module commands with matching validators",
+    "Overview retains only shared-template assembly dependency",
+    "Existing Camera/Pixora entry points and overview metadata/assembly unchanged against HEAD",
+    "Native package exporter static compile passed"
+  ],
+  "preserved": [
+    "Assets/TurnRoom/Pixora/Editor/Window/PixoraWindow.cs",
+    "Assets/TurnRoom/PixelCamera/Editor/PixelCameraWindow.cs",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\Localization\\UI.json.meta",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\Localization.meta",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\PixelToolerWindow.cs.meta",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\PixelToolerWindow.uxml.meta",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\TurnRoom.PixelTooler.Editor.asmdef",
+    "Assets\\TurnRoom\\PixelTooler\\Editor\\TurnRoom.PixelTooler.Editor.asmdef.meta",
+    "Assets\\TurnRoom\\PixelTooler\\Editor.meta"
+  ],
+  "nativeMenuClicks": "pending: user requested no desktop interaction",
+  "guiProcessStarted": false
+}
