@@ -1,0 +1,158 @@
+{
+  "at": "2026-11-03T11:47:41.405Z",
+  "stage": "development-review",
+  "nativeExecution": "pending; user requested no desktop interaction",
+  "sourceCommit": "8f8d0916",
+  "csharp": [
+    {
+      "name": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Samples",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.PixelCamera.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Pixora.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Family",
+      "exitCode": 0
+    }
+  ],
+  "math": {
+    "at": "2026-11-03T11:37:48.068Z",
+    "passed": true,
+    "scope": "Actual compiled FoliageMath against Unity managed structs, no scene rendering or native runtime",
+    "stdout": "PASS 20010 assertions against compiled FoliageMath and UnityEngine structs; no Unity native scene runtime.\r\n",
+    "stderr": ""
+  },
+  "assetChecks": [
+    {
+      "name": "new asset GUIDs are unique and every asset has metadata",
+      "passed": true
+    },
+    {
+      "name": "all scene/profile/material references resolve to known source assets",
+      "passed": true
+    },
+    {
+      "name": "scene object links and camera references are complete",
+      "passed": true
+    },
+    {
+      "name": "seven mesh buffers have consistent layout, indices, finite bounds and nondegenerate faces",
+      "passed": true
+    },
+    {
+      "name": "ten standalone examples have no Camera/Pixora product GUIDs",
+      "passed": true
+    },
+    {
+      "name": "core Runtime does not reference samples/editor/other products",
+      "passed": true
+    },
+    {
+      "name": "editor/sample/integration assemblies have explicit dependency direction",
+      "passed": true
+    },
+    {
+      "name": "9-language catalogs have full values and matching placeholders",
+      "passed": true
+    },
+    {
+      "name": "authored UXML text keys are localized",
+      "passed": true
+    },
+    {
+      "name": "9 guides and screenshot manifest preserve native QA as pending",
+      "passed": true
+    },
+    {
+      "name": "no import-time scene changes, package installs, forbidden picker calls or generated runtime UI",
+      "passed": true
+    }
+  ],
+  "packages": [
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Camera-Review.unitypackage",
+      "bytes": 33134328,
+      "sha256": "1012dd2ab9bd3060ded2461488c87124ce4d9876256a454f6dc70f330e142dc4",
+      "assets": 762,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Pixora-Review.unitypackage",
+      "bytes": 18565181,
+      "sha256": "a8f3295fa6ff16da81741db2878ad6ffaa04c1281f2b0583b31b65e376dbc611",
+      "assets": 3307,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Review.unitypackage",
+      "bytes": 8878292,
+      "sha256": "de0dc24513759c44a4cd4aa278f0179f90baf75a2802d0a8f2548a953849946c",
+      "assets": 402,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Core-Review.unitypackage",
+      "bytes": 8823248,
+      "sha256": "d18a6576b2df1597576da92eb4672a28c62f42646248e5a3fe860b490537a1f8",
+      "assets": 368,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixelTooler-Bundle-Review.unitypackage",
+      "bytes": 43030543,
+      "sha256": "4572d33bfa87e5b28c0edc1669040d9f82e5dc41a89dc43086176c5279abf48a",
+      "assets": 3848,
+      "archiveReadback": "pass",
+      "nativeImport": "pending",
+      "officialValidator": "pending"
+    }
+  ],
+  "screenshots": "not captured",
+  "affinity": "doctor/status ECONNREFUSED; no GUI application started by this task",
+  "xerj": "Actual Search TemplateAssetInspector succeeded after initial failure; matched current TemplateAssetInspector.cs:12. New Runtime and sample folders were read with rg.",
+  "corePackageCompile": [
+    {
+      "name": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.PixelCamera.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Pixora.Editor",
+      "exitCode": 0
+    },
+    {
+      "name": "TurnRoom.PixelFoliage.Family",
+      "exitCode": 0
+    }
+  ],
+  "corePackageCompileScope": "Actual frozen Core archive extracted without Samples, Pixel Camera or Pixora sources;5 assemblies statically compiled. Shared template references use the existing Unity compiler reference set. Not native installation."
+}

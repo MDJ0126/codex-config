@@ -1,10 +1,110 @@
 [
   {
+    "title": "Pixel Tooler 식생 제품과 독립 판매 구성",
+    "summary": "독립 식생 모듈과 Camera·Pixora 선택 연동, 잔디·꽃·관목 및 나무 확장 예제를 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-pixel-toolor-foliage-20261103-20261103114830911-v1.0.1.html",
+    "date": "2026-11-03T11:48:30.911Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Tooler 독립 식생 도구와 확인용 예제 구현",
+    "summary": "잔디·꽃·관목·나무 구조와 독립 예제10개, Camera 연동 예제, 개별·묶음 검토 패키지를 구현했습니다. 실제 화면·설치·로고는 보류입니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103114755800-v1.0.0.html",
+    "date": "2026-11-03T11:47:55.800Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Tooler 식생 제품과 독립 판매 구성",
+    "summary": "독립 식생 모듈과 Camera·Pixora 선택 연동, 잔디·꽃·관목 및 나무 확장 예제를 구현합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103110929096-v1.0.0.html",
+    "date": "2026-11-03T11:09:29.096Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "샘플 3개 픽셀 기본 크기 4px 통일",
+    "summary": "샘플3개에서 주인공과 비교 물체 모두4px로 시작하며 X단계 전환도 모든 대상에 같은 크기를 적용합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103105431453-v1.0.0.html",
+    "date": "2026-11-03T10:54:31.453Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WindowsFolderSize 1.0.16 GitHub 릴리스 배포",
+    "summary": "검증한dist MSI를그대로GitHub릴리스에배포했고,공개다운로드SHA256일치를확인했습니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-result-20261103104038656-v1.0.0.html",
+    "date": "2026-11-03T10:40:38.656Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+    "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103104038131-v1.0.2.html",
+    "date": "2026-11-03T10:40:38.131Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "픽셀 잔디 데모 분석 실행 메뉴얼",
+    "summary": "Godot 잔디 셰이더와 Pixel Camera 소스를 대조했습니다. 독립 식생 모듈과 카메라 연동을 권하며 실행 성능은 미검증입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103408361-v1.0.2.html",
+    "date": "2026-11-03T10:34:08.361Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "픽셀 잔디 데모 분석 실행 메뉴얼",
     "summary": "Godot 잔디 셰이더와 Pixel Camera 소스를 대조했습니다. 독립 식생 모듈과 카메라 연동을 권하며 실행 성능은 미검증입니다.",
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103045693-v1.0.1.html",
     "date": "2026-11-03T10:30:45.693Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WindowsFolderSize 1.0.16 메모리·계산 CPU 최적화",
+    "summary": "파일별 목록을 디스크 DB로 옮겼습니다.15만 파일 시험 최대메모리 약92%감소, CPU상한1%.설치는보류했습니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-result-20261103103007437-v1.0.0.html",
+    "date": "2026-11-03T10:30:07.437Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+    "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103103005748-v1.0.1.html",
+    "date": "2026-11-03T10:30:05.748Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+    "summary": "부드러운 조명 전환·작은 픽셀·옅은 외곽선·주변광을 적용했습니다. native 시각 QA는 포커스 제한으로 미실행입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-manual-pixel-camera-objects-20261101-20261103102924717-v1.0.4.html",
+    "date": "2026-11-03T10:29:24.717Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
@@ -25,6 +125,26 @@
     "project": "turnroom",
     "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103102917990-v1.0.0.html",
     "date": "2026-11-03T10:29:17.990Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 부드러운 톤 기본값과 예제 스타일 조정",
+    "summary": "툰 명암 전환·wrap,2/4px·옅은 색상 외곽선·주변광·팔레트 기본값을 조정했습니다. 정적 검사 통과, 실제 시각 QA는 미실행입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103102905884-v1.0.0.html",
+    "date": "2026-11-03T10:29:05.884Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+    "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103102205573-v1.0.0.html",
+    "date": "2026-11-03T10:22:05.573Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""

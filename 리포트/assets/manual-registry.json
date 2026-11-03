@@ -1,5 +1,718 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-pixel-toolor-foliage-20261103-20261103114830911-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-pixel-toolor-foliage-20261103-20261103114830911-v1.0.1.md",
+    "date": "2026-11-03T11:48:30.911Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "pixel-toolor-foliage-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Pixel Tooler 식생 제품과 독립 판매 구성",
+      "summary": "독립 식생 모듈과 Camera·Pixora 선택 연동, 잔디·꽃·관목 및 나무 확장 예제를 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 Unity 가져오기·Play·카메라 합성·모든 언어 전환·마우스/키보드 선택·표면 배치 Undo/Redo·성능·스프라이트 텍스처 왕복 검증과 화면 캡처가 남아 있습니다. 화면 조작은 명시적 재허락 전까지 보류합니다.\n\nAffinity CLI doctor/status는 샌드박스 EACCES를 구분해 재확인한 뒤 ECONNREFUSED를 반환했습니다. 앱 실행·재시작으로 화면을 방해하지 않았습니다. 필수 자체 로고의 실제 제작·저장·재열기·적용은 미완료이며 임의 도구로 대체하지 않았습니다. 새 프로젝트 로고는 null로 등록합니다.\n\n검토 패키지는 Unitypackage 호환 tar/gzip이며 Unity-native export·깨끗한 설치·공식 Asset Store Validator는 미실행입니다. 상품 등록·묶음 정책 확인·최종 제출도 미실행입니다. 자체 방향광·구름 명암을 사용하며 전체 PBR·추가 광원·HDRP·XR·모바일 성능·모션 벡터를 보장하지 않습니다.\n\n교훈 검토: 전역 지침 변경 없음. 독립 제품/묶음 구성과 화면 조작 보류 선호는 기존 규칙과 프로젝트 문서에 반영했으며, 새 보편 규칙을 만들지 않았습니다.",
+      "outcome": "구현·정적 검사·검토 패키지를 작성했습니다. 화면 조작 보류에 따라 실제 UI/Play와 Affinity 로고는 남아 있습니다.",
+      "proposedTime": "60~120분",
+      "actualTime": "시작2026-11-03 20:06:30 KST. 구현·정적 검사 후 검토 패키지 고정/해시 대조는20:38:57 KST까지32분27초. 공개 보고 검증 시간은 별도이며 전체 요청은 실제 실행·로고 미완료 상태입니다.",
+      "xerjEvidence": "초기 Status/Search 실패 후 실제 로컬 접근으로 노드를 시작해 TemplateAssetInspector 검색 성공. TemplateAssetInspector.cs:12를 현재 소스와 대조했습니다. 신규 Runtime·예제는 인덱스 범위 밖이어서 rg와 직접 읽기를 사용했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-toolor-foliage-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "Pixel Tooler 제품군과 개별 사용 가능한 식생 도구 및 확인용 예제를 구성합니다.",
+      "completionCriteria": "독립 식생 Runtime·편집 도구·9개 언어·10개 예제·나무 확장·선택 연동·자체 로고·패키지 격리·정적/실제 QA와 공개 보고서",
+      "previousManual": "projects/turnroom/reports/2026-11-03-manual-20261103110929096-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "제품군·독립 의존성 구성",
+          "action": "제품군·독립 의존성 구성의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "제품군·독립 의존성 구성의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "제품군 레시피·독립 의존성 구성"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "식생 Runtime·바람·접촉·배치",
+          "action": "식생 Runtime·바람·접촉·배치의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "식생 Runtime·바람·접촉·배치의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "Runtime6종과 공통 셰이더 작성"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "9개 언어 Editor와 프로필",
+          "action": "9개 언어 Editor와 프로필의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "9개 언어 Editor와 프로필의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "85개 문구와9개 언어 가이드·UI 연결 작성"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "자체 아트·로고",
+          "action": "자체 아트·로고의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "자체 아트·로고의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "blocked",
+          "revision": 1,
+          "result": "실제 Affinity MCP 연결 ECONNREFUSED. 화면 조작/앱 시작 금지로 필수 로고 제작·출력 미실행."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "10개 예제와 선택 연동",
+          "action": "10개 예제와 선택 연동의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "10개 예제와 선택 연동의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "10개 독립 씬과 선택 Camera 예제 작성"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "정적 컴파일·격리·회귀 검사",
+          "action": "정적 컴파일·격리·회귀 검사의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "정적 컴파일·격리·회귀 검사의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "6개 어셈블리·수학20,010개·에셋11개 정적 검사"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "실제 화면·입력·문서 검증",
+          "action": "실제 화면·입력·문서 검증의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "실제 화면·입력·문서 검증의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "패키지·공개 결과 보고",
+          "action": "패키지·공개 결과 보고의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "패키지·공개 결과 보고의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "검토 패키지5개 아카이브·현재 소스 해시 대조 통과. 공개 보고서 배포 확인 중."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T11:47:41.464Z",
+          "summary": "구현·정적 검사 범위의 실제 근거 확인, 네이티브 QA는 별도 보존",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "제품군 레시피·독립 의존성 구성",
+              "evidence": "verification.json, compile/result.json, compile/math/result.json, asset-checks.json, Review/manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Runtime6종과 공통 셰이더 작성",
+              "evidence": "verification.json, compile/result.json, compile/math/result.json, asset-checks.json, Review/manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "85개 문구와9개 언어 가이드·UI 연결 작성",
+              "evidence": "verification.json, compile/result.json, compile/math/result.json, asset-checks.json, Review/manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10개 독립 씬과 선택 Camera 예제 작성",
+              "evidence": "verification.json, compile/result.json, compile/math/result.json, asset-checks.json, Review/manifest.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "6개 어셈블리·수학20,010개·에셋11개 정적 검사",
+              "evidence": "verification.json, compile/result.json, compile/math/result.json, asset-checks.json, Review/manifest.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T11:47:41.464Z",
+          "summary": "현재 실제 제한",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "실제 Affinity MCP 연결 ECONNREFUSED. 화면 조작/앱 시작 금지로 필수 로고 제작·출력 미실행.",
+              "evidence": "실제 CLI doctor/status ECONNREFUSED 및 사용자 화면 조작 보류 답변",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "실제 Unity 화면·Play·UI 선택·언어 전환·캡처는 사용자 지시로 미실행.",
+              "evidence": "사용자: 화면을 건드리지 말고 구현부터 진행해주세요",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103110929096-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-20261103110929096-v1.0.0.md",
+    "date": "2026-11-03T11:09:29.096Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "pixel-toolor-foliage-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Pixel Tooler 식생 제품과 독립 판매 구성",
+      "summary": "독립 식생 모듈과 Camera·Pixora 선택 연동, 잔디·꽃·관목 및 나무 확장 예제를 구현합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자 화면 조작 금지. 파일 편집·정적 검사 진행, 실제 시각 QA와 Affinity 연결 복구는 pending.",
+      "outcome": "기존 변경을 보존하며 구현을 시작합니다. 사용자 요청으로 화면 조작은 하지 않습니다.",
+      "proposedTime": "60~120분",
+      "actualTime": "시작 2026-11-03 20:06:30 KST",
+      "xerjEvidence": "Status node not running, Search startup failed. 현재 코드 rg 직접 대조로 계속합니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-toolor-foliage-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "Pixel Tooler 제품군과 개별 사용 가능한 식생 도구 및 확인용 예제를 구성합니다.",
+      "completionCriteria": "독립 식생 Runtime·편집 도구·9개 언어·10개 예제·나무 확장·선택 연동·자체 로고·패키지 격리·정적/실제 QA와 공개 보고서",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "제품군·독립 의존성 구성",
+          "action": "제품군·독립 의존성 구성의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "제품군·독립 의존성 구성의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "식생 Runtime·바람·접촉·배치",
+          "action": "식생 Runtime·바람·접촉·배치의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "식생 Runtime·바람·접촉·배치의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "9개 언어 Editor와 프로필",
+          "action": "9개 언어 Editor와 프로필의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "9개 언어 Editor와 프로필의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "자체 아트·로고",
+          "action": "자체 아트·로고의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "자체 아트·로고의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "10개 예제와 선택 연동",
+          "action": "10개 예제와 선택 연동의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "10개 예제와 선택 연동의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "정적 컴파일·격리·회귀 검사",
+          "action": "정적 컴파일·격리·회귀 검사의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "정적 컴파일·격리·회귀 검사의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "실제 화면·입력·문서 검증",
+          "action": "실제 화면·입력·문서 검증의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "실제 화면·입력·문서 검증의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "패키지·공개 결과 보고",
+          "action": "패키지·공개 결과 보고의 기존 구조 확인 후 구현하고 근거를 기록합니다.",
+          "expected": "패키지·공개 결과 보고의 결과물과 통과 근거 확보",
+          "qa": "현재 소스·산출물·실제 실행을 범위에 맞게 대조하고 미실행은 보존합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103104038131-v1.0.2.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103104038131-v1.0.2.md",
+    "date": "2026-11-03T10:40:38.131Z",
+    "version": "v1.0.2",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-resources-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+      "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "설치및실제Explorer GUI검증은별도보류.공개완료를설치성공으로간주하지않음.",
+      "outcome": "구현·native QA·MSI검증·공개보고·GitHub릴리스배포완료.설치·GUI QA는사용자화면제어금지로제외한범위유지.",
+      "proposedTime": "5~10분",
+      "actualTime": "최적화19:16:44KST시작,공개검증19:35:09KST.추가릴리스19:36:07KST시작,릴리스공개19:38:41KST(2분34초).추가공개보고검증진행.",
+      "xerjEvidence": "XERJ도구없음,rg사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-resources-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "파일별 차액 갱신을 유지하며 메모리와 CPU 부담 줄이기",
+      "completionCriteria": "디스크 인덱스 차액/이름변경/삭제/재시작 정확성, 메모리·CPU 실측, 빌드·MSI검증·단일dist·공개보고. 사용자화면제어금지로 설치와GUI적용은보류.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103103005748-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "디스크 인덱스 및 제한 구현",
+          "action": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "expected": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "회귀와 자원 측정",
+          "action": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "expected": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "빌드와 공개 보고",
+          "action": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "expected": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "GitHub 릴리스 배포",
+          "action": "고정MSI·SHA256을Actions태그배포로업로드하고공개다운로드해시대조",
+          "expected": "릴리스공개·Actions성공·로컬/다운로드SHA256일치",
+          "qa": "GitHub API·공개다운로드·SHA256·로컬Git상태확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean."
+        }
+      ],
+      "focusTasks": [
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "사용자가1.0.16 GitHub 릴리스배포를추가요청하여T04를추가.기존작업·QA보존.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T10:29:54.354Z",
+          "summary": "자원 및 정확성 회귀",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+              "evidence": "agent.cpp/disk_index.hpp/build 결과",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+              "evidence": "resource_test 전체 및 최종quick, broker_resource_test 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T10:40:32.148Z",
+          "summary": "공개보고및릴리스배포확인",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인.",
+              "evidence": "Pages배포성공·공개HTML/PNG HTTP200",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean.",
+              "evidence": "GitHubActions41620963081·릴리스API·다운로드SHA256",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "final",
+          "at": "2026-11-03T10:40:32.154Z",
+          "summary": "구현·회귀·공개보고·릴리스전체완료기준대조;설치제외범위유지",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+              "evidence": "해당실행·배포근거",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+              "evidence": "실행시험출력",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "MSI ICE0,고정dist16,소스푸시,공개보고서HTTP200·이미지200,대체Pages배포ec2e783 성공확인.",
+              "evidence": "해당실행·배포근거",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "77b1c32 및v1.0.16 푸시.41620963081 성공.19:38:41KST 공개.다운로드SHA256 dfa898faac89b84c6aefe43cbe2ad5d9268b31cb0c6a1ad2e55b2fb8869642ed 동일.로컬원본Gitclean.",
+              "evidence": "공개다운로드및Actions",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103408361-v1.0.2.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103408361-v1.0.2.md",
+    "date": "2026-11-03T10:34:08.361Z",
+    "version": "v1.0.2",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "dylearn-grass-analysis-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "픽셀 잔디 데모 분석 실행 메뉴얼",
+      "summary": "Godot 잔디 셰이더와 Pixel Camera 소스를 대조했습니다. 독립 식생 모듈과 카메라 연동을 권하며 실행 성능은 미검증입니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "### 표현을 구성하는 기술\n\n| 요소 | 소스에서 확인한 처리 | Unity 적용 제안 |\n| --- | --- | --- |\n| 풀의 모양 | 카메라 방향을 향하는 quad billboard + nearest 텍스처 + 알파 절단 | 픽셀 스프라이트를 얹는 인스턴스 메시 |\n| 넓게 흐르는 바람 | 다른 방향·속도·스케일의 두 노이즈를 곱해 회전 생성 | 월드 좌표 바람 필드 공유 |\n| 작은 흔들림 | 개별 위치 seed를 가진 사인파 회전 | 공통 바람에 개체별 움직임 추가 |\n| 손그림 리듬 | 위치별 phase를 더한 시간을 round(time * FPS) / FPS로 양자화 | 렌더 FPS와 별도로 식생 애니메이션 FPS 제어 |\n| 앞뒤로 눕는 인상 | 바람·캐릭터 방향과 카메라 방향에 따라 UV 폭을 변경 | 실제 원근 카메라 대신 재질의 가짜 원근 처리 |\n| 자연스러운 색 덩어리 | 월드 노이즈로 3개 색 영역, 드문 accent 스프라이트 선택 | 바닥·풀 색 패턴의 좌표와 스케일 일치 |\n| 부드러운 명암 | 계단형 toon 경계 일부에 smoothstep 혼합 | 픽셀 윤곽을 흐리지 않고 명암 경계만 부드럽게 |\n| 구름 그림자 | 광원 방향으로 가상 구름 평면에 투영해 노이즈 조명 계산 | 풀·바닥에 같은 월드 조명 마스크 |\n| 접촉 반응 | 최대 64개 위치·반경을 전달하고 카메라 축 방향으로 회전 합산 | 소수 캐릭터 배열 또는 넓은 장면용 상호작용 필드 |\n\n근거: [Grass.gdshader](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Shaders/Grass.gdshader), [구름 include](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Shaders/clouds.gdshaderinc), [CharacterManager](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/Scripts/CharacterManager.gd).\n\n### 카메라와의 관계\n\nDemo.tscn은 640×360 SubViewport, orthographic projection=1, 카메라 size=6.085를 저장합니다. MultiMesh는 40,000개 할당, 30,000개 표시를 설정합니다. 이 숫자는 성능 벤치마크가 아닙니다. 저장 재질의 잔디 애니메이션은 5 FPS이며 CharacterManager의 위치 전달 기본값은 10 Hz입니다. 게임 전체가 5 FPS라는 뜻은 아닙니다. 사용자 첨부의 1·3·5·7 FPS가 정확히 어느 스위치인지 영상 확인은 못 했습니다.\n\n카메라는 해상도·투영·화면의 픽셀 격자를 결정하고, 셰이더는 풀 모양·바람·접촉·명암을 결정합니다. billboard와 가짜 원근은 카메라 방향을 사용하므로 완전히 무관하지 않습니다. 카메라 필터만 추가해도 이 잔디가 생성되는 것은 아닙니다.\n\n현재 PixelCameraEffect.cs는 저해상도 RenderTexture와 Point 필터, 격자 안정화를 구현하고 PixelCameraPreset.cs는 해상도·팔레트·외곽선 설정을 제공합니다. PixelCameraSteppedAnimator.cs는 Unity Animator를 일정 간격으로 평가합니다. 이는 GPU 셰이더 TIME을 단계화하지 않으므로 잔디에는 별도의 시간 uniform이 필요합니다. PixelCamera Runtime·Integrations에서 grass/wind/billboard/character_positions 검색은 일치하지 않았습니다. 다른 제품 전체의 기능 부재까지 주장하지 않습니다.\n\n### 기존 도구와 선택\n\n| 후보 | 확인한 역할 | 판단 |\n| --- | --- | --- |\n| Dylearn 원본 | Godot 픽셀 잔디 소스와 아트 | 학습·이식 기준에 가장 직접적이나 Unity 재구현 필요 |\n| [Stylized Grass Shader](https://discussions.unity.com/t/stylized-grass-shader-unity-6-support-now-available/771327) | 제작자가 Unity 6 지원 안내, 바람·굴곡·지면 색 혼합을 소개 | 빠른 Unity 실험 후보. 원본 픽셀 미감·현재 프로젝트 결합은 별도 QA 필요 |\n| [ProPixelizer](https://propixelizer.github.io/docs/technical/propixelizer-camera/) | 카메라 격자 스냅, 전체/선택 픽셀화, 월드 픽셀 크기 | 잔디 생성 도구가 아니며 기존 Pixel Camera와 역할이 겹침 |\n| [Bramreth Godot grass](https://github.com/bramreth/Godot-4-3D-Stylized-Grass) | Godot 4 + Blender 잔디 튜토리얼 | 다른 잔디 구성 학습용이며 Unity 즉시 설치용 아님 |\n\n상용 에셋 구매는 수행하지 않았습니다. 상용 에셋을 게임에 쓰는 것과 자체 판매 패키지에 재배포하는 것은 구분해야 합니다.\n\n### 제품화 제안 — 미구현 후보\n\n1. 우선 자체 아트의 작은 잔디 장면을 기존 Pixel Camera와 결합해 비교합니다. 연속/5/8/12 FPS, phase 동기/분산, hard/soft toon, 구름 켜기/끄기를 같은 카메라에서 비교하는 것이 적절합니다.\n2. 결과가 좋으면 독립적인 픽셀 식생 제품으로 분리합니다. 핵심은 billboard 식생, 페인팅/배치, 공통 바람, 캐릭터 반응, 스타일 프리셋, 거리별 표시와 카메라 선택 통합입니다. 카메라 없이도 동작하고 Pixel Camera는 선택 연동으로 두는 구성이 적절합니다.\n3. 확장 후보는 꽃밭·밀밭·갈대·관목·나뭇잎·깃발이며, 공통 바람과 단계화 시간을 재사용할 수 있습니다. 눈·모래 발자국은 누적 상태가 필요해 현재 순간적인 접촉 회전보다 별도 구현 범위가 큽니다. 물은 반사·깊이·투명 처리 때문에 초기 범위와 분리하는 것이 좋습니다.\n\n이는 기술 구조에 근거한 제안이며 상품성·판매량·프레임 성능은 미확인입니다. 신규 제품을 채택할 경우 기존 프로젝트의 9개 언어, 샘플 격리, 자체 로고, 문서와 실행 QA 요구를 적용해야 합니다.\n\n### 라이선스 확인\n\n[LICENSE.txt](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo/blob/7486b9b99834d95c4287cc917971b3d74ba37d8c/LICENSE.txt)는 코드를 MIT, 아트를 CC BY 4.0으로 구분합니다. MIT 코드 사용 시 저작권·허가문을 보존하며, 아트에는 저작자·라이선스 링크·변경 표시가 요구됩니다. Waterfowl 로고·브랜드는 제외합니다. 동시에 4항에 상당한 독창적 수정 없는 아트 단독 재배포·재판매 금지 문구가 있습니다. CC BY 표준 안내만 보고 판매 패키지 재배포를 확정할 수 없으므로 자체 아트를 사용하거나 권리자에게 조건을 명확히 확인하는 방향을 제안합니다.",
+      "verification": "원본 저장소를 내려받아 커밋·project.godot·Demo.tscn·Grass/Floor/Toon/Cloud 셰이더와 CharacterManager 소스를 직접 대조했습니다. 기존 Pixel Camera Runtime 소스와 비교했습니다. 공식 제작자 안내와 ProPixelizer 문서를 확인했습니다.\n\nGodot 실행 파일은 PATH 조회에서 발견되지 않았으며 추가 설치나 GUI 실행을 하지 않았습니다. 프레임 성능, 실제 GPU 동작, Unity 동일 영상 재현과 회전 카메라에서의 품질은 미검증입니다. 이번 결과는 소스 분석 보고서이며 원본 실행 스크린샷이나 전후 품질 비교가 없습니다.\n\n교훈 검토: 전역 지침 변경 없음. 라이선스 원문 확인과 실행/소스 검증 구분은 기존 규칙에 포함되며, 이 저장소의 특별 문구는 이번 보고서에 한정해 기록합니다.",
+      "remaining": "분석 요청과 최초 공개 검증 완료. Unity 구현·실행 성능 검증은 후속 후보입니다.",
+      "outcome": "분석은 완료했습니다. Unity로 유사한 표현을 구현할 수 있는 구조이며, 카메라 픽셀화와 식생 셰이더를 분리해 결합하는 방향을 제안합니다. Unity 이식·실행·성능 측정은 이번 분석에 포함하지 않았고 완료로 표시하지 않습니다.\n\n원본은 Godot 4.4 / Forward Plus를 선언한 3D 픽셀 잔디 데모입니다. 확인한 커밋은 7486b9b99834d95c4287cc917971b3d74ba37d8c입니다. 완성 게임이나 Unity 패키지가 아닌 스크립트·셰이더·모델·텍스처·시연 씬입니다.\n\n[원본 저장소](https://github.com/DylearnDev/Dylearn-3D-Pixel-Art-Grass-Demo) · [제공 영상](https://www.youtube.com/watch?v=OxsuWDtjuGw)\n\n영상 페이지를 도구로 가져오지 못했습니다. 영상 전체 시청·음성·시간별 효과 대응은 미확인입니다. 사용자 첨부 화면과 실제 저장소 소스로 분석했습니다. 에디터 실행 화면은 수집하지 않았으며 시각 재현 통과를 주장하지 않습니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "시작 2026-11-03 19:24:22 KST, 분석·최초 공개 검증 완료 2026-11-03 19:33:58 KST, 약 577초. 완료 기록의 공개 반영은 후속 푸시합니다.",
+      "xerjEvidence": "Xerj.ps1 Status: node not running. Search 실행은 startup failed. 외부 Godot와 PixelCamera Runtime은 인덱스 범위 밖이므로 현재 파일을 rg와 직접 읽기로 대조했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "dylearn-grass-analysis-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "원본 기술·카메라 역할·Unity 적용과 제품 후보를 검토합니다.",
+      "completionCriteria": "소스·라이선스 대조, 유사 사례 비교, 제한 명시 및 공개 보고서 확인",
+      "previousManual": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103045693-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원본과 기존 구현 분석",
+          "action": "원본 소스와 설정·라이선스 및 PixelCamera Runtime을 대조합니다.",
+          "expected": "확인 사실과 미확인을 분리한 분석",
+          "qa": "원문 경로와 설정값을 분석 본문과 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "원본 커밋·씬·셰이더·라이선스와 기존 PixelCamera 소스를 대조하고 분석 본문을 작성했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "분석 보고서 공개 검증",
+          "action": "JSON 보고서 생성·빌드·검사·커밋·푸시 후 공개 본문 확인",
+          "expected": "개별 HTTPS 보고서 접근",
+          "qa": "배포 상태와 공개 URL 본문 확인",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "826aefd 배포 성공, 개별 보고서 HTTP 200 및 제목·커밋·미검증 문구 확인. 로컬 14개 테스트 파일과 링크·필터·원문 보존 검사 통과."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T10:30:28.537Z",
+          "summary": "소스 분석 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "640×360, orthographic, 30000 표시 설정, phase 양자화·UV 변형과 원본 LICENSE 조항을 대조했습니다. 영상 전체와 실행 성능은 미확인으로 보존했습니다.",
+              "evidence": "원본 7486b9b99834d95c4287cc917971b3d74ba37d8c 및 분석 보고서",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-03T10:33:58.702Z",
+          "summary": "소스 분석 및 공개 전달 전체 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원본 커밋·씬·셰이더·라이선스와 기존 PixelCamera 소스를 대조하고 분석 본문을 작성했습니다.",
+              "evidence": "원본 소스 대조와 source-checks.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "826aefd 배포 성공, 개별 보고서 HTTP 200 및 제목·커밋·미검증 문구 확인. 로컬 14개 테스트 파일과 링크·필터·원문 보존 검사 통과.",
+              "evidence": "https://github.com/MDJ0126/codex-config/actions/runs/41619952208 및 공개 보고서 HTTP 200",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103045693-v1.0.1.html",
     "postPath": "projects/turnroom/posts/2026-11-03-manual-dylearn-grass-analysis-20261103-20261103103045693-v1.0.1.md",
     "date": "2026-11-03T10:30:45.693Z",
@@ -96,6 +809,484 @@
     }
   },
   {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103103005748-v1.0.1.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-resources-20261103-20261103103005748-v1.0.1.md",
+    "date": "2026-11-03T10:30:05.748Z",
+    "version": "v1.0.1",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-resources-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+      "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "설치·GUI QA는 사용자제어금지로보류. 공개배포검증진행.",
+      "outcome": "구현과 회귀 검증 진행 중입니다.",
+      "proposedTime": "5~10분",
+      "actualTime": "2026-11-03 19:16:44 KST 시작.19:28경 구현·검증·MSI·소스푸시.공개보고검증진행.",
+      "xerjEvidence": "XERJ도구없음,rg사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-resources-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "파일별 차액 갱신을 유지하며 메모리와 CPU 부담 줄이기",
+      "completionCriteria": "디스크 인덱스 차액/이름변경/삭제/재시작 정확성, 메모리·CPU 실측, 빌드·MSI검증·단일dist·공개보고. 사용자화면제어금지로 설치와GUI적용은보류.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103102205573-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "디스크 인덱스 및 제한 구현",
+          "action": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "expected": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "회귀와 자원 측정",
+          "action": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "expected": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "빌드와 공개 보고",
+          "action": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "expected": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "native빌드·MSI ICE0, dist16 MSI+SHA256고정. 소스푸시완료, 공개보고검증진행."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T10:29:54.354Z",
+          "summary": "자원 및 정확성 회귀",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "디스크SQLite 캐시2MiB, 동시스캔2, 정상차액우선, 통지4096, 스캔양보8ms, CPU상한1% 구현. fdcd4fa 푸시.",
+              "evidence": "agent.cpp/disk_index.hpp/build 결과",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "150000기존최대116002816B/신규9302016B, SQLite캐시2154960B, 신규평균CPU0.729%. 이동·추가·삭제·재열기·롤백 통과. 실제worker 초기7B→19B→삭제0B, 정상변경recovering없음.",
+              "evidence": "resource_test 전체 및 최종quick, broker_resource_test 실제 실행",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-manual-pixel-camera-objects-20261101-20261103102924717-v1.0.4.html",
+    "postPath": "projects/pixelcamera/posts/2026-11-03-manual-pixel-camera-objects-20261101-20261103102924717-v1.0.4.md",
+    "date": "2026-11-03T10:29:24.717Z",
+    "version": "v1.0.4",
+    "project": "pixelcamera",
+    "kind": "manual",
+    "manualId": "pixel-camera-objects-20261101",
+    "round": 5,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixelcamera",
+      "kind": "manual",
+      "title": "Pixel Camera 물체별 픽셀화와 렌더 시점 안정화",
+      "summary": "부드러운 조명 전환·작은 픽셀·옅은 외곽선·주변광을 적용했습니다. native 시각 QA는 포커스 제한으로 미실행입니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "첫 미완료T02의 실제 화면 QA와 T04/T08의 soft-tone 시각 확인, 원래 나머지 완료 조건 유지.",
+      "outcome": "구현 및 정적 검사는 완료했습니다. 원래 전체 완료 조건과 실제 시각 QA는 유지합니다.",
+      "proposedTime": "15~25분",
+      "actualTime": "2026-11-03 19:18:05 KST 시작. 소스·3씬·9프리셋 수정 및 정적 검사 수행; 전체 완료 시각 없음.",
+      "xerjEvidence": "XERJ node is not running; rg로 현재 소스 대조.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-objects-20261101",
+      "round": 5,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "선택한 물체별 해상도와 비픽셀 배경을 합성하고 물체 이동 스냅·복원을 검증. 세 샘플 기본 자동 회전과 명시적 외곽선 버튼 제공",
+      "completionCriteria": "기존 기본 경로 호환 유지, 실제 Unity 렌더의 서로 다른 크기/배경보존/깊이/이동·계층·다중카메라 복원 및 회귀, Inspector·샘플·가이드·패키지·공개 보고. 네이티브 입력 및 새 URP 프로세스 미실행은 명시",
+      "previousManual": "projects/pixelcamera/reports/2026-11-01-manual-pixel-camera-objects-20261101-20261101121542525-v1.0.3.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "설계·상태 보존 계약",
+          "action": "기존 렌더/프리셋 및 Unity6 API 대조, 깊이·크기 버킷·복원 계약 정의",
+          "expected": "기존 FullCamera 기본값 호환 및 렌더 시점 변경의 정확한 복원",
+          "qa": "현재 소스/API 및 실제 복원 검사 설계",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "물체별 렌더와 스냅",
+          "action": "선택 컴포넌트·크기별 저해상도 캡처·깊이 합성·위치/선택 회전 스냅 및 복원 구현",
+          "expected": "비픽셀 배경, 다른 픽셀 크기, 앞 물체 가림과 게임 좌표 보존",
+          "qa": "실제 Unity 색/깊이/동일 셀 렌더 및 다중카메라/상태 복원 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 2,
+          "result": "화면/월드/비율 크기, 선택 원근 앵커와 잔여 합성 재투영·방향성 외곽선 공통 코드까지 추가. 소스6개·고객/템플릿7개 컴파일 및31셰이더 엔트리 정적 커버. 실제 픽셀·복원 검증은 미실행."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "URP 통합 및 호환",
+          "action": "기존 RenderGraph에 물체 필터/합성 경로 연결, FullCamera 회귀 보존",
+          "expected": "원래 모드 유지 및 신규 경로 미지원/한계 명시",
+          "qa": "현재17.0.4 소스/참조 대조와 가능한 컴파일·기존 실행 검사. 신규 URP GUI 실행 보류 명시",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "URP17.0.4 공통 단위/재질/Meta+Composite 연결·툰/Graph API 정적 컴파일. 한 vendor macro는 Unity-bundled DXC legacy expansion으로 검증. 현재 URP native실행은 보류."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "Inspector와 예제 조작",
+          "action": "템플릿 Inspector, 세 씬 자동 회전/4·8px와 외곽선·스냅 조작. 배치·스타일·정적 문구·버튼 연결은 각 ShowcaseGuide.prefab의 native UGUI/Inspector 영구 이벤트로 작성하고 런타임 생성 제거; X 크기·M 잔여이동·B 베벨·D 디더·V 툰 비교와13/13/14개 영구 이벤트 반영 부드러운 명암 전환과2/4px·색상 외곽선·주변광 기본값을 적용한다.",
+          "expected": "시작 회전과 외곽선/스냅 버튼 값·화면 일치, UI를 씬/프리팹에서 편집 가능 픽셀 윤곽은 선명하게 유지하고 명암·외곽선은 부드러운지 실제 화면으로 확인한다.",
+          "qa": "프리팹 import·씬 배치·Inspector 이벤트 대상·실제 클릭/키의 반환 값과 렌더를 대조. 현재 정적 파일 검사만 통과, native UI QA 보류 같은 시점 전후 캡처, Built-in/URP, V재질복원·O외곽선 왕복을 확인한다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 4,
+          "result": "구현·정적 컴파일·씬 ID/형상/애니메이션 연결 및 UI 이벤트 보존 대조 통과. Native 시각 QA 미실행."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "회귀·문서·패키지·공개",
+          "action": "새 렌더 캡처와9개 언어 가이드, 패키지 전수 대조와 JSON 기반 공개 보고",
+          "expected": "검증 범위와 제약을 포함한 구현 결과·개별 HTTPS 보고서",
+          "qa": "전체 관련 렌더 회귀·에셋/메타/링크·실제 공개 바이트 대조",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "9개 언어 저작 가이드·API/제한·업데이트된 사용자 가이드·1134개 로컬 링크 검사,611개 패키지 asset/meta 및 ZIP CRC/바이트 대조 통과. 실제 재촬영/신규 설치·게시 확인은 별도."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "해상도·서브픽셀 안정화",
+          "action": "카메라/물체의 화면 비율·월드 단위, 원근 루트 스냅 옵션과 합성 오프셋 구현",
+          "expected": "기존 기본값 보존, 단위 변환·화면 잔여 이동과 깊이 합성 계약 명시",
+          "qa": "컴파일·CPU 수학/경계 검사, 실제 Unity 렌더 QA 보류",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "화면/월드/비율 계산과 줌, 셀 중심·잔여 이동 수학은 실제 공유 C# 코드에서 검사. Root smooth9이웃 재투영과 선택 원근 앵커 구현; 교차/뼈/모든 원근 안정화는 보장하지 않으며 native렌더 대기."
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "팔레트·디더 저작",
+          "action": "RGB/원형HSV 매칭·이미지 팔레트 추출·3D LUT·4/8/사용자 디더 구현",
+          "expected": "원본 이미지/프리셋 보존, 재생성 가능 LUT와 재현 가능한 패턴",
+          "qa": "실제 알고리즘 입력/출력 테스트·HLSL 컴파일·에셋 API 검사",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "RGB/원형HSV·median-cut 추출·2/4/8/custom 임계값·float32 Texture3D lookup 및 stale-signature fallback API 구현. 입력 불변/알파/순위·팔레트 인덱스·어두운 선형색 보존 등 CPU검사 통과. 실제 텍스처/에셋 왕복은 미실행."
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "툰 조명·외곽선·Shader Graph",
+          "action": "툰 재질과 방향성 외곽선, 문서화된 Shader Graph Custom Function 계약 추가 부드러운 명암 전환과2/4px·색상 외곽선·주변광 기본값을 적용한다.",
+          "expected": "원래 재질 경로와 신규 선택 기능 구분, 사용 가능한 함수/재질 제공 픽셀 윤곽은 선명하게 유지하고 명암·외곽선은 부드러운지 실제 화면으로 확인한다.",
+          "qa": "정확한 Unity/URP 참조·HLSL 컴파일, 실제 렌더/Graph UI 미확인 구분 같은 시점 전후 캡처, Built-in/URP, V재질복원·O외곽선 왕복을 확인한다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 2,
+          "result": "구현·정적 컴파일·씬 ID/형상/애니메이션 연결 및 UI 이벤트 보존 대조 통과. Native 시각 QA 미실행."
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "애니메이션 저작",
+          "action": "Animator 단계 재생과 원본을 보존하는 클립 베이크 API/편집 UI 추가",
+          "expected": "재생/전환과 원본 메타·이벤트 보존, 일반 클립 변환 작업 제공",
+          "qa": "C#·타임샘플/상수 곡선 알고리즘 검사, 실제 Animator 실행 QA 대기",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "원본을 보존하는 고유 stepped.anim 복사·constant tangent·event/reference/settings 유지 및 200만key제한 API/Inspector, 수동 Animator clock·flag복원 컴포넌트 구현. 프레임 시간표 CPU검사/C#컴파일 통과. Native Animator/Clip왕복은 미실행."
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "제출 준비·문서·포장",
+          "action": "9개 언어 설명과 현재 기능 차이·제출 필드/의존성/파일·최종 후보 갱신",
+          "expected": "안전한 후보와 사실에 맞는 제출 체크리스트. GUI/미확정 판매자 필드는 명시",
+          "qa": "패키지 asset/meta/연결·문서 링크·게시 검증. Native UI/신규설치/Affinity 제한 기록",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "현재611에셋 후보와 체크리스트/정확한 listing·AI disclosure/지원 범위 작성, static-customer7어셈블리·31셰이더·24187알고리즘검사·946GUID참조·1134문서링크 통과. 가격미정/null·native/미디어/판매자 게이트 유지."
+        }
+      ],
+      "focusTasks": [
+        "T02",
+        "T04",
+        "T08"
+      ],
+      "scopeChange": "사용자 요청에 따라 부드러운 톤을 기본 방향으로 변경. 원래10작업과 기존 QA를 모두 보존하고 예제·스타일 작업만 수정 버전을 올립니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-01T09:02:16.8117727Z",
+          "summary": "첫 실제 Unity 셰이더 probe 실패를 보존합니다. 상위 명령 passed가 내부 QA의 실패를 덮지 않도록 bridge 소스도 수정했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "PixelCameraObjects.isSupported/ShaderHasError 검사 실패. 이후 메시지에서 HLSL 예약어 triangle, line의 사용 오류를 확인했습니다.",
+              "evidence": "UnityProbe-1/2/3.json. 아직 픽셀 비교 단계에 도달하지 않았으므로 물체별 렌더/안정화 통과 증거가 아닙니다.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-01T09:03:40.4798796Z",
+          "summary": "수정 전 Unity 예약어 오류 확인. 예약어를 바꾸고 static D3DCompile로 재검사했지만 컴퓨터 조작 중지 후 Unity 장면 QA는 보류했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "Unity에서 unexpected token line 및 파생 오류가 확인됐습니다. 해당 식별자는 edgeSample로 변경했습니다. triangle도 fullscreenVertex로 변경했습니다.",
+              "evidence": "UnityProbe-3.json; 수정 후 Shaders.json의8개 엔트리/인스턴싱 변형은 hresult0. Unity 재-probe 미실행.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-01T09:32:34.890Z",
+          "summary": "최종 현재 소스 정적 컴파일, 직렬화 참조, 패키지 바이트 대조 통과. Unity 화면/입력/설치 전체 QA와 구분합니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "FullCamera enum0 기본값과 기존 경로 유지·SelectedObjects 분기, 원래 재질/깊이·상태 복원 계약을 현재 소스와 Unity6/URP17.0.4 참조 컴파일로 확인했습니다.",
+              "evidence": "CSharp.json의6개 컴파일 exitCode0 및 현재 소스 해시. FullCamera enum0과 기존 분기 유지 확인.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "PixelCameraObject/렌더 스코프/크기 버킷/float ID+눈 깊이 합성/루트 스냅·복원 코드를 구현했습니다. 첫 Unity 셰이더 실패의 예약어를 수정했고 정적 HLSL8항목 통과. 수정 후 Unity 재실행·렌더/복원 QA는 미실행.",
+              "evidence": "CSharp.json/ Shaders.json은 정적 통과. 픽셀·좌표 복원 실제 비교 미실행",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "URP RenderGraph 필터·합성·원본 rendering-layer 보존 및 재질 정리 코드와 정확한17.0.4 참조 컴파일 통과. 실행 QA 대기.",
+              "evidence": "정확한 URP17.0.4 참조 정적 컴파일 exitCode0. 새 URP 프로세스 실행 없음",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "세 기존 씬 각각4/8px 컴포넌트2개·autoRotate1·프리팹 연결, native CanvasRenderer/Text/Image와 버튼8/8/9개 영구 대상/메서드 참조 검사 통과. 실제 import/화면/클릭은 미확인.",
+              "evidence": "SerializedAssets.json:3씬·2루트씩·UI영구버튼8/8/9·내부 fileID/CanvasRenderer 확인. 실제 Unity import/클릭 미실행",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "9개 번역 설명·한계·미촬영 표시 갱신, 기존 캡처 해시 보존. 고객 패키지590개 asset/meta 전수 바이트 대조 통과. 설치·화면·공개 배포 QA는 별도.",
+              "evidence": "PackageAudit.json asset/meta 전수 대조, ZIP CRC/바이트 대조. fresh import/재촬영 미실행",
+              "dependencies": {
+                "T04": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "regression",
+          "at": "2026-11-01T12:15:34.639Z",
+          "summary": "현재 소스와 고객 후보의 실제 헤드리스/정적 검사. FXC 전처리 실패를 보존하고 같은 instancing 입력의 DXC 대체 컴파일을 별도 기록했습니다. Native QA는 미실행입니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "화면/월드/비율 크기, 선택 원근 앵커와 잔여 합성 재투영·방향성 외곽선 공통 코드까지 추가. 소스6개·고객/템플릿7개 컴파일 및31셰이더 엔트리 정적 커버. 실제 픽셀·복원 검증은 미실행.",
+              "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "화면/월드/비율 계산과 줌, 셀 중심·잔여 이동 수학은 실제 공유 C# 코드에서 검사. Root smooth9이웃 재투영과 선택 원근 앵커 구현; 교차/뼈/모든 원근 안정화는 보장하지 않으며 native렌더 대기.",
+              "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "RGB/원형HSV·median-cut 추출·2/4/8/custom 임계값·float32 Texture3D lookup 및 stale-signature fallback API 구현. 입력 불변/알파/순위·팔레트 인덱스·어두운 선형색 보존 등 CPU검사 통과. 실제 텍스처/에셋 왕복은 미실행.",
+              "evidence": "Algorithms.json 24187검사·CPU input/indices/oracle 통과. Native Texture3D/추출/재열기 미실행",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "툰 bands/주광원ramp/shadow tint/ambient/rim/emission, Built-in forward/add/shadow 및 URP forward/shadow/depth/normal 패스, directional edge lighting과Graph17 float 함수5개 구현. 정적 셰이더/Texture3D wire계약 통과; 전용SubTarget이나 기하 bevel은 아님.",
+              "evidence": "CompositeShaders13개+ToonGraphShaders17개 FXC 통과, vendor instancing1개는 동일 입력으로 DxcInstancing 통과. native렌더/Graph미실행",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "원본을 보존하는 고유 stepped.anim 복사·constant tangent·event/reference/settings 유지 및 200만key제한 API/Inspector, 수동 Animator clock·flag복원 컴포넌트 구현. 프레임 시간표 CPU검사/C#컴파일 통과. Native Animator/Clip왕복은 미실행.",
+              "evidence": "CSharp.json6개·CustomerCSharp.json7개·PreparationQA.json 정적 통과. 해당 native실행 기준은 미실행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T10:28:47.684Z",
+          "summary": "Soft tone 구현과 정적 검사는 통과. Native 완료 기준은 미실행으로 보존.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "포커스 제한으로 실제 Unity 전후 캡처 미실행.",
+              "evidence": "../assets/soft-tone-20261103/AssetAndMathQA.json; CSharp.json; ShaderFXC.json; ShaderDXC.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T04",
+              "revision": 4,
+              "verdict": "not_run",
+              "actual": "소스6어셈블리, 셰이더17FXC+1DXC, 3씬·9프리셋·UI영구이벤트 보존, 수학참조528528점 검사 통과. 실제 시각 QA 미실행.",
+              "evidence": "../assets/soft-tone-20261103/AssetAndMathQA.json; CSharp.json; ShaderFXC.json; ShaderDXC.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T08",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "소스6어셈블리, 셰이더17FXC+1DXC, 3씬·9프리셋·UI영구이벤트 보존, 수학참조528528점 검사 통과. 실제 시각 QA 미실행.",
+              "evidence": "../assets/soft-tone-20261103/AssetAndMathQA.json; CSharp.json; ShaderFXC.json; ShaderDXC.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103102917990-v1.0.0.html",
     "postPath": "projects/turnroom/posts/2026-11-03-manual-20261103102917990-v1.0.0.md",
     "date": "2026-11-03T10:29:17.990Z",
@@ -168,6 +1359,100 @@
       "focusTasks": [
         "T01",
         "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103102205573-v1.0.0.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-20261103102205573-v1.0.0.md",
+    "date": "2026-11-03T10:22:05.573Z",
+    "version": "v1.0.0",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-resources-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "파일 인덱스 메모리 및 계산 CPU 최적화",
+      "summary": "파일별 트리를 디스크 DB로 이동하고 CPU1%·캐시2MiB·동시스캔2개를 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "검증진행,설치보류",
+      "outcome": "구현과 회귀 검증 진행 중입니다.",
+      "proposedTime": "5~10분",
+      "actualTime": "2026-11-03 19:16:44 KST 시작",
+      "xerjEvidence": "XERJ도구없음,rg사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-resources-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "파일별 차액 갱신을 유지하며 메모리와 CPU 부담 줄이기",
+      "completionCriteria": "디스크 인덱스 차액/이름변경/삭제/재시작 정확성, 메모리·CPU 실측, 빌드·MSI검증·단일dist·공개보고. 사용자화면제어금지로 설치와GUI적용은보류.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "디스크 인덱스 및 제한 구현",
+          "action": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "expected": "파일별정보를디스크DB로옮기고캐시2MiB·동시스캔2·CPU1%적용",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "회귀와 자원 측정",
+          "action": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "expected": "150000파일의기존맵과디스크DB메모리·CPU,차액·이동·삭제·영속성검증",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "빌드와 공개 보고",
+          "action": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "expected": "최신단일설치파일·MSI검증·소스푸시·공개보고",
+          "qa": "실행결과·정확한합계·자원측정·배포대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
       ],
       "scopeChange": "",
       "qaRuns": [],
