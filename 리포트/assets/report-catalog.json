@@ -1,5 +1,25 @@
 [
   {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103061801491-v1.0.6.html",
+    "date": "2026-11-03T06:18:01.491Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 0.3.1 반복 렌더링 보강과 비모달 분석",
+    "summary": "정지한 반복 오브젝트의 행렬 재수집을 줄이고, 분석을 분할 처리하며 창 하단에서 진행률을 표시합니다. 네이티브 재측정은 대기 중입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103061800745-v1.0.0.html",
+    "date": "2026-11-03T06:18:00.745Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "잔디 양끝 채움·미래 날짜 어두운 비활성 처리",
     "summary": "빈 모서리를 채워 직사각형으로 맞추고 집계 기간 밖 칸은 호버·클릭에 반응하지 않게 했습니다.",
     "project": "codex-config",

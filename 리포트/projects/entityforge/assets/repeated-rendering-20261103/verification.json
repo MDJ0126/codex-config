@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-03T06:16:17.164Z",
+  "version": "0.3.1-preview",
+  "compilation": {
+    "assemblies": 7,
+    "currentSources": 97,
+    "passed": true,
+    "method": "Roslyn against installed Unity references; no Unity launch"
+  },
+  "analysis": {
+    "staticChecks": "pass",
+    "scheduling": "EditorApplication.update, 4ms cooperative budget",
+    "busyButton": true,
+    "fixedFooter": true,
+    "tabChangeContinues": true,
+    "modalRemoved": true,
+    "prefabPerRenderer": true,
+    "previewFingerprintSkipped": true,
+    "nativeUI": "pending: user desktop pause",
+    "atomicUnityCalls": "AssetDatabase.FindAssets / LoadAssetAtPath / hierarchy enumeration may exceed one time slice; no strict wall-time guarantee"
+  },
+  "localization": {
+    "languages": 9,
+    "entries": 514,
+    "placeholderCheck": "pass",
+    "guides": 9,
+    "links": 126,
+    "visual": "pending; historical capture hashes unchanged"
+  },
+  "logic": {
+    "drawPages": "PASS: actual ForgeDrawPages source; 10,000 entries, 1023-page boundary, paired swap removal/update, pooled reenable, 7,000 randomized removals, capacity reuse; 100,000 warmed add/set/remove cycles allocated 0 managed bytes. Unity jobs/rendering/material CRC/performance NOT executed.",
+    "timingPolicy": "PASS: actual ForgeBenchmarkPolicy source; foreground, sample-count, VSync, frame cap, render interval, mid-run changes and empty capture validation. Actual player focus/GPU measurements NOT executed."
+  },
+  "package": {
+    "path": "Artifacts/EntityForge/TurnRoom-EntityForge-0.3.1-preview.unitypackage",
+    "sha256": "f97a38351db8c1d0666c6ccafe8453f98fcf967ef3502e82bd78d62db0d9c5b7",
+    "assets": 407,
+    "readback": "pass",
+    "previousArtifactPreserved": "354d973a2fe7a5771599469bd2b0fbcd2131f976e197b979b7df3fb2e6440a16"
+  },
+  "historicalComparison": {
+    "version": "0.3.0-preview",
+    "baselineMeanMs": 16.787105560302734,
+    "dotsMeanMs": 17.05934715270996,
+    "focusAndGpuTimings": "not recorded; cause unverified",
+    "currentPatchPerformance": "not measured",
+    "sourceMeshTriangles": 2348,
+    "objects": 10000,
+    "triangleInstances": 23480000,
+    "geometryCost": "batching does not reduce source triangle count"
+  },
+  "sales": {
+    "preparedLanguages": 4,
+    "savedToPortal": false,
+    "submitted": false
+  },
+  "execution": {
+    "computerUse": false,
+    "unityStarted": false,
+    "playerExecuted": false,
+    "buildExecuted": false,
+    "nativeTests": "not executed"
+  },
+  "remaining": [
+    "Native analysis responsiveness, tab switching, cancellation, footer light/dark and nine-language layouts",
+    "Native runtime/render/material CRC/FrameTiming regression and foreground paired-player measurement",
+    "New package native import and sample removal regression",
+    "Actual seller draft Save and readback; never Submit"
+  ],
+  "xerj": "failed: node not running; rg fallback",
+  "lessons": "Existing evidence and desktop-pause rules apply; no global instruction change"
+}
