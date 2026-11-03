@@ -1,0 +1,473 @@
+{
+  "at": "2026-11-03T14:18:10.695Z",
+  "nativeCurrentRevision": "pending: user paused desktop control",
+  "baselineNative": {
+    "scene": "Assets/TurnRoom/PixelFoliage/Samples/Scenes\\09-MixedGarden.unity",
+    "utc": "2026-11-03T14:04:13.8197395Z",
+    "unity": "6000.0.83f1",
+    "assembly": "c2ec1407-4956-4988-a98e-640d7d948f0c",
+    "renderPath": "Low-resolution recapture",
+    "frames": 48,
+    "captures": 1
+  },
+  "compile": {
+    "at": "2026-11-03T14:14:11.855Z",
+    "guiProcessStarted": false,
+    "runtimeExecuted": false,
+    "results": [
+      {
+        "name": "TurnRoom.PixelFoliage.Runtime",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageContactHistory.cs": "9354b4d90a6e993ed530c7093c4c8c6a4ce8d490d582c177ad81962d0e4159cf",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageInteractor.cs": "d99170014910354bddc3c13cf1ddd1b449a680378a5cc02e949b3f41945c7a25",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageMath.cs": "0ce437d814b622f4a6d6093ad8d891f4f48f567ded07b90f90e5e3b1cdc408ba",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs": "2777d5f6fb33199c924dd6683b9cca39d17ff1a0e603726ea7a96958f3f7ddd1",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageProfile.cs": "f9007a0391459963bea76537b33312949e2517fb030ec3763f0b7ae4b2f5dc9a",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageRenderer.cs": "4d4463b1cf2e946450dba11b9875105d27d84da84f95a9d07e6a24c2f6aff207",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs": "2da513ff3a5de05170c12196f738885c04a5b8629b67c39ec658a1c601e683fe"
+        }
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.Editor",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageAuthoring.cs": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageTheme.cs": "50c99fb25893d41498b435a6e431b3a68eb523a4ef10274f43e26dd1304f145c",
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Editor/FoliageWindow.cs": "2d43213b18833540ee4b045702a4a16980c929190c1926669476356d976b0444"
+        }
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.Samples",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs": "556890505748efdf4add7bfc104239d2958faef02381d06869f9e8e9775112bc"
+        }
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.PixelCamera.Editor",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Editor/FoliagePixelCameraLink.cs": "256c951168e62c8c56ab5a75fa4f02bb37a9dbbbebeb897ae0953d6a157981a1"
+        }
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.Pixora.Editor",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelFoliage/Integrations/Pixora/Editor/FoliagePixoraImport.cs": "03b06c2c7864de290e5b554567d36415ca54f0d32df3cd0ec65a09657e8086e8"
+        }
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.Family",
+        "exitCode": 0,
+        "sources": {
+          "C:/Projects/TurnRoom/Assets/TurnRoom/PixelTooler/Editor/PixelToolerWindow.cs": "9cc484edf16d96a3adc1d778b669fde326d8254aa66954172d26151f73eb5d88"
+        }
+      }
+    ]
+  },
+  "math": {
+    "at": "2026-11-03T14:14:14.113Z",
+    "passed": true,
+    "scope": "Actual compiled FoliageMath against Unity managed structs, no scene rendering or native runtime",
+    "stdout": "Contact collection:600 requests at60Hz -> 103 total including explicit decay checks; initial window100 at10Hz vs600 unlimited. GPU cost and native scene performance not measured.\r\nPASS 20619 assertions against compiled FoliageMath, FoliageContactHistory and UnityEngine structs; no Unity native scene runtime.\r\n",
+    "stderr": ""
+  },
+  "shader": {
+    "fxc": {
+      "at": "2026-11-03T14:10:45.690771+00:00",
+      "passed": false,
+      "scope": "Actual static HLSL compilation using Unity6000.0.83f1 and URP17.0.4 headers. No Unity import/render QA.",
+      "entries": [
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFVertex",
+          "target": "vs_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 13920,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFFragment",
+          "target": "ps_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 8848,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFDepth",
+          "target": "ps_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 6420,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFNormals",
+          "target": "ps_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 6496,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFVertex",
+          "target": "vs_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": -2147467259,
+          "bytecodeBytes": 0,
+          "messages": "C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\PixelFoliage.shader(1309,12-54): error X3004: undeclared identifier 'UNITY_BUILTINS_WITH_WORLDTOOBJECTARRAYArray'\n",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFFragment",
+          "target": "ps_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": -2147467259,
+          "bytecodeBytes": 0,
+          "messages": "C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\PixelFoliage.shader(1309,12-54): error X3004: undeclared identifier 'UNITY_BUILTINS_WITH_WORLDTOOBJECTARRAYArray'\n",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFDepth",
+          "target": "ps_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": -2147467259,
+          "bytecodeBytes": 0,
+          "messages": "C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\PixelFoliage.shader(1309,12-54): error X3004: undeclared identifier 'UNITY_BUILTINS_WITH_WORLDTOOBJECTARRAYArray'\n",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFNormals",
+          "target": "ps_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": -2147467259,
+          "bytecodeBytes": 0,
+          "messages": "C:\\Projects\\TurnRoom\\Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\PixelFoliage.shader(1309,12-54): error X3004: undeclared identifier 'UNITY_BUILTINS_WITH_WORLDTOOBJECTARRAYArray'\n",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBVertex",
+          "target": "vs_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 9768,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBFragment",
+          "target": "ps_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 5544,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBDepth",
+          "target": "ps_5_0",
+          "defines": "",
+          "hresult": 0,
+          "bytecodeBytes": 3116,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBVertex",
+          "target": "vs_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": 0,
+          "bytecodeBytes": 10156,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBFragment",
+          "target": "ps_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": 0,
+          "bytecodeBytes": 5544,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        },
+        {
+          "file": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+          "entry": "PFBDepth",
+          "target": "ps_5_0",
+          "defines": "#define INSTANCING_ON 1\n",
+          "hresult": 0,
+          "bytecodeBytes": 3116,
+          "messages": "",
+          "preprocessor": "Unity-bundled Clang standard preprocessor; vendor headers unchanged"
+        }
+      ],
+      "sourceHashes": {
+        "Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\PixelFoliage.shader": "cde3a68fe86fa597dae360320b05f3357da7659ae4625f293f9e6f2f7007bec1",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\Core.hlsl": "d2a0d8fc95539837ec612e768f80284df0a50aca39a50e1d5e91a827dad4f0c0",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\Common.hlsl": "9ee9a26c9d8245aa7b2a8c44f2d92ccdc055f86be9e366bdbd9d217d831e3acd",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\API\\D3D11.hlsl": "dc9362fc3f1f495735681247bbca47d304d08b2a7252772d71037bad9a8b70dc",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\API\\Validate.hlsl": "3134db504d40f1a1fbf300af43fbf8c7ba62937dab96e873c998b20546be9b0d",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\Macros.hlsl": "bc2fcddd337b4f18ff6b1f89b5c487f9b974d18e9d4eac4f1da63ca1e2914816",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\Random.hlsl": "4d788edda5d92cb119ae7fe19e47965338979997e64d8df701ae6df1175d0be7",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\CommonDeprecated.hlsl": "44745d7cebaa271e6aef262d55db3debcbe26117a1929a21459cac5f62dd2cdd",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\Packing.hlsl": "df21b00c1457ce5c8c1ae6069fb4e6e4b4e15b3334ece98a28b7d2e8f302082e",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\Version.hlsl": "7712221f6a5d67235080a7e5a11b83b2a51c641f1b6cee4b73a702af33adde59",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\GlobalSamplers.hlsl": "f8db3219070a49de17e423bbfa2839becbecbd614c02f4888b39396f8e5d90db",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\Input.hlsl": "2d6acc42177e51decb6933af61e6f4b56565a3e1697060120f4c7d52b4f82bdd",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal-config\\Runtime\\ShaderConfig.cs.hlsl": "386f4b4362ac4b158b3b87c94d571e12ddb22d078a6016cd2eebd64df098c9a4",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\ShaderTypes.cs.hlsl": "f48eb2e6338da6e9aef933f1b42533b459308f728cde48dac8fa5cfa21f53bad",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\Deprecated.hlsl": "5b6c0b3a2e9ad8f6285f30aed67952de8e4431524f14c326c574dbc7502a2d21",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\UnityInput.hlsl": "891980d4a828e843a053c16277040c24145e613ef0a6d626fc61017db19a2ef2",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\UnityInstancing.hlsl": "2edb4ed8a69277a5a7f94f00dd323b5d594f9737b2761af99e943809a4c54862",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\UniversalDOTSInstancing.hlsl": "71aa2633c1b9314cac16fa3d1e2fc49797b9a47796ce706c27a7fd933f22691c",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.core\\ShaderLibrary\\SpaceTransforms.hlsl": "bd0c174c2300eec9baf99bddc5b003e34082766950d86e8d3746df7e8693acfa",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\ShaderVariablesFunctions.hlsl": "b76aff0ed3773c02c824c35527156c630097747bc5784731473cbf2d8f8ce25f",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\ShaderVariablesFunctions.deprecated.hlsl": "87423aab757b97e99f1b8905d7980c527aac8134efe2f9ca66cbecbddf5e0c24",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\Debug\\DebuggingCommon.hlsl": "98b99e2cb1490186c1041eab8ca20ca88160746937c3c58b03fb52d202726030",
+        ".local\\PixelCameraShaderIncludes\\Packages\\com.unity.render-pipelines.universal\\ShaderLibrary\\Debug\\DebugViewEnums.cs.hlsl": "184b6b5970cbd3f6c52a20ba8181584f62137a141af73c2609443d0e3649d5e7",
+        "Assets\\TurnRoom\\PixelFoliage\\Runtime\\Shaders\\FoliageCommon.hlsl": "fdab99a5a3daf16b89b36fc85be3184e14cfeceece29915c2adaa0fb8c196faf",
+        "UnityCG.cginc": "b3eaeccf5d1ead844abb5c1023367ed06a000882089bb46c38e87e385bd28f5e",
+        "UnityShaderVariables.cginc": "e6e421c3c64550c886eed2ca9c0442093305393c87d89004a0436feabf65b90c",
+        "HLSLSupport.cginc": "f8bd801346280b53bb1f64baa761ad55f6a44be5de701c7580f47bd116eded64",
+        "UnityShaderUtilities.cginc": "99aee089004d6476edac833d57b080acb6523e6cfe583e660e7ebab0cf056b79",
+        "UnityInstancing.cginc": "fcb9305be528bf0ed08cf410535fb6379d6c672ee06356d24b807f373550c37e"
+      }
+    },
+    "dxc": {
+      "at": "2026-11-03T14:10:46.266892+00:00",
+      "passed": true,
+      "compiler": "Unity dxcompiler.dll SM6 HLSL2018 legacy macro expansion",
+      "scope": "URP instanced variants, static compilation only. FXC failures retained in result.json.",
+      "entries": [
+        {
+          "entry": "PFVertex",
+          "hresult": 0,
+          "message": "warning: DXIL signing library (dxil.dll,libdxil.so) not found.  Resulting DXIL will not be signed for use in release environments.\r\n\n",
+          "inputSha256": "15a3eea9db36fa00156dfd0bbfac6d0a7750e1701e1806df7439b1fd8a5d729a"
+        },
+        {
+          "entry": "PFFragment",
+          "hresult": 0,
+          "message": "warning: DXIL signing library (dxil.dll,libdxil.so) not found.  Resulting DXIL will not be signed for use in release environments.\r\n\n",
+          "inputSha256": "543d80583c279208286e4c0fde78447e80cfcdb3e9430ee39fcd5f7c2c0d89b4"
+        },
+        {
+          "entry": "PFDepth",
+          "hresult": 0,
+          "message": "warning: DXIL signing library (dxil.dll,libdxil.so) not found.  Resulting DXIL will not be signed for use in release environments.\r\n\n",
+          "inputSha256": "543d80583c279208286e4c0fde78447e80cfcdb3e9430ee39fcd5f7c2c0d89b4"
+        },
+        {
+          "entry": "PFNormals",
+          "hresult": 0,
+          "message": "warning: DXIL signing library (dxil.dll,libdxil.so) not found.  Resulting DXIL will not be signed for use in release environments.\r\n\n",
+          "inputSha256": "543d80583c279208286e4c0fde78447e80cfcdb3e9430ee39fcd5f7c2c0d89b4"
+        }
+      ],
+      "compilerSha256": "61aa89f5a61672dc734ec2dfc362f47871de12eee716c687c59c4262569ebbd3"
+    }
+  },
+  "packages": {
+    "at": "2026-11-03T14:15:07.158377+00:00",
+    "packages": [
+      {
+        "file": "Artifacts/PixelTooler/Review/PixelTooler-Camera-Review.unitypackage",
+        "bytes": 33134328,
+        "sha256": "1012dd2ab9bd3060ded2461488c87124ce4d9876256a454f6dc70f330e142dc4",
+        "archiveReadback": "pass",
+        "nativeImport": "pending"
+      },
+      {
+        "file": "Artifacts/PixelTooler/Review/PixelTooler-Pixora-Review.unitypackage",
+        "bytes": 18565181,
+        "sha256": "a8f3295fa6ff16da81741db2878ad6ffaa04c1281f2b0583b31b65e376dbc611",
+        "archiveReadback": "pass",
+        "nativeImport": "pending"
+      },
+      {
+        "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Review.unitypackage",
+        "bytes": 8882417,
+        "sha256": "9cc1311d3e39017bbe2e14afd8efba24f93006ca2305fbe1ad2cd3f22bf5e36b",
+        "archiveReadback": "pass",
+        "nativeImport": "pending"
+      },
+      {
+        "file": "Artifacts/PixelTooler/Review/PixelTooler-Foliage-Core-Review.unitypackage",
+        "bytes": 8828523,
+        "sha256": "21b12c3161af1febd0b2aba700f4c36d115e8f7fbad8b58398bf1e1d8d8a285f",
+        "archiveReadback": "pass",
+        "nativeImport": "pending"
+      },
+      {
+        "file": "Artifacts/PixelTooler/Review/PixelTooler-Bundle-Review.unitypackage",
+        "bytes": 43041083,
+        "sha256": "9018e92c5998ea240dfb3b49123614270e4cef6cf81e4f6fbb461301b9ab37dd",
+        "archiveReadback": "pass",
+        "nativeImport": "pending"
+      }
+    ]
+  },
+  "assetChecks": {
+    "at": "2026-11-03T14:12:04.565Z",
+    "passed": true,
+    "scope": "Static asset/source checks; not native Unity import, scene execution or visual quality",
+    "checks": [
+      {
+        "name": "new asset GUIDs are unique and every asset has metadata",
+        "passed": true
+      },
+      {
+        "name": "all scene/profile/material references resolve to known source assets",
+        "passed": true
+      },
+      {
+        "name": "scene object links and camera references are complete",
+        "passed": true
+      },
+      {
+        "name": "seven mesh buffers have consistent layout, indices, finite bounds and nondegenerate faces",
+        "passed": true
+      },
+      {
+        "name": "ten standalone examples have no Camera/Pixora product GUIDs",
+        "passed": true
+      },
+      {
+        "name": "core Runtime does not reference samples/editor/other products",
+        "passed": true
+      },
+      {
+        "name": "editor/sample/integration assemblies have explicit dependency direction",
+        "passed": true
+      },
+      {
+        "name": "9-language catalogs have full values and matching placeholders",
+        "passed": true
+      },
+      {
+        "name": "authored UXML text keys are localized",
+        "passed": true
+      },
+      {
+        "name": "9 guides and screenshot manifest preserve native QA as pending",
+        "passed": true
+      },
+      {
+        "name": "no import-time scene changes, package installs, forbidden picker calls or generated runtime UI",
+        "passed": true
+      },
+      {
+        "name": "vegetation material references a Shader asset with serialized type 3",
+        "passed": true
+      }
+    ],
+    "sourceHashes": {
+      "Assets/TurnRoom/PixelFoliage/Documentation/ScreenshotManifest.json": "4f9bb8a2fd7af947587427571f8b440ce7962498a08268d37468930a645a9715",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.de.md": "1a79fe169ab38c971722004854332b7208e703bedeecc36d809b84a717b304e8",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.en.md": "c026375ddbd66a0be34c6008e8679b6a60e3c428b671b4dd519cab0c9c312e43",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.es.md": "7565f60cfb806805bba66b0e4ea632aaaabe05568a466fded2e9c4f79e525523",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.fr.md": "75f7844c8142bdd01a9638d6fdccb43c145bfbcd3250f894859975cea4259308",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.ja.md": "5964ee3d420f13a483f8abcab7e412062039f2aafcf876cb076c41f1b9925aff",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.ko.md": "29e146de110dad6b5a03d0391db8183b92bc0cc9c93034dd221849cc91e52284",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.pt-BR.md": "ad74bfb4a8575b22d2d3329460c16efadf09a6425c2e9f6c7783a60ee7639244",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.zh-Hans.md": "d5ff04d71a1c4e61349499f8a6be2c7da6dd1131d45bbe62351b07cb74ad53ad",
+      "Assets/TurnRoom/PixelFoliage/Documentation/Source/UserGuide.zh-Hant.md": "118a2484b6401ea86cccaf9748ac4129a44748a8bfd18aba5bdce6786adcc50c",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.de.html": "84b122ab1e440334b5e5e6598d615f0b08caf888713c0f8782a5489cea74467b",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.en.html": "ddafb16a95bad315c0d768ff180006f1f426ed85c036869443ca4a5e1115e57e",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.es.html": "a7e134bab23ccf6da619b6bac732f968d23349943f51e5f3ff7c82f4dee60edd",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.fr.html": "c19257b9fa0b5e5dd30b3deef929514842cd0d354bee41a0ec1fc2c64f86d923",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.ja.html": "45ff85d07be520600910a28244e296d39c65967c5e2c29edb24383de8ec7b01c",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.ko.html": "312b4393eabccd315140f1e27e3855701c750f27c60822d2b19d1468d26573fd",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.pt-BR.html": "b7fa47b06329cfa34389997ea4c8768b10ba7bb58f1ca11a58dcc6c260a446fc",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.zh-Hans.html": "a3c370d7e55272437b00651ff82fad0d7eb4e305409f6c6c83657e05a1e52e72",
+      "Assets/TurnRoom/PixelFoliage/Documentation/UserGuide.zh-Hant.html": "699c6b30e4d792c0bc9dd1f6536e687a115bce1079b143fb538089eb9673f045",
+      "Assets/TurnRoom/PixelFoliage/Editor/FoliageAuthoring.cs": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf",
+      "Assets/TurnRoom/PixelFoliage/Editor/FoliageTheme.asset": "3ec4b87f53341429c0418fc72a0e9da0f9a4dad295f4668409e28c629585bd42",
+      "Assets/TurnRoom/PixelFoliage/Editor/FoliageTheme.cs": "50c99fb25893d41498b435a6e431b3a68eb523a4ef10274f43e26dd1304f145c",
+      "Assets/TurnRoom/PixelFoliage/Editor/FoliageWindow.cs": "2d43213b18833540ee4b045702a4a16980c929190c1926669476356d976b0444",
+      "Assets/TurnRoom/PixelFoliage/Editor/FoliageWindow.uxml": "f9821d4c0b2a915b8521b251ff7e050cd61827891b573a59c8c5a26055e9f0fd",
+      "Assets/TurnRoom/PixelFoliage/Editor/Localization/UI.json": "2ea127bf4ac39425c7b36ee11901ff40adac25221abe85e7bbbaa0b1db1247bf",
+      "Assets/TurnRoom/PixelFoliage/Editor/TurnRoom.PixelFoliage.Editor.asmdef": "a752413d5ea1e8683172171d7fb382faa21f661b02cf5792666be72cf36d43f1",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Editor/FoliagePixelCameraLink.cs": "256c951168e62c8c56ab5a75fa4f02bb37a9dbbbebeb897ae0953d6a157981a1",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Editor/TurnRoom.PixelFoliage.PixelCamera.Editor.asmdef": "33f0539fe70249839540fb7f6899668c1268b543fe7bb8484d29fe9f89e493e7",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/README.md": "3b39e97e162753be4a9d59ebc37117becc18f677f1df44d270bbc73fc35b7222",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Samples/Presets/SoftGarden-4px.asset": "79aba6567b0b2a559d65619856c94b4d3c83bc4a8c3e0aeae69122bb6ab8d65f",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Samples/Presets/SoftGarden-Lightweight.asset": "faba9e831315fb2d5ffe16cdf2d56a0fb849c132df17d051ba2752e0c5bb7ea9",
+      "Assets/TurnRoom/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/11-PixelCameraGarden.unity": "884515f4532a0ea10535edd62c1d0aeeba036fb49b06f9254543845ca4e9a0c3",
+      "Assets/TurnRoom/PixelFoliage/Integrations/Pixora/Editor/FoliagePixoraImport.cs": "03b06c2c7864de290e5b554567d36415ca54f0d32df3cd0ec65a09657e8086e8",
+      "Assets/TurnRoom/PixelFoliage/Integrations/Pixora/Editor/TurnRoom.PixelFoliage.Pixora.Editor.asmdef": "b313533987efaae3c628134c2fdd927a8d0acf1298fdcf70a84393ed03481cd1",
+      "Assets/TurnRoom/PixelFoliage/Integrations/Pixora/README.md": "8404a9c2d56ed6124e9150613cfe8305d065c34d001085399d44374917d58efa",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageContactHistory.cs": "9354b4d90a6e993ed530c7093c4c8c6a4ce8d490d582c177ad81962d0e4159cf",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageInteractor.cs": "d99170014910354bddc3c13cf1ddd1b449a680378a5cc02e949b3f41945c7a25",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageMath.cs": "0ce437d814b622f4a6d6093ad8d891f4f48f567ded07b90f90e5e3b1cdc408ba",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs": "2777d5f6fb33199c924dd6683b9cca39d17ff1a0e603726ea7a96958f3f7ddd1",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageProfile.cs": "f9007a0391459963bea76537b33312949e2517fb030ec3763f0b7ae4b2f5dc9a",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageRenderer.cs": "4d4463b1cf2e946450dba11b9875105d27d84da84f95a9d07e6a24c2f6aff207",
+      "Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs": "2da513ff3a5de05170c12196f738885c04a5b8629b67c39ec658a1c601e683fe",
+      "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/FoliageCommon.hlsl": "fdab99a5a3daf16b89b36fc85be3184e14cfeceece29915c2adaa0fb8c196faf",
+      "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader": "cde3a68fe86fa597dae360320b05f3357da7659ae4625f293f9e6f2f7007bec1",
+      "Assets/TurnRoom/PixelFoliage/Runtime/TurnRoom.PixelFoliage.Runtime.asmdef": "bad92abaecfda6cd999f44444ee6563b3eacf380bde705347a86060be9f46987",
+      "Assets/TurnRoom/PixelFoliage/Samples/Examples.json": "556463223cc13fb22b8bc6ec4a5035a8e56f4baf2680265b32c186fac50f0c39",
+      "Assets/TurnRoom/PixelFoliage/Samples/Materials/SoftVegetation.mat": "cc5c451cfba8fe7842ce17b31e0f81d23897216bf12f75df27ebf0f3487410d7",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/BranchingTree.asset": "211b6028aabce0448a961dde9d183bd3d7db52d19890384744f76d23cfaa39f5",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/GardenVisitor.asset": "d515c8b50e0df09d95ca28d3fb3f9c6c7b2131fc329357ae4d882372d81aed79",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/IvoryDaisy.asset": "6cfd5b2efd2972f287d68253a9b500dca243785ccafe1700366de032124b4642",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowGrass.asset": "9884f3887ea40ead28b81f4816066ad1a009f3616683e99a83ddde9aac0bc0c8",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/MeadowIsland.asset": "daa21795d6dc14200efcf9a566c853570b5953523e0715acf4dcf8835bfc1839",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/RoseBlossom.asset": "2a593d2aa0d250c5dc65325bd62c5929a3145a3a6a1b65492ddfcebb2f9ae3be",
+      "Assets/TurnRoom/PixelFoliage/Samples/Models/RoundedShrub.asset": "1e103fa153cfaebbe91e405b23ca85c48ec50d94494cc54f82414c3f4274828c",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/BranchingTree.asset": "15732dc2a18707c1267248f514edec32b80ae4f15dafa02e7c4fed5b0c1a5efa",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/GardenVisitor.asset": "18e36ee6a4bd3e8686ff20276da532705ab44180189f131f8ebb97719bd9c0e8",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/IvoryDaisy.asset": "fcc66a8d8472af70fb1ccee0b7940f02e6c2a50d5f361e6906470a174cc21324",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowGrass.asset": "f02c3ffdc04b863caa1275ccca92018fb35a978bfd875f46aebca96a0709e4c1",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/MeadowIsland.asset": "1ae1d9413b2c74dcfc60e5a388980491938d1b275013e3e03385d597b3bae541",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoseBlossom.asset": "1d087f6501cc055c04ba6d93753f15f6fc058d6f88027fbb11a5af1a683dfd51",
+      "Assets/TurnRoom/PixelFoliage/Samples/Profiles/RoundedShrub.asset": "78c3fe00ae15228567ccf99cc4c091e5c04aa8f73f687719c1a021274633b216",
+      "Assets/TurnRoom/PixelFoliage/Samples/Runtime/FoliageSampleMotion.cs": "556890505748efdf4add7bfc104239d2958faef02381d06869f9e8e9775112bc",
+      "Assets/TurnRoom/PixelFoliage/Samples/Runtime/TurnRoom.PixelFoliage.Samples.asmdef": "0997df83e4b0ff8a95236cf6b333facdfef3d1413541050dcdda6e47b3e2af03",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity": "9603f9bf8a4a610c2510b9517356be8c1e00ede89c0db7138e4581e5e80eabca",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity": "563032d9faf8fc2461d9a31b5eb06688ed0456b0431b9e608bdd4c572f76e9e8",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity": "ef94f3dd742c6b8c3d2e2f118800d0f1df778f3480fce711b30ecd9d755cd532",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity": "703ff84d8999707768e88604b0aa13770982e4e6ada1ae17b194bc71ff676875",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/05-ContactTrail.unity": "5f97c324f3778da3f08d99033c8f3b4ee69d58cefc9f8043ed7e8ec3f0b095c6",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity": "b540e98398f7fcc2b55b2c37e27e80252c60089ae83c60c28876dbf39dfdd2bf",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/07-SharedGusts.unity": "3b6f9b6c9ec79a94c54058c2ab429329e83c9445f0654dccb03d2c89dede26a5",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/08-CloudLight.unity": "375b02e5bcfd156556c56613e4b6e44bb561c0aeef70f306fabbe94dde8e3f4a",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/09-MixedGarden.unity": "7455bf90f8ec0af3a5b02c540918f4674f68ab4d39565fd4e2bfff893d386c35",
+      "Assets/TurnRoom/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity": "6a5e3fb40de3ab7c77795c34a3fe7cbc0ef275dc2436eb7fad2fbd120b5f404e",
+      "Assets/TurnRoom/PixelFoliage/TempleteRequirement.json": "8caad3b625a422a8e14a927db35b1e9c5cebb0915333ab200198f504a703108e",
+      "Assets/TurnRoom/PixelFoliage/Third-Party Notices.txt": "6179566f7e78db89e85664d240f0a7a1449eafa102a0e4a85f231102215ed3bc",
+      "Assets/TurnRoom/PixelFoliage/Version.json": "c4395345b6b8c0b5b72b84dceb15586f1b89e80777c963b5825f8731e86c8c93",
+      "Assets/TurnRoom/PixelTooler/Editor/Localization/UI.json": "96bfa882f8fe88d594b3a7973f3e7efa0f20385db6ab61368ccf722a38fb8151",
+      "Assets/TurnRoom/PixelTooler/Editor/PixelToolerWindow.cs": "9cc484edf16d96a3adc1d778b669fde326d8254aa66954172d26151f73eb5d88",
+      "Assets/TurnRoom/PixelTooler/Editor/PixelToolerWindow.uxml": "e57058565fcd643cabf31d48444fb24bb91131934bec08c8c75b65e8bd5459c8",
+      "Assets/TurnRoom/PixelTooler/Editor/TurnRoom.PixelTooler.Editor.asmdef": "5f0ef1ad50d16ae5d0d24f4fd9fd5e6dc7b1bab9aeaaebaf514e398a7b9dabd8"
+    },
+    "settingsHashes": {
+      "ProjectSettings/EditorBuildSettings.asset": "9cfdcabee4917761b02eaf37dd030e0f4ed8964f6e080615df7c22e4e8175d31",
+      "ProjectSettings/GraphicsSettings.asset": "5f5cd6a00c1a66ff784c53bc5bf938bc61dd29a81fb95273cd424d4bcbde2283",
+      "ProjectSettings/ProjectVersion.txt": "b8d1e8361aaa0ba749c5b93a88aa587841bdfbc5d499850d972b4de8abd1d330",
+      "Packages/manifest.json": "4dffaf1b125b22fd95b4253df39b84220d1add420cc68425e5237e2eb1af16c3"
+    }
+  }
+}

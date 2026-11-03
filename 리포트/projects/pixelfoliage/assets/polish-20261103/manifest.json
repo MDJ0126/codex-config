@@ -1,0 +1,24 @@
+{
+  "scope": "Same deterministic scene times, first4 seconds Camera OFF, next4 seconds Camera ON; not revised foliage evidence",
+  "at": "2026-11-03T14:12:38.1398575+00:00",
+  "frames": 48,
+  "encoder": "ScreenToGif.Util, Version=2.43.2.0, Culture=neutral, PublicKeyToken=null",
+  "files": [
+    {
+      "bytes": 227146,
+      "sha256": "B249F27F3F7188462C6DDF043D8DA77B564B8DC5DC3969ACA36AC665893CE25A",
+      "name": "Camera-Off-Baseline.png"
+    },
+    {
+      "bytes": 7536672,
+      "sha256": "011C4C1FE8078A11FD37AE79B49EFAA577A8592764CB50A3FD855F12E7293ABC",
+      "name": "Camera-Off-On-Baseline.gif"
+    },
+    {
+      "bytes": 103363,
+      "sha256": "86FC8F49253338F8767E1B63C6FDD7F467EA1F954E3A25CF29C87F295E71CAEE",
+      "name": "Camera-On-Baseline.png"
+    }
+  ],
+  "stage": "BEFORE current foliage changes"
+}
