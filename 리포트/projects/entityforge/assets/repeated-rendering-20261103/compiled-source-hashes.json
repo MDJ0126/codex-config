@@ -1,0 +1,146 @@
+{
+  "utc": "2026-11-03T06:14:45.989Z",
+  "unityProcessStarted": false,
+  "playerExecuted": false,
+  "assemblies": [
+    {
+      "name": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/Templete/Editor/AssetStoreLegacyPage.cs": "af7fa51fa3658cadd0b5bb8e30d185f98c814f1821c3282ec590f145070562d4",
+        "Assets/TurnRoom/Templete/Editor/AssetStorePage.cs": "20fcf8718fc3e2105d7a4c59e00a462b1fd433ef46a8175ba8698c358b6e852b",
+        "Assets/TurnRoom/Templete/Editor/ColorSelection.cs": "8bfa627d2a2add6a622380eee4c69e95429b332fc79e447caa27a553ed150c21",
+        "Assets/TurnRoom/Templete/Editor/EditHistory.cs": "e5c3672ca49ccd9106e0eedacef41bfffefcf4cc74c9ac980d66cced7700ea6e",
+        "Assets/TurnRoom/Templete/Editor/PackageLayout.cs": "24f8f9ed7db6e14206db1936ce3a6825e3c1c35acba7e16b3172b28efb552c1d",
+        "Assets/TurnRoom/Templete/Editor/ScreenTips.cs": "ddce15e68f552c8cfc2d2964a90087fb673643bf531b90da8c6a3ea897be2555",
+        "Assets/TurnRoom/Templete/Editor/TemplateAssetInspector.cs": "ec617c6076dacd7c71a3412448e259913b5b2ff5cb210a27e940d768f4774294",
+        "Assets/TurnRoom/Templete/Editor/TemplateCommonText.cs": "6bc6607538b5299c0317a111096c0e4f29d3832614980e102f151ce90b10ffea",
+        "Assets/TurnRoom/Templete/Editor/TemplateControlFaces.cs": "6d031b283cc18079ff4b0d9fa89f9329bba8a488d2351e6393f6c3f09168b8bd",
+        "Assets/TurnRoom/Templete/Editor/TemplateEnumField.cs": "d65fa151d384d347a8833762e500fe264b9bf362e17806892e7e78ebe1115209",
+        "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs": "8df0a10192e1e1214d97424d4f900d00def4ed6e2fbf6f9cb6a2e69de3a1c886",
+        "Assets/TurnRoom/Templete/Editor/TemplateHelpBox.cs": "d37cd84e1bfdf8a3e428d81cfdfdff762516466ecb05663ab9c0e4379ae76621",
+        "Assets/TurnRoom/Templete/Editor/TemplateIcon.cs": "fff42f6b37874f3de6653be95360eff081c73f2d2ec62cc4a34dee2f0a4afb4c",
+        "Assets/TurnRoom/Templete/Editor/TemplateIcons.cs": "8f9387004446cbd7f9b48663e8044aa3e7bd08709ee0f351ca8d2de16e3c3353",
+        "Assets/TurnRoom/Templete/Editor/TemplateImporterInspector.cs": "7b5210a4f5686d15c5907c392addf7590d6481ded5419a61a30ee1f6c388d46a",
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs": "51288f5f0a1fa058c6f96b76e8b54e257473ed07b9dcf04199c46c29f3bdda25",
+        "Assets/TurnRoom/Templete/Editor/TemplateInspectorUI.cs": "a99d21dfd3b24f8f24e43162517feb1422962fe81e73b2d5cc20410a568d4cc1",
+        "Assets/TurnRoom/Templete/Editor/TemplateLanguage.cs": "a9c4cb38513848dea8905dd59416fe74f02fdc83aefdedeee4238e1b0151175f",
+        "Assets/TurnRoom/Templete/Editor/TemplateMaskField.cs": "f0e947a88994cd5d6525fcf50aee8088223498295e2466cd7d8806b9c724c081",
+        "Assets/TurnRoom/Templete/Editor/TemplatePickerPolicy.cs": "1783a5066302907fc5d5c368674e24ca988a2d13cfc77d181a2880a553ff894e",
+        "Assets/TurnRoom/Templete/Editor/TemplateProductUpdates.cs": "8266cdfd00c99e97ff0b6a190fe6ec03de3aca761ea60a755d1cba129b991410",
+        "Assets/TurnRoom/Templete/Editor/TemplatePropertyCollection.cs": "fbe8c7fa534edb5180d16db1f0f94f2c3aab4bf002d45a6916b6a3acd0f3aafd",
+        "Assets/TurnRoom/Templete/Editor/TemplateTextCatalog.cs": "4f4dcd5ed4780b002532fe3eac98e8c0b96e1e53b6b5d25d77e4799cb8abf1d4",
+        "Assets/TurnRoom/Templete/Editor/TemplateWindow.cs": "39f8de7d37efa8251858458a72941a62cee471eab4dae295abe5cf0fecb42dc6",
+        "Assets/TurnRoom/Templete/Editor/TempleteImportGuard.cs": "722c2476d8de6dc1ec5308581bec6420d0c0c3562b5f6792ff285f6a102fb2fe",
+        "Assets/TurnRoom/Templete/Editor/TempleteInstaller.cs": "48047a4c61f425948612c872c1233e155a1749047fc379db33f42cdf20fe19bc",
+        "Assets/TurnRoom/Templete/Editor/TempleteVersion.cs": "4321819217c9c2c95509498c66e60219e55e411232fd4620a0820d089a9c61be",
+        "Assets/TurnRoom/Templete/Editor/ToolWindow.cs": "9fd7bbf389f522f846adca66ed3034efbdda7d53cbbf2f8003c76e69a9712153",
+        "Assets/TurnRoom/Templete/Editor/UITemplate.cs": "e0f55c565d7e0b19842de2b2d9acd75d436e3a361e214d15f994b2fce02efe1d",
+        "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs": "d243285f8d1305c0e5bdca7fea5b739cb81df17f1509988131cda9d42abe1ba8",
+        "Assets/TurnRoom/Templete/Editor/UITemplateFields.cs": "9daffaf504c66aaa9f87075d9edb8290c756c0d395f1b558e6a174b96e8891ec",
+        "Assets/TurnRoom/Templete/Editor/UITemplateSettings.cs": "64577b2f757f791678da29249db3006d554afacab4cce02bd6bf4f8c30c41975",
+        "Assets/TurnRoom/Templete/Editor/UITemplateSettingsInspector.cs": "0bf8ff311666110ecf3c27de931a02cae62cc41a94611a0a0a51ea63db61303b",
+        "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs": "6c5dcc8f91e6acf1ab984e256520508ea9d026b4864a02ae59800ca34f0a7639",
+        "Assets/TurnRoom/Templete/Editor/WindowControls.cs": "a91e20c1403b3fd8c100e167c17118197cb6940ff1a8d902b9ea1ea786ea8025",
+        "Assets/TurnRoom/Templete/Editor/WindowFocus.cs": "62e9dee4bbc82f78e4bd5af89de691529085ae64ae9d7b2550ff52564b95193c",
+        "Assets/TurnRoom/Templete/Editor/WindowFrame.cs": "e659489da7dac353a9e8328db8d93c22b7d2539ae350575355b19dddf72d3699",
+        "Assets/TurnRoom/Templete/Editor/WindowFrame.Focus.cs": "43db23a5c541fd1e5ed78f77cb8d69859c438dc867b13894118bcf198d8ca7d4",
+        "Assets/TurnRoom/Templete/Editor/WindowFrame.Placement.cs": "7d95fc351ff6e2755fd6f6e6e29be307767f6d2b17fc173d5a2b62242ab17701",
+        "Assets/TurnRoom/Templete/Editor/WindowFrame.Restack.cs": "4eb97855c0742d29f9e83948d03af3e4516afcf0e2ec13d7a4b02c505111bd3d",
+        "Assets/TurnRoom/Templete/Editor/WindowList.cs": "145a19e7330e538cc2d2e77a99fcf2dffb7327c12713f0f711549b8993d12e06",
+        "Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs": "9401e499e133452a73b90803ad792d142d7bab8d2e85b7c526b814ee6627773e",
+        "Assets/TurnRoom/Templete/Editor/WindowPresentationScope.cs": "f2685b1591cd91373453eb8d69567fcaf8941628761a19929b8684f428b40468",
+        "Assets/TurnRoom/Templete/Editor/WindowServices.cs": "afe9e0f4a3e8b40cbf05e412a8e524a54c60d1ab1525cd7cfe4dda467b758e6a",
+        "Assets/TurnRoom/Templete/Editor/WindowTheme.cs": "83ff824dafc69f353eac796cb4908270cb319d29c40aa4e83c23b49f3d3a613d"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeBatch.cs": "07734f0e6fd13a2d8aa8905c33a4551454e7840a3193bbecb7778234bf4bc0c3",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeBenchmarkPolicy.cs": "cec8e6a9f61140738cf98ec6e1175ca04a853dd886afd876ae36813a3234bfe4",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeBuildSummary.cs": "7bfa2c144c5c6b226ad6ac1e001b2ecc2fa60be797ad46bda1beed4c08e38f6d",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeObject.cs": "ffe308f9ea679d79254e036fd221fc11613f08eaf9f1680ad53658787d5242f8",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgePlayerProbe.cs": "d53906dfe4c1269387079fe33c63c488152ff6a9b6e923f19e31833477cf5ed1",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgePrefabInstance.cs": "9cb07a373782c18bc0f366515d0b136aec4290d71935088b2931f3bfc2d97116",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeRuntimeStats.cs": "d6a3eaedc3bb475fed91daab51d980492aae6708077ba8db30c44a6d0261a530",
+        "Assets/TurnRoom/EntityForge/Runtime/ForgeSpawner.cs": "f8b4386cb8ce9e668d282bafd5fc2f90401290ee54dc51fe7baec2965bb15e36"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Dots",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Dots/ForgeDenseRegistry.cs": "e8eced2a5a982037ae1261e6c9e2cd52c7d94ce9ffa3106d313d8b6e2741d513",
+        "Assets/TurnRoom/EntityForge/Dots/ForgeDotsBackend.cs": "91aee7a95ff474b27a5f17b9baa5bbb2fbf03fb91c5fbe99060a83a01405d014",
+        "Assets/TurnRoom/EntityForge/Dots/ForgeDrawPages.cs": "013cff96e7db5a688ea7037110428d66a403216bbba475a4f678370c68aab973"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Editor/ForgeActiveSceneBuild.cs": "636a8d02077fb3efb49f3d2700d22c4bd76ef7631176ec1d46a940c2771fd8e9",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeAnalysisRows.cs": "225cc8e114cf998881e797393d7b28f23849ce2549e6c9d3bdc4c10ff228ece0",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeAutomaticConversion.cs": "d3ed57cd3729e115b8bd9ed4e1ac3882d0dcc2d2bec3b3158cff7a5c494df660",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkEvidence.cs": "3af956333564a4ae60861f4062ec7e1baec8de98da34dc939cb93ecb8f33da76",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkImport.cs": "e51141e0d8e72399271d088e3a6b1775f4ae33d57a445135e6feb6f6b58e3b52",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBenchmarkRunner.cs": "74cc52e94200f903259c65066f5a45da83369ecbe3cb47ae2c63f9ece483859c",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBuildCapture.cs": "0016f2851fecb9a778854e45ec42c17e70c142bc314c8891f099abcd8105ccfa",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBuildHistory.cs": "94f77c582ffb5e14eb9d0d71c3a165b02d19941868ce915516d1a9e4355d6622",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBuildLogStore.cs": "157ce63b9a4a9f322eb02f07d70cf50a1bbb4260aaa4740d7c4a6990b3c36af6",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeBuildSettings.cs": "36b6a978afef49bc9b3ef2a77c7523959629f100dc58b7541fe8f6d00b6e6e13",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeConversion.cs": "3d0d95d20f5f3e6f6d623bf0dd8add02fa6317f9c2f49c2d0d08419e1c7eddfc",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeDependencies.cs": "fe6f2f640449809a34405561e25013e253dbb0e74d24128cd6f9b236f8d00aa0",
+        "Assets/TurnRoom/EntityForge/Editor/ForgePlayerBuild.cs": "b8410a142f5a79d2c95fded9b9ece6c23e9ee9ffe4fe3fbef9c0d45577924286",
+        "Assets/TurnRoom/EntityForge/Editor/ForgePrefabBuildCache.cs": "a74b8526eb5b4535e3573551393a85992e9ba0fdbff133d2a65de3b9547d5b7b",
+        "Assets/TurnRoom/EntityForge/Editor/ForgePrefabScope.cs": "218c9ea53d25a8841a31202a388038cbd144bc9fa6169943843d0790800c3ce0",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeSamplePreview.cs": "e5a8e3f5b1ee9a17212555d910a562ff5df2d8b10581ced250137c78a2e703fe",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeText.cs": "8cda6cba7f3bca15f039de41fbab206028a39fb1121a52ce36a3dca8fdc54f5f",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeUnityBuild.cs": "93591d6260ad5385e94d59a187424de45437cb58f852ded210a3fca55ca36ace",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs": "891d38a2eac4985f0fedfdeeafc5a65f2c842897d138020ddd56b02eeddbf593",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.cs": "ff4b3f786926a68bb05bd9d0ae359291c69ba7ea00d73b4cad81f4b6fe3343a4",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindowAnalysis.cs": "b1e3d8f4e7145a9ec3b03fa1ad21b0ffc6e92d8175ce4a63f990df98a116f5df",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindowHistory.cs": "4ff1cc27c2c5a17b1de6f213711fa0f03ce940b16e33ce786caaa95bab48ff06",
+        "Assets/TurnRoom/EntityForge/Editor/ForgeWindowScope.cs": "55fdb8b146b977174bc921cbec172f0b55b8e2ee5d8917bf24d7c519993a10f2"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Runtime",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Samples/Runtime/DispatchActor.cs": "3ba3bf9ce5c3484ec4859d4db3c93aa968e47550efbd2a11375c20634c9a22d7",
+        "Assets/TurnRoom/EntityForge/Samples/Runtime/DispatchShowcase.cs": "f094ecb174e581c8e06fcb0369ca9b4b66600b99edd717488060b50cf86ce839",
+        "Assets/TurnRoom/EntityForge/Samples/Runtime/ModelMotion.cs": "76c02389f217e0b459efe03e94ced715b12e0b2a38b0cb3e3155cc0a471a53e3",
+        "Assets/TurnRoom/EntityForge/Samples/Runtime/PopulationTimeline.cs": "a18fddb07d9e852067b24b79dff1674253790fd9b5e317406d53955e2284c662",
+        "Assets/TurnRoom/EntityForge/Samples/Runtime/RouteSimulation.cs": "7057b2bc849cbb5d3104c9a8512011f56b070737044c64a328d2eb686b378f1f"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Samples.Editor",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Samples/Editor/DispatchShowcaseEditor.cs": "ef408e9f7c0ab05db9b286327f2d56923c4a9f4be9db3449d9cd0a3c0d15d7c6",
+        "Assets/TurnRoom/EntityForge/Samples/Editor/ForgeSamples.cs": "ecdead15a8867925f852664a8a8f3cb415da195c09d2d91111e3d4591720d686",
+        "Assets/TurnRoom/EntityForge/Samples/Editor/SamplePopulationOptions.cs": "b269aa96ac9d8bdce10ee5beeced832a01aebada5f8cd6f5db9b7e743a46c946"
+      }
+    },
+    {
+      "name": "TurnRoom.EntityForge.Development.Editor",
+      "exitCode": 0,
+      "sources": {
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeCurrentSceneQA.cs": "2aaa6ddd3263c9e386473dfcd395b01b323749a34d10d98206bd371db79c9b4d",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeFrameReview.cs": "e3568bc8e378abb288a8f1f45e96952f7a9f31df2689269b45aeb32fc94c7973",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeNativeReview.cs": "ac5e0a77923dc85d5940f15908c6d90115da68be52abd8700f7e6276bf070c0d",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgePackage.cs": "cf9a0c612039c968f5769a788280afbbe90660fda7ad0f96af3e8dc039dd60d2",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeQA.cs": "ce0034c8ac9e727a3f67b85436e5fb26f333358896de5c8856b10707844d569f",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeRuntimeFastpathQA.cs": "e19e58853a0ac90ca2cc2f84270438b6488b5453a617cab705720b46b13457c1",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeSamplePreviewReview.cs": "4dcc771762046f993e72188b085a3c230d646459bdff021944c978d160ebba20",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeSampleRun.cs": "a907e5f9c8bb68d65050c3b9bda6595faa558e4662f7d7754690ec73a0246d91",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeSampleState.cs": "1979c81f36ad8d914a582549d3ba0c3daf377e15b0c765ca2c65151abfa41b2a",
+        "Assets/TurnRoom/EntityForge/Development/Editor/ForgeUIReview.cs": "b2ff17cdcb791ba9f64496c918c6ff0588a528fa2ef6a41a2cc3678261aff0b8"
+      }
+    }
+  ]
+}

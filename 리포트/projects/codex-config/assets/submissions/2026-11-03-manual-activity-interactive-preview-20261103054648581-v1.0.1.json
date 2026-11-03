@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "잔디 미리보기 링크·유지·반응 개선",
+    "summary": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "보고서 링크·미리보기 유지·재사용 구현과 공개 동작 확인 완료",
+    "proposedTime": "6~10분",
+    "actualTime": "시작 2026-11-03 14:38:12 KST · 기능 공개 확인 2026-11-03T05:46:47.942Z · 결과 기록 최종 배포 시각은 채팅에 표기",
+    "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "activity-interactive-preview",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+    "completionCriteria": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+    "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103053855780-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "미리보기 링크·상호작용·성능 개선",
+        "action": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+        "expected": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+        "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "브라우저24개·자동 테스트48개와 공개 링크·유지 검사 통과. 호버200회 새 DOM 1263개→0개, 날짜 선택 시 기존 달력 유지."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T05:46:47.941Z",
+        "summary": "초기 미리보기 이동 검사에서 닫힘 재현",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "스크롤 이벤트의 무조건 hide가 미리보기를 닫는 실제 스택을 확인했습니다.",
+            "evidence": "activity-grass.js scroll listener; 포커스/포인터 유지 중에는 위치 갱신하도록 수정 후 재검증",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-03T05:46:47.942Z",
+        "summary": "이동·유지·재사용·공개 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "브라우저24개·자동 테스트48개와 공개 링크·유지 검사 통과. 호버200회 새 DOM 1263개→0개, 날짜 선택 시 기존 달력 유지.",
+            "evidence": "cce2af00; assets/activity-interactive-2026-11-03/browser-qa.json·public-qa.json·before-performance.json·after-performance.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

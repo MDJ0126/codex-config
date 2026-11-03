@@ -1,5 +1,545 @@
 [
   {
+    "title": "4제품 최종 검증·최신 패키지 업로드",
+    "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-final-package-upload-20261103-20261103092711525-v1.0.2.html",
+    "date": "2026-11-03T09:27:11.525Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "WindowsFolderSize 1.0.15 설치 및 GUI QA 보류",
+    "summary": "1.0.14 탐색기 충돌을 수정한1.0.15 설치는 성공했습니다. 실제 크기 표시 QA는 통과하지 못했으며 사용자 제어 금지로 보류했습니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-result-20261103092358231-v1.0.0.html",
+    "date": "2026-11-03T09:23:58.231Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103092348676-v1.0.7.html",
+    "date": "2026-11-03T09:23:48.676Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "EntityForge 0.3.1-preview 최종 설치·재검증·업로드 확인",
+    "summary": "최종 고정본의 새 프로젝트 설치·공식 검사와 SDK 업로드를 확인했습니다. 심사 제출은 실행하지 않았으며 공통 네이티브 입력 확인은 남아 있습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103092346868-v1.0.1.html",
+    "date": "2026-11-03T09:23:46.868Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PixelCamera 0.6.1-preview 최종 설치·재검증·업로드 확인",
+    "summary": "최종 고정본의 새 프로젝트 설치·공식 검사와 SDK 업로드를 확인했습니다. 심사 제출은 실행하지 않았으며 공통 네이티브 입력 확인은 남아 있습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103092344318-v1.0.1.html",
+    "date": "2026-11-03T09:23:44.318Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 1.0.0 최종 설치·재검증·업로드 확인",
+    "summary": "최종 고정본의 새 프로젝트 설치·공식 검사와 SDK 업로드를 확인했습니다. 심사 제출은 실행하지 않았으며 공통 네이티브 입력 확인은 남아 있습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103092342121-v1.0.1.html",
+    "date": "2026-11-03T09:23:42.121Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DesignDataTable 2.0.2 최종 설치·재검증·업로드 확인",
+    "summary": "최종 고정본의 새 프로젝트 설치·공식 검사와 SDK 업로드를 확인했습니다. 심사 제출은 실행하지 않았으며 공통 네이티브 입력 확인은 남아 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-03-result-20261103092340421-v1.0.1.html",
+    "date": "2026-11-03T09:23:40.421Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103083324229-v1.0.6.html",
+    "date": "2026-11-03T08:33:24.229Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103082404044-v1.0.5.html",
+    "date": "2026-11-03T08:24:04.044Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103080250979-v1.0.4.html",
+    "date": "2026-11-03T08:02:50.979Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103075747536-v1.0.3.html",
+    "date": "2026-11-03T07:57:47.536Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4제품 최종 검증·최신 패키지 업로드",
+    "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-final-package-upload-20261103-20261103074739885-v1.0.1.html",
+    "date": "2026-11-03T07:47:39.885Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 0.3.1-preview 설치·공식 검사·최신 패키지 업로드",
+    "summary": "최신 네이티브 패키지 설치와 공식 Validator 실패0, 고정 해시의 SDK 업로드를 확인했습니다. 실제 화면·샘플 제거 검증은 승인 대기이며 심사 제출은 하지 않았습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103074739492-v1.0.0.html",
+    "date": "2026-11-03T07:47:39.492Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 0.6.1-preview 설치·공식 검사·최신 패키지 업로드",
+    "summary": "최신 네이티브 패키지 설치와 공식 Validator 실패0, 고정 해시의 SDK 업로드를 확인했습니다. 실제 화면·샘플 제거 검증은 승인 대기이며 심사 제출은 하지 않았습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103074738965-v1.0.0.html",
+    "date": "2026-11-03T07:47:38.965Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 1.0.0 설치·공식 검사·최신 패키지 업로드",
+    "summary": "최신 네이티브 패키지 설치와 공식 Validator 실패0, 고정 해시의 SDK 업로드를 확인했습니다. 실제 화면·샘플 제거 검증은 승인 대기이며 심사 제출은 하지 않았습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103074738522-v1.0.0.html",
+    "date": "2026-11-03T07:47:38.522Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 2.0.2 설치·공식 검사·최신 패키지 업로드",
+    "summary": "최신 네이티브 패키지 설치와 공식 Validator 실패0, 고정 해시의 SDK 업로드를 확인했습니다. 실제 화면·샘플 제거 검증은 승인 대기이며 심사 제출은 하지 않았습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-03-result-20261103074738106-v1.0.0.html",
+    "date": "2026-11-03T07:47:38.106Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103074023121-v1.0.2.html",
+    "date": "2026-11-03T07:40:23.121Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 크기 조회의 탐색기 대기 제거",
+    "summary": "1.0.13에 비동기 조회 캐시 구현·headless 검증 완료. 현재 설치본 교체는 사용자 작업 보호를 위해 보류.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+    "date": "2026-11-03T07:33:14.431Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103073314036-v1.0.1.html",
+    "date": "2026-11-03T07:33:14.036Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103072813288-v1.0.0.html",
+    "date": "2026-11-03T07:28:13.288Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4제품 최종 검증·최신 패키지 업로드",
+    "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103070310446-v1.0.0.html",
+    "date": "2026-11-03T07:03:10.446Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103061801491-v1.0.6.html",
+    "date": "2026-11-03T06:18:01.491Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 0.3.1 반복 렌더링 보강과 비모달 분석",
+    "summary": "정지한 반복 오브젝트의 행렬 재수집을 줄이고, 분석을 분할 처리하며 창 하단에서 진행률을 표시합니다. 네이티브 재측정은 대기 중입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103061800745-v1.0.0.html",
+    "date": "2026-11-03T06:18:00.745Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 양끝 채움·미래 날짜 어두운 비활성 처리",
+    "summary": "빈 모서리를 채워 직사각형으로 맞추고 집계 기간 밖 칸은 호버·클릭에 반응하지 않게 했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103060604113-v1.0.0.html",
+    "date": "2026-11-03T06:06:04.113Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 양끝 채움·기간 밖 비활성화",
+    "summary": "양끝을 채워 직사각형으로 표시하고 집계 기간 밖 날짜는 어두운 회색·무반응 처리합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-full-weeks-20261103060603741-v1.0.1.html",
+    "date": "2026-11-03T06:06:03.741Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 양끝 채움·기간 밖 비활성화",
+    "summary": "양끝을 채워 직사각형으로 표시하고 집계 기간 밖 날짜는 어두운 회색·무반응 처리합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103060328498-v1.0.0.html",
+    "date": "2026-11-03T06:03:28.498Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 미리보기에서 보고서 바로가기·유지·반복 작업 개선",
+    "summary": "미리보기 제목을 클릭해 보고서로 이동하고, 마우스·키보드 포커스가 있으면 열린 상태를 유지합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103054649026-v1.0.0.html",
+    "date": "2026-11-03T05:46:49.026Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 미리보기 링크·유지·반응 개선",
+    "summary": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-interactive-preview-20261103054648581-v1.0.1.html",
+    "date": "2026-11-03T05:46:48.581Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 미리보기 링크·유지·반응 개선",
+    "summary": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103053855780-v1.0.0.html",
+    "date": "2026-11-03T05:38:55.780Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디에 보고서 제목 미리보기·균일 간격 적용",
+    "summary": "날짜 칸에 마우스를 올리면 보고서 제목을 최대 5개 보여주고, 상하좌우 간격을 동일하게 맞췄습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103053550414-v1.0.0.html",
+    "date": "2026-11-03T05:35:50.414Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 제목 툴팁·균일 간격 수정",
+    "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-tooltip-spacing-20261103053549855-v1.0.1.html",
+    "date": "2026-11-03T05:35:49.855Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "잔디 제목 툴팁·균일 간격 수정",
+    "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103053237547-v1.0.0.html",
+    "date": "2026-11-03T05:32:37.547Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052242132-v1.0.5.html",
+    "date": "2026-11-03T05:22:42.132Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "빌드 기록을 날짜·상태·변환 개수의 요약 행으로 정리",
+    "summary": "JSON 파일명 대신 빌드 시각, 플랫폼, 변환 개수와 상태 배지를 한 줄에 표시합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103052210136-v1.0.0.html",
+    "date": "2026-11-03T05:22:10.136Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052149944-v1.0.4.html",
+    "date": "2026-11-03T05:21:49.944Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "보고서 상단에 프로젝트별 활동 잔디 추가",
+    "summary": "최근 1년 게시물 활동을 잔디로 보여주고, 날짜를 누르면 해당 글만 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-result-20261103051959698-v1.0.0.html",
+    "date": "2026-11-03T05:19:59.698Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 활동 잔디 추가",
+    "summary": "보고서 제목과 분류 탭 사이에 최근 1년 활동을 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-report-activity-grass-20261103051959034-v1.0.1.html",
+    "date": "2026-11-03T05:19:59.034Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103051405408-v1.0.3.html",
+    "date": "2026-11-03T05:14:05.408Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "빌드 기록 목록과 상세 로그를 하나의 박스로 정리",
+    "summary": "분석 결과와 같은 카드 스타일로 빌드 기록 제목·버튼·경로·목록·상세 로그를 묶었습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103051404916-v1.0.0.html",
+    "date": "2026-11-03T05:14:04.916Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 활동 잔디 추가",
+    "summary": "보고서 제목과 분류 탭 사이에 최근 1년 활동을 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103051242443-v1.0.0.html",
+    "date": "2026-11-03T05:12:42.443Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103050625958-v1.0.2.html",
+    "date": "2026-11-03T05:06:25.958Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity 빌드 성공 후 기록이 unknown으로 남는 문제 수정",
+    "summary": "빌드 종료 뒤 최종 BuildReport를 읽도록 변경하고 실제 Windows 재빌드에서 succeeded 기록을 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-bug-20261103050535878-v1.0.0.html",
+    "date": "2026-11-03T05:05:35.878Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.html",
+    "date": "2026-11-03T04:58:57.114Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 실제 자동 변환 검증과 빌드 기록 오류 수정",
+    "summary": "일반 GameObject 1만 개의 Windows 자동 변환과 최신 패키지 설치를 확인했습니다. 이번 부하에서는 프레임 시간 개선이 없었습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103045838631-v1.0.0.html",
+    "date": "2026-11-03T04:58:38.631Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103041415347-v1.0.0.html",
+    "date": "2026-11-03T04:14:15.347Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 0.3.0 자동 렌더링 경로와 대량 생명주기 보강",
+    "summary": "자동 프록시의 불필요한 동작 처리와 프레임별 데이터 배열 복사를 분리하고 생성·해제·진단 경로를 추가했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103041414459-v1.0.0.html",
+    "date": "2026-11-03T04:14:14.459Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4제품 심사 전 현황 대조",
+    "summary": "현재 초안·미디어와 패키지·검증 대상 버전을 확인하여 제출 여부를 판정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103034127844-v1.0.0.html",
+    "date": "2026-11-03T03:41:27.844Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "0.2.0-preview 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103034127034-v1.0.0.html",
+    "date": "2026-11-03T03:41:27.034Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "0.6.1-preview 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103034126405-v1.0.0.html",
+    "date": "2026-11-03T03:41:26.405Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "1.0.0 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103034125863-v1.0.0.html",
+    "date": "2026-11-03T03:41:25.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "2.0.2 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-03-result-20261103034125185-v1.0.0.html",
+    "date": "2026-11-03T03:41:25.185Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 현재 범위와 개발 목록 검토",
+    "summary": "구현과 검증 이력을 분리하고 원래 목표 대비 후속 개발 항목을 정리합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103033505440-v1.0.0.html",
+    "date": "2026-11-03T03:35:05.440Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 구현 범위와 후속 개발 목록",
+    "summary": "자동 렌더링 최적화와 명시적 ECS 동작을 구분하고 최신 검증 공백과 후속 개발 순서를 정리했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103033504876-v1.0.0.html",
+    "date": "2026-11-03T03:35:04.876Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "ProPixelizer 2.0.3 대비 Pixel Camera 구현·검증 현황",
+    "summary": "기본 기능군은 구현됐지만 Pixel Expansion·전용Graph SubTarget·투명 합성과 고급 셰이더/실행검증 격차가 남아 있습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103032836164-v1.0.0.html",
+    "date": "2026-11-03T03:28:36.164Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "4제품 판매 미디어 전수 수정·최종 재생 검증",
     "summary": "DDT 패턴을 기준으로 누락·구형 영상과 썸네일·아이콘을 수정하고 실제 포털 재생까지 검증합니다.",
     "project": "turnroom",

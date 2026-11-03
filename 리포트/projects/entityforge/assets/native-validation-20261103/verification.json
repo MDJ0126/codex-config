@@ -1,0 +1,20 @@
+{
+  "samples": 600,
+  "frameTimeReductionPercent": -1.6217303896093327,
+  "nativeBuildAfterFix": "Succeeded errors=0",
+  "backendStats": {
+    "activeEntities": 10000,
+    "simulatedEntities": 0,
+    "registeredSourceRenderers": 10000,
+    "submittedInstances": 10000,
+    "drawCalls": 10,
+    "drawBufferCapacity": 16384,
+    "transformWrites": 0
+  },
+  "resolution": "1280x720",
+  "baselineMeanMs": 16.787105560302734,
+  "sameFingerprint": true,
+  "scope": "Static ordinary mesh GameObjects; no general MonoBehaviour translation; one paired rendered run; no universal performance claim",
+  "packageSha256": "1c75909a49a1f3260c8b40241a68492d8201229970abb2862735d8897f720606",
+  "convertedMeanMs": 17.05934715270996
+}

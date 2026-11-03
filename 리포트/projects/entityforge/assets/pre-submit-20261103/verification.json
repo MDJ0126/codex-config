@@ -1,0 +1,204 @@
+{
+  "checkedAt": "2026-11-03T03:33:07.098242+00:00",
+  "product": "EntityForge",
+  "draftVersion": "0.2.0-preview",
+  "priceUnchanged": "$4.99",
+  "media": {
+    "screenshots": 16,
+    "videos": 1,
+    "keys": 3
+  },
+  "portalUploadLine": "Nov 02, 2026 05:17 UTC, 355 files, 9.6 MB",
+  "localPreviousUploadArchive": {
+    "product": "EntityForge",
+    "file": "Artifacts\\TurnRoomPackages\\TurnRoom-EntityForge.unitypackage",
+    "bytes": 10340232,
+    "sha256": "255898ed4a5273c9c78881908848069013261f0c3d8f9c6962ab6df05b46f86e",
+    "filesCompared": 369,
+    "developmentLeaks": [],
+    "mismatchCount": 44,
+    "mismatches": [
+      {
+        "path": "Assets/TurnRoom/EntityForge/Dots/ForgeDotsBackend.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uss",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/01-DroneHangar.unity",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeBuildSettings.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Prefabs/DispatchHUD.prefab",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeAutomaticConversion.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Samples.json",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.pt-BR.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Runtime/ForgeBatch.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/03-SalvageYard.unity",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Runtime/ForgePlayerProbe.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Runtime/RouteSimulation.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.es.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Scenes/02-CargoTraffic.unity",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Runtime/DispatchShowcase.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.uxml",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/Localization/UI.json",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindow.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.pt-BR.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Localization/ShowcaseUI.json",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeConversion.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Samples/Runtime/DispatchActor.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeWindowActions.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Editor/ForgeUnityBuild.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/EntityForge/Documentation/UserGuide.es.html",
+        "part": "asset"
+      }
+    ],
+    "allCurrentFilesIncluded": "not verified: no fresh native export inventory"
+  },
+  "remoteBinaryHashVerifiedThisReview": false,
+  "nativeFreshInstallThisReview": false,
+  "officialValidatorThisReview": false,
+  "submitted": false
+}

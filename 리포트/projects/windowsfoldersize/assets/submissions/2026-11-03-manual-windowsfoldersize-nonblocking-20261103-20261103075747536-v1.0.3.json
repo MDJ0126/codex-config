@@ -1,0 +1,236 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "관리자 권한 보안 창의 사용자 승인 후 설치와 실제 GUI QA 진행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "후속 설치·GUI QA 5~10분",
+    "actualTime": "후속 시작 2026-11-03 16:54:20 KST, 진행 중",
+    "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+    "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+    "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103074023121-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "동기 대기 재현",
+        "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+        "expected": "문제 경로와 재현 수치 확인",
+        "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "비동기 캐시 구현",
+        "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+        "expected": "UI 경로에서 IPC와 대기 제거",
+        "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀와 산출물 고정",
+        "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+        "expected": "테스트 통과 및 최신 단일 설치 파일",
+        "qa": "headless 테스트 실행과 MSI 검증",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "보고·공개 검증",
+        "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+        "expected": "개별 보고서 외부 접근 성공",
+        "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "1.0.13 실제 교체 설치",
+        "action": "확정 MSI 해시 대조, 설치, 탐색기 재시작 및 설치 DLL/브로커 버전 검증",
+        "expected": "설치 성공과 실제 1.0.13 DLL 로드",
+        "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "MSI 실행, 관리자 권한 창에서 사용자 승인 대기. 1.0.11 기준 화면 확보."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "실제 GUI 반복 QA와 공개 결과",
+        "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+        "expected": "관찰한 범위의 GUI 무응답 없음·정확한 자동 갱신·공개 화면 근거",
+        "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T05",
+      "T06"
+    ],
+    "scopeChange": "2026-11-03 사용자 설치 및 GUI 조작 명시 승인. 기존 작업·실패 QA 보존, 실제 설치와 전후 화면·GUI 수용 QA를 추가.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T07:33:13.2203206Z",
+        "summary": "지연 응답의 동기 대기 재현",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+            "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T07:33:13.2203206Z",
+        "summary": "최초 캐시 경합 검증 실패 보존",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+            "evidence": "첫 test-async 실행의 numeric retention FAIL",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-11-03T07:33:13.2203206Z",
+        "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+            "evidence": "scripts/test-async.cmd 실행 결과",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+            "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-03T07:40:22.4937206Z",
+        "summary": "전체 코드·headless QA와 공개 보고 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "364.37ms 지연 대기 재현 완료",
+            "evidence": "test-async 출력과 공식API조건대조",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+            "evidence": "수정후 test-async PASS",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+            "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

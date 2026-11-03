@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-11-03T03:33:07.098242+00:00",
+  "product": "Pixora",
+  "draftVersion": "1.0.0",
+  "priceUnchanged": "$4.99",
+  "media": {
+    "screenshots": 16,
+    "videos": 1,
+    "keys": 3
+  },
+  "portalUploadLine": "Nov 02, 2026 05:20 UTC, 0 files, 19.0 MB",
+  "localPreviousUploadArchive": {
+    "product": "Pixora",
+    "file": "Artifacts\\TurnRoomPackages\\TurnRoom-Pixora.unitypackage",
+    "bytes": 20042856,
+    "sha256": "c5e159029195e389117a0af6f9d14691f3c61572b715afe48c0e908148e48788",
+    "filesCompared": 1870,
+    "developmentLeaks": [],
+    "mismatchCount": 37,
+    "mismatches": [
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.ja.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.zh-Hant.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.pt-BR.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/07-Tone/Pixora-20261031-163613/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/06-Sheet/Pixora-20261031-163612/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.fr.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.en.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/02-Palette/Pixora-20261031-163601/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.es.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.ko.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.zh-Hans.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.es.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/10-BatchProfile/Pixora-20261031-163651/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.de.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/09-Alpha/Pixora-20261031-163650/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.pt-BR.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/Source/UserGuide.es.md",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Samples/Generated/01-Image/Pixora-20261031-163600/PixoraWork.asset",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Documentation/UserGuide.pt-BR.html",
+        "part": "asset"
+      }
+    ],
+    "allCurrentFilesIncluded": "not verified: no fresh native export inventory"
+  },
+  "remoteBinaryHashVerifiedThisReview": false,
+  "nativeFreshInstallThisReview": false,
+  "officialValidatorThisReview": false,
+  "submitted": false
+}

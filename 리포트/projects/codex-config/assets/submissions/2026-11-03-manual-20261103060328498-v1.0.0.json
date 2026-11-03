@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "잔디 양끝 채움·기간 밖 비활성화",
+    "summary": "양끝을 채워 직사각형으로 표시하고 집계 기간 밖 날짜는 어두운 회색·무반응 처리합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "부분 주가 비어 있는 원본과 disabled visibility:hidden을 확인했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "시작 2026-11-03 15:02:39 KST · 진행 중",
+    "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "activity-full-weeks",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "완전한 주간 격자를 표시하며 기간 밖 날짜를 집계·호버·클릭에서 제외합니다.",
+    "completionCriteria": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "양끝 패딩 채움·검증·공개",
+        "action": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+        "expected": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+        "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "windowsfoldersize",
+    "kind": "bug",
+    "title": "여러 폴더 크기 조회의 탐색기 대기 제거",
+    "summary": "1.0.13에 비동기 조회 캐시 구현·headless 검증 완료. 현재 설치본 교체는 사용자 작업 보호를 위해 보류.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Windows x64, WindowsFolderSize1.0.12 소스 →1.0.13 후보",
+    "steps": "실제 메시지형 named pipe 서버가 응답을350ms 지연하도록 하고 기존 CallNamedPipe20ms와 신규 캐시·100ms deadline을 대조.",
+    "expected": "브로커 지연·무응답과 무관하게 탐색기 호출이 대기하지 않고 마지막 용량을 유지.",
+    "actual": "기존 호출364.37ms 대기 재현. 신규10000회 조회52.54ms, 최악136.90µs, UI스레드I/O0. 브로커 장애 시 마지막 숫자 유지.",
+    "cause": "hook.cpp의 크기 조회 함수가 CallNamedPipeW를 직접 호출. nTimeOut20은 파이프 가용성 대기만 제한하며 응답 트랜잭션 전체의 제한 시간이 아님. https://learn.microsoft.com/en-us/windows/win32/api/namedpipeapi/nf-namedpipeapi-callnamedpipew",
+    "changes": "전용 저우선순위 작업 스레드1개·메모리 캐시1024개·try_lock 비대기 조회·호출 스레드별 마지막 스냅샷. IPC는 overlapped 트랜잭션100ms와 CancelIoEx. 최대 약62회/초로 요청 속도 제한. 정상 값은 장애 중에도 유지.",
+    "verification": "실제 지연 pipe 재현, 무응답 중10000회 조회, 비동기 결과 갱신·실패 시 숫자 유지 통과. 첫 테스트의 경합 숫자 유지 실패를 보존하고 수정 후 재QA. 실제 Windows shell 속성·정준 변환·COM표시(queued,0,37,99,failed,complete)와 크기 열·속성 저장소 통과. MSI ICE검증0. 아티팩트 SHA256:0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8. 검사 도구는 콘솔로 실행했으며 사용자 마우스·키보드·탐색기는 조작하지 않음.",
+    "remaining": "설치와 실제 탐색기 수용 검증은 보류. 화면 비간섭 요구로 GUI 신규 실행·재시작·설치를 하지 않아 전후 실행 화면 미확보; 화면 비교 통과로 기록하지 않음. 교훈 검토: 전역 변경 없음—기존 실제 실패 재현·QA 의무로 포괄, IPC 상세 교훈은 이 프로젝트에 기록.",
+    "outcome": "탐색기 속성 조회 경로에서 동기 IPC를 제거했습니다. 전용 스레드가 통신하며 탐색기는 메모리 캐시만 조회합니다. 10000회 호출 총52.54ms, 단일 최악136.90µs로 실행 검증했습니다.",
+    "proposedTime": "10~15분",
+    "actualTime": "2026-11-03 16:20:16 KST 시작. 구현·headless QA 완료, 설치 보류; 보고서 공개 검증 진행.",
+    "xerjEvidence": "MCP와 프로젝트 검색 스크립트 미제공; rg·현재 소스·실행 재현으로 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "in_progress",
+    "state": "progress"
+  }
+}

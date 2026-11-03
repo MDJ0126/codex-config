@@ -1,5 +1,5147 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-final-package-upload-20261103-20261103092711525-v1.0.2.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-final-package-upload-20261103-20261103092711525-v1.0.2.md",
+    "date": "2026-11-03T09:27:11.525Z",
+    "version": "v1.0.2",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "final-package-upload-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "4제품 최종 검증·최신 패키지 업로드",
+      "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "T03: 공유 선택 UI의 실제 마우스/키보드 회귀와 Pixora Undo/Redo 입력 확인 보류. T06: 새 보고서 공개 배포 및 인증 없는 외부 확인 기록 진행.",
+      "outcome": "4제품 최종 고정본의 새 프로젝트 재설치·공식 Validator 실패0·본체13컴파일·SDK 업로드 완료. DDT49장 문서 교체와 Forge 실제 플레이어 버그 수정 검증 완료. 실제 입력 QA는 제어 중단으로 보류.",
+      "proposedTime": "30~60분",
+      "actualTime": "2026-11-03 15:59:54 KST 시작. 2026-11-03T18:27:07.111562+09:00 기록. 패키지 업로드는 완료했으며 전체 입력 QA는 미완료. 전체 완료 시각으로 보고하지 않음.",
+      "xerjEvidence": "노드 미실행 및 재시작 실패 확인; 현재 소스와 기존 성공 기록 직접 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "final-package-upload-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "4제품 남은 검증과 최신 패키지 업로드, Entity Forge 무료 유지",
+      "completionCriteria": "최신 소스와 고정 패키지 일치, 실제 설치·샘플 포함/제거 컴파일·공식 Validator·핵심 UI/샘플 검증, 포털4제품 최신 업로드와 무료/가격·미디어 저장 확인, Submit 미실행 및 공개 보고",
+      "previousManual": "projects/turnroom/reports/2026-11-03-manual-final-package-upload-20261103-20261103074739885-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "소스·가격·산출물 고정",
+          "action": "Entity Forge 무료·최신 버전 확인, 실제 Unity 내보내기 및 해시 고정",
+          "expected": "새 산출물·원본 동일성과 버전·무료 설정 확인",
+          "qa": "아카이브 전체 해시와 네이티브 내보내기 결과",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 source/meta/frozen/upload SHA 차이0. Forge Free asset 저장 확인."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "설치·Validator·샘플 분리",
+          "action": "별도 프로젝트에 고정4패키지 설치, 샘플 제거 컴파일·공식 Validator",
+          "expected": "최종 후보에서 컴파일·Validator 통과와 의존성 확인",
+          "qa": "설치 결과·공식 SDK 결과·제거 전후 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종4개 새 프로젝트 import12assertions·공식 Validator 실패0. 실제 샘플 제거 Unity 재컴파일 및 마지막 소스13core컴파일 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "핵심 동작·회귀 검증",
+          "action": "Pixora 작업 문서·Undo/Redo, Pixel Built-in/URP, Forge 플레이어 변환, 공유 UI·언어·문서 영향 검증",
+          "expected": "실제 사용 흐름과 렌더·빌드 결과 검증",
+          "qa": "native 실행 결과·화면·재열기 출력 대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "blocked",
+          "revision": 2,
+          "result": "DDT49실제캡처·9언어문서오류0, Pixora12+3작업문서검사, Pixel Built-in22/URP/6샘플렌더, Forge 혼합 실제플레이어/fastpath 통과. 실제 입력 회귀는 제어 중단으로 보류."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "미디어 최종 검증",
+          "action": "기존 최종 영상의 시청·직접 청취·포스터와 키 이미지 확인",
+          "expected": "실제 사운드·권리와 제품별 미디어 일치",
+          "qa": "전체 재생·청취 및 현재 포털 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "네 제품 모두 사용자 직접 청취 이상 없음. 제품당 영상1·갤러리16·키3 저장 확인."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "최신 패키지 업로드",
+          "action": "검증한 해시의 파일만 공식 SDK로4개 초안 업로드",
+          "expected": "4개 업로드 성공·무료 유지·Submit 미실행",
+          "qa": "SDK 영수증과 새 페이지 업로드·가격·미디어 확인",
+          "dependsOn": [
+            "T01",
+            "T02",
+            "T04"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "최종 고정 SHA의4제품 SDK Success. DDT·Forge 수정본 재업로드, 포털 재열기 확인, Forge 무료 유지, Submit 미실행."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "공개 결과·전체 QA",
+          "action": "실제 결과와 남은 사항을 제품별 공개하고 전체 범위 QA",
+          "expected": "공개 URL·첨부·현재 버전 배포 확인",
+          "qa": "보고서 빌드·검사·푸시·Pages 및 외부 접근",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "검증 상태를 보존한 제품별 새 보고서 생성·빌드·공개 확인 진행."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "GUI 허락 후 실제 설치·렌더·문서 검사로 DDT 안내 이미지와 Forge 혼합 렌더 그룹/프랑스어 줄바꿈 문제를 확인·수정했다. 청취와 초안 업로드는 실제로 독립 실행 가능한 작업으로 의존성을 정정한다. 전체 입력 QA와 최종 제출 전 완료 기준은 유지한다. 사용자의 18:21 KST 제어 중단 요청 이후 네이티브 입력 QA는 보류한다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T16:27:33.3017183+09:00",
+          "summary": "가격·실제 내보내기·아카이브 전체 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "native export complete; frozen source/meta mismatches0; Entity Forge Free asset",
+              "evidence": "native-export.json; frozen-manifest.json; actual portal Free asset checked",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-03T18:27:07.111562+09:00",
+          "summary": "최종 설치·렌더·수정·업로드 검증과 사용자 제어 중단 상태 기록",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 source/meta/frozen/upload SHA 차이0. Forge Free asset 저장 확인.",
+              "evidence": "Docs/Testing/2026-11-03/final-package-upload: final-closure-reviewed.json; official-validation-final.json; core-without-samples.json; core-compile-final/result.json; ddt-docs-final.json; native-ui; pixel-render; pixel-maps; forge-player; portal-readback-reviewed.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종4개 새 프로젝트 import12assertions·공식 Validator 실패0. 실제 샘플 제거 Unity 재컴파일 및 마지막 소스13core컴파일 통과.",
+              "evidence": "Docs/Testing/2026-11-03/final-package-upload: final-closure-reviewed.json; official-validation-final.json; core-without-samples.json; core-compile-final/result.json; ddt-docs-final.json; native-ui; pixel-render; pixel-maps; forge-player; portal-readback-reviewed.json",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "DDT49실제캡처·9언어문서오류0, Pixora12+3작업문서검사, Pixel Built-in22/URP/6샘플렌더, Forge 혼합 실제플레이어/fastpath 통과. 실제 입력 회귀는 제어 중단으로 보류.",
+              "evidence": "Docs/Testing/2026-11-03/final-package-upload: final-closure-reviewed.json; official-validation-final.json; core-without-samples.json; core-compile-final/result.json; ddt-docs-final.json; native-ui; pixel-render; pixel-maps; forge-player; portal-readback-reviewed.json",
+              "dependencies": {
+                "T02": 2
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "네 제품 모두 사용자 직접 청취 이상 없음. 제품당 영상1·갤러리16·키3 저장 확인.",
+              "evidence": "Docs/Testing/2026-11-03/final-package-upload: final-closure-reviewed.json; official-validation-final.json; core-without-samples.json; core-compile-final/result.json; ddt-docs-final.json; native-ui; pixel-render; pixel-maps; forge-player; portal-readback-reviewed.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "최종 고정 SHA의4제품 SDK Success. DDT·Forge 수정본 재업로드, 포털 재열기 확인, Forge 무료 유지, Submit 미실행.",
+              "evidence": "Docs/Testing/2026-11-03/final-package-upload: final-closure-reviewed.json; official-validation-final.json; core-without-samples.json; core-compile-final/result.json; ddt-docs-final.json; native-ui; pixel-render; pixel-maps; forge-player; portal-readback-reviewed.json",
+              "dependencies": {
+                "T01": 2,
+                "T02": 2,
+                "T04": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103092348676-v1.0.7.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103092348676-v1.0.7.md",
+    "date": "2026-11-03T09:23:48.676Z",
+    "version": "v1.0.7",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자 화면 제어 재허용 후 크기 미표시 원인 확인, 실제64폴더 초기표시·변경·정렬/이동·브로커장애 GUI QA. 완료로 보고하지 않음.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "후속 설치·GUI QA 5~10분",
+      "actualTime": "16:54:20 KST 착수,18:19:28 KST15설치. 현재 전체GUI QA미완료. 제안5~10분초과.",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103083324229-v1.0.6.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        },
+        {
+          "visualEvidence": [
+            {
+              "role": "reference",
+              "image": "../assets/ui-qa-before-1-0-11.png",
+              "caption": "설치 전1.0.11의 실제64폴더 화면.1251×583 원본PNG89,064B로 편집·축소 없이 보존. 신규버전 설치 후 화면은 아직 미확보."
+            }
+          ],
+          "id": "T05",
+          "order": 5,
+          "title": "1.0.15 충돌 수정·설치 검증",
+          "action": "로더 진입 버퍼 축소, 작은 스택 회귀와 비동기 검사, MSI 검증, 실제15 설치·로드 DLL 대조",
+          "expected": "MSI0, 설치/빌드 DLL SHA256 일치, 실제 탐색기15 DLL, 설치 이후 새 충돌 이벤트 없음. 실제 크기 표시 기준은 T06에 유지.",
+          "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 3,
+          "result": "MSI 2026-11-03 18:19:28 KST 반환0. 두 탐색기 PID37776/11944에서15 DLL. DLL SHA B419AAF1696F9FFD723403D2B0A602EA171E20EAA9260E78FCEB812870EF7747 일치. 64KiB 스레드 기존1114/수정0, async10000회58.27ms/최악162.9us. 설치 후18:22 조회까지 새 탐색기충돌 이벤트 없음."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "실제 GUI 반복 QA와 공개 결과",
+          "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+          "expected": "메뉴 없는 초기 표시, 64폴더 UI응답·정확한 변경 반영, 브로커 부재 시에도UI응답",
+          "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "blocked",
+          "revision": 3,
+          "result": "최신 실제 화면은64폴더의 크기가 비어 있음.15 DLL 로딩은 확인했으나 자동 표시·변경 갱신·GUI응답 QA 미통과. 사용자 컴퓨터 사용 재개 및 제어 금지로 화면 조작·창실행·재시작 보류."
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "14 실제 GUI QA에서 탐색기 접근 위반(모듈 offset 9ce7) 발견. 64KiB 로더 스레드에서 기존1114/수정0 재현 후15 설치. T05 revision3에 설치·작은스택 회귀, T06 revision3에 기존 전체 GUI 기준 유지. 사용자가 컴퓨터 사용 재개로 화면 제어를 금지하여 GUI QA는 보류.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T08:01:20.5134574Z",
+          "summary": "설치 시작 후 관리자 보안 창에서 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "Windows 관리자 승인이 필요한 보안 창이 표시돼 설치 대기. 보안 창 자동 조작 금지 규칙에 따라 승인 요청 전달.",
+              "evidence": "설치 로그 MSI_LUA Elevation required; 실제 broker file version1.0.11; ComputerUse window consent.exe 확인",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T08:23:56.6975158Z",
+          "summary": "1.0.13 설치 성공과 실제 GUI 초기화 실패",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "MSI0, 설치된 broker·maintenance·DLL hash가 빌드와 동일; 실제13 DLL 로드",
+              "evidence": "install-1.0.13.log MainEngineThread0;프로세스3256;Explorer10376모듈13",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "새 창에서 공백, 클래식 메뉴 호출 뒤에야 크기 표시. 별도24232 Explorer는11 DLL 유지",
+              "evidence": "실제ComputerUse전후tree·module대조; nativeautostartprobe13status0/14status1",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-03T08:33:17.4885400Z",
+          "summary": "실제13 브로커의64폴더와 차액 갱신 검사",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "64폴더합계전부정확.4KB→1MiB31ms,추가2KiB2344ms,삭제250ms,복원1344ms.정상변경 중pending없음.이 검사는 브로커에 대한 검사이며 전체GUI QA통과를 의미하지 않음.",
+              "evidence": "build/live_backend_qa.cpp 실행출력;실제설치13 broker3256 session1",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-03T08:33:17.4962207Z",
+          "summary": "14수정 회귀 통과와 두 번째 UAC 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "14자동초기화status1/13baseline0;비동기10000호출59.86ms;native표시·MSI검증통과.설치는Windows관리자승인대기.",
+              "evidence": "install-1.0.14.log MSI_LUA Elevation required; 사용자에게 두 번째 승인 카드 전달",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "step",
+          "at": "2026-11-03T09:22:42.2744237Z",
+          "summary": "14 실제 탐색기 충돌과 작은스택 재현",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "Windows Application1000 Explorer.EXE / WindowsFolderSizeHook14 / c0000005 /9ce7. 재링크MAP에서stackprobe. 64KiB LoadLibrary 초기화1114 재현.",
+              "evidence": "로컬 Windows Event1000 및 small_stack_test 실행",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "regression",
+          "at": "2026-11-03T09:22:42.3009624Z",
+          "summary": "15 설치·네이티브 회귀, GUI는사용자제어금지로보류",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 3,
+              "verdict": "pass",
+              "actual": "MSI0, 실제15 DLL 두프로세스, 설치/빌드해시동일. smallstack0, autoStart1, asyncstressPASS, MSIICE0.",
+              "evidence": "install15.log, 파일SHA256, 프로세스모듈, test출력",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 3,
+              "verdict": "blocked",
+              "actual": "64폴더실제화면크기미표시. 자동표시·변경·GUI조작미통과. 사용자제어금지로화면조작종료.",
+              "evidence": "컴퓨터유즈마지막AX 및 사용자메시지",
+              "dependencies": {
+                "T05": 3
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103083324229-v1.0.6.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103083324229-v1.0.6.md",
+    "date": "2026-11-03T08:33:24.229Z",
+    "version": "v1.0.6",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "1.0.14 관리자 권한 창의 예 수동 승인 후 설치·전체Explorer재시작·메뉴없는자동표시·GUI성능·장애복구 QA를 이어서 수행. 아직 통과나 설치완료로 보고하지 않음.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "후속 설치·GUI QA 5~10분",
+      "actualTime": "후속16:54:20 KST 착수. 첫 관리자승인대기 약7분 후13설치성공, GUI문제발견·14수정과native검증완료. 두 번째 관리자승인대기로 현재14설치·최종GUI QA미완료.",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103082404044-v1.0.5.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        },
+        {
+          "visualEvidence": [
+            {
+              "role": "reference",
+              "image": "../assets/ui-qa-before-1-0-11.png",
+              "caption": "설치 전1.0.11의 실제64폴더 화면.1251×583 원본PNG89,064B로 편집·축소 없이 보존. 신규버전 설치 후 화면은 아직 미확보."
+            }
+          ],
+          "id": "T05",
+          "order": 5,
+          "title": "1.0.13 실제 교체 설치",
+          "action": "실제 QA 발견 문제를 수정한1.0.14 생성·자동 초기화/비동기 회귀·MSI검증 후 교체 설치 및 전체 Explorer DLL 검증",
+          "expected": "MSI0, 실제14 DLL, 메뉴 호출 없이 크기 표시 및 구버전 탐색기 제거",
+          "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "blocked",
+          "revision": 2,
+          "result": "14 nativeautoStart status1,13 baseline0 재현. async10000회59.86ms/최악110.80µs.14 MSI검증통과·SHA1c4044e0eddc94f09c6ee5d396d31389f5e09986ab1acbff72cc2308f0c4d4d1 고정. 교체 설치 진행 1.0.14 교체 설치는 관리자 권한 창에서 대기. 현재 실제 설치13 유지."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "실제 GUI 반복 QA와 공개 결과",
+          "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+          "expected": "메뉴 없는 초기 표시, 64폴더 UI응답·정확한 변경 반영, 브로커 부재 시에도UI응답",
+          "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "1.0.13 실제 설치·GUI QA에서 초기화가 메뉴 활성화까지 지연되고 별도 Explorer 프로세스가 구버전 DLL을 유지함을 확인. 원래 작업·실패 QA 보존, 1.0.14 자동 초기화 및 모든 신뢰 Explorer 프로세스 교체로 T05/T06 revision2 재검증.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T08:01:20.5134574Z",
+          "summary": "설치 시작 후 관리자 보안 창에서 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "Windows 관리자 승인이 필요한 보안 창이 표시돼 설치 대기. 보안 창 자동 조작 금지 규칙에 따라 승인 요청 전달.",
+              "evidence": "설치 로그 MSI_LUA Elevation required; 실제 broker file version1.0.11; ComputerUse window consent.exe 확인",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T08:23:56.6975158Z",
+          "summary": "1.0.13 설치 성공과 실제 GUI 초기화 실패",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "MSI0, 설치된 broker·maintenance·DLL hash가 빌드와 동일; 실제13 DLL 로드",
+              "evidence": "install-1.0.13.log MainEngineThread0;프로세스3256;Explorer10376모듈13",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "새 창에서 공백, 클래식 메뉴 호출 뒤에야 크기 표시. 별도24232 Explorer는11 DLL 유지",
+              "evidence": "실제ComputerUse전후tree·module대조; nativeautostartprobe13status0/14status1",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-03T08:33:17.4885400Z",
+          "summary": "실제13 브로커의64폴더와 차액 갱신 검사",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "64폴더합계전부정확.4KB→1MiB31ms,추가2KiB2344ms,삭제250ms,복원1344ms.정상변경 중pending없음.이 검사는 브로커에 대한 검사이며 전체GUI QA통과를 의미하지 않음.",
+              "evidence": "build/live_backend_qa.cpp 실행출력;실제설치13 broker3256 session1",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-03T08:33:17.4962207Z",
+          "summary": "14수정 회귀 통과와 두 번째 UAC 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "14자동초기화status1/13baseline0;비동기10000호출59.86ms;native표시·MSI검증통과.설치는Windows관리자승인대기.",
+              "evidence": "install-1.0.14.log MSI_LUA Elevation required; 사용자에게 두 번째 승인 카드 전달",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103082404044-v1.0.5.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103082404044-v1.0.5.md",
+    "date": "2026-11-03T08:24:04.044Z",
+    "version": "v1.0.5",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "14교체 설치 및 실제GUI 반복QA 진행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "후속 설치·GUI QA 5~10분",
+      "actualTime": "2026-11-03 16:54:20 KST 착수; 관리자 승인 대기로 설치·GUI QA 미완료. 기준 화면 확보·확정 MSI 실행까지만 수행.",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103080250979-v1.0.4.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        },
+        {
+          "visualEvidence": [
+            {
+              "role": "reference",
+              "image": "../assets/ui-qa-before-1-0-11.png",
+              "caption": "설치 전1.0.11의 실제64폴더 화면.1251×583 원본PNG89,064B로 편집·축소 없이 보존. 신규버전 설치 후 화면은 아직 미확보."
+            }
+          ],
+          "id": "T05",
+          "order": 5,
+          "title": "1.0.13 실제 교체 설치",
+          "action": "실제 QA 발견 문제를 수정한1.0.14 생성·자동 초기화/비동기 회귀·MSI검증 후 교체 설치 및 전체 Explorer DLL 검증",
+          "expected": "MSI0, 실제14 DLL, 메뉴 호출 없이 크기 표시 및 구버전 탐색기 제거",
+          "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "14 nativeautoStart status1,13 baseline0 재현. async10000회59.86ms/최악110.80µs.14 MSI검증통과·SHA1c4044e0eddc94f09c6ee5d396d31389f5e09986ab1acbff72cc2308f0c4d4d1 고정. 교체 설치 진행"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "실제 GUI 반복 QA와 공개 결과",
+          "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+          "expected": "메뉴 없는 초기 표시, 64폴더 UI응답·정확한 변경 반영, 브로커 부재 시에도UI응답",
+          "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "1.0.13 실제 설치·GUI QA에서 초기화가 메뉴 활성화까지 지연되고 별도 Explorer 프로세스가 구버전 DLL을 유지함을 확인. 원래 작업·실패 QA 보존, 1.0.14 자동 초기화 및 모든 신뢰 Explorer 프로세스 교체로 T05/T06 revision2 재검증.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T08:01:20.5134574Z",
+          "summary": "설치 시작 후 관리자 보안 창에서 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "Windows 관리자 승인이 필요한 보안 창이 표시돼 설치 대기. 보안 창 자동 조작 금지 규칙에 따라 승인 요청 전달.",
+              "evidence": "설치 로그 MSI_LUA Elevation required; 실제 broker file version1.0.11; ComputerUse window consent.exe 확인",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T08:23:56.6975158Z",
+          "summary": "1.0.13 설치 성공과 실제 GUI 초기화 실패",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "MSI0, 설치된 broker·maintenance·DLL hash가 빌드와 동일; 실제13 DLL 로드",
+              "evidence": "install-1.0.13.log MainEngineThread0;프로세스3256;Explorer10376모듈13",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "새 창에서 공백, 클래식 메뉴 호출 뒤에야 크기 표시. 별도24232 Explorer는11 DLL 유지",
+              "evidence": "실제ComputerUse전후tree·module대조; nativeautostartprobe13status0/14status1",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103080250979-v1.0.4.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103080250979-v1.0.4.md",
+    "date": "2026-11-03T08:02:50.979Z",
+    "version": "v1.0.4",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자가 관리자 보안 창의 예를 누르면 설치·탐색기 재시작·실제 GUI QA를 이어서 수행. 설치 완료나 신규 버전 실제 화면 검증으로 보고하지 않음.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "후속 설치·GUI QA 5~10분",
+      "actualTime": "2026-11-03 16:54:20 KST 착수; 관리자 승인 대기로 설치·GUI QA 미완료. 기준 화면 확보·확정 MSI 실행까지만 수행.",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103075747536-v1.0.3.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        },
+        {
+          "visualEvidence": [
+            {
+              "role": "reference",
+              "image": "../assets/ui-qa-before-1-0-11.png",
+              "caption": "설치 전1.0.11의 실제64폴더 화면.1251×583 원본PNG89,064B로 편집·축소 없이 보존. 신규버전 설치 후 화면은 아직 미확보."
+            }
+          ],
+          "id": "T05",
+          "order": 5,
+          "title": "1.0.13 실제 교체 설치",
+          "action": "확정 MSI 해시 대조, 설치, 탐색기 재시작 및 설치 DLL/브로커 버전 검증",
+          "expected": "설치 성공과 실제 1.0.13 DLL 로드",
+          "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "MSI_LUA: Elevation required to install product, will prompt for credentials. 실제 설치 버전은1.0.11로 유지. 사용자 관리자 승인 필요."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "실제 GUI 반복 QA와 공개 결과",
+          "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+          "expected": "관찰한 범위의 GUI 무응답 없음·정확한 자동 갱신·공개 화면 근거",
+          "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "2026-11-03 사용자 설치 및 GUI 조작 명시 승인. 기존 작업·실패 QA 보존, 실제 설치와 전후 화면·GUI 수용 QA를 추가.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T08:01:20.5134574Z",
+          "summary": "설치 시작 후 관리자 보안 창에서 대기",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "Windows 관리자 승인이 필요한 보안 창이 표시돼 설치 대기. 보안 창 자동 조작 금지 규칙에 따라 승인 요청 전달.",
+              "evidence": "설치 로그 MSI_LUA Elevation required; 실제 broker file version1.0.11; ComputerUse window consent.exe 확인",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103075747536-v1.0.3.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103075747536-v1.0.3.md",
+    "date": "2026-11-03T07:57:47.536Z",
+    "version": "v1.0.3",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "관리자 권한 보안 창의 사용자 승인 후 설치와 실제 GUI QA 진행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "후속 설치·GUI QA 5~10분",
+      "actualTime": "후속 시작 2026-11-03 16:54:20 KST, 진행 중",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류. 추가 승인 범위: 1.0.13 실제 설치, 설치/빌드 파일 해시와 탐색기 로드 DLL 일치, 64폴더 화면 조작 및 생성·변경·삭제 용량 반영, 전후 실제 화면과 공개 검증 보고.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103074023121-v1.0.2.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "1.0.13 실제 교체 설치",
+          "action": "확정 MSI 해시 대조, 설치, 탐색기 재시작 및 설치 DLL/브로커 버전 검증",
+          "expected": "설치 성공과 실제 1.0.13 DLL 로드",
+          "qa": "설치로그·파일 SHA256·실제 프로세스 모듈 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": "MSI 실행, 관리자 권한 창에서 사용자 승인 대기. 1.0.11 기준 화면 확보."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "실제 GUI 반복 QA와 공개 결과",
+          "action": "64폴더 탐색·정렬·이동과 파일 수정/생성/삭제를 조작하여 응답·용량 반영 확인, 전후 캡처와 보고 게시",
+          "expected": "관찰한 범위의 GUI 무응답 없음·정확한 자동 갱신·공개 화면 근거",
+          "qa": "실제 화면 값, QAfixture 크기, 전후 캡처·공개URL 대조",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T05",
+        "T06"
+      ],
+      "scopeChange": "2026-11-03 사용자 설치 및 GUI 조작 명시 승인. 기존 작업·실패 QA 보존, 실제 설치와 전후 화면·GUI 수용 QA를 추가.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-final-package-upload-20261103-20261103074739885-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-final-package-upload-20261103-20261103074739885-v1.0.1.md",
+    "date": "2026-11-03T07:47:39.885Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "final-package-upload-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "4제품 최종 검증·최신 패키지 업로드",
+      "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 GUI·키보드·플레이어·문서 재촬영과 샘플 제거 컴파일: 자동 승인 검토 거절 후 사용자 허락 대기. 일부 서버 파일 집계 미확인.",
+      "outcome": "새 프로젝트4패키지 설치·공식 Validator 실패0·13core 컴파일·4 SDK 업로드 완료. GUI 자동 승인 거절로 실제 화면·문서 재촬영/키보드/샘플 제거 검증은 허락 대기.",
+      "proposedTime": "30~60분",
+      "actualTime": "2026-11-03 15:59:54 KST 시작. 2026-11-03 16:47:31 KST 기록; SDK 업로드까지 완료, 전체 QA 미완료.",
+      "xerjEvidence": "노드 미실행 및 재시작 실패 확인; 현재 소스와 기존 성공 기록 직접 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "final-package-upload-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "4제품 남은 검증과 최신 패키지 업로드, Entity Forge 무료 유지",
+      "completionCriteria": "최신 소스와 고정 패키지 일치, 실제 설치·샘플 포함/제거 컴파일·공식 Validator·핵심 UI/샘플 검증, 포털4제품 최신 업로드와 무료/가격·미디어 저장 확인, Submit 미실행 및 공개 보고",
+      "previousManual": "projects/turnroom/reports/2026-11-03-manual-20261103070310446-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "소스·가격·산출물 고정",
+          "action": "Entity Forge 무료·최신 버전 확인, 실제 Unity 내보내기 및 해시 고정",
+          "expected": "새 산출물·원본 동일성과 버전·무료 설정 확인",
+          "qa": "아카이브 전체 해시와 네이티브 내보내기 결과",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "Entity Forge 무료·0.3.1 확인, actual native export 및5개 패키지 source/meta 해시 차이0"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "설치·Validator·샘플 분리",
+          "action": "별도 프로젝트에 고정4패키지 설치, 샘플 제거 컴파일·공식 Validator",
+          "expected": "최종 후보에서 컴파일·Validator 통과와 의존성 확인",
+          "qa": "설치 결과·공식 SDK 결과·제거 전후 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "Native4package import12assertions passed; official failures0; 13core Roslyn passed. Native sample removal pending GUI permission."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "핵심 동작·회귀 검증",
+          "action": "Pixora 작업 문서·Undo/Redo, Pixel Built-in/URP, Forge 플레이어 변환, 공유 UI·언어·문서 영향 검증",
+          "expected": "실제 사용 흐름과 렌더·빌드 결과 검증",
+          "qa": "native 실행 결과·화면·재열기 출력 대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "미디어 최종 검증",
+          "action": "기존 최종 영상의 시청·직접 청취·포스터와 키 이미지 확인",
+          "expected": "실제 사운드·권리와 제품별 미디어 일치",
+          "qa": "전체 재생·청취 및 현재 포털 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "사용자가 네 제품 모두 직접 청취했고 이상 없음으로 확인. 현재 포털 미디어 각1video16gallery3keys."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "최신 패키지 업로드",
+          "action": "검증한 해시의 파일만 공식 SDK로4개 초안 업로드",
+          "expected": "4개 업로드 성공·무료 유지·Submit 미실행",
+          "qa": "SDK 영수증과 새 페이지 업로드·가격·미디어 확인",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "4제품 SDK Success, 고정SHA 일치. 버전·가격·미디어 새페이지 확인. 일부 서버 filecount0 미확인. Submit 미실행."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "공개 결과·전체 QA",
+          "action": "실제 결과와 남은 사항을 제품별 공개하고 전체 범위 QA",
+          "expected": "공개 URL·첨부·현재 버전 배포 확인",
+          "qa": "보고서 빌드·검사·푸시·Pages 및 외부 접근",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "제품별 보고서 생성·공개 확인 진행 중"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T16:27:33.3017183+09:00",
+          "summary": "가격·실제 내보내기·아카이브 전체 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "native export complete; frozen source/meta mismatches0; Entity Forge Free asset",
+              "evidence": "native-export.json; frozen-manifest.json; actual portal Free asset checked",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103074023121-v1.0.2.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103074023121-v1.0.2.md",
+    "date": "2026-11-03T07:40:23.121Z",
+    "version": "v1.0.2",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청한 코드 수정·headless 테스트·산출물·보고 공개 완료. 사용자 작업 보호를 위해 현재 설치본 교체 및 실제 탐색기 전후 수용 검증은 보류하며 설치 완료로 주장하지 않음.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~15분",
+      "actualTime": "39분 53초; 2026-11-03 16:40:22 KST 코드·보고 검증 완료, 설치 보류",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103073314036-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "배포06f650ae 성공, 개별 공개 HTML HTTP200 및 재현·측정 본문 대조"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-03T07:40:22.4937206Z",
+          "summary": "전체 코드·headless QA와 공개 보고 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "364.37ms 지연 대기 재현 완료",
+              "evidence": "test-async 출력과 공식API조건대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회 비대기조회·캐시갱신·장애숫자유지 통과",
+              "evidence": "수정후 test-async PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드·네이티브표시·MSI·원본dist 해시 동일; Defender검사0",
+              "evidence": "고정MSI SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "850 보고서·30171 로컬링크 검증, CI06f650ae 배포성공, 공개개별보고서200 및 본문일치",
+              "evidence": "https://mdj0126.github.io/codex-config/projects/windowsfoldersize/reports/2026-11-03-bug-20261103073314431-v1.0.0.html",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103073314036-v1.0.1.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103073314036-v1.0.1.md",
+    "date": "2026-11-03T07:33:14.036Z",
+    "version": "v1.0.1",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "공개 배포 확인 중. 사용자 작업을 방해하지 않도록 설치·탐색기 재시작·실제 GUI 전후 촬영은 보류하며 UI 수용 검증 완료로 주장하지 않음.",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~15분",
+      "actualTime": "2026-11-03 16:20:16 KST 시작; 코드·headless QA 완료, 공개 검증 진행",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류.",
+      "previousManual": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103072813288-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "동기 호출 20ms 설정에도 364.37ms 대기 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "전용 작업 스레드 및 UI 비대기 조회 구현; 10000회 총52.54ms, 최악136.90µs"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "네이티브 Windows 속성 표시·정준 변환 회귀, 빌드 및 MSI 검증 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": "JSON 보고서와 공개 배포 검증 진행"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "지연 응답의 동기 대기 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20ms 설정의 CallNamedPipe가 지연 응답에 364.37ms 대기",
+              "evidence": "src/async_cache_test.cpp 실제 named pipe 서버 350ms 지연",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "최초 캐시 경합 검증 실패 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "try_lock 경합 때 기본 queued 응답으로 돌아가 숫자 유지 검사 실패",
+              "evidence": "첫 test-async 실행의 numeric retention FAIL",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-03T07:33:13.2203206Z",
+          "summary": "호출 스레드별 마지막 스냅샷으로 경합 수정 후 재검증",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "10000회52.54ms, 최악136.90µs; 100ms IPC deadline111.81ms; 호출 스레드 I/O0; 숫자 유지 PASS",
+              "evidence": "scripts/test-async.cmd 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "진행률·큐·실패·완료의 Windows 속성/COM 표시 모두 통과; MSI 검증0; SHA256일치",
+              "evidence": "DisplayTest·ProgressTest, WiX ICE 검사; SHA256 0161022c296a7e569c34a22fe3f63e02cca50853c7d838e1818d368a083fb3f8",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-20261103072813288-v1.0.0.html",
+    "postPath": "projects/windowsfoldersize/posts/2026-11-03-manual-20261103072813288-v1.0.0.md",
+    "date": "2026-11-03T07:28:13.288Z",
+    "version": "v1.0.0",
+    "project": "windowsfoldersize",
+    "kind": "manual",
+    "manualId": "windowsfoldersize-nonblocking-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "windowsfoldersize",
+      "kind": "manual",
+      "title": "여러 폴더 조회 시 탐색기 대기 제거",
+      "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~15분",
+      "actualTime": "2026-11-03 16:20:16 KST 시작, 진행 중",
+      "xerjEvidence": "MCP 미제공, 프로젝트 검색 스크립트 없음; rg와 현재 소스로 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "windowsfoldersize-nonblocking-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "다수 폴더 크기 조회가 브로커 응답을 기다리지 않게 수정",
+      "completionCriteria": "무응답 서버·다수 조회에서 호출 즉시 반환, 캐시 갱신·장애 시 숫자 유지, 호환성 검사와 설치 파일 생성, 공개 보고. 작업 방해 금지에 따라 설치·탐색기 재시작은 보류.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동기 대기 재현",
+          "action": "현재 IPC 호출과 지연 서버의 실제 대기 시간 대조",
+          "expected": "문제 경로와 재현 수치 확인",
+          "qa": "20ms CallNamedPipe에 350ms 지연 응답 적용",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": "소스와 공식 API 문서 확인, 실행 재현 준비"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "비동기 캐시 구현",
+          "action": "UI는 캐시만 조회, IPC는 제한 시간 있는 전용 스레드로 분리",
+          "expected": "UI 경로에서 IPC와 대기 제거",
+          "qa": "무응답·지연·다수 폴더·숫자 유지 테스트",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀와 산출물 고정",
+          "action": "네이티브 속성 표시 회귀, 빌드, MSI 구조와 해시 확인",
+          "expected": "테스트 통과 및 최신 단일 설치 파일",
+          "qa": "headless 테스트 실행과 MSI 검증",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "보고·공개 검증",
+          "action": "QA 근거와 적용 보류 사유를 공개 보고서로 게시",
+          "expected": "개별 보고서 외부 접근 성공",
+          "qa": "빌드·링크 검사와 배포 SHA·HTTP 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103070310446-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-20261103070310446-v1.0.0.md",
+    "date": "2026-11-03T07:03:10.446Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "final-package-upload-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "4제품 최종 검증·최신 패키지 업로드",
+      "summary": "Entity Forge 무료 유지, 실제 설치·Validator·핵심 동작·업로드 검증. Submit은 실행하지 않습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 검증·업로드 진행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "30~60분",
+      "actualTime": "2026-11-03 15:59:54 KST 시작",
+      "xerjEvidence": "노드 미실행 및 재시작 실패 확인; 현재 소스와 기존 성공 기록 직접 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "final-package-upload-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "4제품 남은 검증과 최신 패키지 업로드, Entity Forge 무료 유지",
+      "completionCriteria": "최신 소스와 고정 패키지 일치, 실제 설치·샘플 포함/제거 컴파일·공식 Validator·핵심 UI/샘플 검증, 포털4제품 최신 업로드와 무료/가격·미디어 저장 확인, Submit 미실행 및 공개 보고",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "소스·가격·산출물 고정",
+          "action": "Entity Forge 무료·최신 버전 확인, 실제 Unity 내보내기 및 해시 고정",
+          "expected": "새 산출물·원본 동일성과 버전·무료 설정 확인",
+          "qa": "아카이브 전체 해시와 네이티브 내보내기 결과",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "설치·Validator·샘플 분리",
+          "action": "별도 프로젝트에 고정4패키지 설치, 샘플 제거 컴파일·공식 Validator",
+          "expected": "최종 후보에서 컴파일·Validator 통과와 의존성 확인",
+          "qa": "설치 결과·공식 SDK 결과·제거 전후 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "핵심 동작·회귀 검증",
+          "action": "Pixora 작업 문서·Undo/Redo, Pixel Built-in/URP, Forge 플레이어 변환, 공유 UI·언어·문서 영향 검증",
+          "expected": "실제 사용 흐름과 렌더·빌드 결과 검증",
+          "qa": "native 실행 결과·화면·재열기 출력 대조",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "미디어 최종 검증",
+          "action": "기존 최종 영상의 시청·직접 청취·포스터와 키 이미지 확인",
+          "expected": "실제 사운드·권리와 제품별 미디어 일치",
+          "qa": "전체 재생·청취 및 현재 포털 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "최신 패키지 업로드",
+          "action": "검증한 해시의 파일만 공식 SDK로4개 초안 업로드",
+          "expected": "4개 업로드 성공·무료 유지·Submit 미실행",
+          "qa": "SDK 영수증과 새 페이지 업로드·가격·미디어 확인",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "공개 결과·전체 QA",
+          "action": "실제 결과와 남은 사항을 제품별 공개하고 전체 범위 QA",
+          "expected": "공개 URL·첨부·현재 버전 배포 확인",
+          "qa": "보고서 빌드·검사·푸시·Pages 및 외부 접근",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103061801491-v1.0.6.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103061801491-v1.0.6.md",
+    "date": "2026-11-03T06:18:01.491Z",
+    "version": "v1.0.6",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "T04: 최신 네이티브 런타임/분석 UI·실측·문서 캡처. T11: 실제 판매 초안 Save/readback. 사용자 컴퓨터 유즈 금지로 실행하지 않음. 과거 -1.62% 결과는 보존하며 최신 개선율로 사용하지 않음. 교훈 검토: 기존 전역 근거/포커스 규칙 적용, 전역 변경 없음.",
+      "outcome": "0.3.1 파일 구현과 비GUI 검증 완료. 네이티브 성능·화면 및 포털 Save 대기",
+      "proposedTime": "30~60분 · 시작 2026-11-03 14:33:13 KST. 비모달 분석 추가 예상 8~15분",
+      "actualTime": "파일 구현·비GUI 검사 44.7분 · 2026-11-03 15:17:52 KST. 공개 배포는 이후 별도 확인. 네이티브 실행 완료 시각은 미정.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052242132-v1.0.5.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "빌드 기록 카드 정리",
+          "action": "기존 결과 카드 스타일로 버튼·목록·상세 묶기",
+          "expected": "모든 기록 요소가 같은 박스 안에 표시",
+          "qa": "실제 Unity 테마 전환·기록 선택·목록과 상세 부모 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "UXML/USS 적용과 실제 테마/선택 확인"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "빌드 기록 요약 행",
+          "action": "UXML 요약 행과 선택/호버/선택 복원",
+          "expected": "파일명 대신 읽기 쉬운 날짜·플랫폼·변환 개수·상태",
+          "qa": "실제 마우스/키보드 선택·새로고침·테마 및 번역 인자 확인",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "요약 행 적용 및 실제 선택/키보드/새로고침/테마 검증 통과"
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "반복 오브젝트 이점·판매 문구",
+          "action": "제품 UI·9개 가이드·포털 저장용 문구에 반복 메시/재질과 조건부 이점 및 실측 제한 명시",
+          "expected": "설치만으로 빨라진다는 보장 없이 조건과 빌드 적용 시점 표시",
+          "qa": "번역 9개·문서 링크·판매 초안 내용 대조",
+          "dependsOn": [
+            "T06"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "제품 설명·9개 가이드에 반복 메시/재질의 조건부 이점 반영. 최신 판매 페이지 4개 언어의 저장용 수정문 준비; 실제 Save는 별도 T11 미실행."
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "자동 렌더링 중복 처리 제거",
+          "action": "지속 렌더 페이지와 시뮬레이션 전용 gather, 변경된 재질만 복사, 진단 보강",
+          "expected": "정지 프록시의 매 프레임 gather/copy 제거, 원래 동적 동작/폴백 유지",
+          "qa": "실제 페이지 저장소 로직 실행·7개 어셈블리 컴파일·수명/폴백 경로 대조",
+          "dependsOn": [
+            "T07"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "정지 프록시 재사용 draw 페이지, 동작 전용 gather, 재질 변경 감지, 구간별 진단 구현. 실제 생산 페이지 저장소/측정 정책 순수 로직과 컴파일 통과; 네이티브 성능 pending."
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "산출물·재측정 준비",
+          "action": "측정값/동기화 비용 진단·프로파일링 계획과 새 패키지 생성",
+          "expected": "실측 통과와 구현/정적 검증을 구분하고 네이티브 검증 대기 명시",
+          "qa": "소스/패키지 해시 대조와 진단 데이터 계약 검사",
+          "dependsOn": [
+            "T08"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "0.3.1-preview 407개 에셋을 현재 원본/메타와 읽기 대조. 0.3.0 원본 해시 보존. 포그라운드/타이밍 조건 진단과 명시적 네이티브 QA 준비; 실행하지 않음."
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "비모달 분석·하단 진행률 구현",
+          "action": "씬/프리팹 분석을 EditorApplication.update 분할 처리, 분석 중 버튼과 고정 하단 상태줄, 탭 이동 지속·취소 정리·9언어 문구 구현",
+          "expected": "로딩 다이얼로그 호출 없이 진행률과 상태 표시 구조, 미리보기 지문 계산 제외, 기존 빌드 지문 유지",
+          "qa": "현재 C# 컴파일·UXML 하단 부모·모달 호출 없음·반복자 정리·번역/패키지 소스 대조. 실제 표시/마우스 회귀는 T04에서 재허용 후",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "7개 어셈블리/97개 현재 소스, 9언어 514개 항목과 고정 하단 UXML 구조 검사 통과. 실제 Unity 표시·응답성 pending"
+        },
+        {
+          "id": "T11",
+          "order": 11,
+          "title": "판매 포털 실제 초안 저장",
+          "action": "현재 4개 언어 description을 다시 읽고 준비된 조건부 성능 설명을 Save 후 재열어 대조. Submit 금지",
+          "expected": "반복 메시/재질의 조건부 이점과 설치만으로 속도 향상 보장 없음이 실제 초안에 저장",
+          "qa": "포털 저장 전 SHA 대조와 새로고침 후 4개 언어 저장값 대조",
+          "dependsOn": [
+            "T10"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "실제 포털 Save 미실행. 최신 성공 readback을 기준으로 revision-guarded 문구 준비. 사용자 화면 재허용 후 진행"
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T07",
+        "T08",
+        "T09",
+        "T10"
+      ],
+      "scopeChange": "사용자가 컴퓨터 유즈와 GUI/플레이어 신규 실행을 금지했습니다. 반복 오브젝트의 조건부 이점 설명·판매 초안 준비, 기존 로그 분석과 재사용 렌더 페이지/동작 전용 gather 개선, 비GUI 검증과 재측정 진단을 진행합니다. 실제 재측정·화면·포털 조작은 재허용 후입니다. 추가 요청: 모달 로딩을 제거하고 분석 중 버튼과 창 하단 고정 진행률을 구현합니다. 실제 UI 조작은 계속 금지입니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T05:06:01.3550422+00:00",
+          "summary": "추가 CI 상태 오류 수정·재빌드",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+              "evidence": "../assets/ci-final-state-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T05:13:48.942Z",
+          "summary": "빌드 기록 영역 카드화",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity에서 같은 카드 내부 목록/로그 표시 및 테마 전환·기록 선택 확인",
+              "evidence": "../assets/history-card-20261103/after.jpg",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T05:22:07.226Z",
+          "summary": "빌드 기록을 날짜·상태·변환 개수의 요약 행으로 정리",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity 6000.0.83f1에서 날짜와 JSON startedUtc 대조, 10,000개 변환 및 succeeded/unknown 상태 대조, 마우스 선택·키보드 Down·새로고침 선택 유지·밝은/어두운 테마 확인. 7개 새 문구의 9개 언어 및 {0} 인자 검사 통과. 캡처는 영어입니다. 기존 로그 파일을 수정하거나 빌드하지 않았습니다.",
+              "evidence": "../assets/history-rows-20261103/after.jpg",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "step",
+          "at": "2026-11-03T06:17:52.724Z",
+          "summary": "반복 렌더링 경로·비모달 분석의 파일/로직 검사. 네이티브 UI·성능은 미실행",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "제품 설명·9개 가이드에 반복 메시/재질의 조건부 이점 반영. 최신 판매 페이지 4개 언어의 저장용 수정문 준비; 실제 Save는 별도 T11 미실행.",
+              "evidence": "../assets/repeated-rendering-20261103/verification.json",
+              "dependencies": {
+                "T06": 1
+              }
+            },
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "정지 프록시 재사용 draw 페이지, 동작 전용 gather, 재질 변경 감지, 구간별 진단 구현. 실제 생산 페이지 저장소/측정 정책 순수 로직과 컴파일 통과; 네이티브 성능 pending.",
+              "evidence": "../assets/repeated-rendering-20261103/verification.json",
+              "dependencies": {
+                "T07": 1
+              }
+            },
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "0.3.1-preview 407개 에셋을 현재 원본/메타와 읽기 대조. 0.3.0 원본 해시 보존. 포그라운드/타이밍 조건 진단과 명시적 네이티브 QA 준비; 실행하지 않음.",
+              "evidence": "../assets/repeated-rendering-20261103/verification.json",
+              "dependencies": {
+                "T08": 1
+              }
+            },
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리/97개 현재 소스, 9언어 514개 항목과 고정 하단 UXML 구조 검사 통과. 실제 Unity 표시·응답성 pending",
+              "evidence": "../assets/repeated-rendering-20261103/verification.json",
+              "dependencies": {
+                "T09": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-full-weeks-20261103060603741-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-activity-full-weeks-20261103060603741-v1.0.1.md",
+    "date": "2026-11-03T06:06:03.741Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-full-weeks",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 양끝 채움·기간 밖 비활성화",
+      "summary": "양끝을 채워 직사각형으로 표시하고 집계 기간 밖 날짜는 어두운 회색·무반응 처리합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "양끝 채움·미래 날짜 비활성화 공개 확인 완료",
+      "proposedTime": "3~5분",
+      "actualTime": "시작 2026-11-03 15:02:39 KST · 기능 공개 확인 2026-11-03T06:06:03.348Z · 최종 보고서 배포 확인은 채팅에 표기",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-full-weeks",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "완전한 주간 격자를 표시하며 기간 밖 날짜를 집계·호버·클릭에서 제외합니다.",
+      "completionCriteria": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103060328498-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "양끝 패딩 채움·검증·공개",
+          "action": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+          "expected": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "자동49개·브라우저25개·공개6개 통과. 371칸 중365일만 집계·선택 가능하며 기간 밖6칸은 어두운 회색·무반응."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T06:06:03.348Z",
+          "summary": "격자 완성·집계 보존·비활성 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "자동49개·브라우저25개·공개6개 통과. 371칸 중365일만 집계·선택 가능하며 기간 밖6칸은 어두운 회색·무반응.",
+              "evidence": "assets/activity-padding-2026-11-03/browser-qa.json 및 public-qa.json; 7개 요일 경계 자동 검사",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103060328498-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103060328498-v1.0.0.md",
+    "date": "2026-11-03T06:03:28.498Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-full-weeks",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 양끝 채움·기간 밖 비활성화",
+      "summary": "양끝을 채워 직사각형으로 표시하고 집계 기간 밖 날짜는 어두운 회색·무반응 처리합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "부분 주가 비어 있는 원본과 disabled visibility:hidden을 확인했습니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "시작 2026-11-03 15:02:39 KST · 진행 중",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-full-weeks",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "완전한 주간 격자를 표시하며 기간 밖 날짜를 집계·호버·클릭에서 제외합니다.",
+      "completionCriteria": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "양끝 패딩 채움·검증·공개",
+          "action": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+          "expected": "371칸·365개 유효 날짜·집계 보존·비활성 무반응·실제 전후·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-interactive-preview-20261103054648581-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-activity-interactive-preview-20261103054648581-v1.0.1.md",
+    "date": "2026-11-03T05:46:48.581Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-interactive-preview",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 미리보기 링크·유지·반응 개선",
+      "summary": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "보고서 링크·미리보기 유지·재사용 구현과 공개 동작 확인 완료",
+      "proposedTime": "6~10분",
+      "actualTime": "시작 2026-11-03 14:38:12 KST · 기능 공개 확인 2026-11-03T05:46:47.942Z · 결과 기록 최종 배포 시각은 채팅에 표기",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-interactive-preview",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+      "completionCriteria": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103053855780-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "미리보기 링크·상호작용·성능 개선",
+          "action": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+          "expected": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "브라우저24개·자동 테스트48개와 공개 링크·유지 검사 통과. 호버200회 새 DOM 1263개→0개, 날짜 선택 시 기존 달력 유지."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T05:46:47.941Z",
+          "summary": "초기 미리보기 이동 검사에서 닫힘 재현",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "스크롤 이벤트의 무조건 hide가 미리보기를 닫는 실제 스택을 확인했습니다.",
+              "evidence": "activity-grass.js scroll listener; 포커스/포인터 유지 중에는 위치 갱신하도록 수정 후 재검증",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-03T05:46:47.942Z",
+          "summary": "이동·유지·재사용·공개 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "브라우저24개·자동 테스트48개와 공개 링크·유지 검사 통과. 호버200회 새 DOM 1263개→0개, 날짜 선택 시 기존 달력 유지.",
+              "evidence": "cce2af00; assets/activity-interactive-2026-11-03/browser-qa.json·public-qa.json·before-performance.json·after-performance.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103053855780-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103053855780-v1.0.0.md",
+    "date": "2026-11-03T05:38:55.780Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-interactive-preview",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 미리보기 링크·유지·반응 개선",
+      "summary": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "기존 호버는 전체 집계를 하지 않지만 매번 미리보기 DOM을 다시 만들고 크기를 측정하며, mouseleave/blur 즉시 숨김과 pointer-events:none으로 클릭을 막는 소스를 확인했습니다.",
+      "proposedTime": "6~10분",
+      "actualTime": "시작 2026-11-03 14:38:12 KST · 진행 중",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-interactive-preview",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "보고서 바로가기와 마우스 유지, 반복 계산·DOM 생성을 개선합니다.",
+      "completionCriteria": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "미리보기 링크·상호작용·성능 개선",
+          "action": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+          "expected": "제목 실제 이동·마우스/키보드 유지·필터·호버 계산/DOM 성능·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-activity-tooltip-spacing-20261103053549855-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-activity-tooltip-spacing-20261103053549855-v1.0.1.md",
+    "date": "2026-11-03T05:35:49.855Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-tooltip-spacing",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 제목 툴팁·균일 간격 수정",
+      "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "제목 툴팁·균일 간격 구현과 공개 검증 완료",
+      "proposedTime": "5~8분",
+      "actualTime": "시작 2026-11-03 14:31:37 KST · 기능 공개 확인 2026-11-03T05:35:48.516Z · 최종 기록 배포 시각은 채팅에 표기",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-tooltip-spacing",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "completionCriteria": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103053237547-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "툴팁·간격 구현 및 검증",
+          "action": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "expected": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "브라우저19개·자동 테스트48개·공개5개 통과. 제목·빈 날짜·균일 간격·화면 경계·키보드·필터 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T05:35:48.515Z",
+          "summary": "툴팁·간격·기존 필터 최종 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "브라우저19개·자동 테스트48개·공개5개 통과. 제목·빈 날짜·균일 간격·화면 경계·키보드·필터 확인.",
+              "evidence": "b7bfb120; assets/activity-tooltip-2026-11-03/browser-qa.json 및 public-qa.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103053237547-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103053237547-v1.0.0.md",
+    "date": "2026-11-03T05:32:37.547Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "activity-tooltip-spacing",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "잔디 제목 툴팁·균일 간격 수정",
+      "summary": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "기존 소스에서 space-between으로 가로 간격이 늘어난 원인을 확인하고 수정합니다.",
+      "proposedTime": "5~8분",
+      "actualTime": "시작 2026-11-03 14:31:37 KST · 진행 중",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "activity-tooltip-spacing",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "날짜별 보고서 제목 미리보기와 균일한 셀 간격을 추가합니다.",
+      "completionCriteria": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "툴팁·간격 구현 및 검증",
+          "action": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "expected": "실제 제목·빈 날짜·툴팁 화면 경계·상하좌우 동일 간격·필터·공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052242132-v1.0.5.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052242132-v1.0.5.md",
+    "date": "2026-11-03T05:22:42.132Z",
+    "version": "v1.0.5",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 자동 변환과 네이티브 기능/설치는 통과. 성능 개선 미통과: 동일 조건 추가 프로파일링과 CPU/GPU·메모리 비교 필요. 전체 언어/테마·창 최소화/리로드 회귀와 문서 캡처는 남음. 일반 MonoBehaviour 자동 번역 및 동적 로더는 후속 범위. 교훈 검토: 측정 결과를 확대 해석하지 않는 기존 전역 지침 유지, 전역 변경 없음.",
+      "outcome": "요약 행 적용 및 실제 선택/키보드/새로고침/테마 검증 통과",
+      "proposedTime": "3~5분 · 시작 2026-11-03 14:17:46 KST",
+      "actualTime": "구현·실제 확인 약 3분 12초 · 2026-11-03 14:20:58 KST. 공개 배포는 이후 확인.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052149944-v1.0.4.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "빌드 기록 카드 정리",
+          "action": "기존 결과 카드 스타일로 버튼·목록·상세 묶기",
+          "expected": "모든 기록 요소가 같은 박스 안에 표시",
+          "qa": "실제 Unity 테마 전환·기록 선택·목록과 상세 부모 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "UXML/USS 적용과 실제 테마/선택 확인"
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "빌드 기록 요약 행",
+          "action": "UXML 요약 행과 선택/호버/선택 복원",
+          "expected": "파일명 대신 읽기 쉬운 날짜·플랫폼·변환 개수·상태",
+          "qa": "실제 마우스/키보드 선택·새로고침·테마 및 번역 인자 확인",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "요약 행 적용 및 실제 선택/키보드/새로고침/테마 검증 통과"
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T06"
+      ],
+      "scopeChange": "사용자 후속 요청: 빌드 기록 JSON 파일명 목록을 시각·플랫폼·개수·상태의 요약 행으로 정리합니다. 기존 작업과 QA는 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T05:06:01.3550422+00:00",
+          "summary": "추가 CI 상태 오류 수정·재빌드",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+              "evidence": "../assets/ci-final-state-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T05:13:48.942Z",
+          "summary": "빌드 기록 영역 카드화",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity에서 같은 카드 내부 목록/로그 표시 및 테마 전환·기록 선택 확인",
+              "evidence": "../assets/history-card-20261103/after.jpg",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-03T05:22:07.226Z",
+          "summary": "빌드 기록을 날짜·상태·변환 개수의 요약 행으로 정리",
+          "results": [
+            {
+              "taskId": "T06",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity 6000.0.83f1에서 날짜와 JSON startedUtc 대조, 10,000개 변환 및 succeeded/unknown 상태 대조, 마우스 선택·키보드 Down·새로고침 선택 유지·밝은/어두운 테마 확인. 7개 새 문구의 9개 언어 및 {0} 인자 검사 통과. 캡처는 영어입니다. 기존 로그 파일을 수정하거나 빌드하지 않았습니다.",
+              "evidence": "../assets/history-rows-20261103/after.jpg",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052149944-v1.0.4.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103052149944-v1.0.4.md",
+    "date": "2026-11-03T05:21:49.944Z",
+    "version": "v1.0.4",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 자동 변환과 네이티브 기능/설치는 통과. 성능 개선 미통과: 동일 조건 추가 프로파일링과 CPU/GPU·메모리 비교 필요. 전체 언어/테마·창 최소화/리로드 회귀와 문서 캡처는 남음. 일반 MonoBehaviour 자동 번역 및 동적 로더는 후속 범위. 교훈 검토: 측정 결과를 확대 해석하지 않는 기존 전역 지침 유지, 전역 변경 없음.",
+      "outcome": "레이아웃 적용 및 실제 Unity 선택·테마 전환 확인",
+      "proposedTime": "3~5분 · 시작 2026-11-03 14:10:29 KST",
+      "actualTime": "UI 적용·실제 확인 약 3분 · 2026-11-03 14:13:20 KST. 공개 배포는 이후 확인.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103051405408-v1.0.3.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "빌드 기록 카드 정리",
+          "action": "기존 결과 카드 스타일로 버튼·목록·상세 묶기",
+          "expected": "모든 기록 요소가 같은 박스 안에 표시",
+          "qa": "실제 Unity 테마 전환·기록 선택·목록과 상세 부모 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "UXML/USS 적용과 실제 테마/선택 확인"
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "사용자 후속 요청: 빌드 기록의 목록과 상세를 첫 탭처럼 하나의 박스로 묶습니다. 기존 전체 작업과 QA를 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T05:06:01.3550422+00:00",
+          "summary": "추가 CI 상태 오류 수정·재빌드",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+              "evidence": "../assets/ci-final-state-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T05:13:48.942Z",
+          "summary": "빌드 기록 영역 카드화",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity에서 같은 카드 내부 목록/로그 표시 및 테마 전환·기록 선택 확인",
+              "evidence": "../assets/history-card-20261103/after.jpg",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-report-activity-grass-20261103051959034-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-report-activity-grass-20261103051959034-v1.0.1.md",
+    "date": "2026-11-03T05:19:59.034Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "report-activity-grass",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물 활동 잔디 추가",
+      "summary": "보고서 제목과 분류 탭 사이에 최근 1년 활동을 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "잔디 구현·회귀·실제 공개 동작 검증 완료",
+      "proposedTime": "10~15분",
+      "actualTime": "시작 2026-11-03 14:11:31 KST · 기능 공개 검증 2026-11-03T05:19:58.118Z · 결과 기록 최종 배포 확인은 채팅에 표기",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "report-activity-grass",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "실제 게시물 날짜 기반 잔디와 프로젝트·필터 연동을 제공합니다.",
+      "completionCriteria": "날짜 집계·필터·다크/라이트·모바일·키보드 검증과 공개 배포 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-03-manual-20261103051242443-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "활동 잔디 구현·검증·공개",
+          "action": "수정 전 화면 캡처, 날짜별 집계와 반응형 잔디 추가, 실행·공개 검사",
+          "expected": "날짜 집계·필터·다크/라이트·모바일·키보드 검증과 공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "자동 테스트48개·브라우저14개·공개6개 통과. KST 날짜 집계·프로젝트/검색/날짜 연동·정지 전후 캡처 확보."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T05:19:58.116Z",
+          "summary": "검사 파서의 속성 순서 의존 발견·수정",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "초기 verify는 data-search 다음에 data-project가 붙어있다고 가정해 신규 data-date 삽입을 인식하지 못했습니다.",
+              "evidence": "verify.mjs:26 elements.length assertion. data-date를 기존 연속 속성 뒤로 옮겨 재검증했습니다.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-03T05:19:58.118Z",
+          "summary": "구현·필터·공개 접근 최종 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "자동 테스트48개·브라우저14개·공개6개 통과. KST 날짜 집계·프로젝트/검색/날짜 연동·정지 전후 캡처 확보.",
+              "evidence": "c0b72775; assets/activity-grass-2026-11-03/browser-qa.json 및 public-qa.json; 로컬863개 보고서·30,517개 링크 검사 통과",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103051405408-v1.0.3.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103051405408-v1.0.3.md",
+    "date": "2026-11-03T05:14:05.408Z",
+    "version": "v1.0.3",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 자동 변환과 네이티브 기능/설치는 통과. 성능 개선 미통과: 동일 조건 추가 프로파일링과 CPU/GPU·메모리 비교 필요. 전체 언어/테마·창 최소화/리로드 회귀와 문서 캡처는 남음. 일반 MonoBehaviour 자동 번역 및 동적 로더는 후속 범위. 교훈 검토: 측정 결과를 확대 해석하지 않는 기존 전역 지침 유지, 전역 변경 없음.",
+      "outcome": "레이아웃 적용 및 실제 Unity 선택·테마 전환 확인",
+      "proposedTime": "3~5분 · 시작 2026-11-03 14:10:29 KST",
+      "actualTime": "UI 적용·실제 확인 약 3분 · 2026-11-03 14:13:20 KST. 공개 배포는 이후 확인.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103050625958-v1.0.2.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "빌드 기록 카드 정리",
+          "action": "기존 결과 카드 스타일로 버튼·목록·상세 묶기",
+          "expected": "모든 기록 요소가 같은 박스 안에 표시",
+          "qa": "실제 Unity 테마 전환·기록 선택·목록과 상세 부모 대조",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "UXML/USS 적용과 실제 테마/선택 확인"
+        }
+      ],
+      "focusTasks": [
+        "T04",
+        "T05"
+      ],
+      "scopeChange": "사용자 후속 요청: 빌드 기록의 목록과 상세를 첫 탭처럼 하나의 박스로 묶습니다. 기존 전체 작업과 QA를 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T05:06:01.3550422+00:00",
+          "summary": "추가 CI 상태 오류 수정·재빌드",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+              "evidence": "../assets/ci-final-state-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-03T05:13:48.942Z",
+          "summary": "빌드 기록 영역 카드화",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Unity에서 같은 카드 내부 목록/로그 표시 및 테마 전환·기록 선택 확인",
+              "evidence": "../assets/history-card-20261103/after.jpg",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103051242443-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-03-manual-20261103051242443-v1.0.0.md",
+    "date": "2026-11-03T05:12:42.443Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "report-activity-grass",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "게시물 활동 잔디 추가",
+      "summary": "보고서 제목과 분류 탭 사이에 최근 1년 활동을 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "기존 목록·필터 소스를 확인했으며 구현 전 화면을 보존합니다.",
+      "proposedTime": "10~15분",
+      "actualTime": "시작 2026-11-03 14:11:31 KST · 진행 중",
+      "xerjEvidence": "연결/검색 스크립트 미제공 — rg로 실제 소스 확인",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "report-activity-grass",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "실제 게시물 날짜 기반 잔디와 프로젝트·필터 연동을 제공합니다.",
+      "completionCriteria": "날짜 집계·필터·다크/라이트·모바일·키보드 검증과 공개 배포 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "활동 잔디 구현·검증·공개",
+          "action": "수정 전 화면 캡처, 날짜별 집계와 반응형 잔디 추가, 실행·공개 검사",
+          "expected": "날짜 집계·필터·다크/라이트·모바일·키보드 검증과 공개 배포 확인",
+          "qa": "KST 경계·0건·윤년·프로젝트/유형 조합과 날짜 클릭·모바일/테마 실제 확인",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103050625958-v1.0.2.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103050625958-v1.0.2.md",
+    "date": "2026-11-03T05:06:25.958Z",
+    "version": "v1.0.2",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 자동 변환과 네이티브 기능/설치는 통과. 성능 개선 미통과: 동일 조건 추가 프로파일링과 CPU/GPU·메모리 비교 필요. 전체 언어/테마·창 최소화/리로드 회귀와 문서 캡처는 남음. 일반 MonoBehaviour 자동 번역 및 동적 로더는 후속 범위. 교훈 검토: 측정 결과를 확대 해석하지 않는 기존 전역 지침 유지, 전역 변경 없음.",
+      "outcome": "실제 자동 변환/생명주기 통과, 성능 개선 미통과",
+      "proposedTime": "실행 검증 20~40분 · 시작 2026-11-03 13:22:35 KST",
+      "actualTime": "검증 및 추가 CI 오류 수정 43분 · 2026-11-03 14:05:35 KST. 전체 출시 검증은 미완료.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        }
+      ],
+      "focusTasks": [
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "2026-11-03 사용자가 컴퓨터 조작을 허용하여 실제 동작·성능·설치·UI 검증을 재개합니다. 기존 실패/미실행 기록을 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-03T05:06:01.3550422+00:00",
+          "summary": "추가 CI 상태 오류 수정·재빌드",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+              "evidence": "../assets/ci-final-state-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-entityforge-runtime-fastpath-20261103-20261103045857114-v1.0.1.md",
+    "date": "2026-11-03T04:58:57.114Z",
+    "version": "v1.0.1",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 자동 변환과 네이티브 기능/설치는 통과. 성능 개선 미통과: 동일 조건 추가 프로파일링과 CPU/GPU·메모리 비교 필요. 전체 언어/테마·창 최소화/리로드 회귀와 문서 캡처는 남음. 일반 MonoBehaviour 자동 번역 및 동적 로더는 후속 범위. 교훈 검토: 측정 결과를 확대 해석하지 않는 기존 전역 지침 유지, 전역 변경 없음.",
+      "outcome": "실제 자동 변환/생명주기 통과, 성능 개선 미통과",
+      "proposedTime": "실행 검증 20~40분 · 시작 2026-11-03 13:22:35 KST",
+      "actualTime": "실행 검증 기록 36분 · 2026-11-03 13:58:38 KST. 전체 출시 검증은 계속 미완료.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "projects/entityforge/reports/2026-11-03-manual-20261103041415347-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "doing",
+          "revision": 2,
+          "result": "Native QA/새 설치/10,000개 실제 변환 검증. OFF 16.7871ms / ON 17.0593ms. CPU/GPU 프로파일링과 전면 UI 회귀는 남음"
+        }
+      ],
+      "focusTasks": [
+        "T04"
+      ],
+      "scopeChange": "2026-11-03 사용자가 컴퓨터 조작을 허용하여 실제 동작·성능·설치·UI 검증을 재개합니다. 기존 실패/미실행 기록을 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-03T04:58:56.5297786+00:00",
+          "summary": "사용자 재허용 후 실제 실행",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+              "evidence": "../assets/native-validation-20261103/verification.json",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103041415347-v1.0.0.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-20261103041415347-v1.0.0.md",
+    "date": "2026-11-03T04:14:15.347Z",
+    "version": "v1.0.0",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+      "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "**제품 출시에 필요한 미완료 검증**: 네이티브 Burst 컴파일/Job safety, 프리팹 및 장면 생명주기, 렌더링·원래 행동 동등성, 인스턴싱 폴백, 최신 패키지 새 프로젝트 설치와 샘플 제거 회귀, 동일 부하의 CPU/GPU 시간·메모리 비교가 필요합니다. 성능 개선 퍼센트는 아직 없습니다. 재사용 버퍼는 최대 용량을 유지하므로 총 메모리가 줄었다고 주장하지 않습니다. 일반 MonoBehaviour의 무컴포넌트 ECS 동작 변환과 Resources/Addressables/AssetBundle 로더는 후속 범위입니다.\n\n교훈 검토: C# 컴파일·순수 저장소 무할당·Burst 속성 존재를 네이티브 실행/전체 성능 검증으로 확대하지 않습니다. 기존 전역 근거/실행 권한 지침과 중복되어 전역 변경 없이 프로젝트 Architecture.md와 메뉴얼에 반영했습니다.",
+      "outcome": "첫 묶음 구현·7개 현재 소스 컴파일·실제 밀집 저장소 테스트 완료. 네이티브 회귀/성능은 미실행.",
+      "proposedTime": "첫 개발 묶음 20~40분 · 시작 2026-11-03 12:42:35 KST",
+      "actualTime": "소스·테스트·문서·패키지 검사 26분 18초 · 2026-11-03 13:08:53 KST. 기록 공개는 이후 확인.",
+      "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-runtime-fastpath-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+      "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "자동 프록시와 ECS 시뮬레이션 분리",
+          "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+          "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+          "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "대량 생성·해제와 진단",
+          "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+          "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+          "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "비GUI 회귀와 패키지 반영",
+          "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+          "expected": "실행한 검증만 근거로 기록",
+          "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이티브 회귀와 실제 성능 비교",
+          "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+          "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+          "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "사용자 화면 조작·GUI/플레이어 실행·빌드 금지로 미실행. 재허락 없이 실행하지 않음."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "첫 추가 개발 묶음. 화면 조작·GUI 신규 실행·플레이어 빌드는 금지된 상태 유지.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-03T04:08:04.833Z",
+          "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+              "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-03T04:08:53.463Z",
+          "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+              "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "사용자 실행 금지로 네이티브 미실행",
+              "evidence": "",
+              "dependencies": {
+                "T03": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103034127844-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-03-manual-20261103034127844-v1.0.0.md",
+    "date": "2026-11-03T03:41:27.844Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "pre-submit-status-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "4제품 심사 전 현황 대조",
+      "summary": "현재 초안·미디어와 패키지·검증 대상 버전을 확인하여 제출 여부를 판정합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "공개 배포 확인 진행 중. 제품 릴리스 QA는 각 보고서의 별도 잔여 항목.",
+      "outcome": "현황 대조를 수행했습니다. 검토 작업 완료와 제품 제출 준비 완료를 구분하며 제품들은 보류입니다.",
+      "proposedTime": "5~10분, 공개에3~5분 추가",
+      "actualTime": "2026-11-03 12:28:54 KST 시작",
+      "xerjEvidence": "코드 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pre-submit-status-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "제품별 실제 준비 상태를 근거로 보고하고 Submit은 실행하지 않음",
+      "completionCriteria": "4제품 현재 포털·패키지·기존 QA 대조와 제품별 보류 사유 및 보고 공개",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "4제품 현황 대조와 공개",
+          "action": "현재 포털·아카이브·현재 파일·기존 QA를 대조하고 공개 보고",
+          "expected": "제품별 통과/미확인/제출 보류 사유 및 공개 링크",
+          "qa": "직접 포털 관찰·해시 검사와 보고서 링크·배포 확인",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "포털·패키지 대조 완료, 공개 확인 진행"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/entityforge/reports/2026-11-03-manual-20261103033505440-v1.0.0.html",
+    "postPath": "projects/entityforge/posts/2026-11-03-manual-20261103033505440-v1.0.0.md",
+    "date": "2026-11-03T03:35:05.440Z",
+    "version": "v1.0.0",
+    "project": "entityforge",
+    "kind": "manual",
+    "manualId": "entityforge-status-review-20261103",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "entityforge",
+      "kind": "manual",
+      "title": "Entity Forge 현재 범위와 개발 목록 검토",
+      "summary": "구현과 검증 이력을 분리하고 원래 목표 대비 후속 개발 항목을 정리합니다.",
+      "reporter": "Codex",
+      "assignee": "Codex",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "제품 후속 개발과 실제 검증 항목은 위 우선순위 목록에 있습니다. 실제 화면을 변경하거나 실행한 작업이 없는 소스/기록 검토이므로 새 실행 화면은 캡처하지 않았습니다. 교훈 검토: 구버전 명시형 측정과 최신 자동/프리팹 경로를 구분해 근거를 적용합니다. 기존 검증 범위 명시 지침과 중복되므로 전역 변경 없음.",
+      "outcome": "현재 버전은 0.2.0-preview입니다. 자동 탐지/빌드 연결/렌더링 프록시와 명시적 ECS 이동·회전·스폰·수명, 분석·프리팹 사본·로그·샘플 UI가 구현되어 있습니다. 컴포넌트 없는 일반 스크립트 로직의 ECS 자동 변환과 근거 없는 신규 프로젝트 성능 예측은 미구현입니다.",
+      "proposedTime": "소스·목록 3~5분, 공개 기록 포함 5~10분 · 시작 2026-11-03 12:27:45 KST",
+      "actualTime": "소스와 과거 원시 측정/현재 패키지 대조 4분 16초 · 2026-11-03 12:32:01 KST. 목록 문서화·공개 기록은 이후 완료.",
+      "xerjEvidence": "Xerj.ps1 Status: XERJ node is not running. rg 및 실제 C#·원시 측정·로그·패키지 해시로 확인.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "entityforge-status-review-20261103",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "현재 소스/실제 기록을 기준으로 구현 범위·검증 경계·후속 개발 우선순위를 정리",
+      "completionCriteria": "자동/명시형 경로와 한계를 소스로 대조, 과거/최신 검증 자료를 구분, 후속 개발 목록을 근거와 함께 작성",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "현재 범위와 검증 대조",
+          "action": "핵심 소스·로그·원시 측정·패키지를 확인",
+          "expected": "자동/명시형, 과거/현재 검증이 명확히 구분됨",
+          "qa": "실제 소스 해시·원시 평균·패키지 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "소스와 기록 대조 완료"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "후속 개발 목록 정리",
+          "action": "원래 요구와 현재 경계를 비교해 우선순위 작성",
+          "expected": "구현/검증/확장 항목과 우선순위가 분리됨",
+          "qa": "backlog.json과 소스 근거 및 보고서 내용을 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "현재 기능 8개 영역과 우선순위 8개 정리"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "검토만 수행하며 제품 코드는 변경하지 않고 화면/실행/빌드는 하지 않습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-03T03:35:04.329Z",
+          "summary": "범위 검토와 후속 목록 대조 완료; 제품 QA 완료는 아님",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "소스/로그와 과거 원시600프레임 평균 및 패키지400개 대조",
+              "evidence": "../assets/status-review-20261103/evidence.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 기능·확장/검증 과제와 근거 적용 범위를 목록에 반영",
+              "evidence": "../assets/status-review-20261103/evidence.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-02-manual-media-repair-20261103-20261102194030690-v1.0.1.html",
     "postPath": "projects/turnroom/posts/2026-11-02-manual-media-repair-20261103-20261102194030690-v1.0.1.md",
     "date": "2026-11-02T19:40:30.690Z",
