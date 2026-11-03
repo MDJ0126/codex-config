@@ -10,6 +10,26 @@
     "replyTo": ""
   },
   {
+    "title": "WindowsFolderSize 1.0.15 설치 및 GUI QA 보류",
+    "summary": "1.0.14 탐색기 충돌을 수정한1.0.15 설치는 성공했습니다. 실제 크기 표시 QA는 통과하지 못했으며 사용자 제어 금지로 보류했습니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-result-20261103092358231-v1.0.0.html",
+    "date": "2026-11-03T09:23:58.231Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103092348676-v1.0.7.html",
+    "date": "2026-11-03T09:23:48.676Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "EntityForge 0.3.1-preview 최종 설치·재검증·업로드 확인",
     "summary": "최종 고정본의 새 프로젝트 설치·공식 검사와 SDK 업로드를 확인했습니다. 심사 제출은 실행하지 않았으며 공통 네이티브 입력 확인은 남아 있습니다.",
     "project": "entityforge",
@@ -46,6 +66,46 @@
     "reportPath": "projects/designdatatable/reports/2026-11-03-result-20261103092340421-v1.0.1.html",
     "date": "2026-11-03T09:23:40.421Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103083324229-v1.0.6.html",
+    "date": "2026-11-03T08:33:24.229Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103082404044-v1.0.5.html",
+    "date": "2026-11-03T08:24:04.044Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103080250979-v1.0.4.html",
+    "date": "2026-11-03T08:02:50.979Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "여러 폴더 조회 시 탐색기 대기 제거",
+    "summary": "탐색기 크기 조회를 비동기 메모리 캐시로 분리하고 지연·무응답 브로커로 검증합니다.",
+    "project": "windowsfoldersize",
+    "reportPath": "projects/windowsfoldersize/reports/2026-11-03-manual-windowsfoldersize-nonblocking-20261103-20261103075747536-v1.0.3.html",
+    "date": "2026-11-03T07:57:47.536Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
