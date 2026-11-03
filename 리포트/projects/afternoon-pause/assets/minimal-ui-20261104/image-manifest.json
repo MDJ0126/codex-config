@@ -1,0 +1,61 @@
+{
+  "images": [
+    {
+      "name": "before-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 164506,
+      "edited": false
+    },
+    {
+      "name": "after-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 148757,
+      "edited": false
+    },
+    {
+      "name": "pointer-selected.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 123633,
+      "edited": false
+    },
+    {
+      "name": "follow-close.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 114962,
+      "edited": false
+    },
+    {
+      "name": "manual-selected.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 201685,
+      "edited": false
+    },
+    {
+      "name": "animation-list.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 234073,
+      "edited": false
+    },
+    {
+      "name": "chat-collapsed.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 192138,
+      "edited": false
+    },
+    {
+      "name": "entry-error.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 105413,
+      "edited": false
+    }
+  ],
+  "note": "실제 Unity ScreenCapture PNG, 편집·생성 이미지 없음. 대부분200KB 이하. 동작 목록234KB는 작은 글자 확인을 위해 원본 해상도 유지, 이미지 재인코딩 미실행. UI 배치는 씬·프리팹 오브젝트를 편집함."
+}

@@ -1,0 +1,10 @@
+> MissingComponentException: There is no 'CanvasGroup' attached to the "VisitorNameplate" game object, but a script is trying to access it.
+  You probably need to add a CanvasGroup to the game object "VisitorNameplate". Or your script needs to check if the component is attached before using it.
+    at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <cacc1b48a79f4e06850e7b9af174af54>:0 
+    at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <cacc1b48a79f4e06850e7b9af174af54>:0 
+    at UnityEngine.CanvasGroup.set_blocksRaycasts (System.Boolean value) [0x00006] in <405ad8456dd34938bb9597c3e3aaabd5>:0 
+    at AfternoonPause.Editor.MinimalAuthoring.CompactNameplates () [0x00037] in C:\Projects\AfternoonPause\Assets\Editor\MinimalAuthoring.cs:235 
+    at AfternoonPause.Editor.MinimalAuthoring.Poll () [0x000e1] in C:\Projects\AfternoonPause\Assets\Editor\MinimalAuthoring.cs:52 
+    at UnityEditor.EditorApplication.Internal_CallUpdateFunctions () [0x00032] in <65059d28802342f6ab95fdddd68a6d06>:0 
+  
+  (Filename: Assets/Editor/MinimalAuthoring.cs Line: 235)

@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "1920×1080 미니멀 UI와 상대 선택·따라가기",
+    "summary": "광장 시야를 확보하는 UI와 상대 선택·경로 따라가기를 적용하고 실제 Unity에서 검사합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·실제 실행·공개 확인 진행",
+    "outcome": "현재 씬·기존 캐릭터와 입력 구조 확인, 구현 진행",
+    "proposedTime": "35~60분",
+    "actualTime": "2026-11-04 04:42:59 KST 시작",
+    "xerjEvidence": "XERJ 도구 미제공. rg·현재 소스·Unity 실제 씬 API로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "minimal-ui-follow-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "미니멀 UI 및 클릭한 상대 선택 표시·내 캐릭터 따라가기",
+    "completionCriteria": "1920×1080 미니멀 UI·기존 기능 유지·선택 링·작은 선택 바·프로필·NavMesh 따라가기/거리 유지/해제·실제 Play·정리·보고 공개",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "미니멀 UI",
+        "action": "1920×1080 기준 기존 씬 UI를 작고 투명하게 정리한다.",
+        "expected": "중앙 시야 확보·전체 메뉴·채팅·읽기 가능한 글자",
+        "qa": "중앙 시야 확보·전체 메뉴·채팅·읽기 가능한 글자을 실제 씬·실행으로 검증한다.",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "상대 선택·따라가기",
+        "action": "선택 원형·작은 선택 바·경로 따라가기·중단을 연결한다.",
+        "expected": "대상 변경·거리 유지·수동/장애물/비활성 시 중단",
+        "qa": "대상 변경·거리 유지·수동/장애물/비활성 시 중단을 실제 씬·실행으로 검증한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 QA·공개 전달",
+        "action": "전후 화면·Unity Play·컴파일·임시 도구 제거·공개 확인",
+        "expected": "실제 실행 근거·현재 소스 일치·개별 HTTPS 확인",
+        "qa": "실제 실행 근거·현재 소스 일치·개별 HTTPS 확인을 실제 씬·실행으로 검증한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자 후속 요청. 상대 클릭은 선택 바를 열고 프로필 버튼으로 상세를 연다. 원본 에셋은 보존한다.",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

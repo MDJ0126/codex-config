@@ -1,0 +1,318 @@
+{
+  "at": "2026-11-03T20:07:18.403Z",
+  "passed": true,
+  "checks": [
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterActionCatalog.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlayerGroundMarker.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/VisitorSelection.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaChat.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SocialRules.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/VisitorProfile.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/CharacterStage.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterActionCatalog.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlayerGroundMarker.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/VisitorSelection.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaChat.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SocialRules.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/Management/VisitorProfile.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/CharacterStage.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+      "passed": true
+    },
+    {
+      "path": "Assets/Editor/PlazaBuilder.cs",
+      "passed": true
+    },
+    {
+      "path": "temporary scripts removed",
+      "passed": true
+    },
+    {
+      "path": "request files removed",
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "Assets/Scenes/AfternoonPlaza.unity",
+      "bytes": 937830,
+      "sha256": "ec2a3a08fdc5feface35171166493b0fcc45148e95f01fab406cf9db2804bbb6"
+    },
+    {
+      "path": "Assets/Prefabs/UI/VisitorNameplate.prefab",
+      "bytes": 11450,
+      "sha256": "a9f46aac556c3b1bc72f75c752080d683527f22b6c980a15adafe85aab63970a"
+    },
+    {
+      "path": "Assets/Settings/Plaza/SelectedVisitor.mat",
+      "bytes": 1794,
+      "sha256": "0577513c0628c8f3c8c8817948430d8e79b94f05ea9ae520f7d6aed5b8c6d70c"
+    }
+  ],
+  "before": [
+    {
+      "path": "QA/MinimalUI/scene-before.unity.txt",
+      "sha256": "a55faf09c651d08faca2e90329e0dfc1969266f7aa289c963f81dcd81af7009c"
+    },
+    {
+      "path": "QA/MinimalUI/nameplate-before.prefab.txt",
+      "sha256": "6f0cb55b25ad1c9189ec79f68136979819f73d01c58e34be96ddf6e8cda74283"
+    }
+  ],
+  "lessons": "이번 UI 크기·배치·추적 계약은 프로젝트 문서에 기록. 실제 자료·실행 검증을 우선하는 기존 전역 지침과 중복되는 규칙은 추가하지 않아 전역 추가·통합·변경 없음. 임시 프리팹 도구의 Unity 누락 참조 처리 실패와 수정 근거는 별도 보존."
+}

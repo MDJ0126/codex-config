@@ -1,0 +1,24 @@
+{
+    "at": "2026-11-04T04:47:09.9480844+09:00",
+    "finishedAt": "2026-11-04T04:47:12.5797505+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "baseline",
+    "failure": "",
+    "passed": true,
+    "preferencesRestored": true,
+    "sampledClips": 0,
+    "walkDistance": 0.0,
+    "runDistance": 0.0,
+    "checks": [
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        },
+        {
+            "name": "변경 전 기존 로컬 원형 유지",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}

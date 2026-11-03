@@ -1,0 +1,24 @@
+{
+    "at": "2026-11-04T05:02:09.5985422+09:00",
+    "finishedAt": "2026-11-04T05:02:52.9671248+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "interactive",
+    "failure": "",
+    "passed": true,
+    "preferencesRestored": true,
+    "sampledClips": 0,
+    "walkDistance": 0.0,
+    "runDistance": 0.0,
+    "checks": [
+        {
+            "name": "입장 오류를 카드 안에 표시",
+            "passed": true
+        },
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}

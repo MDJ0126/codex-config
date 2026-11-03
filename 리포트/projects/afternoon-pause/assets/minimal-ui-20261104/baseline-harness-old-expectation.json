@@ -1,0 +1,24 @@
+{
+    "at": "2026-11-04T04:46:40.1932126+09:00",
+    "finishedAt": "2026-11-04T04:46:42.3373510+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "baseline",
+    "failure": "System.InvalidOperationException: 변경 전 원형 표시 없음\r\n  at AfternoonPause.Editor.MinimalPlayQA.Check (System.String name, System.Boolean passed) [0x00050] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\MinimalPlayQA.cs:403 \r\n  at AfternoonPause.Editor.MinimalPlayQA+<Run>d__13.MoveNext () [0x0018a] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\MinimalPlayQA.cs:167 \r\n  at AfternoonPause.Editor.MinimalPlayQA.Tick () [0x000de] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\MinimalPlayQA.cs:69 ",
+    "passed": false,
+    "preferencesRestored": true,
+    "sampledClips": 0,
+    "walkDistance": 0.0,
+    "runDistance": 0.0,
+    "checks": [
+        {
+            "name": "입장 버튼과 닉네임",
+            "passed": true
+        },
+        {
+            "name": "변경 전 원형 표시 없음",
+            "passed": false
+        }
+    ],
+    "errors": [],
+    "warnings": []
+}
