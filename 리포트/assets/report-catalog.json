@@ -1,5 +1,295 @@
 [
   {
+    "title": "Affinity 저장 권한 복구 지침",
+    "summary": "권한 오류 발생 시 프로젝트 폴더 권한을 원인별로 복구하고 실제 저장까지 검증하도록 합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-03-manual-20261103163406898-v1.0.0.html",
+    "date": "2026-11-03T16:34:06.898Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103155835569-v1.0.6.html",
+    "date": "2026-11-03T15:58:35.569Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 셀러 초안 4언어 정리 — 로고 연결 대기",
+    "summary": "기존 Pixora 판매 초안을 Pixora Studio로 바꾸고 4언어 설명·기술정보·변경 이력을 저장·재열기 대조했습니다. 새 로고는 실제 Affinity 연결이 없어 미제작입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103155834091-v1.0.0.html",
+    "date": "2026-11-03T15:58:34.091Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 실제 폴더 통합과 경로 이전",
+    "summary": "Pixora를 PixoraStudio로 변경하고 Camera·Foliage·Suite를 하위로 옮겼습니다. 파일·GUID 보존과 정적 컴파일·패키지 대조를 통과했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103155831898-v1.0.0.html",
+    "date": "2026-11-03T15:58:31.898Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 실행 시 NavMeshPath 생성자 초기화 오류 수정",
+    "summary": "NavMeshPath 생성을 필드 초기화식에서 Awake로 옮겼습니다. 실제 Unity 초기화와 39초 Play에서 오류 없이 AI 6명 이동을 확인했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-bug-20261103151737455-v1.0.0.html",
+    "date": "2026-11-03T15:17:37.455Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103151736842-v1.0.6.html",
+    "date": "2026-11-03T15:17:36.842Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103151336548-v1.0.5.html",
+    "date": "2026-11-03T15:13:36.548Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 제품 통합 — 모듈 창·식별자 보존",
+    "summary": "기존 세 모듈 창을 그대로 여는 공통 메뉴와 통합 패키지를 적용했습니다. 정적 검사·패키지 대조 통과, 실제 Unity 화면 검증은 보류입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103151148259-v1.0.0.html",
+    "date": "2026-11-03T15:11:48.259Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Studio 제품명 Unity Asset Store 중복 검색",
+    "summary": "단독 Pixel Studio 제목의 상품은 이번 검색에서 확인하지 못했으나 해당 이름을 포함한 공식 importer와 기존 픽셀 편집기를 확인했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103145412068-v1.0.0.html",
+    "date": "2026-11-03T14:54:12.068Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TPS 캐릭터 구조·확장 광장·배회 AI 구현 — 실행 검증 대기",
+    "summary": "SampleProjectForUnity 구조로 TPS와 배회 AI를 구현했습니다. 컴파일·직렬화 검사는 통과했으며 실제 웹 실행·성능은 화면 사용 제한으로 대기합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-result-20261103145357996-v1.0.0.html",
+    "date": "2026-11-03T14:53:57.996Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103145353610-v1.0.5.html",
+    "date": "2026-11-03T14:53:53.610Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Dylearn 원본과 Pixel Foliage·Camera 기능별 상세 대조",
+    "summary": "원본과 현재 구현은 동일한 이식본이 아닙니다. 표현·성능 구조·추가 기능·미구현 항목과 실제 검증 수준을 소스로 구분했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-foliage-feature-comparison-v1.0.1.html",
+    "date": "2026-11-03T14:35:57.200Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103143447640-v1.0.4.html",
+    "date": "2026-11-03T14:34:47.640Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Dylearn 원본과 Pixel Foliage·Camera 기능별 상세 대조",
+    "summary": "원본과 현재 구현은 동일한 이식본이 아닙니다. 표현·성능 구조·추가 기능·미구현 항목과 실제 검증 수준을 소스로 구분했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103143106296-v1.0.0.html",
+    "date": "2026-11-03T14:31:06.296Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103142828723-v1.0.3.html",
+    "date": "2026-11-03T14:28:28.723Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103142229609-v1.0.2.html",
+    "date": "2026-11-03T14:22:29.609Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103141918248-v1.0.1.html",
+    "date": "2026-11-03T14:19:18.248Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 밀도·잔류 반응·공통 UI 개선과 원본 기능 대조",
+    "summary": "식생 개선과 정적 검증을 마쳤습니다. 동일 기준 장면의 Camera 전후 GIF를 첨부했으며, 사용자 화면 조작 보류로 개선 후 촬영은 대기입니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103141824519-v1.0.0.html",
+    "date": "2026-11-03T14:18:24.519Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103141009617-v1.0.4.html",
+    "date": "2026-11-03T14:10:09.617Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 외형·반응·공통 UI와 Pixel Camera 비교 개선",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-20261103135836936-v1.0.0.html",
+    "date": "2026-11-03T13:58:36.936Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103134648646-v1.0.3.html",
+    "date": "2026-11-03T13:46:48.646Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103134040766-v1.0.2.html",
+    "date": "2026-11-03T13:40:40.766Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "오후의 틈 — PC 웹 1인 광장 이동·착석 시제품",
+    "summary": "두 polyperfect 에셋으로 카페 광장을 만들고 Chrome·Edge 이동·착석과 실제 백그라운드 탭 복귀·성능을 검증했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-result-20261103133753400-v1.0.0.html",
+    "date": "2026-11-03T13:37:53.400Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생11개 씬 실제 촬영과 결과 보고 갱신",
+    "summary": "실제 Unity 씬11개를 실행해 촬영하고 GIF 가능 여부를 확인한 뒤 공개 보고서를 갱신합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-capture-20261103-20261103132928251-v1.0.2.html",
+    "date": "2026-11-03T13:29:28.251Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생11개 씬 실제 촬영과 결과 보고 갱신",
+    "summary": "실제 Unity 씬11개를 실행해 촬영하고 GIF 가능 여부를 확인한 뒤 공개 보고서를 갱신합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-capture-20261103-20261103132528041-v1.0.1.html",
+    "date": "2026-11-03T13:25:28.041Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Foliage 11개 씬 실제 실행 GIF",
+    "summary": "독립 예제10개와 Pixel Camera 연동1개를 실제 Unity에서 촬영했습니다. ScreenToGif로 씬별 GIF와 정지 원본을 첨부했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-PixelFoliage-scene-captures-v1.0.1.html",
+    "date": "2026-11-03T13:24:40.513Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생11개 씬 실제 촬영과 결과 보고 갱신",
+    "summary": "실제 Unity 씬11개를 실행해 촬영하고 GIF 가능 여부를 확인한 뒤 공개 보고서를 갱신합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-20261103130849011-v1.0.0.html",
+    "date": "2026-11-03T13:08:49.011Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-afternoon-plaza-20261103-20261103125929806-v1.0.1.html",
+    "date": "2026-11-03T12:59:29.806Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 1인 광장 제작과 브라우저 QA",
+    "summary": "임포트된 두 에셋으로 이동·착석을 제작하고 웹 실행과 성능을 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-20261103123937821-v1.0.0.html",
+    "date": "2026-11-03T12:39:37.821Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Tooler 식생 제품과 독립 판매 구성",
     "summary": "독립 식생 모듈과 Camera·Pixora 선택 연동, 잔디·꽃·관목 및 나무 확장 예제를 구현합니다.",
     "project": "turnroom",

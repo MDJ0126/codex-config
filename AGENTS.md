@@ -133,6 +133,8 @@
 
 # Affinity 전용 CLI 사용
 
+- Affinity 저장·내보내기에서 권한 오류가 발생하면 같은 실패를 반복하거나 권한이 없다는 보고만으로 중단하지 않는다. 실제 오류·저장 대상의 해석된 프로젝트 경로·실행 계정·소유자·ACL·Affinity 파일 접근 허용 범위를 확인하고, 확인된 원인에 맞춰 해당 프로젝트 폴더의 권한을 직접 복구한다. Windows ACL 문제라면 기존 ACL을 백업하고 실제 사용자 SID에 필요한 수정·쓰기 권한과 상속을 복구하며, 원인이 확인된 하위 폴더·파일만 포함한다. 드라이브 전체나 다른 프로젝트에 광범위하게 적용하거나 Everyone 전체 제어·보안 기능 해제로 우회하지 않는다. Affinity 접근 허용 문제라면 해당 프로젝트 폴더만 허용 범위에 등록한다. 복구 후 임시 파일 생성·수정·삭제와 실제 Affinity 원본 저장·재열기·출력 파일을 검증할 때까지 진행한다. 관리자 권한 등 실제 제한이 남으면 오류와 필요한 최소 조치를 명시하고, 미검증 상태를 저장 가능 또는 복구 완료로 보고하지 않는다.
+
 - 이미지 작업은 실제 Affinity 사용이 필수이며, 화면을 방해하지 않는 접근으로 설정 저장소의 `tools/affinity-cli/`에 보관한 전용 CLI를 먼저 사용한다. 저장소 위치는 `$CODEX_HOME/config-repo`이며 CODEX_HOME이 없으면 사용자 홈의 `.codex/config-repo`로 계산한다. 다른 PC의 사용자 이름이나 절대 경로를 복사하지 않는다.
 - 먼저 `tools/affinity-cli/README.md`와 `VALIDATION.md`를 읽고, `node tools/affinity-cli/bin/affinity.mjs doctor --timeout 3000` 및 `status`로 실제 연결·버전·문서 대상을 확인한다. PowerShell에서는 `tools/affinity-cli/affinity.ps1` 래퍼도 사용할 수 있다. 저장소 루트에서 실행하거나 계산한 절대 경로를 사용한다.
 - `tools`, `docs`, `fonts`, `presets`로 설치 버전의 실제 기능·글꼴·프리셋을 확인한 뒤 JSON `job` 또는 검토한 SDK `run` 스크립트로 작업한다. 기존 문서 편집은 `status`에서 확인한 문서 세션 ID를 명시한다. 렌더링 도구가 현재 문서만 지원하면 실제 대상부터 확인한다.
