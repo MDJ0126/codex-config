@@ -1,5 +1,25 @@
 [
   {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-manual-foliage-polish-20261103-20261103212200749-v1.0.15.html",
+    "date": "2026-11-03T21:22:00.749Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 팔레트 구현 — 혼합 브러시·지우기·영역 채우기",
+    "summary": "기존 Foliage 창에 식생 팔레트·씬 캔버스·혼합 브러시·지우기·다각형 채우기를 구현했습니다. 컴파일·분포·번역 검사는 통과했으며 실제 GUI 검증은 허용 회신 대기입니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103212200336-v1.0.0.html",
+    "date": "2026-11-03T21:22:00.336Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "신규 템플릿 제품의 Unity 기본 팝업 노출 금지 지침 강화",
     "summary": "템플릿 사용 요청에 공통 커스텀 팝업 적용을 포함하도록 기존 규칙을 통합했습니다.",
     "project": "turnroom",
