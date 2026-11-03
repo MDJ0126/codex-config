@@ -1,0 +1,91 @@
+{
+  "at": "2026-11-03T14:31:04.171Z",
+  "originalCommit": "7486b9b99834d95c4287cc917971b3d74ba37d8c",
+  "currentProductCommit": "fb79b35f",
+  "scope": "Source and saved-asset comparison; no new GUI manipulation, Godot execution or current Unity rendering",
+  "sources": [
+    {
+      "id": "O1",
+      "path": "Artifacts/Research/DylearnGrass/source/Scenes/Demo.tscn",
+      "sha256": "b6b090eade1a7ee07ad9dfb5debbe6ad5d1fd0c1607f0a35a044f38345ca4d8c"
+    },
+    {
+      "id": "O2",
+      "path": "Artifacts/Research/DylearnGrass/source/Shaders/Grass.gdshader",
+      "sha256": "024d4d7f495d23c21e0d3de7df0c7a911140421b4c1531e25391e6773961cdfe"
+    },
+    {
+      "id": "O3",
+      "path": "Artifacts/Research/DylearnGrass/source/Shaders/Floor.gdshader",
+      "sha256": "4c96080a0bc1cc31f91a99a8625b415dda1454d4990c0305d19db555b747952f"
+    },
+    {
+      "id": "O4",
+      "path": "Artifacts/Research/DylearnGrass/source/Shaders/clouds.gdshaderinc",
+      "sha256": "ed1667b1eea381508b9e8e843e9496bd532a52a22aa254f946db0f3e876e9081"
+    },
+    {
+      "id": "O5",
+      "path": "Artifacts/Research/DylearnGrass/source/Scripts/CharacterManager.gd",
+      "sha256": "3fb77648b753341da77e65f3760954d1717b737111c8387206d09ff252cfea8e"
+    },
+    {
+      "id": "O6",
+      "path": "Artifacts/Research/DylearnGrass/source/Scripts/LightDirection.gd",
+      "sha256": "83b71081e488806370b7c14b74b8453f6a0cabcbbec940d4f67c2c65055d9272"
+    },
+    {
+      "id": "C1",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/FoliageCommon.hlsl",
+      "sha256": "fdab99a5a3daf16b89b36fc85be3184e14cfeceece29915c2adaa0fb8c196faf"
+    },
+    {
+      "id": "C2",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/Shaders/PixelFoliage.shader",
+      "sha256": "cde3a68fe86fa597dae360320b05f3357da7659ae4625f293f9e6f2f7007bec1"
+    },
+    {
+      "id": "C3",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageWorld.cs",
+      "sha256": "2da513ff3a5de05170c12196f738885c04a5b8629b67c39ec658a1c601e683fe"
+    },
+    {
+      "id": "C4",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliageContactHistory.cs",
+      "sha256": "9354b4d90a6e993ed530c7093c4c8c6a4ce8d490d582c177ad81962d0e4159cf"
+    },
+    {
+      "id": "C5",
+      "path": "Assets/TurnRoom/PixelFoliage/Runtime/FoliagePatch.cs",
+      "sha256": "2777d5f6fb33199c924dd6683b9cca39d17ff1a0e603726ea7a96958f3f7ddd1"
+    },
+    {
+      "id": "C6",
+      "path": "Assets/TurnRoom/PixelCamera/Runtime/PixelCameraEffect.cs",
+      "sha256": "a66a010bdee507f6db711a061e3cfb56531820ef2ebc34c260b76ac6084adb48"
+    },
+    {
+      "id": "C7",
+      "path": "Assets/TurnRoom/PixelFoliage/Editor/FoliageTheme.cs",
+      "sha256": "50c99fb25893d41498b435a6e431b3a68eb523a4ef10274f43e26dd1304f145c"
+    },
+    {
+      "id": "C8",
+      "path": "Tools/PixelFoliage/AuthorSamples.py",
+      "sha256": "56b6bb7514e371729788d4d71062ef373528d74b2fd12e5f0dae675e1b6d5f79"
+    },
+    {
+      "id": "C9",
+      "path": "Assets/TurnRoom/PixelFoliage/Editor/FoliageAuthoring.cs",
+      "sha256": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf"
+    }
+  ],
+  "priorMathVerification": {
+    "at": "2026-11-03T14:14:14.113Z",
+    "passed": true,
+    "scope": "Actual compiled FoliageMath against Unity managed structs, no scene rendering or native runtime",
+    "stdout": "Contact collection:600 requests at60Hz -> 103 total including explicit decay checks; initial window100 at10Hz vs600 unlimited. GPU cost and native scene performance not measured.\r\nPASS 20619 assertions against compiled FoliageMath, FoliageContactHistory and UnityEngine structs; no Unity native scene runtime.\r\n",
+    "stderr": ""
+  },
+  "priorNativeScope": "Earlier Unity implementation only; current foliage polish and UI native QA remain pending"
+}
