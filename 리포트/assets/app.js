@@ -1,4 +1,4 @@
-import {createActivityGrass} from './activity-grass.js?v=tooltip-1';
+import {createActivityGrass} from './activity-grass.js?v=interactive-1';
 import {trackerCounts} from './tracker-counts.mjs';
 import {chooseStage} from './stage-state.mjs';
 import {matchesRecord} from './filter-core.mjs?v=project-tree-1';
