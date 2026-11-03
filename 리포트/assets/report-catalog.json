@@ -1,5 +1,55 @@
 [
   {
+    "title": "4제품 심사 전 현황 대조",
+    "summary": "현재 초안·미디어와 패키지·검증 대상 버전을 확인하여 제출 여부를 판정합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-03-manual-20261103034127844-v1.0.0.html",
+    "date": "2026-11-03T03:41:27.844Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "0.2.0-preview 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-03-result-20261103034127034-v1.0.0.html",
+    "date": "2026-11-03T03:41:27.034Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "0.6.1-preview 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-03-result-20261103034126405-v1.0.0.html",
+    "date": "2026-11-03T03:41:26.405Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "1.0.0 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-03-result-20261103034125863-v1.0.0.html",
+    "date": "2026-11-03T03:41:25.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 심사 전 현황 — 패키지 최신화·최종 QA 보류",
+    "summary": "2.0.2 초안과 미디어 저장을 확인했습니다. 기존 업로드 원본과 현재 소스 차이 및 최종 후보 설치·Validator 검증이 남아 있어 제출 보류입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-03-result-20261103034125185-v1.0.0.html",
+    "date": "2026-11-03T03:41:25.185Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "4제품 판매 미디어 전수 수정·최종 재생 검증",
     "summary": "DDT 패턴을 기준으로 누락·구형 영상과 썸네일·아이콘을 수정하고 실제 포털 재생까지 검증합니다.",
     "project": "turnroom",

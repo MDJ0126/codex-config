@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-11-03T03:33:07.098242+00:00",
+  "product": "PixelCamera",
+  "draftVersion": "0.6.1-preview",
+  "priceUnchanged": "$4.99",
+  "media": {
+    "screenshots": 16,
+    "videos": 1,
+    "keys": 3
+  },
+  "portalUploadLine": "Nov 02, 2026 05:18 UTC, 0 files, 32.7 MB",
+  "localPreviousUploadArchive": {
+    "product": "PixelCamera",
+    "file": "Artifacts\\TurnRoomPackages\\TurnRoom-PixelCamera.unitypackage",
+    "bytes": 34796452,
+    "sha256": "93b01e7d072be5a4001373151d0c33c159d3acfd173a072568bbdc2a6271031f",
+    "filesCompared": 697,
+    "developmentLeaks": [],
+    "mismatchCount": 24,
+    "mismatches": [
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateChrome.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.pt-BR.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hant.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.fr.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.en.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/WindowFrame.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.es.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.es.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Editor/Art/PixelCameraLogo.png",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/TemplateGlobalSettings.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.de.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/UITemplateStyles.cs",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.pt-BR.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Documentation/UserGuide.ko.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.ja.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Documentation/GlobalSettings.zh-Hans.html",
+        "part": "asset"
+      },
+      {
+        "path": "Assets/TurnRoom/PixelCamera/Editor/Art/PixelCameraLogoWhite.png",
+        "part": "asset"
+      }
+    ],
+    "allCurrentFilesIncluded": "not verified: no fresh native export inventory"
+  },
+  "remoteBinaryHashVerifiedThisReview": false,
+  "nativeFreshInstallThisReview": false,
+  "officialValidatorThisReview": false,
+  "submitted": false
+}
