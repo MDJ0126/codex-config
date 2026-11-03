@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "신규 템플릿 제품의 Unity 기본 팝업 노출 금지 지침 강화",
+    "summary": "템플릿 사용 요청에 공통 커스텀 팝업 적용을 포함하도록 기존 규칙을 통합했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "최초 구현부터 제품 창·하위 창·에셋/컴포넌트/임포터 Inspector·동적 필드·빈 상태·오류 상태에 공통 팝업을 적용합니다. 공통 지원이 없으면 템플릿을 먼저 확장하고 Unity 기본 팝업으로 자동 대체하지 않습니다. 기존 UITemplate.Apply·TemplateInspectorPopover·정책 검사와 실제 라이트/다크 선택·값 반영·취소·테마 상속 검증을 유지했습니다. 운영체제 파일 선택창 예외는 보존했습니다.",
+    "verification": "수정 전 기존 팝업 규칙을 확인하고 중복 항목 추가 대신 해당 문장을 확장했습니다. 수정 후 두 파일을 재열어 노출 금지 범위·자동 대체 금지·실제 입력 완료 기준과 파일 선택창 예외를 확인했습니다. 코드·제품 UI를 수정하지 않은 지침 작업이므로 실행 화면은 없으며 화면 제어·GUI 실행을 하지 않았습니다.",
+    "remaining": "기존 제품의 팝업을 이번 작업에서 수정하거나 실제 UI 검증한 것은 아닙니다. 교훈 검토: 템플릿 생성 요청 자체에 팝업 디자인 적용을 포함한다는 사용자 선호를 프로젝트 기존 규칙에 통합했습니다. Unity 공통 템플릿에 한정한 요구로 전역 지침은 변경하지 않았습니다.",
+    "outcome": "프로젝트 AGENTS.md와 TempleteRoadmap.md의 기존 공통 팝업 항목을 강화하고 저장값을 재확인했습니다.",
+    "proposedTime": "2–5분",
+    "actualTime": "시작 2026-11-04 05:27:09 KST. 지침 수정·재확인 2026-11-04T05:28:30.913216+09:00. 공개 배포는 별도 확인합니다.",
+    "xerjEvidence": "코드 검색 불필요 — 지침 문서만 수정했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
