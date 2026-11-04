@@ -1,0 +1,40 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>블록 구름·프리팹·전용 캐릭터 리그·비행기 낙하 입장 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">오</span><span>오후의 틈</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>블록 구름·프리팹·전용 캐릭터 리그·비행기 낙하 입장</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">옥상/HUD/꽃집 보완·미니게임 제거·점프·UI/NPC 프리팹·16종 리그 보정·4초 비행기 입장. Play161/웹17/서버11 통과.</p><div class="post-byline"><time datetime="2026-11-04T09:46:52.834Z">2026년 11월 4일 오후 6:46 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>요청 기능을 구현하고 최신 웹 빌드와 두 브라우저에서 검증했습니다. 플레이용 로컬 서버4190을 최신 산출물로 갱신했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>각진 구름6개: 공유 결합 메시60삼각형/개·공유 재질·충돌/그림자/Update 없음. BlockCloud 프리팹으로 배치합니다.</li>
+<li>상인3종은 Characters/Vendors, 기능별 UI12개는 UI/Modules 프리팹으로 관리합니다. 씬 외부 참조는 오버라이드로 보존했습니다. 꽃집에 테이블·다리·화분을 추가하고 옥상 외벽을3cm 안쪽으로 분리했습니다.</li>
+<li>시간은 프로필과 개인 좌상단에 표시합니다. 인기도는 닉네임 위 작게 표시하며0은 버튼/기록을 포함해 숨깁니다. 말풍선은 둥근 모서리·꼬리·짙은 글씨로 변경했습니다. 미니게임은 UI·클라이언트·서버에서 제거했습니다.</li>
+<li>Space 점프와 제공 Jump 클립을 연결했습니다. 증가 순번으로 짧은 점프를1Hz 표본 사이에도 원격 재생합니다.</li>
+<li>제공 공용 Avatar와 모델 기준 자세를 비교해22개 뼈에서 최대24.21도 차이를 기록했습니다. 외형16종의 skeleton으로 전용 Avatar를 생성하고 CharacterDefinition.walkingClip에 제공 Locomotion 보행을 연결했습니다. 원본 에셋은 수정하지 않았습니다.</li>
+<li>첫 입장은 비행기 통과→낙하→착지 약4초입니다. Esc·탭 숨김·비활성화에서 충돌/이동/TPS를 복원하며 재접속은 지상에서 시작합니다. 서버는 처음8초만24m 높이를 허용합니다.</li>
+</ul>
+<p>같은 실제 게임 카메라에서 보행 설정 전후를 비교했습니다.
+<figure><img class="report-image" src="../assets/refinement-20261104/before-walk.png" alt="이전 공용 리그와 보행" loading="lazy"><figcaption>이전 공용 리그와 보행</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/after-walk.png" alt="외형 전용 리그와 제공 보행" loading="lazy"><figcaption>외형 전용 리그와 제공 보행</figcaption></figure></p>
+<p>옥상 경계와 꽃집의 같은 카메라 전후입니다.
+<figure><img class="report-image" src="../assets/refinement-20261104/before-roof-wide.png" alt="이전 옥상" loading="lazy"><figcaption>이전 옥상</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/after-roof.png" alt="수정 옥상" loading="lazy"><figcaption>수정 옥상</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/before-flowers-wide.png" alt="이전 떠 있는 꽃" loading="lazy"><figcaption>이전 떠 있는 꽃</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/after-flowers.png" alt="테이블과 화분에 배치한 꽃" loading="lazy"><figcaption>테이블과 화분에 배치한 꽃</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/refinement-20261104/clouds.png" alt="실제 블록 구름" loading="lazy"><figcaption>실제 블록 구름</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/arrival-flight.png" alt="첫 접속 비행기" loading="lazy"><figcaption>첫 접속 비행기</figcaption></figure>
+<figure><img class="report-image" src="../assets/refinement-20261104/arrival-fall.png" alt="광장으로 낙하" loading="lazy"><figcaption>광장으로 낙하</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity6000.0.83f1 실제 Play 161개 통과. 입장·점프/착지·Esc/숨김 복원·16종 Avatar/보행·프로필/채팅/좌석·버튼 대상·누락 스크립트0·실행 오류0 및 개인 설정 복원 확인.</li>
+<li>Chrome/Edge 실제 웹 17개 통과. 원격 낙하/점프·Enter 채팅·프리팹 버튼·복귀를 확인했습니다. HTTP 서버11개 통과:1초 갱신/채팅·예약키 거부·좌석·신고·인기도/스폰서/이미지·점프/입장 높이 시간 제한·삭제한 게임 API404.</li>
+<li>AI0/6/12명 모두29.98FPS, 관리 메모리 약4.37/4.43/4.91MiB였습니다. Chrome 주 스레드 CPU/한 코어는 가시5초 15.49%, 숨김5초 0.03%였습니다. 이 측정은 짧은 로컬 시제품 측정이며 장시간/다기기 부하 결과는 아닙니다.</li>
+<li>최종 빌드25,086,312bytes. 제공6개 파일 SHA256 일치, Runtime47개 소스 해시가 정리 전후 동일합니다. 임시 Editor4개 및 meta를 보관 후 제거했고 Runtime/Editor 재컴파일 통과, Unity 씬 저장 표시와 Console오류0을 확인했습니다. 전용 QA브라우저/서버/포트를 종료하고 프로필을 제거했으며 플레이 서버4190만 유지했습니다.</li>
+<li>실제 원본 PNG를 편집 없이 사용했습니다. 가독성 보존을 위해 약216~369KB의1920×1080 원본을 유지했습니다. 교훈은 프로젝트 AGENTS에 리그 기준 대조·0숨김·낙하 복구로 반영했습니다. 공통 규칙과 중복되어 전역 지침 변경은 없습니다.</li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<p>기능·실행 검증·정리는 완료했습니다. 현재 공개 보고 배포/본문·첨부 확인과 최종 메뉴얼 등록을 진행합니다. 외부 인터넷 게임 호스팅·동접24명·장기간 내구성·모든147개 동작의 전체 프레임 미술 품질은 이번 검증으로 보장하지 않습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초25<del>40분, 프리팹 추가8</del>12분(전체35<del>55분). 후속 리그/0숨김/낙하·재검증 추가20</del>30분.</li>
+<li>실제로 완료된 시간: 2026-11-04 17:42:47 KST 시작 → 구현/QA/정리 2026-11-04 18:46:40 KST, 63분 53초. 공개 배포 확인은 진행 중.</li>
+<li>XERJ: 미사용 — XERJ MCP/검색 스크립트 미제공. rg·현재 소스/에셋·실제 Unity/HTTP/브라우저 실행으로 대체했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104094652834-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=afternoon-pause&topic=qa&relatedReport=projects%2Fafternoon-pause%2Freports%2F2026-11-04-result-20261104094652834-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=afternoon-pause">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=afternoon-pause">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
