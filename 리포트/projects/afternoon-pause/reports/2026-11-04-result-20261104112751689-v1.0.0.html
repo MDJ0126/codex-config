@@ -1,0 +1,32 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>점프 착지 재상승·비행기 낙하 자세 보정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">오</span><span>오후의 틈</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>점프 착지 재상승·비행기 낙하 자세 보정</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">컴퓨터 유즈와 발뼈 표본으로 착지 재상승을 확인·보정했습니다. 실제 Play11개 통과, 최신 웹 검사는 진행 중입니다.</p><div class="post-byline"><time datetime="2026-11-04T11:27:51.689Z">2026년 11월 4일 오후 8:27 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>정점/착지를 Unity에서 직접 관찰하고 수정 전후를 캡처했습니다. 물리는 착지했지만 추가 Land 포즈가 발을 다시 올리는 현상을 제거하고 낙하의 몸/팔/머리 방향을 보정했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>제공 Standing-Jump 전체2.2917초 중 도약 구간0.7535~1.4606초(0.7071초)의 관절 동작을 프로젝트 사본에 유지했습니다. 본체 물리 상승에 더해지는 양의 RootT.y 이동을 제한하고 준비/대기 구간과 루프를 제거했습니다. 원본 외부 에셋은 수정하지 않았습니다.</li>
+<li>일반 점프 착지에 별도 합성 Land가 겹치지 않도록 점프 꼬리 동작을 유지합니다. 일반 낙하/낙하산 착지는 제공 점프의 착지 구간으로 대체했습니다.</li>
+<li>스카이다이빙을 실제 Humanoid 리그의 상완/전완/허벅지/종아리 방향으로 작성했습니다. 머리를 앞으로 들고 팔을 옆으로 펴며, 활강 전환은0.32초로 연결합니다.</li>
+</ul>
+<p>같은 카메라의 착지 전후입니다.
+<figure><img class="report-image" src="../assets/jump-review-20261104/before-landing.png" alt="착지 후 재상승하던 발" loading="lazy"><figcaption>착지 후 재상승하던 발</figcaption></figure>
+<figure><img class="report-image" src="../assets/jump-review-20261104/after-landing.png" alt="재상승 제거 후 착지" loading="lazy"><figcaption>재상승 제거 후 착지</figcaption></figure></p>
+<p>같은 카메라의 비행기 낙하 전후입니다.
+<figure><img class="report-image" src="../assets/jump-review-20261104/before-skydive.png" alt="몸이 접히고 팔이 처지던 낙하" loading="lazy"><figcaption>몸이 접히고 팔이 처지던 낙하</figcaption></figure>
+<figure><img class="report-image" src="../assets/jump-review-20261104/after-skydive.png" alt="머리를 들고 팔다리를 편 낙하" loading="lazy"><figcaption>머리를 들고 팔다리를 편 낙하</figcaption></figure>
+<figure><img class="report-image" src="../assets/jump-review-20261104/parachute.png" alt="낙하산 활강" loading="lazy"><figcaption>낙하산 활강</figcaption></figure>
+<figure><img class="report-image" src="../assets/jump-review-20261104/jump.png" alt="보정 후 원본 도약 동작" loading="lazy"><figcaption>보정 후 원본 도약 동작</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity6000.0.83f1 실제 Play11개 통과. 입장 착지·제자리/이동/연속 점프·착지 재상승 제한·인기도0 행 접기/양수 복원/프로필·이름표 배경 접기·실행 오류0, 개인 설정 복원을 확인했습니다. 컴퓨터 유즈로 점프 중 일시정지 화면을 실제 관찰하고 재개했습니다.</li>
+<li>같은 제자리 점프의 착지 표본에서 정지 자세 대비 발뼈 높이 추가 상승은 수정 전0.314517m, 수정 후0.000408m였습니다. 한 캐릭터/한 검사 구간의 측정이며 모든 자세의 보편 오차로 확대하지 않습니다.</li>
+<li>실제 원본 PNG를 편집 없이 보존합니다. 글자/자세 판독을 위해1920×1080 원본 크기를 유지합니다. 새로운 웹 빌드·원격·성능·정리는 아직 진행 중이며 완료로 표시하지 않습니다.</li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<p>최신 웹 빌드·두 브라우저 원격 점프/낙하산·성능·임시 도구/설정 정리·플레이 서버 적용 및 공개 최종 확인.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 이번 재개15~25분. 비행기 낙하 자세 점검을 함께 포함.</li>
+<li>실제로 완료된 시간: 2026-11-04 20:10:22 KST 시작. Play 수정/검증20:23:58 KST, 웹/정리/공개 진행 중.</li>
+<li>XERJ: 미사용 — XERJ 미제공. rg·현재 소스/클립·실제 Unity/컴퓨터 유즈 표본으로 검증.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104112751689-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=afternoon-pause&topic=qa&relatedReport=projects%2Fafternoon-pause%2Freports%2F2026-11-04-result-20261104112751689-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=afternoon-pause">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=afternoon-pause">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
