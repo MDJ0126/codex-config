@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "수정·실제 렌더 QA 진행",
+    "outcome": "원인 확인과 변경 전 렌더 확보, 색감 수정 전입니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "시작2026-11-04 15:44:02 KST",
+    "xerjEvidence": "Status 노드 미실행. 직전 Search node.lock 점유로 실패. 소스는 rg로 검증.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "woodland-colour-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "흐린 파스텔 색을 줄이고 컬러풀한 수관과 3단계 명암·하늘을 구현",
+    "completionCriteria": "기존 배치·카메라 보존, 두 Woodland 씬 실제 전후 렌더 확인, 컴파일·셰이더 검사",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원인과 기준 렌더",
+        "action": "셰이더·프로필·메시 색과 후처리를 확인하고 변경 전 렌더 보존",
+        "expected": "원인별 실제 값과 기준 화면 확보",
+        "qa": "현재 소스·Unity 출력 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": "확인 중"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "색과 명암 수정",
+        "action": "Woodland 프로필·메시 색·하늘·후처리를 수정",
+        "expected": "3단계 수관 명암, 선명한 개별 수종과 하늘",
+        "qa": "컴파일 및 실제 Unity 동일 구도 렌더 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀 검증·결과 공개",
+        "action": "두 Woodland 씬과 유지 범위 검사 후 보고",
+        "expected": "다른 예제·카메라 모듈 보존과 실제 비교 근거",
+        "qa": "파일 해시·구조·셰이더 오류·전후 화면 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

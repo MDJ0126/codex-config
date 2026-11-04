@@ -1,0 +1,159 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "manual",
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "프레임 성능·URP 물/블룸·다른 플랫폼 외형은 이번 완료 기준 밖이며 미검증입니다.",
+    "outcome": "두 Woodland 씬의 색감 수정과 Built-in Linear 실제 전후 검증 완료. 원본과 완전히 동일하다는 평가는 하지 않습니다. 공유 동상3종은 원래 프로필을 복원하고 두 Woodland 씬만 전용 변형을 사용합니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-04 15:44:02 KST 시작 · 16:04 KST 최종 구현·렌더·검증 기록. 배포 확인은 최종 채팅에 기록.",
+    "xerjEvidence": "Status 노드 미실행. 직전 Search node.lock 점유로 실패. 소스는 rg로 검증.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "woodland-colour-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "흐린 파스텔 색을 줄이고 컬러풀한 수관과 3단계 명암·하늘을 구현",
+    "completionCriteria": "기존 배치·카메라 보존, 두 Woodland 씬 실제 전후 렌더 확인, 컴파일·셰이더 검사",
+    "previousManual": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104070050595-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원인과 기준 렌더",
+        "action": "셰이더·프로필·메시 색과 후처리를 확인하고 변경 전 렌더 보존",
+        "expected": "원인별 실제 값과 기준 화면 확보",
+        "qa": "현재 소스·Unity 출력 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "원본 Linear·기존 QA Gamma 차이와 동일 씬의 흐린 결과 재현"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "색과 명암 수정",
+        "action": "Woodland 프로필·메시 색·하늘·후처리를 수정",
+        "expected": "3단계 수관 명암, 선명한 개별 수종과 하늘",
+        "qa": "컴파일 및 실제 Unity 동일 구도 렌더 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "수관 8종 각3색·하늘·후처리 수정 및 실제 Linear 렌더 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀 검증·결과 공개",
+        "action": "두 Woodland 씬과 유지 범위 검사 후 보고",
+        "expected": "다른 예제·카메라 모듈 보존과 실제 비교 근거",
+        "qa": "파일 해시·구조·셰이더 오류·전후 화면 검사",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "29개 구조 보존·26셰이더 엔트리·6어셈블리·12에셋 검사 통과"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-04T07:00:37.533Z",
+        "summary": "원본과 같은 Linear 설정에서 두 씬 전후를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 Linear·기존 QA Gamma 차이와 동일 씬의 흐린 결과 재현",
+            "evidence": "../assets/colour-20261104/verification.json,../assets/colour-20261104/linear-before-0.png,../assets/colour-20261104/linear-after-0.png",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "수관 8종 각3색·하늘·후처리 수정 및 실제 Linear 렌더 확인",
+            "evidence": "../assets/colour-20261104/verification.json,../assets/colour-20261104/linear-before-0.png,../assets/colour-20261104/linear-after-0.png",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "29개 구조 보존·26셰이더 엔트리·6어셈블리·12에셋 검사 통과",
+            "evidence": "../assets/colour-20261104/verification.json,../assets/colour-20261104/linear-before-0.png,../assets/colour-20261104/linear-after-0.png",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-04T07:04:34.700Z",
+        "summary": "공유 동상 프로필 분리 후 최종 소스로 두 씬 재촬영·회귀 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원본 Linear·기존 QA Gamma 차이와 동일 씬의 흐린 결과 재현; 최종 두 씬 Native 오류0·영향 밖 참조0 확인",
+            "evidence": "../assets/colour-20261104/verification-final.json,../assets/colour-20261104/linear-after-final-0.png",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "수관 8종 각3색·하늘·후처리 수정 및 실제 Linear 렌더 확인; 최종 두 씬 Native 오류0·영향 밖 참조0 확인",
+            "evidence": "../assets/colour-20261104/verification-final.json,../assets/colour-20261104/linear-after-final-0.png",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "29개 구조 보존·26셰이더 엔트리·6어셈블리·12에셋 검사 통과; 최종 두 씬 Native 오류0·영향 밖 참조0 확인",
+            "evidence": "../assets/colour-20261104/verification-final.json,../assets/colour-20261104/linear-after-final-0.png",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

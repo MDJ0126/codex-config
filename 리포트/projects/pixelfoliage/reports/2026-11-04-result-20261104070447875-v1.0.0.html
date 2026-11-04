@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Woodland의 흐린 색 보정과 3색 수관·하늘 개선 · 최종 검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">P</span><span>턴룸 › Pixel Foliage</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Woodland의 흐린 색 보정과 3색 수관·하늘 개선 · 최종 검증</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">Linear 환경에서 흐려지던 예제 전용 색 처리를 보정하고, 잎 3색·하늘 3영역과 깊은 그림자를 적용했습니다.</p><div class="post-byline"><time datetime="2026-11-04T07:04:47.875Z">2026년 11월 4일 오후 4:04 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>라이트만의 문제가 아니었습니다. 원본 프로젝트는 Linear, 기존 격리 QA는 Gamma였으며 같은 씬을 Linear로 렌더하자 사용자가 지적한 흐린 결과가 재현됐습니다. 이전 검증에서 색 공간 차이를 놓친 점을 정정합니다. Woodland 전용 재질과 메시 색·하늘·후처리를 수정했고 두 Woodland 씬의 Built-in Linear 렌더를 직접 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/colour-20261104/linear-before-0.png" alt="변경 전: Linear 환경에서 낮은 색 대비" loading="lazy"><figcaption>변경 전: Linear 환경에서 낮은 색 대비</figcaption></figure>
+변경 전: 원본과 같은 Linear에서 수관과 하늘이 밝고 흐리게 보였습니다.</p>
+<p><figure><img class="report-image" src="../assets/colour-20261104/linear-after-final-0.png" alt="변경 후: 수종별 3색과 명확한 하늘 영역" loading="lazy"><figcaption>변경 후: 수종별 3색과 명확한 하늘 영역</figcaption></figure>
+변경 후: 노랑·청록·분홍·보라 수관의 밝은 면·중간 면·어두운 면, 파랑 상단·민트 중간·청록 지평선을 구분했습니다. 원본과 배치·구도까지 동일한 재현이라고 주장하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>잎 RGB에 적용됐던 파스텔 혼합을 되돌리고 8종 수관을 각각3가지 색으로 정리했습니다. 정점 위치·법선·바람 가중치·UV·인덱스는 보존했습니다.</li>
+<li>예제 전용 Woodland Vegetation 재질은 공통 바람·접촉·셰이딩 코드를 공유하면서 제작 RGB를 Linear 출력에 맞게 처리합니다. 공통 Runtime 셰이더와 다른 예제의 재질은 변경하지 않았습니다.</li>
+<li>Woodland 프로필의 lightBands5→3, lightSoftness0.95→0.08. 색 단계는 팔레트로 제작한 표현이며 실시간 물리 그림자3회 연산이라는 뜻이 아닙니다.</li>
+<li>하늘을 파랑·민트·청록 지평선으로 나눴고, 후처리의 sqrt 기반 전체 그림자 띄우기를 제거했습니다. 조명색·블룸 문턱·노출은 이 두 씬에만 조정했습니다. 밝은 동상·바닥의 색을 낮췄습니다.</li>
+<li>9언어 가이드의 Woodland 설명과 기존 샘플 문서를 갱신했습니다.</li>
+<li>다른 예제에서도 사용하는 동상3종의 기존 프로필은 복원했습니다. 두 Woodland 씬만 동일 메시를 사용하는 별도 프로필을 참조합니다. 변경된 메시·프로필의 다른 예제 참조0건을 검사했습니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity6000.0.83f1 Built-in, 실제 실행 값Linear, 동일 카메라·960×600·동일 바람 시간에서 전후 렌더2쌍을 확인했습니다. 두 씬 모두 Native shader errors0.</li>
+<li>수관8종의 잎 RGB 각3종을 실제 메시 데이터로 검증했습니다. 총29개 메시/씬 구조 검사를 통과했고 나무 배치·카메라 값은 유지했습니다.</li>
+<li>실제 Unity 헤더 기반 D3DCompile26개 셰이더 엔트리, Roslyn6어셈블리 및 기존 에셋/어셈블리/언어 검사12건 통과. 기존 공통 함수에 대한 uninitialized-variable 경고는 남으며 오류0입니다. URP 셰이더 컴파일과 실제 URP 씬 검증을 구분합니다.</li>
+</ul>
+<p><a class="report-link" href="../assets/colour-20261104/verification-final.json">검증 근거·소스 해시</a></p>
+<p><figure><img class="report-image" src="../assets/colour-20261104/linear-before-1.png" alt="Pixel Camera 통합 전: Linear" loading="lazy"><figcaption>Pixel Camera 통합 전: Linear</figcaption></figure>
+통합 예제 변경 전입니다.</p>
+<p><figure><img class="report-image" src="../assets/colour-20261104/linear-after-final-1.png" alt="Pixel Camera 통합 후: Linear" loading="lazy"><figcaption>Pixel Camera 통합 후: Linear</figcaption></figure>
+같은 Pixel Camera 설정을 유지한 변경 후입니다. 픽셀 카메라 모듈 자체를 수정한 결과가 아닙니다.</p>
+<p>실제 Unity 렌더 원본 PNG를 보존했습니다. 픽셀·명암 판독을 위해 일부 파일은200KB 목표를 넘으며, 외부 이미지 도구로 편집·색 보정하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>원본 레퍼런스와 동일한 구성·볼류메트릭 라이트·실제 프레임 성능·URP 반사/블룸·다른 플랫폼은 검증하지 않았습니다. Gamma 분기는 컴파일에 포함되지만 최종 Gamma 외형을 별도 승인한 것은 아닙니다. 원본 TurnRoom의 활성 씬·빌드 설정은 바꾸지 않고 격리 QA 프로젝트에서 검증했습니다. 검토 패키지는 이번 소스로 재포장하지 않았습니다.</p>
+<p>교훈 검토: 기존 전역의 동일 상태 대조 원칙을 유지하고 프로젝트 PixoraAuthoring 지침에 원본/격리 색 공간·파이프라인 실행 값 대조를 구체화했습니다. 전역 지침 변경 없음. 최초 제한된 프로세스 조회에서 Unity가 없다고 판단했으나 권한 범위를 넓힌 조회에서 기존 인스턴스를 확인했습니다. 이번 작업에서 만든 중복 실행 오류 창만 닫고 기존 사용자 인스턴스는 종료하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분</li>
+<li>실제로 완료된 시간: 2026-11-04 15:44:02 KST 시작 · 16:04 KST 최종 구현·렌더·검증 기록. 배포 확인은 최종 채팅에 기록.</li>
+<li>XERJ: 실패 — Status 노드 미실행. 직전 Search node.lock 점유로 실패. 소스는 rg로 검증.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104070447875-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelfoliage&topic=qa&relatedReport=projects%2Fpixelfoliage%2Freports%2F2026-11-04-result-20261104070447875-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelfoliage">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelfoliage">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
