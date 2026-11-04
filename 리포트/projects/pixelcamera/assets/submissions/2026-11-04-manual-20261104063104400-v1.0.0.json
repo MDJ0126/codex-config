@@ -1,0 +1,71 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelcamera",
+    "kind": "manual",
+    "title": "Pixel Camera 전용 로고 연결 수정·검증",
+    "summary": "기존 로고를 보존하며 카메라 모듈의 브랜드 참조를 복원합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 Unity 표시 QA 대기",
+    "outcome": "소스 수정·컴파일 통과, 실제 UI 확인은 화면 조작 중단으로 보류.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-04 15:28:12 KST 시작. 로고 연결 수정 및 6개 어셈블리 컴파일 완료. 공개 배포 확인 시각은 최종 채팅에 기록.",
+    "xerjEvidence": "Search와 Status 실행 실패. 데이터 디렉터리 node.lock 점유 로그 확인. 잠금 삭제·기존 프로세스 종료 없이 rg와 현재 소스로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "camera-logo-binding-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "카메라 모듈에 기존 전용 로고 표시",
+    "completionCriteria": "Studio 참조 제거·기존 로고 보존·컴파일·실제 Unity 표시 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "전용 로고 연결 복원",
+        "action": "창 제목·헤더·목록·Inspector의 참조 수정",
+        "expected": "기존 카메라 로고 사용",
+        "qa": "현재 소스·기존 이미지 해시·6개 어셈블리 컴파일 대조",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "소스 참조·해시·6개 컴파일 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 UI 확인",
+        "action": "화면 조작 허용 시 Unity 표시와 테마별 로고 확인",
+        "expected": "전용 로고 표시",
+        "qa": "동일 창 목록 전후 캡처",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "이전 Esc 중단으로 GUI 미조작"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}
