@@ -1,0 +1,365 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 제출 전 전체 점검",
+    "summary": "확인된 문제 수정과 제출 전 점검 완료",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "최종 소유권 선서 및 I accept는 사용자 수행 단계입니다. 전수 UI 조합 등 점검 한계는 결과 보고서에 명시했습니다.",
+    "outcome": "문서·패키지·판매 미디어·포털 저장값·제출 전 판정의 현재 revision QA와 final QA 통과. 최종 제출은 수행하지 않음.",
+    "proposedTime": "15~25분",
+    "actualTime": "99분. 완료 기록 2026-11-05 04:58:16 KST. 최초 예상 15~25분을 초과했습니다. 최종 제출은 요청 범위에 포함하지 않았습니다.",
+    "xerjEvidence": "Status 노드 미실행, Search 복구 시작 시간 초과. 현재 파일 rg로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-presubmission-audit-20261105",
+    "round": 6,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "제출전누락과심사위험을증거로확인",
+    "completionCriteria": "문서동작·패키지현재성·미디어와권리·포털저장값·공식요건대조,미확인구분,공개점검보고",
+    "previousManual": "projects/pixora/reports/2026-11-04-manual-pixora-presubmission-audit-20261105-20261104192922484-v1.0.4.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "문서와진입동작",
+        "action": "9언어가이드·링크·이미지·로고·실제기능설명대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "빌드된문서의각장·언어전환검사와누락목록; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "36문서594장 참조 누락0, 9언어 Overview와 수정한 본문 이미지·링크 실제 브라우저 확인, 현재 UI 및 전후 캡처."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "제출패키지와검증근거",
+        "action": "포털파일과로컬후보의인벤토리·해시·최신소스·공식Validator·신규설치기록대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "현제출파일에대해검증됐는지구분; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "최종r4 2678파일 SHA 대조 일치, 실제 가져오기·샘플 제거 본체 컴파일, 공식27통과2경고0실패."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "판매미디어",
+        "action": "실제저장된키이미지·스크린샷·영상과로컬최신미디어·음원권리대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "갤러리범위·순서·영상재생/오디오검사; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "Affinity 실제 저작 원본 저장·재열기 픽셀 일치, 저장된 키3개 확인, 기존 갤러리21개·영상·권리 확인과 실제 브라우저 재생."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "심사페이지저장값",
+        "action": "공식SDK읽기전용으로상태·지원버전·설명·AI고지·링크·파일정보확인; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "영어및지원판매언어와실제제품범위대조; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "4언어20필드 저장 재조회 일치. 최종서버 처리 완료2678파일59844919바이트, 가격10달러, 호환 정보 확인."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "제출가능여부판정",
+        "action": "최신Unity공식제출요건과전체점검결과통합; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "차단/주의/미확인과근거를공개보고; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 3,
+        "result": "공식요건 대조 및 확인·주의·미확인 구분, 실제 제출 전 대화상자 확인, 소유권 선서·I accept 미실행, 개별 공개 보고서 전후 첨부 검증."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "원래 전체 5개 작업과 이전 실패·미실행 이력을 보존합니다. 포털 최종 처리 및 추가 네이티브 QA를 확인하고 같은 완료 기준으로 최종 검증했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1908641Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "36문서594장과본문참조검사,깨진참조306건검출.제품정상판정아님.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1989592Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "포털구형업로드와후보3개실제tar·현재소스대조.현재소스137개9어셈블리컴파일통과.클린설치미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990184Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "키3개·갤러리21개검토,HLS실제1440프레임·오디오신호검사.기존동일ID사용자청취근거구분.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990456Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "초안1541558의4언어저장값·변경이력·AI·키이미지·영상읽기대조.UIPreview미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990832Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "제출보류판정과보고서작성.공개배포검증은남음.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-04T17:53:17.5574961Z",
+        "summary": "기존판정범위오류확인",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존해결본과개발미추적파일을섞어2.5.g미해결처럼보고함",
+            "evidence": "업로드해시35ebbb...7f4f22와실제tar포함파일",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-04T17:53:17.5655917Z",
+        "summary": "실제파일대조와철회문검증",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "영수증해시일치·문제파일두패키지미포함확인,정정문에서위반행제외.공개배포는별도미완료.",
+            "evidence": "recheck-25g.json 및정정v1.0.1",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-11-04T19:29:21.853Z",
+        "summary": "실제 수정·설치·컴퓨터 유즈 QA 결과와 미확인 보존",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "36문서594장 참조 누락306→0, 9언어 Overview 실제 확인. 과거 전체 스크린샷 재촬영은 미완료.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "r4 실제 가져오기 후 디스크2678파일 SHA 전부 일치, 샘플 제거 핵심 컴파일 통과, 공식27통과2경고0실패.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "Affinity 원본3개 저장 및 카드 재열기 픽셀 동일, 키이미지3개 포털 저장. 기존 영상 종료까지 재생. 전체 신규 청취는 미실행.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "4언어20필드 저장 재조회 일치. 최종 r4 업로드Success, 서버 파일처리processing은 미완료.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T05",
+            "revision": 3,
+            "verdict": "not_run",
+            "actual": "소유권 선서와 I accept 미실행. 문서/네이티브 전수 QA의 미확인 범위 및 서버처리 남음.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "step",
+        "at": "2026-11-04T19:58:16.245Z",
+        "summary": "현재 revision 실제 수정·실행·저장·서버 처리 최종 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "36문서594장 참조 누락0, 9언어 Overview와 수정한 본문 이미지·링크 실제 브라우저 확인, 현재 UI 및 전후 캡처.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종r4 2678파일 SHA 대조 일치, 실제 가져오기·샘플 제거 본체 컴파일, 공식27통과2경고0실패.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Affinity 실제 저작 원본 저장·재열기 픽셀 일치, 저장된 키3개 확인, 기존 갤러리21개·영상·권리 확인과 실제 브라우저 재생.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "4언어20필드 저장 재조회 일치. 최종서버 처리 완료2678파일59844919바이트, 가격10달러, 호환 정보 확인.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T05",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "공식요건 대조 및 확인·주의·미확인 구분, 실제 제출 전 대화상자 확인, 소유권 선서·I accept 미실행, 개별 공개 보고서 전후 첨부 검증.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q10",
+        "kind": "final",
+        "at": "2026-11-04T19:58:16.245Z",
+        "summary": "전체 5개 작업 완료 기준 대조 및 전후 증거·인계·정리 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "36문서594장 참조 누락0, 9언어 Overview와 수정한 본문 이미지·링크 실제 브라우저 확인, 현재 UI 및 전후 캡처.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "최종r4 2678파일 SHA 대조 일치, 실제 가져오기·샘플 제거 본체 컴파일, 공식27통과2경고0실패.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Affinity 실제 저작 원본 저장·재열기 픽셀 일치, 저장된 키3개 확인, 기존 갤러리21개·영상·권리 확인과 실제 브라우저 재생.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "4언어20필드 저장 재조회 일치. 최종서버 처리 완료2678파일59844919바이트, 가격10달러, 호환 정보 확인.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T05",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "공식요건 대조 및 확인·주의·미확인 구분, 실제 제출 전 대화상자 확인, 소유권 선서·I accept 미실행, 개별 공개 보고서 전후 첨부 검증.",
+            "evidence": "projects/pixora/assets/release-ready-20261105/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

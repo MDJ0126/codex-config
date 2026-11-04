@@ -1,0 +1,832 @@
+{
+  "at": "2026-11-04T19:57:40.0358549Z",
+  "packageId": "424614",
+  "status": "draft",
+  "versionId": "1541558",
+  "versionName": "1.0.0",
+  "name": "Pixora Studio",
+  "price": "10.00",
+  "categoryId": "107",
+  "size": "59844919",
+  "modified": "2026-11-04 19:56:55",
+  "supportLinks": [],
+  "publishnotes": "<p >1.0.0 — Image Maker, Pixel Camera and Foliage in Pixora Studio, with independent module windows, editable work documents, included examples and offline documentation in nine languages.</p>",
+  "ptags": [
+    "palette",
+    "pixel art",
+    "Sprite Sheet"
+  ],
+  "unitypackages": [
+    {
+      "package_upload_id": "1041222",
+      "unity_version": "6000.0.83f1",
+      "file_count": "2678",
+      "status": "finished",
+      "asset_store_tools_version": "V6.3.1",
+      "path": "Assets/TurnRoom/PixoraStudio",
+      "size": "59844919",
+      "timestamp": "2026-11-04T19:13:58Z",
+      "vetting": {
+        "platforms": "",
+        "allow_edit": true,
+        "status": "draft",
+        "dependencies": [],
+        "vetting_type": "unknown",
+        "srp_versions": [
+          ""
+        ],
+        "genesis_vetting_id": null,
+        "unity_versions": "",
+        "first_approved_at": null,
+        "id": "1713408",
+        "srp_type": "standard"
+      }
+    }
+  ],
+  "languages": {
+    "ko-KR": {
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/961708b2-ba43-473c-bbc6-c47e286ecd31.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/68f48738-1941-4abd-927f-c18c98b77f1b.jpg",
+        "facebook": null,
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/50189203-ce2c-47b8-a530-bb09e51a16a8.jpg"
+      },
+      "ai_description": "<p >OpenAI Codex가 C# 코드·테스트·문서·번역·마케팅 준비를 보조했습니다. 포함된 예제 일러스트와 3D 모델의 Affinity·Blender 제작 스크립트도 AI 보조를 받았으며 편집 가능한 원본을 포함합니다. 변환 도구는 로컬에서 실행되며 이미지 생성 서비스에 호출하지 않습니다.</p>",
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1992810",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261104/videos/5e0ef3d0-fd20-4d02-b7d8-69c98e6ad4dc/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aeaff5b135f57eb368427a4"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338432",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13340502",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338436",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338434",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338430",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338440",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338438",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312562",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312564",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312566",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312568",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312570",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312574",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312578",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312580",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312582",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312584",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_orig.png"
+        }
+      ],
+      "optional_description": "<p >Pixora Studio는 세 가지 작업을 하나의 Unity 패키지로 제공합니다.</p></br><p >Image Maker: 이미지 변환과 3D 모델·애니메이션 촬영으로 픽셀 스프라이트와 PNG 시트를 제작합니다. 팔레트·프로필과 편집 가능한 작업 문서를 지원합니다.</p></br><p >Pixel Camera: 카메라 전체 또는 지원하는 선택 오브젝트에 픽셀 표현·팔레트·외곽선을 적용합니다.</p></br><p >Foliage: 잔디·꽃·관목·나무를 배치하고 공유 바람과 캐릭터 접촉 반응을 설정합니다.</p></br><p >Tools &gt; TurnRoom &gt; Pixora Studio에서 각 창을 엽니다. 9개 언어의 오프라인 문서, 예제와 공유 에디터가 포함됩니다.</p></br><p >Noto Sans KR에서 파생한 TurnRoom Sans를 SIL OFL 1.1로 포함합니다. 전체 고지와 라이선스는 Third-Party Notices 및 폰트 폴더에 있습니다.</p>",
+      "name": "Pixora Studio",
+      "compatibility_info": "",
+      "description": "Unity에서 픽셀 스프라이트 제작, 장면 픽셀 렌더링과 식생 애니메이션을 작업하세요. Image Maker·Pixel Camera·Foliage를 독립 창으로 제공합니다.<p >Windows, Unity 6000.0.83f1. 포함된 장면 예제는 Built-in을 사용합니다. 선택적 URP 통합에는 호환 패키지와 Renderer 설정이 필요합니다. HDRP·XR·모바일 성능은 인증하지 않습니다.</p></br><p >Pixel Camera는 문서에 명시한 범위의 불투명 MeshRenderer·SkinnedMeshRenderer를 지원합니다. 식생 애니메이션 단계는 렌더 프레임률 제한과 별개입니다. Runtime·Editor가 분리되어 있으며 예제는 선택 사항입니다. 성능 향상 수치는 주장하지 않습니다.</p></br><p >UI·문서는 영어·한국어·일본어·중국어 간체/번체·스페인어·프랑스어·독일어·브라질 포르투갈어를 지원합니다. 변환은 로컬에서 실행되며 유료 AI 서비스가 필요하지 않습니다.</p><p >Pixora Studio는 세 가지 작업을 하나의 Unity 패키지로 제공합니다.</p></br><p >Image Maker: 이미지 변환과 3D 모델·애니메이션 촬영으로 픽셀 스프라이트와 PNG 시트를 제작합니다. 팔레트·프로필과 편집 가능한 작업 문서를 지원합니다.</p></br><p >Pixel Camera: 카메라 전체 또는 지원하는 선택 오브젝트에 픽셀 표현·팔레트·외곽선을 적용합니다.</p></br><p >Foliage: 잔디·꽃·관목·나무를 배치하고 공유 바람과 캐릭터 접촉 반응을 설정합니다.</p></br><p >Tools &gt; TurnRoom &gt; Pixora Studio에서 각 창을 엽니다. 9개 언어의 오프라인 문서, 예제와 공유 에디터가 포함됩니다.</p></br><p >Noto Sans KR에서 파생한 TurnRoom Sans를 SIL OFL 1.1로 포함합니다. 전체 고지와 라이선스는 Third-Party Notices 및 폰트 폴더에 있습니다.</p>",
+      "release_notes": "<p >1.0.0 — Image Maker·Pixel Camera·Foliage를 Pixora Studio로 제공합니다. 모듈별 독립 창, 편집 가능한 작업 문서, 예제와 9개 언어 오프라인 문서를 포함합니다.</p>",
+      "key_features": "<p >Windows, Unity 6000.0.83f1. 포함된 장면 예제는 Built-in을 사용합니다. 선택적 URP 통합에는 호환 패키지와 Renderer 설정이 필요합니다. HDRP·XR·모바일 성능은 인증하지 않습니다.</p></br><p >Pixel Camera는 문서에 명시한 범위의 불투명 MeshRenderer·SkinnedMeshRenderer를 지원합니다. 식생 애니메이션 단계는 렌더 프레임률 제한과 별개입니다. Runtime·Editor가 분리되어 있으며 예제는 선택 사항입니다. 성능 향상 수치는 주장하지 않습니다.</p></br><p >UI·문서는 영어·한국어·일본어·중국어 간체/번체·스페인어·프랑스어·독일어·브라질 포르투갈어를 지원합니다. 변환은 로컬에서 실행되며 유료 AI 서비스가 필요하지 않습니다.</p>",
+      "keywords": null,
+      "elevator_pitch": "Unity에서 픽셀 스프라이트 제작, 장면 픽셀 렌더링과 식생 애니메이션을 작업하세요. Image Maker·Pixel Camera·Foliage를 독립 창으로 제공합니다."
+    },
+    "zh-CN": {
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/961708b2-ba43-473c-bbc6-c47e286ecd31.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/68f48738-1941-4abd-927f-c18c98b77f1b.jpg",
+        "facebook": null,
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/50189203-ce2c-47b8-a530-bb09e51a16a8.jpg"
+      },
+      "ai_description": "<p >OpenAI Codex辅助了C#代码、测试、文档、翻译和营销准备，也辅助了在Affinity和Blender中制作随附示例插画与3D模型的脚本。包含可编辑源文件。转换工具在本地运行，不调用图像生成服务。</p>",
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1992810",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261104/videos/5e0ef3d0-fd20-4d02-b7d8-69c98e6ad4dc/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aeaff5b135f57eb368427a4"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338432",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13340502",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338436",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338434",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338430",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338440",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338438",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312562",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312564",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312566",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312568",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312570",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312574",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312578",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312580",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312582",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312584",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_orig.png"
+        }
+      ],
+      "optional_description": "<p >Pixora Studio将三种工作流程整合到一个Unity包中。</p></br><p >Image Maker：转换图像，捕捉3D模型和动画，生成像素精灵和PNG图集；支持调色板、配置文件和可编辑工作文档。</p></br><p >Pixel Camera：为相机或受支持的选定对象应用像素渲染、调色板和轮廓。</p></br><p >Foliage：布置草、花、灌木和树木，并设置共享风及角色接触响应。</p></br><p >通过Tools &gt; TurnRoom &gt; Pixora Studio打开各独立窗口。包含九种语言的离线指南、示例和共享编辑器支持。</p></br><p >包含基于Noto Sans KR的TurnRoom Sans，采用SIL OFL 1.1许可。完整声明和许可证位于Third-Party Notices及字体文件夹中。</p>",
+      "name": "Pixora Studio",
+      "compatibility_info": "",
+      "description": "在Unity中制作像素精灵、渲染像素风格场景并制作植被动画。Image Maker、Pixel Camera和Foliage各自提供独立窗口。<p >Windows、Unity 6000.0.83f1。随附场景示例使用Built-in。可选URP集成需要兼容的软件包和Renderer设置；HDRP、XR和移动端性能未经认证。</p></br><p >Pixel Camera在文档所述范围内支持不透明MeshRenderer和SkinnedMeshRenderer。植被动画步进与渲染帧率无关。Runtime和Editor分离，示例为可选内容。不宣称性能提升数值。</p></br><p >UI和文档支持英语、韩语、日语、简体与繁体中文、西班牙语、法语、德语和巴西葡萄牙语。转换在本地运行，无需付费AI服务。</p><p >Pixora Studio将三种工作流程整合到一个Unity包中。</p></br><p >Image Maker：转换图像，捕捉3D模型和动画，生成像素精灵和PNG图集；支持调色板、配置文件和可编辑工作文档。</p></br><p >Pixel Camera：为相机或受支持的选定对象应用像素渲染、调色板和轮廓。</p></br><p >Foliage：布置草、花、灌木和树木，并设置共享风及角色接触响应。</p></br><p >通过Tools &gt; TurnRoom &gt; Pixora Studio打开各独立窗口。包含九种语言的离线指南、示例和共享编辑器支持。</p></br><p >包含基于Noto Sans KR的TurnRoom Sans，采用SIL OFL 1.1许可。完整声明和许可证位于Third-Party Notices及字体文件夹中。</p>",
+      "release_notes": "<p >1.0.0 — Pixora Studio包含Image Maker、Pixel Camera和Foliage，提供独立模块窗口、可编辑工作文档、示例和九种语言的离线文档。</p>",
+      "key_features": "<p >Windows、Unity 6000.0.83f1。随附场景示例使用Built-in。可选URP集成需要兼容的软件包和Renderer设置；HDRP、XR和移动端性能未经认证。</p></br><p >Pixel Camera在文档所述范围内支持不透明MeshRenderer和SkinnedMeshRenderer。植被动画步进与渲染帧率无关。Runtime和Editor分离，示例为可选内容。不宣称性能提升数值。</p></br><p >UI和文档支持英语、韩语、日语、简体与繁体中文、西班牙语、法语、德语和巴西葡萄牙语。转换在本地运行，无需付费AI服务。</p>",
+      "keywords": null,
+      "elevator_pitch": "在Unity中制作像素精灵、渲染像素风格场景并制作植被动画。Image Maker、Pixel Camera和Foliage各自提供独立窗口。"
+    },
+    "ja-JP": {
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/961708b2-ba43-473c-bbc6-c47e286ecd31.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/68f48738-1941-4abd-927f-c18c98b77f1b.jpg",
+        "facebook": null,
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/50189203-ce2c-47b8-a530-bb09e51a16a8.jpg"
+      },
+      "ai_description": "<p >OpenAI CodexがC#コード、テスト、文書、翻訳、マーケティング準備を支援しました。同梱サンプルのイラストと3DモデルをAffinity・Blenderで制作するスクリプトにもAIを活用し、編集可能な原本を同梱します。変換ツールはローカルで動作し、画像生成サービスを呼び出しません。</p>",
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1992810",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261104/videos/5e0ef3d0-fd20-4d02-b7d8-69c98e6ad4dc/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aeaff5b135f57eb368427a4"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338432",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13340502",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338436",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338434",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338430",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338440",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338438",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312562",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312564",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312566",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312568",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312570",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312574",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312578",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312580",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312582",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312584",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_orig.png"
+        }
+      ],
+      "optional_description": "<p >Pixora Studioは3つのワークフローを1つのUnityパッケージにまとめます。</p></br><p >Image Maker: 画像変換と3Dモデル・アニメーションの撮影からピクセルスプライトとPNGシートを作成。パレット、プロファイル、編集可能な作業ドキュメントに対応します。</p></br><p >Pixel Camera: カメラまたは対応する選択オブジェクトにピクセル描画、パレット、輪郭を適用します。</p></br><p >Foliage: 草、花、低木、樹木を配置し、共通の風とキャラクター接触反応を設定します。</p></br><p >Tools &gt; TurnRoom &gt; Pixora Studioから各独立ウィンドウを開けます。9言語のオフラインガイド、サンプル、共通エディターを同梱します。</p></br><p >Noto Sans KR由来のTurnRoom SansをSIL OFL 1.1で同梱。全文の通知とライセンスはThird-Party Noticesとフォントフォルダーにあります。</p>",
+      "name": "Pixora Studio",
+      "compatibility_info": "",
+      "description": "Unityでピクセルスプライト制作、シーンのピクセル描画、植生アニメーションを行うImage Maker・Pixel Camera・Foliageの統合ツールです。<p >Windows、Unity 6000.0.83f1。同梱シーンサンプルはBuilt-inを使用します。任意のURP連携には互換パッケージとRenderer設定が必要です。HDRP、XR、モバイル性能は認証対象外です。</p></br><p >Pixel Cameraは文書記載の範囲で不透明なMeshRendererとSkinnedMeshRendererに対応。植生のアニメーション間隔は描画FPSとは別です。RuntimeとEditorを分離し、サンプルは任意です。性能向上の数値は主張しません。</p></br><p >UIと文書は英語、韓国語、日本語、簡体字・繁体字中国語、スペイン語、フランス語、ドイツ語、ブラジルポルトガル語。変換はローカルで実行し、有料AIサービスは不要です。</p><p >Pixora Studioは3つのワークフローを1つのUnityパッケージにまとめます。</p></br><p >Image Maker: 画像変換と3Dモデル・アニメーションの撮影からピクセルスプライトとPNGシートを作成。パレット、プロファイル、編集可能な作業ドキュメントに対応します。</p></br><p >Pixel Camera: カメラまたは対応する選択オブジェクトにピクセル描画、パレット、輪郭を適用します。</p></br><p >Foliage: 草、花、低木、樹木を配置し、共通の風とキャラクター接触反応を設定します。</p></br><p >Tools &gt; TurnRoom &gt; Pixora Studioから各独立ウィンドウを開けます。9言語のオフラインガイド、サンプル、共通エディターを同梱します。</p></br><p >Noto Sans KR由来のTurnRoom SansをSIL OFL 1.1で同梱。全文の通知とライセンスはThird-Party Noticesとフォントフォルダーにあります。</p>",
+      "release_notes": "<p >1.0.0 — Image Maker、Pixel Camera、FoliageをPixora Studioとして提供。各モジュールの独立ウィンドウ、編集可能な作業文書、サンプル、9言語のオフライン文書を同梱します。</p>",
+      "key_features": "<p >Windows、Unity 6000.0.83f1。同梱シーンサンプルはBuilt-inを使用します。任意のURP連携には互換パッケージとRenderer設定が必要です。HDRP、XR、モバイル性能は認証対象外です。</p></br><p >Pixel Cameraは文書記載の範囲で不透明なMeshRendererとSkinnedMeshRendererに対応。植生のアニメーション間隔は描画FPSとは別です。RuntimeとEditorを分離し、サンプルは任意です。性能向上の数値は主張しません。</p></br><p >UIと文書は英語、韓国語、日本語、簡体字・繁体字中国語、スペイン語、フランス語、ドイツ語、ブラジルポルトガル語。変換はローカルで実行し、有料AIサービスは不要です。</p>",
+      "keywords": null,
+      "elevator_pitch": "Unityでピクセルスプライト制作、シーンのピクセル描画、植生アニメーションを行うImage Maker・Pixel Camera・Foliageの統合ツールです。"
+    },
+    "en-US": {
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/961708b2-ba43-473c-bbc6-c47e286ecd31.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/68f48738-1941-4abd-927f-c18c98b77f1b.jpg",
+        "facebook": null,
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/50189203-ce2c-47b8-a530-bb09e51a16a8.jpg"
+      },
+      "ai_description": "<p >OpenAI Codex assisted with C# code, tests, documentation, translations and marketing preparation, including authoring scripts for the included sample illustrations and 3D models in Affinity and Blender. Editable source files are included. The conversion tools run locally and do not call an image-generation service.</p>",
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1992810",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261104/videos/5e0ef3d0-fd20-4d02-b7d8-69c98e6ad4dc/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aeaff5b135f57eb368427a4"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338432",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/2cd56fe3-fe1a-44d7-9347-b9de256e8809_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13340502",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/309160dd-1b78-4057-b184-f2af99613d94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338436",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cac3b0e2-9214-48ff-a0a1-a43c55e157dc_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338434",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fa937599-3d36-4afe-8560-c7451a4d1d5f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338430",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bac7b87d-9cdf-4228-9d57-8329c1f6fa66_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338440",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/848105eb-eeea-421f-848e-ae50f309eeab_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338438",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ebb9153a-76c9-480d-8076-c22a355e5c25_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3fb74b1c-a0c7-4957-8b09-74903cd82405_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/055e6862-74f6-48f1-a093-02943296b610_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1974d22c-351f-4387-bc32-18242fb32b72_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_scaled.jpg",
+          "type": "screenshot",
+          "id": "13338444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/bafd5183-0208-41f8-a8ac-4cca1b7fce94_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312562",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a9e3bd3-0e47-49cc-a126-b4dfbf806989_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312564",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/090d2d02-68ea-4273-bdb0-5ede8593bd6b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312566",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/ef54c4a8-ed96-4734-be25-b0274a46f886_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312568",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb687681-f300-41fb-aa8a-47014f890408_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312570",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c2bd9064-12f8-47bf-a5ca-123a84bdd97a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312574",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fb50ab45-e15a-485a-b9b2-dacaf9afb64a_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312578",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/cb0ee1bf-c102-4584-a9fa-d8549921d69c_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312580",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/5355e122-2630-49e3-8a17-f6f477663b97_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312582",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d4d32acd-4817-45ea-b82b-fe67d1203b27_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_scaled.jpg",
+          "type": "screenshot",
+          "id": "13312584",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/60ddee5c-b9ff-4223-ba24-f2f961f69c06_orig.png"
+        }
+      ],
+      "optional_description": "<p >Pixora Studio combines three workflows in one Unity package.</p></br><p >Image Maker: convert images and capture 3D models or animation as pixel sprites and PNG sheets. Edit palettes, reuse profiles and save editable work documents.</p></br><p >Pixel Camera: apply pixel rendering, palettes and outlines to a camera or supported selected objects.</p></br><p >Foliage: place grass, flowers, shrubs and trees with shared wind and character contact response.</p></br><p >Open each independent window from Tools &gt; TurnRoom &gt; Pixora Studio. Offline guides in nine languages, examples and shared TurnRoom editor support are included.</p></br><p >Includes TurnRoom Sans, derived from Noto Sans KR under SIL OFL 1.1. Full notices and font license are included in Third-Party Notices and the font folders.</p>",
+      "name": "Pixora Studio",
+      "compatibility_info": "<p >Validated on Windows with Unity 6000.0.83f1. Built-in rendering was used for the included model-capture samples. TurnRoom shared editor support is bundled; no separate Asset Store dependency is required.</p>",
+      "description": "Create pixel sprites, render pixel-styled scenes and animate vegetation in Unity with three independent tools: Image Maker, Pixel Camera and Foliage.<p >Unity 6000.0.83f1 on Windows. Included scene examples use Built-in rendering. Optional URP integration needs a compatible URP package and renderer setup; HDRP, XR and mobile performance are not certified.</p></br><p >Pixel Camera supports opaque MeshRenderer and SkinnedMeshRenderer objects within its documented limits. Foliage animation stepping does not limit rendering frame rate. Editor and runtime modules are separate; samples are optional. No performance improvement is claimed.</p></br><p >Nine UI/documentation languages: English, Korean, Japanese, Simplified and Traditional Chinese, Spanish, French, German and Brazilian Portuguese. Conversion is local and does not require a paid AI service.</p><p >Pixora Studio combines three workflows in one Unity package.</p></br><p >Image Maker: convert images and capture 3D models or animation as pixel sprites and PNG sheets. Edit palettes, reuse profiles and save editable work documents.</p></br><p >Pixel Camera: apply pixel rendering, palettes and outlines to a camera or supported selected objects.</p></br><p >Foliage: place grass, flowers, shrubs and trees with shared wind and character contact response.</p></br><p >Open each independent window from Tools &gt; TurnRoom &gt; Pixora Studio. Offline guides in nine languages, examples and shared TurnRoom editor support are included.</p></br><p >Includes TurnRoom Sans, derived from Noto Sans KR under SIL OFL 1.1. Full notices and font license are included in Third-Party Notices and the font folders.</p>",
+      "release_notes": "<p >1.0.0 — Image Maker, Pixel Camera and Foliage in Pixora Studio, with independent module windows, editable work documents, included examples and offline documentation in nine languages.</p>",
+      "key_features": "<p >Unity 6000.0.83f1 on Windows. Included scene examples use Built-in rendering. Optional URP integration needs a compatible URP package and renderer setup; HDRP, XR and mobile performance are not certified.</p></br><p >Pixel Camera supports opaque MeshRenderer and SkinnedMeshRenderer objects within its documented limits. Foliage animation stepping does not limit rendering frame rate. Editor and runtime modules are separate; samples are optional. No performance improvement is claimed.</p></br><p >Nine UI/documentation languages: English, Korean, Japanese, Simplified and Traditional Chinese, Spanish, French, German and Brazilian Portuguese. Conversion is local and does not require a paid AI service.</p>",
+      "keywords": null,
+      "elevator_pitch": "Create pixel sprites, render pixel-styled scenes and animate vegetation in Unity with three independent tools: Image Maker, Pixel Camera and Foliage."
+    }
+  }
+}
