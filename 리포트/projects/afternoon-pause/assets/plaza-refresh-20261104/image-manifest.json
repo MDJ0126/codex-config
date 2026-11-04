@@ -1,0 +1,68 @@
+{
+  "images": [
+    {
+      "name": "before-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 222900,
+      "edited": false
+    },
+    {
+      "name": "after-world.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 406266,
+      "edited": false
+    },
+    {
+      "name": "character-list.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 365719,
+      "edited": false
+    },
+    {
+      "name": "action-list.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 391270,
+      "edited": false
+    },
+    {
+      "name": "sky-sun.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 377806,
+      "edited": false
+    },
+    {
+      "name": "final-functional-chat-with-profile.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 317856,
+      "edited": false
+    },
+    {
+      "name": "final-functional-status-popup.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 342182,
+      "edited": false
+    },
+    {
+      "name": "final-social-ai-profile.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 349260,
+      "edited": false
+    },
+    {
+      "name": "final-social-following.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 282995,
+      "edited": false
+    }
+  ],
+  "note": "Unity ScreenCapture와 실제 Chrome CDP 화면 원본. 가독성 때문에1920×1080 유지. Affinity3.3.1 CLI 연결과 WebP 프리셋은 확인했지만 프로젝트 PNG 열기가PERMISSION_DENIED. SDK의 파일 경로 제한을 바탕화면 우회나 다른 편집 도구로 회피하지 않고 원본 PNG를 보존했다. 대부분200KB 목표를 초과하며 GIF/재압축은 미실행."
+}

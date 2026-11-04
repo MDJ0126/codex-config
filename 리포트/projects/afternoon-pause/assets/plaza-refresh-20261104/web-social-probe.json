@@ -1,0 +1,477 @@
+{
+  "startedAt": "2026-11-04T04:25:47.572Z",
+  "kind": "refreshed",
+  "population": 4,
+  "seconds": 8,
+  "checks": [
+    {
+      "name": "Runtime loaded",
+      "passed": true
+    },
+    {
+      "name": "Browser text overlay selected",
+      "passed": true
+    },
+    {
+      "name": "Korean composition and committed value",
+      "passed": true,
+      "detail": [
+        {
+          "type": "compositionstart",
+          "data": "",
+          "composing": false
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안",
+          "composing": true
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안녕하세요",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안녕하세요",
+          "composing": true
+        },
+        {
+          "type": "compositionend",
+          "data": "안녕하세요",
+          "composing": false
+        }
+      ]
+    },
+    {
+      "name": "Entry and keyboard movement",
+      "passed": true
+    },
+    {
+      "name": "Population",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "Visible AI selection target",
+      "passed": true
+    },
+    {
+      "name": "Actual character pointer selection",
+      "passed": false
+    }
+  ],
+  "samples": [],
+  "errors": [],
+  "warnings": [
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+  ],
+  "events": [],
+  "browser": "Chrome/156.0.8078.80",
+  "loadSeconds": 2.793,
+  "graphics": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 970 (0x000013C2) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "width": 1920,
+    "height": 1080,
+    "wasmHeapBytes": 115998720
+  },
+  "imeEvents": [
+    {
+      "type": "compositionstart",
+      "data": "",
+      "composing": false
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안",
+      "composing": true
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안녕하세요",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안녕하세요",
+      "composing": true
+    },
+    {
+      "type": "compositionend",
+      "data": "안녕하세요",
+      "composing": false
+    }
+  ],
+  "socialStart": {
+    "x": 3,
+    "y": 0.06199997663497925,
+    "z": -2.379133939743042,
+    "fps": 29.980663299560547,
+    "elapsed": 6.16399621963501,
+    "cameraX": 3.000000476837158,
+    "cameraY": 3.099790096282959,
+    "cameraZ": 2.661466360092163,
+    "cameraYaw": 180,
+    "cameraPitch": 18,
+    "cameraDistance": 5.300000190734863,
+    "seated": false,
+    "hidden": false,
+    "orthographic": false,
+    "motion": "Idle",
+    "controllerType": "PlazaPlayer",
+    "pawnType": "PlazaCharacter",
+    "sitCount": 0,
+    "standCount": 0,
+    "renderers": 110,
+    "targetFps": 30,
+    "npcCount": 4,
+    "visibleSkinned": 5,
+    "managedBytes": 3055616,
+    "frameMs": [
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34,
+      33,
+      33,
+      34
+    ],
+    "seatTargets": [
+      {
+        "x": 1.1918683052062988,
+        "y": 0.6890318393707275,
+        "worldX": -5,
+        "worldZ": -2.8999996185302734
+      },
+      {
+        "x": 1.56525719165802,
+        "y": -0.10600900650024414,
+        "worldX": 23.999996185302734,
+        "worldZ": 14.867517471313477
+      },
+      {
+        "x": -1.3791738748550415,
+        "y": -0.16483378410339355,
+        "worldX": -27.867517471313477,
+        "worldZ": 12.999996185302734
+      },
+      {
+        "x": 0.05264958366751671,
+        "y": 0.4235627055168152,
+        "worldX": 14,
+        "worldZ": -10.299999237060547
+      },
+      {
+        "x": 0.3086403012275696,
+        "y": 1.2967196702957153,
+        "worldX": 4,
+        "worldZ": 0.6999999284744263
+      },
+      {
+        "x": 0.024113476276397705,
+        "y": 0.7394065856933594,
+        "worldX": 8,
+        "worldZ": -2.3000001907348633
+      },
+      {
+        "x": -4.763708114624023,
+        "y": -0.8001655340194702,
+        "worldX": -27.867517471313477,
+        "worldZ": 6.999995708465576
+      },
+      {
+        "x": 1.1913594007492065,
+        "y": 0.4235626459121704,
+        "worldX": -14,
+        "worldZ": -10.299999237060547
+      },
+      {
+        "x": 0.7787030935287476,
+        "y": 0.3032674193382263,
+        "worldX": -10.999996185302734,
+        "worldZ": -24.867517471313477
+      },
+      {
+        "x": 0.28780147433280945,
+        "y": -0.22193169593811035,
+        "worldX": -1.3113549357512966e-8,
+        "worldZ": 11.700000762939453
+      },
+      {
+        "x": 0.34074097871780396,
+        "y": 0.3032674789428711,
+        "worldX": 11.000003814697266,
+        "worldZ": -24.867517471313477
+      },
+      {
+        "x": 5.29486608505249,
+        "y": -0.841084361076355,
+        "worldX": 29.999996185302734,
+        "worldZ": 6.867517948150635
+      }
+    ],
+    "npcs": [
+      {
+        "name": "VisitorAI-01",
+        "motion": "Walk",
+        "x": -0.032306358218193054,
+        "z": -11.505849838256836,
+        "active": true,
+        "onNavMesh": true,
+        "moving": true,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 1,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-02",
+        "motion": "Walk",
+        "x": -4.909652233123779,
+        "z": -1.6377897262573242,
+        "active": true,
+        "onNavMesh": true,
+        "moving": true,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 1,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-03",
+        "motion": "Walk",
+        "x": 3.416292190551758,
+        "z": -7.99708890914917,
+        "active": true,
+        "onNavMesh": true,
+        "moving": true,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 1,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-04",
+        "motion": "Walk",
+        "x": -11.312304496765137,
+        "z": -3.11384654045105,
+        "active": true,
+        "onNavMesh": true,
+        "moving": true,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 1,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-05",
+        "motion": "Inactive",
+        "x": 15,
+        "z": 0,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-06",
+        "motion": "Inactive",
+        "x": -15,
+        "z": 0,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-07",
+        "motion": "Inactive",
+        "x": 0,
+        "z": 12,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-08",
+        "motion": "Inactive",
+        "x": 10,
+        "z": 8,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-09",
+        "motion": "Inactive",
+        "x": -12,
+        "z": 8,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-10",
+        "motion": "Inactive",
+        "x": 16,
+        "z": -12,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-11",
+        "motion": "Inactive",
+        "x": -16,
+        "z": -12,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      },
+      {
+        "name": "VisitorAI-12",
+        "motion": "Inactive",
+        "x": 0,
+        "z": -13,
+        "active": false,
+        "onNavMesh": false,
+        "moving": false,
+        "suspended": false,
+        "blocked": false,
+        "pathRequests": 0,
+        "completedTrips": 0,
+        "failedPaths": 0
+      }
+    ],
+    "humanCount": 1,
+    "minimumPopulation": 5,
+    "openPanel": -1,
+    "characterCount": 0,
+    "actionCount": 0,
+    "actionFirstIndex": 0,
+    "followPathRequests": 0,
+    "automaticPopulation": true,
+    "chatFocused": false,
+    "following": false,
+    "running": false,
+    "navigating": false,
+    "followDistance": 0,
+    "moveSpeed": 0
+  },
+  "socialCandidates": [
+    {
+      "name": "VisitorAI-03",
+      "motion": "Walk",
+      "x": 923.9521191427502,
+      "z": -7.99708890914917,
+      "active": true,
+      "onNavMesh": true,
+      "moving": true,
+      "suspended": false,
+      "blocked": false,
+      "pathRequests": 1,
+      "completedTrips": 0,
+      "failedPaths": 0,
+      "y": 431.83664086256795,
+      "depth": 10.801210117194403,
+      "distance": 5.633357544678786
+    },
+    {
+      "name": "VisitorAI-01",
+      "motion": "Walk",
+      "x": 1160.6005781977583,
+      "z": -11.505849838256836,
+      "active": true,
+      "onNavMesh": true,
+      "moving": true,
+      "suspended": false,
+      "blocked": false,
+      "pathRequests": 1,
+      "completedTrips": 0,
+      "failedPaths": 0,
+      "y": 385.6372278889158,
+      "depth": 14.138240062944085,
+      "distance": 9.61726702043127
+    }
+  ],
+  "failure": "Error: Actual character pointer selection"
+}
