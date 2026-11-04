@@ -1,0 +1,463 @@
+{
+  "at": "2026-11-04T18:14:43.625Z",
+  "scope": "Current SDK saved metadata, current development documents, local review archives; native UI not exercised",
+  "upload": {
+    "package_upload_id": "1039404",
+    "unity_version": "6000.0.83f1",
+    "file_count": "1877",
+    "status": "finished",
+    "asset_store_tools_version": "V6.3.1",
+    "path": "Assets/TurnRoom/Pixora",
+    "size": "20470743",
+    "timestamp": "2026-11-03T07:27:00Z",
+    "vetting": {
+      "platforms": "",
+      "allow_edit": true,
+      "status": "draft",
+      "dependencies": [],
+      "vetting_type": "unknown",
+      "srp_versions": [
+        ""
+      ],
+      "genesis_vetting_id": null,
+      "unity_versions": "",
+      "first_approved_at": null,
+      "id": "1709294",
+      "srp_type": "standard"
+    }
+  },
+  "languages": [
+    {
+      "locale": "ko-KR",
+      "name": "Pixora Studio",
+      "releaseNotes": "<p >통합 초안: 이미지 제작·Pixel Camera·식생 도구를 Pixora Studio로 구성합니다. 모듈별 창은 유지합니다. 통합 패키지 업로드·새 로고·최종 실행 검증은 대기 중입니다.</p>",
+      "ai": "<p >OpenAI Codex가 C# 개발, 테스트, 문서, 번역과 마케팅 준비를 보조했습니다. 제품 실행에 유료 AI 서비스는 필요하지 않습니다.</p>",
+      "compatibility": "",
+      "artwork": [
+        {
+          "id": "1992810",
+          "type": "attachment_video"
+        },
+        {
+          "id": "13338432",
+          "type": "screenshot"
+        },
+        {
+          "id": "13340502",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338436",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338434",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338430",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338440",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338438",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338448",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338442",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338446",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338444",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312562",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312564",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312566",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312568",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312570",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312574",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312578",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312580",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312582",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312584",
+          "type": "screenshot"
+        }
+      ]
+    },
+    {
+      "locale": "zh-CN",
+      "name": "Pixora Studio",
+      "releaseNotes": "<p >整合草稿：将图像制作、Pixel Camera和植被工具整合为Pixora Studio，各模块保留独立窗口。整合包上传、新标志及最终运行验证尚未完成。</p>",
+      "ai": "<p >OpenAI Codex辅助C#开发、测试、文档、翻译及宣传准备。运行产品无需付费AI服务。</p>",
+      "compatibility": "",
+      "artwork": [
+        {
+          "id": "1992810",
+          "type": "attachment_video"
+        },
+        {
+          "id": "13338432",
+          "type": "screenshot"
+        },
+        {
+          "id": "13340502",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338436",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338434",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338430",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338440",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338438",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338448",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338442",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338446",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338444",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312562",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312564",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312566",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312568",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312570",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312574",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312578",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312580",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312582",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312584",
+          "type": "screenshot"
+        }
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "name": "Pixora Studio",
+      "releaseNotes": "<p >統合ドラフト：画像制作、Pixel Camera、植生をPixora Studioにまとめます。モジュール別ウィンドウを維持します。統合パッケージのアップロード、新ロゴ、最終動作検証は未完了です。</p>",
+      "ai": "<p >OpenAI CodexがC#開発、テスト、文書、翻訳、販促準備を支援しました。製品の実行に有料AIサービスは不要です。</p>",
+      "compatibility": "",
+      "artwork": [
+        {
+          "id": "1992810",
+          "type": "attachment_video"
+        },
+        {
+          "id": "13338432",
+          "type": "screenshot"
+        },
+        {
+          "id": "13340502",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338436",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338434",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338430",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338440",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338438",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338448",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338442",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338446",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338444",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312562",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312564",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312566",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312568",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312570",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312574",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312578",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312580",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312582",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312584",
+          "type": "screenshot"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "name": "Pixora Studio",
+      "releaseNotes": "<p >Integration draft: reorganize Image Studio, Pixel Camera and Foliage as Pixora Studio while retaining separate module windows. Combined-package upload, new artwork and final native validation are pending. The uploaded file is the previous Pixora build.</p>",
+      "ai": "<p >OpenAI Codex assisted with C# development, tests, documentation, translations and marketing preparation. AI-assisted work was reviewed and integrated into the product. The tool does not require a paid AI service.</p>",
+      "compatibility": "<p >Validated on Windows with Unity 6000.0.83f1. Built-in rendering was used for the included model-capture samples. TurnRoom shared editor support is bundled; no separate Asset Store dependency is required.</p>",
+      "artwork": [
+        {
+          "id": "1992810",
+          "type": "attachment_video"
+        },
+        {
+          "id": "13338432",
+          "type": "screenshot"
+        },
+        {
+          "id": "13340502",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338436",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338434",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338430",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338440",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338438",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338448",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338442",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338446",
+          "type": "screenshot"
+        },
+        {
+          "id": "13338444",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312562",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312564",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312566",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312568",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312570",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312574",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312578",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312580",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312582",
+          "type": "screenshot"
+        },
+        {
+          "id": "13312584",
+          "type": "screenshot"
+        }
+      ]
+    }
+  ],
+  "documents": {
+    "files": 36,
+    "chapters": 594,
+    "missingReferenceOccurrences": 306,
+    "distinctFileURLPairs": 306,
+    "validatedWithBrowserURLRules": true,
+    "examples": [
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+        "url": "/Images/Studio.en.webp",
+        "kind": "chapter-link",
+        "browserResolvedURL": "file:///C:/Images/Studio.en.webp",
+        "exists": false
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+        "url": "/Images/Sample-en.webp",
+        "kind": "chapter-link",
+        "browserResolvedURL": "file:///C:/Images/Sample-en.webp",
+        "exists": false
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+        "url": "/Images/Settings-Theme.webp",
+        "kind": "chapter-link",
+        "browserResolvedURL": "file:///C:/Images/Settings-Theme.webp",
+        "exists": false
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+        "url": "/Images/Model.en.webp",
+        "kind": "chapter-link",
+        "browserResolvedURL": "file:///C:/Images/Model.en.webp",
+        "exists": false
+      }
+    ]
+  },
+  "recordedCompileSourceHashes": {
+    "checked": 137,
+    "changed": 0
+  },
+  "nativePortalPreview": "not executed",
+  "nativeCleanInstall": "not executed",
+  "licenseAndAI": "improvement recommendation; rejection not established"
+}

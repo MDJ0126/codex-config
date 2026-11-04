@@ -1,0 +1,74 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Pixora 제출 점검 재대조 — 확인·철회·권고·미확인 구분 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>턴룸 › Pixora</span><span class="post-kind">검토</span></div><div class="post-title-row"><h1>Pixora 제출 점검 재대조 — 확인·철회·권고·미확인 구분</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">이전 목록 전체를 검증 완료로 취급하지 않습니다. 실제 업로드본과 개발 문서를 분리하고, 권고 사항을 확정된 심사 위반으로 표현한 부분을 바로잡았습니다.</p><div class="post-byline"><time datetime="2026-11-04T18:14:43.631Z">2026년 11월 5일 오전 3:14 KST</time><span>v1.0.2</span><span>검토</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>목록 전체를 그대로 신뢰해 달라고 할 수 없습니다. 재대조 후 확인된 사실만 아래에 남깁니다. 기존 제출본의 2.5.g 미해결 판정은 철회합니다. 현재 포털은 통합 제품을 설명하지만 업로드 파일은 통합 이전 버전인 사실을 다시 확인했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>대상</th>
+<th>재대조 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>철회</td>
+<td>기존 제출본 2.5.g</td>
+<td>이전 해결본의 해시가 업로드 영수증과 일치합니다. 문제로 지적한 파일은 제출본·통합 검토 패키지에 없습니다.</td>
+</tr>
+<tr>
+<td>확인</td>
+<td>현재 포털 업로드</td>
+<td>버전1541558, 업로드1039404, 20,470,743바이트, 1,877파일, Assets/TurnRoom/Pixora, 2026-11-03T07:27Z입니다. 저장 설명은 Image Maker·Camera·Foliage 통합 제품을 안내합니다.</td>
+</tr>
+<tr>
+<td>확인</td>
+<td>로컬 통합 검토 패키지</td>
+<td>2,600개 자산, 현재 개발 소스와182개 변경·4개 삭제 파일 차이가 있으며 최신StudioGuide가 없습니다. 실제 제출본·최신 정식 내보내기로 취급하지 않습니다.</td>
+</tr>
+<tr>
+<td>확인</td>
+<td>현재 개발 문서</td>
+<td>36개 문서·594장 대조에서 깨진 참조306회가 재현됩니다. 언어·문서별 반복을 포함한 참조 발생 횟수이며306개의 독립 결함이라는 뜻이 아닙니다. 이 결과를 기존 업로드본 문서의 오류로 확대하지 않습니다.</td>
+</tr>
+<tr>
+<td>확인</td>
+<td>현재 개발 시작 안내</td>
+<td>START-HERE의Pixora/Studio 경로와 현재 소스의Pixora Studio/Image Maker 등록이 다릅니다. 실제 실행 중 메뉴 표시까지 확인한 것은 아닙니다.</td>
+</tr>
+<tr>
+<td>확인</td>
+<td>포털 저장 문구</td>
+<td>4개 언어의 변경이력에 통합·업로드·검증 대기 문구가 남습니다. 문구 존재와 실제 검증 상태를 구분합니다.</td>
+</tr>
+<tr>
+<td>권고</td>
+<td>라이선스·AI 설명</td>
+<td>판매 설명 보완 권고입니다. 이 문구만으로 심사 위반·반려가 확정됐다고 한 강한 표현은 정정합니다. 패키지 내 고지·라이선스와 실제 제작 범위를 함께 대조해야 합니다.</td>
+</tr>
+<tr>
+<td>확인/범위 제한</td>
+<td>판매 미디어</td>
+<td>저장 구성은 갤러리21장·영상1개입니다. 이전 전체 디코딩·시각 검토는 해당 당시 기록이며 이번에 청음·재생을 모두 다시 했다고 주장하지 않습니다.</td>
+</tr>
+<tr>
+<td>미확인</td>
+<td>실제 심사·실행</td>
+<td>Portal Preview, Submit모달 검사, 최신 통합본의 클린 설치·9언어 실제 UI는 미실행입니다. 패키지support_links가 비었다는 이유로 판매자 프로필에 연락처가 없다고 단정하지 않습니다.</td>
+</tr>
+</tbody></table>
+</div><h2 id="section-4">검증</h2>
+<p>기존 점검 JSON은BeforeReaudit에 보존하고 SDK 저장값, 실제 tar패키지, 현재 생성 문서의 모든 장을 다시 읽었습니다.</p>
+<p>문서 참조306회는 Node의파일 경로 검사에 더해 브라우저 표준URL해석(new URL + fileURLToPath)으로 독립 대조했고 모두 대상이 없습니다. 예: /Images/Studio.en.webp는 file:///C:/Images/Studio.en.webp로 해석됩니다.</p>
+<p>이전 정적 컴파일에 사용한137개 소스 해시를 현재 파일과 비교한 결과 변경0개입니다. 이는 이전 컴파일 범위의 동일성 확인이며 새 Unity 설치·실행 검증이 아닙니다.</p>
+<p><a class="report-link" href="../assets/presubmission-20261105/reaudit-evidence.json">새 대조 근거</a> · <a class="report-link" href="../assets/presubmission-20261105/recheck-25g.json">기존 제출본 해시·포함 파일 재검증</a></p>
+<p>제품이나 포털 저장값을 수정하지 않았고 화면 조작·새 GUI 실행은 하지 않았습니다. 검토 범위 정정이므로 새 실행 화면을 만들지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>통합 상품으로 제출하려면 실제 배포할 파일을 먼저 확정해야 합니다. 현재 개발 문서와 그 제출 파일의 문서를 분리해 최종 검사해야 합니다. 실제 심사 결과나 모든 규정 위반 여부는 확정하지 않습니다.</p>
+<p>교훈 검토: 이미 반영한 제출 범위 구분·최초 주장 보존 규칙을 적용했습니다. 새 중복 규칙은 추가하지 않았습니다. 이전 보고서들은 이력이며 최신 판정은 이 구분을 따릅니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 재검증2분. 보고서 공개 배포는 별도 확인.</li>
+<li>실제로 완료된 시간: 2026-11-05 03:12:41 KST 재대조 시작. 현재 SDK·문서·패키지를 다시 읽고 URL해석과 소스 해시를 대조했습니다. 공개 확인 시각은 채팅에 실제 기록.</li>
+<li>XERJ: 미사용 — 이 재대조는 기존 점검 스크립트·아카이브·메타데이터·소스 해시를 사용했으며 새 심볼 검색은 하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104161631134-v1.0.2.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixora&topic=qa&relatedReport=projects%2Fpixora%2Freports%2F2026-11-04-result-20261104161631134-v1.0.2.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixora">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixora">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
