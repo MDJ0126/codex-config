@@ -1,0 +1,103 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 전체 메뉴·창·Image Maker 예제 정리",
+    "summary": "중복 대시보드·구형 메뉴 제거, 모듈 이름 변경, 전체 창 경로와 예제 변형을 점검합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "20–35분",
+    "actualTime": "2026-11-04 20:08:14 KST 시작",
+    "xerjEvidence": "Status node not running; 직전 Search node.lock 실패 근거를 유지하고 rg로 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "studio-structure-audit-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "Pixora Studio 아래 세 모듈만 보이고, 기본 Unity 창 노출 경로와 예제 변형을 바로잡음",
+    "completionCriteria": "Image Maker·Pixel Camera·Foliage 세 메뉴, 구형 메뉴/중복 허브 코드 제거, 모든 제품·보조 창 생성/복원 경로 목록과 수정, 식생 시작 화면 정돈, 모델/애니메이션 변형 근거와 수정, 실제 Unity 참조 컴파일 및 정적 검사. 사용자 화면 조작 금지로 native UI QA는 보류 유지",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "이름·메뉴·불필요 허브 제거",
+        "action": "Image Maker 이름 적용·3개 모듈 메뉴만 등록·허브 삭제·연결과 문서 갱신",
+        "expected": "중복 구형 제품 메뉴0",
+        "qa": "모든 MenuItem·연결 문자열·삭제 파일 참조·9언어 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "모든 창과 시작 화면 점검",
+        "action": "제품·보조·예제 창 생성과 복원 경로 대조·공통 프레임 사용·식생 시작 단계 배치 정돈",
+        "expected": "일반 Unity 창 생성 경로 제거·명료한 식생 진입",
+        "qa": "모든 EditorWindow 파생 목록과 열기/복원 코드·UI 정책 검사. native QA는 화면 제한으로 보류",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "모델·애니메이션 변형 수정",
+        "action": "새 예제 프리팹·클립 바인딩·샘플링 코드를 수치 대조하고 수정",
+        "expected": "몸체·부리·눈·날개 연결 보존",
+        "qa": "실제 에셋 변환 수치와 바인딩·컴파일 검사. 실제 렌더 재촬영 보류",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "전체 컴파일·정적 회귀·보고",
+        "action": "수정 어셈블리 및 메뉴·참조·문서 대조와 공개 보고",
+        "expected": "검증 근거와 남은 native 범위 구분",
+        "qa": "실제 Unity Roslyn 컴파일·각 정적 검사·보고서 공개",
+        "dependsOn": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "at": "2026-11-04T11:48:41.434Z",
+  "sourceAudit": {
+    "at": "2026-11-04T11:41:46.529Z",
+    "passed": true,
+    "scope": "Static menu, maintained source and actual-container recovery policy. Not native UI execution.",
+    "moduleMenu": [
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Window\\PixoraWindow.cs",
+        "command": "Tools/TurnRoom/Pixora Studio/Image Maker"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\PixelCamera\\Editor\\PixelCameraWindow.cs",
+        "command": "Tools/TurnRoom/Pixora Studio/Pixel Camera"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageWindow.cs",
+        "command": "Tools/TurnRoom/Pixora Studio/Foliage"
+      }
+    ],
+    "windowInventory": [
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\DataTableEditor.cs",
+        "classes": [
+          "DataTableEditor"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\DataTablePreferences.cs",
+        "classes": [
+          "DataTablePreferences"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\FindPopup.cs",
+        "classes": [
+          "FindPopup"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookAutomationPreview.cs",
+        "classes": [
+          "WorkbookAutomationPreview"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookBugReportWindow.cs",
+        "classes": [
+          "WorkbookBugReportWindow"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookHoverPreview.cs",
+        "classes": [
+          "WorkbookHoverPreview"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookObjectPopup.cs",
+        "classes": [
+          "WorkbookObjectPropertiesWindow",
+          "WorkbookObjectPopup"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookShelfWindow.cs",
+        "classes": [
+          "WorkbookShelfWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookToolWindow.cs",
+        "classes": [
+          "WorkbookToolWindow"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\DesignDataTable\\Scripts\\Editor\\Window\\WorkbookViewer.cs",
+        "classes": [
+          "WorkbookViewer"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\EntityForge\\Editor\\ForgeWindow.cs",
+        "classes": [
+          "ForgeWindow",
+          "ForgeObjectInspector",
+          "ForgeSpawnerInspector",
+          "ForgeEvidenceInspector"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Tutorials\\PixoraSetupWindow.cs",
+        "classes": [
+          "PixoraSetupWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Tutorials\\PixoraTutorialWindow.cs",
+        "classes": [
+          "PixoraTutorialWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Window\\PixoraToolWindow.cs",
+        "classes": [
+          "PixoraToolWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Window\\PixoraWindow.cs",
+        "classes": [
+          "PixoraWindow"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\Editor\\Window\\SpriteSheetWindow.cs",
+        "classes": [
+          "SpriteSheetWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\PixelCamera\\Editor\\PixelCameraWindow.cs",
+        "classes": [
+          "PixelCameraWindow"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageWindow.cs",
+        "classes": [
+          "FoliageWindow"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\Templete\\Editor\\TemplateGlobalSettings.cs",
+        "classes": [
+          "TemplateGlobalSettings"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\Templete\\Editor\\TemplateWindow.cs",
+        "classes": [
+          "TemplateWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\Templete\\Editor\\ToolWindow.cs",
+        "classes": [
+          "ToolWindow"
+        ],
+        "showPopup": false,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      },
+      {
+        "file": "Assets\\TurnRoom\\Templete\\Editor\\WindowList.cs",
+        "classes": [
+          "WindowList"
+        ],
+        "showPopup": true,
+        "defaultWindowCalls": [],
+        "nativeVerification": "pending while desktop control is paused"
+      }
+    ],
+    "nativeQA": "pending: no GUI launch, clicks, focus or capture authorized"
+  },
+  "compilation": {
+    "guiStarted": false,
+    "actualUnityLoaded": false,
+    "assemblies": [
+      {
+        "name": "TurnRoom.Editor",
+        "exitCode": 0,
+        "sourceFiles": 48
+      },
+      {
+        "name": "Pixora.Editor",
+        "exitCode": 0,
+        "sourceFiles": 44
+      },
+      {
+        "name": "TurnRoom.PixelCamera.Editor",
+        "exitCode": 0,
+        "sourceFiles": 8
+      },
+      {
+        "name": "TurnRoom.PixelFoliage.Editor",
+        "exitCode": 0,
+        "sourceFiles": 11
+      },
+      {
+        "name": "TurnRoom.EntityForge.Editor",
+        "exitCode": 0,
+        "sourceFiles": 23
+      },
+      {
+        "name": "DesignDataTable.Editor",
+        "exitCode": 0,
+        "sourceFiles": 302
+      }
+    ]
+  },
+  "modelRepair": {
+    "at": "2026-11-04T11:22:08.668Z",
+    "records": [
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Samples/Artwork/Prefabs/ClockworkKingfisher.prefab",
+        "beforeSha256": "6684ce1ef775b184586d3ece7cea1c07e86d68e6af2355ac00193b7c07c11bb7",
+        "afterSha256": "0566b4e5782b0ac6e8d92b3eaca99c9adc14c615199e821832c6fe73b29c5440",
+        "meshTransforms": 21,
+        "idsPreserved": true,
+        "positionsPreserved": true,
+        "pivotsPreserved": true,
+        "meshDataUnchanged": true
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Artwork/Prefabs/ClockworkKingfisher.prefab",
+        "beforeSha256": "b5a1b81f533e858f2d581a02dfe05e99a22fd5a449b4433d185edfbad89df6e7",
+        "afterSha256": "3788ba3659ff110b6c4f3862f323702cdf7f45de02d5b97ae5b19b145f7b0039",
+        "meshTransforms": 21,
+        "idsPreserved": true,
+        "positionsPreserved": true,
+        "pivotsPreserved": true,
+        "meshDataUnchanged": true
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Samples/Artwork/Prefabs/TidewatchObservatory.prefab",
+        "beforeSha256": "3a85c5ca4609aa288bb914714817c664c7672120bef98c6c2d4b74d1491fcd29",
+        "afterSha256": "ec1121a9dff1cf4bbdeacd17fe590d4c97ca2522389305b26656945c8914a331",
+        "meshTransforms": 20,
+        "idsPreserved": true,
+        "positionsPreserved": true,
+        "pivotsPreserved": true,
+        "meshDataUnchanged": true
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Artwork/Prefabs/TidewatchObservatory.prefab",
+        "beforeSha256": "07c042036f660ff72e7e0fcf96f96a60320aaf70fe602a3de24020b75329e01b",
+        "afterSha256": "53394b1a4fb2aba00909be29c3a917ad9f17f97082d8dc8c5f28458fb6987e6d",
+        "meshTransforms": 20,
+        "idsPreserved": true,
+        "positionsPreserved": true,
+        "pivotsPreserved": true,
+        "meshDataUnchanged": true
+      }
+    ],
+    "nativeRender": "Pending: user forbids GUI execution"
+  },
+  "catalogs": {
+    "at": "2026-11-04T11:46:11.514Z",
+    "passed": true,
+    "catalogs": [
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/Editor/Localization/Strings.json",
+        "entries": 261,
+        "languages": 9
+      },
+      {
+        "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/Localization/UI.json",
+        "entries": 257,
+        "languages": 9
+      }
+    ],
+    "nativeLayouts": "pending"
+  },
+  "nativeQA": "Not executed: user explicitly paused all mouse/keyboard/focus/GUI starts. No after screenshots or render comparison claimed."
+}
