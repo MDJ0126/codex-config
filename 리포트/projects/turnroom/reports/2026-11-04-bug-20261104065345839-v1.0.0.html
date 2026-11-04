@@ -1,0 +1,69 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Windows Alt+Tab 미리보기 누락과 제품 창 활성화 되돌림 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">턴</span><span>턴룸 › 공통 · 통합 작업</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>Windows Alt+Tab 미리보기 누락과 제품 창 활성화 되돌림 수정</h1><span class="badge" data-state="verification">해결</span></div><p class="post-summary">셸 등록과 활성화 처리를 보완하고 실제 Entity Forge↔Pixel Camera Alt+Tab 왕복을 확인했습니다.</p><div class="detail-workflow"><span data-stage="new" class=""><img class="stage-icon" src="../../../assets/workflow/new.svg" alt="" width="40" height="40" aria-hidden="true">접수</span><i>→</i><span data-stage="review" class=""><img class="stage-icon" src="../../../assets/workflow/review.svg" alt="" width="40" height="40" aria-hidden="true">검토</span><i>→</i><span data-stage="in_progress" class=""><img class="stage-icon" src="../../../assets/workflow/in_progress.svg" alt="" width="40" height="40" aria-hidden="true">진행</span><i>→</i><span data-stage="resolved" class="current"><img class="stage-icon" src="../../../assets/workflow/resolved.svg" alt="" width="40" height="40" aria-hidden="true">해결</span><i>→</i><span data-stage="closed" class=""><img class="stage-icon" src="../../../assets/workflow/closed.svg" alt="" width="40" height="40" aria-hidden="true">종료</span></div><div class="post-byline"><time datetime="2026-11-04T06:53:45.839Z">2026년 11월 4일 오후 3:53 KST</time><span>v1.0.0</span><span>버그 추적</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>공통 문서 창에 Windows 셸 항목 등록을 추가했습니다. 이어서 Windows가 선택한 창의 활성화가 Unity에서 이전 문서로 되돌아가는 문제를 수정했습니다. 최종 제품 코드로 실제 Alt+Tab 양방향 전환을 확인했습니다. 기존의 미리보기만 표시되던 중간 수정은 전환 성공으로 세지 않았습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>Windows, Unity 6000.0.83f1. 독립 QA 에디터의 실제 Entity Forge / Pixel Camera 창. 동일 공통 소스를 개발 프로젝트와 기존 Entity Forge / Foliage QA 체크아웃에도 적용.</p>
+<h3 id="section-4">재현 순서</h3>
+<ol>
+<li>제품 창 두 개를 연다.</li>
+<li>Pixel Camera, Entity Forge 순으로 활성화한다.</li>
+<li>Windows Alt+Tab을 눌러 Pixel Camera를 선택한다.</li>
+<li>반대 방향도 반복한다.</li>
+<li>Ctrl+Alt+Tab으로 실제 Windows 미리보기 목록을 확인한다.</li>
+</ol>
+<h3 id="section-5">기대 동작</h3>
+<p>제품 문서가 Windows 미리보기 목록에 표시되고 선택한 문서가 실제 활성 창이 되어야 합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>원래 창의 확장 스타일은 APPWINDOW, owner=0이어도 셸 목록에 제품이 없었습니다. 셸 등록만 추가한 중간 단계에서는 미리보기는 표시됐지만 실제 전환이 되돌아갔고 사용자도 이를 확인했습니다. 네이티브 WM_ACTIVATE 진입 시 Pixel Camera였던 활성 창이 Unity 처리 후 Entity Forge로 바뀌는 것을 기록했습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>현재 Unity6000.0.83f1 실행에서 두 경로를 확인했습니다. ShowPopup 생성 후 스타일/owner 변경과 프레임 새로고침만으로 기존 창의 셸 항목이 생성되지 않았습니다. ITaskbarList.AddTab 뒤 실제 미리보기가 표시됐습니다. 별도로 Unity의 기존 WM_ACTIVATE 처리 안에서 이전 문서로 재활성화가 발생했습니다. 다른 Unity 버전의 동일 동작은 미확인입니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<ul>
+<li>공통 WindowFrame에 ITaskbarList 등록·해제와 네이티브 핸들 재생성 추적을 추가했습니다.</li>
+<li>등록된 독립 ToolWindow에서 Windows가 실제 선택한 활성화만 처리합니다. 해당 Unity 뷰를 맞추고 Win32 기본 활성화로 네이티브 키보드 포커스를 설정합니다. 비활성화·다른 메시지는 원래 처리로 전달합니다.</li>
+<li>도킹 창·목록 제외 창은 적용하지 않으며 창 종료/도메인 재로드 시 셸 항목과 서브클래스를 해제합니다.</li>
+<li>반복 숨김/표시, 최대화 애니메이션, 외부 앱 강제 활성화는 추가하지 않았습니다.</li>
+</ul>
+<p><a class="report-link" href="https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist-addtab">Microsoft ITaskbarList.AddTab</a> · <a class="report-link" href="https://learn.microsoft.com/en-us/windows/win32/inputdev/wm-activate">Win32 WM_ACTIVATE</a></p>
+<h2 id="section-9">검증</h2>
+<p>최종 공통 소스를 실제 QA 에디터가 로드한 모듈을 기록하고 실험용 활성화 보정을 비활성화했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>실제 키 입력</th>
+<th>직전 문서</th>
+<th>입력 후 실제 전면 창</th>
+<th>확인 시각 KST</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt+Tab</td>
+<td>Entity Forge</td>
+<td>Pixel Camera</td>
+<td>15:45:53.713</td>
+</tr>
+<tr>
+<td>Alt+Tab</td>
+<td>Pixel Camera</td>
+<td>Entity Forge</td>
+<td>15:46:42.364</td>
+</tr>
+</tbody></table>
+</div><p>10개 Runtime/Editor 어셈블리 최종 컴파일 exitCode0. 개발 Unity의 재컴파일 모듈도 별도로 확인했습니다.</p>
+<p><a class="report-link" href="../assets/task-switch-native-20261104/verification.json">소스 해시·모듈·전환 시각·컴파일 근거</a></p>
+<h3 id="section-10">수정 전 기준 문서 화면</h3>
+<p>아래는 수정 전 Entity Forge의 실제 화면입니다. 문서 본체 모양은 이번 수정 대상이 아니며 이 정지 화면만으로 Alt+Tab 실패를 판정하지 않습니다. 실패는 위 네이티브 메시지 기록과 사용자 관찰로 대조했습니다.</p>
+<p><figure><img class="report-image" src="../assets/task-switch-native-20261104/before-document-active.jpg" alt="수정 전 Entity Forge" loading="lazy"><figcaption>수정 전 Entity Forge</figcaption></figure></p>
+<h3 id="section-11">수정 후 실제 Alt+Tab으로 전환된 문서</h3>
+<p>최종 코드에서 Entity Forge로부터 Alt+Tab으로 전환된 Pixel Camera입니다. 서로 다른 문서·크기·언어이므로 스타일의 동일 배율 전후 비교로 주장하지 않습니다.</p>
+<p><figure><img class="report-image" src="../assets/task-switch-native-20261104/final-pixel-active.jpg" alt="수정 후 Pixel Camera 활성 화면" loading="lazy"><figcaption>수정 후 Pixel Camera 활성 화면</figcaption></figure></p>
+<p>교훈 검토: 창 스타일 비트, 미리보기 등록, 선택 후 실제 활성 창을 각각 검증했습니다. 기존 전역의 실제 실행·검증 의무에 포함되므로 전역 지침 변경은 없습니다. 버전 한정 기술 근거는 이 보고서에 보존합니다.</p>
+<h2 id="section-12">남은 사항</h2>
+<p>실제 왕복 검증 범위는 Entity Forge와 Pixel Camera입니다. 다른 제품 종류와 사용자 정의 최소화 선반의 숨김 문서는 개별 인증하지 않았습니다. 기존 9언어 전체 가이드 교체와 선택 팝업 입력 QA는 기존 메뉴얼에 남깁니다. Windows 전체 미리보기 원본에는 다른 비공개 창이 보여 로컬에 보존했습니다. Affinity에서 공개용 영역 편집을 시도했으나 파일 접근 PERMISSION_DENIED로 내보내지 못해 편집본은 게시하지 않았습니다. 공개 이미지는 편집하지 않은 제품 창 원본입니다. 판매 패키지 업로드와 심사 제출은 하지 않았습니다.</p>
+<h2 id="section-13">작업 시간</h2>
+<ul>
+<li>제안 시간: 15–30분. 15:45 KST경 실제 전환 추가 수정·검증과 공개 작업으로 5–10분 추가 가능성을 안내했습니다.</li>
+<li>실제로 완료된 시간: 2026-11-04 15:18:22 KST 시작. 최종 네이티브 왕복 확인 15:46:42 KST. 문서 작성 시점 15:53:33 KST까지 35.2분 소요. 공개 배포 검증 완료 시각은 채팅 최종 결과에 기록합니다.</li>
+<li>XERJ: 실패 — XERJ Status: node is not running. Search: startup failed. 현재 소스·호출은 rg로 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-bug-20261104065345839-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=turnroom&topic=qa&relatedReport=projects%2Fturnroom%2Freports%2F2026-11-04-bug-20261104065345839-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=turnroom">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=turnroom">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-9">검증</a><a href="#section-12">남은 사항</a><a href="#section-13">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

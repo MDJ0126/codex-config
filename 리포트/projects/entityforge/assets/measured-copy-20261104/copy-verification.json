@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-04T06:27:05.347Z",
+  "languages": [
+    "en",
+    "ko",
+    "ja",
+    "zh-Hans",
+    "zh-Hant",
+    "es",
+    "fr",
+    "de",
+    "pt-BR"
+  ],
+  "addedStrings": 4,
+  "controls": [
+    "measured-performance-summary",
+    "measured-performance-title",
+    "measured-performance-values",
+    "measured-performance-context"
+  ],
+  "measuredPercentages": [
+    {
+      "name": "drone",
+      "percent": 2.6828895672121766
+    },
+    {
+      "name": "ore",
+      "percent": 73.06403018723651
+    }
+  ],
+  "editorOnly": true,
+  "runtimeChanged": false,
+  "nativeVisualQA": "pass",
+  "evidenceSha256": "6ad50882db743c35d20f7ca1e97f7651e2644db6430c4a2707239508eef3ffe4",
+  "verifiedWindows": 36,
+  "captureIndex": [
+    "verified-captures.json",
+    "verified-sample-captures.json"
+  ],
+  "unchangedRuntimeAssets": 15
+}

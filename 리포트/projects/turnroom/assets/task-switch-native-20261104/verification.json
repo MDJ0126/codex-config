@@ -1,0 +1,195 @@
+{
+  "environment": "Windows / Unity 6000.0.83f1",
+  "sourceSha256": "101ff7924216f314cfe7236a3d448684f8b29377a99da1645faa161f0fb80854",
+  "qaModule": "3dfa7d35-3b31-4bea-8015-5b37ab76c2f4",
+  "rootModule": "5c49b8f4-3edf-47a4-955e-28d54a6fd677",
+  "experimentalActivationFlagDisabled": true,
+  "beforeNativeStyle": {
+    "at": "2026-11-04T06:27:21.2671350Z",
+    "foreground": "omitted",
+    "foregroundTitle": "omitted",
+    "module": "66be10a2-1b2b-406b-b766-e0152b67bdda",
+    "rows": [
+      {
+        "title": "Entity Forge",
+        "managedType": "TurnRoom.EntityForge.Editor.ForgeWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "122295818",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false
+      },
+      {
+        "title": "Pixel Camera",
+        "managedType": "TurnRoom.PixelCamera.Editor.PixelCameraWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "26088492",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false
+      },
+      {
+        "title": "Popup Review · QA",
+        "managedType": "TurnRoom.Development.PopupVisualReviewWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "66390836",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false
+      }
+    ]
+  },
+  "afterNativeStyle": {
+    "at": "2026-11-04T06:44:35.4299884Z",
+    "foreground": "omitted",
+    "foregroundTitle": "omitted",
+    "module": "3dfa7d35-3b31-4bea-8015-5b37ab76c2f4",
+    "rows": [
+      {
+        "title": "Entity Forge",
+        "managedType": "TurnRoom.EntityForge.Editor.ForgeWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "53677048",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false,
+        "enabled": true,
+        "rootOwner": "53677048",
+        "lastPopup": "53677048"
+      },
+      {
+        "title": "Pixel Camera",
+        "managedType": "TurnRoom.PixelCamera.Editor.PixelCameraWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "26350636",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false,
+        "enabled": true,
+        "rootOwner": "26350636",
+        "lastPopup": "26350636"
+      },
+      {
+        "title": "Popup Review · QA",
+        "managedType": "TurnRoom.Development.PopupVisualReviewWindow",
+        "exStyle": "00040000",
+        "style": "96000000",
+        "owner": "0",
+        "handle": "66390836",
+        "docked": false,
+        "include": true,
+        "visible": true,
+        "iconic": false,
+        "applyResult": false,
+        "enabled": true,
+        "rootOwner": "66390836",
+        "lastPopup": "66390836"
+      }
+    ]
+  },
+  "compiledAt": "2026-11-04T06:44:28.291880+00:00",
+  "compileResults": [
+    {
+      "assembly": "DesignDataTable.Runtime",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0
+    },
+    {
+      "assembly": "Pixora.Editor",
+      "exitCode": 0
+    },
+    {
+      "assembly": "DesignDataTable.Editor",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0
+    }
+  ],
+  "nativeActivationBefore": {
+    "at": "2026-11-04T06:39:57.1306910Z",
+    "incomingWindow": "Pixel Camera",
+    "message": "WM_ACTIVATE / WA_ACTIVE",
+    "foregroundAfterUnityHandler": "Entity Forge"
+  },
+  "nativeRoundTrip": [
+    {
+      "at": "2026-11-04T06:45:53.7131268Z",
+      "input": "Alt+Tab",
+      "from": "Entity Forge",
+      "foregroundAfter": "Pixel Camera"
+    },
+    {
+      "at": "2026-11-04T06:46:42.3648479Z",
+      "input": "Alt+Tab",
+      "from": "Pixel Camera",
+      "foregroundAfter": "Entity Forge"
+    }
+  ],
+  "captures": {
+    "before-document-active.jpg": {
+      "sha256": "c37837e7317443d3e0c94017ab2355dfda21a7d7de03aeab4942aaef3c67e4b2",
+      "bytes": 77669
+    },
+    "final-pixel-active.jpg": {
+      "sha256": "01e6224fac814220079e1f33ddfd86a06cae51a51ac86fd11581dc353f618a70",
+      "bytes": 82195
+    }
+  },
+  "limits": [
+    "Two product windows exercised; other product types not individually tested.",
+    "Full desktop switcher originals kept private because other user windows are visible.",
+    "Affinity filesystem access returned PERMISSION_DENIED; no edited evidence was exported or published.",
+    "Custom shelf minimized-document switching not separately certified."
+  ],
+  "userConfirmation": {
+    "recordedAt": "2026-11-04T15:55:39.524091+09:00",
+    "finalObservation": "아 잘못 누름 전환 잘됨 ㅇㅇ",
+    "correction": "직전 아직 전환되지 않습니다 답변을 사용자가 잘못 눌렀다고 정정했습니다.",
+    "scope": "사용자가 현재 사용 중인 제품 창에서 직접 확인한 전환"
+  }
+}
