@@ -69,6 +69,7 @@ Warm pastel examples: Camera showcase and legacy scenes retain their original ca
 
 
 
+
 <!-- palette-guide-link -->
 
 [Vegetation palette](../PaletteGuide.en.html)

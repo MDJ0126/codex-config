@@ -26,4 +26,4 @@ Cada carimbo adiciona até512 plantas. Limite padrão20,000, máximo configuráv
 
 ## Propriedades
 
-Physics, Desfazer/Refazer, salvar/reabrir e nove idiomas foram verificados no Unity. Início/cancelar, cartões e menu foram testados com mouse real. Arrastar em Scene, atalhos e nove layouts seguem pendentes.
+Physics, Desfazer/Refazer, salvar/reabrir e nove idiomas verificados. Arrastar real em Scene e Ctrl+Z/Ctrl+Y/Ctrl+S no Windows verificados. Alt/Shift, teclado/cancelar dos menus, temas e nove layouts seguem pendentes.

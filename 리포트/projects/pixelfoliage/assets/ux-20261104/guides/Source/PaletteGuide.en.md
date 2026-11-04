@@ -26,4 +26,4 @@ A brush stamp adds at most512 plants; the canvas defaults to20,000 instances and
 
 ## Properties
 
-Native Unity Physics, Undo/Redo, palette and scene save/reopen, and nine-language window updates passed. Start/cancel, plant-card selection and the tool menu were checked with native mouse input. Native Scene drag/shortcuts and all nine visual layouts remain unverified.
+Actual Unity Physics, Undo/Redo, save/reopen and nine-language window updates passed. Native Scene dragging and Windows Ctrl+Z/Ctrl+Y/Ctrl+S were verified. Alt/Shift details, popup keyboard/cancel, light/dark and all nine layouts still need separate visual QA.

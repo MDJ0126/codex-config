@@ -26,4 +26,4 @@
 
 ## 属性
 
-已验证Unity Physics、撤销/重做、保存/重开和九语言窗口更新。已用真实鼠标验证开始/取消、植物卡和工具菜单。Scene拖动、快捷键及九语言布局尚未验证。
+已验证Unity Physics、撤销/重做、保存/重开和九语言更新。实际Scene拖动及Windows Ctrl+Z/Ctrl+Y/Ctrl+S也已验证。Alt/Shift细节、弹窗键盘/取消、明暗和九语言全部布局待验证。

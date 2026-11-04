@@ -6,6 +6,7 @@
     "Tool popup opens with shared style; Erase returns into bound dropdown"
   ],
   "uiToolkitEventDispatch": "See flow-result.json; not native mouse for Save/Fill",
-  "nativeSceneDrag": "not_run",
-  "capturedLanguage": "en"
+  "nativeSceneDrag": "pass:5707 ->6017",
+  "capturedLanguage": "en",
+  "nativeKeyboard": "Ctrl+Z5707;Ctrl+Y6017;Ctrl+S and native scene reopen6017"
 }

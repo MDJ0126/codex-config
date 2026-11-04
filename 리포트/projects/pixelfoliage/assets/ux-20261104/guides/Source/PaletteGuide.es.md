@@ -26,4 +26,4 @@ Cada sello añade como máximo512 plantas. Límite inicial20,000, máximo config
 
 ## Propiedades
 
-Se verificaron Physics, Deshacer/Rehacer, guardar/reabrir y nueve idiomas en Unity. Inicio/cancelar, tarjetas y menú se probaron con ratón real. Arrastrar en Scene, atajos y los nueve diseños siguen pendientes.
+Verificados Physics, Deshacer/Rehacer, guardar/reabrir y nueve idiomas. Se verificaron arrastre real en Scene y Ctrl+Z/Ctrl+Y/Ctrl+S de Windows. Alt/Shift, teclado/cancelar del menú, temas y nueve diseños siguen pendientes.

@@ -69,6 +69,7 @@ Exemplos em pastel quente: Camera mantém as demonstrações com luz suave e bor
 
 
 
+
 <!-- palette-guide-link -->
 
 [Paleta de vegetação](../PaletteGuide.pt-BR.html)

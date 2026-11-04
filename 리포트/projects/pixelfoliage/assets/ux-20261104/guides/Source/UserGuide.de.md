@@ -69,6 +69,7 @@ Warme Pastellbeispiele: Camera behält Kamera- und Effektdemos mit weicher Beleu
 
 
 
+
 <!-- palette-guide-link -->
 
 [Vegetationspalette](../PaletteGuide.de.html)

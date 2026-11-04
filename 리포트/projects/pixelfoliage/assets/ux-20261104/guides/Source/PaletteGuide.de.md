@@ -26,4 +26,4 @@ Pro Stempel höchstens512 Pflanzen, Standardlimit20,000, Höchstlimit100,000. Ab
 
 ## Eigenschaften
 
-Unity Physics, Rückgängig/Wiederholen, Speichern/Öffnen und neun Sprachen wurden geprüft. Start/Abbrechen, Karten und Werkzeugmenü wurden per Maus geprüft. Scene-Ziehen, Tastenkürzel und neun Layouts sind offen.
+Physics, Rückgängig/Wiederholen, Speichern/Öffnen und neun Sprachen geprüft. Echtes Scene-Ziehen und Windows Ctrl+Z/Ctrl+Y/Ctrl+S geprüft. Alt/Umschalt, Menü-Tastatur/Abbrechen, Themen und neun Layouts sind offen.

@@ -69,6 +69,7 @@ Exemples pastel chaleureux : Camera conserve ses démonstrations avec un éclair
 
 
 
+
 <!-- palette-guide-link -->
 
 [Palette de végétation](../PaletteGuide.fr.html)

@@ -26,4 +26,4 @@ Maximum512 plantes par tampon, limite initiale20,000 et maximum100,000. Espaceme
 
 ## Propriétés
 
-Physics, Annuler/Rétablir, sauvegarde/réouverture et neuf langues sont vérifiés dans Unity. Accueil/annulation, cartes et menu ont été testés à la souris. Glisser dans Scene, raccourcis et neuf mises en page restent à vérifier.
+Physics, Annuler/Rétablir, sauvegarde/réouverture et neuf langues vérifiés. Glisser réel dans Scene et Ctrl+Z/Ctrl+Y/Ctrl+S Windows vérifiés. Alt/Maj, clavier/annulation des menus, thèmes et neuf mises en page restent à vérifier.

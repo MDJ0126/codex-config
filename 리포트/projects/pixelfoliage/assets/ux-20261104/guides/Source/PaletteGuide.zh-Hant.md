@@ -26,4 +26,4 @@
 
 ## 屬性
 
-已驗證Unity Physics、復原/重做、儲存/重開及九語言視窗更新。已用實際滑鼠驗證開始/取消、植物卡與工具選單。Scene拖曳、快捷鍵及九語言版面尚未驗證。
+已驗證Unity Physics、復原/重做、儲存/重開與九語言更新。實際Scene拖曳及Windows Ctrl+Z/Ctrl+Y/Ctrl+S也已驗證。Alt/Shift細節、快顯鍵盤/取消、明暗與九語言完整版面待驗證。

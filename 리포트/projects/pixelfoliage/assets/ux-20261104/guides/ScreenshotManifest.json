@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "state": "partial",
-  "reason": "Actual English palette UI captured and inspected. Native Scene drag/shortcuts, other language layouts and light/dark coverage remain unverified.",
+  "reason": "Actual English palette UI captured. Native Scene drag, Ctrl+Z/Ctrl+Y/Ctrl+S and reopened count verified separately. Alt/Shift, popup keyboard, light/dark and all language layouts remain partial.",
   "captures": [
     {
       "file": "Images/Palette/Workspace-en.jpg",
@@ -25,9 +25,9 @@
     }
   ],
   "currentSourceHashes": {
-    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs": "651dd61bf6347fbcd442696016e4ec1f876f6f9c2e80bfcc18e6f999f2c71e9a",
-    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.uxml": "f624ace99f98ef6829b1e952b411da0e4d49433aada727d56c81ae075646e0f6",
-    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.cs": "06275b8852fd08613e413ad57e1b0ae174f228c80197d93b31333222bff7af21",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs": "e9d353bf0feab23b47b13a69fd1dbe62f1e7027a0c5e048d8b281a08d838bd29",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.uxml": "3dfb6339350c28911cde172251fbc08593493bb8e6e3317d5b78d0530432f5dc",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.cs": "e1d5c42a5b24500faa467bf892f9b5e1596bbe4bb3c81a79dd110507fd5d4041",
     "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/Shaders/PixelFoliage.shader": "93a95f8ee85e12474e26bae6770a1846785955d5b175681a81544fd90edeff33"
   },
   "previousUncapturedSourceHashes": {

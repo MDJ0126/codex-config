@@ -69,6 +69,7 @@ Ejemplos pastel cálidos: Camera conserva las demostraciones de cámara y efecto
 
 
 
+
 <!-- palette-guide-link -->
 
 [Paleta de vegetación](../PaletteGuide.es.html)
