@@ -1,0 +1,140 @@
+[
+  {
+    "file": "Artifacts/TurnRoomPackages/Frozen/2026-11-03-final/TurnRoom-Pixora.unitypackage",
+    "sha256": "35ebbb385de19f9209eea0ce9ce6a634b3d34e8bd6e6deda5b9a21b9ec7f4f22",
+    "bytes": 20470743,
+    "matchesRecordedUploadHash": true,
+    "hasPopupSource": false,
+    "reflection": [
+      {
+        "path": "Assets/TurnRoom/Pixora/Editor/Tutorials/PixoraTutorialWindow.cs",
+        "lines": [
+          {
+            "line": 188,
+            "text": "System.Reflection.MethodInfo method = example?.GetMethod(\"Run\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static, null, Type.EmptyTypes, null);"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs",
+        "lines": [
+          {
+            "line": 4,
+            "text": "using System.Reflection;"
+          },
+          {
+            "line": 187,
+            "text": "field = current.GetField(part, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/Pixora/Editor/Tutorials/TutorialBuilder.cs",
+        "lines": [
+          {
+            "line": 99,
+            "text": "builder?.GetMethod(\"BuildPrepared\").Invoke(null, new object[]{rebuildScenes});"
+          }
+        ]
+      }
+    ],
+    "internalCandidates": []
+  },
+  {
+    "file": "Artifacts/PixelTooler/Review/PixoraStudio-Review.unitypackage",
+    "sha256": "d9d1d44e5778e6fc8a3ac93b23821b9c8c75b31be39226761ad54c1b05b4ef30",
+    "bytes": 43665034,
+    "matchesRecordedUploadHash": false,
+    "hasPopupSource": false,
+    "reflection": [
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/Editor/Tutorials/PixoraTutorialWindow.cs",
+        "lines": [
+          {
+            "line": 188,
+            "text": "System.Reflection.MethodInfo method = example?.GetMethod(\"Run\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static, null, Type.EmptyTypes, null);"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/Editor/Tutorials/TutorialBuilder.cs",
+        "lines": [
+          {
+            "line": 99,
+            "text": "builder?.GetMethod(\"BuildPrepared\").Invoke(null, new object[]{rebuildScenes});"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraObjectFrame.cs",
+        "lines": [
+          {
+            "line": 111,
+            "text": "state.root = new MaterialPropertyBlock(); renderer.GetPropertyBlock(state.root);"
+          },
+          {
+            "line": 114,
+            "text": "var block = new MaterialPropertyBlock(); renderer.GetPropertyBlock(block); block.SetFloat(ObjectId, encodedId); renderer.SetPropertyBlock(block);"
+          },
+          {
+            "line": 117,
+            "text": "state.materials[i] = new MaterialPropertyBlock(); renderer.GetPropertyBlock(state.materials[i], i);"
+          },
+          {
+            "line": 119,
+            "text": "if (state.materials[i].isEmpty) { renderer.GetPropertyBlock(block); } else { renderer.GetPropertyBlock(block, i); }"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Editor/FoliagePixelCameraLink.cs",
+        "lines": [
+          {
+            "line": 2,
+            "text": "using System.Reflection;"
+          },
+          {
+            "line": 28,
+            "text": "FieldInfo mode = presetType.GetField(\"pixelization\"), field = effect.GetField(\"preset\");"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/FoliageRenderer.cs",
+        "lines": [
+          {
+            "line": 18,
+            "text": "_block = new MaterialPropertyBlock(); _previous = new MaterialPropertyBlock(); _renderer.GetPropertyBlock(_previous);"
+          },
+          {
+            "line": 23,
+            "text": "_renderer.GetPropertyBlock(_block); profile.Fill(_block); world.Fill(_block, transform.position);"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Runtime/WoodlandWater.cs",
+        "lines": [
+          {
+            "line": 55,
+            "text": "var renderer = GetComponent<MeshRenderer>(); renderer.GetPropertyBlock(_block);"
+          }
+        ]
+      },
+      {
+        "path": "Assets/TurnRoom/Templete/Editor/TemplateInspectorPopover.cs",
+        "lines": [
+          {
+            "line": 4,
+            "text": "using System.Reflection;"
+          },
+          {
+            "line": 200,
+            "text": "field = current.GetField(part, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);"
+          }
+        ]
+      }
+    ],
+    "internalCandidates": []
+  }
+]
