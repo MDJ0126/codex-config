@@ -1,5 +1,85 @@
 [
   {
+    "title": "Package Resolver 메뉴 전환 검증",
+    "summary": "Windows 메뉴 제거, 리졸버 추가와 실제 Unity 검증",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104150634033-v1.0.0.html",
+    "date": "2026-11-04T15:06:34.033Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Windows 메뉴 제거 및 Package Resolver 전환",
+    "summary": "Windows와 Install Product Package 메뉴를 제거하고 Settings 바로 아래 Package Resolver를 추가했습니다. 팝업은 TurnRoom 전역 언어 설정을 따릅니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104150611730-v1.0.0.html",
+    "date": "2026-11-04T15:06:11.730Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 스토어 이미지 반영 — 직접 업로드 거부 확인",
+    "summary": "파일 제작은 끝났지만 스토어 이미지 저장은 서버가403으로 거부했습니다. 화면 조작 금지를 유지해 실제 반영은 미완료입니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104150351808-v1.0.0.html",
+    "date": "2026-11-04T15:03:51.808Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 스토어 이미지 반영 — 직접 업로드 거부 확인",
+    "summary": "파일 제작은 끝났지만 스토어 이미지 저장은 서버가403으로 거부했습니다. 화면 조작 금지를 유지해 실제 반영은 미완료입니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-04-result-20261104150351304-v1.0.0.html",
+    "date": "2026-11-04T15:03:51.304Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제품별 고유 로고 제작 및 동일 다큐먼트 파비콘 적용 의무화",
+    "summary": "새 제품마다 로고를 새로 만들고 모든 언어 문서 파비콘에 동일하게 적용하도록 전역·프로젝트 지침을 통합했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-result-20261104145709566-v1.0.0.html",
+    "date": "2026-11-04T14:57:09.566Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "신규 제품 로고와 다큐먼트 파비콘 지침 통합",
+    "summary": "신규 제품별 고유 로고와 동일 파비콘 적용 의무를 지침·체크리스트에 통합합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-manual-20261104145708956-v1.0.0.html",
+    "date": "2026-11-04T14:57:08.956Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 문서 가독성·목차·제품별 로고 수정",
+    "summary": "iframe과 스타일 혼합을 제거하고 한 목차·공통 본문으로 정리했습니다. Studio와 세 제품의 전용 로고를 적용했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104144330098-v1.0.0.html",
+    "date": "2026-11-04T14:43:30.098Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 문서 가독성·제품 로고 개선",
+    "summary": "기존 통합 문서의 저대비·빈 목차 영역을 수정하고 제품별 전용 로고를 적용합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-studio-unified-docs-20261104-20261104144329563-v1.0.1.html",
+    "date": "2026-11-04T14:43:29.563Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "DDT·Entity Forge 로고·마케팅 자료 수정",
     "summary": "사용자 정정에 따라 로봇 복제를 폐기하고 두 제품 로고·이미지·영상을 다시 제작했습니다.",
     "project": "turnroom",
@@ -26,6 +106,26 @@
     "reportPath": "projects/designdatatable/reports/2026-11-04-result-20261104143729175-v1.0.0.html",
     "date": "2026-11-04T14:37:29.175Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 단일 문서·세 모듈 내부 카테고리 통합",
+    "summary": "Documentation 하나에서 Image Maker·Pixel Camera·Foliage를 전환하도록 9개 언어 가이드를 통합했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104142417258-v1.0.0.html",
+    "date": "2026-11-04T14:24:17.258Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 통합 문서와 내부 카테고리",
+    "summary": "기존 9언어 안내를 통합해 단일 문서 안에서 세 모듈을 선택합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104142416774-v1.0.0.html",
+    "date": "2026-11-04T14:24:16.774Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },

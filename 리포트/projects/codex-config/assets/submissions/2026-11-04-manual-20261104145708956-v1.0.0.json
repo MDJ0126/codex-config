@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "신규 제품 로고와 다큐먼트 파비콘 지침 통합",
+    "summary": "신규 제품별 고유 로고와 동일 파비콘 적용 의무를 지침·체크리스트에 통합합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "이 메뉴얼은 지침 파일 변경 검증 범위입니다. 커밋·공개 배포와 개별 결과 URL 확인은 결과 보고서 게시 단계에서 별도 수행합니다.",
+    "outcome": "설치된 전역 지침과 설정 저장소 지침, 프로젝트 지침과 체크리스트를 실제 수정·대조했습니다.",
+    "proposedTime": "3–5분",
+    "actualTime": "2026-11-04 23:51:44 KST 시작. 지침 파일 반영·대조 23:57:01 KST. 커밋·공개 배포 검증 완료 시각은 최종 답변에 기록합니다.",
+    "xerjEvidence": "지침·문서 수정으로 코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "product-logo-favicon-policy-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "신규 제품마다 고유 로고를 제작하고 동일 로고를 문서 파비콘에 적용하도록 명시한다.",
+    "completionCriteria": "전역 설치본·설정 저장소의 동일성, 프로젝트 지침·체크리스트의 일치와 기존 심볼 복제 금지 규칙 보존을 확인한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기존 로고 규칙에 파비콘 의무 통합",
+        "action": "기존 전체 지침의 관련 규칙과 대조 후 신규 제품별 제작·동일 파비콘·실제 표시 검증을 통합한다.",
+        "expected": "4개 파일에 의무가 반영되고 전역 두 설치 파일은 동일하다.",
+        "qa": "실제 파일의 문구와 해시를 읽어 대조하고 기존 디자인 참고·Affinity 규칙이 보존됐는지 확인한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "4개 파일 반영, 전역 설치본/기본 설정 저장소 SHA-256 일치, 기존 디자인 참고와 Affinity 의무 보존."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-04T23:57:01.150697+09:00",
+        "summary": "지침 원문과 수정 문구 실제 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "신규 제품군·제품별 고유 로고 제작, 제품 UI와 모든 지원 언어의 동일 문서 파비콘 적용, 링크·배포 자산·실제 탭 표시 검증과 누락 시 완료 금지를 확인했다.",
+            "evidence": "Docs/Testing/2026-11-04/logo-favicon-policy/changes.json 및 전역/프로젝트 원문 대조",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
