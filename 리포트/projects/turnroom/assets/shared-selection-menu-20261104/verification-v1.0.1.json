@@ -1,0 +1,146 @@
+{
+  "at": "2026-11-04T13:04:00.867100+09:00",
+  "assemblies": [
+    {
+      "assembly": "DesignDataTable.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0,
+      "sourceCount": 12
+    },
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sourceCount": 47
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "Pixora.Editor",
+      "exitCode": 0,
+      "sourceCount": 44
+    },
+    {
+      "assembly": "DesignDataTable.Editor",
+      "exitCode": 0,
+      "sourceCount": 304
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Runtime",
+      "exitCode": 0,
+      "sourceCount": 9
+    },
+    {
+      "assembly": "TurnRoom.EntityForge.Editor",
+      "exitCode": 0,
+      "sourceCount": 23
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0,
+      "sourceCount": 11
+    }
+  ],
+  "scope": {
+    "at": "2026-11-04T03:47:20.149948+00:00",
+    "scope": "Shared selector menu and floating document task switching",
+    "nativeUiQA": "pending — user desktop control remains paused",
+    "afterScreenshot": "not captured",
+    "beforeScreenshot": "user-provided capture; original bytes preserved",
+    "documentationLanguages": [
+      "en",
+      "ko",
+      "ja",
+      "zh-Hans",
+      "zh-Hant",
+      "es",
+      "fr",
+      "de",
+      "pt-BR"
+    ],
+    "currentSourceHashes": {
+      "TemplateInspectorPopover.cs": "b29fd79a291a80d91d1cc09c0fbaae089f1bee8b6abf1224f5f9e2d4178a00a7",
+      "TemplateInspectorPopover.Menu.cs": "79bbe519bd8bc32b203393718585b3700a364ffacd56605133e27aa2363ae5e9",
+      "TemplateSelectionPanel.uxml": "4a68462e6676051a9aaec4829713419bcfef438f359c5691b49b54a37dd713e7",
+      "TemplateSelectionPanel.uss": "42b6e2511f0f6a0bb91df66e0b4b51075b9dbe549f4b0bf9658dc9c18a041380",
+      "TemplateSelectionRow.uxml": "489989ce2b98ba7762bbb4c532d7b17d1f9086704c25ac95d11791de982e9e2c",
+      "WindowFrame.TaskSwitching.cs": "2dc55f2c5c3aad97cd1a252b15e256f514696197dd356d61f8a18db4cee43562",
+      "WindowServices.cs": "eee24863c800a3d8186b5c92c2f8d932d10b3547ca7fc1da2efbbfcbb50ee8ab",
+      "TemplateMaskField.cs": "81a327cc45f07209f6e590f10dc762701e0793d1f3822a7b32fc9cefa3031972",
+      "UITemplateStyles.cs": "85cf0fd1a3fee254c24e133cf902a85a57612d55a32dc7ef3dfafc1737ac800e",
+      "Localization/UI.json": "1e88e9577060997231d84608eda1419f1a30bdc3ab0dad4a79fcb3452f64016b"
+    },
+    "historicalScreenshotManifestModified": false,
+    "ddtMenuSourceHashes": {
+      "WorkbookControls.cs": "35c6fb3d4325a42f0989a9f47c42bdbb5e3e7915fd49656008b4ac72baf256d4",
+      "WorkbookMoveChartPopup.cs": "d41eba7cd2c3d2ae47a918596978c4c9d2e059b8e952a9376d5d2ab45c40fd8b",
+      "WorkbookOfficeTableStylePopup.cs": "ffee1f4329407233c1a94b0a913030ef7b8d9fcfac64f37566cac15a58e57232"
+    },
+    "verifiedAt": "2026-11-04T13:04:00.867100+09:00"
+  },
+  "policy": {
+    "styleCases": 1024,
+    "nativeWindowsTouched": false,
+    "policy": [
+      {
+        "path": "DesignDataTable/Scripts/Editor",
+        "passed": false,
+        "error": "Use shared template selection/message panels before packaging: Assets/TurnRoom/DesignDataTable/Scripts/Editor\\Window\\AboutPopup.cs (EditorUtility.DisplayDialog()"
+      },
+      {
+        "path": "PixoraStudio/Editor",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "path": "PixoraStudio/PixelCamera/Editor",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "path": "PixoraStudio/PixelFoliage/Editor",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "path": "EntityForge/Editor",
+        "passed": true,
+        "error": ""
+      }
+    ],
+    "sourceSha256": "2dc55f2c5c3aad97cd1a252b15e256f514696197dd356d61f8a18db4cee43562"
+  },
+  "assets": {
+    "uxmlParsed": 2,
+    "menuLanguages": 9,
+    "fonts": [
+      {
+        "font": "TurnRoomSans-Regular.ttf",
+        "checkmarkGlyphPresent": true
+      },
+      {
+        "font": "TurnRoomSans-SemiBold.ttf",
+        "checkmarkGlyphPresent": true
+      }
+    ],
+    "nativeUiExecuted": false
+  },
+  "sourceLoadedByEditor": "not verified; no live UI command executed",
+  "screenshots": {
+    "before": "User-provided unedited original",
+    "after": "Pending: desktop control paused"
+  },
+  "releasePackageUpload": "Not performed for this source revision",
+  "additionalCheck": "DDT IMGUI fallback captures owning document accent; final compile and hash comparison passed. Shared documentation update source is idempotent across two executions."
+}
