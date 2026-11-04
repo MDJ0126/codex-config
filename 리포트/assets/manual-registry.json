@@ -1,5 +1,229 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-robot-logo-family-20261104-20261104153558258-v1.0.2.html",
+    "postPath": "projects/turnroom/posts/2026-11-04-manual-robot-logo-family-20261104-20261104153558258-v1.0.2.md",
+    "date": "2026-11-04T15:35:58.258Z",
+    "version": "v1.0.2",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "robot-logo-family-20261104",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "DDT·Entity Forge 로고·마케팅 자료 수정",
+      "summary": "사용자 정정에 따라 로봇 복제를 폐기하고 두 제품 로고·이미지·영상을 다시 제작했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "기존영상·스토어미완료보존. 이번PNG는적용했고네이티브원본저장·재열기·실제UI검증은남음.",
+      "outcome": "로고 2개, 제품별 이미지 20종과 70초 영상 제작·원본 재열기 검증을 마쳤습니다. 청음·전체 주관적 검수는 남았습니다.",
+      "proposedTime": "이번추가요청최초5~10분",
+      "actualTime": "2026-11-05 00:23:22 KST 시작. 전체미완료,완료시각없음.",
+      "xerjEvidence": "XERJ 노드 데이터 잠금 오류. 현재 소스와 rg로 대체.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "robot-logo-family-20261104",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "DDT 새 로고, Entity Forge 기존 심볼 배경 정리와 관련 마케팅 이미지·영상 재제작",
+      "completionCriteria": "로고·마케팅 파일 제작, 실제 원본 저장·재열기 출력 대조, 영상 기술 검사·청음, 공개 결과 보고",
+      "previousManual": "projects/turnroom/reports/2026-11-04-manual-robot-logo-family-20261104-20261104143811297-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "두 로고 제작 및 검증",
+          "action": "DDT 테이블 심볼 신규 제작, Entity Forge 기존 E 심볼 배경 정리. 실제 Affinity 저장·재열기·재출력.",
+          "expected": "다른 제품 캐릭터 복제 없이 제품별 정체성 유지",
+          "qa": "실제 출력 시각검사와 재열기 출력 동일성 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "두 로고 PNG 저장·재열기 재출력 SHA-256 일치. 마케팅 .af 2개와 대표 카드 재출력 SHA-256 일치."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "두 제품 마케팅 이미지 재제작",
+          "action": "실제 Unity 촬영 원본을 새 로고와 Affinity 구성에 배치하고 제품별 갤러리16장·키이미지4종 출력",
+          "expected": "총40종과 편집 가능한 .af 원본2개",
+          "qa": "출력 크기·개수·대표 이미지 실제 시각 검토와 저장·재열기 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "40종 생성과 원본 저장·재열기 확인. 전체40종 주관적 검수는 남음."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "두 제품 영상 재제작 및 공개 전달",
+          "action": "새 마케팅 이미지와 기존 실제 Unity 게임 영상으로70초 영상2개 편집. 음성·권리·디코딩 검사와 청음·공개 링크 검증",
+          "expected": "음성 포함 영상2개와 공개 다운로드·보고서",
+          "qa": "전체 디코딩·음성 신호·청음·ZIP검사·외부 접근",
+          "dependsOn": [
+            "T01",
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "영상2개 디코딩·음성 신호·ZIP검사 통과. 실제 청음 미실행."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "둥근 로고와 템플릿 예제·지침 적용",
+          "action": "실제Affinity에서DDT·Pixora하위3개 수정, 템플릿 예제제작·지침과제품문서적용",
+          "expected": "PNG와네이티브원본·재열기검증",
+          "qa": "픽셀모서리·원형심볼보존·실제출력검토·원본저장재열기",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "PNG5개·지침·문서적용. 네이티브저장은PERMISSION_DENIED로차단, 화면조작금지유지"
+        }
+      ],
+      "focusTasks": [
+        "T02",
+        "T04"
+      ],
+      "scopeChange": "추가 요청: DDT 둥근 모서리, 템플릿 예제·지침, Pixora 하위3개 둥근 외곽. 이전 미완료 작업과 QA를 보존합니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-04T13:33:00Z",
+          "summary": "사용자 검토에서 로봇 시안 거부",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "같은 스타일을 고유 캐릭터 복제로 잘못 해석한 시안을 사용자가 거부했습니다.",
+              "evidence": "현재 대화의 사용자 정정과 보존된 초기 시안",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-04T14:35:10Z",
+          "summary": "수정 로고·원본 검증과 남은 마케팅 QA 구분",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "로고2개와 대표 마케팅 카드2개의 저장·닫기·재열기 재출력 해시 일치.",
+              "evidence": "Docs/Testing/2026-11-04/logo-family/ 재열기PNG 및 원본·출력해시",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "40종 출력·원본 저장 완료. 전체 주관적 검수 미실행 항목을 통과 처리하지 않았습니다.",
+              "evidence": "제품별 Manifest.json 및 실제 검토 이미지",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "영상2개 기술 검사와ZIP검사 통과. 실제 청음 미실행.",
+              "evidence": "제품별Video/Manifest.json과encode.log",
+              "dependencies": {
+                "T01": 2,
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104151019440-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-04-manual-20261104151019440-v1.0.0.md",
+    "date": "2026-11-04T15:10:19.440Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "ddt-product-doc-standard-20261105",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "DDT 기준 제품·템플릿 다큐먼트 통일",
+      "summary": "기존 통합 문서의 저대비·빈 목차 영역을 수정하고 제품별 전용 로고를 적용합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 브라우저 화면·작은 화면·마우스/키보드·탭 파비콘 표시와 후 캡처는 미실행입니다. 기존 화면 조작 중단 및 file URL 브라우저 보안 정책 거부를 유지했고 우회·다른 브라우저·서버 실행을 하지 않았습니다. 열린 문서의 실제 표시를 갱신했다고 보고하지 않습니다. 확인하려면 기존 문서 탭 새로고침이 필요합니다. ScreenshotManifest의 촬영 시각·소스 해시는 바꾸지 않았습니다.",
+      "outcome": "구현·생성 JS·경로 검사 완료, 실제 브라우저 QA 미실행",
+      "proposedTime": "최초6–10분, 개요 정리 추가2–4분, DDT 파비콘 추가1–2분. DDT 스타일·Entity Forge·템플릿 확대 시 추가6–10분으로 재산정; 범위 추가 후 검증/게시3–5분 안내.",
+      "actualTime": "2026-11-04 23:38:07 KST 최초 시작.23:54:01 KST DDT 기준 전체 통일 범위 추가.2026-11-05 00:07:39 KST까지 생성·검사 완료. 실제 브라우저 화면/탭 검증은 미완료. 공개 확인은 최종 채팅에 기록.",
+      "xerjEvidence": "Status node not running; rg 및 현재 소스·실제 도메인 대조",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-product-doc-standard-20261105",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "DDT·Pixora Studio·Entity Forge·Templete 예제 문서와 신규 생성 지침의 공통 디자인",
+      "completionCriteria": "동일 DDT CSS/글꼴, 각 고유 로고/파비콘,9언어 개요/빠른 시작/실제 이미지,기존 내용 보존,생성기/지침/실제 브라우저 QA",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 문서 구조·로고·생성기 및 지침 구현/검증",
+          "action": "동일 DDT CSS/글꼴, 각 고유 로고/파비콘,9언어 개요/빠른 시작/실제 이미지,기존 내용 보존,생성기/지침/실제 브라우저 QA",
+          "expected": "빈 중간 열 없이 한 목차와 읽을 수 있는 본문, 네 제품의 고유 로고",
+          "qa": "실제 생성 JS에서3카테고리·언어 전환,Unity 등록과 브라우저 표시 대조",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "구현·생성 JS·경로 검사 완료, 실제 브라우저 QA 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자 추가 요청으로 DDT 스타일 통일·DDT 헤더 로고·Entity Forge·Templete 재사용 예제 및 신규 제품 지침을 포함했습니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104150634033-v1.0.0.html",
     "postPath": "projects/turnroom/posts/2026-11-04-manual-20261104150634033-v1.0.0.md",
     "date": "2026-11-04T15:06:34.033Z",

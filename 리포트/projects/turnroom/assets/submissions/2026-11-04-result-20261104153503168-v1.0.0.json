@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "템플릿 둥근 로고 기준과 예제 로고 추가",
+    "summary": "PNG와 제품·문서 참조 적용은 완료했습니다. Affinity 네이티브 저장은 프로젝트 파일 접근 거부로 남았습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "실제 Affinity3.3.3.5004의 벡터 도형·클리핑과 NodeRenderingEngine을 사용했습니다. 메모리 픽셀을 그대로 프로젝트 PNG로 전달했으며 외부 이미지 편집·바탕화면 저장·화면 조작은 하지 않았습니다. Pixora Studio 대표 로고만 예외이고 하위 제품은 둥근 기준을 따릅니다.\n\n\n\n![템플릿 전용 예제 로고](../assets/2026-11-05-rounded-logos/Template-Example-Logo.png)",
+    "verification": "DDT와 하위3개 로고의 네 귀퉁이 투명도 및 출력에서 완전 불투명한 모든 픽셀의 원본 일치를 검사했습니다. 실제 출력5개를 시각 검토했습니다. 카메라는 안쪽224px 배경을 기준으로 반경28px로 보정했습니다. DDT30개 문서의 로고·파비콘 경로를 확인했고 Pixora9언어 통합·모듈 문서를 재생성했습니다. 실행 화면 캡처·네이티브 브라우저·Unity 시각 QA는 화면 조작 금지로 미실행이며 출력 이미지를 실행 화면이라고 표시하지 않습니다.",
+    "remaining": "네이티브.af 저장·재열기 미완료입니다. saveAs와 기존 원본load가 PERMISSION_DENIED를 반환했습니다. 두 아트 폴더 ACL 백업·현재 사용자Modify 권한과 쓰기 검증 후에도 같은 오류입니다. SDK preamble은 파일 접근 제한을 명시합니다. 사용자가 화면 조작을 재차 금지했으므로 GUI·바탕화면 우회를 하지 않았습니다. 수정 문서6개는 미저장 상태로 Affinity에 보존하고 재구성 스크립트를 제품 폴더에 남겼습니다. 이전DDT.af는 이전 각진 버전이며 최신PNG의 원본으로 간주하지 않습니다. 기존 스토어 업로드 미완료는 해소되지 않았습니다.\n\n교훈 검토: 사용자 명시 선호를 프로젝트 템플릿 지침에 통합했습니다. 전역 규칙은 기존 화면 비간섭·실제Affinity·원본 저장 의무를 적용하며 중복 추가하지 않았습니다.",
+    "outcome": "둥근 배경·투명 외곽 기준을 템플릿 문서와 프로젝트 AGENTS에 반영하고 템플릿 전용 예제 로고를 실제 Affinity에서 만들었습니다.",
+    "proposedTime": "최초5~10분. 이후 템플릿 예제와Pixora 하위3개로 범위 확대.",
+    "actualTime": "시작2026-11-05 00:23:22 KST. PNG·문서 적용과 픽셀검증00:33 KST까지 완료. 네이티브 저장은 미완료로 전체 완료 시각 없음.",
+    "xerjEvidence": "XERJ 노드 미실행 및 시작 실패를 확인했습니다. Foliage 로고 참조는rg로 대체하고 현재 소스를 직접 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "blocked"
+  }
+}
