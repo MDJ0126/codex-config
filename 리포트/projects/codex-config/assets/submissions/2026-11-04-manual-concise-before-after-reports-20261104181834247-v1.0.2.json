@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "간결한 보고·분할 작성·전후 화면 기준 적용",
+    "summary": "지침과 공개 작성 가이드에 핵심 요약·주제별 분할·전후 화면 기준을 반영합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공개 배포 확인 대기",
+    "outcome": "전후 촬영 최소 수를 수정 범위별 증거 보존으로 강화했습니다.",
+    "proposedTime": "지침 수정·동기화 약 1~2분, 공개 배포 확인 별도",
+    "actualTime": "시작 2026-11-05 03:17:30 KST · 진행 중",
+    "xerjEvidence": "코드 검색 불필요 — 문서·지침 수정",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "concise-before-after-reports",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "읽기 쉬운 보고와 실제 전후 비교를 공통 작성 기준으로 적용합니다.",
+    "completionCriteria": "지침·가이드 변경과 빌드·링크 검사를 통과하고 커밋·푸시·공개 URL을 확인합니다.",
+    "previousManual": "projects/codex-config/reports/2026-11-01-manual-concise-before-after-reports-20261101215816937-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "보고 기준 통합·검증·공개",
+        "action": "수정 범위별 전후 증거와 간결한 요약 기준을 통합하고 지침 동기화·빌드·공개 배포를 확인합니다.",
+        "expected": "다수 수정에 다수 전후 쌍을 요구하고 누락 대조·요약·기존 예외가 명시됩니다.",
+        "qa": "사용자 요구·기존 조건·지침 동일 해시·공개 가이드 본문 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 2,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "사용자가 수정 항목마다 필요한 만큼 전후 화면을 촬영하고 읽기 쉽게 요약하도록 재강조했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-01T21:58:16.506Z",
+        "summary": "지침·생성·공개 본문 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "지침3곳 해시 일치, 718개 보고서 빌드·26,378개 링크 검사 통과, 공개 가이드 본문 확인.",
+            "evidence": "커밋 fc19ae94; guide/index.html 및 guide/execution.html 공개 HTTP200·요구 문구 확인",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
