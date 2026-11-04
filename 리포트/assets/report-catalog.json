@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixora Studio 제출 전 전체 점검",
+    "summary": "문서·실제패키지·판매미디어·포털저장값을원본과대조하고제출가능여부를판정합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-pixora-presubmission-audit-20261105-20261104161755773-v1.0.1.html",
+    "date": "2026-11-04T16:17:55.773Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 제출 전 점검 — 현재 제출 보류 권고",
+    "summary": "포털은구형단일Pixora파일을업로드한상태이며최신문서에는깨진참조306건이있습니다.검토결론은제출보류입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104161631134-v1.0.0.html",
+    "date": "2026-11-04T16:16:31.134Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 제출 전 전체 점검",
+    "summary": "문서·실제패키지·판매미디어·포털저장값을원본과대조하고제출가능여부를판정합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104160151845-v1.0.0.html",
+    "date": "2026-11-04T16:01:51.845Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "DDT·Entity Forge 로고·마케팅 자료 수정",
     "summary": "사용자 정정에 따라 로봇 복제를 폐기하고 두 제품 로고·이미지·영상을 다시 제작했습니다.",
     "project": "turnroom",

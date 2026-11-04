@@ -1,0 +1,296 @@
+{
+  "at": "2026-11-04T16:16:30.526Z",
+  "verdict": "hold submission",
+  "portal": {
+    "packageId": "424614",
+    "versionId": "1541558",
+    "status": "draft",
+    "price": "10.00",
+    "upload": {
+      "package_upload_id": "1039404",
+      "unity_version": "6000.0.83f1",
+      "file_count": "1877",
+      "status": "finished",
+      "asset_store_tools_version": "V6.3.1",
+      "path": "Assets/TurnRoom/Pixora",
+      "size": "20470743",
+      "timestamp": "2026-11-03T07:27:00Z",
+      "vetting": {
+        "platforms": "",
+        "allow_edit": true,
+        "status": "draft",
+        "dependencies": [],
+        "vetting_type": "unknown",
+        "srp_versions": [
+          ""
+        ],
+        "genesis_vetting_id": null,
+        "unity_versions": "",
+        "first_approved_at": null,
+        "id": "1709294",
+        "srp_type": "standard"
+      }
+    },
+    "supportLinks": [],
+    "locales": [
+      {
+        "locale": "ko-KR",
+        "title": "Pixora Studio",
+        "compatibility": "",
+        "ai": "<p >OpenAI Codex가 C# 개발, 테스트, 문서, 번역과 마케팅 준비를 보조했습니다. 제품 실행에 유료 AI 서비스는 필요하지 않습니다.</p>",
+        "release_notes": "<p >통합 초안: 이미지 제작·Pixel Camera·식생 도구를 Pixora Studio로 구성합니다. 모듈별 창은 유지합니다. 통합 패키지 업로드·새 로고·최종 실행 검증은 대기 중입니다.</p>",
+        "images": 21,
+        "videos": 1
+      },
+      {
+        "locale": "zh-CN",
+        "title": "Pixora Studio",
+        "compatibility": "",
+        "ai": "<p >OpenAI Codex辅助C#开发、测试、文档、翻译及宣传准备。运行产品无需付费AI服务。</p>",
+        "release_notes": "<p >整合草稿：将图像制作、Pixel Camera和植被工具整合为Pixora Studio，各模块保留独立窗口。整合包上传、新标志及最终运行验证尚未完成。</p>",
+        "images": 21,
+        "videos": 1
+      },
+      {
+        "locale": "ja-JP",
+        "title": "Pixora Studio",
+        "compatibility": "",
+        "ai": "<p >OpenAI CodexがC#開発、テスト、文書、翻訳、販促準備を支援しました。製品の実行に有料AIサービスは不要です。</p>",
+        "release_notes": "<p >統合ドラフト：画像制作、Pixel Camera、植生をPixora Studioにまとめます。モジュール別ウィンドウを維持します。統合パッケージのアップロード、新ロゴ、最終動作検証は未完了です。</p>",
+        "images": 21,
+        "videos": 1
+      },
+      {
+        "locale": "en-US",
+        "title": "Pixora Studio",
+        "compatibility": "<p >Validated on Windows with Unity 6000.0.83f1. Built-in rendering was used for the included model-capture samples. TurnRoom shared editor support is bundled; no separate Asset Store dependency is required.</p>",
+        "ai": "<p >OpenAI Codex assisted with C# development, tests, documentation, translations and marketing preparation. AI-assisted work was reviewed and integrated into the product. The tool does not require a paid AI service.</p>",
+        "release_notes": "<p >Integration draft: reorganize Image Studio, Pixel Camera and Foliage as Pixora Studio while retaining separate module windows. Combined-package upload, new artwork and final native validation are pending. The uploaded file is the previous Pixora build.</p>",
+        "images": 21,
+        "videos": 1
+      }
+    ]
+  },
+  "packages": [
+    {
+      "file": "Artifacts/TurnRoomPackages/TurnRoom-Pixora.unitypackage",
+      "bytes": 20470421,
+      "sha256": "4e284e268c5ff2fba459974e075449a7cf1a23faf5869169203023e8df21bd92",
+      "assets": 1877,
+      "same": 269,
+      "changed": 23,
+      "missingCurrent": 1585,
+      "hasStudio": false,
+      "hasCamera": false,
+      "hasFoliage": false,
+      "hasStudioGuide": false,
+      "longPaths": [],
+      "development": [],
+      "scenes": [
+        "Assets/TurnRoom/Pixora/Samples/Generated/01-Image/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/03-Model.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/09-Alpha.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/04-Parts.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/09-Alpha/Pixora-20261031-172935/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/02-Palette.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/08-Equipment/Pixora-20261031-172902/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/06-Sheet.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/07-Tone.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/09-Alpha/Pixora-20261031-163650/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/06-Sheet/Pixora-20261031-172859/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/08-Equipment/Pixora-20261031-163615/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/06-Sheet/Pixora-20261031-163612/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/02-Palette/Pixora-20261031-163601/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/02-Palette/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/01-Image.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/08-Equipment.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/05-Animation/Pixora-20261031-172855/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/01-Image/Pixora-20261031-163600/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/05-Animation/Pixora-20261031-163608/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/04-Parts/Pixora-20261031-163603/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/05-Animation.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/04-Parts/Pixora-20261031-172850/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/10-BatchProfile.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/03-Model/Pixora-20261031-172849/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/03-Model/Pixora-20261031-163602/FullPreview.unity"
+      ],
+      "licenses": [
+        "Assets/TurnRoom/Pixora/Third-Party Notices.txt"
+      ],
+      "nativeSources": [
+        "Assets/TurnRoom/Pixora/Source/Pixora-Art-Source.zip"
+      ]
+    },
+    {
+      "file": "Artifacts/TurnRoomPackages/Frozen/2026-11-03-final-r2/TurnRoom-Pixora.unitypackage",
+      "bytes": 20471172,
+      "sha256": "22b2c431eb8d110347fafc5475708372521052d9739a9ec533af20f20fa1a881",
+      "assets": 1877,
+      "same": 269,
+      "changed": 23,
+      "missingCurrent": 1585,
+      "hasStudio": false,
+      "hasCamera": false,
+      "hasFoliage": false,
+      "hasStudioGuide": false,
+      "longPaths": [],
+      "development": [],
+      "scenes": [
+        "Assets/TurnRoom/Pixora/Samples/Generated/01-Image/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/03-Model.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/09-Alpha.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/04-Parts.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/09-Alpha/Pixora-20261031-172935/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/02-Palette.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/08-Equipment/Pixora-20261031-172902/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/06-Sheet.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/07-Tone.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/09-Alpha/Pixora-20261031-163650/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/06-Sheet/Pixora-20261031-172859/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/08-Equipment/Pixora-20261031-163615/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/06-Sheet/Pixora-20261031-163612/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/02-Palette/Pixora-20261031-163601/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/02-Palette/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/01-Image.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/08-Equipment.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/05-Animation/Pixora-20261031-172855/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/01-Image/Pixora-20261031-163600/ImagesPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/05-Animation/Pixora-20261031-163608/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/04-Parts/Pixora-20261031-163603/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/05-Animation.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/04-Parts/Pixora-20261031-172850/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Scenes/10-BatchProfile.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/03-Model/Pixora-20261031-172849/FullPreview.unity",
+        "Assets/TurnRoom/Pixora/Samples/Generated/03-Model/Pixora-20261031-163602/FullPreview.unity"
+      ],
+      "licenses": [
+        "Assets/TurnRoom/Pixora/Third-Party Notices.txt"
+      ],
+      "nativeSources": [
+        "Assets/TurnRoom/Pixora/Source/Pixora-Art-Source.zip"
+      ]
+    },
+    {
+      "file": "Artifacts/PixelTooler/Review/PixoraStudio-Review.unitypackage",
+      "bytes": 43665034,
+      "sha256": "d9d1d44e5778e6fc8a3ac93b23821b9c8c75b31be39226761ad54c1b05b4ef30",
+      "assets": 2600,
+      "same": 2414,
+      "changed": 182,
+      "missingCurrent": 4,
+      "hasStudio": true,
+      "hasCamera": true,
+      "hasFoliage": true,
+      "hasStudioGuide": false,
+      "longPaths": [],
+      "development": [],
+      "scenes": [
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/01-ClockworkGarden.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/02-NeonCourier.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/03-SunkenObservatory.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/11-PixelCameraGarden.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/13-PixelCameraWoodland.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/01-MeadowBreeze.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/02-BlossomWalk.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/03-ShrubGarden.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/04-YoungWoodland.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/05-ContactTrail.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/06-SteppedRhythm.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/07-SharedGusts.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/08-CloudLight.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/09-MixedGarden.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/10-ExtensionGrove.unity",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/12-PrismaticWoodland.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/01-Image/Pixora-20261031-163600/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/01-Image/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/02-Palette/Pixora-20261031-163601/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/02-Palette/Pixora-20261031-172848/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/03-Model/Pixora-20261031-163602/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/03-Model/Pixora-20261031-172849/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/04-Parts/Pixora-20261031-163603/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/04-Parts/Pixora-20261031-172850/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/05-Animation/Pixora-20261031-163608/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/05-Animation/Pixora-20261031-172855/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/06-Sheet/Pixora-20261031-163612/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/06-Sheet/Pixora-20261031-172859/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/08-Equipment/Pixora-20261031-163615/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/08-Equipment/Pixora-20261031-172902/FullPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/09-Alpha/Pixora-20261031-163650/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Generated/09-Alpha/Pixora-20261031-172935/ImagesPreview.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/01-Image.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/02-Palette.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/03-Model.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/04-Parts.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/05-Animation.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/06-Sheet.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/07-Tone.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/08-Equipment.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/09-Alpha.unity",
+        "Assets/TurnRoom/PixoraStudio/Samples/Scenes/10-BatchProfile.unity"
+      ],
+      "licenses": [
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Third-Party Notices.txt",
+        "Assets/TurnRoom/PixoraStudio/PixelFoliage/Third-Party Notices.txt",
+        "Assets/TurnRoom/PixoraStudio/Third-Party Notices.txt"
+      ],
+      "nativeSources": [
+        "Assets/TurnRoom/PixoraStudio/Source/Pixora-Art-Source.zip"
+      ]
+    }
+  ],
+  "compilation": [
+    {
+      "assembly": "TurnRoom.Editor",
+      "exitCode": 0,
+      "sourceCount": 49
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0,
+      "sourceCount": 12
+    },
+    {
+      "assembly": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "Pixora.Editor",
+      "exitCode": 0,
+      "sourceCount": 44
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Runtime",
+      "exitCode": 0,
+      "sourceCount": 8
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Editor",
+      "exitCode": 0,
+      "sourceCount": 11
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceCount": 1
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Pixora.Editor",
+      "exitCode": 0,
+      "sourceCount": 1
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Family",
+      "exitCode": null,
+      "status": "skipped: no current assembly definition; obsolete recorded response file"
+    },
+    {
+      "assembly": "TurnRoom.PixelFoliage.Samples",
+      "exitCode": 0,
+      "sourceCount": 3
+    }
+  ],
+  "nativeExecution": false,
+  "guiInteraction": false,
+  "storeMutations": false
+}

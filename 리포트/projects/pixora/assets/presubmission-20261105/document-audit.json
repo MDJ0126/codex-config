@@ -1,0 +1,1825 @@
+{
+  "method": "Node VM and filesystem; not native browser visual verification",
+  "records": [
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "language": "en",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "language": "ko",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "language": "ja",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "language": "zh-Hans",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "language": "zh-Hant",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "language": "es",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "language": "fr",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "language": "de",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "language": "pt-BR",
+      "modules": 3,
+      "chapters": 33,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "language": "en",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "language": "ko",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "language": "ja",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "language": "zh-Hans",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "language": "zh-Hant",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "language": "es",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "language": "fr",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "language": "de",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "language": "pt-BR",
+      "modules": 1,
+      "chapters": 19,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.en.html",
+      "language": "en",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.ko.html",
+      "language": "ko",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.ja.html",
+      "language": "ja",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.zh-Hans.html",
+      "language": "zh-Hans",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.zh-Hant.html",
+      "language": "zh-Hant",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.es.html",
+      "language": "es",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.fr.html",
+      "language": "fr",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.de.html",
+      "language": "de",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.pt-BR.html",
+      "language": "pt-BR",
+      "modules": 1,
+      "chapters": 6,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html",
+      "language": "en",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html",
+      "language": "ko",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html",
+      "language": "ja",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html",
+      "language": "zh-Hans",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html",
+      "language": "zh-Hant",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html",
+      "language": "es",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html",
+      "language": "fr",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html",
+      "language": "de",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html",
+      "language": "pt-BR",
+      "modules": 1,
+      "chapters": 8,
+      "routes": "pass",
+      "languageRoute": "pass"
+    }
+  ],
+  "missing": [
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Studio.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Sample-en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Model.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Guide.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "/Templete/Documentation/GlobalSettings.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "../Templete/Documentation/GlobalSettings.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "../PixelFoliage/PaletteGuide.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.en.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Studio.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Sample-ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Model.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Guide.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "/Templete/Documentation/GlobalSettings.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "../Templete/Documentation/GlobalSettings.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "../PixelFoliage/PaletteGuide.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ko.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Studio.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Sample-ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Model.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Guide.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "/Templete/Documentation/GlobalSettings.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "../Templete/Documentation/GlobalSettings.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "../PixelFoliage/PaletteGuide.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.ja.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Studio.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Sample-zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Model.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Guide.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "/Templete/Documentation/GlobalSettings.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "../Templete/Documentation/GlobalSettings.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "../PixelFoliage/PaletteGuide.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hans.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Studio.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Sample-zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Model.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Guide.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "/Templete/Documentation/GlobalSettings.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "../Templete/Documentation/GlobalSettings.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "../PixelFoliage/PaletteGuide.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.zh-Hant.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Studio.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Sample-es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Model.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Guide.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "/Templete/Documentation/GlobalSettings.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "../Templete/Documentation/GlobalSettings.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "../PixelFoliage/PaletteGuide.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.es.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Studio.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Sample-fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Model.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Guide.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "/Templete/Documentation/GlobalSettings.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "../Templete/Documentation/GlobalSettings.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "../PixelFoliage/PaletteGuide.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.fr.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Studio.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Sample-de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Model.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Guide.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "/Templete/Documentation/GlobalSettings.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "../Templete/Documentation/GlobalSettings.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "../PixelFoliage/PaletteGuide.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.de.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Studio.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Sample-pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Model.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Guide.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "/Templete/Documentation/GlobalSettings.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "../Templete/Documentation/GlobalSettings.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "../PixelFoliage/PaletteGuide.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "../PixelFoliage/Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "../PixelFoliage/Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/StudioGuide.pt-BR.html",
+      "url": "../PixelFoliage/Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Studio.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Sample-en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Model.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Guide.en.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.en.html",
+      "url": "/Templete/Documentation/GlobalSettings.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Studio.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Sample-ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Model.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Guide.ko.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ko.html",
+      "url": "/Templete/Documentation/GlobalSettings.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Studio.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Sample-ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Model.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Guide.ja.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.ja.html",
+      "url": "/Templete/Documentation/GlobalSettings.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Studio.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Sample-zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Model.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Guide.zh-Hans.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hans.html",
+      "url": "/Templete/Documentation/GlobalSettings.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Studio.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Sample-zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Model.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Guide.zh-Hant.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.zh-Hant.html",
+      "url": "/Templete/Documentation/GlobalSettings.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Studio.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Sample-es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Model.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Guide.es.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.es.html",
+      "url": "/Templete/Documentation/GlobalSettings.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Studio.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Sample-fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Model.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Guide.fr.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.fr.html",
+      "url": "/Templete/Documentation/GlobalSettings.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Studio.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Sample-de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Model.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Guide.de.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.de.html",
+      "url": "/Templete/Documentation/GlobalSettings.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Studio.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Sample-pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Settings-Theme.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Model.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Guide.pt-BR.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Setup-Dark.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/WindowList.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/WindowRestore.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Work-File.webp",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Inspector-PixoraWork.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Images/Collection-ProfileDark.jpg",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/Documentation/UserGuide.pt-BR.html",
+      "url": "/Templete/Documentation/GlobalSettings.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.en.html",
+      "url": "../../Templete/Documentation/GlobalSettings.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.ko.html",
+      "url": "../../Templete/Documentation/GlobalSettings.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.ja.html",
+      "url": "../../Templete/Documentation/GlobalSettings.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.zh-Hans.html",
+      "url": "../../Templete/Documentation/GlobalSettings.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.zh-Hant.html",
+      "url": "../../Templete/Documentation/GlobalSettings.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.es.html",
+      "url": "../../Templete/Documentation/GlobalSettings.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.fr.html",
+      "url": "../../Templete/Documentation/GlobalSettings.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.de.html",
+      "url": "../../Templete/Documentation/GlobalSettings.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelCamera/Documentation/UserGuide.pt-BR.html",
+      "url": "../../Templete/Documentation/GlobalSettings.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html",
+      "url": "../PaletteGuide.en.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.en.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html",
+      "url": "../PaletteGuide.ko.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ko.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html",
+      "url": "../PaletteGuide.ja.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.ja.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html",
+      "url": "../PaletteGuide.zh-Hans.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hans.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html",
+      "url": "../PaletteGuide.zh-Hant.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.zh-Hant.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html",
+      "url": "../PaletteGuide.es.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.es.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html",
+      "url": "../PaletteGuide.fr.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.fr.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html",
+      "url": "../PaletteGuide.de.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.de.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html",
+      "url": "../PaletteGuide.pt-BR.html",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html",
+      "url": "../Images/Examples/Meadow-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html",
+      "url": "../Images/Examples/Blossom-20261104.png",
+      "kind": "chapter-link"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Documentation/UserGuide.pt-BR.html",
+      "url": "../Images/Examples/CloudLight-20261104.png",
+      "kind": "chapter-link"
+    }
+  ]
+}

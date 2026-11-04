@@ -1,0 +1,37 @@
+Input #0, mpegts, from 'Docs/Testing/2026-11-05/pixora-submission-audit/store-video.ts':
+  Duration: 00:01:00.02, start: 1.462000, bitrate: 2409 kb/s
+  Program 1 
+    Metadata:
+      service_name    : Service01
+      service_provider: FFmpeg
+  Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 24 fps, 24 tbr, 90k tbn
+  Stream #0:1[0x101](und): Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp, 114 kb/s
+[Parsed_volumedetect_0 @ 0000025932137d80] n_samples: 0
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))
+Output #0, null, to 'NUL':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 wrapped_avframe
+  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 pcm_s16le
+frame=  288 fps=0.0 q=-0.0 size=N/A time=00:00:12.04 bitrate=N/A speed=23.8x    
+frame=  476 fps=465 q=-0.0 size=N/A time=00:00:19.87 bitrate=N/A speed=19.4x    
+frame=  555 fps=361 q=-0.0 size=N/A time=00:00:23.16 bitrate=N/A speed=15.1x    
+frame=  670 fps=326 q=-0.0 size=N/A time=00:00:27.95 bitrate=N/A speed=13.6x    
+frame=  811 fps=315 q=-0.0 size=N/A time=00:00:33.83 bitrate=N/A speed=13.1x    
+frame= 1005 fps=325 q=-0.0 size=N/A time=00:00:41.91 bitrate=N/A speed=13.5x    
+frame= 1213 fps=337 q=-0.0 size=N/A time=00:00:50.58 bitrate=N/A speed=  14x    
+[Parsed_volumedetect_0 @ 0000025932136e80] n_samples: 5763072
+[Parsed_volumedetect_0 @ 0000025932136e80] mean_volume: -20.2 dB
+[Parsed_volumedetect_0 @ 0000025932136e80] max_volume: -5.6 dB
+[Parsed_volumedetect_0 @ 0000025932136e80] histogram_5db: 45
+[Parsed_volumedetect_0 @ 0000025932136e80] histogram_6db: 459
+[Parsed_volumedetect_0 @ 0000025932136e80] histogram_7db: 2093
+[Parsed_volumedetect_0 @ 0000025932136e80] histogram_8db: 6889
+[out#0/null @ 0000025931eaef00] video:619KiB audio:11256KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 1440 fps=368 q=-0.0 Lsize=N/A time=00:01:00.03 bitrate=N/A speed=15.4x    

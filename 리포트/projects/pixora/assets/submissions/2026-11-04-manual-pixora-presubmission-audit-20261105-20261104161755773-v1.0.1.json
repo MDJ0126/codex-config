@@ -1,0 +1,189 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 제출 전 전체 점검",
+    "summary": "문서·실제패키지·판매미디어·포털저장값을원본과대조하고제출가능여부를판정합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공개보고서배포확인.제품차단사항수정·신규실행·실제심사페이지Preview는별도미실행.",
+    "outcome": "읽기전용검토결론은제출보류.제품합격이아니며공개배포확인은남음.",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-05 00:59:21 KST 시작,01:16경검토결과정리.공개배포대기.",
+    "xerjEvidence": "직전Status에서노드미실행.현재파일과rg로대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-presubmission-audit-20261105",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "제출전누락과심사위험을증거로확인",
+    "completionCriteria": "문서동작·패키지현재성·미디어와권리·포털저장값·공식요건대조,미확인구분,공개점검보고",
+    "previousManual": "projects/pixora/reports/2026-11-04-manual-20261104160151845-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "문서와진입동작",
+        "action": "9언어가이드·링크·이미지·로고·실제기능설명대조",
+        "expected": "근거있는점검결과와미확인구분",
+        "qa": "빌드된문서의각장·언어전환검사와누락목록",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "36문서594장과본문참조검사,깨진참조306건검출.제품정상판정아님."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "제출패키지와검증근거",
+        "action": "포털파일과로컬후보의인벤토리·해시·최신소스·공식Validator·신규설치기록대조",
+        "expected": "근거있는점검결과와미확인구분",
+        "qa": "현제출파일에대해검증됐는지구분",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "포털구형업로드와후보3개실제tar·현재소스대조.현재소스137개9어셈블리컴파일통과.클린설치미실행."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "판매미디어",
+        "action": "실제저장된키이미지·스크린샷·영상과로컬최신미디어·음원권리대조",
+        "expected": "근거있는점검결과와미확인구분",
+        "qa": "갤러리범위·순서·영상재생/오디오검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "키3개·갤러리21개검토,HLS실제1440프레임·오디오신호검사.기존동일ID사용자청취근거구분."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "심사페이지저장값",
+        "action": "공식SDK읽기전용으로상태·지원버전·설명·AI고지·링크·파일정보확인",
+        "expected": "근거있는점검결과와미확인구분",
+        "qa": "영어및지원판매언어와실제제품범위대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "초안1541558의4언어저장값·변경이력·AI·키이미지·영상읽기대조.UIPreview미실행."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "제출가능여부판정",
+        "action": "최신Unity공식제출요건과전체점검결과통합",
+        "expected": "근거있는점검결과와미확인구분",
+        "qa": "차단/주의/미확인과근거를공개보고",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "제출보류판정과보고서작성.공개배포검증은남음."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1908641Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "36문서594장과본문참조검사,깨진참조306건검출.제품정상판정아님.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1989592Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "포털구형업로드와후보3개실제tar·현재소스대조.현재소스137개9어셈블리컴파일통과.클린설치미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990184Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "키3개·갤러리21개검토,HLS실제1440프레임·오디오신호검사.기존동일ID사용자청취근거구분.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990456Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "초안1541558의4언어저장값·변경이력·AI·키이미지·영상읽기대조.UIPreview미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990832Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "제출보류판정과보고서작성.공개배포검증은남음.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
