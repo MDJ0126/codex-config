@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "도구 사용 후 저장·종료 지침 반영",
+    "summary": "Affinity 원본 저장과 더티 해소, 컴퓨터 유즈 작업 자원 종료를 필수 QA로 정합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음. 지침 수정 작업이며 기존 앱·문서를 종료한 작업은 아닙니다.",
+    "outcome": "지침 동기화·공개 검증 완료",
+    "proposedTime": "3~6분, 시작 2026-11-04 16:16:57 KST",
+    "actualTime": "4분 57초, 2026-11-04 16:21:54 KST 지침 공개 확인. 후속 기록 배포와 임시 폴더 정리는 별도 진행.",
+    "xerjEvidence": "코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "tool-cleanup-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "Affinity 원본 저장과 더티 해소, 컴퓨터 유즈 작업 자원 종료를 필수 QA로 정합니다.",
+    "completionCriteria": "지침 반영·설치본 해시 일치·보고서 빌드·푸시·공개 본문 확인",
+    "previousManual": "projects/codex-config/reports/2026-11-04-manual-20261104071755402-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "지침 반영과 공개 검증",
+        "action": "지침 반영·설치본 해시 일치·보고서 빌드·푸시·공개 본문 확인",
+        "expected": "지침 반영·설치본 해시 일치·보고서 빌드·푸시·공개 본문 확인",
+        "qa": "요구 문구·사용자 작업 보존 예외·해시·빌드·공개 URL 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "설치본 해시·원격 본문 대조, 1039개 빌드·36502개 링크 검사, 829b2583 푸시·Actions 41791569616 성공·공개 HTTP200 본문 일치"
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-04T07:22:42.7079789Z",
+        "summary": "전체 완료 기준 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "설치본 해시·원격 본문 대조, 1039개 빌드·36502개 링크 검사, 829b2583 푸시·Actions 41791569616 성공·공개 HTTP200 본문 일치",
+            "evidence": "Actions 41791569616 및 공개 보고서 HTTP200",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
