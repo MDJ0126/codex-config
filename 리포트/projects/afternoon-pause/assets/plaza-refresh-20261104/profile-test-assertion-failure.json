@@ -1,0 +1,40 @@
+{
+  "startedAt": "2026-11-04T05:01:01.492Z",
+  "kind": "release",
+  "population": 4,
+  "seconds": 8,
+  "checks": [
+    {
+      "name": "Release runtime",
+      "passed": true
+    },
+    {
+      "name": "Profile open",
+      "passed": true
+    },
+    {
+      "name": "Biography input reachable",
+      "passed": true
+    },
+    {
+      "name": "Save button inside window and persisted value",
+      "passed": false
+    }
+  ],
+  "samples": [],
+  "errors": [],
+  "warnings": [
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+  ],
+  "events": [],
+  "browser": "Chrome/156.0.8078.80",
+  "failure": "Error: Save button inside window and persisted value"
+}

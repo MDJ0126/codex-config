@@ -1,0 +1,121 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>최종 화면 보정: 프로필 버튼·최대 닉네임과 웹 회귀 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">오</span><span>오후의 틈</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>최종 화면 보정: 프로필 버튼·최대 닉네임과 웹 회귀</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">전체 UI·이동·광장·AI 개선 후 발견한 프로필 버튼 넘침을 보정하고 최종 웹을 다시 검사했습니다.</p><div class="post-byline"><time datetime="2026-11-04T05:05:04.458Z">2026년 11월 4일 오후 2:05 KST</time><span>v1.0.1</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>요청 기능 전체 적용 후 추가 발견한 프로필 내부 배치까지 보정했습니다. 최신 Unity Play110개와 실제 웹 입력/프로필 저장·재열기·새로고침을 검증했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>추가 보완: 폭379.68px인 프로필 내부에 이전452px 기준 좌표가 남아 저장·신고 버튼이 오른쪽을 넘었습니다. 씬 RectTransform10개를 보정하고 최대16자 한글 닉네임 폭을 확보했습니다. 원본 에셋·Runtime 코드는 직전 검증 버전과 동일합니다.</p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/final-social-ai-profile.png" alt="보정 전: 저장/신고 버튼 우측 넘침" loading="lazy"><figcaption>보정 전: 저장/신고 버튼 우측 넘침</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/release-profile-saved.png" alt="보정 후: 버튼이 창 내부에 있고 긴 닉네임/저장 안내 표시" loading="lazy"><figcaption>보정 후: 버튼이 창 내부에 있고 긴 닉네임/저장 안내 표시</figcaption></figure></p>
+<ul>
+<li>좌상단 닉네임·상태, 머리 위 이름표를 어두운 배경/밝은 글자로 바꾸었습니다. 상태는 작은 팝업이고 상세 창은 X로 닫습니다.</li>
+<li>채팅은 하단 가운데600px,18px 글자와 반투명 어두운 기록 배경으로 바꿉니다. 상세 창을 열어도 다른 메뉴/월드 조작이 가능하며 실제 입력창 편집 중에는 이동을 막습니다. Enter 포커스는 UI Submit 다음 프레임에 적용합니다.</li>
+<li>캐릭터16개·일반 동작117개를 스크롤 목록으로 제공합니다. 씬의10개 행을 재사용합니다. 착석/전환30개는 일반 목록에서 제외하고 원본 카탈로그·벤치 착석을 보존합니다.</li>
+<li>클릭 경로6m 이상은 달리기, 도착2.8m 이내는 걷기입니다. 가속/감속과 거리별 추적 속도를 적용하고 카메라 강제 회전을 제거합니다. 수동 입력·입력창·대상 이탈 시 추적을 중단합니다.</li>
+<li>광장48×38→80×64m(면적 약2.81배). 산책로·분수 테라스·서쪽 쉼터·화단·상점·나무18개·총 벤치12개·저장 NavMesh를 배치합니다. 자체 텍스처 없는 하늘/태양과 기존 태양 광원을 연결합니다.</li>
+<li>실제 인원(본인 포함)5명 미만이면 각 클라이언트가 부족분만 로컬 AI로 채웁니다. 현재 멀티플레이 연결이 없으므로 기본은 본인1+AI4입니다. <code>SetHumanPopulation</code>은 향후 인원 수신부에서 호출할 연결 지점이며 서버 생성/동기화는 없습니다.</li>
+<li>이름표·대화·방문자 목록의 AI 꼬리표와 반복 자기소개를 없애고 일상 문구·발화 간격을 적용합니다. 프로필에는 AI 캐릭터와 기기 내 준비된 응답임을 명시합니다.</li>
+</ul>
+<p>추가 보완: 일반 실행의 초당 진단 JSON/프레임 배열 발행을 끄고 측정 시에만 활성화했습니다. 실제 웹에서 발견한 자동 이동 중 동작 선택 충돌은 자동 경로/추적을 반환한 뒤 동작을 재생하도록 수정했습니다.</p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/before-world.png" alt="UI 변경 전: 같은1920×1080·카메라 위치. 동작 코드 일부는 수정 후 상태에서 시각 기준만 촬영" loading="lazy"><figcaption>UI 변경 전: 같은1920×1080·카메라 위치. 동작 코드 일부는 수정 후 상태에서 시각 기준만 촬영</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/after-world.png" alt="변경 후: 명확한 닉네임/상태와 가운데 채팅, 같은 카메라 위치" loading="lazy"><figcaption>변경 후: 명확한 닉네임/상태와 가운데 채팅, 같은 카메라 위치</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<p>최신 배치 빌드 추가 실측: AI6명 중앙30.01FPS/p95 34ms/최대108ms, AI12명 중앙29.98FPS/p95 34ms/최대100ms. <a class="report-link" href="../assets/plaza-refresh-20261104/release-6.json">AI6</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/release-12.json">AI12</a>.</p>
+<p>최신 검증: <a class="report-link" href="../assets/plaza-refresh-20261104/release-source-play.json">Unity Play110개</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/release-functional.json">웹 기능 회귀</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/release-profile.json">프로필 저장/재열기/새로고침7개</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/release-frozen-manifest.json">고정 소스/산출물 SHA</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/release-build-result.json">최종 빌드24,596,787bytes</a>. 임시 Editor 검사 도구 제거 후 Runtime38/RuntimeEditor38/Editor1 컴파일 통과. 브라우저 검사는 기존 소개글 덧붙임과 테스트 중복 실행을 수정해 재실행했으며 실패 기록도 보존합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>빌드/브라우저</th>
+<th align="right">AI</th>
+<th align="right">FPS 중앙값</th>
+<th align="right">프레임 p95 ms</th>
+<th align="right">최대 ms</th>
+<th align="right">전경 CPU 1코어 %</th>
+<th align="right">배경 CPU %</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>compare-before-0</td>
+<td align="right">0</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">34.0</td>
+<td align="right">10.20</td>
+<td align="right">2.497</td>
+</tr>
+<tr>
+<td>compare-before-6</td>
+<td align="right">6</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">133.0</td>
+<td align="right">13.87</td>
+<td align="right">0.599</td>
+</tr>
+<tr>
+<td>compare-before-12</td>
+<td align="right">12</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">118.0</td>
+<td align="right">14.70</td>
+<td align="right">0.448</td>
+</tr>
+<tr>
+<td>final-0</td>
+<td align="right">0</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">36.0</td>
+<td align="right">9.07</td>
+<td align="right">0.324</td>
+</tr>
+<tr>
+<td>final-6</td>
+<td align="right">6</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">100.0</td>
+<td align="right">12.77</td>
+<td align="right">1.340</td>
+</tr>
+<tr>
+<td>final-12-long</td>
+<td align="right">12</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">142.0</td>
+<td align="right">14.61</td>
+<td align="right">0.014</td>
+</tr>
+<tr>
+<td>final-edge-6</td>
+<td align="right">6</td>
+<td align="right">30.01</td>
+<td align="right">34.0</td>
+<td align="right">83.0</td>
+<td align="right">10.64</td>
+<td align="right">0.344</td>
+</tr>
+</tbody></table>
+</div><p>최종 산출물 24596788바이트(24.60MB), 직전24.14MB 대비 약1.88% 증가입니다. 테스트 PC는GTX970/D3D11 WebGL2,1920×1080,목표30FPS입니다. 같은 PC·카메라 설정·캐릭터를 사용했지만 AI 랜덤 행동과 OS 부하가 달라 작은 CPU/로딩 차이를 개선으로 단정하지 않습니다. CPU는 renderer TaskDuration의 단일 코어 비율이며 전체 PC CPU가 아닙니다.</p>
+<ul>
+<li><a class="report-link" href="../assets/plaza-refresh-20261104/final-source-play.json">최종 Native Play93개</a>: 입장·닉네임·목록 끝/검색/절대 항목 선택·비모달 이동·Enter·프로필 AI 안내·최소 인원0/1/2/4/5/6/12와 음수/큰 수·거리별 이동·추적 실이동/정지/수동 중단·자동 이동 중 동작·확장 NavMesh·착석/기립을 확인했습니다.</li>
+<li>최종 웹은 실제 포인터/휠/키와 IME 조합을 사용했습니다. <a class="report-link" href="../assets/plaza-refresh-20261104/final-functional.json">UI/이동 기능</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-social.json">실제 AI 클릭/프로필/따라가기</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-12-long.json">AI12명120초</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-edge-6.json">Edge</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-production.json">진단 없는 일반 실행</a>. 실제 탭 숨김·5FPS/AI 중단·복귀와 WASM 메모리도 검사했습니다. 일반 실행 검사에서는 진단 객체가 계속 생성되지 않는 것을 확인했습니다.</li>
+<li><a class="report-link" href="../assets/plaza-refresh-20261104/final-build-result.json">최종 빌드</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-frozen-manifest.json">소스/산출물 SHA</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/final-audit.json">정리·컴파일</a>: 임시 Editor 도구 제거 후 Runtime38/RuntimeEditor38/Editor1 컴파일 통과.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/character-list.png" alt="캐릭터 스크롤 목록" loading="lazy"><figcaption>캐릭터 스크롤 목록</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/action-list.png" alt="좌석 클립을 제외한 일반 동작 스크롤" loading="lazy"><figcaption>좌석 클립을 제외한 일반 동작 스크롤</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/final-functional-chat-with-profile.png" alt="실제 웹: 프로필을 열고 Enter 한글 채팅" loading="lazy"><figcaption>실제 웹: 프로필을 열고 Enter 한글 채팅</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/final-social-ai-profile.png" alt="실제 웹: 프로필에만 AI/준비된 응답 명시" loading="lazy"><figcaption>실제 웹: 프로필에만 AI/준비된 응답 명시</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/plaza-refresh-20261104/sky-sun.png" alt="실제 하늘·태양과 확장 광장" loading="lazy"><figcaption>실제 하늘·태양과 확장 광장</figcaption></figure></p>
+<p><a class="report-link" href="../assets/plaza-refresh-20261104/ui-and-crowd.md">편집/연결 계약</a> · <a class="report-link" href="../assets/plaza-refresh-20261104/image-manifest.json">원본 이미지 크기와 내보내기 제한</a>.</p>
+<p>실패 기록도 보존했습니다. 이전 빌드의 창 이동/Enter 문제와 자동 이동 중 동작 취소를 실제 웹에서 재현했습니다. Editor와GameView 입력 상태를 혼동한 검사, 이동 AI의 오래된 화면 좌표, Play 종료 직후 저장 복원 대기 문제는 게임 수정과 분리해 원인을 확인하고 재검사했습니다. InputSystem1.19의 설치된 공식 테스트 설정을 참고하여 임시 복제 설정/가상 입력 장치로 실제 Player 행동을 판정했습니다.</p>
+<p>교훈 검토: 이번 버전의 입력 상태·재검사 근거는 프로젝트 QA에 기록합니다. 기존 전역의 근거/실행/원본 보존 원칙과 중복되어 전역 지침 추가·통합·변경 없음. 최신 AI 표시·최소 인원 선호는 프로젝트 AGENTS에 통합했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>실제 서버 인원 수신/멀티플레이 연결은 없습니다. 현재1인 기준4AI이며 향후 클라이언트 인원 수신부만 연결하면 됩니다. 수시간 안정성·다양한 GPU/화면 비율·모바일 성능은 이번 짧은 검사로 확정하지 않습니다. 최대 프레임 지연·Managed/JS 메모리 추이는 각 원자료에 보존하며 평균30FPS를 순간 지연0으로 해석하지 않습니다. WebGL 시작 시의 INVALID_ENUM/오디오 자동재생 경고는 원자료 warnings에 남기고 JavaScript 예외와 구분합니다. 에셋 구매 증빙/서비스 게임의 인터넷 배포는 이번 범위가 아닙니다. Affinity의 프로젝트 경로 접근이 거부되어 원본 PNG를 사용했고 재압축/GIF는 미실행입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초60<del>90분 + AI 추가 요청10</del>20분(합계70~110분)</li>
+<li>실제로 완료된 시간: 제안70~110분. 2026-11-04 12:21:07 KST 시작, 최신 검증 2026-11-04 14:04:56 KST. 공개 배포 확인은 별도 근거로 기록.</li>
+<li>XERJ: 미사용 — XERJ MCP/프로젝트 검색 스크립트 미제공. rg·현재 소스·설치 패키지 공식 테스트·Unity Play·실제 CDP 브라우저 계측으로 대체.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104050504458-v1.0.1.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=afternoon-pause&topic=qa&relatedReport=projects%2Fafternoon-pause%2Freports%2F2026-11-04-result-20261104050504458-v1.0.1.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=afternoon-pause">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=afternoon-pause">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
