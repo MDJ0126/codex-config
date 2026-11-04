@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "scope": "13 actual native before/after captures at matching resolution and unchanged camera source; sRGB channel averages lower in all13; not player performance or reference similarity",
+  "records": [
+    {
+      "scene": "11-PixelCameraGarden",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 158.08297583333334,
+      "afterMeanSRGB": 151.42724,
+      "beforeBytes": 80644,
+      "afterBytes": 81154,
+      "afterSha256": "96c8826cb249fe0f7d7db6400b1901e710f0fbc4dd524b0f3f0487a869efcb7e",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "13-PixelCameraWoodland",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 144.76818666666665,
+      "afterMeanSRGB": 103.43757916666668,
+      "beforeBytes": 402265,
+      "afterBytes": 376788,
+      "afterSha256": "45071d342384abd12e9d6fae538588cfd72f01c7d5116c48150ea8b736eb8f92",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "01-MeadowBreeze",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 158.07721333333333,
+      "afterMeanSRGB": 151.51370333333332,
+      "beforeBytes": 150239,
+      "afterBytes": 152785,
+      "afterSha256": "621ec911be258159a3b6cf3b50cbd012999765908c3ff1ebd3ec8b94a5055369",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "02-BlossomWalk",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 162.13277583333334,
+      "afterMeanSRGB": 155.48392833333332,
+      "beforeBytes": 183691,
+      "afterBytes": 187444,
+      "afterSha256": "158adcd08705672b82b9104dcf57f862835d12b25039cd90ce1bae23e341807c",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "03-ShrubGarden",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 159.40446666666665,
+      "afterMeanSRGB": 152.98215583333334,
+      "beforeBytes": 160473,
+      "afterBytes": 162359,
+      "afterSha256": "c82229031e5f13bf74dd4bf0dea273d95eee9ee966bb1e009de3ec94426324ec",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "04-YoungWoodland",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 159.53920083333333,
+      "afterMeanSRGB": 152.86490083333334,
+      "beforeBytes": 151072,
+      "afterBytes": 152180,
+      "afterSha256": "df91a37e57a908766c71d2c4fbbdbf23afc3434a11c9c6301250d76fdadbefa7",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "05-ContactTrail",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 158.18464583333335,
+      "afterMeanSRGB": 151.75985083333333,
+      "beforeBytes": 142854,
+      "afterBytes": 144242,
+      "afterSha256": "07e5ea4d7ff1501f45f26a83fcf5f61c082df5ed16c179df15a88e7b66717712",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "06-SteppedRhythm",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 160.55575833333333,
+      "afterMeanSRGB": 154.26408083333334,
+      "beforeBytes": 118270,
+      "afterBytes": 117599,
+      "afterSha256": "43a2c73318fcf853e0f80f22bac8ecc5a74cf9e5b2ba5c7067b4b32aaface2ee",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "07-SharedGusts",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 159.74893333333333,
+      "afterMeanSRGB": 152.94975083333335,
+      "beforeBytes": 192096,
+      "afterBytes": 194677,
+      "afterSha256": "0e3f05feb24091cba338bf426c158273c262a825fa0b50160d4e482ddd0d4e78",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "08-CloudLight",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 152.808045,
+      "afterMeanSRGB": 146.0526925,
+      "beforeBytes": 175804,
+      "afterBytes": 176648,
+      "afterSha256": "801e68a9fdf5526617b845238c71b215b9cf4d256329a7d8ba64029f42a6545e",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "09-MixedGarden",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 158.10758333333334,
+      "afterMeanSRGB": 151.52639333333335,
+      "beforeBytes": 148053,
+      "afterBytes": 151017,
+      "afterSha256": "f9bd61c7722a16f8bac62deeb7965ad4c9a277c206890e1d3e2d0a3367741314",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "10-ExtensionGrove",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 158.7993625,
+      "afterMeanSRGB": 151.99521000000001,
+      "beforeBytes": 159527,
+      "afterBytes": 163318,
+      "afterSha256": "995ec13e7e95f146c9a6bef764c0afe0eb97512af77c31562535505873fd4816",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    },
+    {
+      "scene": "12-PrismaticWoodland",
+      "size": [
+        800,
+        500
+      ],
+      "beforeMeanSRGB": 144.73902999999999,
+      "afterMeanSRGB": 103.45190833333334,
+      "beforeBytes": 549069,
+      "afterBytes": 508677,
+      "afterSha256": "b71e6f340f037c53ef72507b6c4e5dcb7c73d57ee8b5aee1068d9d0419f1b5ae",
+      "note": "Actual native renders, preserved camera source; wind phase differs. Pixel average is not a performance or perceptual-quality metric."
+    }
+  ]
+}

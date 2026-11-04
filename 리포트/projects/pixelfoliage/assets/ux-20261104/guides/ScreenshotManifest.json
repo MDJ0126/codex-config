@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "state": "partial",
+  "reason": "Actual English palette UI captured and inspected. Native Scene drag/shortcuts, other language layouts and light/dark coverage remain unverified.",
+  "captures": [
+    {
+      "file": "Images/Palette/Workspace-en.jpg",
+      "capturedAt": "2026-11-04T04:46:20.488960+00:00",
+      "sha256": "495dc751696b859ffaca041723bc77af34a70188f5145f55daa6654d02b0734e",
+      "uiLanguage": "en",
+      "observedScope": "Actual saved palette, five plant previews, selected tree details, borderless shared frame, collapsed advanced controls. Other nine language layouts and Scene drag unverified.",
+      "sourceHashes": {
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageAuthoring.cs": "2d3d23f38743ac8e99562c61d9a256859aba0eba306be3ecadb8f700a6a9d9bf",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePaintAuthoring.cs": "d917018e97486de588726b400c0346e3cbd8f6ff766a1b4fe017e1052339427a",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePaintDistribution.cs": "8eb74972de712f25986823104dad504c35c0941e847f0bacb0e5bcdd41752364",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePalette.cs": "8ac2e6d72a2018a2586048f7f479e4885cf02ad40ec0995b772eecec17301353",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePaletteInspector.cs": "5a37a571def3fc2f1929ec0a27e63c28cd4e781bef47c0cca81ec49c1d6029a2",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePaletteLabels.cs": "3c54a759b3003e38a11655aa881eb980b91f029aecebb50f70ab9827855f76fd",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePalettePanel.cs": "e03cf45a0dfbe0b43d9d56c15d9dc86f1bee0a1bc360fc983e3faf84468e09ea",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliagePlantPreview.cs": "d21d52030fdd9613ca49105b99340ebb290337d282fc00e724a39ce337161988",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageScenePainter.cs": "b377c361ca4c81feb972346e70ae43993332bb1d5c55faa6da2cae496f1cea5d",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageTheme.cs": "e1d5c42a5b24500faa467bf892f9b5e1596bbe4bb3c81a79dd110507fd5d4041",
+        "Assets\\TurnRoom\\PixoraStudio\\PixelFoliage\\Editor\\FoliageWindow.cs": "e9d353bf0feab23b47b13a69fd1dbe62f1e7027a0c5e048d8b281a08d838bd29"
+      }
+    }
+  ],
+  "currentSourceHashes": {
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs": "651dd61bf6347fbcd442696016e4ec1f876f6f9c2e80bfcc18e6f999f2c71e9a",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.uxml": "f624ace99f98ef6829b1e952b411da0e4d49433aada727d56c81ae075646e0f6",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.cs": "06275b8852fd08613e413ad57e1b0ae174f228c80197d93b31333222bff7af21",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/Shaders/PixelFoliage.shader": "93a95f8ee85e12474e26bae6770a1846785955d5b175681a81544fd90edeff33"
+  },
+  "previousUncapturedSourceHashes": {
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs": "651dd61bf6347fbcd442696016e4ec1f876f6f9c2e80bfcc18e6f999f2c71e9a",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.uxml": "f624ace99f98ef6829b1e952b411da0e4d49433aada727d56c81ae075646e0f6",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageTheme.cs": "06275b8852fd08613e413ad57e1b0ae174f228c80197d93b31333222bff7af21",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Runtime/Shaders/PixelFoliage.shader": "93a95f8ee85e12474e26bae6770a1846785955d5b175681a81544fd90edeff33"
+  }
+}

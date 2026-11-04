@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-Hans"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Pixel Foliage 指南</title><style>body{max-width:880px;margin:48px auto;padding:0 24px;font:17px/1.7 system-ui;color:#23372e;background:#f5f6f0}h1,h2{line-height:1.3}h2{margin-top:36px}p{white-space:normal}</style><main><h1>Pixel Foliage 指南</h1>
+<p>Pixora Studio 产品系列的独立植被工具。草、花、灌木和树木共享风场、云影和接触反应。</p>
+<h2>快速开始</h2>
+<p>1. 打开 Tools → TurnRoom → Pixora Studio → Foliage。找到示例并打开09-MixedGarden，按Play后访客会穿过植物。场景切换始终由用户明确操作。</p>
+<p>2. 为区域指定世界与配置。配置需要单个子网格和材质。网格原点位于底部，顶点透明度控制弯曲权重。树干可保持稳定，树冠随风移动。</p>
+<p>3. 动画帧率0表示连续，5/8/12表示分段。错开更新不会限制渲染帧率。手动时间可比较相同时刻。</p>
+<p>4. 选择表面层、射线高度和最大坡度，然后烘焙到碰撞体。烘焙替换列表，撤销可恢复。忽略未命中射线与触发器。</p>
+<h2>可选集成</h2>
+<p>单独安装Pixel Camera，选择场景相机和Full Camera预设后连接。URP Renderer Feature需另行设置。示例11属于捆绑配置。</p>
+<p>从Pixora导出透明纹理并选择。创建新材质不会修改纹理或工作文档。精灵植物使用带UV的四边形和Camera Facing。</p>
+<h2>示例</h2>
+<p>- 01-MeadowBreeze.unity · MeadowGrass · 0 FPS<br>- 02-BlossomWalk.unity · IvoryDaisy · 0 FPS<br>- 03-ShrubGarden.unity · RoundedShrub · 0 FPS<br>- 04-YoungWoodland.unity · BranchingTree · 0 FPS<br>- 05-ContactTrail.unity · MeadowGrass · 0 FPS<br>- 06-SteppedRhythm.unity · MeadowGrass · 5 FPS<br>- 07-SharedGusts.unity · RoseBlossom · 0 FPS<br>- 08-CloudLight.unity · MeadowGrass · 0 FPS<br>- 09-MixedGarden.unity · MeadowGrass · 0 FPS<br>- 10-ExtensionGrove.unity · BranchingTree · 0 FPS<br>- 12-PrismaticWoodland.unity · Layered colorful woodland · 0 FPS</p>
+<h2>验证与限制</h2>
+<p>开发预览0.1.0。静态编译不等于Unity导入和Play验证。由于暂停屏幕操作，外观、性能、选择器、撤销及全部语言布局尚未验证。Affinity标志仍待制作。</p>
+<p>已实现Built-in与URP17着色器路径。未确认HDRP、XR、移动性能和运动矢量。照明为自定义方向光和云影，不是完整PBR或附加光源支持。每区域使用最近16个交互源。</p>
+<p>11个独立示例无需Camera或Pixora。本体不引用示例；导入不自动打开场景或修改构建设置。<br></p><p>交互更新频率默认为10Hz，0表示每次请求都采集。轨迹持续时间控制角色经过后的恢复，0禁用历史。动画FPS0保持连续风。分段动画不会跳过GPU绘制。SoftGarden-Lightweight在现有Automatic条件下复用原图，不降低原始几何渲染分辨率。桌面控制已暂停，当前UI和改进场景的新截图尚未验证。</p><section id="prismatic-woodland"><h2>Prismatic Woodland</h2><p>Prismatic Woodland：打开 Samples/Scenes/12-PrismaticWoodland.unity。此参考研究以接近正面的正交相机展示八种树冠配色、灌木、蕨类、花卉、玄武岩悬崖及垂藤。树木与地被共享风场，悬崖和垂藤为静态。大气及柔光使用示例网格材质，无需图像纹理或额外后处理包。可选13-PixelCameraWoodland将相同场景连接至360p Full Camera。URP仍需现有Renderer Feature。已在开发QA项目捕获Built-in实际外观，性能及参考一致性尚未验证。 修订场景包含48棵树、45个灌木、260个蕨类及136组花卉，前景改为有真实反射的河流。示例平面反射和柔和Bloom仅支持Built-in，不是URP功能。反射默认宽512像素、12Hz，每次更新增加一次场景渲染。可选Pixel Camera在Bloom后处理。外观通过实际捕获检查，不保证其他平台性能。</p></section></main><section id="pastel-examples"><p>温暖的粉彩示例：Camera保留原有相机与效果演示，增加柔和光照及花园边界。植被示例保留接触路径与同条件帧率对比。Prismatic Woodland包含48棵树、45丛灌木、260丛蕨类、136组花和6座覆苔守护者、猫头鹰、兔子雕像。雕像静止，植物共享风。几何增加会提高渲染成本，并非性能优化。水面反射与Bloom仅为Built-in示例效果。</p></section><p id="palette-guide-link"><a href="PaletteGuide.zh-Hans.html">植被调色板</a></p></html>
