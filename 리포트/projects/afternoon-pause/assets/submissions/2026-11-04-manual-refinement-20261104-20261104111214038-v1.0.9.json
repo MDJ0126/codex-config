@@ -1,0 +1,531 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "점프/입장 전후 실제 화면·물리/뼈 표본·수정·새 웹·정리/공개",
+    "outcome": "제공 점프 클립을 파일에서 복원. 실제 화면/웹 QA는 계속 보류.",
+    "proposedTime": "최초25~40분, 프리팹 추가8~12분. 전체35~55분 예상. 추가 리그·낙하·재검증20~30분 안내. 이번 후속20~30분. 이번 실행 검증/수정15~25분.",
+    "actualTime": "제안 범위의 구현·실제 QA·정리와1차 공개 검증: 2026-11-04 17:42:47 KST → 2026-11-04 18:50:41 KST, 67분54초. 최종 기록 등록 2026-11-04 18:51:42 KST. 마지막 배포 확인 시각은 별도 공개 검증 JSON과 채팅 최종 보고에 기록합니다. 후속 시작2026-11-04 18:57:15 KST. 이번 파일 구현/부분검사 종료 2026-11-04 19:21:57 KST (24분42초). 전체 요청 완료 시각은 아직 없습니다. 원본 점프 복원 후속 시작2026-11-04 19:44:01 KST, 파일 수정/부분검사 2026-11-04 19:47:19 KST. 전체 검증 완료 시각은 보류. 재개2026-11-04 20:10:22 KST.",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공, rg·현재 소스/씬·실행으로 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "refinement-20261104",
+    "round": 10,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "사용자 화면 지적과 후속 프리팹/구름 요청 구현·실제 웹 QA·정리",
+    "completionCriteria": "경계선 겹침 제거·꽃/매대 받침·머리 위 시간 제거/프로필과 좌상단 시계·닉네임 위 작은 인기도·개선된 말풍선·게임 UI/클라이언트/서버 제거·스페이스 점프 및1Hz 원격 재생·상인3종/UI별 프리팹 참조 보존·블록 구름·최신 웹/기능/성능/정리/공개 보고·캐릭터16종 전용 Avatar/제공 보행·인기도0숨김·비행기 낙하/착지·원격 입장/서버 높이 시간 제한·스카이다이빙/낙하산 전개/착지·점프 상승/하강/착지·원격 상태·숨김/Esc 복원·인기도0 빈 공간/배경 접기와 양수 복원",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104104725603-v1.0.8.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "옥상/가판대 수정",
+        "action": "담장/건물 겹침의 실제 좌표 확인·윗면 겹침 제거·받침 테이블과 화분 배치",
+        "expected": "동일 실제 카메라 전후·콜라이더/표면 접촉/중복면 확인",
+        "qa": "동일 실제 카메라 전후·콜라이더/표면 접촉/중복면 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 실행 및 최신 웹 QA 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "HUD/말풍선 정리",
+        "action": "머리 시간 제거·좌상단/프로필 시계·닉네임 위 작은 인기도·둥근 말풍선",
+        "expected": "실제 UI·닉네임/시간 위치·한글/짧은/긴 메시지 가독성",
+        "qa": "실제 UI·닉네임/시간 위치·한글/짧은/긴 메시지 가독성",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 실행 및 최신 웹 QA 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "미니게임 제거",
+        "action": "씬·클라이언트·서버 게임 코드와 패킷 제거",
+        "expected": "버튼/컴포넌트/DTO 제거·API404·기존기능 회귀",
+        "qa": "버튼/컴포넌트/DTO 제거·API404·기존기능 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 실행 및 최신 웹 QA 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "점프",
+        "action": "즉시 수평 이동 유지하면서 지상 스페이스 점프·착지·상태/애니메이션·1Hz 원격 이벤트",
+        "expected": "지상/공중/착석/입력포커스·원격 재생·착지·서버 경계",
+        "qa": "지상/공중/착석/입력포커스·원격 재생·착지·서버 경계",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 실행 및 최신 웹 QA 통과"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "상인/UI 프리팹과 구름",
+        "action": "상인3종/기능별UI/블록 구름 프리팹·씬 연결/이벤트 보존",
+        "expected": "실제 prefab instance·재열기·누락 스크립트/버튼0·구름 표시",
+        "qa": "실제 prefab instance·재열기·누락 스크립트/버튼0·구름 표시",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 실행 및 최신 웹 QA 통과"
+      },
+      {
+        "id": "T07",
+        "order": 6,
+        "title": "캐릭터 리그와 인기도0",
+        "action": "원본/복제/실제 리그 자세 대조·16종 Avatar·전용 보행·인기도0 숨김",
+        "expected": "뼈 기준 오차 기록·전용 Avatar16종·실제 이동 화면·0숨김/양수표시",
+        "qa": "원본 대비·16종 Play·실제 이동 전후·UI 값검사",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "16종 전용 Avatar·0숨김·4초 입장·Esc/숨김·1Hz 원격 실제 검사 통과"
+      },
+      {
+        "id": "T08",
+        "order": 7,
+        "title": "비행기 낙하 입장",
+        "action": "4초 첫 입장/낙하/착지·Esc/숨김 복구·1Hz 원격 높이와 시간 제한",
+        "expected": "공중 입장→착지→TPS 조작/충돌 복원, 재접속 지상",
+        "qa": "실제 Play/두 웹·숨김/Esc·1Hz/서버 높이 만료",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "16종 전용 Avatar·0숨김·4초 입장·Esc/숨김·1Hz 원격 실제 검사 통과"
+      },
+      {
+        "id": "T06",
+        "order": 8,
+        "title": "최종 QA/정리/보고",
+        "action": "최신 빌드·두 브라우저/성능·임시 도구 정리·공개 보고",
+        "expected": "실제 동작·산출물 해시·저장/정리·공개 본문/첨부",
+        "qa": "실제 동작·산출물 해시·저장/정리·공개 본문/첨부",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "최신 빌드·QA/정리·공개 본문/이미지9개/목록 검증 완료"
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "스카이다이빙/활강 자세",
+        "action": "제공 전체 클립 실제 목록 확인·편집 가능한 프로젝트 Humanoid 포즈·단계 연결",
+        "expected": "실제 단계 전환·착지/중단 복원·실행 오류0·편집 가능 결과",
+        "qa": "실제 Play와 최신 웹 단계/원격/중단/자세 화면 대조",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "파일 구현 및 부분 검사 통과, Unity Play/웹 화면 검증 대기"
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "title": "낙하산 프리팹",
+        "action": "경량 캐노피/줄 메시·전개/수납·로컬/원격 표현",
+        "expected": "실제 단계 전환·착지/중단 복원·실행 오류0·편집 가능 결과",
+        "qa": "실제 Play와 최신 웹 단계/원격/중단/자세 화면 대조",
+        "dependsOn": [
+          "T09"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "파일 구현 및 부분 검사 통과, Unity Play/웹 화면 검증 대기"
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "title": "점프 공중 단계",
+        "action": "제공 Standing-Jump 원본으로 점프 복원·낙하로 중간 절단하지 않음·원격 점프와 일반 추락 구별",
+        "expected": "실제 단계 전환·착지/중단 복원·실행 오류0·편집 가능 결과",
+        "qa": "실제 Play와 최신 웹 단계/원격/중단/자세 화면 대조",
+        "dependsOn": [
+          "T10"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": "원본 GUID 연결·합성 Jump 제거·컴파일 및 상태13/에셋20 통과. 실제 물리/시각 검증 대기"
+      },
+      {
+        "id": "T13",
+        "order": 12,
+        "title": "인기도0 행과 배경 접기",
+        "action": "이름표/좌상단/프로필의 인기도 행·후속 행·배경 높이를 함께 접고 양수에서 복원",
+        "expected": "빈 행/여백 제거·양수에서 원래 배치 복원·기존 버튼/사진 보존",
+        "qa": "0→양수→0 실제 화면/크기·버튼 위치·프리팹 참조 검사",
+        "dependsOn": [
+          "T11"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "파일 구현·참조 검사 통과. 실제 화면 미실행"
+      },
+      {
+        "id": "T12",
+        "order": 13,
+        "title": "최종 실행/정리/공개 QA",
+        "action": "Unity/최신 웹·두 접속·실제 화면·해시·정리·공개 보고",
+        "expected": "실제 단계 전환·착지/중단 복원·실행 오류0·편집 가능 결과",
+        "qa": "실제 Play와 최신 웹 단계/원격/중단/자세 화면 대조",
+        "dependsOn": [
+          "T13"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T09",
+      "T10",
+      "T11",
+      "T13",
+      "T12"
+    ],
+    "scopeChange": "사용자가 컴퓨터 유즈 재허용. 점프와 비행기 낙하를 실제 화면·뼈/물리 표본으로 관찰한 뒤 수정·실행 QA.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T09:14:42.895Z",
+        "summary": "실제 Unity6000.0.83f1 Play122개 통과, 실패 이력 보존 후 수정 재검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T09:46:40.704Z",
+        "summary": "실제 Play161·웹17·서버11·최신 제공 해시/정리 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-04T09:46:40.704Z",
+        "summary": "실제 Play161·웹17·서버11·최신 제공 해시/정리 통과",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T05": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현·실제 실행·기능/참조/성능 검증 통과",
+            "evidence": "QA/Refinement/native-result.json(161), web-result.json(17), server-tests-final.txt(11), arrival-apply.json, served-proof.json, cleanup-files.json, cleanup-sessions.json",
+            "dependencies": {
+              "T07": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-04T09:51:42.669Z",
+        "summary": "전체 현재 버전 QA와 공개 배포·본문·첨부9개 해시·목록 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T04": 1
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T05": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T07": 1
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "실제 구현/검증·정리와 공개 확인 통과",
+            "evidence": "QA/Refinement/native-result.json(161); web-result.json(17); server-tests-final.txt(11); performance-final.json; served-proof.json; cleanup-files.json; cleanup-sessions.json; public-first-proof.json",
+            "dependencies": {
+              "T08": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T10:21:57.220Z",
+        "summary": "파일 구현·컴파일/상태13/서버12/정적 에셋20 통과, 실제 UI/Play/웹 QA는 사용자 화면 중단으로 미실행",
+        "results": [
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "파일/부분 검사만 수행. 실제 Play/웹/시각·물리 검증은 보류",
+            "evidence": "QA/Airborne/compile-result.json; state-tests.json; server-tests.txt; static-checks.json; initial-authoring-partial-error.txt",
+            "dependencies": {
+              "T06": 2
+            }
+          },
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "파일/부분 검사만 수행. 실제 Play/웹/시각·물리 검증은 보류",
+            "evidence": "QA/Airborne/compile-result.json; state-tests.json; server-tests.txt; static-checks.json; initial-authoring-partial-error.txt",
+            "dependencies": {
+              "T09": 1
+            }
+          },
+          {
+            "taskId": "T11",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "파일/부분 검사만 수행. 실제 Play/웹/시각·물리 검증은 보류",
+            "evidence": "QA/Airborne/compile-result.json; state-tests.json; server-tests.txt; static-checks.json; initial-authoring-partial-error.txt",
+            "dependencies": {
+              "T10": 1
+            }
+          },
+          {
+            "taskId": "T13",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "파일/부분 검사만 수행. 실제 Play/웹/시각·물리 검증은 보류",
+            "evidence": "QA/Airborne/compile-result.json; state-tests.json; server-tests.txt; static-checks.json; initial-authoring-partial-error.txt",
+            "dependencies": {
+              "T11": 1
+            }
+          },
+          {
+            "taskId": "T12",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "파일/부분 검사만 수행. 실제 Play/웹/시각·물리 검증은 보류",
+            "evidence": "QA/Airborne/compile-result.json; state-tests.json; server-tests.txt; static-checks.json; initial-authoring-partial-error.txt",
+            "dependencies": {
+              "T13": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-04T10:47:19.195Z",
+        "summary": "합성 Jump를 제거하고 제공 Standing-Jump로 복원·컴파일/상태13/정적20 통과. Play미실행.",
+        "results": [
+          {
+            "taskId": "T11",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "원본 클립 참조와 소스 검증만 수행, 실제 점프/낙하/착지는 미실행",
+            "evidence": "QA/Airborne/restore-jump.cjs; jump-restore-compile.json; state-tests.json; static-checks.json",
+            "dependencies": {
+              "T10": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
