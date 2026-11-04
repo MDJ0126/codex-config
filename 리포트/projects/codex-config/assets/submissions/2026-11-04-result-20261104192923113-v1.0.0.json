@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "UI 재구성 재진입 검증 규칙 통합",
+    "summary": "Foliage 실제 저장·재열기 검증에서 확인한 재진입 예방 원칙을 기존 Unity UI 지침에 통합했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "초기값 주입과 동일 값 이벤트가 UI 재구성 콜백에 재진입하지 않도록 하고 실제 저장·닫기·재열기로 확인하도록 기존 Unity UI 규칙에 통합했습니다. 프로젝트별 오류 경위는 Pixora 버그 보고서에 분리했습니다.",
+    "verification": "설치본과 설정 저장소 AGENTS.md 해시 일치 확인. Sync.ps1 -Direction Push 실행·커밋·브랜치 푸시 성공. 실행 화면이 없는 지침 수정이므로 장식 스크린샷은 만들지 않았습니다.",
+    "remaining": "기존 실행 중인 다른 대화의 자동 적용은 주장하지 않습니다.",
+    "outcome": "기존 규칙에 짧은 행동 원칙을 통합하고 사용자의 최신 간결한 보고·수정 범위별 전후 캡처 지침을 보존했습니다.",
+    "proposedTime": "제품 QA 최초 예상 15~25분에 포함",
+    "actualTime": "2026-11-05 04:19:21 KST 교훈 통합, 04:26 KST 동기화 브랜치 푸시. main 공개 배포는 보고서와 함께 검증.",
+    "xerjEvidence": "코드 검색 불필요; 검증된 Pixora 실행 근거를 규칙에 통합.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}

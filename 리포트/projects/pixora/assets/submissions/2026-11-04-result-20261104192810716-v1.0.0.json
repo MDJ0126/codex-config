@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "result",
+    "title": "Pixora Studio 제출 전 수정·실제 QA 결과",
+    "summary": "문서·Foliage 오류와 스토어 문구·키 이미지를 수정하고 최종 패키지를 업로드했습니다. 최종 제출은 실행하지 않았습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "문서 상대 경로와 노출된 HTML 주석을 수정했습니다. 4개 포털 언어의 요약·설명·기술정보·AI 고지·변경 이력 20개 저장값을 대조했습니다. Affinity에서 고유 Studio 로고의 아이콘·카드·커버를 제작하고 포털에 반영했습니다. 개발용 저작 스크립트를 고객 패키지에서 제외하고 혼합 줄바꿈 8개 파일을 정규화했습니다. 공유 팝업 판별의 Unity 비공개 멤버 접근을 공개 Win32 기반으로 교체했습니다.\n\n### Image Maker 가이드\n\n전: 잘못된 루트 이미지 경로로 본문 이미지가 깨졌습니다.\n\n![Image Maker 가이드 전](../assets/release-ready-20261105/docs-image-maker-before.jpg)\n\n후: 실제 본문의 이미지 3개가 로드됩니다.\n\n![Image Maker 가이드 후](../assets/release-ready-20261105/docs-image-maker-after.jpg)\n\n### Foliage 가이드\n\n전: 잘못된 PaletteGuide 경로와 주석 문자가 표시됐습니다.\n\n![Foliage 가이드 전](../assets/release-ready-20261105/docs-foliage-render-before.jpg)\n\n후: 링크를 고치고 주석 노출을 제거했습니다.\n\n![Foliage 가이드 후](../assets/release-ready-20261105/docs-foliage-render-after.jpg)\n\n### 영문 판매 설명\n\n전: 이전 저장 화면입니다.\n\n![영문 판매 설명 전](../assets/release-ready-20261105/portal-description-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![영문 판매 설명 후](../assets/release-ready-20261105/portal-description-after.jpg)\n\n### 한국어 판매 설명\n\n전: 이전 저장 화면입니다.\n\n![한국어 판매 설명 전](../assets/release-ready-20261105/portal-ko-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![한국어 판매 설명 후](../assets/release-ready-20261105/portal-ko-after.jpg)\n\n### 일본어 판매 설명\n\n전: 이전 저장 화면입니다.\n\n![일본어 판매 설명 전](../assets/release-ready-20261105/portal-ja-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![일본어 판매 설명 후](../assets/release-ready-20261105/portal-ja-after.jpg)\n\n### 중국어 판매 설명\n\n전: 이전 저장 화면입니다.\n\n![중국어 판매 설명 전](../assets/release-ready-20261105/portal-zh-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![중국어 판매 설명 후](../assets/release-ready-20261105/portal-zh-after.jpg)\n\n### 변경 이력\n\n전: 이전 저장 화면입니다.\n\n![변경 이력 전](../assets/release-ready-20261105/portal-release-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![변경 이력 후](../assets/release-ready-20261105/portal-release-after.jpg)\n\n### 스토어 미디어\n\n전: 이전 저장 화면입니다.\n\n![스토어 미디어 전](../assets/release-ready-20261105/portal-media-before.jpg)\n\n후: 수정 후 저장값을 다시 연 실제 포털 화면입니다.\n\n![스토어 미디어 후](../assets/release-ready-20261105/portal-media-after.jpg)",
+    "verification": "| 범위 | 실제 결과 |\n|---|---|\n| 문서 | 36개 문서, 594개 장 참조 검사: 누락 306 → 0. 9언어 Overview 전환 및 실제 이미지 확인 |\n| 패키지 | 2678개 파일, 최종 r4 가져온 파일 해시 전부 일치. 개발 폴더 미포함 |\n| 공식 검사 | 27 통과·2 경고·0 실패. 경고는 포함한 저작 원본 ZIP과 문서 JPG |\n| 설치 | r3 빈 프로젝트 가져오기, r4 재가져오기, r4 샘플 제거 후 핵심 어셈블리 컴파일 통과 |\n| 실제 UI | Image Maker 프리셋 선택·Undo, Camera 프리셋 선택·실제 렌더, Foliage 생성·저장·선택·재열기 |\n| 판매 정보 | 4언어 20필드 재조회 일치, 가격 $10 유지, Built-in만 체크 |\n| 미디어 | 키 이미지 3개 교체, 기존 21개 갤러리와 동영상 유지. 브라우저 동영상 종료까지 재생, 마지막 구간 음소거 해제 확인 |\n| Affinity | 네이티브 원본 3개 프로젝트 저장. 카드 재열기 후 픽셀 해시 동일, dirty=false |\n\n최종 SHA-256: `8c75d3de52ba9ecbc0e26217b50216dc979fb7f38481500fcfeae7536287f317`.\n\n[공식 검사](../assets/release-ready-20261105/native-prepare-r4.json) · [파일 해시 대조](../assets/release-ready-20261105/import-hashes.json) · [업로드 결과](../assets/release-ready-20261105/upload-r4.json) · [4언어 저장 대조](../assets/release-ready-20261105/store-copy-verification.json) · [Foliage 버그 보고서](2026-11-04-bug-20261104192810215-v1.0.0.html)\n\n![Camera 실제 렌더](../assets/release-ready-20261105/unity-camera-preset-selected.png)\n\n![Image Maker 실제 프리셋](../assets/release-ready-20261105/unity-image-maker-retro16.png)\n\n![제출 전 화면](../assets/release-ready-20261105/portal-submit-final.jpg)",
+    "remaining": "최종 I accept와 소유권 선서는 수행하지 않았습니다. 업로드 서버의 파일 목록 처리 완료는 별도 검증 대상으로 남깁니다. 과거 문서 스크린샷 전체와 모든 기능·모든 언어·라이트/다크 조합의 전수 UI QA는 완료로 표시하지 않습니다. 이번 Foliage 언어 촬영 중 pt-BR/en 재촬영은 창 활성화 제한으로 미확인입니다. 네이티브 Redo 라우팅은 통과 근거가 없습니다. 영상 전체의 새 청취를 완료했다고 주장하지 않으며 기존 승인된 음원 권리·청취 기록을 유지합니다. Affinity 연결 중 앱 종료 원인은 미확인이고 원래 미저장 문서 6개를 복구 보존했습니다. 보고 이미지는 원본 캡처를 보존했고 가독성 때문에 200KB 목표 초과 이미지가 있습니다. GIF를 제작하지 않았습니다. 전역 교훈은 기존 Unity UI 규칙에 통합했으며 다른 실행 중 대화의 자동 적용은 주장하지 않습니다.",
+    "outcome": "최종 패키지 r4 업로드 성공. 공식 검사 실패 0건, 경고 2건이며 Unity 가져오기와 샘플 제거 후 본체 컴파일이 통과했습니다. 포털 파일 처리는 별도 확인 중입니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "68분 경과. 2026-11-05 04:28:00 KST 기록. 포털 처리·전체 종료 검증은 별도 상태로 기록.",
+    "xerjEvidence": "Status 노드 미실행, Search 복구 시간 초과. 현재 소스는 rg와 실행 결과로 대조.",
+    "priority": "high",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}

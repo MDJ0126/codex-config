@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-04T19:19:21.344Z",
+  "action": "Integrated into existing Unity UI rule",
+  "lesson": "변경 콜백이 화면을 재구성하는 UI에서는 초기값 주입과 동일 값 이벤트가 재진입을 만들지 않도록 하고, 실제 저장·닫기·재열기로 검증한다.",
+  "evidence": "Foliage palette saved asset + recursive ChangeEvent log; native save/close/reopen passed after initialization and same-value guards",
+  "sha256": "9e00ecb3ccbe30ff329d6cc6569da3d24b149691eaaab59ad5e90cdc46da9e4c"
+}

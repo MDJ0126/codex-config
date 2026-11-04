@@ -1,0 +1,221 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 제출 전 전체 점검",
+    "summary": "Pixora Studio 제출 직전 수정·실제 QA 진행",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "문서·패키지·미디어·포털 수정 및 실제 QA 진행 중",
+    "outcome": "수정 및 검증 진행 중",
+    "proposedTime": "15~25분",
+    "actualTime": "2026-11-05 03:19:37 KST 시작",
+    "xerjEvidence": "Status 노드 미실행, Search 복구 시작 시간 초과. 현재 파일 rg로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-presubmission-audit-20261105",
+    "round": 4,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "제출전누락과심사위험을증거로확인",
+    "completionCriteria": "문서동작·패키지현재성·미디어와권리·포털저장값·공식요건대조,미확인구분,공개점검보고",
+    "previousManual": "projects/pixora/reports/2026-11-04-manual-pixora-presubmission-audit-20261105-20261104175318008-v1.0.2.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "문서와진입동작",
+        "action": "9언어가이드·링크·이미지·로고·실제기능설명대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "빌드된문서의각장·언어전환검사와누락목록; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 2,
+        "result": "36문서594장과본문참조검사,깨진참조306건검출.제품정상판정아님."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "제출패키지와검증근거",
+        "action": "포털파일과로컬후보의인벤토리·해시·최신소스·공식Validator·신규설치기록대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "현제출파일에대해검증됐는지구분; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 2,
+        "result": "포털구형업로드와후보3개실제tar·현재소스대조.현재소스137개9어셈블리컴파일통과.클린설치미실행."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "판매미디어",
+        "action": "실제저장된키이미지·스크린샷·영상과로컬최신미디어·음원권리대조; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "갤러리범위·순서·영상재생/오디오검사; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 2,
+        "result": "키3개·갤러리21개검토,HLS실제1440프레임·오디오신호검사.기존동일ID사용자청취근거구분."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "심사페이지저장값",
+        "action": "공식SDK읽기전용으로상태·지원버전·설명·AI고지·링크·파일정보확인; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "영어및지원판매언어와실제제품범위대조; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 2,
+        "result": "초안1541558의4언어저장값·변경이력·AI·키이미지·영상읽기대조.UIPreview미실행."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "제출가능여부판정",
+        "action": "최신Unity공식제출요건과전체점검결과통합; 확인된 문제 수정과 수정 범위별 실제 전후 화면 확보",
+        "expected": "실제 배포 대상에 수정 포함 및 항목별 실행 검증",
+        "qa": "차단/주의/미확인과근거를공개보고; 실제 Unity·브라우저·포털에서 결과 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 3,
+        "result": "2.5.g지적철회.실제업로드영수증과Frozen해시일치,두패키지에WindowFrame.Popup.cs없음.정정v1.0.1푸시,공개배포미확인."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "사용자가 문제 수정·실제 컴퓨터 유즈 QA·수정 범위별 전후 촬영·제출 직전 준비를 요청했습니다. 기존 검토 이력을 보존하고 각 작업 revision을 올려 실제 수정과 QA를 수행합니다. 최종 Submit는 제외합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1908641Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "36문서594장과본문참조검사,깨진참조306건검출.제품정상판정아님.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1989592Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "포털구형업로드와후보3개실제tar·현재소스대조.현재소스137개9어셈블리컴파일통과.클린설치미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990184Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "키3개·갤러리21개검토,HLS실제1440프레임·오디오신호검사.기존동일ID사용자청취근거구분.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990456Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "초안1541558의4언어저장값·변경이력·AI·키이미지·영상읽기대조.UIPreview미실행.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T16:17:37.1990832Z",
+        "summary": "제품합격이아닌검토실행결과와미확인범위검사",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "제출보류판정과보고서작성.공개배포검증은남음.",
+            "evidence": "Docs/Testing/2026-11-05/pixora-submission-audit/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-04T17:53:17.5574961Z",
+        "summary": "기존판정범위오류확인",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존해결본과개발미추적파일을섞어2.5.g미해결처럼보고함",
+            "evidence": "업로드해시35ebbb...7f4f22와실제tar포함파일",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-04T17:53:17.5655917Z",
+        "summary": "실제파일대조와철회문검증",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "영수증해시일치·문제파일두패키지미포함확인,정정문에서위반행제외.공개배포는별도미완료.",
+            "evidence": "recheck-25g.json 및정정v1.0.1",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
