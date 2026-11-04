@@ -1,0 +1,116 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "즉각 이동·통일 UI·1초 멀티플레이·서버 신고",
+    "summary": "이동 반응을 복원하고 통일된 UI와 게스트 멀티플레이·중복 탭 차단·신고를 실제 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "90~150분",
+    "actualTime": "2026-11-04 14:17:28 KST 시작",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공. rg·현재 소스·실행 검사로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "multiplayer-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "즉시 가감속·일관된 채팅/프로필·무배경 X·실제 게스트 멀티·중복 탭 방지·채팅/상태1초·서버 신고",
+    "completionCriteria": "두 독립 브라우저 실제 입장/이동/착석/동작/상태/프로필/채팅, 서버 신고 저장·쿨다운·1초 상태 전달·중복 탭 무로딩·이탈/복귀·웹 성능·공개 보고 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "이동·UI 수정",
+        "action": "즉시 수평 속도, 채팅 로그/프로필 공통 스타일, X 배경 제거를 씬/프리팹에 적용",
+        "expected": "입력 첫 프레임 걷기/달리기·해제 즉시0, 1920×1080 실제 전후와 열기/닫기/한글 확인",
+        "qa": "입력 첫 프레임 걷기/달리기·해제 즉시0, 1920×1080 실제 전후와 열기/닫기/한글 확인",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "서버 세션·패킷 정책",
+        "action": "Node 표준 HTTP 서버와 게스트 세션·중복 ID·1초 tick·채팅/신고 제한·영구 신고 저장 구현",
+        "expected": "독립 클라이언트 입장/퇴장·변조/범위/중복·정확한1초 경계·지속 저장과 비공개 신고 접근 검증",
+        "qa": "독립 클라이언트 입장/퇴장·변조/범위/중복·정확한1초 경계·지속 저장과 비공개 신고 접근 검증",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Unity 멀티 연결",
+        "action": "기존 World/Character 계층에 원격 캐릭터·프로필·동작·착석·대화 연결, 서버 인원으로 로컬AI 보충",
+        "expected": "실제 웹 두 환경에서 상대 이동/외형/이름/동작/착석/상태/공개프로필/채팅/차단/신고·복구 확인",
+        "qa": "실제 웹 두 환경에서 상대 이동/외형/이름/동작/착석/상태/공개프로필/채팅/차단/신고·복구 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "중복 탭·운영·웹 QA",
+        "action": "Unity 로딩 전 탭 잠금, 연결 오류/복구·호스팅 설정·실제 웹 성능/패킷 측정",
+        "expected": "같은 브라우저 중복 Unity/네트워크 차단·첫 탭 종료 후 재입장·1Hz·채팅1초·백그라운드 복귀·두 환경 검사",
+        "qa": "같은 브라우저 중복 Unity/네트워크 차단·첫 탭 종료 후 재입장·1Hz·채팅1초·백그라운드 복귀·두 환경 검사",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "결과 공개·정리",
+        "action": "임시 Unity 도구 정리·현재 소스/빌드 해시·문서·Tracefolio 공개 결과와 전체 QA",
+        "expected": "현재 구현 컴파일·실제 화면·수치·제한·HTTPS 본문/첨부 검증",
+        "qa": "현재 구현 컴파일·실제 화면·수치·제한·HTTPS 본문/첨부 검증",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
