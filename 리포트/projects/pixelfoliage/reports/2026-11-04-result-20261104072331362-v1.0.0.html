@@ -1,0 +1,71 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Woodland 숲 후경과 하늘 디테일 개선 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">P</span><span>턴룸 › Pixel Foliage</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Woodland 숲 후경과 하늘 디테일 개선</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">줄기 뒤 빈틈을 짙은 초록 숲으로 채우고, 하늘의 대칭 곡선을 불규칙한 색 띠와 입자 경계로 바꿨습니다.</p><div class="post-byline"><time datetime="2026-11-04T07:23:31.362Z">2026년 11월 4일 오후 4:23 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>원본의 중요한 차이는 밝은 전경 뒤를 막는 어두운 숲 내부와, 불규칙하게 풀린 하늘의 색 경계였습니다. 두 Woodland 씬에 후경 나무27그루·3겹 실루엣과 짙은 녹색 수관을 적용했습니다. 하늘은 비대칭 곡선·넓은 민트 경계·다층 노이즈로 조정했습니다. 실제 Built-in Linear 렌더를 전후로 확인했습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>비교 항목</th>
+<th>사용자 원본에서 관찰</th>
+<th>수정 전</th>
+<th>이번 반영</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>줄기 뒤 공간</td>
+<td>짙은 초록 숲이 하늘을 가림</td>
+<td>밝은 청록 하늘이 비침</td>
+<td>3겹 불투명 숲 실루엣과 후경 수목</td>
+</tr>
+<tr>
+<td>수관 대비</td>
+<td>밝은 나무 사이 짙은 녹색 수목</td>
+<td>밝은 색 위주</td>
+<td>기존 Forest 수관을 어둡게, 후경3종 추가</td>
+</tr>
+<tr>
+<td>하늘 색 띠</td>
+<td>넓고 비대칭이며 경계가 흐트러짐</td>
+<td>대칭적이고 균일한 곡선</td>
+<td>중심을 비튼 곡선과 넓은 민트 경계</td>
+</tr>
+<tr>
+<td>하늘 표면</td>
+<td>크기가 다른 반점·입자감</td>
+<td>균일한 미세 입자</td>
+<td>큰 노이즈·세부 노이즈·입자 경계 혼합</td>
+</tr>
+</tbody></table>
+</div><p><figure><img class="report-image" src="../assets/depth-20261104/before-0.png" alt="수정 전: 줄기 뒤로 밝은 하늘" loading="lazy"><figcaption>수정 전: 줄기 뒤로 밝은 하늘</figcaption></figure>
+수정 전: 나무 사이로 하늘이 넓게 보였고 하늘 경계가 균일했습니다.</p>
+<p><figure><img class="report-image" src="../assets/depth-20261104/after-v1-0.png" alt="수정 후: 어두운 숲과 불규칙한 하늘" loading="lazy"><figcaption>수정 후: 어두운 숲과 불규칙한 하늘</figcaption></figure>
+수정 후: 줄기 뒤 어두운 숲과 전경의 짙은 초록 수관으로 대비를 보강했습니다. 원본 이미지의 정확한 복제라고 평가하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>기존 Models/PrismaticWoodland 분류에504삼각형의 편집 가능한 ForestInterior 메시를 추가했습니다. 서로 다른 높이·깊이의 불규칙한 숲 실루엣3겹입니다. 하늘 색을 검게 칠해 대신한 것이 아니라 실제 불투명 메시입니다.</li>
+<li>기존 메시를 공유하는 DeepForest·DeepJade·DeepMist 프로필로 각 씬에27그루를 추가했습니다. 총75그루이며 기존48그루는 유지합니다. 전경 Forest 프로필의 색도 짙게 조정했습니다.</li>
+<li>하늘의 곡선 중심을 비틀고 넓은 민트색 경계·3주파수 노이즈·입자로 색 경계를 풀었습니다. 새로운 이미지 텍스처를 만들거나 외부 에셋을 수정하지 않았습니다.</li>
+<li>샘플 메타데이터·영문 장면 문서·9언어 가이드에 새 후경과 비용 제한을 반영했습니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity6000.0.83f1 Built-in Linear,960×600, 기존 카메라와 동일 바람 시간. 일반 식생·Pixel Camera 통합 두 씬 실제 렌더를 확인했습니다. Native shader errors0.</li>
+<li>기존 씬 직렬화 블록422개/423개와 카메라 값을 보존하고 각 씬에28오브젝트(나무27+숲 내부1)를 추가했습니다. 새 메시504삼각형·모델 총38개를 실제 메타데이터와 대조했습니다.</li>
+<li>실제 Unity 헤더를 사용한 D3DCompile16엔트리 통과. 기존 공통 함수의 uninitialized-variable 경고는 보존되며 오류는 없습니다. 기존 에셋 검사에서 새 모델로38≠37이 검출된 실패를 기록한 뒤 누락된 모델 목록을 갱신하고12검사를 재통과했습니다.</li>
+<li>작업용 Unity는 Native dirtyBefore=false·dirtyAfter=false를 확인하고 정상 종료했습니다. 해당 PID 종료를 재조회했으며 기존 사용자 앱을 종료하지 않았습니다.</li>
+</ul>
+<p><a class="report-link" href="../assets/depth-20261104/verification.json">소스·구조·Native 근거</a> · <a class="report-link" href="../assets/depth-20261104/cleanup-proof.json">저장·정리 검증</a></p>
+<p><figure><img class="report-image" src="../assets/depth-20261104/before-1.png" alt="통합 씬 수정 전" loading="lazy"><figcaption>통합 씬 수정 전</figcaption></figure>
+동일 Pixel Camera 설정의 통합 씬 수정 전입니다.</p>
+<p><figure><img class="report-image" src="../assets/depth-20261104/after-v1-1.png" alt="통합 씬 수정 후" loading="lazy"><figcaption>통합 씬 수정 후</figcaption></figure>
+동일 Pixel Camera 설정의 통합 씬 수정 후입니다.</p>
+<p>실제 Unity 출력 PNG를 편집 없이 보존했습니다. 픽셀과 명암 근거 보존을 위해 일부 파일은200KB 목표를 초과합니다. 사용자 원본 이미지는 공개 보고서에 재배포하지 않고 직접 관찰한 차이만 기록했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>원본의 나무 형태·배치·볼류메트릭 조명까지 일치시킨 것은 아닙니다. 추가 나무는 렌더 비용을 늘리며 프레임 성능을 측정하지 않았습니다. 물·블룸의 URP 지원과 다른 플랫폼은 이번 검증 범위가 아닙니다. 검토 패키지 재출력은 하지 않았습니다.</p>
+<p>교훈 검토: 색감만이 아니라 전경·후경의 차폐와 하늘 경계의 규칙성까지 원본과 대조했습니다. 기존 실제 비교·원본 보존·정리 지침을 적용했으며 추가 전역 규칙은 만들지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~20분</li>
+<li>실제로 완료된 시간: 2026-11-04 16:14:41 KST 시작 · 16:22:25 KST 구현·Native 검사·정리 확인. 공개 배포 확인 시각은 최종 채팅에 기록.</li>
+<li>XERJ: 실패 — Xerj.ps1 Status에서 node is not running 확인. 직전 Search의 node.lock 점유 실패 근거를 유지하고 rg·현재 소스·실제 Unity 렌더로 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104072331362-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelfoliage&topic=qa&relatedReport=projects%2Fpixelfoliage%2Freports%2F2026-11-04-result-20261104072331362-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelfoliage">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelfoliage">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

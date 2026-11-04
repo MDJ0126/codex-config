@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-04T07:20:29.281544+00:00",
+  "sceneChecks": [
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/12-PrismaticWoodland.unity",
+      "originalBlocksPreserved": 422,
+      "newObjects": 28,
+      "rearTrees": 27,
+      "cameraPreserved": true
+    },
+    {
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/13-PixelCameraWoodland.unity",
+      "originalBlocksPreserved": 423,
+      "newObjects": 28,
+      "rearTrees": 27,
+      "cameraPreserved": true
+    }
+  ],
+  "native": [
+    {
+      "unity": "6000.0.83f1",
+      "colourSpace": "Linear",
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/12-PrismaticWoodland.unity",
+      "shaderErrors": 0,
+      "at": "2026-11-04T07:18:03.4031331Z"
+    },
+    {
+      "unity": "6000.0.83f1",
+      "colourSpace": "Linear",
+      "scene": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/13-PixelCameraWoodland.unity",
+      "shaderErrors": 0,
+      "at": "2026-11-04T07:18:03.5649370Z"
+    }
+  ],
+  "shaderEntries": 16,
+  "sourceHashes": {
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/PrismaticWoodland/ForestInterior.asset": "3b4929fd91a9c61b2d136e4125c49fb2821f4c5fcebc698662f6cffe9f081fc9",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Models/PrismaticWoodland/ForestInterior.asset.meta": "3dfb6131646be62a481c6eb44084ea445e00f17ed30dc45a25e8c87a0517949d",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandForestInterior.asset": "9a6141d49797b35aae0b6a7ad048ca0d51c9747775d5b956235cdb8e8a6c2aa4",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandForestInterior.asset.meta": "970bd0de0727737f039e4e73e4d88f59b80b66251d90ade75a76e5eca13ec226",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepForest.asset": "47d5bc72d7cf8667d52f16ff453852dbddb2f4ec0749c61fffee45a568044455",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepForest.asset.meta": "6826b1483bc704f690dd380a0b3e840af3ca22bccb621ad09b02faced30c3636",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepJade.asset": "d074b01d6c135f5318e453d2ff0a1e63638ce64d1268ccf1463594451752c833",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepJade.asset.meta": "791d38ef09b0b003d47880c216c2de6d3d317ed0a053925ef0430484a941815a",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepMist.asset": "b1169dd2b2ba917bc82cb7a298ffe31c6fb88cd6699c639d70c094a91ecb8fef",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandDeepMist.asset.meta": "0abed5ba198ff91ec714d1f8acc39a302a4eeef4c5e576a5069ced12a0f336c1",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Profiles/WoodlandForestCanopy.asset": "91188ce2f33b404661b855bd82fc307947193774d00ef311eab34380c3e75d5b",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Scenes/12-PrismaticWoodland.unity": "9cdb8a7ab97772c10dc49c1be1819c9fc0a023af7fa33c5b522f6cf7fe69cf18",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Integrations/PixelCamera/Samples/Scenes/13-PixelCameraWoodland.unity": "17e7322564f4a53eeb56edeb9bb1cfd57066aca0a9a0acc9685029fd0c14a679",
+    "Assets/TurnRoom/PixoraStudio/PixelFoliage/Samples/Shaders/WoodlandAtmosphere.shader": "ff39160746158b9c2cc67fd90154924fdab95368676d81d5ac7e291632b219f5"
+  },
+  "passed": true
+}
