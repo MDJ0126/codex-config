@@ -1,0 +1,227 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Image Maker 도트 정돈·일반 이미지 픽셀화 추가",
+    "summary": "도트 정돈 기능 구현과 실제 QA 완료",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "스토어 패키지 반영은 별도입니다. 수동 격자와 검증 범위는 결과 보고서에 명시했습니다.",
+    "outcome": "알고리즘·9언어 UI/문서·실제 입력/저장/재열기/내보내기 QA 통과",
+    "proposedTime": "15~25분",
+    "actualTime": "기능·실행 검증 31분, 2026-11-05 05:34:47 KST. 최초15~25분 예상 초과. 이후 보고서 공개 배포 확인 별도.",
+    "xerjEvidence": "Status: XERJ node is not running. 이전 복구 실패 기록을 확인하고 rg로 현재 소스 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-image-cleanup-20261105",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "불균일한 도트 이미지와 일반 이미지를 균일한 격자·팔레트로 재변환",
+    "completionCriteria": "기존 동작 보존, 새 변환 픽셀 검증, 9언어 UI/문서, 실제 입력·편집·저장·내보내기 QA, 전후 캡처·공개 보고",
+    "previousManual": "projects/pixora/reports/2026-11-04-manual-pixora-image-cleanup-20261105-20261104202844727-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "변환과 편집 흐름",
+        "action": "격자 셀의 대표색·영역 평균 샘플링을 구현하고 기존 변환·프리셋·히스토리에 연결",
+        "expected": "변경 동작을 실제 실행 근거로 확인",
+        "qa": "기존 모드 동일성, 잡색·투명도·팔레트·비율·직렬화 실제 테스트",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "변환·저장검사21통과.기존Nearest호환·팔레트·투명도·픽셀동일성확인."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "실제 UI와 문서",
+        "action": "9언어 UI 및 가이드에 사용 흐름을 추가하고 원본·결과와 전후를 실제 창에서 확인",
+        "expected": "변경 동작을 실제 실행 근거로 확인",
+        "qa": "실제 파일 입력·모드 선택·프리뷰·Undo/Redo·저장·재열기·내보내기 검증",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "9언어실제화면·네이티브입력/UndoRedo/선택/저장/재열기/PNG출력·라이트다크검증.36문서612장누락0및브라우저본문이미지실제로드."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "최종 검증과 공개 보고",
+        "action": "변경 범위 회귀 QA와 원본 보존·저장·정리 후 중앙 보고서 공개",
+        "expected": "변경 동작을 실제 실행 근거로 확인",
+        "qa": "컴파일·알고리즘·UI 근거, 전후 캡처와 개별 보고서 공개200 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "현재소스와QA로딩소스일치·이전실패보존·전후캡처·보고서생성/링크검사.공개배포와정리는별도최종확인."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "기존3개작업과이력을유지하고프로필Inspector의언어갱신·Undo표시연동을보강하여실제선택과전환을재검증했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T20:12:00Z",
+        "summary": "실제 선택 UI 실패",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "PopupField가Unity기본메뉴를표시함",
+            "evidence": "screenshots/picker-before.png",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-04T20:28:43.496Z",
+        "summary": "수정 후 실제 회귀 QA",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "변환·저장검사21통과.기존Nearest호환·팔레트·투명도·픽셀동일성확인.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "9언어실제화면·네이티브입력/UndoRedo/선택/저장/재열기/PNG출력·라이트다크검증.36문서612장누락0및브라우저본문이미지실제로드.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재소스와QA로딩소스일치·이전실패보존·전후캡처·보고서생성/링크검사.공개배포와정리는별도최종확인.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-11-04T20:28:43.496Z",
+        "summary": "전체 완료 기준 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "변환·저장검사21통과.기존Nearest호환·팔레트·투명도·픽셀동일성확인.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "9언어실제화면·네이티브입력/UndoRedo/선택/저장/재열기/PNG출력·라이트다크검증.36문서612장누락0및브라우저본문이미지실제로드.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재소스와QA로딩소스일치·이전실패보존·전후캡처·보고서생성/링크검사.공개배포와정리는별도최종확인.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-04T20:34:47.191Z",
+        "summary": "프로필 Inspector 보강 후 실제 회귀 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "변환·저장검사21통과.기존Nearest호환·팔레트·투명도·픽셀동일성확인. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "9언어실제화면·네이티브입력/UndoRedo/선택/저장/재열기/PNG출력·라이트다크검증.36문서612장누락0및브라우저본문이미지실제로드. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재소스와QA로딩소스일치·이전실패보존·전후캡처·보고서생성/링크검사.공개배포와정리는별도최종확인. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "final",
+        "at": "2026-11-04T20:34:47.191Z",
+        "summary": "마지막 소스·실행 결과·문서·정리 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "변환·저장검사21통과.기존Nearest호환·팔레트·투명도·픽셀동일성확인. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "9언어실제화면·네이티브입력/UndoRedo/선택/저장/재열기/PNG출력·라이트다크검증.36문서612장누락0및브라우저본문이미지실제로드. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재소스와QA로딩소스일치·이전실패보존·전후캡처·보고서생성/링크검사.공개배포와정리는별도최종확인. 프로필Inspector네이티브선택/Undo/언어전환추가검증.",
+            "evidence": "projects/pixora/assets/image-cleanup-20261105/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
