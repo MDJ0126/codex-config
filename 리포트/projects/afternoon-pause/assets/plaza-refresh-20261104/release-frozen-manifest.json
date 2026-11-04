@@ -1,0 +1,271 @@
+{
+  "at": "2026-11-04T05:01:16.770Z",
+  "builds": [
+    {
+      "root": "Builds/WebOptimized",
+      "bytes": 24143127,
+      "files": [
+        {
+          "path": "Builds/WebOptimized/Build/WebOptimized.data.gz",
+          "bytes": 14119507,
+          "sha256": "9ec04996a37a828f166b3800bf79981dd3e5bc2312c5d3927d5d66cccd9be614"
+        },
+        {
+          "path": "Builds/WebOptimized/Build/WebOptimized.framework.js.gz",
+          "bytes": 86503,
+          "sha256": "ae37f46da2d34045b0c5eb623e024c8fdd2cce19fa9edb3d24aeaa461645b872"
+        },
+        {
+          "path": "Builds/WebOptimized/Build/WebOptimized.loader.js",
+          "bytes": 26455,
+          "sha256": "ca0065390dd4ade433647614d370823029bf14d71ce738e229d6377b17666a90"
+        },
+        {
+          "path": "Builds/WebOptimized/Build/WebOptimized.wasm.gz",
+          "bytes": 9905160,
+          "sha256": "d3d41978efea902688da8ec33cbc620eb2a68bcc0f292302c9042f3ef6a607fb"
+        },
+        {
+          "path": "Builds/WebOptimized/index.html",
+          "bytes": 5502,
+          "sha256": "3bd5646529d87880f1ac2587c1552cb311e271fcd1022f0d6f9829008a76370f"
+        }
+      ]
+    },
+    {
+      "root": "Builds/WebPlazaRelease",
+      "bytes": 24596787,
+      "files": [
+        {
+          "path": "Builds/WebPlazaRelease/Build/WebPlazaRelease.data.gz",
+          "bytes": 14565079,
+          "sha256": "c3ea49518a9be805cf8f79873254e25de6b8bd9b17399b644c7e48a5a5dda302"
+        },
+        {
+          "path": "Builds/WebPlazaRelease/Build/WebPlazaRelease.framework.js.gz",
+          "bytes": 86363,
+          "sha256": "0e56220d53d6ea293f2f11acb61252dc582095afe3ec7e4814638dda2be71c55"
+        },
+        {
+          "path": "Builds/WebPlazaRelease/Build/WebPlazaRelease.loader.js",
+          "bytes": 26455,
+          "sha256": "724cf7ef950249e5a8cfd36c068f6bee645443799ffc7c8963ac830bd37de59f"
+        },
+        {
+          "path": "Builds/WebPlazaRelease/Build/WebPlazaRelease.wasm.gz",
+          "bytes": 9912921,
+          "sha256": "b14d2bfb4a79c99b7ef7a6264b356c7d732d806f8bd66756556b96c4278c6052"
+        },
+        {
+          "path": "Builds/WebPlazaRelease/index.html",
+          "bytes": 5969,
+          "sha256": "71da2c3226b3251ce496294d167af6a92e2e8d9641918dca46ef753422ed706e"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "Assets/Scripts/AfternoonPause.Runtime.asmdef",
+      "sha256": "478b5f3a5ab2120c81cefbdd21e52cf62062272a5a16a44039875bfa50f6a9c9"
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "sha256": "012ec623de69986dfa9dd049d3bc959e752df3b8b60db462547688d20615bca7"
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "sha256": "ffa6423ac1433e22bcea26d3297daeb85c2df250ba0027a8648eb187625efaa0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "sha256": "8c27c708d2204b556a5a11b5818e05d35bb50125f6977e8049cf493e629ca1f9"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+      "sha256": "0f8259546412ccb35d32d15ff71cab6b6d40a12cb0be02dde2311557379e3286"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+      "sha256": "a669358b39e03a38f06e16a82607214ed695ec318dc978d77064721223631456"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "sha256": "1a611790ce055ce444d64d8e915112fe035c4db421c8a7a4dda5c896500c9443"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterActionCatalog.cs",
+      "sha256": "6ae194031c95bdaee3213955fc8d17ed4ccc988af780016426509b5cfe46b801"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "sha256": "985f9df9e532276c7eeaf1686b0dbc1a44e211225bc24d8678411146e6fed67e"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+      "sha256": "e0d5263288431dfe937c51e3b882e4e9bd6a0ee527b141ffa46da6860ac2af7a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+      "sha256": "e10ef986efce561cb8dbb6273bcf5daf810050a14c1ba668cfd184657d168156"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+      "sha256": "b642909574592526a4cae9d5b25a03920ebdf65b87da16f01f784f44e33efb60"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlayerGroundMarker.cs",
+      "sha256": "67486a4b5959604108e7ef3c2b5bdcc0991b9ae5f2d30fa796036295110c1464"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+      "sha256": "cdd4d6a9eecf566a5ce434b869573279c83a79fbf41b2d39bf30f4bf70c6da58"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+      "sha256": "c5b6c50f1815a3c530bb26e7c331bdbb22a770bf9e89293cf3f9a8d8691cb3e0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "sha256": "eeaaf9daa46817a4c1a557abe9a96ae2e15f7dc73f02cae49ae908e01cc46315"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "sha256": "68d25a9eb19691fd0b989cb0893f15b5c1756b92cfd9b6df625342c1d943ecef"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "sha256": "6f8767df194f2c804c7ee5d632af9599e40ed7ae80bd63e730676dcd42394b25"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "sha256": "f832adca5ca7cc9549b6494519a35a72ccb23f335b80b7ac124b0246d85f6a47"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+      "sha256": "b81b63a4693522b15b4a78786c02a5275cef4fff2762b1edbcc683cb83e18612"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/VisitorSelection.cs",
+      "sha256": "569fbd9432e4bc36fcffb0c02b3d37b2909c4fc2dd0a078d44318565c9fbd6cd"
+    },
+    {
+      "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+      "sha256": "81782ed9f829351044c67bdf2115288ca92755ae750e9ab70ae00053aac3e8fe"
+    },
+    {
+      "path": "Assets/Scripts/Management/CrowdManager.cs",
+      "sha256": "11ec66f4a0c5e91485779beef99de9695b2dd5f8fccd7c4dbf5343abd93ad428"
+    },
+    {
+      "path": "Assets/Scripts/Management/LocalCrowdPopulation.cs",
+      "sha256": "84d682b99983609f493d9bc0131cd6a47516ee46178eb21c7857eccdff1ba1c4"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaChat.cs",
+      "sha256": "a15180c9f39c0789bf95b19f2ed6cfb1b1aaf224433e72a3124101bb64aa43b5"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaConversation.cs",
+      "sha256": "d7149d20cc98fe52c7d4bf41e402c6f9dd4f2f2c7e43a3279099ae65c6d1e574"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+      "sha256": "b7a43604fe459d5e45d7f650e484ab6494382ebf84f4b5e2f6a03b0a54ff0511"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSession.cs",
+      "sha256": "501770bf97d2d9795129f5c4e188022e2470b1dd626dbc99aafe286a14512463"
+    },
+    {
+      "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+      "sha256": "72f538d7afc780bd63a0376173cee86b321d3c32d34b0b71e85c7998d20fcac6"
+    },
+    {
+      "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+      "sha256": "9963d73ab2baeef479b1073cdbd91203303a8c893a6aca755701cbab5f2dbbeb"
+    },
+    {
+      "path": "Assets/Scripts/Management/SocialRules.cs",
+      "sha256": "d6d26a219de12702ecc0489391ece662930e3e66352eb6d0abcff0ba1d4afb7f"
+    },
+    {
+      "path": "Assets/Scripts/Management/VisitorProfile.cs",
+      "sha256": "00047bb001dc94485250f96802580ecbc8652de9d7763c672fc220dfb2612c8d"
+    },
+    {
+      "path": "Assets/Scripts/UI/CharacterStage.cs",
+      "sha256": "bfabd0c1cdcc4da7c916c8751d5491d019fa45c7de6392c26ceb6844a5fa3a22"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaHUD.cs",
+      "sha256": "22bd85f387a5a653cd1495268e712ad1277f67e841740b1e1906d955740710f2"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+      "sha256": "814bdb5568989c4fcc939a79d436824bd3224014677b36e6884aeb218b2078bd"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+      "sha256": "5769bd167386243fd9f512b0fdc55f2326fe31eb32edc28dd58e4146f0a68e32"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaScrollList.cs",
+      "sha256": "3d9393c18d6d423c37b950107ee4c314bcacd5039b43dc33cfb52bcbfdacfea4"
+    },
+    {
+      "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+      "sha256": "be4880b9105e3d9e4c3d73e308cb25616975a49b85ce28da264477ef9b4cf334"
+    },
+    {
+      "path": "Assets/Scripts/UI/WebTextInputBridge.cs",
+      "sha256": "55e67fc2da0beb43927a4e55718d29345e66222df31148f376ec1bd5412a3088"
+    },
+    {
+      "path": "Assets/Plugins/WebGL/PauseBridge.jslib",
+      "sha256": "a58375e043c4470dd83718f5a0227441b619da260348218491e647f0f4c0a178"
+    },
+    {
+      "path": "Assets/WebGLTemplates/AfternoonPause/index.html",
+      "sha256": "41647f7c98328f95354d3741a2e6e3a787d900c589af13e92378b2b8df1af4af"
+    },
+    {
+      "path": "Assets/Scenes/AfternoonPlaza.unity",
+      "sha256": "fd968e76299e3c185171b78e271ac4e95075ac67820de23e723df35780bed221"
+    },
+    {
+      "path": "Assets/Settings/Plaza/Web_RPAsset.asset",
+      "sha256": "040b123fd02492d34a6a906310c698755dbe6373fa731e2bf1291bb4fda41ef5"
+    },
+    {
+      "path": "Assets/Settings/Plaza/link.xml",
+      "sha256": "e1370d69d4069e05a05dea1a9753deba422ebcdf646be8dff91c28ccb06a5340"
+    },
+    {
+      "path": "Assets/Settings/Plaza/AfternoonSky.mat",
+      "sha256": "bb66974a34d16501a2e499e7aef7a2ece09e42efc35b3df4131987730fde428b"
+    },
+    {
+      "path": "Assets/Settings/Plaza/PlazaSky.shader",
+      "sha256": "a2eb0aaf755e9fb5decb68cc8a8a37208fade061ada0cd882966ac217f35dd07"
+    },
+    {
+      "path": "Assets/Settings/Plaza/NavMesh-PlazaExpanded.asset",
+      "sha256": "0e83e0ce80d61531ad910d59420adcb69286698b91172fe33a697f16d70ddd9e"
+    },
+    {
+      "path": "Assets/Prefabs/UI/VisitorNameplate.prefab",
+      "sha256": "32b7263eafbd86d7d9e11dff68e188f3cdd9e2c439aff8b71c07d2a2740f92f9"
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "sha256": "1982002bbefcdda46c90a3c3b807eab9d1a089a2d775a137a56d05d25cb9224b"
+    },
+    {
+      "path": "ProjectSettings/QualitySettings.asset",
+      "sha256": "b56cddc096c41ca1d48d6e2858e119aac0152dfda45b1f9ce47076a378aa45c7"
+    }
+  ],
+  "temporaryToolRemoved": false,
+  "lessons": "전역 지침 추가·통합·변경 없음. 실제 탭 숨김은 Playwright 포커스 에뮬레이션과 분리해 raw CDP로 검증했으며 현재 프로젝트 QA에 기록. 외부 원본을 수정하지 않고 자체 WebGL 플러그인을 사용."
+}

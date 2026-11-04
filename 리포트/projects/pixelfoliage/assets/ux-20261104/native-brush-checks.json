@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "unity": "6000.0.83f1",
+  "platform": "Windows",
+  "input": "Native SendInput via computer-use sky, actual Scene view drag and keyboard shortcuts; no direct paint/Undo/Redo method calls for these steps",
+  "counts": {
+    "before": 5707,
+    "drag": 6017,
+    "undo": 5707,
+    "redo": 6017,
+    "reopen": 6017
+  },
+  "keys": [
+    "Ctrl+Z",
+    "Ctrl+Y",
+    "Ctrl+S"
+  ],
+  "reopen": "Native EditorSceneManager reopened the saved QA FlowScene; count6017 preserved",
+  "attempts": [
+    {
+      "key": "Ctrl+Shift+Z",
+      "observedCount": 5707,
+      "result": "Did not redo in this Windows session; retained as unsuccessful shortcut attempt"
+    }
+  ],
+  "scope": "Observed native route and counts; exact placement/Undo persistence separately covered by native API tests5086"
+}

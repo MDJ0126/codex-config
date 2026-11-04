@@ -1,0 +1,15 @@
+{
+    "startedAt": "2026-11-04T12:44:48.0988979+09:00",
+    "finishedAt": "2026-11-04T12:44:49.6369445+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "before",
+    "failure": "System.InvalidOperationException: Sequence contains no matching element\r\n  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <91ec04a334ad481db49c19fb6ee29e58>:0 \r\n  at AfternoonPause.Editor.RefreshPlayQA.Find[T] (System.String name) [0x0000d] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:345 \r\n  at AfternoonPause.Editor.RefreshPlayQA+<Run>d__11.MoveNext () [0x000da] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:137 \r\n  at AfternoonPause.Editor.RefreshPlayQA.Tick () [0x001c4] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:77 ",
+    "passed": false,
+    "preferencesRestored": true,
+    "baselineEnterFocused": false,
+    "baselineMovementBlocked": false,
+    "checks": [],
+    "errors": [],
+    "warnings": [],
+    "followSamples": []
+}

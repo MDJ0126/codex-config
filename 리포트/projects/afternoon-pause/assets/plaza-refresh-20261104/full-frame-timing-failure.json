@@ -1,0 +1,475 @@
+{
+    "startedAt": "2026-11-04T12:53:48.8226559+09:00",
+    "finishedAt": "2026-11-04T12:54:10.0106575+09:00",
+    "unityVersion": "6000.0.83f1",
+    "mode": "full",
+    "failure": "System.InvalidOperationException: 수동 이동 추적 중단\r\n  at AfternoonPause.Editor.RefreshPlayQA.Check (System.String name, System.Boolean passed) [0x00050] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:361 \r\n  at AfternoonPause.Editor.RefreshPlayQA+<Run>d__11.MoveNext () [0x012f4] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:302 \r\n  at AfternoonPause.Editor.RefreshPlayQA.Tick () [0x001c4] in C:\\Projects\\AfternoonPause\\Assets\\Editor\\RefreshPlayQA.cs:77 ",
+    "passed": false,
+    "preferencesRestored": true,
+    "baselineEnterFocused": false,
+    "baselineMovementBlocked": false,
+    "checks": [
+        {
+            "name": "입장·닉네임",
+            "passed": true
+        },
+        {
+            "name": "기본 본인1+AI4",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 0 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 1 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 2 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 4 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 5 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 6 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 12 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 -1 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "실제 인원 2147483647 부족분만 활성",
+            "passed": true
+        },
+        {
+            "name": "배경에서 보충한 AI도 중단",
+            "passed": true
+        },
+        {
+            "name": "성능 비교 오버라이드 0",
+            "passed": true
+        },
+        {
+            "name": "성능 비교 오버라이드 6",
+            "passed": true
+        },
+        {
+            "name": "성능 비교 오버라이드 12",
+            "passed": true
+        },
+        {
+            "name": "캐릭터16개·고정10행",
+            "passed": true
+        },
+        {
+            "name": "캐릭터 스크롤 마지막 범위",
+            "passed": true
+        },
+        {
+            "name": "스크롤 절대 항목 외형 변경",
+            "passed": true
+        },
+        {
+            "name": "좌석용 클립 제외·가상 목록",
+            "passed": true
+        },
+        {
+            "name": "동작 휠 마지막 범위",
+            "passed": true
+        },
+        {
+            "name": "검색 결과 목록",
+            "passed": true
+        },
+        {
+            "name": "스크롤 행 실제 애니메이션",
+            "passed": true
+        },
+        {
+            "name": "시팅 검색에도 좌석 클립 없음",
+            "passed": true
+        },
+        {
+            "name": "전체 일반 동작 복원",
+            "passed": true
+        },
+        {
+            "name": "창 열린 상태 Enter 채팅 포커스",
+            "passed": true
+        },
+        {
+            "name": "입력 중 캐릭터 이동 금지",
+            "passed": true
+        },
+        {
+            "name": "Enter 전송 후 입력 해제",
+            "passed": true
+        },
+        {
+            "name": "프로필 열고도 월드 이동",
+            "passed": true
+        },
+        {
+            "name": "다른 창 메뉴 전환",
+            "passed": true
+        },
+        {
+            "name": "X 닫기",
+            "passed": true
+        },
+        {
+            "name": "상태 팝업 표시",
+            "passed": true
+        },
+        {
+            "name": "상태 적용·팝업 닫기",
+            "passed": true
+        },
+        {
+            "name": "프로필 AI 표시",
+            "passed": true
+        },
+        {
+            "name": "이름표 AI 꼬리표 없음",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 0",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 1",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 2",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 3",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 4",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 5",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 6",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 7",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 8",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 9",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 10",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 11",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 12",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 13",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 14",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 15",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 16",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 17",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 18",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 19",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 20",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 21",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 22",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 23",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 24",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 25",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 26",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 27",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 28",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 29",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 30",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 31",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 32",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 33",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 34",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 35",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 36",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 37",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 38",
+            "passed": true
+        },
+        {
+            "name": "일상 대화 39",
+            "passed": true
+        },
+        {
+            "name": "짧은 클릭 경로",
+            "passed": true
+        },
+        {
+            "name": "가까운 클릭 걷기",
+            "passed": true
+        },
+        {
+            "name": "먼 클릭 경로",
+            "passed": true
+        },
+        {
+            "name": "먼 클릭 달리기",
+            "passed": true
+        },
+        {
+            "name": "확장 구역 실제 이동",
+            "passed": true
+        },
+        {
+            "name": "추적 실이동",
+            "passed": true
+        },
+        {
+            "name": "추적 카메라 강제 회전 없음",
+            "passed": true
+        },
+        {
+            "name": "추적 곁에서 안정 정지",
+            "passed": true
+        },
+        {
+            "name": "수동 이동 추적 중단",
+            "passed": false
+        }
+    ],
+    "errors": [],
+    "warnings": [],
+    "followSamples": [
+        {
+            "time": 14.008777618408204,
+            "distance": 8.868436813354493,
+            "speed": 2.034991979598999,
+            "x": 0.0,
+            "z": -19.75786018371582
+        },
+        {
+            "time": 14.241347312927246,
+            "distance": 8.221700668334961,
+            "speed": 4.360672950744629,
+            "x": 0.0,
+            "z": -18.975067138671876
+        },
+        {
+            "time": 14.434793472290039,
+            "distance": 7.351458549499512,
+            "speed": 5.1999640464782719,
+            "x": 0.0,
+            "z": -17.991653442382814
+        },
+        {
+            "time": 14.64006233215332,
+            "distance": 6.40408992767334,
+            "speed": 5.199998378753662,
+            "x": 0.0,
+            "z": -16.92425537109375
+        },
+        {
+            "time": 14.839359283447266,
+            "distance": 5.484336853027344,
+            "speed": 5.200033664703369,
+            "x": 0.0,
+            "z": -15.887913703918457
+        },
+        {
+            "time": 15.034615516662598,
+            "distance": 4.583230018615723,
+            "speed": 5.200000762939453,
+            "x": 0.0,
+            "z": -14.87258243560791
+        },
+        {
+            "time": 15.242070198059082,
+            "distance": 3.8651561737060549,
+            "speed": 2.8376410007476808,
+            "x": 0.0,
+            "z": -14.033146858215332
+        },
+        {
+            "time": 15.439290046691895,
+            "distance": 3.4283151626586916,
+            "speed": 2.7999820709228517,
+            "x": 0.0,
+            "z": -13.48093318939209
+        },
+        {
+            "time": 15.63697624206543,
+            "distance": 3.0362815856933595,
+            "speed": 2.321852684020996,
+            "x": 0.0,
+            "z": -12.97325325012207
+        },
+        {
+            "time": 15.86892032623291,
+            "distance": 2.707974433898926,
+            "speed": 1.7855829000473023,
+            "x": 0.0,
+            "z": -12.509258270263672
+        },
+        {
+            "time": 16.0731201171875,
+            "distance": 2.504145622253418,
+            "speed": 1.4527300596237183,
+            "x": 0.0,
+            "z": -12.185973167419434
+        },
+        {
+            "time": 16.271175384521486,
+            "distance": 2.3609561920166017,
+            "speed": 1.2173502445220948,
+            "x": 0.0,
+            "z": -11.926920890808106
+        },
+        {
+            "time": 16.469375610351564,
+            "distance": 2.2565250396728517,
+            "speed": 1.0438714027404786,
+            "x": 0.0,
+            "z": -11.70654296875
+        },
+        {
+            "time": 16.66881561279297,
+            "distance": 2.1696937084198,
+            "speed": 0.9192252159118652,
+            "x": 0.0,
+            "z": -11.513328552246094
+        },
+        {
+            "time": 16.870649337768556,
+            "distance": 2.0372278690338136,
+            "speed": 0.7098825573921204,
+            "x": 0.0,
+            "z": -11.35311508178711
+        },
+        {
+            "time": 17.07180404663086,
+            "distance": 1.9530155658721924,
+            "speed": 0.5681684613227844,
+            "x": -0.0028887614607810976,
+            "z": -11.228384017944336
+        },
+        {
+            "time": 17.27484130859375,
+            "distance": 1.9061330556869507,
+            "speed": 0.4857662618160248,
+            "x": -0.006583539769053459,
+            "z": -11.12398624420166
+        },
+        {
+            "time": 17.468374252319337,
+            "distance": 1.8895968198776246,
+            "speed": 0.4523516595363617,
+            "x": -0.009749775752425194,
+            "z": -11.03452205657959
+        }
+    ]
+}

@@ -1,0 +1,525 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "결과/첨부 공개 배포 확인 진행. 서버 인원 수신은 기존 멀티플레이 연결이 없으므로 향후 클라이언트 연결 지점만 제공. 수시간 안정성은 미실행.",
+    "outcome": "요청한 UI·이동·AI 보충·확장 환경 적용과 최종 Play93개/실제 웹 회귀·성능 완료. 공개 확인 진행",
+    "proposedTime": "최초60~90분 + AI 추가 요청10~20분(합계70~110분)",
+    "actualTime": "2026-11-04 12:21:07 KST 시작 → 구현·최종 웹 검증 2026-11-04 13:45:56 KST, 84분49초. 이후 공개 배포/외부 접근은 별도 확인.",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공. rg·현재 소스·Unity 실행·브라우저 계측으로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "plaza-refresh-20261104",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "요청한 HUD·창·목록·Enter·추적·거리별 이동·맵/하늘/태양을 실제 적용·검증",
+    "completionCriteria": "전체 요청 구현·실제 Unity/웹 조작·AI0/6/12명 전후 실측·임시 도구 제거·실제 화면·공개 결과",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-04-manual-plaza-refresh-20261104-20261104041304347-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 문제 재현·기준 화면",
+        "action": "Enter·창 입력 차단·추적 끊김을 현재 씬과 입력·실행 기록으로 확인한다.",
+        "expected": "현재 씬·저장값 보존·전 화면·문제별 근거",
+        "qa": "현재 씬·저장값 보존·전 화면·문제별 근거을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "현재 버전 최종 Native/웹 회귀·실제 화면 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "HUD·소셜 창·목록 개선",
+        "action": "명확한 이름/상태·상태 팝업·가운데 채팅·비모달 창·X 닫기·캐릭터/동작 스크롤 목록·좌석용 클립 제외를 씬/프리팹과 자체 코드로 적용한다. 최신 요청: 일반 UI의 AI 꼬리표/자기소개 반복 제거, 프로필에서 AI/준비된 응답 표시.",
+        "expected": "각 UI 편집 가능·스크롤/검색·다른 UI/월드 클릭·Enter 실제 입력 통과",
+        "qa": "각 UI 편집 가능·스크롤/검색·다른 UI/월드 클릭·Enter 실제 입력 통과을 현재 씬/실행으로 확인한다. 자동 이동 중 동작 선택 시 경로를 해제하고 실제 클립이 재생되는지도 검사한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "현재 버전 최종 Native/웹 회귀·실제 화면 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "자연스러운 이동·추적",
+        "action": "경로 기반 클릭 이동·근거리 걷기/원거리 달리기·거리별 추적 속도와 안정적인 카메라를 구현한다. 실제 인원(본인 포함)5명 미만이면 클라이언트 로컬 풀에서 부족분만 보충. 서버 구현/전송 없음.",
+        "expected": "장애물 우회·속도 전환·추적 실이동/정지·수동 중단·자동 회전 없음",
+        "qa": "장애물 우회·속도 전환·추적 실이동/정지·수동 중단·자동 회전 없음을 현재 씬/실행으로 확인한다. 동작 선택과 자동 경로 충돌을 회귀한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "현재 버전 최종 Native/웹 회귀·실제 화면 확인"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "확장 광장·하늘·태양",
+        "action": "기존 두 에셋을 보존하며 넓은 정원/상점/쉼터·산책로·하늘·태양을 씬 자산으로 작성하고 NavMesh를 저장한다.",
+        "expected": "확장 구역 이동 가능·충돌/좌석·실제 전후 디자인 화면·재사용/경량 구성",
+        "qa": "확장 구역 이동 가능·충돌/좌석·실제 전후 디자인 화면·재사용/경량 구성을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "현재 버전 최종 Native/웹 회귀·실제 화면 확인"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "실행·웹 성능·공개 기록",
+        "action": "실제 Play와 고정 웹 빌드에서 요청 기능·AI0/6/12명·숨김복귀를 검사하고 임시 도구 정리·공개 결과를 확인한다.",
+        "expected": "기능 회귀·프레임/CPU/메모리·정리 후 컴파일·현재 산출물 해시·공개 본문/첨부",
+        "qa": "기능 회귀·프레임/CPU/메모리·정리 후 컴파일·현재 산출물 해시·공개 본문/첨부을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "최종 고정 웹 검사·정리·해시 확인 완료. 공개 배포 확인 진행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "새 UI·환경 개선 요청. 외부 원본은 보존하고 기존 구조를 재사용한다. 사용자가 추가 요청한 AI 최소 합계5명 보충·자연스러운 준비 대화·프로필에서만 AI 표시를 T02/T03 r2에 포함. Esc 중단 뒤 파일 작업 후 Unity 검사를 재승인받았다. 원래 전체5개 작업을 보존한다. T02/T03 r3: 실제 웹에서 재현한 자동 이동 중 동작 취소를 수정하고 검사 항목을 보강. 입장·방문자 정적 문구까지 프로필 밖 AI 표시를 제거해 최종 별도 빌드에 포함. 이전 산출물/실패/QA는 보존한다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T12:43:55.5563173+09:00",
+        "summary": "QA가 기존 입력창 이름과 다른 이름을 조회. Inspector 필드 참조로 수정",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "QA가 기존 입력창 이름과 다른 이름을 조회. Inspector 필드 참조로 수정",
+            "evidence": "../assets/plaza-refresh-20261104/before-harness-name-failure.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T12:44:49.6369445+09:00",
+        "summary": "Unity가 새 소스를 읽기 전에 이전 QA 어셈블리로 실행. 컴파일 시각 확인 후 재검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Unity가 새 소스를 읽기 전에 이전 QA 어셈블리로 실행. 컴파일 시각 확인 후 재검사",
+            "evidence": "../assets/plaza-refresh-20261104/before-stale-assembly-failure.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-04T12:46:20.7986089+09:00",
+        "summary": "UI 변경 전 실제1920×1080 화면·저장값 복원. 동작 코드 일부는 수정 후 상태임을 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "UI 변경 전 실제1920×1080 화면·저장값 복원. 동작 코드 일부는 수정 후 상태임을 구분",
+            "evidence": "../assets/plaza-refresh-20261104/before-result.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-04T12:48:02.8534910+09:00",
+        "summary": "첫 실제 Play91개·목록·UI·AI 보충·이동 통과. 가속 후 재검사는 별도 기록",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "첫 실제 Play91개·목록·UI·AI 보충·이동 통과. 가속 후 재검사는 별도 기록",
+            "evidence": "../assets/plaza-refresh-20261104/full-first-pass.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T12:54:10.0106575+09:00",
+        "summary": "가속 후 회귀에서 수동 입력 중단 판정 실패. 프레임 조건 추가 후 원인 추적",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "가속 후 회귀에서 수동 입력 중단 판정 실패. 프레임 조건 추가 후 원인 추적",
+            "evidence": "../assets/plaza-refresh-20261104/full-frame-timing-failure.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-04T12:57:27.8250271+09:00",
+        "summary": "Editor 입력 관찰에서 키 상태가 유지되지 않음. 가상 장치와 복제 설정으로 분리",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "Editor 입력 관찰에서 키 상태가 유지되지 않음. 가상 장치와 복제 설정으로 분리",
+            "evidence": "../assets/plaza-refresh-20261104/full-keyboard-focus-failure.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-04T13:00:26.3019331+09:00",
+        "summary": "Editor에서 A는 눌렸으나 Player 쪽 추적은 유지. 입력 업데이트 대상 조사",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "Editor에서 A는 눌렸으나 Player 쪽 추적은 유지. 입력 업데이트 대상 조사",
+            "evidence": "../assets/plaza-refresh-20261104/full-gameview-routing-failure.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-11-04T13:05:23.4860272+09:00",
+        "summary": "GameView 입력 경로로 바꾼 뒤 Editor 키 상태 검사가 실패. 분리된 상태를 같은 것으로 판정한 검사 제거",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "GameView 입력 경로로 바꾼 뒤 Editor 키 상태 검사가 실패. 분리된 상태를 같은 것으로 판정한 검사 제거",
+            "evidence": "../assets/plaza-refresh-20261104/full-editor-state-failure.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "step",
+        "at": "2026-11-04T04:08:10.469Z",
+        "summary": "수정 전 고정 웹에서 실제 창 열기→이동 차단·Enter 채팅 미선택 재현",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "수정 전 고정 웹에서 실제 창 열기→이동 차단·Enter 채팅 미선택 재현",
+            "evidence": "../assets/plaza-refresh-20261104/before-web-issue-proof.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q10",
+        "kind": "step",
+        "at": "2026-11-04T13:08:26.8671087+09:00",
+        "summary": "GameView 실제 동작 기준 최종91개 통과. Editor A 상태 false와 실제 추적 중단을 함께 기록. 임시 입력 설정·저장값 복원",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "GameView 실제 동작 기준 최종91개 통과. Editor A 상태 false와 실제 추적 중단을 함께 기록. 임시 입력 설정·저장값 복원",
+            "evidence": "../assets/plaza-refresh-20261104/full-final-pass.json",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q11",
+        "kind": "regression",
+        "at": "2026-11-04T13:08:26.8671087+09:00",
+        "summary": "최종 Play91개·오류0·경고0·입력 설정/사용자 저장값 복원",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 씬·UI·클라이언트 보충·추적·확장 지형 통과",
+            "evidence": "../assets/plaza-refresh-20261104/full-final-pass.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재 씬·UI·클라이언트 보충·추적·확장 지형 통과",
+            "evidence": "../assets/plaza-refresh-20261104/full-final-pass.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재 씬·UI·클라이언트 보충·추적·확장 지형 통과",
+            "evidence": "../assets/plaza-refresh-20261104/full-final-pass.json",
+            "dependencies": {
+              "T02": 2
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 씬·UI·클라이언트 보충·추적·확장 지형 통과",
+            "evidence": "../assets/plaza-refresh-20261104/full-final-pass.json",
+            "dependencies": {
+              "T03": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q12",
+        "kind": "step",
+        "at": "2026-11-04T04:27:15.888Z",
+        "summary": "고정 리비전1 웹에서 자동 이동 중 동작을 골라도 Run/경로가 유지됨을 실제 클릭으로 재현",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 3,
+            "verdict": "fail",
+            "actual": "동작 선택이 자동 경로와 충돌",
+            "evidence": "../assets/plaza-refresh-20261104/before-emote-path-fix.json",
+            "dependencies": {
+              "T02": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q13",
+        "kind": "regression",
+        "at": "2026-11-04T13:32:59.1137600+09:00",
+        "summary": "최종 소스 실제 Unity Play93개·오류0·경고0·저장값 복원",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 씬·UI·AI·경로/동작·확장 환경 회귀 통과",
+            "evidence": "../assets/plaza-refresh-20261104/final-source-play.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "최종 씬·UI·AI·경로/동작·확장 환경 회귀 통과",
+            "evidence": "../assets/plaza-refresh-20261104/final-source-play.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "최종 씬·UI·AI·경로/동작·확장 환경 회귀 통과",
+            "evidence": "../assets/plaza-refresh-20261104/final-source-play.json",
+            "dependencies": {
+              "T02": 3
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 씬·UI·AI·경로/동작·확장 환경 회귀 통과",
+            "evidence": "../assets/plaza-refresh-20261104/final-source-play.json",
+            "dependencies": {
+              "T03": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q14",
+        "kind": "regression",
+        "at": "2026-11-04T04:39:17.350Z",
+        "summary": "final-functional 실제 브라우저 29개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-functional.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q15",
+        "kind": "regression",
+        "at": "2026-11-04T04:39:58.802Z",
+        "summary": "final-social 실제 브라우저 16개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-social.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q16",
+        "kind": "regression",
+        "at": "2026-11-04T04:40:33.170Z",
+        "summary": "final-0 실제 브라우저 10개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-0.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q17",
+        "kind": "regression",
+        "at": "2026-11-04T04:41:07.602Z",
+        "summary": "final-6 실제 브라우저 10개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-6.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q18",
+        "kind": "regression",
+        "at": "2026-11-04T04:43:31.192Z",
+        "summary": "final-12-long 실제 브라우저 10개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-12-long.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q19",
+        "kind": "regression",
+        "at": "2026-11-04T04:44:05.520Z",
+        "summary": "final-edge-6 실제 브라우저 10개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-edge-6.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q20",
+        "kind": "regression",
+        "at": "2026-11-04T04:44:55.198Z",
+        "summary": "final-production 실제 브라우저 8개 통과",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "해당 기능/성능 검사 통과. 공개 배포 확인 대기",
+            "evidence": "../assets/plaza-refresh-20261104/final-production.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}

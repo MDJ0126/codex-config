@@ -1,0 +1,343 @@
+{
+  "unityLaunched": false,
+  "results": [
+    {
+      "assembly": "Runtime",
+      "sources": 38,
+      "startedAt": "2026-11-04T04:38:27.363Z",
+      "finishedAt": "2026-11-04T04:38:28.535Z",
+      "exitCode": 0,
+      "passed": true,
+      "sourceHashes": [
+        {
+          "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+          "sha256": "012ec623de69986dfa9dd049d3bc959e752df3b8b60db462547688d20615bca7"
+        },
+        {
+          "path": "Assets/Scripts/Common/SpringArm.cs",
+          "sha256": "ffa6423ac1433e22bcea26d3297daeb85c2df250ba0027a8648eb187625efaa0"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Actor.cs",
+          "sha256": "8c27c708d2204b556a5a11b5818e05d35bb50125f6977e8049cf493e629ca1f9"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+          "sha256": "0f8259546412ccb35d32d15ff71cab6b6d40a12cb0be02dde2311557379e3286"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+          "sha256": "a669358b39e03a38f06e16a82607214ed695ec318dc978d77064721223631456"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+          "sha256": "1a611790ce055ce444d64d8e915112fe035c4db421c8a7a4dda5c896500c9443"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterActionCatalog.cs",
+          "sha256": "6ae194031c95bdaee3213955fc8d17ed4ccc988af780016426509b5cfe46b801"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+          "sha256": "985f9df9e532276c7eeaf1686b0dbc1a44e211225bc24d8678411146e6fed67e"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+          "sha256": "e0d5263288431dfe937c51e3b882e4e9bd6a0ee527b141ffa46da6860ac2af7a"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+          "sha256": "e10ef986efce561cb8dbb6273bcf5daf810050a14c1ba668cfd184657d168156"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+          "sha256": "b642909574592526a4cae9d5b25a03920ebdf65b87da16f01f784f44e33efb60"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlayerGroundMarker.cs",
+          "sha256": "67486a4b5959604108e7ef3c2b5bdcc0991b9ae5f2d30fa796036295110c1464"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+          "sha256": "cdd4d6a9eecf566a5ce434b869573279c83a79fbf41b2d39bf30f4bf70c6da58"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+          "sha256": "c5b6c50f1815a3c530bb26e7c331bdbb22a770bf9e89293cf3f9a8d8691cb3e0"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+          "sha256": "eeaaf9daa46817a4c1a557abe9a96ae2e15f7dc73f02cae49ae908e01cc46315"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+          "sha256": "68d25a9eb19691fd0b989cb0893f15b5c1756b92cfd9b6df625342c1d943ecef"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+          "sha256": "6f8767df194f2c804c7ee5d632af9599e40ed7ae80bd63e730676dcd42394b25"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+          "sha256": "f832adca5ca7cc9549b6494519a35a72ccb23f335b80b7ac124b0246d85f6a47"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+          "sha256": "b81b63a4693522b15b4a78786c02a5275cef4fff2762b1edbcc683cb83e18612"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/VisitorSelection.cs",
+          "sha256": "569fbd9432e4bc36fcffb0c02b3d37b2909c4fc2dd0a078d44318565c9fbd6cd"
+        },
+        {
+          "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+          "sha256": "81782ed9f829351044c67bdf2115288ca92755ae750e9ab70ae00053aac3e8fe"
+        },
+        {
+          "path": "Assets/Scripts/Management/CrowdManager.cs",
+          "sha256": "11ec66f4a0c5e91485779beef99de9695b2dd5f8fccd7c4dbf5343abd93ad428"
+        },
+        {
+          "path": "Assets/Scripts/Management/LocalCrowdPopulation.cs",
+          "sha256": "84d682b99983609f493d9bc0131cd6a47516ee46178eb21c7857eccdff1ba1c4"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaChat.cs",
+          "sha256": "a15180c9f39c0789bf95b19f2ed6cfb1b1aaf224433e72a3124101bb64aa43b5"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaConversation.cs",
+          "sha256": "d7149d20cc98fe52c7d4bf41e402c6f9dd4f2f2c7e43a3279099ae65c6d1e574"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+          "sha256": "b7a43604fe459d5e45d7f650e484ab6494382ebf84f4b5e2f6a03b0a54ff0511"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaSession.cs",
+          "sha256": "501770bf97d2d9795129f5c4e188022e2470b1dd626dbc99aafe286a14512463"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+          "sha256": "72f538d7afc780bd63a0376173cee86b321d3c32d34b0b71e85c7998d20fcac6"
+        },
+        {
+          "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+          "sha256": "9963d73ab2baeef479b1073cdbd91203303a8c893a6aca755701cbab5f2dbbeb"
+        },
+        {
+          "path": "Assets/Scripts/Management/SocialRules.cs",
+          "sha256": "d6d26a219de12702ecc0489391ece662930e3e66352eb6d0abcff0ba1d4afb7f"
+        },
+        {
+          "path": "Assets/Scripts/Management/VisitorProfile.cs",
+          "sha256": "00047bb001dc94485250f96802580ecbc8652de9d7763c672fc220dfb2612c8d"
+        },
+        {
+          "path": "Assets/Scripts/UI/CharacterStage.cs",
+          "sha256": "bfabd0c1cdcc4da7c916c8751d5491d019fa45c7de6392c26ceb6844a5fa3a22"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaHUD.cs",
+          "sha256": "22bd85f387a5a653cd1495268e712ad1277f67e841740b1e1906d955740710f2"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+          "sha256": "814bdb5568989c4fcc939a79d436824bd3224014677b36e6884aeb218b2078bd"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+          "sha256": "5769bd167386243fd9f512b0fdc55f2326fe31eb32edc28dd58e4146f0a68e32"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaScrollList.cs",
+          "sha256": "3d9393c18d6d423c37b950107ee4c314bcacd5039b43dc33cfb52bcbfdacfea4"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+          "sha256": "be4880b9105e3d9e4c3d73e308cb25616975a49b85ce28da264477ef9b4cf334"
+        },
+        {
+          "path": "Assets/Scripts/UI/WebTextInputBridge.cs",
+          "sha256": "55e67fc2da0beb43927a4e55718d29345e66222df31148f376ec1bd5412a3088"
+        }
+      ]
+    },
+    {
+      "assembly": "RuntimeEditor",
+      "sources": 38,
+      "startedAt": "2026-11-04T04:38:28.555Z",
+      "finishedAt": "2026-11-04T04:38:30.789Z",
+      "exitCode": 0,
+      "passed": true,
+      "sourceHashes": [
+        {
+          "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+          "sha256": "012ec623de69986dfa9dd049d3bc959e752df3b8b60db462547688d20615bca7"
+        },
+        {
+          "path": "Assets/Scripts/Common/SpringArm.cs",
+          "sha256": "ffa6423ac1433e22bcea26d3297daeb85c2df250ba0027a8648eb187625efaa0"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Actor.cs",
+          "sha256": "8c27c708d2204b556a5a11b5818e05d35bb50125f6977e8049cf493e629ca1f9"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/AI/AIController.cs",
+          "sha256": "0f8259546412ccb35d32d15ff71cab6b6d40a12cb0be02dde2311557379e3286"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/AI/PlazaAIController.cs",
+          "sha256": "a669358b39e03a38f06e16a82607214ed695ec318dc978d77064721223631456"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+          "sha256": "1a611790ce055ce444d64d8e915112fe035c4db421c8a7a4dda5c896500c9443"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterActionCatalog.cs",
+          "sha256": "6ae194031c95bdaee3213955fc8d17ed4ccc988af780016426509b5cfe46b801"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+          "sha256": "985f9df9e532276c7eeaf1686b0dbc1a44e211225bc24d8678411146e6fed67e"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAppearance.cs",
+          "sha256": "e0d5263288431dfe937c51e3b882e4e9bd6a0ee527b141ffa46da6860ac2af7a"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterDefinition.cs",
+          "sha256": "e10ef986efce561cb8dbb6273bcf5daf810050a14c1ba668cfd184657d168156"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterInteraction.cs",
+          "sha256": "b642909574592526a4cae9d5b25a03920ebdf65b87da16f01f784f44e33efb60"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlayerGroundMarker.cs",
+          "sha256": "67486a4b5959604108e7ef3c2b5bdcc0991b9ae5f2d30fa796036295110c1464"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/PlazaCharacter.cs",
+          "sha256": "cdd4d6a9eecf566a5ce434b869573279c83a79fbf41b2d39bf30f4bf70c6da58"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Character/VisitorIdentity.cs",
+          "sha256": "c5b6c50f1815a3c530bb26e7c331bdbb22a770bf9e89293cf3f9a8d8691cb3e0"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+          "sha256": "eeaaf9daa46817a4c1a557abe9a96ae2e15f7dc73f02cae49ae908e01cc46315"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+          "sha256": "68d25a9eb19691fd0b989cb0893f15b5c1756b92cfd9b6df625342c1d943ecef"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+          "sha256": "6f8767df194f2c804c7ee5d632af9599e40ed7ae80bd63e730676dcd42394b25"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+          "sha256": "f832adca5ca7cc9549b6494519a35a72ccb23f335b80b7ac124b0246d85f6a47"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/PlazaPlayer.cs",
+          "sha256": "b81b63a4693522b15b4a78786c02a5275cef4fff2762b1edbcc683cb83e18612"
+        },
+        {
+          "path": "Assets/Scripts/InGame/Object/VisitorSelection.cs",
+          "sha256": "569fbd9432e4bc36fcffb0c02b3d37b2909c4fc2dd0a078d44318565c9fbd6cd"
+        },
+        {
+          "path": "Assets/Scripts/InGame/World/PlazaSeat.cs",
+          "sha256": "81782ed9f829351044c67bdf2115288ca92755ae750e9ab70ae00053aac3e8fe"
+        },
+        {
+          "path": "Assets/Scripts/Management/CrowdManager.cs",
+          "sha256": "11ec66f4a0c5e91485779beef99de9695b2dd5f8fccd7c4dbf5343abd93ad428"
+        },
+        {
+          "path": "Assets/Scripts/Management/LocalCrowdPopulation.cs",
+          "sha256": "84d682b99983609f493d9bc0131cd6a47516ee46178eb21c7857eccdff1ba1c4"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaChat.cs",
+          "sha256": "a15180c9f39c0789bf95b19f2ed6cfb1b1aaf224433e72a3124101bb64aa43b5"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaConversation.cs",
+          "sha256": "d7149d20cc98fe52c7d4bf41e402c6f9dd4f2f2c7e43a3279099ae65c6d1e574"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaPerformanceMonitor.cs",
+          "sha256": "b7a43604fe459d5e45d7f650e484ab6494382ebf84f4b5e2f6a03b0a54ff0511"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaSession.cs",
+          "sha256": "501770bf97d2d9795129f5c4e188022e2470b1dd626dbc99aafe286a14512463"
+        },
+        {
+          "path": "Assets/Scripts/Management/PlazaSocialWorld.cs",
+          "sha256": "72f538d7afc780bd63a0376173cee86b321d3c32d34b0b71e85c7998d20fcac6"
+        },
+        {
+          "path": "Assets/Scripts/Management/ProfileImageRules.cs",
+          "sha256": "9963d73ab2baeef479b1073cdbd91203303a8c893a6aca755701cbab5f2dbbeb"
+        },
+        {
+          "path": "Assets/Scripts/Management/SocialRules.cs",
+          "sha256": "d6d26a219de12702ecc0489391ece662930e3e66352eb6d0abcff0ba1d4afb7f"
+        },
+        {
+          "path": "Assets/Scripts/Management/VisitorProfile.cs",
+          "sha256": "00047bb001dc94485250f96802580ecbc8652de9d7763c672fc220dfb2612c8d"
+        },
+        {
+          "path": "Assets/Scripts/UI/CharacterStage.cs",
+          "sha256": "bfabd0c1cdcc4da7c916c8751d5491d019fa45c7de6392c26ceb6844a5fa3a22"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaHUD.cs",
+          "sha256": "22bd85f387a5a653cd1495268e712ad1277f67e841740b1e1906d955740710f2"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaNameplate.cs",
+          "sha256": "814bdb5568989c4fcc939a79d436824bd3224014677b36e6884aeb218b2078bd"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaProfileImage.cs",
+          "sha256": "5769bd167386243fd9f512b0fdc55f2326fe31eb32edc28dd58e4146f0a68e32"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaScrollList.cs",
+          "sha256": "3d9393c18d6d423c37b950107ee4c314bcacd5039b43dc33cfb52bcbfdacfea4"
+        },
+        {
+          "path": "Assets/Scripts/UI/PlazaSocialHUD.cs",
+          "sha256": "be4880b9105e3d9e4c3d73e308cb25616975a49b85ce28da264477ef9b4cf334"
+        },
+        {
+          "path": "Assets/Scripts/UI/WebTextInputBridge.cs",
+          "sha256": "55e67fc2da0beb43927a4e55718d29345e66222df31148f376ec1bd5412a3088"
+        }
+      ]
+    },
+    {
+      "assembly": "Editor",
+      "sources": 1,
+      "startedAt": "2026-11-04T04:38:30.808Z",
+      "finishedAt": "2026-11-04T04:38:33.408Z",
+      "exitCode": 0,
+      "passed": true,
+      "sourceHashes": [
+        {
+          "path": "Assets/Editor/PlazaBuilder.cs",
+          "sha256": "2f3091ca2be4e502c12e6654f6f158e5dd9b268e36c2e85e9cf53ce7bf1c73d7"
+        }
+      ]
+    }
+  ]
+}

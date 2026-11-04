@@ -1,0 +1,116 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "현재 요청 전체 구현·검증 진행",
+    "outcome": "현재 소스와 사용자 화면 확인. 기준 씬·이름표 백업.",
+    "proposedTime": "60~90분",
+    "actualTime": "2026-11-04 12:21:07 KST 시작",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공. rg·현재 소스·Unity 실행·브라우저 계측으로 대체.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "plaza-refresh-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "요청한 HUD·창·목록·Enter·추적·거리별 이동·맵/하늘/태양을 실제 적용·검증",
+    "completionCriteria": "전체 요청 구현·실제 Unity/웹 조작·AI0/6/12명 전후 실측·임시 도구 제거·실제 화면·공개 결과",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 문제 재현·기준 화면",
+        "action": "Enter·창 입력 차단·추적 끊김을 현재 씬과 입력·실행 기록으로 확인한다.",
+        "expected": "현재 씬·저장값 보존·전 화면·문제별 근거",
+        "qa": "현재 씬·저장값 보존·전 화면·문제별 근거을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "HUD·소셜 창·목록 개선",
+        "action": "명확한 이름/상태·상태 팝업·가운데 채팅·비모달 창·X 닫기·캐릭터/동작 스크롤 목록·좌석용 클립 제외를 씬/프리팹과 자체 코드로 적용한다.",
+        "expected": "각 UI 편집 가능·스크롤/검색·다른 UI/월드 클릭·Enter 실제 입력 통과",
+        "qa": "각 UI 편집 가능·스크롤/검색·다른 UI/월드 클릭·Enter 실제 입력 통과을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "자연스러운 이동·추적",
+        "action": "경로 기반 클릭 이동·근거리 걷기/원거리 달리기·거리별 추적 속도와 안정적인 카메라를 구현한다.",
+        "expected": "장애물 우회·속도 전환·추적 실이동/정지·수동 중단·자동 회전 없음",
+        "qa": "장애물 우회·속도 전환·추적 실이동/정지·수동 중단·자동 회전 없음을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "확장 광장·하늘·태양",
+        "action": "기존 두 에셋을 보존하며 넓은 정원/상점/쉼터·산책로·하늘·태양을 씬 자산으로 작성하고 NavMesh를 저장한다.",
+        "expected": "확장 구역 이동 가능·충돌/좌석·실제 전후 디자인 화면·재사용/경량 구성",
+        "qa": "확장 구역 이동 가능·충돌/좌석·실제 전후 디자인 화면·재사용/경량 구성을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "실행·웹 성능·공개 기록",
+        "action": "실제 Play와 고정 웹 빌드에서 요청 기능·AI0/6/12명·숨김복귀를 검사하고 임시 도구 정리·공개 결과를 확인한다.",
+        "expected": "기능 회귀·프레임/CPU/메모리·정리 후 컴파일·현재 산출물 해시·공개 본문/첨부",
+        "qa": "기능 회귀·프레임/CPU/메모리·정리 후 컴파일·현재 산출물 해시·공개 본문/첨부을 현재 씬/실행으로 확인한다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "새 UI·환경 개선 요청. 외부 원본은 보존하고 기존 구조를 재사용한다.",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

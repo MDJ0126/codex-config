@@ -1,0 +1,121 @@
+{
+  "startedAt": "2026-11-04T04:23:53.975Z",
+  "kind": "refreshed",
+  "population": 4,
+  "seconds": 8,
+  "checks": [
+    {
+      "name": "Runtime loaded",
+      "passed": true
+    },
+    {
+      "name": "Browser text overlay selected",
+      "passed": true
+    },
+    {
+      "name": "Korean composition and committed value",
+      "passed": true,
+      "detail": [
+        {
+          "type": "compositionstart",
+          "data": "",
+          "composing": false
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안",
+          "composing": true
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안녕하세요",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안녕하세요",
+          "composing": true
+        },
+        {
+          "type": "compositionend",
+          "data": "안녕하세요",
+          "composing": false
+        }
+      ]
+    },
+    {
+      "name": "Entry and keyboard movement",
+      "passed": true
+    },
+    {
+      "name": "Population",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "Visible AI selection target",
+      "passed": false
+    }
+  ],
+  "samples": [],
+  "errors": [],
+  "warnings": [
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+  ],
+  "events": [],
+  "browser": "Chrome/156.0.8078.80",
+  "loadSeconds": 2.496,
+  "graphics": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 970 (0x000013C2) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "width": 1920,
+    "height": 1080,
+    "wasmHeapBytes": 115998720
+  },
+  "imeEvents": [
+    {
+      "type": "compositionstart",
+      "data": "",
+      "composing": false
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안",
+      "composing": true
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안녕하세요",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안녕하세요",
+      "composing": true
+    },
+    {
+      "type": "compositionend",
+      "data": "안녕하세요",
+      "composing": false
+    }
+  ],
+  "socialCandidates": [],
+  "failure": "Error: Visible AI selection target"
+}

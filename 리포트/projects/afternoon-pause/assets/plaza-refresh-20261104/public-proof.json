@@ -1,0 +1,271 @@
+{
+  "at": "2026-11-04T04:53:41.132Z",
+  "sha": "e8b5d519d127b3824f9c2d1168b7ff9c9fd19b44",
+  "workflow": "https://github.com/MDJ0126/codex-config/actions/runs/41775266114",
+  "checks": [
+    {
+      "name": "result",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-result-20261104044606136-v1.0.0.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "manual",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-manual-plaza-refresh-20261104-20261104044605306-v1.0.2.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "action-list.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "after-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-emote-path-fix.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-harness-name-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-stale-assembly-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-web-issue-proof.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "before-world.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "build-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "character-list.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-after-0.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-after-12-long.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-after-6.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-before-0.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-before-12.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compare-before-6.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "compile-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "driver-restoration-timing.txt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "edge-6.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "environment-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "external-original-audit.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-0.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-12-long.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-6.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-audit.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-build-result.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-edge-6.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-frozen-manifest.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-functional-chat-with-profile.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-functional-status-popup.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-functional.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-production.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-social-ai-profile.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-social-following.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-social.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "final-source-play.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-editor-state-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-final-pass.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-first-pass.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-frame-timing-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-gameview-routing-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "full-keyboard-focus-failure.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "image-manifest.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "sky-sun.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "static-label-polish.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "ui-and-crowd.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "web-functional.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "web-social-fresh.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "web-social-probe.json",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "web-social-target-harness-failure.json",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "listed": true,
+  "passed": true
+}
