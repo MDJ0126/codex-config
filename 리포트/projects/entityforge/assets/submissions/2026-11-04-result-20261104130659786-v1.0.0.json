@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "result",
+    "title": "Entity Forge의 중복 Unity 창 진입 제거",
+    "summary": "DDT와 기존 제품 메뉴는 유지하고 Package Manager 상단 진입과 미사용 Build Profiles 호출만 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ForgeDependencies의 Tools/TurnRoom/Entity Forge/Open Entities in Package Manager 메뉴 속성을 제거했습니다. 제품 창 내부의 패키지 누락 시 안내·Package Manager 버튼은 유지합니다. ForgeWindowActions.Profiles는 참조·이벤트 바인딩이 없어 GetWindow<BuildPlayerWindow> 호출과 함께 제거했습니다.\n\nDDT는 수정하지 않았습니다. Entity Forge Open·Measure Active Scene·Build Player·Documentation 메뉴를 더 축소하지 않았습니다.",
+    "verification": "Unity6000.0.83f1 실제 참조·Roslyn으로 TurnRoom.EntityForge.Editor 컴파일 exit0. 현재 Entity Forge Editor 소스에서 GetWindow< 및 ShowUtility 호출0. Profiles 참조와 영구 이벤트 바인딩을 검색해 사용처가 없음을 확인했습니다. 의존성 설치는 기존 사용자의 Package Manager 작업으로 유지했습니다.\n\n실제 메뉴·창 캡처는 미실행입니다. 사용자가 직전 GUI 촬영을 Escape로 중단했고 이번에는 화면 조작 없이 신속한 수정으로 진행했습니다. 소스 수정과 실제 표시 완료를 구분합니다. 기존 전역 규칙으로 포괄되어 전역 지침 변경 없음.",
+    "remaining": "실행 중 Unity의 새 메뉴 표시와 문서 화면 재촬영이 남아 있습니다. 패키지 재출력·업로드는 수행하지 않았습니다.",
+    "outcome": "Entity Forge 소스 수정과 Unity 참조 컴파일을 완료했습니다. 사용자 GUI 중단 지시를 유지하여 실제 메뉴 재촬영은 하지 않았습니다.",
+    "proposedTime": "2–5분",
+    "actualTime": "2026-11-04 22:04:42 KST 시작.22:07 KST까지 소스 수정·컴파일 완료. 공개 보고서 검증 시각은 최종 채팅에 기록.",
+    "xerjEvidence": "직전 Status: XERJ node is not running. rg로 메뉴·참조·이벤트 바인딩 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
