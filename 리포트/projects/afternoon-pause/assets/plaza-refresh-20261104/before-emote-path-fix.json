@@ -1,0 +1,500 @@
+{
+  "startedAt": "2026-11-04T04:26:46.214Z",
+  "kind": "refreshed",
+  "population": 0,
+  "seconds": 8,
+  "checks": [
+    {
+      "name": "Runtime loaded",
+      "passed": true
+    },
+    {
+      "name": "Browser text overlay selected",
+      "passed": true
+    },
+    {
+      "name": "Korean composition and committed value",
+      "passed": true,
+      "detail": [
+        {
+          "type": "compositionstart",
+          "data": "",
+          "composing": false
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안",
+          "composing": true
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안녕하세요",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안녕하세요",
+          "composing": true
+        },
+        {
+          "type": "compositionend",
+          "data": "안녕하세요",
+          "composing": false
+        }
+      ]
+    },
+    {
+      "name": "Character window",
+      "passed": true
+    },
+    {
+      "name": "Entry and keyboard movement",
+      "passed": true
+    },
+    {
+      "name": "Population",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Action window without input lock",
+      "passed": true
+    },
+    {
+      "name": "Actual wheel scroll virtual rows",
+      "passed": true
+    },
+    {
+      "name": "Other menu clickable while window open",
+      "passed": true
+    },
+    {
+      "name": "World movement with profile open",
+      "passed": true
+    },
+    {
+      "name": "Enter focuses chat with profile open",
+      "passed": true
+    },
+    {
+      "name": "Chat returns canvas focus",
+      "passed": true
+    },
+    {
+      "name": "X closes current window",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 0",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 1",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 2",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 4",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 5",
+      "passed": true
+    },
+    {
+      "name": "Client-only fill 6",
+      "passed": true
+    },
+    {
+      "name": "Nearby click walks",
+      "passed": true
+    },
+    {
+      "name": "Distant click runs",
+      "passed": true
+    },
+    {
+      "name": "Emote stops automatic path",
+      "passed": false,
+      "detail": {
+        "x": 1.4953689575195312,
+        "y": 0.07300001382827759,
+        "z": 5.474695205688477,
+        "fps": 29.970035552978516,
+        "elapsed": 26.737262725830078,
+        "cameraX": 1.4953689575195312,
+        "cameraY": 3.110790252685547,
+        "cameraZ": 0.4340958595275879,
+        "cameraYaw": 0,
+        "cameraPitch": 18,
+        "cameraDistance": 5.300000190734863,
+        "seated": false,
+        "hidden": false,
+        "orthographic": false,
+        "motion": "Run",
+        "controllerType": "PlazaPlayer",
+        "pawnType": "PlazaCharacter",
+        "sitCount": 0,
+        "standCount": 0,
+        "renderers": 106,
+        "targetFps": 30,
+        "npcCount": 0,
+        "visibleSkinned": 1,
+        "managedBytes": 4190208,
+        "frameMs": [
+          34,
+          33,
+          33,
+          34,
+          33,
+          33,
+          34,
+          33,
+          33,
+          34,
+          32.99999237060547,
+          33.00000762939453,
+          34,
+          33,
+          33,
+          34,
+          33,
+          33,
+          34,
+          33,
+          33,
+          34,
+          33,
+          33,
+          34,
+          32.99999237060547,
+          34.000003814697266,
+          33,
+          33,
+          34
+        ],
+        "seatTargets": [
+          {
+            "x": 2.0881845951080322,
+            "y": -1.233884334564209,
+            "worldX": -5,
+            "worldZ": -2.8999996185302734
+          },
+          {
+            "x": 1.3277831077575684,
+            "y": 0.401805579662323,
+            "worldX": 23.999996185302734,
+            "worldZ": 14.867517471313477
+          },
+          {
+            "x": -0.7286139726638794,
+            "y": 0.4312267303466797,
+            "worldX": -27.867517471313477,
+            "worldZ": 12.999996185302734
+          },
+          {
+            "x": -0.2305753231048584,
+            "y": -0.15181422233581543,
+            "worldX": 14,
+            "worldZ": -10.299999237060547
+          },
+          {
+            "x": 1.614493727684021,
+            "y": 2.775390148162842,
+            "worldX": 4,
+            "worldZ": 0.6999999284744263
+          },
+          {
+            "x": -1.6441813707351685,
+            "y": -1.7288999557495117,
+            "worldX": 8,
+            "worldZ": -2.3000001907348633
+          },
+          {
+            "x": -1.7015604972839355,
+            "y": 0.6239047646522522,
+            "worldX": -27.867517471313477,
+            "worldZ": 6.999995708465576
+          },
+          {
+            "x": 1.4053072929382324,
+            "y": -0.15181422233581543,
+            "worldX": -14,
+            "worldZ": -10.299999237060547
+          },
+          {
+            "x": 0.7922238707542419,
+            "y": 0.051927030086517334,
+            "worldX": -10.999996185302734,
+            "worldZ": -24.867517471313477
+          },
+          {
+            "x": 0.4308045506477356,
+            "y": 0.45699113607406616,
+            "worldX": -1.3113549357512966e-8,
+            "worldZ": 11.700000762939453
+          },
+          {
+            "x": 0.277719110250473,
+            "y": 0.051927030086517334,
+            "worldX": 11.000003814697266,
+            "worldZ": -24.867517471313477
+          },
+          {
+            "x": 2.6752445697784424,
+            "y": 0.6316636800765991,
+            "worldX": 29.999996185302734,
+            "worldZ": 6.867517948150635
+          }
+        ],
+        "npcs": [
+          {
+            "name": "VisitorAI-01",
+            "motion": "Inactive",
+            "x": -0.18841418623924255,
+            "z": -4.859254837036133,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 1,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-02",
+            "motion": "Inactive",
+            "x": -3.164245843887329,
+            "z": -4.3989176750183105,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 1,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-03",
+            "motion": "Inactive",
+            "x": 7.57767915725708,
+            "z": -4.425136089324951,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 1,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-04",
+            "motion": "Inactive",
+            "x": -12.387032508850098,
+            "z": -10.462007522583008,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 1,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-05",
+            "motion": "Inactive",
+            "x": 14.4564790725708,
+            "z": 0.016470318660140038,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 1,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-06",
+            "motion": "Inactive",
+            "x": -15,
+            "z": 0,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-07",
+            "motion": "Inactive",
+            "x": 0,
+            "z": 12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-08",
+            "motion": "Inactive",
+            "x": 10,
+            "z": 8,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-09",
+            "motion": "Inactive",
+            "x": -12,
+            "z": 8,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-10",
+            "motion": "Inactive",
+            "x": 16,
+            "z": -12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-11",
+            "motion": "Inactive",
+            "x": -16,
+            "z": -12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-12",
+            "motion": "Inactive",
+            "x": 0,
+            "z": -13,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          }
+        ],
+        "humanCount": 6,
+        "minimumPopulation": 5,
+        "openPanel": 2,
+        "characterCount": 16,
+        "actionCount": 117,
+        "actionFirstIndex": 0,
+        "followPathRequests": 0,
+        "automaticPopulation": false,
+        "chatFocused": false,
+        "following": false,
+        "running": true,
+        "navigating": true,
+        "followDistance": 0,
+        "moveSpeed": 5.200010299682617
+      }
+    }
+  ],
+  "samples": [],
+  "errors": [],
+  "warnings": [
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+  ],
+  "events": [],
+  "browser": "Chrome/156.0.8078.80",
+  "loadSeconds": 2.318,
+  "graphics": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 970 (0x000013C2) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "width": 1920,
+    "height": 1080,
+    "wasmHeapBytes": 115998720
+  },
+  "imeEvents": [
+    {
+      "type": "compositionstart",
+      "data": "",
+      "composing": false
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안",
+      "composing": true
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안녕하세요",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안녕하세요",
+      "composing": true
+    },
+    {
+      "type": "compositionend",
+      "data": "안녕하세요",
+      "composing": false
+    }
+  ],
+  "failure": "Error: Emote stops automatic path"
+}
