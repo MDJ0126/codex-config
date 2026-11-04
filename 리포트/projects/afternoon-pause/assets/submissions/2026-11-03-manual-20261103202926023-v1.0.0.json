@@ -1,0 +1,130 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "PC 웹 경량화·한글 입력·실측 성능과 장시간 QA",
+    "summary": "최신 웹을 실제 브라우저에서 검증하고 측정한 병목부터 최적화합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·실측·최적화·장시간·공개 준비 확인 진행. 자산 구매 증빙·상표 법적 판단은 아직 미확인.",
+    "outcome": "현재 코드·빌드/계측 도구·Unity6 공식 문서 확인. 최신 비교 빌드 준비",
+    "proposedTime": "60~100분",
+    "actualTime": "2026-11-04 05:25:17 KST 시작",
+    "xerjEvidence": "XERJ MCP·프로젝트 검색 스크립트 미제공. rg·실제 소스·공식 문서·브라우저 계측으로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "web-optimization-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "멀티플레이 제외 최신 PC 웹 검증·경량화·공개 준비 확인",
+    "completionCriteria": "최신 웹 빌드·주요 기능/한글 입력·AI0/6/12명 실측·확인된 병목 최적화 전후 비교·장시간/숨김복귀·지원/호스팅/라이선스 확인·실제 결과 공개",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "기준·최신 비교 빌드",
+        "action": "현재 소스의 최신 웹을 별도 폴더에 빌드·고정하고 포함 에셋·실측 기준을 정한다.",
+        "expected": "기존 빌드 보존·새 빌드 해시·설정·지원 범위·원본 보존 확인",
+        "qa": "기존 빌드 보존·새 빌드 해시·설정·지원 범위·원본 보존 확인을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "브라우저 기능·한글 입력",
+        "action": "실제 Chrome·Edge에서 입장·이동·착석·대화·선택/추적·프로필과 한글 조합을 검사하고 필요한 자체 확장을 구현한다.",
+        "expected": "정상 입력·한글 조합·기존 기능·오류/저장 복원 확인",
+        "qa": "정상 입력·한글 조합·기존 기능·오류/저장 복원 확인을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "측정 기반 경량화",
+        "action": "0/6/12명 프레임·CPU·메모리·전송 크기·로딩을 비교하고 확인된 병목을 자체 코드·에셋에서 수정한다.",
+        "expected": "같은 환경 전후 비교·기능 보존·외부 원본 무변경",
+        "qa": "같은 환경 전후 비교·기능 보존·외부 원본 무변경을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "장시간·배경·회귀",
+        "action": "최적화 산출물을 고정하고 장시간·숨김·복귀·12명 동작·주요 기능을 실제 웹에서 재검사한다.",
+        "expected": "실제 숨김·복귀·CPU/메모리 추이·현재 소스/산출물 일치",
+        "qa": "실제 숨김·복귀·CPU/메모리 추이·현재 소스/산출물 일치을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "공개 준비",
+        "action": "지원 범위·호스팅 설정·이름/도메인·에셋 라이선스를 확인 가능한 근거로 정리한다.",
+        "expected": "확인된 조건과 구매/법적 판단 등 미확인 항목 구분·새 결제/원본 재배포 없음",
+        "qa": "확인된 조건과 구매/법적 판단 등 미확인 항목 구분·새 결제/원본 재배포 없음을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "정리·공개 보고",
+        "action": "임시 도구 정리·검증·전후 실제 화면·실측 자료를 공개 아카이브에 기록한다.",
+        "expected": "본체 컴파일·공개 본문/첨부·배포 성공·한계와 추가 작업 명시",
+        "qa": "본체 컴파일·공개 본문/첨부·배포 성공·한계와 추가 작업 명시을 실제 산출물/브라우저/원문으로 확인한다.",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "사용자가 남은 웹 검증·최적화를 승인했다. 외부 에셋·패키지·엔진 원본은 수정하지 않고 공식 플러그인/자체 코드로 대응한다. 이전 isometric 빌드를 현재 성능 기준으로 사용하지 않는다.",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

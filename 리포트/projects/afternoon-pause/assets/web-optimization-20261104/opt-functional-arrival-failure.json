@@ -1,0 +1,399 @@
+{
+  "startedAt": "2026-11-04T02:55:28.164Z",
+  "kind": "optimized",
+  "population": 0,
+  "seconds": 15,
+  "checks": [
+    {
+      "name": "Runtime loaded",
+      "passed": true
+    },
+    {
+      "name": "Browser text overlay selected",
+      "passed": true
+    },
+    {
+      "name": "Korean composition and committed value",
+      "passed": true,
+      "detail": [
+        {
+          "type": "compositionstart",
+          "data": "",
+          "composing": false
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안",
+          "composing": true
+        },
+        {
+          "type": "compositionupdate",
+          "data": "안녕하세요",
+          "composing": false
+        },
+        {
+          "type": "input",
+          "data": "안녕하세요",
+          "composing": true
+        },
+        {
+          "type": "compositionend",
+          "data": "안녕하세요",
+          "composing": false
+        }
+      ]
+    },
+    {
+      "name": "Entry and keyboard movement",
+      "passed": true
+    },
+    {
+      "name": "Population",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Enter focuses chat",
+      "passed": true
+    },
+    {
+      "name": "Chat returns canvas focus",
+      "passed": true
+    },
+    {
+      "name": "Sit in browser",
+      "passed": false,
+      "detail": {
+        "x": 3.9493467807769775,
+        "y": 0.06200003623962402,
+        "z": 0.5346219539642334,
+        "fps": 30.00968360900879,
+        "elapsed": 10.46700382232666,
+        "cameraX": 3.9493467807769775,
+        "cameraY": 3.099790334701538,
+        "cameraZ": -4.505977630615234,
+        "cameraYaw": 0,
+        "cameraPitch": 18,
+        "cameraDistance": 5.300000190734863,
+        "seated": false,
+        "hidden": false,
+        "orthographic": false,
+        "motion": "Walk",
+        "controllerType": "PlazaPlayer",
+        "pawnType": "PlazaCharacter",
+        "sitCount": 0,
+        "standCount": 0,
+        "renderers": 44,
+        "targetFps": 30,
+        "npcCount": 0,
+        "visibleSkinned": 1,
+        "managedBytes": 2969600,
+        "frameMs": [
+          33,
+          33.999996185302734,
+          33.00000762939453,
+          33,
+          32.99999237060547,
+          36.00000762939453,
+          31,
+          33,
+          34,
+          32.99999237060547,
+          33.00000762939453,
+          33.999996185302734,
+          33.00000762939453,
+          34,
+          33,
+          33,
+          33,
+          34,
+          33,
+          34,
+          33,
+          33,
+          34,
+          33,
+          32.99999237060547,
+          34.000003814697266,
+          32.99999237060547,
+          35.00000762939453,
+          32,
+          33,
+          33
+        ],
+        "seatTargets": [
+          {
+            "x": 0.3696610629558563,
+            "y": 0.37914586067199707,
+            "worldX": -1.3113549357512966e-8,
+            "worldZ": 11.700000762939453
+          },
+          {
+            "x": 0.5046312808990479,
+            "y": 0.7177034616470337,
+            "worldX": 4,
+            "worldZ": 0.6999999284744263
+          },
+          {
+            "x": 2.630146026611328,
+            "y": -0.49972736835479736,
+            "worldX": -14,
+            "worldZ": -10.299999237060547
+          },
+          {
+            "x": -1.445515513420105,
+            "y": 1.4475586414337158,
+            "worldX": -5,
+            "worldZ": -2.8999996185302734
+          },
+          {
+            "x": -0.6927653551101685,
+            "y": -0.49972736835479736,
+            "worldX": 14,
+            "worldZ": -10.299999237060547
+          },
+          {
+            "x": 1.2161469459533691,
+            "y": 1.212343454360962,
+            "worldX": 8,
+            "worldZ": -2.3000001907348633
+          }
+        ],
+        "npcs": [
+          {
+            "name": "VisitorAI-01",
+            "motion": "Inactive",
+            "x": 4,
+            "z": -7,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-02",
+            "motion": "Inactive",
+            "x": -4,
+            "z": -7,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-03",
+            "motion": "Inactive",
+            "x": 10,
+            "z": -6,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-04",
+            "motion": "Inactive",
+            "x": -11,
+            "z": -9,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-05",
+            "motion": "Inactive",
+            "x": 15,
+            "z": 0,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-06",
+            "motion": "Inactive",
+            "x": -14.999999046325684,
+            "z": 0,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-07",
+            "motion": "Inactive",
+            "x": 0,
+            "z": 12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-08",
+            "motion": "Inactive",
+            "x": 10,
+            "z": 8,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-09",
+            "motion": "Inactive",
+            "x": -12,
+            "z": 8,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-10",
+            "motion": "Inactive",
+            "x": 16,
+            "z": -12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-11",
+            "motion": "Inactive",
+            "x": -16,
+            "z": -12,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          },
+          {
+            "name": "VisitorAI-12",
+            "motion": "Inactive",
+            "x": 0,
+            "z": -13,
+            "active": false,
+            "onNavMesh": false,
+            "moving": false,
+            "suspended": false,
+            "blocked": false,
+            "pathRequests": 0,
+            "completedTrips": 0,
+            "failedPaths": 0
+          }
+        ]
+      }
+    }
+  ],
+  "samples": [],
+  "errors": [],
+  "warnings": [
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "WebGL: INVALID_ENUM: getInternalformatParameter: invalid internalformat",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+  ],
+  "events": [],
+  "browser": "Chrome/156.0.8078.80",
+  "loadSeconds": 3.991,
+  "graphics": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 970 (0x000013C2) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "width": 1920,
+    "height": 1080,
+    "wasmHeapBytes": 115998720
+  },
+  "imeEvents": [
+    {
+      "type": "compositionstart",
+      "data": "",
+      "composing": false
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안",
+      "composing": true
+    },
+    {
+      "type": "compositionupdate",
+      "data": "안녕하세요",
+      "composing": false
+    },
+    {
+      "type": "input",
+      "data": "안녕하세요",
+      "composing": true
+    },
+    {
+      "type": "compositionend",
+      "data": "안녕하세요",
+      "composing": false
+    }
+  ],
+  "failure": "Error: Sit in browser"
+}
