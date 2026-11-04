@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 통합 문서와 내부 카테고리",
+    "summary": "기존 9언어 안내를 통합해 단일 문서 안에서 세 모듈을 선택합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "브라우저 표시·마우스 조작과 문서 스크린샷 교체 미실행",
+    "outcome": "통합 문서 생성과 스크립트 검사 완료. 실제 브라우저 표시는 보안 정책 차단으로 미검증.",
+    "proposedTime": "5–8분",
+    "actualTime": "2026-11-04 23:19:01 KST 시작. 실행 중.",
+    "xerjEvidence": "Status node not running; rg 및 현재 소스·실제 도메인 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "studio-unified-docs-20261104",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "단일 Documentation 진입과 내부 세 카테고리,9언어 및 개별 모듈 문서 경로 보존",
+    "completionCriteria": "9개 통합 HTML 생성, 세 카테고리·언어 전환 및 메뉴 반영 확인, 실제 브라우저 표시 검증",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "통합 문서와 메뉴 반영",
+        "action": "기존 가이드 포함 방식으로 단일 뷰어 생성, 메뉴 단일화, 스크립트·Unity 도메인 검사 및 화면 확인",
+        "expected": "Documentation 단일 진입과 내부3카테고리,9언어",
+        "qa": "실제 생성 JS에서3카테고리·언어 전환,Unity 등록과 브라우저 표시 대조",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "코드·생성 및 실제 로드 메뉴 검사 완료. 로컬 file URL 브라우저 열기 정책 거부로 화면 QA 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}
