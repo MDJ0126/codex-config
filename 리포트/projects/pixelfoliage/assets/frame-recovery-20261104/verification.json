@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-04T10:11:00.969Z",
+  "sources": [
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliageWindow.cs",
+      "sha256": "1d957a32e00b4d94340bcddb752b03ca1e5059afd575b7ca6fed9927feef02c8"
+    },
+    {
+      "file": "Assets/TurnRoom/PixoraStudio/PixelFoliage/Editor/FoliagePalettePanel.cs",
+      "sha256": "7c9a3a07d9afbd13c3e14a97f24347ad9363c4a397fde3088144288d5820628e"
+    }
+  ],
+  "compile": {
+    "tool": "Unity 6000.0.83f1 bundled Roslyn csc.dll, existing Unity response files and references",
+    "exitCode": 0,
+    "guiStarted": false,
+    "loadedInCurrentEditor": "Not verified"
+  },
+  "native": {
+    "before": "User attachment and actual CUA observation: OS title, Unity tab and product title all visible",
+    "after": "Not captured; user explicitly paused all desktop control",
+    "cause": "Unconfirmed; existing menu already calls ShowPopup, restored regular container recovery was missing",
+    "userWindowPreservedAfterPause": true
+  },
+  "scope": "Implementation and static compile only. Native mouse/reopen/reload/data-preservation QA remains pending."
+}
