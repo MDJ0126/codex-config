@@ -1,5 +1,276 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-shared-popup-task-switch-20261104-20261104035710437-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-04-manual-shared-popup-task-switch-20261104-20261104035710437-v1.0.1.md",
+    "date": "2026-11-04T03:57:10.437Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shared-popup-task-switch-20261104",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
+      "summary": "공통 선택 메뉴 통일 및 독립 제품 창 Alt+Tab 등록 구현·검증",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 라이트/다크·선택 왕복·Alt+Tab·변경 후 캡처는 보류. 공개 보고서 배포는 진행 중.",
+      "outcome": "공통 메뉴·독립 창 작업 전환 등록 구현 및 10개 어셈블리 컴파일 통과. 실제 UI QA는 사용자 제어 중단에 따라 보류.",
+      "proposedTime": "20–40분",
+      "actualTime": "2026-11-04 12:34:30 KST 시작, 2026-11-04T12:56:56.681083+09:00 구현/정적 검사 기록. 전체 UI 완료 시각 아님.",
+      "xerjEvidence": "XERJ Status 노드 미실행, Search 시작 실패. rg로 현재 소스를 확인한다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shared-popup-task-switch-20261104",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "큰 Inspector 버튼 선택 메뉴를 공통 검색 목록으로 교체하고 독립 제품 창을 Windows Alt+Tab 대상으로 등록한다.",
+      "completionCriteria": "공통 선택 경로 적용·관련 제품 컴파일·검색/선택/취소/테마/창 전환 회귀 검증·문서와 결과 공개. 제어 중단 동안 실제 UI QA는 보류로 유지한다.",
+      "previousManual": "projects/turnroom/reports/2026-11-04-manual-20261104033644556-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 선택 메뉴",
+          "action": "UXML/USS와 선택 라우팅을 검색형 행 목록으로 통합",
+          "expected": "열거형·드롭다운·Inspector 선택에서 공통 행 디자인 사용",
+          "qa": "검색·키보드 경로·바인딩 소스 대조 및 컴파일",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "단일/다중/에셋 목록과 DDT 잔여 선택 메뉴 라우팅 수정. 10개 어셈블리 컴파일 통과, UXML 2개·메뉴9언어·체크 글리프 검사 통과."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Windows 작업 전환",
+          "action": "등록된 독립 제품 창의 네이티브 확장 스타일 적용",
+          "expected": "제품 문서만 APPWINDOW 적용, 임시 팝업과 도킹 창 제외",
+          "qa": "스타일 비트와 대상 가드 검사, 컴파일, 실제 Alt+Tab 보류",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "등록된 독립 ToolWindow에 APPWINDOW 적용, TOOLWINDOW/NOACTIVATE 제거와 owner 해제 코드 추가. 원본 메서드의 스타일 1,024개 계산 실행 통과. 실제 네이티브 창은 조작하지 않음."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀 및 문서",
+          "action": "관련 어셈블리 컴파일과 영향 문서 갱신",
+          "expected": "컴파일 통과와 미실행 캡처 범위 명시",
+          "qa": "실행 로그 보존, 이전 캡처 해시 보존, 화면 제어 보류",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "정적 컴파일·9개 언어 안내 갱신 통과. 실제 화면/키보드/Alt+Tab과 새 캡처는 제어 중단으로 미실행. 기존 캡처 해시 보존."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "결과 공개",
+          "action": "제품 변경과 검증 범위 보고서 게시",
+          "expected": "개별 공개 보고서 접근 성공",
+          "qa": "빌드·링크·푸시·배포·외부 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "보고서·공개용 근거 생성 완료, 배포 확인 진행."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "regression",
+          "at": "2026-11-04T12:56:56.681083+09:00",
+          "summary": "DDT 스타일 메뉴 생성자 인수 오류를 실제 컴파일에서 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "WorkspaceFileMenu.Entry 생성자 인수 순서 오류 CS1503/CS1660. 실패 로그 보존 후 실제 선언에 맞춰 수정.",
+              "evidence": "Docs/Testing/2026-11-04/shared-popup-menu: static-common/result.json; policy-checks.json; asset-validation.json; verification-scope.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "regression",
+          "at": "2026-11-04T12:56:56.681083+09:00",
+          "summary": "최종 소스 정적 회귀 및 실제 UI 보류",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "단일/다중/에셋 목록과 DDT 잔여 선택 메뉴 라우팅 수정. 10개 어셈블리 컴파일 통과, UXML 2개·메뉴9언어·체크 글리프 검사 통과.",
+              "evidence": "Docs/Testing/2026-11-04/shared-popup-menu: static-common/result.json; policy-checks.json; asset-validation.json; verification-scope.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "등록된 독립 ToolWindow에 APPWINDOW 적용, TOOLWINDOW/NOACTIVATE 제거와 owner 해제 코드 추가. 원본 메서드의 스타일 1,024개 계산 실행 통과. 실제 네이티브 창은 조작하지 않음.",
+              "evidence": "Docs/Testing/2026-11-04/shared-popup-menu: static-common/result.json; policy-checks.json; asset-validation.json; verification-scope.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "정적 컴파일·9개 언어 안내 갱신 통과. 실제 화면/키보드/Alt+Tab과 새 캡처는 제어 중단으로 미실행. 기존 캡처 해시 보존.",
+              "evidence": "Docs/Testing/2026-11-04/shared-popup-menu: static-common/result.json; policy-checks.json; asset-validation.json; verification-scope.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104033644556-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-04-manual-20261104033644556-v1.0.0.md",
+    "date": "2026-11-04T03:36:44.556Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shared-popup-task-switch-20261104",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
+      "summary": "공통 선택 메뉴 통일 및 독립 제품 창 Alt+Tab 등록 구현·검증",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "20–40분",
+      "actualTime": "2026-11-04 12:34:30 KST 시작",
+      "xerjEvidence": "XERJ Status 노드 미실행, Search 시작 실패. rg로 현재 소스를 확인한다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "shared-popup-task-switch-20261104",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "큰 Inspector 버튼 선택 메뉴를 공통 검색 목록으로 교체하고 독립 제품 창을 Windows Alt+Tab 대상으로 등록한다.",
+      "completionCriteria": "공통 선택 경로 적용·관련 제품 컴파일·검색/선택/취소/테마/창 전환 회귀 검증·문서와 결과 공개. 제어 중단 동안 실제 UI QA는 보류로 유지한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 선택 메뉴",
+          "action": "UXML/USS와 선택 라우팅을 검색형 행 목록으로 통합",
+          "expected": "열거형·드롭다운·Inspector 선택에서 공통 행 디자인 사용",
+          "qa": "검색·키보드 경로·바인딩 소스 대조 및 컴파일",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Windows 작업 전환",
+          "action": "등록된 독립 제품 창의 네이티브 확장 스타일 적용",
+          "expected": "제품 문서만 APPWINDOW 적용, 임시 팝업과 도킹 창 제외",
+          "qa": "스타일 비트와 대상 가드 검사, 컴파일, 실제 Alt+Tab 보류",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "회귀 및 문서",
+          "action": "관련 어셈블리 컴파일과 영향 문서 갱신",
+          "expected": "컴파일 통과와 미실행 캡처 범위 명시",
+          "qa": "실행 로그 보존, 이전 캡처 해시 보존, 화면 제어 보류",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "결과 공개",
+          "action": "제품 변경과 검증 범위 보고서 게시",
+          "expected": "개별 공개 보고서 접근 성공",
+          "qa": "빌드·링크·푸시·배포·외부 본문 확인",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/entityforge/reports/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104033231800-v1.0.7.html",
     "postPath": "projects/entityforge/posts/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104033231800-v1.0.7.md",
     "date": "2026-11-04T03:32:31.800Z",
