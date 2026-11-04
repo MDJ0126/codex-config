@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixelfoliage",
+    "kind": "result",
+    "title": "식생 나머지11씬 색감·명암 통일",
+    "summary": "기본10씬과 Pixel Camera Garden의 흐린 색을 보정하고, 선명한 잔디·수관·꽃과 구분되는 그림자로 조정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 일반 예제 전용 SampleVegetation 재질·셰이더를 추가했습니다. 기존 공통 변형/셰이딩 include를 공유하며 제작 RGB를 출력 색 공간에 맞게 처리합니다. Woodland 전용 셰이더는 변경하지 않았습니다.\n- 기본 메시7개의 RGB만 조정했습니다. 잔디는 녹색·연두, 관목은 짙은 녹색, 수관은 명암이 보이는 녹색, 꽃은 따뜻한 아이보리와 분홍으로 정리했습니다. 정점·법선·UV·바람 가중치·인덱스·bounds는 보존했습니다.\n- 기본8프로필과 일반 예제가 쓰는 이끼 동상3프로필의 재질·명암을 조정했습니다. Woodland는 별도 동상 변형을 쓰므로 영향을 받지 않습니다.\n- 일반11씬의 배경과 자체 조명색을 조정했습니다. Cloud Light는 Native 조명색의 Linear 입력을 구분해 처리했고, 광량0.85→1.2·그림자 강도0.8→0.65로 조정했습니다. 구름 강도·네이티브 조명 사용·그림자 기능은 유지합니다.\n- 9언어 가이드와 Examples 메타데이터에 실제 검증 상태를 반영하고 대표 렌더3장을 넣었습니다.",
+    "verification": "- Unity6000.0.83f1 Built-in Linear,960×600, 같은 카메라와 수동 바람 시간으로11씬 실제 전후 렌더를 확인했습니다.11씬 모두 Native shader errors0. 최초 Cloud Light가 지나치게 어두웠던 렌더는 보존하고 수정 후 재촬영했습니다.\n- 메시7·씬11·프로필11의 총29개 구조/기능 설정 보존 검사를 통과했습니다. 배치·수량·카메라 구도·바람·접촉·FPS 설정을 보존했으며08씬 조명·그림자 강도는 명시한 예외입니다.\n- Camera3씬·Woodland2씬 및 사용 에셋 등72파일의 SHA256 동일성을 확인했습니다. 새 Sample 셰이더는 실제 Unity 헤더 기반10개 Built-in/URP 조명 변형 엔트리 컴파일 통과. 기존 공통 함수의 uninitialized-variable 경고는 남으며 오류0입니다. 에셋·GUID·참조·어셈블리/언어 검사12건도 통과했습니다.\n- 작업용 Unity의 dirtyBefore=false·dirtyAfter=false 및 프로세스·자식 프로세스 종료를 재조회했습니다. 기존 사용자 앱은 종료하지 않았습니다.\n\n[소스·보존·Native 근거](../assets/all-colour-20261104/verification.json) · [저장·종료 근거](../assets/all-colour-20261104/cleanup-proof.json)\n\n전후 이미지는 실제 Unity 출력 PNG이며 외부 도구로 색 보정·리사이즈하지 않았습니다. 대부분200KB수준이며 일부 원본은 판독 근거를 위해 목표를 초과합니다.\n\n### 01-MeadowBreeze\n\n![변경 전 01-MeadowBreeze](../assets/all-colour-20261104/before-0.png)\n변경 전입니다.\n\n![변경 후 01-MeadowBreeze](../assets/all-colour-20261104/after-0.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 02-BlossomWalk\n\n![변경 전 02-BlossomWalk](../assets/all-colour-20261104/before-1.png)\n변경 전입니다.\n\n![변경 후 02-BlossomWalk](../assets/all-colour-20261104/after-1.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 03-ShrubGarden\n\n![변경 전 03-ShrubGarden](../assets/all-colour-20261104/before-2.png)\n변경 전입니다.\n\n![변경 후 03-ShrubGarden](../assets/all-colour-20261104/after-2.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 04-YoungWoodland\n\n![변경 전 04-YoungWoodland](../assets/all-colour-20261104/before-3.png)\n변경 전입니다.\n\n![변경 후 04-YoungWoodland](../assets/all-colour-20261104/after-3.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 05-ContactTrail\n\n![변경 전 05-ContactTrail](../assets/all-colour-20261104/before-4.png)\n변경 전입니다.\n\n![변경 후 05-ContactTrail](../assets/all-colour-20261104/after-4.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 06-SteppedRhythm\n\n![변경 전 06-SteppedRhythm](../assets/all-colour-20261104/before-5.png)\n변경 전입니다.\n\n![변경 후 06-SteppedRhythm](../assets/all-colour-20261104/after-5.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 07-SharedGusts\n\n![변경 전 07-SharedGusts](../assets/all-colour-20261104/before-6.png)\n변경 전입니다.\n\n![변경 후 07-SharedGusts](../assets/all-colour-20261104/after-6.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 08-CloudLight\n\n![변경 전 08-CloudLight](../assets/all-colour-20261104/before-7.png)\n변경 전입니다.\n\n![변경 후 08-CloudLight](../assets/all-colour-20261104/after-7.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 09-MixedGarden\n\n![변경 전 09-MixedGarden](../assets/all-colour-20261104/before-8.png)\n변경 전입니다.\n\n![변경 후 09-MixedGarden](../assets/all-colour-20261104/after-8.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 10-ExtensionGrove\n\n![변경 전 10-ExtensionGrove](../assets/all-colour-20261104/before-9.png)\n변경 전입니다.\n\n![변경 후 10-ExtensionGrove](../assets/all-colour-20261104/after-9.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.\n\n### 11-PixelCameraGarden\n\n![변경 전 11-PixelCameraGarden](../assets/all-colour-20261104/before-10.png)\n변경 전입니다.\n\n![변경 후 11-PixelCameraGarden](../assets/all-colour-20261104/after-10.png)\n변경 후: 같은 구도에서 색과 명암을 조정했습니다.",
+    "remaining": "Gamma·URP 실제 씬 외형과 다른 플랫폼, 새 프레임 성능 측정, 상호작용 전체 재시험, 최종 패키지 재출력은 이번에 수행하지 않았습니다. 이번 검증은 실제 색감과 기존 동작 설정 보존이며 성능 개선이나 모든 기능 재검증을 뜻하지 않습니다. 원래의 Palette 창 사용 흐름·UI 배치는 바꾸지 않았고 해당 창 가이드 캡처도 재촬영하지 않았습니다.\n\n교훈 검토: 자체 식생 조명과 Native Unity 조명은 입력 색 공간이 다를 수 있으므로 실제 출력으로 구분했습니다. 이 셰이더의 구체적 처리는 프로젝트 근거로 남기고, 기존 전역의 설정 일치·실제 검증·정리 지침을 유지했습니다. 전역 변경 없음.",
+    "outcome": "기본 식생10씬과 11-PixelCameraGarden을 Woodland와 같은 색 처리 기준으로 조정했습니다. 잔디·관목·나무의 녹색과 아이보리·분홍 꽃을 구분하고 예제별 배경을 정리했습니다. 두 Woodland 씬과 복원된 Pixel Camera 전용3씬은 보존했습니다.11개 실제 Built-in Linear 전후 렌더를 확인했습니다.\n\n![대표 변경 전](../assets/all-colour-20261104/before-0.png)\n변경 전: 잔디·수관·배경이 연한 색으로 떠 보였습니다.\n\n![대표 변경 후](../assets/all-colour-20261104/after-0.png)\n변경 후: 잔디와 나무의 명암, 꽃과 배경의 색 구분을 보강했습니다.",
+    "proposedTime": "15~20분",
+    "actualTime": "시작2026-11-04 16:35:00 KST · 구현·렌더·문서·정리 검사16:48:19 KST. 공개 배포 확인 시각은 최종 채팅에 기록.",
+    "xerjEvidence": "Xerj.ps1 Status에서 node is not running 확인. 직전 node.lock 점유 실패 근거를 유지하고 rg·현재 소스·실제 Unity 출력으로 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
