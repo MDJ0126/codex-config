@@ -1,0 +1,419 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "가판대3구역·고정 상인과 기존 기능 적용, 현재 버전 전체 QA·도구 정리·공개 보고 확인 완료.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "요청한 로컬 시제품 범위의 남은 작업 없음. 외부 인터넷 배포/동접24명 부하/장기간 내구성/유료 결제는 별도 범위.",
+    "outcome": "가판대3구역·고정 상인과 기존 기능 적용, 현재 버전 전체 QA·도구 정리·공개 보고 확인 완료.",
+    "proposedTime": "최초90~150분. 후속 조작20~30분 예상 후 프로필 전면 개편·미니게임5종 추가로 최종16:15~16:30 KST 예상(해당 추가분45~60분). 상인 추가15~25분, 최종16:35~16:50 KST 예상. 재개16:35:18 KST,25~40분 예상.",
+    "actualTime": "재개16:35:18 KST, 구현·QA·정리17:24:44 KST(49분26초), 공개 보고1차 확인17:28:51 KST(53분33초). 최종 메뉴얼/보고서 배포 확인은 별도 검증 JSON에 기록.",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공. rg·현재 소스·실행 검사로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "multiplayer-20261104",
+    "round": 7,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "원래 UI·멀티·운영 개선과 모든 후속 요청 구현",
+    "completionCriteria": "두 독립 브라우저 실제 입장/이동/착석/동작/상태/프로필/채팅, 서버 신고 저장·쿨다운·1초 상태 전달·중복 탭 무로딩·이탈/복귀·웹 성능·공개 보고 확인; 사전 얼굴16종·링크/사진 업로드 제거·신고 팝업·좋아요/시간·좌클릭/클릭 벤치·도착까지Run·공동게임5종/서버기록·옥상/비행기·예시 채팅필터·실제 최종웹; 서버 지정 스폰서 디자인·별도 공개 이미지판·업로드 제한·두 웹 표시/접기/삭제; 가판대3구역·고정 상인·무료 상품 수령·작업 도구/임시 세션 정리와 기존 앱 보존",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104083117571-v1.0.5.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "이동·UI 수정",
+        "action": "즉시 수평 속도, 채팅 로그/프로필 공통 스타일, X 배경 제거를 씬/프리팹에 적용",
+        "expected": "입력 첫 프레임 걷기/달리기·해제 즉시0, 1920×1080 실제 전후와 열기/닫기/한글 확인",
+        "qa": "입력 첫 프레임 걷기/달리기·해제 즉시0, 1920×1080 실제 전후와 열기/닫기/한글 확인",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 3,
+        "result": "Play107개·웹 즉시 속도/정지·좌클릭·클릭 착석·UI 회귀 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "서버 세션·패킷 정책",
+        "action": "Node 표준 HTTP 서버와 게스트 세션·중복 ID·1초 tick·채팅/신고 제한·영구 신고 저장 구현",
+        "expected": "독립 클라이언트 입장/퇴장·변조/범위/중복·정확한1초 경계·지속 저장과 비공개 신고 접근 검증",
+        "qa": "독립 클라이언트 입장/퇴장·변조/범위/중복·정확한1초 경계·지속 저장과 비공개 신고 접근 검증",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "현재 Node 실제 HTTP/게임11개·1초 경계·권한/좌석/신고/상품 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Unity 멀티 연결",
+        "action": "기존 World/Character 계층에 원격 캐릭터·프로필·동작·착석·대화 연결, 서버 인원으로 로컬AI 보충",
+        "expected": "실제 웹 두 환경에서 상대 이동/외형/이름/동작/착석/상태/공개프로필/채팅/차단/신고·복구 확인",
+        "qa": "실제 웹 두 환경에서 상대 이동/외형/이름/동작/착석/상태/공개프로필/채팅/차단/신고·복구 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "Chrome/Edge 실제2접속 이동/외형/동작/상태/채팅/차단·신고·복구 확인"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "중복 탭·운영·웹 QA",
+        "action": "Unity 로딩 전 탭 잠금, 연결 오류/복구·호스팅 설정·실제 웹 성능/패킷 측정",
+        "expected": "같은 브라우저 중복 Unity/네트워크 차단·첫 탭 종료 후 재입장·1Hz·채팅1초·백그라운드 복귀·두 환경 검사",
+        "qa": "같은 브라우저 중복 Unity/네트워크 차단·첫 탭 종료 후 재입장·1Hz·채팅1초·백그라운드 복귀·두 환경 검사",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "중복 무로딩·재접속·0/4/6/12명·숨김/복귀·패킷1Hz·정리 통과"
+      },
+      {
+        "id": "T06",
+        "order": 5,
+        "title": "간편 프로필·좋아요·시간",
+        "action": "링크/개인 사진·소개 저장을 없애고 캐릭터 얼굴 사전16종, 서버 좋아요·접속/현재 시각, 신고 팝업·닫기 아이콘을 씬에 구현",
+        "expected": "두 웹에서 프로필·좋아요 유지/취소·금지 입력·캐릭터 얼굴16종·신고 팝업·시간 확인",
+        "qa": "두 웹에서 프로필·좋아요 유지/취소·금지 입력·캐릭터 얼굴16종·신고 팝업·시간 확인",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "사전 얼굴16종·최소 프로필·좋아요 취소/재선택/재접속 보존·시간·신고 팝업 확인"
+      },
+      {
+        "id": "T07",
+        "order": 6,
+        "title": "공동 미니게임5종·최고기록",
+        "action": "숫자 맞히기·초성퀴즈·순서기억·가위바위보·21도전을 서버 판정과 공유 참가, 영속 최고기록으로 구현",
+        "expected": "5종 실제 서버 규칙·두 브라우저 참가/진행/점수·위조 점수 거부·저장 재열기",
+        "qa": "5종 실제 서버 규칙·두 브라우저 참가/진행/점수·위조 점수 거부·저장 재열기",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "공동 게임5종 실제2명 참가·서버 판정/최고기록·위조 거부/저장 재열기 확인"
+      },
+      {
+        "id": "T08",
+        "order": 7,
+        "title": "옥상 외벽·간헐 비행",
+        "action": "옥상 아래 외벽/창을 정적 공유 메시로 추가하고 1대 비행기를 간헐 재생·백그라운드 중단",
+        "expected": "실제 외벽/비행 화면·정적 메시·비행 중단/복귀·성능 비교",
+        "qa": "실제 외벽/비행 화면·정적 메시·비행 중단/복귀·성능 비교",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "외벽2렌더러·간헐 비행1대·실제 화면·숨김 중단/복귀 확인"
+      },
+      {
+        "id": "T09",
+        "order": 8,
+        "title": "채팅 순화와 메시지 디자인",
+        "action": "사용자 예시 기반 서버 순화어 치환과 편집 가능한 메시지 행/입력 도크·접속 시각을 구현",
+        "expected": "순화 예시/우회·서버 전달·한글/스크롤/채팅1초·실제 로그 화면",
+        "qa": "순화 예시/우회·서버 전달·한글/스크롤/채팅1초·실제 로그 화면",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "순화 예시 실제전달·카드8개 재사용·한글/스크롤·1초·차단 회귀 확인"
+      },
+      {
+        "id": "T10",
+        "order": 9,
+        "title": "스폰서 디자인·공개 이미지판",
+        "action": "서버 지정 스폰서 닉네임/프로필과 이미지판 업로드·표시·접기·삭제 구현",
+        "expected": "권한 위조 거부·128KB/512px 제한·두 웹 공유·최대4개/거리 제한",
+        "qa": "두 브라우저 표시/접기/삭제 및 서버 권한/제한/재시작 보존 확인",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "운영자 스폰서 구분·업로드 공유/접기·128KB/512px·권한/영속·정렬 확인"
+      },
+      {
+        "id": "T11",
+        "order": 10,
+        "title": "가판대·구역별 상주 상인",
+        "action": "임포트된 커피·꽃 매대·핫도그 매대와 고정 상인3명, 클릭 접근·상품창·서버 무료 수령을 기존 씬에 구성",
+        "expected": "3구역 상인 고정·접근 경로·상품 수령·중복 거부·이동/이미지/게임 회귀·추가 성능",
+        "qa": "실제 Unity3구역과 웹 클릭·서버 수령/중복 및 FPS 확인",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "3가판대·고정 NPC·실제 클릭 접근/수령·중복 제한·거리별 관찰·상인 포함 성능 통과"
+      },
+      {
+        "id": "T05",
+        "order": 11,
+        "title": "결과 공개·정리",
+        "action": "임시 Unity 도구 정리·현재 소스/빌드 해시·문서·Tracefolio 공개 결과와 전체 QA",
+        "expected": "현재 구현 컴파일·실제 화면·수치·제한·HTTPS 본문/첨부 검증",
+        "qa": "현재 구현 컴파일·실제 화면·수치·제한·HTTPS 본문/첨부 검증",
+        "dependsOn": [
+          "T06",
+          "T07",
+          "T08",
+          "T09",
+          "T10",
+          "T11"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "공개 보고서200·첨부4개 해시·목록·배포 성공 확인, 씬 저장/참조/도구 정리 통과"
+      }
+    ],
+    "focusTasks": [
+      "T05"
+    ],
+    "scopeChange": "재개 후 빙의 전 UI 방어·잔여 프로필 데이터 제거·가판대 방향/상인 위치·인원 비교 유지/복귀를 적용하고 최신 버전 전체 QA 완료. 잘못된 QA FOV와 첫 스냅샷 전 카운터 판독은 실제 설정/도착 조건으로 보완. 이전 모든 기록을 보존.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T16:04:47.301+09:00",
+        "summary": "접속 시간 포맷 오류 발견·수정",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "TimeSpan 포맷 예외로 Play 검사 중단. 이스케이프한 형식으로 수정.",
+            "evidence": "QA/Multiplayer/time-format-failure.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "regression",
+        "at": "2026-11-04T16:08:17.989+09:00",
+        "summary": "주변 AI 대화로 전체 개수 가정 실패. 대상 메시지 중복 검사로 분리.",
+        "results": [
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "준비된 AI 발화와 주입 메시지가 함께 존재. 대상 senderId의 중복만 검사하도록 보완.",
+            "evidence": "QA/Multiplayer/chat-count-ambient-failure.json; native-chat-entries.json",
+            "dependencies": {
+              "T04": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-11-04T16:10:35.132+09:00",
+        "summary": "기존 범위 실제 Play86개 통과·오류0·저장값 복원",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "즉시 이동·Run 유지·좌클릭 회전/릴리즈·클릭 착석·프로필·게임 Canvas·글리프·비행·외벽 확인.",
+            "evidence": "QA/Multiplayer/full-result.json; native-sponsor-profile.png",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-04T16:18:13.129+09:00",
+        "summary": "Chrome/Edge 두 실제 브라우저29개 통과",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공동 게임5종 참가·서버 점수·최고기록 확인.",
+            "evidence": "QA/Multiplayer/complete-first.json; complete-first-number-record.png",
+            "dependencies": {
+              "T04": 2
+            }
+          },
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "서버 지정 스폰서·실제 파일 선택 업로드·상대 이미지판·접기·좋아요·신고 접수 확인.",
+            "evidence": "QA/Multiplayer/complete-first.json; complete-first-shared-board.png",
+            "dependencies": {
+              "T06": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-04T16:23:38+09:00",
+        "summary": "Esc로 화면 조작 중단·자동 적용/Play/빌드 요청 취소",
+        "results": [
+          {
+            "taskId": "T11",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "상인 코드와 저작 도구 저장·컴파일 통과. 씬 적용과 실행 검증은 하지 않았습니다.",
+            "evidence": "QA/PlazaRefresh/compile-result.json",
+            "dependencies": {
+              "T08": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "final",
+        "at": "2026-11-04T08:30:00.822Z",
+        "summary": "현재 버전 전체 구현·실제 QA·정리·공개 보고 확인 완료",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "Play107개·웹 즉시 속도/정지·좌클릭·클릭 착석·UI 회귀 통과",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "현재 Node 실제 HTTP/게임11개·1초 경계·권한/좌석/신고/상품 통과",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T01": 3
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Chrome/Edge 실제2접속 이동/외형/동작/상태/채팅/차단·신고·복구 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T02": 2
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "중복 무로딩·재접속·0/4/6/12명·숨김/복귀·패킷1Hz·정리 통과",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T03": 2
+            }
+          },
+          {
+            "taskId": "T06",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "사전 얼굴16종·최소 프로필·좋아요 취소/재선택/재접속 보존·시간·신고 팝업 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T04": 3
+            }
+          },
+          {
+            "taskId": "T07",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "공동 게임5종 실제2명 참가·서버 판정/최고기록·위조 거부/저장 재열기 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T04": 3
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "외벽2렌더러·간헐 비행1대·실제 화면·숨김 중단/복귀 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T04": 3
+            }
+          },
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "순화 예시 실제전달·카드8개 재사용·한글/스크롤·1초·차단 회귀 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T04": 3
+            }
+          },
+          {
+            "taskId": "T10",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "운영자 스폰서 구분·업로드 공유/접기·128KB/512px·권한/영속·정렬 확인",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T06": 2
+            }
+          },
+          {
+            "taskId": "T11",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "3가판대·고정 NPC·실제 클릭 접근/수령·중복 제한·거리별 관찰·상인 포함 성능 통과",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T08": 2
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "공개 보고서200·첨부4개 해시·목록·배포 성공 확인, 씬 저장/참조/도구 정리 통과",
+            "evidence": "QA/Multiplayer/full-result.json(107); server-tests-final-result.json(11); final-accepted.json(37개 기능 통과·첫 스냅샷 전 판독 실패 보존); final-vendors-fov55.json(28·후속 재검증); scene-audit.json; final-cleanup.json; first-final-public-proof.json",
+            "dependencies": {
+              "T06": 2,
+              "T07": 2,
+              "T08": 2,
+              "T09": 1,
+              "T10": 2,
+              "T11": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
