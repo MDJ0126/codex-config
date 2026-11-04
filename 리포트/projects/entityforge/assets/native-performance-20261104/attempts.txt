@@ -1,0 +1,7 @@
+Observed failures preserved:
+- Computer Use app access timed out; native player captures and focused sample validation were used.
+- Initial shell launch without the approved host context did not produce a Unity log; approved scoped native execution succeeded.
+- First guide-update helper used incorrect array indices; corrected before writing final guides.
+- Standalone Edit Mode QA emitted one Persistent global EntityStore allocation; stack and read-only package source confirmed missing default bootstrap shutdown registration. Project QA was corrected, repeated three times, and exit warnings cleared. External package source was not modified.
+- ImportPackage(false) plus immediate -quit returned before asynchronous import completed. Initial readback failed on TemplateProductUpdates.cs. Retried with native completion/readback watcher; 407 non-settings assets matched and final fresh core process follows.
+- A final validator edit accidentally contained literal newline escapes; the C# compiler rejected it. Corrected before final native import, seven assemblies passed. Initial valid archive retained separately; current final archive and manifest were frozen after correction. No consumer overlapped archive regeneration.

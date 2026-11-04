@@ -1,5 +1,45 @@
 [
   {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104033231800-v1.0.7.html",
+    "date": "2026-11-04T03:32:31.800Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 0.3.2 자동 렌더링 병목 제거와 실제 플레이어 QA",
+    "summary": "동일 10,000개 반복 부하의 실제 3쌍 비교에서 드론은 프레임 시간 2.68%, 경량 광석은 73.06% 감소했습니다. 개체·삼각형·화면을 유지했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104033116004-v1.0.0.html",
+    "date": "2026-11-04T03:31:16.004Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 경량화·한글 입력·실측 성능과 장시간 QA",
+    "summary": "최신 웹을 실제 브라우저에서 검증하고 측정한 병목부터 최적화합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-web-optimization-20261104-20261104030253779-v1.0.1.html",
+    "date": "2026-11-04T03:02:53.779Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 경량화와 한글 입력·AI 0/6/12명 실측",
+    "summary": "최신 TPS 웹 빌드를 26.31MB에서24.14MB로8.23% 줄이고 Chrome·Edge의 한글 조합·이동·착석·실제 탭 이탈을 확인했습니다. 수시간 검증은 미실행입니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104030253242-v1.0.0.html",
+    "date": "2026-11-04T03:02:53.242Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
     "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
     "project": "pixelfoliage",
@@ -16,6 +56,16 @@
     "reportPath": "projects/pixelfoliage/reports/2026-11-03-result-20261103212200336-v1.0.0.html",
     "date": "2026-11-03T21:22:00.336Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 웹 경량화·한글 입력·실측 성능과 장시간 QA",
+    "summary": "최신 웹을 실제 브라우저에서 검증하고 측정한 병목부터 최적화합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-03-manual-20261103202926023-v1.0.0.html",
+    "date": "2026-11-03T20:29:26.023Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },

@@ -1,0 +1,391 @@
+{
+  "at": "2026-11-04T03:29:01.017Z",
+  "version": "0.3.2-preview",
+  "workloads": [
+    {
+      "name": "drone",
+      "baseline": {
+        "runs": [
+          {
+            "file": "drone-baseline-1.json",
+            "runId": "aa7a9d49d4b54a548a9100dbaedc789a",
+            "sha256": "df876b9f12bb63058fe9a7189aa2bc672537f0d05e7a80f2ac78fceb81d2cc19",
+            "frameMs": 14.895448684692383,
+            "gpuMs": 14.84203052520752,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:04:11.7991914+00:00"
+          },
+          {
+            "file": "drone-baseline-2.json",
+            "runId": "925c22129851434cad74b8b5a9dc409e",
+            "sha256": "3147ca9e9653dd9d0cbf67c141fd645628e64f7f48948f592737037e8f58f1f4",
+            "frameMs": 15.020846366882324,
+            "gpuMs": 14.97134017944336,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:01.1691294+00:00"
+          },
+          {
+            "file": "drone-baseline-3.json",
+            "runId": "3445d5d8f3664821a3533ce9b02c33c2",
+            "sha256": "f39d7cdd13a4d6c78f2ab47b4da29be8873aaaf93d3690cc92f20fe423fddbba",
+            "frameMs": 15.035001754760742,
+            "gpuMs": 14.9833984375,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:16.4685654+00:00"
+          }
+        ],
+        "meanFrameMs": 14.983765602111816,
+        "meanGpuFrameMs": 14.932256380716959,
+        "meanRenderThreadMs": 2.591256539026896,
+        "meanSyncMs": 0,
+        "meanDrawCalls": 10002,
+        "meanTriangles": 23480004,
+        "allocatedMemoryBytes": 117448902,
+        "managedMemoryBytes": 3276800,
+        "fingerprint": "073beb2431c5e8b065b0eb1c99cc05144b15395704313f295eee9223fd215f49",
+        "scene": "Assets/Validation/Automatic10000.unity",
+        "hardware": "12th Gen Intel(R) Core(TM) i5-12400F / NVIDIA GeForce GTX 970 / Windows 11  (10.0.26200)"
+      },
+      "converted": {
+        "runs": [
+          {
+            "file": "drone-converted-1.json",
+            "runId": "bb72a8fd46ec47bca1d7a74c8c66dcbd",
+            "sha256": "ce9e8a43a2f8097ea247f630c2ac75f0078db36cb71e2d473491e3f972c74292",
+            "frameMs": 14.504111289978027,
+            "gpuMs": 14.447959899902344,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:04:30.7269468+00:00"
+          },
+          {
+            "file": "drone-converted-2.json",
+            "runId": "38a61a138ae94c9f9db565f9543e5d18",
+            "sha256": "6b3d6d1e81a202237f67ff1c0d12ebac4d98ab56751e9cf1609c74ad18a6ce3c",
+            "frameMs": 14.61484432220459,
+            "gpuMs": 14.561384201049805,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:04:45.7591105+00:00"
+          },
+          {
+            "file": "drone-converted-3.json",
+            "runId": "5b2f4e3951984138ab4652118328a72b",
+            "sha256": "55f8dabb2068db8fbdaa953943db2b69e22c3400efd7b5a8028de1838a889958",
+            "frameMs": 14.626347541809082,
+            "gpuMs": 14.569205284118652,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:31.5142869+00:00"
+          }
+        ],
+        "meanFrameMs": 14.581767717997232,
+        "meanGpuFrameMs": 14.526183128356934,
+        "meanRenderThreadMs": 1.0503311554590862,
+        "meanSyncMs": 0.002592611126601696,
+        "meanDrawCalls": 24,
+        "meanTriangles": 23480004,
+        "allocatedMemoryBytes": 116188158,
+        "managedMemoryBytes": 6171306.666666667,
+        "fingerprint": "073beb2431c5e8b065b0eb1c99cc05144b15395704313f295eee9223fd215f49",
+        "scene": "Assets/Validation/Automatic10000.unity",
+        "hardware": "12th Gen Intel(R) Core(TM) i5-12400F / NVIDIA GeForce GTX 970 / Windows 11  (10.0.26200)"
+      },
+      "frameTimeReductionPercent": 2.6828895672121766,
+      "renderThreadReductionPercent": 59.466338448545855
+    },
+    {
+      "name": "ore",
+      "baseline": {
+        "runs": [
+          {
+            "file": "ore-baseline-1.json",
+            "runId": "8f11ebeb0b18459ea60ef39ad51f91a6",
+            "sha256": "5a8d3ac03507f205806ae8e51010274808c16603c81d306f3ccdf8b2ceea3d94",
+            "frameMs": 9.010717391967773,
+            "gpuMs": 8.889533042907715,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:42.3739681+00:00"
+          },
+          {
+            "file": "ore-baseline-2.json",
+            "runId": "c15498ed4c3749d3a593c6ee22f89faf",
+            "sha256": "0349b85cb95d0a99fd66672bd4e761bcaf817be0df5951a02cd25f4beb61ffb2",
+            "frameMs": 9.48158073425293,
+            "gpuMs": 9.407960891723633,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:06:04.7599789+00:00"
+          },
+          {
+            "file": "ore-baseline-3.json",
+            "runId": "54e9a1405a6e416f9135ec34d57414bb",
+            "sha256": "a1c139f128b54792b521721dd406a5c6015d85c01b220a921acc415e3903a9fb",
+            "frameMs": 9.544944763183594,
+            "gpuMs": 9.46070384979248,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:06:15.8860080+00:00"
+          }
+        ],
+        "meanFrameMs": 9.345747629801432,
+        "meanGpuFrameMs": 9.252732594807943,
+        "meanRenderThreadMs": 6.752118746439616,
+        "meanSyncMs": 0,
+        "meanDrawCalls": 101,
+        "meanTriangles": 1000004,
+        "allocatedMemoryBytes": 116116384,
+        "managedMemoryBytes": 3596288,
+        "fingerprint": "073beb2431c5e8b065b0eb1c99cc05144b15395704313f295eee9223fd215f49",
+        "scene": "Assets/Validation/Automatic10000.unity#OreSalvage-10000-diagnostic",
+        "hardware": "12th Gen Intel(R) Core(TM) i5-12400F / NVIDIA GeForce GTX 970 / Windows 11  (10.0.26200)"
+      },
+      "converted": {
+        "runs": [
+          {
+            "file": "ore-converted-1.json",
+            "runId": "353979c1e2ea44d8802bccc970fab539",
+            "sha256": "5b64e0579ad80b15e4fe50c600e46f456bd9e07332c0b90d89b030b6baf8eb76",
+            "frameMs": 2.5377426147460938,
+            "gpuMs": 0.8817629814147949,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:48.0629241+00:00"
+          },
+          {
+            "file": "ore-converted-2.json",
+            "runId": "8f5b05c978ca4fc9adb3bed4340520ee",
+            "sha256": "fb043a152e1ce68564f63442ac7b6f0b24cc609e794ed5396a95f766e2651548",
+            "frameMs": 2.4951915740966797,
+            "gpuMs": 0.8830323219299316,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:05:53.6623491+00:00"
+          },
+          {
+            "file": "ore-converted-3.json",
+            "runId": "c45e9ee515d6484cb816eba9d883143e",
+            "sha256": "b741878bbd6ee2c19b650970835c8493de3ec2555c75e76dfab6d7f5a44d6e11",
+            "frameMs": 2.5191690921783447,
+            "gpuMs": 0.9535692930221558,
+            "focusedSamples": 600,
+            "focusResets": 0,
+            "capturedUtc": "2026-11-04T03:06:21.5121889+00:00"
+          }
+        ],
+        "meanFrameMs": 2.5173677603403726,
+        "meanGpuFrameMs": 0.9061215321222941,
+        "meanRenderThreadMs": 1.0258366266886394,
+        "meanSyncMs": 0.003048611106351018,
+        "meanDrawCalls": 24,
+        "meanTriangles": 1000004,
+        "allocatedMemoryBytes": 116187088.66666667,
+        "managedMemoryBytes": 6527658.666666667,
+        "fingerprint": "073beb2431c5e8b065b0eb1c99cc05144b15395704313f295eee9223fd215f49",
+        "scene": "Assets/Validation/Automatic10000.unity#OreSalvage-10000-diagnostic",
+        "hardware": "12th Gen Intel(R) Core(TM) i5-12400F / NVIDIA GeForce GTX 970 / Windows 11  (10.0.26200)"
+      },
+      "frameTimeReductionPercent": 73.06403018723651,
+      "renderThreadReductionPercent": 84.80718919184349
+    }
+  ],
+  "method": {
+    "rendered": true,
+    "resolution": "1280x720",
+    "runsPerVariant": 3,
+    "samplesPerRun": 600,
+    "warmupPerRun": 180,
+    "order": "Baseline/Converted, Converted/Baseline, Baseline/Converted",
+    "sourceGeometry": "unchanged within each OFF/ON pair; separate Ore diagnostic identified in scene workload suffix",
+    "frameMetric": "mean frame-time reduction, not FPS increase"
+  },
+  "nativeLifecyclePasses": 12,
+  "pixelComparison": [
+    {
+      "scenario": "drone",
+      "size": [
+        1280,
+        720
+      ],
+      "changedPixels": 0,
+      "pixels": 921600,
+      "meanAbsoluteChannelDifference": 0,
+      "maxChannelDifference": 0,
+      "note": "Read-only pixel comparison of actual Unity player captures; images not edited"
+    },
+    {
+      "scenario": "ore",
+      "size": [
+        1280,
+        720
+      ],
+      "changedPixels": 0,
+      "pixels": 921600,
+      "meanAbsoluteChannelDifference": 0,
+      "maxChannelDifference": 0,
+      "note": "Read-only pixel comparison of actual Unity player captures; images not edited"
+    }
+  ],
+  "compilation": {
+    "assemblies": 7,
+    "currentSourceHashes": "pass"
+  },
+  "package": {
+    "path": "Artifacts/EntityForge/TurnRoom-EntityForge-0.3.2-preview.unitypackage",
+    "sha256": "ce6aa963c46877aeeef11e65d6be9a53f37b305e9b475b30c980b2f15b0ba80f",
+    "assets": 408,
+    "archiveReadback": "pass",
+    "nativeImport": "PASS 2026-11-04T03:23:53.4405591Z Native ImportPackage asset byte readback 407 files; installed DefaultUITemplate settings preserved by shared import guard; next fresh process checks compilation",
+    "withoutSamples": "PASS 2026-11-04T03:25:09.7451393Z native Unity imported/compiled Runtime=e6aec096-d66b-4b8a-bf86-25ac360215f3 Editor=8deb92b9-e7a3-4e2f-a13e-66479bd6c3bd DOTS=0b2b4079-69cc-412e-9f98-040d30e2fc05 with sample/development folders absent; original user project scenes/settings unchanged"
+  },
+  "qaBootstrap": {
+    "before": "One persistent global EntityStore allocation reported when standalone Edit Mode QA only created manual Worlds",
+    "evidence": "leak-diagnostic.log callstack CreateEntities / AllocateEntities; Entities 1.3.15 DefaultWorldInitialization.RegisterUnloadOrPlayModeChangeShutdown and s_entityStore.Dispose source inspected read-only",
+    "fix": "Project-owned QA initializes/restores default bootstrap only when needed; external packages unchanged",
+    "after": "3 legacy DOTS and native lifecycle repetitions passed, editor exit 0, no Leak Detected warning",
+    "scope": "Standalone Edit Mode QA initialization; not claimed as a player runtime leak"
+  },
+  "playerRuntimeAssembly": {
+    "baselineSha256": "68fe9a7c808ff448757bfb1d7888c593ce320551b30e3a78dafc956875ba9dda",
+    "convertedSha256": "68fe9a7c808ff448757bfb1d7888c593ce320551b30e3a78dafc956875ba9dda",
+    "identical": true
+  },
+  "localization": {
+    "languages": 9,
+    "entries": 515,
+    "placeholderCheck": "pass",
+    "nativeEditorLanguageLayouts": "not executed"
+  },
+  "implementation": {
+    "automatic": "native renderer instancing with per-shared-material synchronization; no automatic DOTS proxy entity/renderer polling",
+    "explicitSimulation": "DOTS/Burst retained and native lifecycle suites passed",
+    "originalAssets": "preserved; runtime/build material copies only",
+    "geometrySimplification": false
+  },
+  "limits": [
+    "Results apply to these two measured Windows x64 Built-in workloads and this hardware; not a universal speedup guarantee",
+    "Original drone workload remains GPU limited; draw-call reduction does not remove its 23.48M triangles",
+    "Nine-language editor layouts, physical mouse/keyboard picker QA and official store validator remain separate release checks",
+    "Computer Use app access timed out; real player screenshots came from the actual running Unity players",
+    "Seller draft was not saved/submitted during this performance task"
+  ],
+  "gpuDiagnostic": {
+    "method": "Separate normal player run with installed NVIDIA nvidia-smi read-only polling",
+    "includedInComparisonMeans": false,
+    "steadyLast20": [
+      {
+        "utc": "2026-11-04T03:27:25.1239773+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:26.0946601+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:27.0673750+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:28.0289738+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:28.9955188+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:29.9561601+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:30.9181310+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:31.8813590+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:32.8504229+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:33.8092561+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:34.9690021+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:35.9427500+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:36.9513020+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:37.9233108+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:38.8962526+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:39.8692873+00:00",
+        "gpuUtilPercent": 99,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:40.8386376+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:41.7991974+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:42.7588513+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      },
+      {
+        "utc": "2026-11-04T03:27:43.7284347+00:00",
+        "gpuUtilPercent": 98,
+        "graphicsClockMhz": 1417
+      }
+    ],
+    "utilMin": 98,
+    "utilMax": 99
+  },
+  "timing": {
+    "startedKst": "2026-11-04 05:29:04 KST",
+    "proposed": "40–70 minutes",
+    "wallTimeIncludes": "App approval timeout and long tool/approval wait. Original baseline at 05:36 and preliminary converted at 11:47 are diagnostic only; final comparisons use controlled adjacent runs at 12:04–12:06 KST"
+  },
+  "xerj": "failed: node not running; current source/rg fallback",
+  "lessonReview": "Specific Entities 1.3.15 standalone QA bootstrap and ImportPackage completion findings recorded in project Architecture; existing global evidence/permission rules suffice, no global change"
+}
