@@ -1,5 +1,645 @@
 [
   {
+    "title": "DDT·Entity Forge 로고·마케팅 자료 수정",
+    "summary": "사용자 정정에 따라 로봇 복제를 폐기하고 두 제품 로고·이미지·영상을 다시 제작했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-robot-logo-family-20261104-20261104143811297-v1.0.1.html",
+    "date": "2026-11-04T14:38:11.297Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 로고 배경 정리와 마케팅 자료 재제작",
+    "summary": "로고와 갤러리 16장·키 이미지 4종·70초 영상 제작을 마쳤습니다. 원본 재열기와 영상 전체 디코딩을 검증했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104143729888-v1.0.0.html",
+    "date": "2026-11-04T14:37:29.888Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 새 로고와 마케팅 이미지·영상 재제작",
+    "summary": "로고와 갤러리 16장·키 이미지 4종·70초 영상 제작을 마쳤습니다. 원본 재열기와 영상 전체 디코딩을 검증했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-04-result-20261104143729175-v1.0.0.html",
+    "date": "2026-11-04T14:37:29.175Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio Documentation 메뉴 복구",
+    "summary": "과도한 메뉴 축소로 누락됐던 모듈별 문서 진입을 복구하고 실제 Unity 도메인 등록을 확인했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104133313580-v1.0.0.html",
+    "date": "2026-11-04T13:33:13.580Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT·Entity Forge 로봇 로고 통일",
+    "summary": "픽소라의 실제 로봇 스타일로 두 로고를 제작합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104132557095-v1.0.0.html",
+    "date": "2026-11-04T13:25:57.095Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 상단 Measure·Build 중복 메뉴 제거",
+    "summary": "Measure Active Scene·Build Player 메뉴만 제거하고 제품 창 내부 기능은 유지했습니다. 새 Unity 도메인에서 제거를 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104131837149-v1.0.0.html",
+    "date": "2026-11-04T13:18:37.149Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실행 중 Unity에서 Entity Forge 메뉴 제거 반영 확인",
+    "summary": "Unity 내부 Refresh 후 실제 로드된 MenuItem 목록을 조회해 Package Manager 메뉴 제거를 확인했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104131232900-v1.0.0.html",
+    "date": "2026-11-04T13:12:32.900Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge의 중복 Unity 창 진입 제거",
+    "summary": "DDT와 기존 제품 메뉴는 유지하고 Package Manager 상단 진입과 미사용 Build Profiles 호출만 제거했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104130659786-v1.0.0.html",
+    "date": "2026-11-04T13:06:59.786Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 Unity 메뉴 촬영—Pixora Studio 세 모듈 확인",
+    "summary": "TurnRoom Unity의 Tools 메뉴를 직접 펼쳐 Image Maker·Pixel Camera·Foliage 세 모듈과 기존 독립 메뉴 제거를 확인했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104125137562-v1.0.0.html",
+    "date": "2026-11-04T12:51:37.562Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기존 메뉴가 남은 사용자 화면 재점검",
+    "summary": "사용자 화면의 기존 4개 메뉴를 확인했습니다. 소스와 생성 DLL은 새 메뉴이며 실제 표시 반영 원인은 아직 미확인입니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104122259226-v1.0.0.html",
+    "date": "2026-11-04T12:22:59.226Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "나무10개 충돌 해제와 이동 경로 재베이크",
+    "summary": "나무10콜라이더 해제·격리 CharacterController10통과·타137콜라이더 보존·경로 재베이크",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104122017378-v1.0.0.html",
+    "date": "2026-11-04T12:20:17.378Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "나무 충돌 해제",
+    "summary": "나무만 충돌 해제하고 경로 재베이크 및 실제 CharacterController 관통 검증",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-tree-collision-20261104-20261104122015832-v1.0.1.html",
+    "date": "2026-11-04T12:20:15.832Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "나무 충돌 해제",
+    "summary": "나무만 충돌 해제하고 경로 재베이크 및 실제 CharacterController 관통 검증",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-20261104121746122-v1.0.0.html",
+    "date": "2026-11-04T12:17:46.122Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 전체 메뉴·창·Image Maker 예제 정리",
+    "summary": "중복 대시보드·구형 메뉴 제거, 모듈 이름 변경, 전체 창 경로와 예제 변형을 점검합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-studio-structure-audit-20261104-20261104115020761-v1.0.1.html",
+    "date": "2026-11-04T11:50:20.761Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Image Maker 이름 변경·세 모듈 메뉴 정리·예제 변환 수정",
+    "summary": "구형 메뉴·중복 허브를 제거하고 Image Maker·Pixel Camera·Foliage로 정리했습니다. 모델 변환 중복을 수정하고 정적 검증했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104114852328-v1.0.0.html",
+    "date": "2026-11-04T11:48:52.328Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 컨테이너 점검과 사용자 입력 복구",
+    "summary": "창 관련 소스22개를 대조하고 실제 컨테이너 모드 판정·사용자 입력 복구를 추가했습니다. 실제 창 검증은 보류입니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104114851619-v1.0.0.html",
+    "date": "2026-11-04T11:48:51.619Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "점프 착지 재상승·비행기 낙하 자세 보정",
+    "summary": "점프 착지 재상승과 낙하 자세를 보정했습니다. 실제 Play11개·최신 웹18개 검사 및 제공 파일 해시 검증을 통과했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104113519103-v1.0.0.html",
+    "date": "2026-11-04T11:35:19.103Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104113518393-v1.0.11.html",
+    "date": "2026-11-04T11:35:18.393Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "점프 착지 재상승·비행기 낙하 자세 보정",
+    "summary": "컴퓨터 유즈와 발뼈 표본으로 착지 재상승을 확인·보정했습니다. 실제 Play11개 통과, 최신 웹 검사는 진행 중입니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104112751689-v1.0.0.html",
+    "date": "2026-11-04T11:27:51.689Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104112750813-v1.0.10.html",
+    "date": "2026-11-04T11:27:50.813Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104111214038-v1.0.9.html",
+    "date": "2026-11-04T11:12:14.038Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 전체 메뉴·창·Image Maker 예제 정리",
+    "summary": "중복 대시보드·구형 메뉴 제거, 모듈 이름 변경, 전체 창 경로와 예제 변형을 점검합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104111012618-v1.0.0.html",
+    "date": "2026-11-04T11:10:12.618Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제공 Standing-Jump 원본 복원 — 화면 검증 보류",
+    "summary": "제공 점프를 합성 포즈로 교체한 변경을 바로잡았습니다. 파일 연결/컴파일 확인, 실제 Play·웹 미실행.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104104726537-v1.0.0.html",
+    "date": "2026-11-04T10:47:26.537Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104104725603-v1.0.8.html",
+    "date": "2026-11-04T10:47:25.603Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공중 자세·낙하산·점프 단계·인기도 여백 — 파일 구현",
+    "summary": "파일 구현과 컴파일·상태13/서버12/에셋20 검사 통과. 사용자 화면 중단 요청으로 Unity/최신 웹·시각 QA는 보류했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104102207924-v1.0.0.html",
+    "date": "2026-11-04T10:22:07.924Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104102207015-v1.0.7.html",
+    "date": "2026-11-04T10:22:07.015Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 창 프레임 복구 구현·화면 검증 보류",
+    "summary": "프레임 재열기의 상태 보존과 사용자 클릭 복구를 구현하고 컴파일했습니다. 화면 조작 중단 요청으로 실제 창 QA는 보류입니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104101105049-v1.0.0.html",
+    "date": "2026-11-04T10:11:05.049Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 창 중복 제목줄 복구",
+    "summary": "실제 중복 창 테두리를 확인하고 재열기·재로드 경로를 수정합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-foliage-frame-recovery-20261104-20261104101103629-v1.0.1.html",
+    "date": "2026-11-04T10:11:03.629Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 창 중복 제목줄 복구",
+    "summary": "실제 중복 창 테두리를 확인하고 재열기·재로드 경로를 수정합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-20261104100508433-v1.0.0.html",
+    "date": "2026-11-04T10:05:08.433Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104100054438-v1.0.6.html",
+    "date": "2026-11-04T10:00:54.438Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 판매 갤러리 정리와 통합 영상 교체",
+    "summary": "구형·중복6장을 제거하고 Camera·Foliage를 앞으로 배치했습니다. 세 모듈의 60초 통합 영상을 저장·재생 검증했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104095426556-v1.0.0.html",
+    "date": "2026-11-04T09:54:26.556Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 판매 이미지 정리와 통합 영상 재제작",
+    "summary": "기존 미디어 대조 후 중복 삭제·모듈 순서 정리와 통합 영상을 제작합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-pixora-media-curation-20261104-20261104095421576-v1.0.1.html",
+    "date": "2026-11-04T09:54:21.576Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블록 구름·프리팹·전용 캐릭터 리그·비행기 낙하 입장",
+    "summary": "옥상/HUD/꽃집 보완·미니게임 제거·점프·UI/NPC 프리팹·16종 리그 보정·4초 비행기 입장. Play161/웹17/서버11 통과.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104095146480-v1.0.0.html",
+    "date": "2026-11-04T09:51:46.480Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104095144873-v1.0.5.html",
+    "date": "2026-11-04T09:51:44.873Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블록 구름·프리팹·전용 캐릭터 리그·비행기 낙하 입장",
+    "summary": "옥상/HUD/꽃집 보완·미니게임 제거·점프·UI/NPC 프리팹·16종 리그 보정·4초 비행기 입장. Play161/웹17/서버11 통과.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104094652834-v1.0.0.html",
+    "date": "2026-11-04T09:46:52.834Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104094651976-v1.0.4.html",
+    "date": "2026-11-04T09:46:51.976Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104094650763-v1.0.3.html",
+    "date": "2026-11-04T09:46:50.763Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104093251491-v1.0.2.html",
+    "date": "2026-11-04T09:32:51.491Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 판매 이미지 정리와 통합 영상 재제작",
+    "summary": "기존 미디어 대조 후 중복 삭제·모듈 순서 정리와 통합 영상을 제작합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104092631690-v1.0.0.html",
+    "date": "2026-11-04T09:26:31.690Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 판매 갤러리 보완 실행 기록",
+    "summary": "실행 시작 전 등록 누락을 명시하고 실제 검증 결과를 사후 보존합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104092115216-v1.0.0.html",
+    "date": "2026-11-04T09:21:15.216Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 판매 갤러리에 Camera·Foliage 추가",
+    "summary": "누락된 기능 이미지 11장을 초안에 저장하고 통합 소개를 첫 스크린샷으로 배치했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104092028017-v1.0.0.html",
+    "date": "2026-11-04T09:20:28.017Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-refinement-20261104-20261104091444256-v1.0.1.html",
+    "date": "2026-11-04T09:14:44.256Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-20261104084836504-v1.0.0.html",
+    "date": "2026-11-04T08:48:36.504Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "가판대·고정 상인 적용과 최종 QA 완료",
+    "summary": "커피·꽃·핫도그 가판대와 상인3명 적용. 최신 웹에서 수령·멀티/게임·0/4/6/12명 성능·복귀를 확인하고 임시 도구를 정리했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104083118873-v1.0.0.html",
+    "date": "2026-11-04T08:31:18.873Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "가판대3구역·고정 상인과 기존 기능 적용, 현재 버전 전체 QA·도구 정리·공개 보고 확인 완료.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104083118262-v1.0.6.html",
+    "date": "2026-11-04T08:31:18.262Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "현재 버전 전체 QA 통과 결과를5개 이하 작업 묶음으로 순차 등록합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104083117571-v1.0.5.html",
+    "date": "2026-11-04T08:31:17.571Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "현재 버전 전체 QA 통과 결과를5개 이하 작업 묶음으로 순차 등록합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104083116924-v1.0.4.html",
+    "date": "2026-11-04T08:31:16.924Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "가판대3구역·고정 상인 적용과 최종 웹 QA",
+    "summary": "커피·꽃·핫도그 가판대와 상인3명 적용. 최신 웹에서 수령·멀티/게임·0/4/6/12명 성능·복귀를 확인하고 임시 도구를 정리했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104082603516-v1.0.0.html",
+    "date": "2026-11-04T08:26:03.516Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 나머지11씬 색감·명암 통일",
+    "summary": "기본10씬과 Pixel Camera Garden의 흐린 색을 보정하고, 선명한 잔디·수관·꽃과 구분되는 그림자로 조정했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104074942950-v1.0.0.html",
+    "date": "2026-11-04T07:49:42.950Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104074941127-v1.0.6.html",
+    "date": "2026-11-04T07:49:41.127Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104073650721-v1.0.5.html",
+    "date": "2026-11-04T07:36:50.721Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "기존 범위 Play86개·두 웹29개 검사 통과. 상인 추가 코드는 저장했으며 Esc 중단으로 적용·실행 검증 대기.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104073638707-v1.0.3.html",
+    "date": "2026-11-04T07:36:38.707Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장: 멀티·공동 게임·스폰서·이미지판 구현과 상인 검증 대기",
+    "summary": "기존 범위 Play86개·실제 두 웹29개 통과. 상인 추가는 코드 저장 후 화면 조작 중단으로 적용·최종 QA가 남았습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104072650557-v1.0.0.html",
+    "date": "2026-11-04T07:26:50.557Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "기존 범위 Play86개·두 웹29개 검사 통과. 상인 추가 코드는 저장했으며 Esc 중단으로 적용·실행 검증 대기.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104072650059-v1.0.2.html",
+    "date": "2026-11-04T07:26:50.059Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Woodland 숲 후경과 하늘 디테일 개선",
+    "summary": "줄기 뒤 빈틈을 짙은 초록 숲으로 채우고, 하늘의 대칭 곡선을 불규칙한 색 띠와 입자 경계로 바꿨습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104072331362-v1.0.0.html",
+    "date": "2026-11-04T07:23:31.362Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104072330780-v1.0.4.html",
+    "date": "2026-11-04T07:23:30.780Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "도구 사용 후 저장·종료 지침 반영",
+    "summary": "Affinity 원본 저장과 더티 해소, 컴퓨터 유즈 작업 자원 종료를 필수 QA로 정합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-manual-tool-cleanup-20261104-20261104072243504-v1.0.1.html",
+    "date": "2026-11-04T07:22:43.504Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity 원본 저장·도구 종료 확인 의무화",
+    "summary": "이미지 내보내기 후 원본 미저장과 컴퓨터 유즈 방치를 방지하도록 종료 QA를 추가했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-result-20261104072215036-v1.0.0.html",
+    "date": "2026-11-04T07:22:15.036Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity 원본 저장·도구 종료 확인 의무화",
+    "summary": "이미지 내보내기 후 원본 미저장과 컴퓨터 유즈 방치를 방지하도록 종료 QA를 추가했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-result-20261104071813411-v1.0.0.html",
+    "date": "2026-11-04T07:18:13.411Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "도구 사용 후 저장·종료 지침 반영",
+    "summary": "Affinity 원본 저장과 더티 해소, 컴퓨터 유즈 작업 자원 종료를 필수 QA로 정합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-04-manual-20261104071755402-v1.0.0.html",
+    "date": "2026-11-04T07:17:55.402Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104071636495-v1.0.3.html",
+    "date": "2026-11-04T07:16:36.495Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Woodland의 흐린 색 보정과 3색 수관·하늘 개선 · 최종 검증",
+    "summary": "Linear 환경에서 흐려지던 예제 전용 색 처리를 보정하고, 잎 3색·하늘 3영역과 깊은 그림자를 적용했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104070447875-v1.0.0.html",
+    "date": "2026-11-04T07:04:47.875Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104070445318-v1.0.2.html",
+    "date": "2026-11-04T07:04:45.318Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-woodland-colour-20261104-20261104070050595-v1.0.1.html",
+    "date": "2026-11-04T07:00:50.595Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
     "summary": "공통 선택 메뉴 통일 및 독립 제품 창 Alt+Tab 등록 구현·검증",
     "project": "turnroom",
@@ -16,6 +656,26 @@
     "reportPath": "projects/turnroom/reports/2026-11-04-bug-20261104065345839-v1.0.0.html",
     "date": "2026-11-04T06:53:45.839Z",
     "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "옥상 소셜 광장·간편 프로필·공동 미니게임5종",
+    "summary": "기본 멀티와 조작 개선에 이어 간편 프로필·사전 얼굴 촬영·공동 미니게임·옥상 외벽·채팅 디자인을 구현합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-multiplayer-20261104-20261104065119170-v1.0.1.html",
+    "date": "2026-11-04T06:51:19.170Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Prismatic Woodland 명암·색감 개선",
+    "summary": "제공된 원본과 실제 Unity 렌더를 대조해 잎 명암·하늘·색 대비를 개선합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-20261104064753099-v1.0.0.html",
+    "date": "2026-11-04T06:47:53.099Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
@@ -265,6 +925,16 @@
     "project": "pixelfoliage",
     "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-foliage-polish-20261103-20261104052110442-v1.0.18.html",
     "date": "2026-11-04T05:21:10.442Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "즉각 이동·통일 UI·1초 멀티플레이·서버 신고",
+    "summary": "이동 반응을 복원하고 통일된 UI와 게스트 멀티플레이·중복 탭 차단·신고를 실제 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-20261104051902991-v1.0.0.html",
+    "date": "2026-11-04T05:19:02.991Z",
     "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
