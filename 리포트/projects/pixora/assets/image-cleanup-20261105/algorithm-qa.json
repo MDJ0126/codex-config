@@ -1,0 +1,30 @@
+{
+    "at": "2026-11-04T20:26:26.2819129Z",
+    "unity": "6000.0.83f1",
+    "error": "",
+    "passed": true,
+    "checks": [
+        "Representative cells reject center speckles; original nearest behavior retained",
+        "Area average integrates full cell instead of center sample",
+        "Source pixels unchanged",
+        "Transparent RGB does not bleed into average",
+        "Alpha coverage threshold respected",
+        "Aspect ratio and transparent padding retained",
+        "Uniform point-filtered grid: Nearest",
+        "Every opaque output color belongs to final palette: Nearest",
+        "Profile copy preserves sampling: Nearest",
+        "Uniform point-filtered grid: AreaAverage",
+        "Every opaque output color belongs to final palette: AreaAverage",
+        "Profile copy preserves sampling: AreaAverage",
+        "Uniform point-filtered grid: Dominant",
+        "Every opaque output color belongs to final palette: Dominant",
+        "Profile copy preserves sampling: Dominant",
+        "Existing profiles without sampling keep original mode",
+        "Custom palette, dithering and outline remain palette-safe",
+        "Saved work embeds input and restores new setting",
+        "Save/reopen/re-export pixel equality",
+        "New UI keys contain all nine translations",
+        "Native file-open/save/close/reopen/PNG export pixels match saved work"
+    ],
+    "milliseconds": 127
+}

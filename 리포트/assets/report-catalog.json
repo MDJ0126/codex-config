@@ -1,5 +1,35 @@
 [
   {
+    "title": "Image Maker 도트 정돈·일반 이미지 픽셀화 추가",
+    "summary": "도트 정돈 기능 구현과 실제 QA 완료",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-pixora-image-cleanup-20261105-20261104202844727-v1.0.1.html",
+    "date": "2026-11-04T20:28:44.727Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Image Maker 도트 정돈·일반 이미지 픽셀화 추가",
+    "summary": "이미지 탭에 셀 대표색 기반 도트 정돈과 영역 평균 기반 일반 이미지 픽셀화를 추가했습니다. 실제 입력·저장·재열기·PNG 출력과 9언어 UI를 검증했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104202844177-v1.0.0.html",
+    "date": "2026-11-04T20:28:44.177Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Image Maker 도트 정돈·일반 이미지 픽셀화 추가",
+    "summary": "기존 이미지 변환 흐름에 셀 대표색 정돈과 영역 평균 변환을 추가합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-manual-20261104200450624-v1.0.0.html",
+    "date": "2026-11-04T20:04:50.624Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixora Studio 제출 직전 준비·확인된 문제 수정 결과",
     "summary": "문서·Foliage 오류와 판매 정보를 수정하고 최종 패키지 업로드·포털 처리·실제 QA·전후 캡처를 확인했습니다. 최종 제출은 실행하지 않았습니다.",
     "project": "pixora",
