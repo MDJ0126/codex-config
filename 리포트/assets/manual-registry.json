@@ -1,5 +1,100 @@
 [
   {
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-20261104150634033-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-04-manual-20261104150634033-v1.0.0.md",
+    "date": "2026-11-04T15:06:34.033Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-package-resolver-20261105",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Package Resolver 메뉴 전환 검증",
+      "summary": "Windows 메뉴 제거, 리졸버 추가와 실제 Unity 검증",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "나머지 언어와 오류 분기 시각 QA",
+      "outcome": "구현·컴파일·한국어 취소/새로고침 확인",
+      "proposedTime": "3~5분",
+      "actualTime": "23:59:15 KST 시작, 00:06 KST 한국어 실행 확인; 공개 보고 진행 중",
+      "xerjEvidence": "XERJ 시작 실패 후 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "실패",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-package-resolver-20261105",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "요청한 메뉴 정리와 전역 언어 확인 팝업 적용",
+      "completionCriteria": "메뉴 제거·Settings 동일 구역·확인/취소·전역 언어·문서 반영",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "메뉴 및 리졸버 구현 검증",
+          "action": "메뉴 등록 제거 및 확인 팝업/호환성 검사/새로고침 구현",
+          "expected": "실제 메뉴와 한국어 취소/새로고침 동작",
+          "qa": "관련 어셈블리 컴파일과 Unity 실제 실행",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "9개 어셈블리 컴파일 및 Unity 한국어 실행 확인"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "언어별 후속 QA",
+          "action": "나머지 언어·명암 및 오류 분기 확인",
+          "expected": "9개 언어 정상 표시",
+          "qa": "전역 설정 변경 후 팝업 표시 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "한국어 이외 실제 시각 검증 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-04T15:06:33.518Z",
+          "summary": "컴파일 및 실제 메뉴·취소·새로고침",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "메뉴 제거 및 Settings 바로 아래 리졸버; 한국어 팝업과 취소/새로고침 확인",
+              "evidence": "package-resolver 캡처 및 compile/result.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-11-04-manual-20261104145708956-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-11-04-manual-20261104145708956-v1.0.0.md",
     "date": "2026-11-04T14:57:08.956Z",
