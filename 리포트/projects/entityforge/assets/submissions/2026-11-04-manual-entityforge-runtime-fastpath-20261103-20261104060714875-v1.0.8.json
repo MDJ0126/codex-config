@@ -1,0 +1,532 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "manual",
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "최종 원격 확인 미완료: 공식 업로드 Success인데 포털은 2026-11-04 05:58 UTC / 0 files / 25.1 MB로 표시했습니다. 로컬 패키지는 428개이며 네이티브 가져오기까지 통과했습니다. 원격 Download 확인은 도구 시간 초과 후 브라우저 연결이 해제되었습니다. 원인 미확인으로 서버 지연 또는 패키지 결함이라 단정하지 않습니다. 포털 재연결 후 원격 패키지 내용 확인이 필요합니다. Submit 미실행.\n\n검증 환경은 Windows x64/Built-in/Entities 1.3.15입니다. 다른 플랫폼과 파이프라인은 미검증입니다. 교훈 검토: 별도 NavigationSubmit 경로와 CI 종료 전 기록 확정은 프로젝트 근거로 보존하며 기존 전역 검증 지침과 중복되어 AGENTS 변경 없음.",
+    "outcome": "UI QA·공식 Validator·판매 설명/번역 저장과 로컬 패키지 검증은 끝났습니다. 공식 업로드 Success 후 포털이 0 files로 표시하고 원격 다운로드 확인이 시간 초과되어, 제출 가능 상태의 최종 원격 확인은 미완료입니다. Submit은 누르지 않았습니다.",
+    "proposedTime": "30~60분 · 시작 2026-11-04 12:41:55 KST",
+    "actualTime": "현재 작업 검증 기록 시각 2026-11-04 15:07 KST. 최초 시작 12:41:55부터 약 2시간 25분 경과, 재개 14:12:46부터 약 54분 경과. 전체 작업은 원격 확인이 남아 미완료이며 완료 시각으로 기록하지 않습니다. 최초 30~60분 예상을 초과했습니다.",
+    "xerjEvidence": "XERJ node is not running. rg와 현재 소스로 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "entityforge-runtime-fastpath-20261103",
+    "round": 5,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "현재 자동 모드의 반복 처리/메모리 할당과 프리팹 생성·해제 비용을 줄일 구조를 구현",
+    "completionCriteria": "프록시/시뮬레이션 분리, 재사용 렌더 버퍼와 대량 생성·해제, 생명주기 회귀/현재 소스 컴파일/패키지 대조 및 실제 성능 확인 범위 구분",
+    "previousManual": "projects/entityforge/reports/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104033231800-v1.0.7.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "자동 프록시와 ECS 시뮬레이션 분리",
+        "action": "렌더 쿼리/동작 쿼리 분리와 재사용 버퍼·Burst 행렬 준비",
+        "expected": "프록시에는 동작 잡이 실행되지 않고 매 프레임 데이터 배열 복사 제거",
+        "qa": "현재 코드 경로·컴파일·데이터 규약 검증",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "대량 생성·해제와 진단",
+        "action": "엔티티 일괄 생성/해제, 밀집 등록 저장소 및 런타임 카운터",
+        "expected": "전체 소스 반복 탐색 제거, 죽은 소스 정리와 원래 렌더러 복원",
+        "qa": "실제 저장소 소스 실행 테스트와 컴파일·생명주기 경로 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "소스 구현과 현재 버전 컴파일 대조 완료"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "비GUI 회귀와 패키지 반영",
+        "action": "컴파일·순수 로직 실행·문서/번역·소스/패키지 대조",
+        "expected": "실행한 검증만 근거로 기록",
+        "qa": "소스 해시와 테스트 출력·패키지 원본 바이트 비교",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "현재 소스 7개 컴파일, 순수 저장소 실행 테스트, 9개 문서 링크와 402개 에셋 패키지 대조 통과"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "네이티브 회귀와 실제 성능 비교",
+        "action": "같은 부하의 변환 ON/OFF로 프레임 시간·메모리·동작 비교",
+        "expected": "원래 행동 동등성과 실제 비용 감소 확인",
+        "qa": "실제 플레이어에서 동일 조건 비교와 프로파일러 근거 확보",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "최신 3쌍×2부하 실측·메모리·개체/삼각형·픽셀·프리팹/DOTS 회귀 통과. 드론 2.68%, 별도 경량 광석 73.06% 프레임 시간 감소; 일반화 금지."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "빌드 기록 카드 정리",
+        "action": "기존 결과 카드 스타일로 버튼·목록·상세 묶기",
+        "expected": "모든 기록 요소가 같은 박스 안에 표시",
+        "qa": "실제 Unity 테마 전환·기록 선택·목록과 상세 부모 대조",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "UXML/USS 적용과 실제 테마/선택 확인"
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "빌드 기록 요약 행",
+        "action": "UXML 요약 행과 선택/호버/선택 복원",
+        "expected": "파일명 대신 읽기 쉬운 날짜·플랫폼·변환 개수·상태",
+        "qa": "실제 마우스/키보드 선택·새로고침·테마 및 번역 인자 확인",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "요약 행 적용 및 실제 선택/키보드/새로고침/테마 검증 통과"
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "반복 오브젝트 이점·판매 문구",
+        "action": "제품 UI·9개 가이드·포털 저장용 문구에 반복 메시/재질과 조건부 이점 및 실측 제한 명시",
+        "expected": "설치만으로 빨라진다는 보장 없이 조건과 빌드 적용 시점 표시",
+        "qa": "번역 9개·문서 링크·판매 초안 내용 대조",
+        "dependsOn": [
+          "T06"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "제품 설명·9개 가이드에 반복 메시/재질의 조건부 이점 반영. 최신 판매 페이지 4개 언어의 저장용 수정문 준비; 실제 Save는 별도 T11 미실행."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "자동 렌더링 중복 처리 제거",
+        "action": "지속 렌더 페이지와 시뮬레이션 전용 gather, 변경된 재질만 복사, 진단 보강",
+        "expected": "정지 프록시의 매 프레임 gather/copy 제거, 원래 동적 동작/폴백 유지",
+        "qa": "실제 페이지 저장소 로직 실행·7개 어셈블리 컴파일·수명/폴백 경로 대조",
+        "dependsOn": [
+          "T07"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "정지 프록시 재사용 draw 페이지, 동작 전용 gather, 재질 변경 감지, 구간별 진단 구현. 실제 생산 페이지 저장소/측정 정책 순수 로직과 컴파일 통과; 네이티브 성능 pending."
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "산출물·재측정 준비",
+        "action": "측정값/동기화 비용 진단·프로파일링 계획과 새 패키지 생성",
+        "expected": "실측 통과와 구현/정적 검증을 구분하고 네이티브 검증 대기 명시",
+        "qa": "소스/패키지 해시 대조와 진단 데이터 계약 검사",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "0.3.1-preview 407개 에셋을 현재 원본/메타와 읽기 대조. 0.3.0 원본 해시 보존. 포그라운드/타이밍 조건 진단과 명시적 네이티브 QA 준비; 실행하지 않음."
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "title": "비모달 분석·하단 진행률 구현",
+        "action": "씬/프리팹 분석을 EditorApplication.update 분할 처리, 분석 중 버튼과 고정 하단 상태줄, 탭 이동 지속·취소 정리·9언어 문구 구현",
+        "expected": "로딩 다이얼로그 호출 없이 진행률과 상태 표시 구조, 미리보기 지문 계산 제외, 기존 빌드 지문 유지",
+        "qa": "현재 C# 컴파일·UXML 하단 부모·모달 호출 없음·반복자 정리·번역/패키지 소스 대조. 실제 표시/마우스 회귀는 T04에서 재허용 후",
+        "dependsOn": [
+          "T09"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "7개 어셈블리/97개 현재 소스, 9언어 514개 항목과 고정 하단 UXML 구조 검사 통과. 실제 Unity 표시·응답성 pending"
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "title": "판매 포털 실제 초안 저장",
+        "action": "현재 4개 언어 description을 다시 읽고 준비된 조건부 성능 설명을 Save 후 재열어 대조. Submit 금지",
+        "expected": "반복 메시/재질의 조건부 이점과 설치만으로 속도 향상 보장 없음이 실제 초안에 저장",
+        "qa": "포털 저장 전 SHA 대조와 새로고침 후 4개 언어 저장값 대조",
+        "dependsOn": [
+          "T10"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "4언어 설명/기술정보/AI/출시 기록 Save와 전체 새로고침 대조 완료. 공식 업로드 Success 후 포털 0 files 원격 내용 대조 미완료."
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "title": "네이티브 자동 배칭으로 중복 동기화 제거",
+        "action": "원래 Renderer와 공유 재질 동기화로 자동 경로를 전환하고 DOTS 명시적 동작 유지",
+        "expected": "실제 네이티브 재질 변경·대체·수명·풀링 회귀와 생산 소스 컴파일",
+        "qa": "실제 네이티브 재질 변경·대체·수명·풀링 회귀와 생산 소스 컴파일",
+        "dependsOn": [
+          "T08"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 네이티브 재질 변경·대체·수명·풀링 회귀와 생산 소스 컴파일"
+      },
+      {
+        "id": "T13",
+        "order": 13,
+        "title": "실제 교차 성능·동등성 측정",
+        "action": "원본 드론/별도 광석을 각각 OFF/ON 3쌍 정상 렌더링, 소스/인구/픽셀 대조",
+        "expected": "12회 600프레임·포그라운드·기하량·픽셀과 Runtime DLL 일치, 실제 구간/프레임 비용 감소 확인",
+        "qa": "12회 600프레임·포그라운드·기하량·픽셀과 Runtime DLL 일치, 실제 구간/프레임 비용 감소 확인",
+        "dependsOn": [
+          "T12"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "12회 600프레임·포그라운드·기하량·픽셀과 Runtime DLL 일치, 실제 구간/프레임 비용 감소 확인"
+      },
+      {
+        "id": "T14",
+        "order": 14,
+        "title": "최종 패키지 실제 설치와 본체 분리",
+        "action": "최종 고정 패키지 ImportPackage 완료/읽기 대조 후 샘플·개발 없는 새 프로세스 컴파일, 측정 검증기 회귀",
+        "expected": "408개 압축 원본, 407개 네이티브 비설정 자산, 본체·측정 가져오기 통과 후 폴더 복원",
+        "qa": "408개 압축 원본, 407개 네이티브 비설정 자산, 본체·측정 가져오기 통과 후 폴더 복원",
+        "dependsOn": [
+          "T13"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "408개 압축 원본, 407개 네이티브 비설정 자산, 본체·측정 가져오기 통과 후 폴더 복원"
+      },
+      {
+        "id": "T15",
+        "order": 15,
+        "title": "출시 전 실제 UI·공식 Validator",
+        "action": "실제 9언어/테마·마우스/키보드·레이아웃과 최신 에디터 문서 캡처 및 공식 패키지 Validator 확인",
+        "expected": "물리 입력 반환값·취소·소유 테마·현재 화면과 공식 범위 검사 통과",
+        "qa": "이전 캡처 해시는 보존하고 현재 설치본에서 실제 조작/캡처·Validator 실행",
+        "dependsOn": [
+          "T14"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 네이티브 입력·반환/취소·창 크기/선택/필터, 9언어×2테마 현재 캡처, 재열기/재로드, 공식 Validator 28 pass/1 warning/0 fail 및 최종 ImportPackage 통과."
+      }
+    ],
+    "focusTasks": [
+      "T11",
+      "T15"
+    ],
+    "scopeChange": "사용자가 남은 UI QA·공식 Validator·판매 초안 저장을 완료해 제출 준비를 요청했습니다. 최종 Submit은 명시적으로 금지합니다. 0.3.2 설치본의 실제 UI 입력/언어·테마·문서와 포털 저장값 및 출시 범위 Validator를 확인합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-03T04:08:04.833Z",
+        "summary": "첫 정적 검사 스크립트의 호출 대상 문자열이 실제 소스와 달라 실패; 제품 코드 실패로 판정하지 않음",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 쿼리/버퍼 구현의 현재 소스 컴파일 통과",
+            "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 밀집 저장소 소스의 1만 항목 추가·제거·재등록과 재사용 테스트 통과",
+            "evidence": "../assets/runtime-fastpath-20261103/registry-tests.txt",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "checker expected manager.DestroyEntity but implementation uses world.EntityManager.DestroyEntity; checker corrected without changing product",
+            "evidence": "../assets/runtime-fastpath-20261103/verification-attempt1.txt",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-03T04:08:53.463Z",
+        "summary": "현재 소스와 순수 로직 검증 통과, 네이티브 실행 미실행",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "7개 어셈블리 현재 소스 컴파일과 구조/버퍼/의존성 대조",
+            "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 ForgeDenseRegistry 코드의 1만 개 임의 삭제·재등록·반복 초기화 테스트 통과",
+            "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "7개 현재 소스 컴파일·9개 문서 및 402개 에셋 패키지 내용/해시 대조 통과",
+            "evidence": "../assets/runtime-fastpath-20261103/verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "사용자 실행 금지로 네이티브 미실행",
+            "evidence": "",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-03T04:58:56.5297786+00:00",
+        "summary": "사용자 재허용 후 실제 실행",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "기능은 통과했으나 이 부하의 개선율 -1.62%, 추가 성능 검증 필요",
+            "evidence": "../assets/native-validation-20261103/verification.json",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-03T05:06:01.3550422+00:00",
+        "summary": "추가 CI 상태 오류 수정·재빌드",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "현재 7개 어셈블리와 최종 402개 패키지 대조. 새 프로젝트 설치 후 최종 빌드 오류0 및 succeeded 로그 확인",
+            "evidence": "../assets/ci-final-state-20261103/verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-03T05:13:48.942Z",
+        "summary": "빌드 기록 영역 카드화",
+        "results": [
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Unity에서 같은 카드 내부 목록/로그 표시 및 테마 전환·기록 선택 확인",
+            "evidence": "../assets/history-card-20261103/after.jpg",
+            "dependencies": {
+              "T03": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-03T05:22:07.226Z",
+        "summary": "빌드 기록을 날짜·상태·변환 개수의 요약 행으로 정리",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 Unity 6000.0.83f1에서 날짜와 JSON startedUtc 대조, 10,000개 변환 및 succeeded/unknown 상태 대조, 마우스 선택·키보드 Down·새로고침 선택 유지·밝은/어두운 테마 확인. 7개 새 문구의 9개 언어 및 {0} 인자 검사 통과. 캡처는 영어입니다. 기존 로그 파일을 수정하거나 빌드하지 않았습니다.",
+            "evidence": "../assets/history-rows-20261103/after.jpg",
+            "dependencies": {
+              "T05": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-03T06:17:52.724Z",
+        "summary": "반복 렌더링 경로·비모달 분석의 파일/로직 검사. 네이티브 UI·성능은 미실행",
+        "results": [
+          {
+            "taskId": "T07",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "제품 설명·9개 가이드에 반복 메시/재질의 조건부 이점 반영. 최신 판매 페이지 4개 언어의 저장용 수정문 준비; 실제 Save는 별도 T11 미실행.",
+            "evidence": "../assets/repeated-rendering-20261103/verification.json",
+            "dependencies": {
+              "T06": 1
+            }
+          },
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "정지 프록시 재사용 draw 페이지, 동작 전용 gather, 재질 변경 감지, 구간별 진단 구현. 실제 생산 페이지 저장소/측정 정책 순수 로직과 컴파일 통과; 네이티브 성능 pending.",
+            "evidence": "../assets/repeated-rendering-20261103/verification.json",
+            "dependencies": {
+              "T07": 1
+            }
+          },
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "0.3.1-preview 407개 에셋을 현재 원본/메타와 읽기 대조. 0.3.0 원본 해시 보존. 포그라운드/타이밍 조건 진단과 명시적 네이티브 QA 준비; 실행하지 않음.",
+            "evidence": "../assets/repeated-rendering-20261103/verification.json",
+            "dependencies": {
+              "T08": 1
+            }
+          },
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "7개 어셈블리/97개 현재 소스, 9언어 514개 항목과 고정 하단 UXML 구조 검사 통과. 실제 Unity 표시·응답성 pending",
+            "evidence": "../assets/repeated-rendering-20261103/verification.json",
+            "dependencies": {
+              "T09": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "regression",
+        "at": "2026-11-04T03:31:04.183Z",
+        "summary": "실제 성능·네이티브 수명·패키지 설치 및 샘플 없는 본체 검사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "최신 3쌍×2부하 실측·메모리·개체/삼각형·픽셀·프리팹/DOTS 회귀 통과. 드론 2.68%, 별도 경량 광석 73.06% 프레임 시간 감소; 일반화 금지.",
+            "evidence": "../assets/native-performance-20261104/verification.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T12",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 네이티브 재질 변경·대체·수명·풀링 회귀와 생산 소스 컴파일",
+            "evidence": "../assets/native-performance-20261104/verification.json",
+            "dependencies": {
+              "T08": 1
+            }
+          },
+          {
+            "taskId": "T13",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "12회 600프레임·포그라운드·기하량·픽셀과 Runtime DLL 일치, 실제 구간/프레임 비용 감소 확인",
+            "evidence": "../assets/native-performance-20261104/verification.json",
+            "dependencies": {
+              "T12": 1
+            }
+          },
+          {
+            "taskId": "T14",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "408개 압축 원본, 407개 네이티브 비설정 자산, 본체·측정 가져오기 통과 후 폴더 복원",
+            "evidence": "../assets/native-performance-20261104/verification.json",
+            "dependencies": {
+              "T13": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "step",
+        "at": "2026-11-04T06:06:55.888Z",
+        "summary": "출시 UI와 저장값 실제 실행 대조; 원격 파일 목록 미확인 유지",
+        "results": [
+          {
+            "taskId": "T11",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "4언어 설명/기술정보/AI/출시 기록 Save와 전체 새로고침 대조 완료. 공식 업로드 Success 후 포털 0 files 원격 내용 대조 미완료.",
+            "evidence": "../assets/release-qa-20261104/portal-final-readback.json",
+            "dependencies": {
+              "T10": 1
+            }
+          },
+          {
+            "taskId": "T15",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 네이티브 입력·반환/취소·창 크기/선택/필터, 9언어×2테마 현재 캡처, 재열기/재로드, 공식 Validator 28 pass/1 warning/0 fail 및 최종 ImportPackage 통과.",
+            "evidence": "../assets/release-qa-20261104/official-validator.json",
+            "dependencies": {
+              "T14": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
