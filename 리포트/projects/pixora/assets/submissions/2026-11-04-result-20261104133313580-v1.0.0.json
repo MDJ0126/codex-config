@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "result",
+    "title": "Pixora Studio Documentation 메뉴 복구",
+    "summary": "과도한 메뉴 축소로 누락됐던 모듈별 문서 진입을 복구하고 실제 Unity 도메인 등록을 확인했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "각 모듈의 기존 문서 열기 메서드에 Documentation 하위 메뉴를 등록했습니다. 식생 창 내부 가이드 버튼도 같은 메서드를 사용하도록 정리했습니다. 새 통합 창·별도 어셈블리·의존성을 만들지 않았습니다. 세 모듈 진입과 문서 메뉴를 구분하도록 정적 검사도 수정했습니다.",
+    "verification": "2026-11-04 22:32:23 KST 실행 중 Unity 도메인에서 Documentation/Image Maker·Pixel Camera·Foliage 세 MenuItem 속성과 새 모듈 ID를 직접 조회했습니다. Unity 실제 컴파일 DLL 갱신과 도메인 재로드 후 결과입니다. 세 모듈×9언어=27개 HTML 목적지 존재를 확인하고 정적 VerifyStudio 검사도 통과했습니다. 메뉴별 기존 언어 선택을 유지합니다.\n\n브라우저에서 문서를 여는 동작과 실제 메뉴 화면 촬영은 미실행입니다. 이전 GUI 중단을 유지해 이번에는 파일 수정과 기존 호스트 Refresh·메뉴 메타데이터 조회만 수행했습니다. 최초 안내의 문서 실제 열기 검증까지 끝난 것으로 보고하지 않습니다.\n\n교훈은 메뉴 최소화가 문서 접근 제거를 뜻하지 않는다는 사용자 정정을 프로젝트 문서에 반영합니다. 전역은 기존 필요한 기능 보존 규칙으로 포괄되어 변경 없음.",
+    "remaining": "문서 실제 브라우저 열기와 메뉴 화면 재촬영이 남아 있습니다. 안내 문서 내용·스크린샷을 새로 검증한 결과가 아닙니다.",
+    "outcome": "Tools → TurnRoom → Pixora Studio → Documentation 아래 Image Maker·Pixel Camera·Foliage 안내 진입을 복구했습니다.",
+    "proposedTime": "2–4분",
+    "actualTime": "2026-11-04 22:30:46 KST 시작.22:32:23 KST 실제 Unity 문서 메뉴 등록 확인. 공개 배포 확인은 최종 채팅에 기록.",
+    "xerjEvidence": "기존 Status node not running. rg와 실제 실행 도메인 MenuItem 속성으로 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
