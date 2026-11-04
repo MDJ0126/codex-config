@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "공통 팝업 디자인 수정 — 실제 전후 72쌍 종합 비교",
+    "summary": "X 디자인·정렬·검색행과 Foliage 목록을 수정하고 실제 144장 및 제품별 비교를 공개합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- [선택 팝업 전후 비교 — 드롭다운·검색·열거형](../../../projects/turnroom/reports/2026-11-04-result-20261104054741200-v1.0.0.html) — 8쌍\n- [선택 팝업 전후 비교 — 에셋·색상](../../../projects/turnroom/reports/2026-11-04-result-20261104054742416-v1.0.0.html) — 6쌍\n- [선택 팝업 전후 비교 — 레이어·마스크](../../../projects/turnroom/reports/2026-11-04-result-20261104054744037-v1.0.0.html) — 4쌍\n- [명령·주의 팝업 전후 비교](../../../projects/turnroom/reports/2026-11-04-result-20261104054745230-v1.0.0.html) — 6쌍\n- [공통 창 목록과 설정 전후 비교](../../../projects/turnroom/reports/2026-11-04-result-20261104054746746-v1.0.0.html) — 6쌍\n- [검색 라벨 언어별 전후 비교 — 영어·한국어·일본어](../../../projects/turnroom/reports/2026-11-04-result-20261104054747808-v1.0.0.html) — 6쌍\n- [검색 라벨 언어별 전후 비교 — 중국어 간체·번체·스페인어](../../../projects/turnroom/reports/2026-11-04-result-20261104054749032-v1.0.0.html) — 6쌍\n- [검색 라벨 언어별 전후 비교 — 프랑스어·독일어·포르투갈어](../../../projects/turnroom/reports/2026-11-04-result-20261104054750219-v1.0.0.html) — 6쌍\n- [Design Data Table 창·Inspector 전후 비교](../../../projects/designdatatable/reports/2026-11-04-result-20261104054751218-v1.0.0.html) — 4쌍\n- [Pixora 창·Inspector 전후 비교](../../../projects/pixora/reports/2026-11-04-result-20261104054752710-v1.0.0.html) — 6쌍\n- [Pixel Camera 창·Inspector 전후 비교](../../../projects/pixelcamera/reports/2026-11-04-result-20261104054754585-v1.0.0.html) — 4쌍\n- [Entity Forge 창·Inspector 전후 비교](../../../projects/entityforge/reports/2026-11-04-result-20261104054756365-v1.0.0.html) — 4쌍\n- [Pixel Foliage 창·Inspector 전후 비교](../../../projects/pixelfoliage/reports/2026-11-04-result-20261104054757606-v1.0.0.html) — 6쌍\n\n[전체 이미지·촬영시각·해시·소스 변경 목록](../assets/popup-review-20261104/comparison-index.json)\n\n[10개 어셈블리 컴파일 결과](../assets/popup-review-20261104/compile-results.json)",
+    "verification": "Unity6000.0.83f1에서 최종 소스를 다시 로드하고 라이트/다크 각36장을 재촬영했습니다. 72쌍의 크기와 언어 일치, 144개 이미지 해시와 게시 복사본 일치를 확인했습니다. 14쌍은 파일 해시가 같아 변경 없음으로 구분했습니다. Pixora 기본 프로파일 2쌍은 접힘 상태 차이가 있어 동일 상태 검증에서 제외하고 3색 expanded 표본을 따로 제공했습니다. 최종 소스의 10개 어셈블리 컴파일이 전부 exitCode0입니다. GIF는 제작하지 않았고 실제 정지 화면 원본을 제공했습니다. 각 이미지가 200KB 이하인지 바이트를 검사했으며 원본 편집/리사이즈는 하지 않았습니다.\n\n교훈 검토: 공통 컨트롤 변경은 빈 목록·복합행·긴 번역 라벨도 실제로 비교해야 합니다. 기존 전역의 복합 입력·실제 캡처 검증 규칙에 이미 포함돼 전역 지침은 변경하지 않았습니다. 적용 범위와 개별 제한은 이 보고서에 기록했습니다.",
+    "remaining": "실제 물리 입력의 선택값 반환·취소·X 클릭과 Windows Alt+Tab은 미확인입니다. 입력 도구에서 창 활성화 timeout 및 foreground PID 오류가 발생했습니다. 자동으로 팝업을 열어 촬영한 결과를 실제 키보드·마우스 통과로 처리하지 않았습니다. 기존 DDT 저장/삭제/About 확인 대화상자와 9언어 전체 제품 가이드의 과거 화면 갱신은 이 비교 결과로 통과 처리하지 않습니다. 라이트 Global Settings의 제목 대비 부족도 확인됐습니다. 기존 전체 메뉴얼은 이 미확인 검증을 보존하며 완료 처리하지 않습니다. 패키지 업로드·심사 제출은 수행하지 않았습니다.",
+    "outcome": "공통 X를 창 아이콘과 같은 방식으로 통일하고 28px 클릭 영역·헤더 정렬·입력칸 기준 위치를 적용했습니다. Foliage의 줄바꿈과 빈 목록 여백도 수정했습니다. 실제 전후 72쌍(144장)을 종류·제품별로 분리했습니다. 모든 UI가 개선됐다는 뜻은 아니며 변경 없음과 미확인 범위도 표시했습니다.",
+    "proposedTime": "30–60분. 14:37 KST에 추가 10–15분을 안내했습니다.",
+    "actualTime": "2026-11-04 13:41:31 KST 시작. 화면 수정·재촬영·컴파일 확인 14:47:28 KST까지 66.0분. 보고서 공개 검증 시간은 채팅 최종 보고에 별도 기록합니다.",
+    "xerjEvidence": "XERJ Status 노드 미실행, Search 시작 시 인덱스 데이터 디렉터리 잠금으로 실패. 현재 소스는 rg로 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}

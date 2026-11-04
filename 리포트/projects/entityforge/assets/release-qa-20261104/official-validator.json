@@ -1,0 +1,159 @@
+{
+    "utc": "2026-11-04T06:02:41.6121790Z",
+    "unity": "6000.0.83f1",
+    "sdk": "Asset Store Tools 11.3.1",
+    "category": "Tools/Utilities",
+    "error": "",
+    "completed": true,
+    "compilationErrors": false,
+    "pass": 28,
+    "warning": 1,
+    "fail": 0,
+    "tests": [
+        {
+            "title": "Check Audio Clipping",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No clipping audio files were detected.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Colliders",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have colliders!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Compressed Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No archives were found in the package content!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Demo Scenes",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Scenes found\",\"MessageObjects\":[\"GlobalObjectId_V1-1-214e2beeb546f7c795ada546c67fac03-102900000-0\",\"GlobalObjectId_V1-1-85e345b7c964c4a1d4297845df53933c-102900000-0\",\"GlobalObjectId_V1-1-6774d196f4e81f2120c5a59e296f4da8-102900000-0\"],\"SerializedClickAction\":\"0\"},{\"Text\":\"If these Scenes should not belong to your package, make sure you have selected the correct main folder.\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Documentation",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"Found documentation files\",\"MessageObjects\":[\"GlobalObjectId_V1-1-7fbac4a4117741be9fc21edf935ea268-4900000-0\",\"GlobalObjectId_V1-1-00e35ec90fc2c2549a3395383da19c0b-4900000-0\",\"GlobalObjectId_V1-1-8e156d6bda0c4a745965406c2f2986df-4900000-0\",\"GlobalObjectId_V1-1-8b61b9e38c4edf1429cda4900c5dc601-4900000-0\",\"GlobalObjectId_V1-1-ff6ed78cb3fa5314fbc5dcd13cb19ac3-4900000-0\",\"GlobalObjectId_V1-1-04deffae653110f41b394b69c0210f06-4900000-0\",\"GlobalObjectId_V1-1-5cf83abb903a7be4b8e0a25a2283adcd-4900000-0\",\"GlobalObjectId_V1-1-b33b6d2717b700345b306eacebeeeba6-4900000-0\",\"GlobalObjectId_V1-1-54dd691ef19b34942aac2e0f544f0dfa-4900000-0\",\"GlobalObjectId_V1-1-489c7e60b4f8e384bb566cedc58a5ec2-4900000-0\",\"GlobalObjectId_V1-1-f5d069be511f4ec43bdb1701b7b1b54b-4900000-0\",\"GlobalObjectId_V1-1-b9c6a82e318a47e0bcf9e2126d71735c-4900000-0\"],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Empty Prefabs",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No empty prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check File Menu Names",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No MenuItems with invalid names were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Line Endings",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No scripts with inconsistent line endings were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check LODs",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs are meeting the LOD requirements!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Mesh Prefabs",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs have meshes!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Missing Components in Assets",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No assets have missing components!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Missing Components in Scenes",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No missing components were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Model Orientation",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found models are facing the right way!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Model Types",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All models are of allowed formats!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Normal Map Textures",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All normal map textures have the correct texture type!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Particle Systems",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Particle Systems without Prefabs were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Path Lengths",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All package content matches the path limit criteria!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Prefab Transforms",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found prefabs were reset!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Script Compilation",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All scripts in the project compiled successfully!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Shader Compilation",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All found Shaders have no compilation errors!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Texture Dimensions",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"All texture dimensions are a power of 2!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Check Type Namespaces",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No types without namespaces were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove Executable Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No executable files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove JavaScript Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No UnityScript / JS files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove JPG Files",
+            "status": "Warning",
+            "detail": "{\"Result\":3,\"Messages\":[{\"Text\":\"The following textures are compressed as JPG/JPEG\",\"MessageObjects\":[\"GlobalObjectId_V1-1-5816c1f3d5bd1f3d026419204f4953c9-8900000-0\",\"GlobalObjectId_V1-1-469106f7ce7a8419fb5db11667211da6-8900000-0\",\"GlobalObjectId_V1-1-a396fb352b65f9cb378d364d802cf1fc-8900000-0\",\"GlobalObjectId_V1-1-166b4c30411b4a73b64019aa54393930-8900000-0\",\"GlobalObjectId_V1-1-cdd72449a5994570bb4638e1406f1ecc-8900000-0\",\"GlobalObjectId_V1-1-0054a58920466c549bb89aee67760933-2800000-0\",\"GlobalObjectId_V1-1-d1814cd7b0ec491b84bb628850234ac0-8900000-0\",\"GlobalObjectId_V1-1-bb27df3693169d6489304506e70f9fae-2800000-0\"],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove Lossy Audio Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No lossy audio files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove Mixamo Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No Mixamo files were found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove SpeedTree Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No SpeedTree assets have been found!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        },
+        {
+            "title": "Remove Video Files",
+            "status": "Pass",
+            "detail": "{\"Result\":1,\"Messages\":[{\"Text\":\"No video files were found, looking good!\",\"MessageObjects\":[],\"SerializedClickAction\":\"0\"}]}"
+        }
+    ]
+}

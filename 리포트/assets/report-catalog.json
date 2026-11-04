@@ -1,5 +1,305 @@
 [
   {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104061239556-v1.0.9.html",
+    "date": "2026-11-04T06:12:39.556Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 제출 준비 완료: UI QA·Validator·초안 저장",
+    "summary": "9언어/2테마와 실제 입력 QA, 공식 검사 28통과·오류0, 최종 428개 파일 업로드 및 판매 초안 저장 대조를 마쳤습니다. 제출은 하지 않았습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104061238820-v1.0.0.html",
+    "date": "2026-11-04T06:12:38.820Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 렌더링 경로와 프리팹 대량 처리 보강",
+    "summary": "불필요한 시뮬레이션과 프레임별 복사를 분리하고 생성·해제 경로를 개선합니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-manual-entityforge-runtime-fastpath-20261103-20261104060714875-v1.0.8.html",
+    "date": "2026-11-04T06:07:14.875Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 출시 QA·공식 Validator와 판매 초안",
+    "summary": "실제 언어·테마·입력 QA, 기본 팝업 키보드 경로와 CI 종료 기록을 보완했습니다. 최종 제출은 하지 않았습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104060703817-v1.0.0.html",
+    "date": "2026-11-04T06:07:03.817Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
+    "summary": "공통 선택 메뉴 통일 및 독립 제품 창 Alt+Tab 등록 구현·검증",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-shared-popup-task-switch-20261104-20261104054837402-v1.0.4.html",
+    "date": "2026-11-04T05:48:37.402Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 팝업 디자인 수정 — 실제 전후 72쌍 종합 비교",
+    "summary": "X 디자인·정렬·검색행과 Foliage 목록을 수정하고 실제 144장 및 제품별 비교를 공개합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054758470-v1.0.0.html",
+    "date": "2026-11-04T05:47:58.470Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Foliage 창·Inspector 전후 비교",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104054757606-v1.0.0.html",
+    "date": "2026-11-04T05:47:57.606Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Entity Forge 창·Inspector 전후 비교",
+    "summary": "4쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "entityforge",
+    "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104054756365-v1.0.0.html",
+    "date": "2026-11-04T05:47:56.365Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 창·Inspector 전후 비교",
+    "summary": "4쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-04-result-20261104054754585-v1.0.0.html",
+    "date": "2026-11-04T05:47:54.585Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora 창·Inspector 전후 비교",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-04-result-20261104054752710-v1.0.0.html",
+    "date": "2026-11-04T05:47:52.710Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Design Data Table 창·Inspector 전후 비교",
+    "summary": "4쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-04-result-20261104054751218-v1.0.0.html",
+    "date": "2026-11-04T05:47:51.218Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검색 라벨 언어별 전후 비교 — 프랑스어·독일어·포르투갈어",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054750219-v1.0.0.html",
+    "date": "2026-11-04T05:47:50.219Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검색 라벨 언어별 전후 비교 — 중국어 간체·번체·스페인어",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054749032-v1.0.0.html",
+    "date": "2026-11-04T05:47:49.032Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검색 라벨 언어별 전후 비교 — 영어·한국어·일본어",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054747808-v1.0.0.html",
+    "date": "2026-11-04T05:47:47.808Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 창 목록과 설정 전후 비교",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054746746-v1.0.0.html",
+    "date": "2026-11-04T05:47:46.746Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "명령·주의 팝업 전후 비교",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054745230-v1.0.0.html",
+    "date": "2026-11-04T05:47:45.230Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "선택 팝업 전후 비교 — 레이어·마스크",
+    "summary": "4쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054744037-v1.0.0.html",
+    "date": "2026-11-04T05:47:44.037Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "선택 팝업 전후 비교 — 에셋·색상",
+    "summary": "6쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054742416-v1.0.0.html",
+    "date": "2026-11-04T05:47:42.416Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "선택 팝업 전후 비교 — 드롭다운·검색·열거형",
+    "summary": "8쌍의 실제 수정 전후 화면과 확인 범위를 기록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-result-20261104054741200-v1.0.0.html",
+    "date": "2026-11-04T05:47:41.200Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-foliage-polish-20261103-20261104052110442-v1.0.18.html",
+    "date": "2026-11-04T05:21:10.442Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 밝기·팔레트 저장 흐름·전용 창과 로고 개선",
+    "summary": "13씬 밝기·전용 창/로고·저장 후 식생 카드 UX를 개선했습니다. 실제 Scene 드래그와 Ctrl+Z/Ctrl+Y, 저장 후 재열기의 개체 수 보존까지 추가 검증했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104051337902-v1.0.1.html",
+    "date": "2026-11-04T05:13:37.902Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-plaza-refresh-20261104-20261104050505151-v1.0.3.html",
+    "date": "2026-11-04T05:05:05.151Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최종 화면 보정: 프로필 버튼·최대 닉네임과 웹 회귀",
+    "summary": "전체 UI·이동·광장·AI 개선 후 발견한 프로필 버튼 넘침을 보정하고 최종 웹을 다시 검사했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104050504458-v1.0.1.html",
+    "date": "2026-11-04T05:05:04.458Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-foliage-polish-20261103-20261104045530916-v1.0.17.html",
+    "date": "2026-11-04T04:55:30.916Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "식생 밝기·팔레트 저장 흐름·전용 창과 로고 개선",
+    "summary": "식생13씬의 밝기를 낮추고, 시작→파일명/폴더→저장→식생 카드→바닥 연결 흐름으로 정리했습니다. 실제 Unity의 Undo/Redo와 저장/재열기도 검증했습니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-result-20261104045257294-v1.0.0.html",
+    "date": "2026-11-04T04:52:57.294Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
+    "summary": "공통 선택 메뉴 통일 및 독립 제품 창 Alt+Tab 등록 구현·검증",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-04-manual-shared-popup-task-switch-20261104-20261104044956351-v1.0.3.html",
+    "date": "2026-11-04T04:49:56.351Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "읽기 쉬운 HUD·자연스러운 이동·넓어진 오후 광장과 로컬 AI 보충",
+    "summary": "중앙 채팅·상태 팝업·가상 스크롤 목록·비모달 창·Enter 포커스·이동/추적을 개선했습니다.80×64m 광장과 하늘·태양, 클라이언트 최소5명 보충을 적용하고 최종 실제 웹을 검사했습니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-result-20261104044606136-v1.0.0.html",
+    "date": "2026-11-04T04:46:06.136Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-plaza-refresh-20261104-20261104044605306-v1.0.2.html",
+    "date": "2026-11-04T04:46:05.306Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 모듈 통합 후 식생 구현·검증·판매 준비",
+    "summary": "잔디를 풍성하고 부드럽게 개선하고 유닛 반응·원본 경량화·공통 템플릿과 카메라 전후를 검증합니다.",
+    "project": "pixelfoliage",
+    "reportPath": "projects/pixelfoliage/reports/2026-11-04-manual-foliage-polish-20261103-20261104042107916-v1.0.16.html",
+    "date": "2026-11-04T04:21:07.916Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-plaza-refresh-20261104-20261104041304347-v1.0.1.html",
+    "date": "2026-11-04T04:13:04.347Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "공통 검색형 선택 메뉴와 Windows 작업 전환 개선",
     "summary": "Templete 1.9.0 공통 메뉴 및 Alt+Tab 등록 구현과 컴파일 검증을 마쳤습니다. 실제 화면 QA는 제어 중단으로 보류입니다.",
     "project": "turnroom",
@@ -66,6 +366,16 @@
     "reportPath": "projects/entityforge/reports/2026-11-04-result-20261104033116004-v1.0.0.html",
     "date": "2026-11-04T03:31:16.004Z",
     "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "HUD·스크롤 목록·자연스러운 이동·확장 오후 광장",
+    "summary": "사용자가 지적한 현재 UI/입력/추적 문제를 수정하고 확장 광장과 하늘·태양을 실제 웹에서 검증합니다.",
+    "project": "afternoon-pause",
+    "reportPath": "projects/afternoon-pause/reports/2026-11-04-manual-20261104032251235-v1.0.0.html",
+    "date": "2026-11-04T03:22:51.235Z",
+    "kind": "manual",
     "relatedReport": "",
     "replyTo": ""
   },
