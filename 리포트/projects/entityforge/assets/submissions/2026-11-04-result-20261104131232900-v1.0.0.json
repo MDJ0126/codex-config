@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "entityforge",
+    "kind": "result",
+    "title": "실행 중 Unity에서 Entity Forge 메뉴 제거 반영 확인",
+    "summary": "Unity 내부 Refresh 후 실제 로드된 MenuItem 목록을 조회해 Package Manager 메뉴 제거를 확인했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ForgeDependencies의 Tools/TurnRoom/Entity Forge/Open Entities in Package Manager 메뉴 속성을 제거했습니다. 제품 창 내부의 패키지 누락 시 안내·Package Manager 버튼은 유지합니다. ForgeWindowActions.Profiles는 참조·이벤트 바인딩이 없어 GetWindow<BuildPlayerWindow> 호출과 함께 제거했습니다.\n\nDDT는 수정하지 않았습니다. Entity Forge Open·Measure Active Scene·Build Player·Documentation 메뉴를 더 축소하지 않았습니다.",
+    "verification": "기존 Unity 개발 호스트의 refresh 명령을 실제 실행하고 소비 완료를 확인했습니다. 새로 로드된 StudioMenuWitness가 2026-11-04T13:11:42.4341824Z에 실행 중 메뉴 속성을 기록했습니다. Entity Forge Editor 모듈 ID04827032-fdcc-4ec3-8315-ffdeef7d8ae7에서 Open·Measure Active Scene·Build Player·Documentation 등록을 확인했습니다. Samples3개는 별도 샘플 모듈에서 유지됩니다. Package Manager 메뉴는0개입니다.\n\nLibrary DLL 갱신은22:10:44 KST입니다. 이 시각은 이번 Refresh 요청 전이므로 이번 요청이 DLL 생성을 일으켰다고 소급 단정하지 않습니다. 이전21:16 DLL을 확인했던 시점과 현재 로드 결과는 구분합니다. DDT는 수정하지 않았습니다. GUI 조작·신규 앱 실행·재시작은 하지 않았습니다.\n\n교훈은 기존 실제 로드 버전 대조 의무에 포함돼 전역 변경 없음.",
+    "remaining": "실제 화면 재촬영은 하지 않았습니다. 확인 범위는 실행 중 도메인의 메뉴 등록이며 창 외형 검증은 아닙니다.",
+    "outcome": "소스·별도 컴파일에 머물렀던 검증을 실행 중 Unity 도메인의 실제 메뉴 속성 확인까지 진행했습니다. 해당 메뉴는 로드 목록에 없습니다.",
+    "proposedTime": "1–3분",
+    "actualTime": "2026-11-04 22:11:32 KST 시작.22:12 KST에 실행 중 Unity 메뉴 속성 확인 완료. 공개 배포 확인 시각은 최종 채팅에 기록.",
+    "xerjEvidence": "직전 Status: XERJ node is not running. rg로 메뉴·참조·이벤트 바인딩 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
