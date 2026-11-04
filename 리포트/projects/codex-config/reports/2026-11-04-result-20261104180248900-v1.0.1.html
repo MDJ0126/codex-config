@@ -1,0 +1,41 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>교훈·누락 보고서 복구와 작업시간·보고량 지침 통합 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">설정</span></div><div class="post-title-row"><h1>교훈·누락 보고서 복구와 작업시간·보고량 지침 통합</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">교훈두개의전역통합과보고서누락복구에이어,사용자가명시한시간상향금지·통상절반목표·간결보고기준을반영했습니다.</p><div class="post-byline"><time datetime="2026-11-04T18:05:17.783Z">2026년 11월 5일 오전 3:05 KST</time><span>v1.0.1</span><span>설정</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>전역AGENTS.md의기존규칙두곳에교훈을통합하고커밋8daed64d를main에푸시했습니다.설치본·기본설정저장소·게시용체크아웃의동일성을확인했습니다.그런데별도결과보고서등록을빠뜨리고완료응답했으므로이번에누락된보고서를등록합니다. 이어사용자가요청한시간·출력량기준을기존시간산정규칙에통합하고55ff6888을main에푸시했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>확인한오류는세가지입니다.</p>
+<ol>
+<li>이전2.5.g해결기록과실제제출파일을먼저대조하지않고현재개발파일을제출전미해결항목에섞었습니다.</li>
+<li>이후설명에서도최초보고가실제로한주장과정정설명을정확히대조하지않아단순한파일착각처럼경위를축약했습니다.</li>
+<li>교훈을지침에반영·푸시한뒤결과보고서등록을누락했습니다.</li>
+</ol>
+<p>전역통합내용:</p>
+<ul>
+<li>기존배포산출물검증규칙:기존해결사항을재지적하기전에당시수정·검증기록을읽고개발트리·검토후보·실제업로드본을해시와포함파일로구분합니다.개발파일의존재만으로제출본미해결·재발을단정하지않습니다.</li>
+<li>기존보고서작성규칙:오류정정시최초보고의실제문구·근거와대조하여맞았던관찰·틀린판단·적용범위를구분합니다.최초주장이나경위를사후에바꾸거나단순화하지않습니다.</li>
+</ul>
+<p><a class="report-link" href="https://github.com/MDJ0126/codex-config/commit/8daed64d">전역지침변경커밋8daed64d</a> · <a class="report-link" href="https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md">main의AGENTS.md</a></p>
+<p>추가사용자요청반영:</p>
+<ul>
+<li>작업목표와최초예상은통상기준절반을우선기준으로잡습니다.</li>
+<li>여유확보·핑계·사후합리화를위해예상시간을높이거나계산기준을유리하게바꾸지않습니다.실제작업량·실행근거없는상향을금지합니다.</li>
+<li>실제소요시간·완료여부는실측대로기록합니다.</li>
+<li>필요한사실만짧게보고하며반복설명·변명·불필요출력으로시간과토큰을소모하지않습니다.</li>
+</ul>
+<p><a class="report-link" href="https://github.com/MDJ0126/codex-config/commit/55ff6888">시간·보고량규칙커밋55ff6888</a></p>
+<p><a class="report-link" href="./2026-11-04-result-20261104180248900-v1.0.0.html">이전보고서</a>는이력으로보존합니다.</p>
+<h2 id="section-4">검증</h2>
+<p>Sync.ps1 -Direction Push실행성공후main푸시성공.커밋의공개AGENTS.md를직접읽어두문장포함과HTTP200을확인했습니다.설치본·기본설정저장소·게시용체크아웃은줄바꿈정규화후동일했습니다.</p>
+<p>2.5.g재검증에서는실제업로드영수증과동일보관패키지의SHA-256 35ebbb385de19f9209eea0ce9ce6a634b3d34e8bd6e6deda5b9a21b9ec7f4f22를확인했고문제파일은해당패키지와통합검토패키지에없었습니다.</p>
+<p><a class="report-link" href="https://mdj0126.github.io/codex-config/projects/pixora/reports/2026-11-04-result-20261104161631134-v1.0.1.html">기존제출본판정정정보고서v1.0.1</a>와<a class="report-link" href="https://mdj0126.github.io/codex-config/projects/pixora/assets/presubmission-20261105/recheck-25g.json">실제패키지대조근거</a>는공개HTTP200확인완료입니다.</p>
+<p>이번작업은지침·기록변경으로제품실행화면변경이없습니다.화면조작·새GUI실행은하지않았고장식이미지를만들지않았습니다.</p>
+<p>시간규칙은설치본·기본설정체크아웃·게시용체크아웃에동일하게통합했고Sync.ps1 Push및main푸시가성공했습니다.공개내용과세사본의동일성을최종확인합니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>이보고서의공개배포·외부접근확인은등록·푸시후실제결과로확인합니다.미확인배포를완료로보고하지않습니다.이미실행중인다른대화가수정지침을자동으로읽었다고주장하지않습니다.</p>
+<p>교훈검토:기존규칙두곳에통합,중복독립항목은추가하지않았습니다.보고서누락은이미명시된필수절차를미준수한실수이며이보고서로기록을보완합니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 교훈반영2<del>4분.보고서누락복구:작성·검사1</del>2분,공개배포별도. 시간규칙수정·검증·푸시예상1분.</li>
+<li>실제로 완료된 시간: 교훈반영시작2026-11-05 02:58:45 KST,커밋·main푸시와공개소스확인03:00:29 KST까지1분44초.보고서누락복구시작03:01:46 KST.공개배포완료시각은확인후채팅에기록. 시간규칙시작2026-11-05 03:04:34 KST.커밋55ff6888푸시성공.보고서공개확인은별도.</li>
+<li>XERJ: 미사용 — 코드검색없이전역지침·기존정정근거·Git동기화만대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104180248900-v1.0.1.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=codex-config&topic=qa&relatedReport=projects%2Fcodex-config%2Freports%2F2026-11-04-result-20261104180248900-v1.0.1.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=codex-config">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=codex-config">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
