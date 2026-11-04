@@ -1,0 +1,64 @@
+{
+  "product": "EntityForge",
+  "at": "2026-11-04T14:29:18.873Z",
+  "output": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Video/EntityForge-Promo-20261104.mp4",
+  "duration": 70,
+  "size": [
+    1920,
+    1080
+  ],
+  "sources": [
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/01-Cover.png",
+      "seconds": 5,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "84525ec6d75a3acbc1ee6d001c65f6a5d4a4d865db5f0015c529456512cd6dde"
+    },
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/02-Conversion.png",
+      "seconds": 7,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "b19b04eca6104f9bc15fbd854d01a0d60082894cd7930534b7d9b38d0ff95db0"
+    },
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/04-Readiness.png",
+      "seconds": 7,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "0eac9199410f84ec6a75e1fc5b64ee6eea557dbb3077f72e61809554cc962073"
+    },
+    {
+      "path": ".local/ReleaseFootage20261102/EntityForgeGames-r2/MultipleMaterials.mp4",
+      "seconds": 30,
+      "type": "Previously recorded actual standalone Unity gameplay",
+      "sha256": "52502b9d94111de3821aeadd8748cd5783bd66c1a046b0bed0c0212b2e459bf2"
+    },
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/09-Drone-Hangar.png",
+      "seconds": 7,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "7a8429f08559d014e6f0a995a5e22eca8e7feb03040277d6d7bd5fdf69b01320"
+    },
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/10-Cargo-Traffic.png",
+      "seconds": 7,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "ba8f469d0131c5b977020214a01fc3391cca02898b00c0e5c2212a90a5fa4929"
+    },
+    {
+      "path": "Docs/StoreMedia/Refresh-2026-11-04/EntityForge/Images/11-Salvage-Yard.png",
+      "seconds": 7,
+      "type": "Actual Affinity marketing composition with recorded Unity screenshot",
+      "sha256": "31df7beef19b70a95bd095c894776165380ba572956085463a8ac6abdab41e9f"
+    }
+  ],
+  "sha256": "d978cf652a5f86fdb129a11e771b084deefffcd853a10337e5c149df27cfb624",
+  "bytes": 8543209,
+  "fullDecodePassed": true,
+  "audioCheck": [
+    "mean_volume: -19.4 dB\r",
+    "max_volume: -4.0 dB\r"
+  ],
+  "musicCredit": "Cipher — Kevin MacLeod (incompetech.com). Licensed under Creative Commons Attribution 3.0. https://creativecommons.org/licenses/by/3.0/ Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844",
+  "audition": "pending; technical signal and full decode do not prove listening",
+  "newGameplayRecording": false
+}
