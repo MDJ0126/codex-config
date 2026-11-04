@@ -1,0 +1,42 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>옥상 소셜 광장: 멀티·공동 게임·스폰서·이미지판 구현과 상인 검증 대기 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">오</span><span>오후의 틈</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>옥상 소셜 광장: 멀티·공동 게임·스폰서·이미지판 구현과 상인 검증 대기</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">기존 범위 Play86개·실제 두 웹29개 통과. 상인 추가는 코드 저장 후 화면 조작 중단으로 적용·최종 QA가 남았습니다.</p><div class="post-byline"><time datetime="2026-11-04T07:26:50.557Z">2026년 11월 4일 오후 4:26 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>이동/UI·멀티플레이·공동 미니게임5종·좋아요·스폰서·이미지판을 구현하고 기존 범위 웹 동작을 확인했습니다. 가판대 상인3명은 코드와 저작 도구를 저장했으나 아직 씬 적용·실행 검증 전입니다. 전체 요청 완료로 표시하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>즉시 이동/정지, 도착까지 달리기, 좌클릭 드래그 회전과 릴리즈 클릭, 벤치 자동 접근·착석.</li>
+<li>1초 상태 갱신·1초 채팅·중복 탭 무로딩·서버 신고/좋아요 저장.</li>
+<li>캐릭터 얼굴16종 사전 촬영, 간편 프로필·별도 신고 팝업·가는 선 닫기.</li>
+<li>숫자·초성·기억·가위바위보·21 공동 게임과 서버 최고기록.</li>
+<li>서버 지정 스폰서 금색 닉네임/프로필, PNG/JPEG512px·128KB 이미지판과 거리/최대4개 표시 제한. 이미지 원본은 매초 보내지 않습니다.</li>
+<li>옥상 아래 외벽/결합 창문·간헐 비행·이름표 접속 시간과 현재 시각.</li>
+<li>사용자 예시 기반 순화표와 8개 재사용 메시지 카드. 메이플 공식 전체 순화어 목록과 동일함은 미확인입니다.</li>
+</ul>
+<p>변경 전: 소개·링크·개인 사진이 있던 실제 웹 프로필입니다.
+<figure><img class="report-image" src="../assets/multiplayer-20261104/before-profile.png" alt="변경 전 실제 프로필" loading="lazy"><figcaption>변경 전 실제 프로필</figcaption></figure></p>
+<p>변경 후: 같은1920×1080 웹에서 스폰서 금색 프로필과 캐릭터 얼굴을 확인했습니다. 카메라/캐릭터 상태가 달라 픽셀 단위 동일 장면 비교는 아닙니다.
+<figure><img class="report-image" src="../assets/multiplayer-20261104/after-sponsor-profile.png" alt="변경 후 실제 스폰서 프로필" loading="lazy"><figcaption>변경 후 실제 스폰서 프로필</figcaption></figure></p>
+<p>본인 업로드 이미지를 상대 Edge 화면의 머리 위에서 확인했습니다. 이 캡처 이후 이미지 정렬 보완 코드를 저장했으며 그 변경은 재검증 전입니다.
+<figure><img class="report-image" src="../assets/multiplayer-20261104/shared-board.png" alt="상대에게 보이는 이미지판" loading="lazy"><figcaption>상대에게 보이는 이미지판</figcaption></figure></p>
+<p>두 참가자의 숫자 게임과 서버 최고기록입니다.
+<figure><img class="report-image" src="../assets/multiplayer-20261104/game-record.png" alt="공동 게임 최고기록" loading="lazy"><figcaption>공동 게임 최고기록</figcaption></figure></p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity6000.0.83f1 실제 Play86개 통과, 오류0, 기존 PlayerPrefs 복원.</li>
+<li>Chrome156.0.8078.80 / Edge156.0.4314.58 실제 두 접속 검사29개 통과(16:18:13 KST). 게임5종·파일 업로드 공유/접기·좋아요·신고 서버 접수·클릭 착석·중복 탭 무로딩 포함.</li>
+<li>측정 중앙값30.01FPS, 프레임p95 34ms·최대35ms, 브라우저 CPU10.42%/한 코어. 최소 틱 간격1025ms, 업로드약574B/s·다운로드약3602B/s. 실제2명+각 클라이언트 AI3명 조건이며 상인3명 추가 후 성능은 미확인입니다.</li>
+<li>기존 범위 NodeHTTP/게임 검사11개 통과. 권한 위조·크기/해상도·중복 좋아요·재시작 보존·서버 게임 판정 확인. 이후 상인 endpoint 추가의 HTTP 재검사는 아직 하지 않았습니다.</li>
+<li>16:15:19 웹 빌드24,953,593bytes 성공. 이후 상인과 일부 보완 코드는 이 빌드에 포함되지 않습니다. 현재 추가 코드는 Runtime/Editor 컴파일 통과까지 확인했습니다.</li>
+<li>Esc 입력으로 화면 조작을 중단하고 자동 드라이버와 대기 요청을 취소했습니다. 두 QA 브라우저는 정상 종료했고 전용 QA 서버도 종료했습니다. 기존 사용자 Unity·Chrome·사용 중이던 서비스는 보존했습니다.</li>
+<li>프로젝트 교훈: 주변 AI 발화가 있는 QA에서 전체 로그 개수 대신 대상 메시지 중복을 확인합니다. Canvas 연결·실행 시 목록 색·채팅 실제 화면 좌표를 확인합니다. 기존 전역 규칙과 중복되어 전역 지침 변경 없음.</li>
+<li>이미지 캡처 원본 PNG를 보존했습니다. 가독성 보존을 위해 약300~425KB 원본을 첨부했고 이미지 편집·GIF 제작은 수행하지 않았습니다.</li>
+<li>참고한 공식 채팅 안내: <a class="report-link" href="https://gi.maplestory.nexon.com/Guide/GameInformation/Community/ChattingSystem">https://gi.maplestory.nexon.com/Guide/GameInformation/Community/ChattingSystem</a></li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<p>화면 사용 중단으로 가판대3구역/상주 상인의 씬 적용·실제 수령 검사, 최근 얼굴/이미지 정렬/비행 경로 보완 재검사, 최종 웹 빌드·상인 추가 성능·백그라운드 회귀와 임시 Editor 도구 정리가 남았습니다. 상인 상품은 무료 체험이며 실결제·유료 판매·계정 시스템은 구현하지 않았습니다. 외부 호스팅/도메인과 실제 인터넷 서비스 배포도 하지 않았습니다. 파일 저장과 중간 검증을 전체 완료로 간주하지 않습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초90<del>150분. 후속 기능 추가로16:15</del>16:30, 스폰서/이미지판 추가20<del>30분, 가판대/상인 추가15</del>25분 반영 최종16:35~16:50 KST 예상으로 안내했습니다.</li>
+<li>실제로 완료된 시간: 2026-11-04 14:17:28 KST 시작. 화면 조작 중단16:23:38 KST까지2시간6분10초. 전체 작업은 미완료이며 완료 시각은 없습니다. 보고서는 중단 상태를 기록합니다.</li>
+<li>XERJ: 미사용 — XERJ MCP/검색 스크립트 미제공. rg·현재 소스·실제 실행으로 검증.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-04-result-20261104072650557-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=afternoon-pause&topic=qa&relatedReport=projects%2Fafternoon-pause%2Freports%2F2026-11-04-result-20261104072650557-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=afternoon-pause">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=afternoon-pause">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
