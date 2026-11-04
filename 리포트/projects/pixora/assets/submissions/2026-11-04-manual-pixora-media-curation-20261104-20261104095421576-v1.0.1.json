@@ -1,0 +1,161 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 판매 이미지 정리와 통합 영상 재제작",
+    "summary": "기존 미디어 대조 후 중복 삭제·모듈 순서 정리와 통합 영상을 제작합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "최종 제출은 사용자 지시 전까지 미실행. 기존 키 이미지는 이번 요청 범위에서 변경하지 않음.",
+    "outcome": "구형·중복6장 삭제, Camera·Foliage 앞쪽 배치와 60초 통합 영상 교체·검증 완료",
+    "proposedTime": "이미지 5–10분, 영상·검증 20–30분",
+    "actualTime": "2026-11-04 18:25:36 KST 시작, 18:53 KST경 미디어·포털 검증 완료(약27분). 보고서 공개 확인은 최종 채팅에 기록.",
+    "xerjEvidence": "Status는 node not running, Search 재시도는 node.lock 점유로 실패. rg와 현재 소스로 격리 프로젝트 템플릿 참조를 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "실패",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-media-curation-20261104",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "현재 통합 제품에 맞는 갤러리와 실제 기능 영상",
+    "completionCriteria": "중복·구형 이미지 선별 삭제, Camera·Foliage 전진 배치, 음원 권리·청취·전체 디코드 검증된 영상과 편집 자료 보관, 포털 재열기·영상 끝까지 재생 검증 및 보고서 공개",
+    "previousManual": "projects/pixora/reports/2026-11-04-manual-20261104092631690-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "이미지 내용 대조 및 정리",
+        "action": "기존 이미지 실제 내용과 현행 제품을 비교하고 불일치·중복만 삭제하고 순서 조정",
+        "expected": "모듈별 의미 있는 이미지와 현재 브랜드",
+        "qa": "삭제 목록·보관 원본·새로고침 후 순서와 실제 미리보기 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "27→21장, 기존·신규 이미지 전체 ID 대조 및 첫11장 통합·Camera·Foliage 배치"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "통합 영상 제작",
+        "action": "기존 실제 기능 영상과 최신 식생 렌더를 구성하고 권리가 확인된 음원과 자막 적용",
+        "expected": "세 모듈 실제 동작이 보이는 영상·편집 자료",
+        "qa": "영상 전체 디코드·음량·권리·실제 청취와 각 구간 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "Unity Linear 216프레임 + 기존 실제 녹화로 60초 영상 생성, 자막 수정·재디코드 및 사용자 청취 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "포털 적용과 최종 검증",
+        "action": "기존 영상 보관 후 교체하고 저장·재열기·실제 재생·보고서 게시",
+        "expected": "초안 미디어 유지와 재생·음성·포스터 확인",
+        "qa": "실제 포털 영상 끝까지 확인·저장값 대조·공개 보고서 접근",
+        "dependsOn": [
+          "T01",
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 영상1개·이미지21장, 새로고침과 끝까지 재생·포스터·원본 보존 및 작업 탭 정리"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "원래 목표·3개 작업 유지. T02는 실제 재생에서 자막 겹침을 발견해 r2로 수정하고 전체 재검증. 청취는 도구 입력 제한을 명시하고 사용자의 실제 청취 확인을 기록.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T18:36:19+09:00",
+        "summary": "격리 검증 프로젝트의 공유 템플릿 버전 불일치 발견",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "FitFixedListHeight 미포함으로 격리 프로젝트 컴파일 실패. 현재 소유 템플릿 파일로 동기화 후 재실행.",
+            "evidence": "unity.log, unity-r2.log",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-04T18:47:40+09:00",
+        "summary": "실제 재생에서 자막 겹침 수정",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "초기 편집본에서 기존 녹화 자막과 새 자막이 겹침. 하단 배경·글자 크기·프레임 타임라인을 수정한 r2 출력.",
+            "evidence": "video-studio.png, Edit-r1.json, 최종 Edit.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "final",
+        "at": "2026-11-04T09:54:06.827Z",
+        "summary": "최종 미디어·포털·정리 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "27→21장, 기존·신규 이미지 전체 ID 대조 및 첫11장 통합·Camera·Foliage 배치",
+            "evidence": "verification.json, 실제 포털 캡처, full-decode-r2.log 및 사용자 청취 확인",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Unity Linear 216프레임 + 기존 실제 녹화로 60초 영상 생성, 자막 수정·재디코드 및 사용자 청취 확인",
+            "evidence": "verification.json, 실제 포털 캡처, full-decode-r2.log 및 사용자 청취 확인",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 영상1개·이미지21장, 새로고침과 끝까지 재생·포스터·원본 보존 및 작업 탭 정리",
+            "evidence": "verification.json, 실제 포털 캡처, full-decode-r2.log 및 사용자 청취 확인",
+            "dependencies": {
+              "T01": 1,
+              "T02": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "startedAt": "2026-11-04T09:47:11.541Z",
+  "sources": [
+    "Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Images/01-Suite.png",
+    "Docs/StoreMedia/Delivery-2026-11-02/Pixora/Video/Pixora-Promo-1080p.mp4",
+    "Docs/StoreMedia/Delivery-2026-11-02/PixelCamera/Video/PixelCamera-Promo-1080p.mp4",
+    "Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Video/Footage/0",
+    "Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Video/Footage/1",
+    "Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Video/Footage/2",
+    "Docs/StoreMedia/Delivery-2026-10-27/Audio/Cipher-Kevin-MacLeod.mp3"
+  ],
+  "cues": [
+    [
+      0,
+      3,
+      "PIXORA STUDIO | Three workflows. One studio."
+    ],
+    [
+      3,
+      9,
+      "IMAGE STUDIO | Convert images into pixel art"
+    ],
+    [
+      9,
+      19,
+      "IMAGE STUDIO | Capture animated 3D models as 2D pixel sprites"
+    ],
+    [
+      19,
+      24,
+      "PIXEL CAMERA | Clockwork Garden"
+    ],
+    [
+      24,
+      29,
+      "PIXEL CAMERA | Neon Courier"
+    ],
+    [
+      29,
+      34,
+      "PIXEL CAMERA | Sunken Observatory"
+    ],
+    [
+      34,
+      40,
+      "FOLIAGE | Layered woodland and shared wind"
+    ],
+    [
+      40,
+      46,
+      "FOLIAGE + PIXEL CAMERA | The same woodland, a pixel view"
+    ],
+    [
+      46,
+      52,
+      "FOLIAGE | Grass, flowers and shrubs"
+    ],
+    [
+      52,
+      60,
+      "PIXORA STUDIO | Image Studio / Pixel Camera / Foliage"
+    ]
+  ],
+  "filter": "[0:v]scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24,trim=duration=3,setpts=PTS-STARTPTS[v0];[1:v]split=2[p0][p1];[p0]trim=start=0:end=6,setpts=PTS-STARTPTS,scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24[v1];[p1]trim=start=48:end=58,setpts=PTS-STARTPTS,scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24[v2];[2:v]split=3[c0][c1][c2];[c0]trim=start=15:end=20,setpts=PTS-STARTPTS,scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24[v3];[c1]trim=start=30:end=35,setpts=PTS-STARTPTS,scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24[v4];[c2]trim=start=45:end=50,setpts=PTS-STARTPTS,scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24[v5];[3:v]scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24,trim=duration=6,setpts=PTS-STARTPTS[v6];[4:v]scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24,trim=duration=6,setpts=PTS-STARTPTS[v7];[5:v]scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24,trim=duration=6,setpts=PTS-STARTPTS[v8];[6:v]scale=1920:1080:force_original_aspect_ratio=decrease:flags=neighbor,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x071d24,setsar=1,fps=24,trim=duration=8,setpts=PTS-STARTPTS[v9];[v0][v1][v2][v3][v4][v5][v6][v7][v8][v9]concat=n=10:v=1:a=0[cut];[cut]fps=24,tpad=stop_mode=clone:stop_duration=1,trim=duration=60,drawbox=x=0:y=936:w=iw:h=144:color=0x071d24:t=fill:enable='lt(t,52)',subtitles=filename='Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Video/Captions.en.srt':force_style='FontName=Arial,FontSize=12,Outline=1,BorderStyle=3,BackColour=&HCC071D24,MarginV=24',drawbox=x=0:y=0:w=iw:h=72:color=0x071d24:t=fill,drawtext=fontfile='C\\:/Windows/Fonts/arialbd.ttf':text='PIXORA STUDIO':fontsize=34:fontcolor=0xa78bfa:x=48:y=18,drawbox=x=0:y=918:w=iw:h=162:color=0x071d24:t=fill:enable='gte(t,52)',drawtext=fontfile='C\\:/Windows/Fonts/arial.ttf':text='Music - Cipher by Kevin MacLeod (incompetech.com)':fontsize=25:fontcolor=white:x=(w-tw)/2:y=940:enable='gte(t,52)',drawtext=fontfile='C\\:/Windows/Fonts/arial.ttf':text='CC BY 4.0 - creativecommons.org/licenses/by/4.0/':fontsize=24:fontcolor=white:x=(w-tw)/2:y=980:enable='gte(t,52)',drawtext=fontfile='C\\:/Windows/Fonts/arial.ttf':text='60-second excerpt - normalized volume - fades':fontsize=22:fontcolor=white:x=(w-tw)/2:y=1020:enable='gte(t,52)'[final];[7:a]loudnorm=I=-18:TP=-1.5:LRA=8:measured_I=-16.76:measured_TP=-0.97:measured_LRA=10.70:measured_thresh=-26.85:offset=-2.50:linear=true,afade=t=in:d=0.8,afade=t=out:st=57:d=3,aresample=48000[audio]",
+  "musicCredit": "Cipher - Kevin MacLeod (incompetech.com) | CC BY 4.0 | https://creativecommons.org/licenses/by/4.0/",
+  "licenseSource": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100844",
+  "sourceFramesPreserved": true,
+  "syntheticMotionInterpolation": false,
+  "outputDuration": 60,
+  "outputFPS": 24,
+  "sourceFoliageFPS": 12,
+  "output": "Docs/StoreMedia/Studio-2026-11-04/PixoraStudio/Video/PixoraStudio-Promo-20261104-r2.mp4"
+}
