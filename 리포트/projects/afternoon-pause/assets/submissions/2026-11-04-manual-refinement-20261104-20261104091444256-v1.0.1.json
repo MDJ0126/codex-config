@@ -1,0 +1,187 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "afternoon-pause",
+    "kind": "manual",
+    "title": "옥상 경계·HUD/말풍선·가판대·점프·모듈 프리팹·블록 구름",
+    "summary": "기존 미니게임 제거와 사용자 화면 지적을 수정하고 점프·프리팹·블록 구름을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·QA 중",
+    "outcome": "구현 및 실제 Play122개 통과, 최신 웹 빌드/두 브라우저/정리 진행",
+    "proposedTime": "최초25~40분, 프리팹 추가8~12분. 전체35~55분 예상.",
+    "actualTime": "2026-11-04 17:42:47 KST 시작",
+    "xerjEvidence": "XERJ MCP/검색 스크립트 미제공, rg·현재 소스/씬·실행으로 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "refinement-20261104",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "사용자 화면 지적과 후속 프리팹/구름 요청 구현·실제 웹 QA·정리",
+    "completionCriteria": "경계선 겹침 제거·꽃/매대 받침·머리 위 시간 제거/프로필과 좌상단 시계·닉네임 위 작은 인기도·개선된 말풍선·게임 UI/클라이언트/서버 제거·스페이스 점프 및1Hz 원격 재생·상인3종/UI별 프리팹 참조 보존·블록 구름·최신 웹/기능/성능/정리/공개 보고",
+    "previousManual": "projects/afternoon-pause/reports/2026-11-04-manual-20261104084836504-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "옥상/가판대 수정",
+        "action": "담장/건물 겹침의 실제 좌표 확인·윗면 겹침 제거·받침 테이블과 화분 배치",
+        "expected": "동일 실제 카메라 전후·콜라이더/표면 접촉/중복면 확인",
+        "qa": "동일 실제 카메라 전후·콜라이더/표면 접촉/중복면 확인",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": "Play122개 통과, 웹/정적 참조 최종 검사 대기"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "HUD/말풍선 정리",
+        "action": "머리 시간 제거·좌상단/프로필 시계·닉네임 위 작은 인기도·둥근 말풍선",
+        "expected": "실제 UI·닉네임/시간 위치·한글/짧은/긴 메시지 가독성",
+        "qa": "실제 UI·닉네임/시간 위치·한글/짧은/긴 메시지 가독성",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "Play122개 통과, 웹/정적 참조 최종 검사 대기"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "미니게임 제거",
+        "action": "씬·클라이언트·서버 게임 코드와 패킷 제거",
+        "expected": "버튼/컴포넌트/DTO 제거·API404·기존기능 회귀",
+        "qa": "버튼/컴포넌트/DTO 제거·API404·기존기능 회귀",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "Play122개 통과, 웹/정적 참조 최종 검사 대기"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "점프",
+        "action": "즉시 수평 이동 유지하면서 지상 스페이스 점프·착지·상태/애니메이션·1Hz 원격 이벤트",
+        "expected": "지상/공중/착석/입력포커스·원격 재생·착지·서버 경계",
+        "qa": "지상/공중/착석/입력포커스·원격 재생·착지·서버 경계",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "Play122개 통과, 웹/정적 참조 최종 검사 대기"
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "상인/UI 프리팹과 구름",
+        "action": "상인3종/기능별UI/블록 구름 프리팹·씬 연결/이벤트 보존",
+        "expected": "실제 prefab instance·재열기·누락 스크립트/버튼0·구름 표시",
+        "qa": "실제 prefab instance·재열기·누락 스크립트/버튼0·구름 표시",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "Play122개 통과, 웹/정적 참조 최종 검사 대기"
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "최종 QA/정리/보고",
+        "action": "최신 빌드·두 브라우저/성능·임시 도구 정리·공개 보고",
+        "expected": "실제 동작·산출물 해시·저장/정리·공개 본문/첨부",
+        "qa": "실제 동작·산출물 해시·저장/정리·공개 본문/첨부",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "scopeChange": "추가 요청 상인/UI 모듈별 프리팹, 마크 같은 블록 구름 포함",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-04T09:14:42.895Z",
+        "summary": "실제 Unity6000.0.83f1 Play122개 통과, 실패 이력 보존 후 수정 재검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Play 및 프리팹/원격 점프 확인, 실행 오류0",
+            "evidence": "QA/Refinement/native-result.json; native-first-failure.json; geometry-before.json",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
