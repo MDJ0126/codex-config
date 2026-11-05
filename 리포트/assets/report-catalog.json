@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixel Camera — 잘못 적용한 고정색 윤곽선을 표면색·출력1px로 교정",
+    "summary": "태엽 새의 각 부위색을 무시한 고정 녹색 선을 제거했습니다. 선색은 현재 보이는 표면 자체의 명암색에서 만들고, 몸체의4px 셀과 선 폭을 분리해 출력1px로 적용했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-result-20261105133207955-v1.0.0.html",
+    "date": "2026-11-05T13:32:07.955Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105133207155-v1.0.16.html",
+    "date": "2026-11-05T13:32:07.155Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105132659205-v1.0.15.html",
+    "date": "2026-11-05T13:26:59.205Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera — 기존 세 예제에 외곽/내부 아웃라인 분리",
     "summary": "Clockwork Garden·Neon Courier·Sunken Observatory의 단계 프리셋 9개에 짙은 실루엣/가림 경계와 옅은 내부 면 모서리를 적용했습니다. 기존 선택 물체 픽셀 처리와 장면 구성은 유지했습니다.",
     "project": "pixora",
