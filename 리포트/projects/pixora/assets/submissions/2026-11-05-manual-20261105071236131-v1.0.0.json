@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "구현·실행·문서 및 공개 보고 검증 진행 중",
+    "outcome": "구현 및 검증 진행 중",
+    "proposedTime": "30~60분",
+    "actualTime": "시작: 2026-11-05 16:02:21 KST",
+    "xerjEvidence": "노드 미실행 및 PixelCamera 폴더가 기존 인덱스 범위 밖이어서 rg로 현재 소스 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-isometric-20261105",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기존 픽셀 효과와 함께 사용하는 명시적인 아이소매트릭 카메라 기능",
+    "completionCriteria": "컴파일·실제 Unity 투영/복원/저장 재열기·예제 렌더·Inspector/문서 QA·공개 보고서",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "카메라 기능과 UI",
+        "action": "선택 컴포넌트·각도/방향·타깃·복원·번역 구현",
+        "expected": "기존 효과 보존 및 공통 Inspector 사용",
+        "qa": "컴파일과 Unity 수치·복원·저장/재열기 검사",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "기존 예제와 문서",
+        "action": "Garden에 명시적 사용 예제와 9언어 문서 연결",
+        "expected": "기존 3개 예제 분류 및 기하/참조 보존",
+        "qa": "전후 실제 렌더·예제 실행·문서 링크/실제 표시 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "지침·종료 및 공개 보고",
+        "action": "템플릿 문서/예제 의무 통합·도구 정리·보고",
+        "expected": "정확한 검증 범위와 개별 공개 URL",
+        "qa": "변경 범위 대조·저장/정리·빌드·배포/본문 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
