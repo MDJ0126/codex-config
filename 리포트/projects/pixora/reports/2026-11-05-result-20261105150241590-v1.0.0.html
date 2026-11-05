@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Pixel Camera — 기존3예제의 실제 아이소매트릭 투영·전체 격자 재구현 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>턴룸 › Pixora</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Pixel Camera — 기존3예제의 실제 아이소매트릭 투영·전체 격자 재구현</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">기존 세 예제는 선택 물체만4px 처리하고 자유회전하던 구성이었습니다. 이를35.264도 직교아이소매트릭·90도단위 시점·전체화면240p격자로 변경하고, 물체 표면색을 따르는 외곽/가림 경계와 내부 모서리를 적용했습니다.</p><div class="post-byline"><time datetime="2026-11-05T15:02:41.590Z">2026년 11월 6일 오전 12:02 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>정원 렌더를 먼저 대조해 방향과 프레이밍을 수정한 뒤 배송·천문대에 적용했습니다. 9단계 모두 저장/재열기 픽셀이 같고, 세 축의 투영 길이 비율1 및 전체3×3격자 불일치0을 확인했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>이전 결과는 선만 바꾸고 혼합 해상도와 자유 시점을 유지했으므로 세 예제 전체의 아이소매트릭 적용으로 볼 수 없었습니다. 이번에는3개카메라에 PixelCameraIsometric을 연결하고9프리셋을 Full Camera로 변경했습니다. 기존 각 장면의 정면에 가까운45°+90° 방향과 실제 메시 정점의 화면 범위를 사용했습니다.</p>
+<p>원본1픽셀 선은240p 격자에서1셀이고960×720 출력에서3픽셀입니다. 몸체와 배경도 같은3×3블록을 사용합니다. 이전의 출력1픽셀 선/4픽셀 물체/고해상도 배경 혼합과 구분합니다.</p>
+<p>표면색 기반 외곽선·깊이 가림 경계와 광원반응 내부선, 기존 재질색/조명·형상·애니메이션클립은 유지합니다. UI는 별도로 선명하게 렌더됩니다. C·Q/E는90도 전환, S는전체격자스냅, X는180/240/360p, 휠은줌, R은원래아이소메트릭방향 복원입니다. 사용하지 않는 M 버튼은 비활성입니다.</p>
+<h3 id="section-4">최초 아웃라인 수정 전 기준 캡처</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-Original.png" alt="아웃라인 변경 전 기준: 01-ClockworkGarden" loading="lazy"><figcaption>아웃라인 변경 전 기준: 01-ClockworkGarden</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-Original.png" alt="아웃라인 변경 전 기준: 02-NeonCourier" loading="lazy"><figcaption>아웃라인 변경 전 기준: 02-NeonCourier</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-Original.png" alt="아웃라인 변경 전 기준: 03-SunkenObservatory" loading="lazy"><figcaption>아웃라인 변경 전 기준: 03-SunkenObservatory</figcaption></figure></p>
+<h3 id="section-5">01-ClockworkGarden · 1</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-1-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-1-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-6">01-ClockworkGarden · 2</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-2-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-2-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-7">01-ClockworkGarden · 3</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-3-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-3-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-8">02-NeonCourier · 1</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-1-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-1-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-9">02-NeonCourier · 2</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-2-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-2-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-10">02-NeonCourier · 3</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-3-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-3-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-11">03-SunkenObservatory · 1</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-1-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-1-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-12">03-SunkenObservatory · 2</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-2-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-2-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-13">03-SunkenObservatory · 3</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-3-Before.png" alt="이전: 선택 물체 격자·자유 시점" loading="lazy"><figcaption>이전: 선택 물체 격자·자유 시점</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-3-After.png" alt="이후: 직교 아이소매트릭·전체 단일 격자" loading="lazy"><figcaption>이후: 직교 아이소매트릭·전체 단일 격자</figcaption></figure></p>
+<h3 id="section-14">실제 안내 UI</h3>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/01-ClockworkGarden-Guide.png" alt="실제 영어 안내 UI: 01-ClockworkGarden" loading="lazy"><figcaption>실제 영어 안내 UI: 01-ClockworkGarden</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/02-NeonCourier-Guide.png" alt="실제 영어 안내 UI: 02-NeonCourier" loading="lazy"><figcaption>실제 영어 안내 UI: 02-NeonCourier</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/isometric-rebuild-20261105/03-SunkenObservatory-Guide.png" alt="실제 영어 안내 UI: 03-SunkenObservatory" loading="lazy"><figcaption>실제 영어 안내 UI: 03-SunkenObservatory</figcaption></figure></p>
+<h2 id="section-15">검증</h2>
+<ul>
+<li>실제 Unity6000.0.83f1 Linear/Built-in. 3장면×3단계 렌더·저장 후 새preview 재열기에서 동일 픽셀. 투영각35.264389°, 투영축 최대/최소 길이비&lt;1.000001.</li>
+<li>9단계 모두 전체3×3블록 불일치0. 아웃라인 on/off 실제픽셀차이 확인. 90도4회후 원위치·자유회전방지·격자스냅 및180/240/360p 순환·실제클립1.1초 포즈변화 확인. 이는 실제키보드조작 증거가 아닙니다.</li>
+<li>원래 씬의 기존 데이터 중 카메라GO/카메라Transform/Camera/ShowcaseTour 4블록만 변경되고 rig1개만 추가됐습니다. 나머지 모든기존블록이 동일해 형상/배치/클립연결을 보존했습니다. <a class="report-link" href="../assets/isometric-rebuild-20261105/preservation.json">형상 보존</a></li>
+<li>실제UGUI 캡처는 영어이며 이미지용으로OverlayCanvas를임시UI카메라에연결한후복원했습니다. 네이티브Play/키보드/마우스 캡처로 보고하지 않습니다. 버튼문구·격자상태·안내문구를실제캡처에서대조했습니다.</li>
+<li>7개어셈블리컴파일과최종C#소스해시일치,9언어27문서본문/장이동/이미지/링크검사 통과. <a class="report-link" href="../assets/isometric-rebuild-20261105/isometric-qa.json">실제렌더</a> · <a class="report-link" href="../assets/isometric-rebuild-20261105/verification.json">문서</a> · <a class="report-link" href="../assets/isometric-rebuild-20261105/guide-qa.json">UI캡처</a> · <a class="report-link" href="../assets/isometric-rebuild-20261105/compile.json">컴파일</a></li>
+<li>활성씬·더티·선택·루트·preview수 보존,명령파일소비 확인. 신규GUI실행·실제입력 없음.</li>
+<li>첫프로토타입의 뒤쪽시점/과도한여백은 실제이미지로 확인해 수정했고, preview객체의파일ID를직접조회하지못한저장실패는원본YAML의기존컴포넌트ID로해결했습니다. 실패·초기캡처는로컬이력으로보존했습니다.</li>
+<li>교훈검토: 선택물체효과와전체아이소매트릭을혼동하지않고 원본격자/출력배율을구분하도록 기존Pixora지침을정정했습니다. 전역의기존실행/실제대조규칙으로적용가능하여 새전역규칙은추가하지않았습니다.</li>
+</ul>
+<h2 id="section-16">남은 사항</h2>
+<p>네이티브Play 마우스/키보드와Inspector/9언어UI레이아웃·실제브라우저탭 표시·URP실제렌더는미검증입니다. 실제안내UI캡처는영어이며9언어레이아웃검증으로간주하지않습니다. Full Camera 경계검출은깊이/노멀기반이므로동일평면접촉등의경계구분에는한계가있습니다. 수치통과를사용자의시각적승인으로간주하지않습니다.</p>
+<h2 id="section-17">작업 시간</h2>
+<ul>
+<li>제안 시간: 20~30분</li>
+<li>실제로 완료된 시간: 시작 2026-11-05 23:08:48 KST. 구현·저장/재열기·비화면 검증 종료 2026-11-06 00:02:25 KST (3217초). 최초20~30분 예상을 초과했습니다. 공개 배포 확인은 이후 수행하며 전체 소요 시간을 최종 채팅에 기록합니다.</li>
+<li>XERJ: 미사용 — Status에서XERJ노드미실행확인. 대상PixelCamera는기존인덱스범위밖이며현재소스직접읽기와rg를사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-05-result-20261105150241590-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixora&topic=qa&relatedReport=projects%2Fpixora%2Freports%2F2026-11-05-result-20261105150241590-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixora">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixora">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-15">검증</a><a href="#section-16">남은 사항</a><a href="#section-17">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

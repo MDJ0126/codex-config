@@ -1,0 +1,94 @@
+{
+  "at": "2026-11-05T15:00:57.021Z",
+  "passed": true,
+  "scenes": [
+    {
+      "scene": "01-ClockworkGarden",
+      "originalBlocks": 518,
+      "preservedBlocks": 514,
+      "changed": [
+        {
+          "id": "345489150",
+          "type": "1"
+        },
+        {
+          "id": "345489151",
+          "type": "114"
+        },
+        {
+          "id": "345489153",
+          "type": "20"
+        },
+        {
+          "id": "345489154",
+          "type": "4"
+        }
+      ],
+      "added": [
+        {
+          "id": "922000000001",
+          "type": "114"
+        }
+      ]
+    },
+    {
+      "scene": "02-NeonCourier",
+      "originalBlocks": 600,
+      "preservedBlocks": 596,
+      "changed": [
+        {
+          "id": "1090248268",
+          "type": "1"
+        },
+        {
+          "id": "1090248269",
+          "type": "114"
+        },
+        {
+          "id": "1090248271",
+          "type": "20"
+        },
+        {
+          "id": "1090248272",
+          "type": "4"
+        }
+      ],
+      "added": [
+        {
+          "id": "922000000001",
+          "type": "114"
+        }
+      ]
+    },
+    {
+      "scene": "03-SunkenObservatory",
+      "originalBlocks": 482,
+      "preservedBlocks": 478,
+      "changed": [
+        {
+          "id": "1693099145",
+          "type": "1"
+        },
+        {
+          "id": "1693099146",
+          "type": "114"
+        },
+        {
+          "id": "1693099148",
+          "type": "20"
+        },
+        {
+          "id": "1693099149",
+          "type": "4"
+        }
+      ],
+      "added": [
+        {
+          "id": "922000000001",
+          "type": "114"
+        }
+      ]
+    }
+  ],
+  "compiledSourceHashesMatch": true
+}

@@ -1,0 +1,94 @@
+{
+  "at": "2026-11-05T14:58:13.467Z",
+  "guiProcessStarted": false,
+  "runtimeExecuted": false,
+  "assemblies": [
+    {
+      "name": "TurnRoom.PixelCamera.Runtime",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraAnimationBakeSettings.cs": "01c8672bbc42f1168358c12667367a50e118682ac8c89e4dba0aeca9b1dd0704",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraDitherPattern.cs": "9715c173dbbb60cee4ab9f3a8e18e47e032ff6c7fd5cdee6009929cfbb3dd576",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraEffect.cs": "5b1b6bd38e54baf272888d1ab186f3d6b00cefd808091ea9b25a8eaf6ab18623",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraGridMath.cs": "34071d9b7bd42f7201f607f507057a40fb69e9368f3cb53cb957a6d786f03a0b",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraIsometric.cs": "ec9bac73c43408a24180adb63b69b472e92dfa41be98cc1e3c542f0cf59c0944",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraObject.cs": "34aafba6d12f9a5f4beddeb1a495868397f6849c9a76d780acbac64b8ec4da9f",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraObjectFrame.cs": "ab716abf9e43f0911a9a51d79af3d512754b6409aec5ab479982331a94e63625",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraObjectRenderer.cs": "24c5d00373cce192657b0ef474046becf0c9e417f5ecf7a180a427987f6841c2",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraPalette.cs": "57b37ab394d1630a587ea6088dd04e7d7c0ff81b31029c8d4cf8aeda793bf676",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraPaletteAlgorithms.cs": "62cae0ccfe78163b84ba208f277e86db0865d2e7690654391bae94704eaba142",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraPreset.cs": "fb7c63b49c2c087558f41200a979d8d7fc9ebe90928c530234685d0c4e780242",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraRenderUtility.cs": "7dffc32c2482304821b51a00cac67104e17164c6d5b956442d3066b75234302d",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraSteppedAnimator.cs": "9bc905ef9eb2ae2a77eba424fff56d5f844a913c70683a068f0b5284e59da5ba"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Samples",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/IsometricAtelierDemo.cs": "354d89c2082f587259d3d4a20027e62a0fb35d8a3fc2e54ea18e0b9da696a1b1",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/OutpostCameraController.cs": "4ffeeef55c0d4091c682f7815e1b8f6a0bc5cb50d90f9ec6e38db012b361b5cb",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/PixelCameraSampleHud.cs": "02d8a1772543703d1e96a21d2ed319db95f960119bcecc1ef6bc9eaf9df1d1a3",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/ShowcaseControls.cs": "0e1ef5454e6292d610edbc3312b7cd473ee837a6bbc33d49433d381ea8106586",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/ShowcaseMotion.cs": "e870b239dbcd0962de281f414a44014b446f2ce87d52dea4d53befa2c136bc55",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Runtime/ShowcaseTour.cs": "47f82ab5fafd3f4f9a15b5eceb8a760e86953a389f5e537eab9d4e848731105b"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Editor",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraAuthoring.cs": "7cafa0d5f57b0e3e0f1d807d5987eeda7725bf04dba9bf54240080bdee42d0bb",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraAuthoringInspectors.cs": "c87588e7a2abb1e3129f1c6d88630767e06185688e5b527c80494faebec01ae8",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraInspector.cs": "13756a12bae592bafa6623b6edae34145f28a5c52b3b3263dafcff3a4e5ba459",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraIsometricInspector.cs": "7895b27ed70de2c324ce97122543bd218cf4ad040b4fdfb97f35c23c81e43e2e",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraObjectInspector.cs": "c31cb3e34f9b2ab8e7fed3bec197f0354c9e657ae938d450556f6d0691e09ca2",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraText.cs": "2ee39bfdbf93576ce8def85d15f793abe9b53bda1bb48f80499b9b8a4a39bfc9",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraTheme.cs": "152b142f5b0843159147cc1e253caacfcdecab7163c2f538aed2188a740aad46",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraWindow.cs": "5a49515c4d26899e2c798c37c35ec5927f8b7db95eec2beff75f4fde007d3cc8",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Editor/PixelCameraWindow.Design.cs": "1cf8082c2936faa18e1c73de0b1c60d8c7b6775ea56561c55629daad8e5e69d6"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Samples.Editor",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Editor/IsometricAtelierDemoInspector.cs": "5c5673079edfba7c870f81af69733210da612cf65c655a68e6aa01b535430e8d",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Editor/PixelCameraSamplesMenu.cs": "a68f95713ced472b603ac45f83328c4954cdbcfc862a501eb9035bfe3cdf0ffa"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.Development",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/ClassicIsometricRebuild.cs": "2373626353488b0099bb6b580da4ab27cecdcaf0bd7d2f943dd676752f7caf5f",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/ClassicOutlineQA.cs": "ebaa8af873cbfb6c0370ffd47d55f0d7ff7b6db4378fc430b9fad3b91e8a630a",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/IsometricAtelierBuilder.cs": "5382cca8241422c3253c6a71fcbd6585e5e740d4a03fe4ee18d807540c8078c9",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/IsometricLightingStudy.cs": "e56e1acb785bbde5b5c6ec90c8872ec386af925e9f998f84df713d7a17b6c3d2",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraInteractiveQA.cs": "1c96dbf85fe2f3ee44a9be645d086f9c0628479dde81e9cec5a613b7120ef791",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraIsometricQA.cs": "5bbc0ec4ebdd2f87ac7057f626441fad6a5a06b36613fd9e15f302d82cb41e76",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraIsometricReview.cs": "bd9b28e1eb4ced4883899c854383837ead3d512a1c330311753a4a71e365c79f",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraLiveQA.cs": "783d6090f701cd4854aca07bdf7f9f654b71497471fb552700fd3c54f8d016bf",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraPaidQA.cs": "10d1ebe7739bf19237f0da4b2670d046bd009e81a0c541e400da86f33744f1da",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraQA.cs": "063655970d18ccde74eab8251baefa358543ce1262aa8e4ed2b82446ced4414d",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraShowcaseBuilder.cs": "8dda1810a4cdb261801c93e4d4da414f6e67ea6823929c7b69ab77c1aba28b54",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraShowcaseQA.cs": "9eb88b31a33aef1e742db0e7b08bf317453224262566d6f553ae90cae0affef6",
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Development/Editor/PixelCameraWindowOcclusionQA.cs": "fc679f770da15b5900d0b5b92c9138e7b43b40f5ffe62cce5d7ee69ad66d5085"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.URP",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs": "9fa1aec0e15bbfabefd7f788552eabda5585d02ab7f5eb6b5d77119813d01f63"
+      }
+    },
+    {
+      "name": "TurnRoom.PixelCamera.URP.Editor",
+      "exitCode": 0,
+      "sourceHashes": {
+        "Assets/TurnRoom/PixoraStudio/PixelCamera/Integrations/URP/Editor/PixelCameraURPSetup.cs": "13daa8f9f230640cd440211e87674e516bfd5243645c3b17c1b419a77a4f8f61"
+      }
+    }
+  ]
+}
