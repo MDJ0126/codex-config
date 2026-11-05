@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-05T11:32:26.197Z",
+  "scope": "Read-only visual/source comparison; no product modification.",
+  "reference": "User-attached Image 3, 892x576 compressed screenshot; original not republished.",
+  "referenceSamples": [
+    {
+      "x": 544,
+      "y": 340,
+      "rgb": [
+        93,
+        40,
+        43
+      ],
+      "observation": "dark pillar boundary region"
+    },
+    {
+      "x": 560,
+      "y": 340,
+      "rgb": [
+        199,
+        102,
+        115
+      ],
+      "observation": "brighter internal vertical edge"
+    },
+    {
+      "x": 576,
+      "y": 340,
+      "rgb": [
+        165,
+        85,
+        94
+      ],
+      "observation": "adjacent broad pillar face"
+    }
+  ],
+  "current": {
+    "outlineStyle": 0,
+    "outlineColor": "#81504A",
+    "alpha": 1,
+    "depthAndNormalDiscontinuitiesCombined": "max into one edge value",
+    "edgeClassification": "no independent outer/inner shading",
+    "optionalDirectionalBevel": "screen edge direction shading, not an independent outer/inner classification"
+  },
+  "unverified": "Reference implementation: post-process vs actual bevel geometry/material/light cannot be established from screenshot."
+}
