@@ -1,0 +1,121 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "신규 스타일·장면·문서·회귀 검증 진행 중. 화면 조작 보류 유지.",
+    "outcome": "이전 예제와 스타일 결과는 사용자 요구를 충족하지 못했습니다. 새 장면과 렌더 스타일을 구현하고 실제 결과를 대조합니다.",
+    "proposedTime": "40~60분",
+    "actualTime": "재작업 시작 2026-11-05 16:40:45 KST",
+    "xerjEvidence": "Status에서 노드 미실행 확인. PixelCamera는 기존 인덱스 범위 밖이며 rg로 현재 소스 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-isometric-20261105",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기존 픽셀 효과와 함께 사용하는 명시적인 아이소매트릭 카메라 기능",
+    "completionCriteria": "컴파일·실제 Unity 투영/복원/저장 재열기·예제 렌더·Inspector/문서 QA·공개 보고서",
+    "previousManual": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105073137771-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "참고 기반 렌더 스타일",
+        "action": "크림 배경·따뜻한 제한 팔레트·불투명 윤곽선·면 경계·전체 화면 단일 격자 구현",
+        "expected": "새 장면에서 선/겹침/면 구분과 픽셀 크기가 관찰됨",
+        "qa": "실제 선 켜기/끄기 출력·팔레트/격자·참고 이미지 시각 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 2,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "완전히 새 예제와 9언어 문서",
+        "action": "기존 Garden 에셋을 재사용하지 않는 새 장면·독립 프리팹·설정·기능 예제와 문서 작성",
+        "expected": "새 전용 지형·건축물·인물로 기능을 설명하고 9언어 안내에 실제 렌더 연결",
+        "qa": "원본 보존·새 씬/프리팹 저장 재열기·9언어 본문/이미지/링크 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀·화면 QA 상태와 공개 보고",
+        "action": "기존 기능 회귀와 포커스/씬/선택 보존·템플릿 교훈 통합·새 보고서 공개",
+        "expected": "실제 통과와 사용자 화면 보류를 구분하고 전후/참고 대조를 공개",
+        "qa": "컴파일·native 렌더·회귀·종료·배포/본문 검사; 실제 GUI 입력은 재허용 전 보류",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 2,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자가 기존 장면 재사용과 참고 사진에 맞지 않는 윤곽선 표현을 거부하고 전체 재작업을 지시했습니다. 기존 카메라 기능/수치 검증 관찰은 보존하되, 참고 기반의 신규 장면과 불투명 윤곽선·팔레트·균일 격자를 완료 기준에 추가합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-05T07:17:26.2925688Z",
+        "summary": "실제 Unity 카메라 수치·복원·저장 재열기·렌더 25개 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "세 축 투영 길이·2:1 기울기·네 방향·타깃 추적·이상값·기존/사용자 지정 투영 복원·씬 재열기와 실제 렌더 통과. 공통 Inspector는 소스 및 컴파일 확인, 물리 입력은 미실행.",
+            "evidence": "../assets/isometric-20261105/native-qa.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-05T07:29:32.965Z",
+        "summary": "문서/씬 보존 검사 통과; 화면 QA는 사용자 요청으로 보류",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "27개 생성 문서의 실제 본문 JS·이미지/링크 경로, 9언어 신규 필드 키와 원래 씬 518개 객체 보존 확인. 실제 Inspector/Play 키보드 및 브라우저 화면은 사용자의 화면 조작 보류로 미실행.",
+            "evidence": "../assets/isometric-20261105/verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
