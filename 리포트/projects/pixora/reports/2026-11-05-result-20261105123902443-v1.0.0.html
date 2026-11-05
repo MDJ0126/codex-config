@@ -1,0 +1,31 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Pixel Camera — 하늘정원 시장 주변 숲 추가 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixora/assets/logo.png" alt="Pixora 로고"><span>턴룸 › Pixora</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Pixel Camera — 하늘정원 시장 주변 숲 추가</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">시장 외곽을 높이가 다른 나무 43그루와 관목 24개·이끼 바위로 채웠습니다. 뒤와 옆은 높은 숲, 앞은 낮은 수목으로 구성해 중앙 상점과 운하를 볼 수 있도록 했습니다.</p><div class="post-byline"><time datetime="2026-11-05T12:39:02.443Z">2026년 11월 5일 오후 9:39 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>숲 지형·수목·관목을 편집 가능한 씬/프리팹에 반영했습니다. 실제 Unity 렌더·저장 재열기와 9개 언어 문서 검증을 완료했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>기존 시장 오브젝트를 유지하고 외곽에 숲 지형, 3단 나무 43그루, 관목 24개, 바위 12개를 추가했습니다. 총 메시 오브젝트는 240개에서 450개로 증가했습니다.</li>
+<li>새 숲 재질은 녹색/청록색 그림자를 사용합니다. 기존 픽셀 격자·짙은 외곽선/광원 반응 내부선과 36색 팔레트를 유지했습니다.</li>
+<li>숲 전체가 들어오도록 같은 투영 방향에서 카메라 크기를 6.1에서 7.65로 조정했습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/forest-20261105/Before-Market.png" alt="추가 전 — 시장 외곽" loading="lazy"><figcaption>추가 전 — 시장 외곽</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/forest-20261105/Atelier-Outlined.png" alt="추가 후 — 숲으로 둘러싼 시장" loading="lazy"><figcaption>추가 후 — 숲으로 둘러싼 시장</figcaption></figure></p>
+<p>모두 실제 Unity 960×720 렌더입니다. 카메라 크기는 숲 확장에 맞춰 변경됐으며, 이미지를 편집해 나무를 합성하지 않았습니다.</p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity 6000.0.83f1 Linear/Built-in: 실제 GPU/스타일 검사 23개와 카메라 회귀 12개 통과.</li>
+<li>숲 나무43/관목24/총450메시 확인. 새 씬 재열기 출력 픽셀 동일.</li>
+<li>팔레트 밖 픽셀 0개, 3×3격자 불일치 0개. 1원본픽셀 선·깊이 경계 보존·광원 반응 회귀 통과.</li>
+<li>7개 어셈블리 컴파일 성공 및 최종 소스 해시 대조. 9언어 문서 27개 본문·탭/장 이동·이미지/링크 검사 통과.</li>
+<li>기존 Garden 518개 오브젝트, 원래 활성 씬·더티·선택·루트 보존. 작업 preview 종료·명령 파일 소비 확인. 신규 GUI 프로세스 실행/실제 입력 없음.</li>
+<li><a class="report-link" href="../assets/forest-20261105/atelier-qa.json">GPU/씬 근거</a> · <a class="report-link" href="../assets/forest-20261105/verification.json">문서 검증</a> · <a class="report-link" href="../assets/forest-20261105/compile.json">컴파일</a></li>
+<li>교훈 검토: 기존의 실제 렌더 대조·원본 보존·화면 조작 보류 규칙을 적용했습니다. 새 공통 교훈이 없어 전역 지침 변경 없음.</li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<p>실제 Play의 네이티브 키보드/Inspector 테마·언어 레이아웃/브라우저 표시 검증은 사용자 화면 조작 보류로 미실행입니다. 실제 URP 렌더는 미검증입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 8~15분</li>
+<li>실제로 완료된 시간: 시작 2026-11-05 21:35:40 KST. 구현·비화면 검증 종료 2026-11-05 21:38:59 KST (199초). 이후 공개 확인을 진행하며 전체 소요 시간을 최종 채팅에 기록합니다.</li>
+<li>XERJ: 미사용 — Status에서 XERJ node is not running 확인. PixelCamera가 기존 인덱스 범위 밖으로 rg와 현재 소스 직접 읽기를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-05-result-20261105123902443-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixora&topic=qa&relatedReport=projects%2Fpixora%2Freports%2F2026-11-05-result-20261105123902443-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixora">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixora">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
