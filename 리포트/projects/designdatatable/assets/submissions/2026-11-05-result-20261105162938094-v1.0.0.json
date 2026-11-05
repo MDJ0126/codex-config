@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "result",
+    "title": "DDT 2.0.2 제출 심사 사유 입력",
+    "summary": "현재 판매 페이지 설명과 변경 이력을 근거로 심사 사유를 입력하고 최종 제출 직전 창을 유지했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Version 2.0.2 update to the existing Design Data Table product. This release refines shared editor controls, selectors and asset Inspectors, improves workbook creation and recovery, adds direct maximize/restore, and restores the document shelf below the Unity console/status line. The package edits XLSX/CSV spreadsheets and typed game tables, with validation and C# class/runtime-data generation. Samples and offline guides are included in nine languages. Tested scope: Unity 6000.0.83f1 on Windows, Built-in samples. Samples require Unity uGUI and 2D Sprite; Addressables is optional and installed separately. Spreadsheet support is a documented subset; XLS, macros and encrypted workbooks are not supported. Please refer to the bundled guide and Third-Party Notices for limits and asset attribution. AI assistance is disclosed in the listing.",
+    "verification": "현재 제품명·버전·Draft 상태와 저장된 설명/변경 이력을 직접 확인했습니다. 입력 후 DOM에서 전체 사유 문구, 미선택 소유권 선서, 비활성 I accept를 확인했습니다. ![입력 전](../assets/2026-11-06-review-note/ddt-before.png) ![입력 후](../assets/2026-11-06-review-note/ddt-after.png)",
+    "remaining": "심사 사유는 열린 제출 창에 입력된 상태입니다. 제출 전 서버 저장 여부는 미확인으로, 창을 닫거나 새로고침하면 사라질 수 있습니다. 바이너리 재업로드·재검증은 이번 요청 범위에 포함하지 않았습니다. 교훈 검토: 초안 저장과 제출 창 입력 상태를 구분하는 기존 지침 적용, 전역 변경 없음.",
+    "outcome": "심사팀 전달 사유를 입력한 제출 창을 브라우저 탭에 유지했습니다. 최종 제출과 법적 소유권 선서는 실행하지 않았습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "시작 2026-11-06 01:27:56 KST, 사유 입력 완료 01:29:36 KST, 약1분40초. 중앙 보고서 공개 확인 별도.",
+    "xerjEvidence": "코드 검색 불필요 — 실제 판매 페이지의 설명과 변경 이력 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
