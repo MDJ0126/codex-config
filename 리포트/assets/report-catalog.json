@@ -1,5 +1,35 @@
 [
   {
+    "title": "Pixel Camera — 240개 오브젝트의 하늘정원 시장 예제",
+    "summary": "참고와 비슷했던 벽·두 기둥·부유 큐브 구도를 제거하고 운하 옆 정원 시장으로 예제를 재구성했습니다. 상점·가판대·다리·수목·상품·장식을 240개 메시 오브젝트와 다채로운 팔레트로 작성했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-result-20261105121926271-v1.0.0.html",
+    "date": "2026-11-05T12:19:26.271Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105121925500-v1.0.10.html",
+    "date": "2026-11-05T12:19:25.500Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105121351110-v1.0.9.html",
+    "date": "2026-11-05T12:13:51.110Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera — 짙은 외곽선과 광원 반응 내부 모서리 분리",
     "summary": "깊이 경계의 짙은 1픽셀 선을 유지하면서 내부 면 모서리에 실제 인접 면의 명암색과 방향 광원을 반영했습니다. 새 아틀리에 예제와 9언어 문서를 갱신하고 실제 Unity 렌더로 검증했습니다.",
     "project": "pixora",
