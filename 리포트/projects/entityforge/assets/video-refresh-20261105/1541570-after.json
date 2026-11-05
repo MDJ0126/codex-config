@@ -1,0 +1,672 @@
+{
+  "languages": [
+    {
+      "description": "반복 메시의 빌드 최적화와 씬·프리팹 분석을 GameObject 작업 흐름에서 사용하세요. 선택적 DOTS 동작 어댑터와 편집 가능한 예제를 포함합니다.<p >검증 환경: Windows x64, Unity 6000.0.83f1, Built-in Render Pipeline, Entities 1.3.15. 필요한 Unity 패키지는 Package Manager에서 설치합니다. 다른 플랫폼과 렌더 파이프라인은 검증하지 않았습니다.</p></br><p >자동 탐지는 단일 서브메시·재질과 양의 균일 계층 스케일을 사용하는 호환 불투명 MeshRenderer/MeshFilter를 지원합니다. 미지원 렌더링은 사유와 함께 유지합니다. 직렬화된 프리팹 참조를 지원하며 Resources·Addressables·AssetBundle 로딩은 별도 통합이 필요합니다.</p></br><p >9개 UI 언어, 오프라인 문서와 선택적 예제 3개를 포함합니다. 에디터 분석은 미리보기이며 변환은 플레이어 빌드에서 적용됩니다.</p><p >Entity Forge는 동일한 메시와 재질을 많이 사용하는 프로젝트의 빌드 최적화를 돕습니다. 프로젝트 빌드 변환을 켠 뒤 평소처럼 Unity Build 또는 Build And Run을 사용하세요.</p><p >• 현재 씬 또는 프로젝트 프리팹 폴더를 미리 분석하고 제외 사유를 확인합니다.</p><p >• 호환 렌더링을 네이티브 GPU 인스턴싱으로 묶으며 GameObject·스크립트·물리는 유지합니다.</p><p >• 선택적 Forge Object/Spawner로 이동·회전·생성·수명을 Burst/ECS에서 처리합니다.</p><p >• 날짜별 빌드 기록과 같은 조건의 실측 근거를 확인하고 편집 가능한 예제 3개를 사용합니다.</p><p >변환은 플레이어 빌드에 적용됩니다. 임의 MonoBehaviour 코드를 자동 번역하지 않습니다. 효과는 CPU/GPU 부하에 따라 달라지며 설치만으로 프레임 속도 향상을 보장하지 않습니다.</p><p >홍보 영상 음악: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 출처: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 발췌·음량 조정·페이드 처리. 홍보 영상에만 사용합니다.</p>",
+      "fields": [
+        "key_images",
+        "ai_description",
+        "artwork",
+        "optional_description",
+        "name",
+        "compatibility_info",
+        "description",
+        "release_notes",
+        "key_features",
+        "keywords",
+        "elevator_pitch"
+      ],
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1994226",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261105/videos/c68c37ae-4554-4749-bb72-ac931453e591/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aec2630a78590326184d900"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350824",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350450",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350452",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350454",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350456",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350460",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350458",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350462",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350466",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350464",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350470",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350468",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_orig.png"
+        }
+      ],
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/e684c027-38d3-43f0-bcf9-7586ca5eb6d8.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/ec30b824-270b-4cce-81e6-0357ae0b2f15.jpg",
+        "facebook": "//assetstorev1-prd-cdn.unity3d.com/key-image/8c5a6eed-3193-4d9b-b4b8-34ecdf1b3c4f.png",
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/b9cfb8c2-3cdc-4d81-bb1f-65676f8b0b49.jpg"
+      },
+      "features": "<p >검증 환경: Windows x64, Unity 6000.0.83f1, Built-in Render Pipeline, Entities 1.3.15. 필요한 Unity 패키지는 Package Manager에서 설치합니다. 다른 플랫폼과 렌더 파이프라인은 검증하지 않았습니다.</p></br><p >자동 탐지는 단일 서브메시·재질과 양의 균일 계층 스케일을 사용하는 호환 불투명 MeshRenderer/MeshFilter를 지원합니다. 미지원 렌더링은 사유와 함께 유지합니다. 직렬화된 프리팹 참조를 지원하며 Resources·Addressables·AssetBundle 로딩은 별도 통합이 필요합니다.</p></br><p >9개 UI 언어, 오프라인 문서와 선택적 예제 3개를 포함합니다. 에디터 분석은 미리보기이며 변환은 플레이어 빌드에서 적용됩니다.</p>",
+      "optional": "<p >Entity Forge는 동일한 메시와 재질을 많이 사용하는 프로젝트의 빌드 최적화를 돕습니다. 프로젝트 빌드 변환을 켠 뒤 평소처럼 Unity Build 또는 Build And Run을 사용하세요.</p><p >• 현재 씬 또는 프로젝트 프리팹 폴더를 미리 분석하고 제외 사유를 확인합니다.</p><p >• 호환 렌더링을 네이티브 GPU 인스턴싱으로 묶으며 GameObject·스크립트·물리는 유지합니다.</p><p >• 선택적 Forge Object/Spawner로 이동·회전·생성·수명을 Burst/ECS에서 처리합니다.</p><p >• 날짜별 빌드 기록과 같은 조건의 실측 근거를 확인하고 편집 가능한 예제 3개를 사용합니다.</p><p >변환은 플레이어 빌드에 적용됩니다. 임의 MonoBehaviour 코드를 자동 번역하지 않습니다. 효과는 CPU/GPU 부하에 따라 달라지며 설치만으로 프레임 속도 향상을 보장하지 않습니다.</p><p >홍보 영상 음악: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 출처: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 발췌·음량 조정·페이드 처리. 홍보 영상에만 사용합니다.</p>",
+      "summary": "반복 메시의 빌드 최적화와 씬·프리팹 분석을 GameObject 작업 흐름에서 사용하세요. 선택적 DOTS 동작 어댑터와 편집 가능한 예제를 포함합니다.",
+      "technical": "",
+      "locale": "ko-KR"
+    },
+    {
+      "description": "在保留 GameObject 开发流程的同时，于构建时优化重复网格，并预览场景与预制件的转换范围。包含可选 DOTS 行为适配器和可编辑示例。<p >验证环境：Windows x64、Unity 6000.0.83f1、Built-in Render Pipeline、Entities 1.3.15。所需 Unity 包请通过 Package Manager 安装。其他平台和渲染管线尚未验证。</p></br><p >自动检测支持单一子网格和材质、层级缩放为正且均匀的兼容不透明 MeshRenderer/MeshFilter。不支持的渲染会保留并显示原因。支持序列化预制件引用；Resources、Addressables 和 AssetBundle 加载需要专用集成。</p></br><p >包含 9 种界面语言、离线文档和 3 个可选示例。编辑器分析仅为预览，转换在播放器构建时应用。</p><p >Entity Forge 帮助使用大量相同网格与材质的项目优化构建。启用项目构建转换后，照常使用 Unity Build 或 Build And Run。</p><p >• 预览当前场景或项目预制件文件夹，并查看排除原因。</p><p >• 使用原生 GPU 实例化合并兼容渲染，保留 GameObject、脚本与物理。</p><p >• 可选 Forge Object/Spawner 适配器通过 Burst/ECS 处理移动、旋转、生成与生命周期。</p><p >• 提供按日期记录的构建历史、同条件实测依据，以及 3 个可编辑示例。</p><p >转换应用于播放器构建，不会自动翻译任意 MonoBehaviour 代码。效果取决于 CPU/GPU 负载，安装本身不保证帧速度提升。</p><p >宣传视频音乐：Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 来源：https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 已节选、调整响度并添加淡入淡出。仅用于宣传视频。</p>",
+      "fields": [
+        "key_images",
+        "ai_description",
+        "artwork",
+        "optional_description",
+        "name",
+        "compatibility_info",
+        "description",
+        "release_notes",
+        "key_features",
+        "keywords",
+        "elevator_pitch"
+      ],
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1994226",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261105/videos/c68c37ae-4554-4749-bb72-ac931453e591/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aec2630a78590326184d900"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350824",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350450",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350452",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350454",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350456",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350460",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350458",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350462",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350466",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350464",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350470",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350468",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_orig.png"
+        }
+      ],
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/e684c027-38d3-43f0-bcf9-7586ca5eb6d8.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/ec30b824-270b-4cce-81e6-0357ae0b2f15.jpg",
+        "facebook": "//assetstorev1-prd-cdn.unity3d.com/key-image/8c5a6eed-3193-4d9b-b4b8-34ecdf1b3c4f.png",
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/b9cfb8c2-3cdc-4d81-bb1f-65676f8b0b49.jpg"
+      },
+      "features": "<p >验证环境：Windows x64、Unity 6000.0.83f1、Built-in Render Pipeline、Entities 1.3.15。所需 Unity 包请通过 Package Manager 安装。其他平台和渲染管线尚未验证。</p></br><p >自动检测支持单一子网格和材质、层级缩放为正且均匀的兼容不透明 MeshRenderer/MeshFilter。不支持的渲染会保留并显示原因。支持序列化预制件引用；Resources、Addressables 和 AssetBundle 加载需要专用集成。</p></br><p >包含 9 种界面语言、离线文档和 3 个可选示例。编辑器分析仅为预览，转换在播放器构建时应用。</p>",
+      "optional": "<p >Entity Forge 帮助使用大量相同网格与材质的项目优化构建。启用项目构建转换后，照常使用 Unity Build 或 Build And Run。</p><p >• 预览当前场景或项目预制件文件夹，并查看排除原因。</p><p >• 使用原生 GPU 实例化合并兼容渲染，保留 GameObject、脚本与物理。</p><p >• 可选 Forge Object/Spawner 适配器通过 Burst/ECS 处理移动、旋转、生成与生命周期。</p><p >• 提供按日期记录的构建历史、同条件实测依据，以及 3 个可编辑示例。</p><p >转换应用于播放器构建，不会自动翻译任意 MonoBehaviour 代码。效果取决于 CPU/GPU 负载，安装本身不保证帧速度提升。</p><p >宣传视频音乐：Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 来源：https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 已节选、调整响度并添加淡入淡出。仅用于宣传视频。</p>",
+      "summary": "在保留 GameObject 开发流程的同时，于构建时优化重复网格，并预览场景与预制件的转换范围。包含可选 DOTS 行为适配器和可编辑示例。",
+      "technical": "",
+      "locale": "zh-CN"
+    },
+    {
+      "description": "GameObject の開発フローを保ちながら、繰り返しメッシュをビルド時に最適化し、シーンとプレハブの変換対象を確認できます。DOTS 動作アダプターと編集可能な例を同梱。<p >検証環境：Windows x64、Unity 6000.0.83f1、Built-in Render Pipeline、Entities 1.3.15。必要な Unity パッケージは Package Manager から導入します。他のプラットフォームとレンダーパイプラインは未検証です。</p></br><p >自動検出は単一サブメッシュ・マテリアルと正の均一階層スケールを持つ互換の不透明 MeshRenderer/MeshFilter を対象とします。未対応の描画は理由を表示して維持します。シリアル化されたプレハブ参照をサポートし、Resources・Addressables・AssetBundle ロードには専用統合が必要です。</p></br><p >9 言語の UI、オフライン文書、任意のサンプル 3 つを同梱。エディター解析はプレビューで、変換はプレイヤービルド時に適用されます。</p><p >Entity Forge は同じメッシュとマテリアルを多数使うプロジェクトのビルド最適化を支援します。プロジェクト変換を有効にし、通常の Unity Build または Build And Run を使用します。</p><p >• 現在のシーンやプロジェクトのプレハブフォルダーを解析し、除外理由を確認。</p><p >• 互換レンダリングをネイティブ GPU インスタンシングでまとめ、GameObject・スクリプト・物理は維持。</p><p >• 任意の Forge Object/Spawner アダプターで移動・回転・生成・寿命を Burst/ECS で処理。</p><p >• 日付付きビルド履歴、同条件の実測根拠、編集可能なサンプル 3 つを同梱。</p><p >変換はプレイヤービルドに適用されます。任意の MonoBehaviour コードは自動翻訳しません。効果は CPU/GPU 負荷に依存し、導入だけでフレーム速度の向上を保証しません。</p><p >プロモーション動画の音楽: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 出典: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 抜粋・音量調整・フェード処理。販促動画のみで使用。</p>",
+      "fields": [
+        "key_images",
+        "ai_description",
+        "artwork",
+        "optional_description",
+        "name",
+        "compatibility_info",
+        "description",
+        "release_notes",
+        "key_features",
+        "keywords",
+        "elevator_pitch"
+      ],
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1994226",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261105/videos/c68c37ae-4554-4749-bb72-ac931453e591/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aec2630a78590326184d900"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350824",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350450",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350452",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350454",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350456",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350460",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350458",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350462",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350466",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350464",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350470",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350468",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_orig.png"
+        }
+      ],
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/e684c027-38d3-43f0-bcf9-7586ca5eb6d8.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/ec30b824-270b-4cce-81e6-0357ae0b2f15.jpg",
+        "facebook": "//assetstorev1-prd-cdn.unity3d.com/key-image/8c5a6eed-3193-4d9b-b4b8-34ecdf1b3c4f.png",
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/b9cfb8c2-3cdc-4d81-bb1f-65676f8b0b49.jpg"
+      },
+      "features": "<p >検証環境：Windows x64、Unity 6000.0.83f1、Built-in Render Pipeline、Entities 1.3.15。必要な Unity パッケージは Package Manager から導入します。他のプラットフォームとレンダーパイプラインは未検証です。</p></br><p >自動検出は単一サブメッシュ・マテリアルと正の均一階層スケールを持つ互換の不透明 MeshRenderer/MeshFilter を対象とします。未対応の描画は理由を表示して維持します。シリアル化されたプレハブ参照をサポートし、Resources・Addressables・AssetBundle ロードには専用統合が必要です。</p></br><p >9 言語の UI、オフライン文書、任意のサンプル 3 つを同梱。エディター解析はプレビューで、変換はプレイヤービルド時に適用されます。</p>",
+      "optional": "<p >Entity Forge は同じメッシュとマテリアルを多数使うプロジェクトのビルド最適化を支援します。プロジェクト変換を有効にし、通常の Unity Build または Build And Run を使用します。</p><p >• 現在のシーンやプロジェクトのプレハブフォルダーを解析し、除外理由を確認。</p><p >• 互換レンダリングをネイティブ GPU インスタンシングでまとめ、GameObject・スクリプト・物理は維持。</p><p >• 任意の Forge Object/Spawner アダプターで移動・回転・生成・寿命を Burst/ECS で処理。</p><p >• 日付付きビルド履歴、同条件の実測根拠、編集可能なサンプル 3 つを同梱。</p><p >変換はプレイヤービルドに適用されます。任意の MonoBehaviour コードは自動翻訳しません。効果は CPU/GPU 負荷に依存し、導入だけでフレーム速度の向上を保証しません。</p><p >プロモーション動画の音楽: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . 出典: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . 抜粋・音量調整・フェード処理。販促動画のみで使用。</p>",
+      "summary": "GameObject の開発フローを保ちながら、繰り返しメッシュをビルド時に最適化し、シーンとプレハブの変換対象を確認できます。DOTS 動作アダプターと編集可能な例を同梱。",
+      "technical": "",
+      "locale": "ja-JP"
+    },
+    {
+      "description": "Optimize repeated Unity meshes at build time, preview scene and prefab eligibility, and keep your GameObject workflow. Includes DOTS behavior adapters.<p >Verified: Windows x64, Unity 6000.0.83f1, Built-in Render Pipeline, Entities 1.3.15. Install required Unity packages through Package Manager. Other platforms and render pipelines have not been validated.</p></br><p >Automatic discovery supports compatible opaque MeshRenderer/MeshFilter pairs with one submesh/material and positive uniform hierarchy scale. Unsupported rendering remains unchanged with an explanation. Serialized prefab references are supported; Resources, Addressables and AssetBundle loading require dedicated integration.</p></br><p >Includes nine interface languages, offline documentation and three optional samples. Editor analysis is a preview; conversion is applied in player builds.</p><p >Entity Forge helps projects that use many copies of the same mesh and material. Enable project build conversion, then use Unity Build or Build And Run as usual.</p><p >• Preview the current scene or project prefab folders, with exclusion reasons.</p><p >• Batch compatible rendering through native GPU instancing while retaining GameObjects, scripts and physics.</p><p >• Use optional Forge Object/Spawner adapters for Burst/ECS movement, rotation, spawning and lifetime.</p><p >• Review dated build history and matching measured performance evidence, and explore three editable samples.</p><p >Conversion applies to player builds. Arbitrary MonoBehaviour code is not translated. Gains depend on CPU/GPU workload; installation alone does not guarantee faster frames.</p><p >Promotional music: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . Excerpted, loudness adjusted and faded. Promotional videos only.</p>",
+      "fields": [
+        "key_images",
+        "ai_description",
+        "artwork",
+        "optional_description",
+        "name",
+        "compatibility_info",
+        "description",
+        "release_notes",
+        "key_features",
+        "keywords",
+        "elevator_pitch"
+      ],
+      "artwork": [
+        {
+          "reference": "",
+          "type": "attachment_video",
+          "id": "1994226",
+          "thumb": "//unity-assetstorev2-prd.storage.googleapis.com/20261105/videos/c68c37ae-4554-4749-bb72-ac931453e591/thumbnail.png",
+          "uri": "https://assetstore.unity.com/player/6aec2630a78590326184d900"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350824",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c3ce6e75-a545-4d99-818a-670e6d62c142_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350442",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/f118a0f6-f624-450c-b790-fd113ff18826_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350444",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/dca682e7-84bf-4b26-aa18-8b8caaf6558e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350446",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/952f63a5-19f5-46b0-ad7a-a7c6743450ae_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350448",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/92c61bd4-24e5-4bcd-8dd7-a76222485b5b_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350450",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1059b272-3ba8-4a8f-9c3d-6933e737d81e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350452",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/d3f84772-9ef8-4d5a-8fa6-68477ff126ef_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350454",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/04379b6c-92fb-4f36-891f-a524cbad2cdb_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350456",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c84bb6c6-5e1a-47f5-a8fb-538ed021bbd0_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350460",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/1e8f8fb2-5d5b-41e2-af0e-7596e7960b0d_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350458",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/fd2d3bce-35d6-4e57-a25f-b8f6c2049cb4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350462",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/33348d03-1103-4e88-a58b-5aeb15d06e7e_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350466",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/9ceb4f88-4a0a-4452-ba93-5fbc87af572f_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350464",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/c17b561b-4247-48f6-8b59-de2c424b51c4_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350470",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/a0b70339-4a6f-4a96-9af5-40d76916cf39_orig.png"
+        },
+        {
+          "reference": "",
+          "scaled": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_scaled.jpg",
+          "type": "screenshot",
+          "id": "13350468",
+          "thumb": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_thumb.jpg",
+          "uri": "//assetstorev1-prd-cdn.unity3d.com/package-screenshot/4e8079f0-a1ec-4d9e-bfb7-6bf9ad05ba0e_orig.png"
+        }
+      ],
+      "key_images": {
+        "small": null,
+        "icon": "//assetstorev1-prd-cdn.unity3d.com/key-image/e684c027-38d3-43f0-bcf9-7586ca5eb6d8.png",
+        "big": null,
+        "small_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/ec30b824-270b-4cce-81e6-0357ae0b2f15.jpg",
+        "facebook": "//assetstorev1-prd-cdn.unity3d.com/key-image/8c5a6eed-3193-4d9b-b4b8-34ecdf1b3c4f.png",
+        "big_v2": "//assetstorev1-prd-cdn.unity3d.com/key-image/b9cfb8c2-3cdc-4d81-bb1f-65676f8b0b49.jpg"
+      },
+      "features": "<p >Verified: Windows x64, Unity 6000.0.83f1, Built-in Render Pipeline, Entities 1.3.15. Install required Unity packages through Package Manager. Other platforms and render pipelines have not been validated.</p></br><p >Automatic discovery supports compatible opaque MeshRenderer/MeshFilter pairs with one submesh/material and positive uniform hierarchy scale. Unsupported rendering remains unchanged with an explanation. Serialized prefab references are supported; Resources, Addressables and AssetBundle loading require dedicated integration.</p></br><p >Includes nine interface languages, offline documentation and three optional samples. Editor analysis is a preview; conversion is applied in player builds.</p>",
+      "optional": "<p >Entity Forge helps projects that use many copies of the same mesh and material. Enable project build conversion, then use Unity Build or Build And Run as usual.</p><p >• Preview the current scene or project prefab folders, with exclusion reasons.</p><p >• Batch compatible rendering through native GPU instancing while retaining GameObjects, scripts and physics.</p><p >• Use optional Forge Object/Spawner adapters for Burst/ECS movement, rotation, spawning and lifetime.</p><p >• Review dated build history and matching measured performance evidence, and explore three editable samples.</p><p >Conversion applies to player builds. Arbitrary MonoBehaviour code is not translated. Gains depend on CPU/GPU workload; installation alone does not guarantee faster frames.</p><p >Promotional music: Cipher — Kevin MacLeod (incompetech.com). CC BY 3.0: https://creativecommons.org/licenses/by/3.0/ . Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844 . Excerpted, loudness adjusted and faded. Promotional videos only.</p>",
+      "summary": "Optimize repeated Unity meshes at build time, preview scene and prefab eligibility, and keep your GameObject workflow. Includes DOTS behavior adapters.",
+      "technical": "<p >Validated on Windows with Unity 6000.0.83f1 and Built-in rendering. DOTS player conversion requires com.unity.entities 1.3.15. Editor Play retains GameObjects.</p>",
+      "locale": "en-US"
+    }
+  ],
+  "status": "draft",
+  "id": "1541570",
+  "at": "2026-11-05T07:09:39.9548837Z",
+  "price": "0.00"
+}
