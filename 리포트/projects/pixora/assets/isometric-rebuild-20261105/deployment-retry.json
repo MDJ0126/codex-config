@@ -1,0 +1,10 @@
+{
+  "deployment": "failed",
+  "at": "2026-11-06T00:16:18.4542374+09:00",
+  "connectorRetry": "403 Resource not accessible by integration",
+  "commit": "2a476944eb5dc33212404f55487504cf25d8262e",
+  "run": 42051161904,
+  "reason": "Pages remained updating_pages until the 10-minute workflow deadline",
+  "retry": "new archive push; source and validated images preserved",
+  "buildChecks": "passed"
+}
