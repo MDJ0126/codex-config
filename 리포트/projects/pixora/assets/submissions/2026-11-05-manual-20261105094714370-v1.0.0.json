@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "아이소매트릭 조명 원리와 현재 동작 검증",
+    "summary": "투영·면 음영·가림·자발광을 자료·소스·실행으로 구분합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "원래 제품의 GUI QA는 별도 보류. 이 메뉴얼은 원리 조사만 다룹니다.",
+    "outcome": "공식 자료·소스 대조와 실제 GPU 분리 검증을 완료했습니다. 이 메뉴얼은 제품 수정/GUI 완료를 의미하지 않습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "조사 시작 2026-11-05 18:02:48 KST. 실제 GPU 분리 검증 완료 2026-11-05 18:43:00 KST(40분12초). 공개 기록 확인은 별도입니다. 최초 5~10분 예상을 초과했습니다.",
+    "xerjEvidence": "PixelCamera는 기존 인덱스 범위 밖이며 현재 소스와 공식 문서·실제 GPU 비교로 검증했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "isometric-lighting-study-20261105",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "참고의 어두운 면과 그림자를 단순한 고정 색상 조정으로 취급하지 않고 현재 구현의 실제 조명 반응을 검증",
+    "completionCriteria": "Unity 6 공식 자료 및 소스 대조, 같은 장면에서 광원·그림자·투사·자발광 분리 비교, 원래 작업 상태 보존",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "자료·소스 대조와 GPU 분리 검증",
+        "action": "공식 투영/그림자/자발광 문서와 현재 셰이더를 읽고 사본 장면에서 각 조건을 따로 바꿔 실제 픽셀을 비교",
+        "expected": "동적 광원/가림과 고정 자발광 영향을 구분하고 제품/사용자 작업 상태를 보존",
+        "qa": "광원 회전·그림자 off·투사 off·자발광 off·광원 off 출력 비교 및 상태/자원 종료 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 그림자 반응과 고정 자발광 영향을 각각 확인. 제품/사용자 작업 상태 보존."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-05T09:43:00.7772542Z",
+        "summary": "실제 GPU 분리 검증과 상태 보존 통과",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "광원/그림자/투사 변화와 고정 자발광 영향을 분리 확인. 활성 씬·더티·선택·루트·preview 보존 통과.",
+            "evidence": "../assets/lighting-study-20261105/lighting-study.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

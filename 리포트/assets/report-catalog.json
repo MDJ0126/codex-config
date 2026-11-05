@@ -1,5 +1,25 @@
 [
   {
+    "title": "아이소매트릭 재학습 — 투영·면 음영·투사 그림자·자발광 구분",
+    "summary": "현재 그림자 위치는 실제 광원·가림에 반응합니다. 다만 고정 자발광이 어두운 곳도 밝히는 것을 검증했습니다. 투영과 조명·색 보정을 구분합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-result-20261105094715117-v1.0.0.html",
+    "date": "2026-11-05T09:47:15.117Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 조명 원리와 현재 동작 검증",
+    "summary": "투영·면 음영·가림·자발광을 자료·소스·실행으로 구분합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-20261105094714370-v1.0.0.html",
+    "date": "2026-11-05T09:47:14.370Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
     "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
     "project": "pixora",
