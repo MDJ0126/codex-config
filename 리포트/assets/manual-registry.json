@@ -1,5 +1,218 @@
 [
   {
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-pixora-studio-101-ready-20261105173521551-v1.0.1.html",
+    "postPath": "projects/pixora/posts/2026-11-05-manual-pixora-studio-101-ready-20261105173521551-v1.0.1.md",
+    "date": "2026-11-05T17:35:21.551Z",
+    "version": "v1.0.1",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixora-studio-101-ready",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "Pixora Studio 1.0.1 제출 대기 후보 준비",
+      "summary": "현재 Pending 제출을 보존하고 수정 후보·변경 이력·심사 사유와 검증 근거를 준비합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "T03 중앙 보고서 실제 공개와 최종 인계 확인",
+      "outcome": "후보와 제출 문구 확정. 보고서 공개 배포 QA 대기.",
+      "proposedTime": "10~15분",
+      "actualTime": "시작2026-11-06 02:14:57 KST. 후보·변경 이력·심사 사유·필수 검증·해시 인계 확정02:29:38 KST,14분42초. 중앙 보고서 배포 복구·공개 확인은 별도 진행 중.",
+      "xerjEvidence": "출시 기록과 기존 수정 검증 근거 확인, 코드 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixora-studio-101-ready",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Pending 종료 후 제출 가능한 검증된 1.0.1 후보와 제출 문구를 준비한다.",
+      "completionCriteria": "버전과 9언어 변경 이력·심사 사유 작성, 공식 검증·고정 패키지·아카이브 소스 대조, 설치 검증 및 제출 인계 기록. 현재 Pending 제출은 변경하지 않는다.",
+      "previousManual": "projects/pixora/reports/2026-11-05-manual-20261105171736371-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "버전과 제출 문구 준비",
+          "action": "최근 수정과 실제 검증 범위로 버전·변경 이력·심사 사유를 작성하고 기존 Pending 상태를 읽는다.",
+          "expected": "1.0.1과 9언어 문구 및 심사 사유가 준비되고 Pending 제출은 보존된다.",
+          "qa": "버전·문구·이전 검증 기록과 실제 포털 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "1.0.1과9언어 변경 이력·873자 심사 사유 작성, 현재 Pending 보존"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "고정 패키지 수출과 설치 검증",
+          "action": "격리 프로젝트 동기화, 공식 validator, 새 경로 수출, SHA256 고정과 아카이브 대조·설치 검증",
+          "expected": "최신 소스와 패키지 일치, 컴파일·실행 회귀 통과",
+          "qa": "아카이브와 스테이지 해시 대조 및 실제 Unity 검증",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "고정 패키지·공식 검증·새 Linear 설치·9프리셋·샘플 제거 본체 컴파일 통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "제출 대기 인계와 결과 공개",
+          "action": "제출 문구·패키지·해시·남은 온라인 절차를 기록하고 보고서 공개 확인",
+          "expected": "사용자가 검증된 동일 파일과 문구로 후속 제출을 진행할 수 있다.",
+          "qa": "제출물·문구·근거 파일 존재 및 실제 공개 본문/첨부 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "파일·문구·제출 절차 인계 확정. 보고서 공개 QA 대기"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-05T17:34:30.060Z",
+          "summary": "후보와 필수 검증 완료",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "버전과9언어 문구·심사 사유 및 Pending 보존",
+              "evidence": "Docs/Store/Pixora/PixoraStudio-1.0.1-Submission.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공식 검증·새 Linear 설치·9프리셋·본체 단독 컴파일, 프로젝트 설정 변화0",
+              "evidence": "Docs/Testing/2026-11-06/pixora-1.0.1/submission-ready.json",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-11-05-manual-20261105171736371-v1.0.0.html",
+    "postPath": "projects/pixora/posts/2026-11-05-manual-20261105171736371-v1.0.0.md",
+    "date": "2026-11-05T17:17:36.371Z",
+    "version": "v1.0.0",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixora-studio-101-ready",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "Pixora Studio 1.0.1 제출 대기 후보 준비",
+      "summary": "현재 Pending 제출을 보존하고 수정 후보·변경 이력·심사 사유와 검증 근거를 준비합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "패키지 및 제출 인계 검증 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~15분",
+      "actualTime": "시작 2026-11-06 02:14:57 KST",
+      "xerjEvidence": "출시 기록과 기존 수정 검증 근거 확인, 코드 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixora-studio-101-ready",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "Pending 종료 후 제출 가능한 검증된 1.0.1 후보와 제출 문구를 준비한다.",
+      "completionCriteria": "버전과 9언어 변경 이력·심사 사유 작성, 공식 검증·고정 패키지·아카이브 소스 대조, 설치 검증 및 제출 인계 기록. 현재 Pending 제출은 변경하지 않는다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "버전과 제출 문구 준비",
+          "action": "최근 수정과 실제 검증 범위로 버전·변경 이력·심사 사유를 작성하고 기존 Pending 상태를 읽는다.",
+          "expected": "1.0.1과 9언어 문구 및 심사 사유가 준비되고 Pending 제출은 보존된다.",
+          "qa": "버전·문구·이전 검증 기록과 실제 포털 대조",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "고정 패키지 수출과 설치 검증",
+          "action": "격리 프로젝트 동기화, 공식 validator, 새 경로 수출, SHA256 고정과 아카이브 대조·설치 검증",
+          "expected": "최신 소스와 패키지 일치, 컴파일·실행 회귀 통과",
+          "qa": "아카이브와 스테이지 해시 대조 및 실제 Unity 검증",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "제출 대기 인계와 결과 공개",
+          "action": "제출 문구·패키지·해시·남은 온라인 절차를 기록하고 보고서 공개 확인",
+          "expected": "사용자가 검증된 동일 파일과 문구로 후속 제출을 진행할 수 있다.",
+          "qa": "제출물·문구·근거 파일 존재 및 실제 공개 본문/첨부 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105153506341-v1.0.19.html",
     "postPath": "projects/pixora/posts/2026-11-05-manual-pixel-camera-isometric-20261105-20261105153506341-v1.0.19.md",
     "date": "2026-11-05T15:35:06.341Z",

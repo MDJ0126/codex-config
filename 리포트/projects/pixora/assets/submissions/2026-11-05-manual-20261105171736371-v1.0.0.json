@@ -1,0 +1,84 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixora Studio 1.0.1 제출 대기 후보 준비",
+    "summary": "현재 Pending 제출을 보존하고 수정 후보·변경 이력·심사 사유와 검증 근거를 준비합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "패키지 및 제출 인계 검증 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "10~15분",
+    "actualTime": "시작 2026-11-06 02:14:57 KST",
+    "xerjEvidence": "출시 기록과 기존 수정 검증 근거 확인, 코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixora-studio-101-ready",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Pending 종료 후 제출 가능한 검증된 1.0.1 후보와 제출 문구를 준비한다.",
+    "completionCriteria": "버전과 9언어 변경 이력·심사 사유 작성, 공식 검증·고정 패키지·아카이브 소스 대조, 설치 검증 및 제출 인계 기록. 현재 Pending 제출은 변경하지 않는다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "버전과 제출 문구 준비",
+        "action": "최근 수정과 실제 검증 범위로 버전·변경 이력·심사 사유를 작성하고 기존 Pending 상태를 읽는다.",
+        "expected": "1.0.1과 9언어 문구 및 심사 사유가 준비되고 Pending 제출은 보존된다.",
+        "qa": "버전·문구·이전 검증 기록과 실제 포털 대조",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "고정 패키지 수출과 설치 검증",
+        "action": "격리 프로젝트 동기화, 공식 validator, 새 경로 수출, SHA256 고정과 아카이브 대조·설치 검증",
+        "expected": "최신 소스와 패키지 일치, 컴파일·실행 회귀 통과",
+        "qa": "아카이브와 스테이지 해시 대조 및 실제 Unity 검증",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "제출 대기 인계와 결과 공개",
+        "action": "제출 문구·패키지·해시·남은 온라인 절차를 기록하고 보고서 공개 확인",
+        "expected": "사용자가 검증된 동일 파일과 문구로 후속 제출을 진행할 수 있다.",
+        "qa": "제출물·문구·근거 파일 존재 및 실제 공개 본문/첨부 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

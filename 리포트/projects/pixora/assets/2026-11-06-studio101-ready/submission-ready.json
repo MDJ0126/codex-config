@@ -1,0 +1,46 @@
+{
+  "product": "Pixora Studio",
+  "version": "1.0.1",
+  "assetStoreId": 424614,
+  "existingPendingVersionId": "1541558",
+  "existingPendingVersion": "1.0.0",
+  "currentPendingMustRemainUnchanged": true,
+  "autoSubmit": false,
+  "releaseNotes": {
+    "en": "1.0.1\n• Restored selected-object pixelization in the three classic Pixel Camera samples; unselected backgrounds remain sharp.\n• Preserved background rendering while snapping target roots to the pixel grid.\n• Fixed settings-panel scroll resets on Undo/Redo.\n• Setting changes now refresh the preview immediately, even with Live preview off; manual refresh was removed.\n• Updated sample controls and offline documentation in nine languages.",
+    "ko": "1.0.1\n• 기존 Pixel Camera 예제 3개의 픽셀화를 지정 타깃으로 제한하고 비대상 배경을 원본 해상도로 유지합니다.\n• 타깃 루트의 픽셀 스냅 중에도 배경 렌더를 보존합니다.\n• Undo/Redo 시 설정 패널의 스크롤이 초기화되던 문제를 수정했습니다.\n• 라이브 미리보기가 꺼져 있어도 설정값 변경을 즉시 반영하며 수동 새로고침을 제거했습니다.\n• 예제 조작 안내와 9개 언어 오프라인 문서를 갱신했습니다.",
+    "ja": "1.0.1\n• 従来のPixel Cameraサンプル3つを選択対象のみのピクセル化に戻し、背景の解像度を保持しました。\n• 対象ルートのピクセルスナップ中も背景描画を保持します。\n• Undo/Redoで設定パネルのスクロールがリセットされる問題を修正しました。\n• ライブプレビューがオフでも設定変更を即座に反映し、手動更新を削除しました。\n• サンプルの操作案内と9言語のオフライン文書を更新しました。",
+    "zh-Hans": "1.0.1\n• 将三个经典Pixel Camera示例恢复为仅对指定对象像素化，未选中背景保持清晰。\n• 目标根对象进行像素对齐时保留背景渲染。\n• 修复撤销/重做导致设置面板滚动位置重置的问题。\n• 即使关闭实时预览，设置更改也会立即显示；移除手动刷新。\n• 更新示例操作说明和九种语言的离线文档。",
+    "zh-Hant": "1.0.1\n• 將三個經典Pixel Camera範例恢復為僅對指定物件像素化，未選取背景保持清晰。\n• 目標根物件進行像素對齊時保留背景繪製。\n• 修正復原/重做導致設定面板捲動位置重設的問題。\n• 即使關閉即時預覽，設定變更也會立即顯示；移除手動重新整理。\n• 更新範例操作說明和九種語言的離線文件。",
+    "es": "1.0.1\n• Los tres ejemplos clásicos de Pixel Camera vuelven a pixelar solo los objetos seleccionados; el fondo permanece nítido.\n• El ajuste de las raíces a la cuadrícula conserva el fondo.\n• Corregido el reinicio del desplazamiento al deshacer/rehacer.\n• Los ajustes actualizan la vista previa de inmediato, incluso sin vista en vivo; se eliminó la actualización manual.\n• Actualizados los controles de ejemplo y las guías sin conexión en nueve idiomas.",
+    "fr": "1.0.1\n• Les trois exemples classiques de Pixel Camera ne pixellisent que les objets sélectionnés ; le fond reste net.\n• L’alignement des racines sur la grille préserve le fond.\n• Correction du défilement réinitialisé par Annuler/Rétablir.\n• Les réglages actualisent immédiatement l’aperçu, même sans aperçu en direct ; suppression de l’actualisation manuelle.\n• Commandes des exemples et guides hors ligne actualisés dans neuf langues.",
+    "de": "1.0.1\n• Die drei klassischen Pixel-Camera-Beispiele pixeln wieder nur ausgewählte Objekte; der Hintergrund bleibt scharf.\n• Das Einrasten der Objektwurzeln erhält die Hintergrunddarstellung.\n• Scrollposition beim Rückgängig/Wiederholen wird nicht mehr zurückgesetzt.\n• Einstellungen aktualisieren die Vorschau sofort, auch ohne Live-Vorschau; manuelle Aktualisierung entfernt.\n• Beispielsteuerung und Offline-Dokumentation in neun Sprachen aktualisiert.",
+    "pt-BR": "1.0.1\n• Os três exemplos clássicos do Pixel Camera voltam a pixelizar apenas os objetos selecionados; o fundo permanece nítido.\n• O alinhamento das raízes à grade preserva a renderização do fundo.\n• Corrigida a reinicialização da rolagem ao desfazer/refazer.\n• Os ajustes atualizam a prévia imediatamente, mesmo sem prévia ao vivo; atualização manual removida.\n• Controles dos exemplos e guias offline atualizados em nove idiomas."
+  },
+  "reviewerNotes": "Pixora Studio 1.0.1 is a corrective update to the submitted 1.0.0 candidate. The three classic Pixel Camera showcases now process only their designated Pixel Camera Object roots; isometric projection remains independent of the pixelization scope. The unselected background is preserved. This update also fixes Undo/Redo resetting the settings scroll position, refreshes the preview immediately after setting edits, removes manual refresh, and updates sample instructions and nine-language offline documentation. Actual Unity 6000.0.83f1 Built-in verification covered all nine chapter presets, unchanged pixels outside target bounds, one-output-pixel surface-colour contours, and native Ctrl+Z/Ctrl+Y with automatic preview updates. These latest fixes have not been revalidated on URP. Image Maker and Foliage remain included. AI assistance remains disclosed in the listing.",
+  "compatibility": "Windows, Unity 6000.0.83f1, Built-in regression verified; latest changes not revalidated on URP.",
+  "onlineDraftSaved": false,
+  "onlineUploadPerformed": false,
+  "artifact": {
+    "sha256": "fa1fc9ae512068d1c9cfce1f85a5caa594e991d81002d4d6063fef9d59a0dd88",
+    "path": "C:/Projects/TurnRoom/Artifacts/TurnRoomPackages/Frozen/2026-11-06-studio-1.0.1/PixoraStudio.unitypackage",
+    "bytes": 65430931,
+    "at": "2026-11-06T02:20:52.6134351+09:00"
+  },
+  "readyForLaterDraft": true,
+  "readyAt": "2026-11-06T02:29:38.5532225+09:00",
+  "checks": {
+    "freshLinearInstall": true,
+    "officialValidator": true,
+    "projectSettingsPreserved": true,
+    "outsideChangedPixels": 0,
+    "linearPresetCases": 9,
+    "coreWithoutSamples": true
+  },
+  "nextSteps": [
+    "Wait until the current Pending review is resolved; do not replace it while pending.",
+    "Open Pixora Studio (Asset Store ID 424614), then create or open an editable draft. Verify the draft is not the pending version 1541558.",
+    "Set the release version to 1.0.1, upload the exact artifact whose SHA256 is recorded here, and paste the supported-language release notes.",
+    "Enter reviewerNotes, verify the saved draft and processed upload, then stop before final submission and the ownership declaration."
+  ]
+}

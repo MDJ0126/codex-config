@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "bug",
+    "title": "Pages 배포 상태가 빈 값으로 반복되는 시간 초과 대응",
+    "summary": "반복된 Pages 배포 시간 초과 로그와 공식 API를 대조하고, 배포한 커밋 SHA를 상태 조회 키로 사용하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "GitHub Actions reports-pages.yml, Pages REST API",
+    "steps": "3897484 커밋의 배포1·2회차 로그와 Pages 상태 API를 비교합니다.",
+    "expected": "실제 Pages 상태를 읽고 성공 또는 오류를 명확히 판정합니다.",
+    "actual": "각 시도에서 상태 로그가 빈 값인 채10분 반복되어 Pages deployment timed out이 발생했습니다. 같은 커밋 SHA로 API를 조회하면 deployment_cancelled가 반환됐습니다.",
+    "cause": "빈 상태 반복·시간 초과는 실제 로그로 확인했습니다. 응답 ID의 해석이 빈 조회와 연결되는지는 미확인이며, 공식 API가 지원하는 정확한 pages_build_version 커밋 SHA로 조회 키를 고정했습니다.",
+    "changes": "공식 GitHub REST 문서에서 커밋 SHA 조회 지원을 확인했습니다. POST에 보낸 context.sha를 상태 조회·취소에도 사용합니다. 토큰과 개인 로그는 보고서에 포함하지 않았습니다.",
+    "verification": "기존 실패 로그와 인증된 읽기 API 결과 대조. 새 워크플로 실제 실행·사이트 공개 결과는 대기입니다. 공식 근거: https://docs.github.com/en/rest/pages/pages#get-the-status-of-a-github-pages-deployment",
+    "remaining": "새 커밋의 배포 성공, 개별 공개 본문과 첨부 확인. 사용자 제품의 패키지 준비와 기록 사이트의 배포 복구는 구분합니다.",
+    "outcome": "워크플로 상태 조회 키를 수정했습니다. 새 실행과 공개 배포 검증은 아직 진행 전입니다.",
+    "proposedTime": "패키지 준비10~15분과 별도의 보고서 배포 복구",
+    "actualTime": "2026-11-06 02:30 KST 실패 로그 확인,02:32 KST 조회 키 수정. 복구 완료 시각 미확정.",
+    "xerjEvidence": "워크플로 파일과 실제 API·실패 로그 직접 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "in_progress",
+    "state": "progress"
+  }
+}
