@@ -1,0 +1,291 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "Pixel Camera 아이소매트릭 기능·예제·9언어 문서",
+    "summary": "직교 투영·두 각도·네 방향·추적·복원과 기존 예제 및 문서를 함께 구현·검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 요청으로 실제 Inspector/입력·테마/언어 표시·브라우저 화면 및 final GUI QA 보류.",
+    "outcome": "경계 한쪽 배치로 실제 원본 1픽셀 선을 구현했고 참고 기반의 따뜻한 색상으로 조정했습니다. 비화면 검증 완료, GUI 조작은 사용자 요청대로 보류.",
+    "proposedTime": "15~25분",
+    "actualTime": "시작 2026-11-05 17:30:42 KST. 추가 실루엣 조합 수정과 최종 비화면 검증 완료 2026-11-05 17:52:28 KST(21분46초). 공개 확인은 별도이며 GUI QA는 보류.",
+    "xerjEvidence": "Status에서 노드 미실행 확인. PixelCamera는 기존 인덱스 범위 밖이며 rg로 현재 소스 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-isometric-20261105",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "기존 픽셀 효과와 함께 사용하는 명시적인 아이소매트릭 카메라 기능",
+    "completionCriteria": "컴파일·실제 Unity 투영/복원/저장 재열기·예제 렌더·Inspector/문서 QA·공개 보고서",
+    "previousManual": "projects/pixora/reports/2026-11-05-manual-pixel-camera-isometric-20261105-20261105084713830-v1.0.5.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "부드러운 1픽셀 선과 참고 색상",
+        "action": "양쪽/한쪽 경계 배치 구현·GPU 두께 실측·참고의 따뜻한 면/그림자/선색 조정",
+        "expected": "직선 경계가 원본 1픽셀이며 참고 기준으로 낮춘 대비를 실제 출력에서 확인",
+        "qa": "GPU 경계 폭 2→1픽셀·메인 장면 전후·팔레트와 격자 회귀 검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 3,
+        "result": "GPU 직선 경계 측정: 양쪽 2원본픽셀→한쪽 1원본픽셀. 따뜻한 면·갈색 선·절제된 그림자를 실제 전후 출력으로 확인."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "예제·다국어 UI/문서 동기화",
+        "action": "기존 새 예제 형상은 보존하고 새 옵션·부드러운 팔레트·9언어 설명/캡처 갱신",
+        "expected": "새 기능 설정과 실제 예제/9언어 안내가 일치",
+        "qa": "프리팹/씬 재열기·번역 키·생성 본문/이미지/링크 검사",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 3,
+        "result": "새 옵션/선택/툴팁 9언어와 예제/문서 갱신. 씬 재열기 픽셀 동일 및 생성 본문·이미지·링크 통과."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "회귀·보류 및 공개 보고",
+        "action": "카메라/기존 방식 회귀·자원/씬 상태 보존·정정 보고 게시",
+        "expected": "비화면 결과와 사용자 GUI 보류를 구분",
+        "qa": "7개 어셈블리·카메라 회귀·공개 배포 확인; GUI는 보류",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "blocked",
+        "revision": 3,
+        "result": "7개 어셈블리와 회귀 검사·상태/자원 보존은 통과. 사용자 화면 보류로 실제 GUI 입력·테마/언어·브라우저 표시 검증은 미실행."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자가 참고의 부드러운 1픽셀 윤곽선과 색상 차이를 다시 지적했습니다. 기존 정확 팔레트/격자 검사는 유효하나 선 두께와 참고 색상 품질을 충족하지 못했으므로 실제 경계 두께 측정과 따뜻한 색 조정을 추가합니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-05T07:17:26.2925688Z",
+        "summary": "실제 Unity 카메라 수치·복원·저장 재열기·렌더 25개 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "세 축 투영 길이·2:1 기울기·네 방향·타깃 추적·이상값·기존/사용자 지정 투영 복원·씬 재열기와 실제 렌더 통과. 공통 Inspector는 소스 및 컴파일 확인, 물리 입력은 미실행.",
+            "evidence": "../assets/isometric-20261105/native-qa.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-05T07:29:32.965Z",
+        "summary": "문서/씬 보존 검사 통과; 화면 QA는 사용자 요청으로 보류",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "27개 생성 문서의 실제 본문 JS·이미지/링크 경로, 9언어 신규 필드 키와 원래 씬 518개 객체 보존 확인. 실제 Inspector/Play 키보드 및 브라우저 화면은 사용자의 화면 조작 보류로 미실행.",
+            "evidence": "../assets/isometric-20261105/verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-05T07:49:58.8558739Z",
+        "summary": "개발 검증 실패 및 수정 이력",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "Preview Scene을 active로 바꾸려는 API 호출이 거부됨. 객체를 각 미리보기 씬으로 직접 이동하는 방식으로 수정.",
+            "evidence": "개발 로컬 실행 원본 보존; 최종 네이티브 근거의 재QA 통과와 구분",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "step",
+        "at": "2026-11-05T07:52:59.1040181Z",
+        "summary": "개발 검증 실패 및 수정 이력",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "생성 기하 23개와 개발 QA의 임의 최소 25개 기준 불일치. 실제 작성 명세·새 재질 의존성 검사로 수정.",
+            "evidence": "개발 로컬 실행 원본 보존; 최종 네이티브 근거의 재QA 통과와 구분",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-05T07:54:46.0215729Z",
+        "summary": "개발 검증 실패 및 수정 이력",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "fail",
+            "actual": "Unity가 Preview Scene 직접 저장을 거부함. 네이티브 편집 프리팹 저장 후 이를 참조하는 새 씬을 작성·임포트·재열기 검증하는 방식으로 수정.",
+            "evidence": "개발 로컬 실행 원본 보존; 최종 네이티브 근거의 재QA 통과와 구분",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-05T08:13:30.8911180Z",
+        "summary": "새 스타일 실제 렌더·정확 팔레트·균일 격자·저장 재열기·카메라 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "불투명 선·면/겹침 분리와 참고 기반 새 장면을 실제 출력으로 검토. 팔레트 밖 0개, 3×3 블록 불일치 0개, 이전 색 전달 경로 오류 재현 및 제거. 카메라 회귀 12개 통과.",
+            "evidence": "../assets/isometric-atelier-20261105/atelier-qa.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-05T08:14:48.432Z",
+        "summary": "새 예제 저장/재열기·이전 아트 비의존·9언어 생성 문서 검증",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "네이티브 씬 재열기 픽셀 동일·별도 새 아트 의존성 확인. 27개 생성 문서의 본문 JS·장 이동·이미지/링크 경로 및 9언어 키 검사 통과.",
+            "evidence": "../assets/isometric-atelier-20261105/verification.json",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-11-05T08:19:55.708Z",
+        "summary": "사용자 화면 조작 보류 유지",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "비화면 검사와 임시 자원 정리는 완료. 사용자의 명시적인 화면 조작 보류로 실제 Inspector·물리 입력·브라우저 화면 검증은 미실행.",
+            "evidence": "사용자의 화면 조작 보류 응답 및 네이티브 상태 보존 근거",
+            "dependencies": {
+              "T01": 2,
+              "T02": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "step",
+        "at": "2026-11-05T08:43:49.4163491Z",
+        "summary": "실제 GPU 원본 선 폭과 새 색상·팔레트·격자 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "동일 큐브 직선 경계의 출력 폭이 기존 6/6px에서 수정 3/3px로 감소. 3배 확대이므로 원본 2→1px. 실제 장면 색상/선 전후 검토, 팔레트 밖 픽셀 0개·격자 불일치 0개.",
+            "evidence": "../assets/soft-outline-20261105/atelier-qa.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q10",
+        "kind": "step",
+        "at": "2026-11-05T08:44:22.385Z",
+        "summary": "예제 저장 재열기와 9언어 UI/문서 정합성",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "씬 재열기 실제 픽셀 동일. 옵션·선택 항목·툴팁의 9언어 데이터와 27개 생성 문서 본문/장 이동/이미지·링크 검증 통과.",
+            "evidence": "../assets/soft-outline-20261105/verification.json",
+            "dependencies": {
+              "T01": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q11",
+        "kind": "step",
+        "at": "2026-11-05T08:47:11.396Z",
+        "summary": "비화면 회귀 완료; 실제 GUI 보류",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 3,
+            "verdict": "not_run",
+            "actual": "원래 씬·더티·선택·루트 보존 및 작업 preview 정리 통과. 실제 마우스/키보드·테마/언어·브라우저 표시 검증은 사용자 요청으로 미실행.",
+            "evidence": "네이티브 상태 보존과 기존 화면 조작 보류 응답",
+            "dependencies": {
+              "T01": 3,
+              "T02": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q12",
+        "kind": "regression",
+        "at": "2026-11-05T08:51:49.3085405Z",
+        "summary": "추가 실루엣 조합 수정·실제 GPU 회귀",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 3,
+            "verdict": "pass",
+            "actual": "DepthAndNormals와 Silhouette 모두 Single side의 직선 경계가 각각 3출력px(원본 1px)임을 확인했습니다. 최종 생성 문서 검사는 17:52:28 KST에 완료했습니다.",
+            "evidence": "../assets/soft-outline-20261105/atelier-qa.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
