@@ -1,5 +1,15 @@
 [
   {
+    "title": "Pixora Studio 최신 패키지 교체와 제출 직전 준비",
+    "summary": "공식 SDK 업로드 성공, 변경 이력 저장 및 심사 사유 입력. 포털 파일 수 차이는 추가 확인이 필요합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-result-20261105160943311-v1.0.0.html",
+    "date": "2026-11-05T16:09:43.311Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "시장·숲 외곽선 — 각 경계 표면색과 다색텍스처를 따르도록 수정",
     "summary": "기존 표면색 기반 옵션을 시장 프리셋에 켜고, 내부 하이라이트 혼합 전의 현재 표면색을 외곽선 계산에 사용했습니다. 하나의 텍스처가 여러 색이면 경계 위치에 따라 선색도 달라집니다.",
     "project": "pixora",
