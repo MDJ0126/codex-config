@@ -1,5 +1,15 @@
 [
   {
+    "title": "Pixel Camera 타깃 범위 복원과 즉시 미리보기·Undo 스크롤 수정",
+    "summary": "기존 3개 예제를 선택 타깃 전용으로 복원하고, 설정값 즉시 반영 및 Undo/Redo 스크롤 유지를 격리 Unity에서 검증했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-05-bug-20261105165538095-v1.0.0.html",
+    "date": "2026-11-05T16:55:38.095Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Entity Forge 0.3.2-preview 제출 심사 사유 입력",
     "summary": "현재 판매 페이지 설명과 변경 이력을 근거로 심사 사유를 입력하고 최종 제출 직전 창을 유지했습니다.",
     "project": "entityforge",
