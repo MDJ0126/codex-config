@@ -1,5 +1,25 @@
 [
   {
+    "title": "드래그 경로를 따라 비행기가 순차 폭격",
+    "summary": "원클릭 공격을 드래그 경로 지정과 항공기 순차 폭격으로 바꿨습니다. 경로 예고·낙하·착탄을 기존 파괴와 점수에 연결했으며 독립64개 검사는 통과했습니다. 실제 Play는 미검증입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106134031649-v1.0.0.html",
+    "date": "2026-11-06T13:40:31.649Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "드래그 경로와 비행기 순차 폭격",
+    "summary": "드래그 경로 예고·해제 후 항공기 통과·순차 낙하와 기존 파괴/점수 연결",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106134030506-v1.0.0.html",
+    "date": "2026-11-06T13:40:30.506Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "건물 진화 연출과 발전도 증가 피드백",
     "summary": "진화 도약·착지 링·발전도 카운트와 증가 표시, 도로 렌더링 묶음",
     "project": "growingcity",

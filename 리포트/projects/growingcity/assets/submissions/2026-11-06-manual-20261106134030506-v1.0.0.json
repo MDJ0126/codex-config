@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "드래그 경로와 비행기 순차 폭격",
+    "summary": "드래그 경로 예고·해제 후 항공기 통과·순차 낙하와 기존 파괴/점수 연결",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 GUI·컴퓨터 유즈 제한으로 실제 포인터·비행·셰이더·Play·전후 화면 검증 미실행",
+    "outcome": "구현·64개 독립 시나리오·참조 컴파일·씬 검사 완료. 실제 Play 미실행",
+    "proposedTime": "10~15분",
+    "actualTime": "시작2026-11-06 22:32:12 KST. 구현·독립 검사는 이 메뉴얼 생성 시점 완료, 실제 Play 미실행·공개 확인 별도.",
+    "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "drag-airstrike",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "드래그 경로 예고·해제 후 항공기 통과·순차 낙하와 기존 파괴/점수 연결",
+    "completionCriteria": "드래그 입력·취소·UI 차단·투하 시간표·비행/낙하/충돌 연결·씬 참조 검사와 컴파일/독립 회귀. 실제 Play와 화면은 사용 제한으로 미실행 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "경로·투하 시간표",
+        "action": "독립 계획 모델과 시간표 검사",
+        "expected": "구현과 검사 근거, 미실행 화면 확인을 분리",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "독립64개·참조 컴파일·씬 연결 검사 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "입력·항공기·씬 연결",
+        "action": "드래그 입력과 항공기/폭탄 인스턴스·기존 파괴 연결",
+        "expected": "구현과 검사 근거, 미실행 화면 확인을 분리",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "독립64개·참조 컴파일·씬 연결 검사 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "컴파일·회귀·실제 Play 구분",
+        "action": "컴파일·씬·원본 보존 검사 후 Play 제한 명시",
+        "expected": "구현과 검사 근거, 미실행 화면 확인을 분리",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "독립 검사와 원본 보존 확인. 실제 Play·표시는 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T13:40:29.314Z",
+        "summary": "독립 실행·소스/씬 검사와 실제 Play 미실행 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립64개·참조 컴파일·씬 연결 검사 통과",
+            "evidence": "QA/Airstrike/logic-results.txt 및 verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립64개·참조 컴파일·씬 연결 검사 통과",
+            "evidence": "QA/Airstrike/logic-results.txt 및 verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "독립 검사와 원본 보존 확인. 실제 Play·표시는 미실행",
+            "evidence": "QA/Airstrike/logic-results.txt 및 verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
