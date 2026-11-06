@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "골드 폭격 강화 상점과 가까운 카메라",
+    "summary": "골드 차감·범위와 폭탄 수 강화·씬 구매 버튼과 가격/레벨 표시·가까운 자동 카메라",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 GUI·컴퓨터 유즈 금지로 실제 상점 클릭·카메라 구도·전후 화면·Play·웹 실행 미검증",
+    "outcome": "골드 강화·씬 버튼·카메라 구현과 독립101개·참조 컴파일·씬 검사 완료, 실제 Play 미실행",
+    "proposedTime": "15~25분",
+    "actualTime": "시작2026-11-06 23:39:23 KST. 구현·독립 검사는 이 메뉴얼 생성 시점 완료, 실제 Play 미실행·보고서 공개 확인 별도.",
+    "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "bombardment-upgrades-camera",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "골드 차감·범위와 폭탄 수 강화·씬 구매 버튼과 가격/레벨 표시·가까운 자동 카메라",
+    "completionCriteria": "골드 부족/차감/상한/반복 구매/전투 보상·출격 시 강화 고정·폭탄 수/범위·리셋 독립 검사, 씬 UI 저장·컴파일·원본 보존 검증. 실제 Play는 GUI 제한으로 미실행 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "골드 지갑·강화 모델",
+        "action": "골드/누적 점수 분리와 가격·상한·폭격 수 반영",
+        "expected": "구현과 검증 근거, 실제 Play 미실행 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "독립101개·Runtime/Editor 컴파일·씬 참조 검사 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "씬 상점 UI·폭격 연결·카메라",
+        "action": "편집 가능한 버튼과 Inspector 이벤트 저장, 더 가까운 카메라",
+        "expected": "구현과 검증 근거, 실제 Play 미실행 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "독립101개·Runtime/Editor 컴파일·씬 참조 검사 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "컴파일·회귀·공개 보고",
+        "action": "독립·컴파일·씬·원본 검사와 실제 Play 제한 기록",
+        "expected": "구현과 검증 근거, 실제 Play 미실행 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "독립·컴파일·씬·원본 검사 통과, 실제 Play/전후 화면 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T14:50:00.195Z",
+        "summary": "실행된 독립·정적 검사와 실제 Play 미실행 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립101개·Runtime/Editor 컴파일·씬 참조 검사 통과",
+            "evidence": "QA/Upgrades/logic-results.txt, verification.json, qa-scope.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립101개·Runtime/Editor 컴파일·씬 참조 검사 통과",
+            "evidence": "QA/Upgrades/logic-results.txt, verification.json, qa-scope.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "독립·컴파일·씬·원본 검사 통과, 실제 Play/전후 화면 미실행",
+            "evidence": "QA/Upgrades/logic-results.txt, verification.json, qa-scope.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

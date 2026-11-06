@@ -1,5 +1,25 @@
 [
   {
+    "title": "골드로 폭격 범위·폭탄 수 강화와 가까운 도시 카메라",
+    "summary": "골드로 범위와 폭탄 수를 구매하는 상단 버튼을 씬에 추가했습니다. 골드 차감·레벨/다음 가격·출격 시 수치 고정과 더 가까운 카메라를 연결했으며 독립101개 검사는 통과했습니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106145005347-v1.0.0.html",
+    "date": "2026-11-06T14:50:05.347Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "골드 폭격 강화 상점과 가까운 카메라",
+    "summary": "골드 차감·범위와 폭탄 수 강화·씬 구매 버튼과 가격/레벨 표시·가까운 자동 카메라",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106145003098-v1.0.0.html",
+    "date": "2026-11-06T14:50:03.098Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "골드 획득 HUD·단계별 체력·피격과 건물 파괴 피드백",
     "summary": "골드 획득량 HUD, 진화당1.5배 체력과 점유 축소 퇴화, 빨간 피격·건물 흔들림·카메라 셰이크·폭발을 연결했습니다. 독립83개 검사는 통과했으며 실제 Play는 미검증입니다.",
     "project": "growingcity",
