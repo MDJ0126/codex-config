@@ -1,5 +1,136 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106160427143-v1.0.0.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106160427143-v1.0.0.md",
+    "date": "2026-11-06T16:04:27.143Z",
+    "version": "v1.0.0",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "screen-space-drag-guide",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "화면 좌표의 2D 드래그 방향선",
+      "summary": "3D 프리뷰를 제거하고 씬 Canvas의2D 선·화살표를 포인터에 연결",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "GUI·컴퓨터 유즈 금지에 따라 실제 드래그 표시·터치·가독성·씬 재열기·전후 캡처 미검증",
+      "outcome": "순수2D Canvas 표시선 구현·127개 검사·컴파일·씬 참조 검사 완료, 실제 표시 미실행",
+      "proposedTime": "5~10분",
+      "actualTime": "시작2026-11-07 00:57:38 KST. 구현·독립 검사약5분, 실제 표시와 공개 확인 별도.",
+      "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "screen-space-drag-guide",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "3D 프리뷰를 제거하고 씬 Canvas의2D 선·화살표를 포인터에 연결",
+      "completionCriteria": "순수2D 화살표 좌표·씬 Image/RectTransform 참조·포인터/취소 분기·컴파일·기존 회귀 검사. 실제 UI 표시는 GUI 제한으로 미실행 구분",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "2D 선·화살표 좌표",
+          "action": "포인터 좌표로 길이·방향·화살촉 계산",
+          "expected": "실제 검사와 표시 미검증 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "독립127개·참조 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "씬 오브젝트와 입력 연결",
+          "action": "정적 Image3개 씬 저장·동적 위치 연결·3D 프리뷰 제거",
+          "expected": "실제 검사와 표시 미검증 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "독립127개·참조 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "컴파일·회귀·공개 보고",
+          "action": "독립·컴파일·씬·원본 확인과 실제 표시 제한 기록",
+          "expected": "실제 검사와 표시 미검증 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "독립·컴파일·씬·원본 검사 통과, 실제 표시/Play/전후 캡처 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T16:04:25.074Z",
+          "summary": "2D 좌표·저장된 UI 검사와 실제 표시 미실행 구분",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립127개·참조 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/DragGuide/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립127개·참조 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/DragGuide/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "독립·컴파일·씬·원본 검사 통과, 실제 표시/Play/전후 캡처 미실행",
+              "evidence": "QA/DragGuide/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106153729295-v1.0.0.html",
     "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106153729295-v1.0.0.md",
     "date": "2026-11-06T15:37:29.295Z",

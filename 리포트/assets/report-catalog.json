@@ -1,5 +1,25 @@
 [
   {
+    "title": "드래그 표시선을 화면 좌표의2D Canvas 선으로 수정",
+    "summary": "3D 경계·고도 계산을 사용하던 표시선을 씬 Canvas의2D 선과 화살촉으로 교체했습니다. 독립127개와 컴파일·씬 검사는 통과했으며 실제 화면 검증은 미실행입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-bug-20261106160428757-v1.0.0.html",
+    "date": "2026-11-06T16:04:28.757Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "화면 좌표의 2D 드래그 방향선",
+    "summary": "3D 프리뷰를 제거하고 씬 Canvas의2D 선·화살표를 포인터에 연결",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106160427143-v1.0.0.html",
+    "date": "2026-11-06T16:04:27.143Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "드래그 방향으로 화면 밖 통과 비행과 폭격기·도시 성장 레벨",
     "summary": "드래그 길이 대신 방향으로 화면을 통과하는 진입·폭격·이탈 경로를 연결했습니다. 폭격기 피해 레벨과 도시 성장 속도/새 건물 가치 레벨을 추가했고 독립122개 검사는 통과했습니다.",
     "project": "growingcity",
