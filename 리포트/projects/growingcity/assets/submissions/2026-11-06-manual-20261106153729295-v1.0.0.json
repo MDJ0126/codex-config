@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "화면 밖 통과 비행과 폭격기·도시 성장 레벨",
+    "summary": "드래그 방향으로 화면 밖 진입·이탈, 폭격기 피해 레벨과 성장 속도/새 건물 가치 레벨",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 프러스텀 교차·비행기 화면 밖 출입·가시성·방향·상점 클릭·전후 화면·Play 미검증. 사용자 GUI·컴퓨터 유즈 금지 조건 준수",
+    "outcome": "방향 비행·폭격기/성장 레벨 구현과 독립122개·참조 컴파일·씬 검사 완료, 실제 Play 미실행",
+    "proposedTime": "15~25분",
+    "actualTime": "시작2026-11-07 00:20:53 KST. 구현·독립 검사는 이 메뉴얼 생성 시점 완료, 실제 Play와 공개 확인 별도.",
+    "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "directional-bomber-city-levels",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "드래그 방향으로 화면 밖 진입·이탈, 폭격기 피해 레벨과 성장 속도/새 건물 가치 레벨",
+    "completionCriteria": "방향·사각형 경계·출격 시점 수치·새 강화 구매/잔액/상한/성장 시간/가치·리셋 검사, 씬 UI 참조·컴파일·원본 보존. 실제 Play는 GUI 제한으로 미실행 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "방향 비행·레벨 코어",
+        "action": "경계 교차 방향과 새 강화 구매·성장·가치 구현",
+        "expected": "구현과 실제 검증 범위 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "독립122개·Runtime/Editor 컴파일·씬 참조 검사 통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "런타임·씬 구매 버튼 연결",
+        "action": "화면 밖 경유점·출격 수치 고정·씬 UI 이벤트 저장",
+        "expected": "구현과 실제 검증 범위 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "독립122개·Runtime/Editor 컴파일·씬 참조 검사 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "컴파일·회귀·공개 보고",
+        "action": "독립·컴파일·씬·원본 검사와 실제 Play 제한 보고",
+        "expected": "구현과 실제 검증 범위 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "독립·컴파일·씬·원본 검사 통과, 실제 Play/전후 화면 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T15:37:27.288Z",
+        "summary": "순수 경계·레벨 실행 검사와 실제 Unity Play 미실행 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립122개·Runtime/Editor 컴파일·씬 참조 검사 통과",
+            "evidence": "QA/DirectionLevels/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "독립122개·Runtime/Editor 컴파일·씬 참조 검사 통과",
+            "evidence": "QA/DirectionLevels/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "독립·컴파일·씬·원본 검사 통과, 실제 Play/전후 화면 미실행",
+            "evidence": "QA/DirectionLevels/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
