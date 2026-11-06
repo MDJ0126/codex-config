@@ -1,5 +1,25 @@
 [
   {
+    "title": "건물 조합으로 성장하는 도시와 현재 발전도",
+    "summary": "주택 조합 진화·상업 단지·내부 도로 변화를 구현하고 왼쪽 위 발전도를 현재 생존 건물 기준으로 연결했습니다. 독립47개 검사는 통과했으며 실제 화면은 미검증입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106095524361-v1.0.0.html",
+    "date": "2026-11-06T09:55:24.361Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "건물 진화·연결 단지·도시 발전도",
+    "summary": "인접 조합으로 다중 구역 건물과 단지를 만들고 현재 도시 발전도를 계산합니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106095523832-v1.0.0.html",
+    "date": "2026-11-06T09:55:23.832Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Unity UI 폰트·정적 설정의 씬 저장 원칙 통합",
     "summary": "기존 Unity UI 항목을 강화해 런타임 폰트 할당과 UI 생성 도구 재실행에 의한 설정 덮어쓰기를 금지했습니다.",
     "project": "codex-config",
