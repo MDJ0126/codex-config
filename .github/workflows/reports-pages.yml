@@ -33,42 +33,12 @@ jobs:
         id: pages_artifact
         with:
           path: 리포트/.site
+          name: report-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Deploy
         id: deployment
-        uses: actions/github-script@v7
-        env:
-          PAGES_ARTIFACT_ID: ${{ steps.pages_artifact.outputs.artifact_id }}
+        uses: actions/deploy-pages@v5.0.1
         with:
-          script: |
-            // Use the upload result directly: name lookup returned zero, then duplicate artifacts on retry.
-            const artifactId = Number(process.env.PAGES_ARTIFACT_ID);
-            if (!Number.isSafeInteger(artifactId) || artifactId <= 0) throw new Error('Invalid Pages upload artifact ID');
-            const oidcToken = await core.getIDToken();
-            const { data: deployment } = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
-              ...context.repo, artifact_id: artifactId, pages_build_version: context.sha, oidc_token: oidcToken
-            });
-            core.setOutput('page_url', deployment.page_url);
-            // The Pages API explicitly supports the build commit SHA as its lookup key.
-            // Use the exact value sent to pages_build_version for status and cancellation.
-            const deploymentId = context.sha;
-            const terminal = new Set(['deployment_failed', 'deployment_perms_error', 'deployment_content_failed', 'deployment_cancelled', 'deployment_lost']);
-            const deadline = Date.now() + 600000;
-            let errors = 0;
-            while (Date.now() < deadline) {
-              await new Promise(resolve => setTimeout(resolve, 5000));
-              let status;
-              try {
-                const response = await github.request('GET /repos/{owner}/{repo}/pages/deployments/{deploymentId}', { ...context.repo, deploymentId });
-                status = response.data.status;
-                errors = 0;
-              } catch (error) {
-                if (++errors >= 10) throw error;
-                core.warning('Pages status request failed; retrying');
-                continue;
-              }
-              core.info(`Pages deployment status: ${status}`);
-              if (status === 'succeed') return;
-              if (terminal.has(status)) throw new Error(`Pages deployment failed: ${status}`);
-            }
-            await github.request('POST /repos/{owner}/{repo}/pages/deployments/{deploymentId}/cancel', { ...context.repo, deploymentId });
-            throw new Error('Pages deployment timed out');
+          artifact_name: report-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          timeout: 600000
+      - name: Verify public reports and assets
+        run: node 리포트/verify-public.mjs

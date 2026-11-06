@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "bug",
+    "title": "중앙 아카이브 Pages 배포 복구와 공개 본문 검증",
+    "summary": "자체 Pages 배포 코드를 공식 v5.0.1 액션과 회차별 고유 산출물 이름으로 교체하고 공개 HTML/첨부의 실제 바이트 검증을 추가했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "GitHub Actions / GitHub Pages / Node24",
+    "steps": "GrowingCity 결과 보고서 푸시 후 실행42267356845와42268488536(2회)에서 검사/포장/업로드 성공 뒤 Deploy 실패. 개별 HTML404를 확인.",
+    "expected": "최신 개별 보고서와9언어 문서가 중앙 공개 HTTPS에서 정상 응답",
+    "actual": "Pages API deployment_failed. 서버 상세 사유 응답은 status 하나뿐. GitHub 연결 재실행403, 기존 Git 인증의 비대화형 API 재실행201 후에도 실패.",
+    "cause": "서버가 deployment_failed 이상의 상세 원인을 제공하지 않아 최초 서버 실패의 직접 원인은 미확인입니다. 확인된 기존 구성은 응답 배포 ID 대신 커밋 SHA를 조회하고 동일 github-pages 이름으로 재실행 업로드합니다. 공식 v5.0.1 구현은 응답 ID 우선 및 갱신된 아티팩트 조회를 사용하므로 이 차이를 제거하고 실제 재배포로 검증합니다.",
+    "changes": "공식 actions/deploy-pages@v5.0.1(Node24) 사용, 업로드/배포 양쪽 산출물 이름을 report-pages-${{ github.run_id }}-${{ github.run_attempt }}로 일치. 자체 상태 조회·취소 코드를 제거했습니다. 배포 이후 verify-public.mjs가 최신5개 보고서와 직접 연결된 로컬 첨부를 공개 HTTPS에서 가져와 포장본 SHA256과 대조합니다. HTTP200이어도 오래된 내용이면 실패하고404도 통과시키지 않습니다. 게임 소스·외부 에셋은 변경하지 않았습니다.",
+    "verification": "공식 액션 action.yml·deployment.js 및 업로드 액션의 name 입력을 확인했습니다. 독립4개 검사(동일 바이트,200이지만 오래된 본문 거부,404거부,전파 지연 후 정상본문 재검사) 통과. 기존1240개 Markdown/HTML·42534개 로컬링크 검사 통과. 패키지11054파일/762252321바이트/심볼릭링크0/1GiB미만을 확인했으므로 알려진 크기·링크 제한을 원인으로 단정하지 않았습니다.\n[공식 배포 액션](https://github.com/actions/deploy-pages/blob/v5.0.1/src/internal/deployment.js) · [공식 액션 입력](https://github.com/actions/deploy-pages/blob/v5.0.1/action.yml)\n교훈: 기존 전역 공개 HTML 확인 의무를 적용하고 CI가 실제 본문까지 대조하도록 합니다. 기존 규칙과 중복되어 전역 지침 추가 없음. 실제 화면 변화 없는 배포 코드 작업으로 스크린샷은 없고 브라우저/Unity는 실행하지 않습니다.",
+    "remaining": "현재 보고서는 재배포 전 구성/검사 상태를 기록합니다. 최종 배포 성공과 공개 HTML/첨부 바이트 대조는 CI 후속 단계와 실제 네트워크 조회로 확인합니다. 최초 서버 실패의 비공개 내부 원인은 미확인입니다.",
+    "outcome": "구성 수정·독립4개 검사·기존 아카이브 검사는 통과. 재배포와 실제 공개 확인 진행.",
+    "proposedTime": "10~20분",
+    "actualTime": "시작2026-11-07 03:28:43 KST. 구성/검사 완료 후 실제 배포 검증 진행.",
+    "xerjEvidence": "XERJ 도구 미제공 — rg·현재 워크플로·공식 소스·실행 로그·API 응답 활용",
+    "priority": "high",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "review",
+    "state": "progress"
+  }
+}
