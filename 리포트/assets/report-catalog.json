@@ -1,5 +1,35 @@
 [
   {
+    "title": "파란 특수 건물·다양한 붕괴와 구조 파편",
+    "summary": "폭발성 건물 본체 전체를 파란 전용 머테리얼로 구분하고, 균일 축소 대신 측면 전도·비틀림·들림과 물리 구조 파편을 연결했습니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106190410645-v1.0.0.html",
+    "date": "2026-11-06T19:04:10.645Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "언어별 버튼·스코어 누락의 씬 연결 수정",
+    "summary": "언어별 라벨이 배경 뒤에 그려지는 순서와 실제 Text 번역 누락을 수정하고, CJK 행 높이보다 작은 표시 영역을 넓혔습니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-bug-20261106190409409-v1.0.0.html",
+    "date": "2026-11-06T19:04:09.409Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "UI 표시·파란 특수 건물·파괴 피드백",
+    "summary": "실제라벨/점수표시구성수정과파란본체·붕괴/구조파편 구현",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106190408158-v1.0.0.html",
+    "date": "2026-11-06T19:04:08.158Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "중앙 아카이브 Pages 배포 복구와 공개 본문 검증",
     "summary": "공식 Pages 액션과 회차별 고유 산출물로 전환 후 중앙 아카이브 배포 및 공개 HTML/첨부 바이트 검증에 성공했습니다.",
     "project": "codex-config",

@@ -27,3 +27,5 @@ Los originales externos Assets/polyperfect/Low Poly Epic City/ no se modifican. 
 Límites: imagen real de Unity, cambio de idioma en juego, despliegue web y equilibrio sin verificar en esta tarea. Compilar y probar la lógica no sustituye Play.
 
 [HTML](index.html)
+
+Los edificios explosivos tienen el cuerpo azul intenso; los cimientos amarillos, rojos y cian identifican el tipo. La destrucción combina caída lateral, torsión y elevación explosiva. Las secciones de fachada y escombros usan física; algunas salen de pantalla o pasan sobre tejados. Hasta 36 secciones comparten el presupuesto existente. Los efectos y el shader requieren verificación real en Play.

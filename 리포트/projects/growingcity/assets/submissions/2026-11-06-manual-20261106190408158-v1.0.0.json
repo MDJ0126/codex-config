@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "UI 표시·파란 특수 건물·파괴 피드백",
+    "summary": "실제라벨/점수표시구성수정과파란본체·붕괴/구조파편 구현",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 화면 조작 금지로 Unity/플레이어 실행·Play·씬 재열기·수정 후 캡처·실제9언어 가독성은 미검증입니다. 제공된 변경 전 화면만 원본 그대로 참고로 첨부합니다. 브라우저 렌더도 실행하지 않았습니다. 새클리핑셰이더컴파일·조각의실제외형/질감·물리충돌·붕괴/먼지/화면밖궤적·성능/밸런스는미검증입니다.",
+    "outcome": "구현·독립/정적검사완료,실제표시/Shader/Play미실행",
+    "proposedTime": "15~25분",
+    "actualTime": "시작2026-11-07 03:46:01 KST. 구현·독립/참조 검사 후 공개 배포 확인 진행. 실제 Play 미실행.",
+    "xerjEvidence": "도구 미제공 — rg·현재 소스/씬·설치 Unity 참조·독립 실행 검사",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "visual-ui-collapse-feedback-20261107",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "세사용자요청을구현하고정적/독립/참조검사및공개보고서확인",
+    "completionCriteria": "153라벨번역·배경순서·폰트영역·파란본체·3종붕괴/파편·원본보존·검사·실제화면/셰이더검증구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "실제라벨·스코어씬구성수정",
+        "action": "원본오류대조·실제Text/순서/높이수정",
+        "expected": "46/56/6오류재현및변경후0·원본보존",
+        "qa": "씬직렬화/폰트데이터·회귀·글리프검사",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제라벨153개·순서·높이정적검사통과"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "파란본체·붕괴/구조파편구현",
+        "action": "소유머테리얼·3종동작·읽기전용메시조각/물리연결",
+        "expected": "축소제거·파란전체몸체·다양한비산·상한",
+        "qa": "209시나리오·C#참조컴파일·소스/씬",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "구현/독립/참조검사통과,실제Shader렌더별도"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제표시·셰이더·전체QA",
+        "action": "문서/번역회귀·실제Play·보고서배포",
+        "expected": "실제화면비교및공개보고서확인",
+        "qa": "9언어문서/글리프·Play/Shader·공개GET",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "정적/독립검사통과,GUI금지로실제Play/Shader/후화면미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "신규피드백요청. UI버그와게임파괴연출은별도보고서로분리.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T19:04:06.612Z",
+        "summary": "209시나리오/699언어·정적UI·C#컴파일통과,실제렌더미실행",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제라벨153개·순서·높이정적검사통과",
+            "evidence": "QA/VisualFeedback/verification.json,logic-results.txt;QA/Prototype/scene-verification.json,unity-compile.txt",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "구현/독립/참조검사통과,실제Shader렌더별도",
+            "evidence": "QA/VisualFeedback/verification.json,logic-results.txt;QA/Prototype/scene-verification.json,unity-compile.txt",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "정적/독립검사통과,GUI금지로실제Play/Shader/후화면미실행",
+            "evidence": "QA/VisualFeedback/verification.json,logic-results.txt;QA/Prototype/scene-verification.json,unity-compile.txt",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

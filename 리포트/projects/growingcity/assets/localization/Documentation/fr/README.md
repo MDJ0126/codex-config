@@ -27,3 +27,5 @@ Les originaux externes Assets/polyperfect/Low Poly Epic City/ restent intacts. U
 Limites : affichage Unity, changement de langue en jeu, déploiement Web et équilibrage non vérifiés ici. La compilation et les tests indépendants ne remplacent pas un test Play.
 
 [HTML](index.html)
+
+Les bâtiments explosifs sont peints en bleu vif ; les fondations jaunes, rouges ou cyan indiquent leur type. La destruction combine basculement latéral, torsion et soulèvement explosif. Les sections de façade et petits débris suivent la physique, parfois au-dessus des toits ou hors écran. Au maximum 36 sections partagent le budget existant. Les nouveaux effets et le shader de fragments restent à vérifier dans Play.

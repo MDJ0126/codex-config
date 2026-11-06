@@ -27,3 +27,5 @@ Externe Originale unter Assets/polyperfect/Low Poly Epic City/ dürfen nicht ver
 Grenzen: Unity-Darstellung, Sprachwechsel im Spiel, Web-Bereitstellung und Balance wurden hier nicht geprüft. Kompilierung und unabhängige Tests ersetzen keinen Play-Test.
 
 [HTML](index.html)
+
+Explosive Gebäude haben nun einen leuchtend blauen Baukörper; gelbe, rote und türkise Fundamente kennzeichnen den Typ. Die Zerstörung kombiniert seitliches Kippen, verdrehten Einsturz und Explosionshub. Fassadenteile und kleine Trümmer fliegen physikalisch, teils über Dächer oder aus dem Bild. Höchstens 36 Strukturteile teilen das bestehende Trümmerbudget. Die neuen Effekte und der Fragment-Shader benötigen noch einen echten Play-Test.

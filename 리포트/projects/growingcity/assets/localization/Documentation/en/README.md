@@ -27,3 +27,5 @@ Original external assets are read-only: Assets/polyperfect/Low Poly Epic City/. 
 Current limits: actual Unity rendering, runtime language switching, browser deployment and gameplay balance remain unverified in this task. Source compilation and independent logic checks do not replace Play testing.
 
 [HTML](index.html)
+
+Volatile buildings now have a bright blue body material; yellow/red/cyan foundations identify their types. Destruction uses sideways toppling, twisting collapse and blast lift. Structural facade sections and smaller debris use physics; some pieces are aimed beyond the viewport and others arc over roofs. Up to 36 structural sections share the existing total debris budget. These new visuals and the fragment shader still require actual Play verification.
