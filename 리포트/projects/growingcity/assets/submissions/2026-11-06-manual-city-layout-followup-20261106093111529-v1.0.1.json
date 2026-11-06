@@ -1,0 +1,129 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "시제품 후속 — UI·도시 배치·지면·하늘",
+    "summary": "건물을 조밀하게 모으고 이웃 연결에 따라 도로를 회전·교체하도록 수정했습니다. 맨땅·하늘·UI 폰트 연결을 추가했으며 실제 화면 재확인은 미실행입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 Unity에서 씬 재열기·폰트 Inspector 표시·게임 글자 렌더 확인은 미실행입니다. 컴퓨터 유즈를 다시 허용받지 않은 상태이므로 이 검증까지 완료했다고 하지 않습니다. UI 배치·스타일·정적 문구는 씬에서 편집해야 합니다.",
+    "outcome": "폰트 연결을 실행 코드에서 처리하던 방식을 제거하고 City Prototype 씬의13개 Text에 실제 폰트 에셋을 직접 저장했습니다. UI는 기존 씬 오브젝트와 Inspector 버튼 이벤트를 유지합니다. 표시 문제 해결 완료는 아직 주장하지 않습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "폰트 사본·씬 저장·독립 검사 2026-11-06 18:29:12 KST, 8분 34초. 실제 표시 검증과 지침 푸시·공개 게시 확인은 별도.",
+    "xerjEvidence": "XERJ 연결 제공 없음 — rg·현재 에셋 차량 경로·독립 실행 검사로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "city-layout-followup",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "버튼 식별, 조밀한 건물, 연결 방향별 도로, 맨땅과 하늘 보완",
+    "completionCriteria": "코드·씬 수정과 독립 검사 후 실제 화면·도로 접합·폰트·지면·하늘 검증을 구분",
+    "previousManual": "projects/growingcity/reports/2026-11-06-manual-20261106090531413-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "버튼 글자 보완",
+        "action": "실제 TTF 사본의 Font 참조를 씬 Text13개에 직접 저장하고 런타임 폰트 코드·UI 생성 도구 제거",
+        "expected": "요청한 표시·동작과 확인 가능한 근거",
+        "qa": "독립 로직·참조 컴파일·씬 검사, 실제 Unity 화면은 별도",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 2,
+        "result": "씬 저장·재읽기13개 참조와54종 글리프 검사 통과. 실제 UI 표시 재확인 미실행"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "밀집 배치와 도로 방향",
+        "action": "현재 씬·원본 참조를 확인하고 프로젝트 소유 코드·씬에서 수정",
+        "expected": "요청한 표시·동작과 확인 가능한 근거",
+        "qa": "독립 로직·참조 컴파일·씬 검사, 실제 Unity 화면은 별도",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "구현과 독립 검사 완료, 실제 화면 QA 미실행"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "맨땅·하늘과 카메라",
+        "action": "현재 씬·원본 참조를 확인하고 프로젝트 소유 코드·씬에서 수정",
+        "expected": "요청한 표시·동작과 확인 가능한 근거",
+        "qa": "독립 로직·참조 컴파일·씬 검사, 실제 Unity 화면은 별도",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "구현과 독립 검사 완료, 실제 화면 QA 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "폰트 미표시가 계속되어 사용자 요청에 따라 런타임 연결을 제거하고 폰트를 씬에 직접 저장. 기존 UI 항목에 원칙 통합",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T18:05:19.2578559+09:00",
+        "summary": "구현·독립 검사와 실제 화면 미실행을 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "코드·씬 정적 검사와 독립 검사는 통과했으나 실제 화면 검증은 사용자 조건으로 미실행",
+            "evidence": "QA/CityLayout/logic-results.txt 및 QA/Prototype/{scene-verification.json,unity-compile.txt,editor-compile.txt}",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "코드·씬 정적 검사와 독립 검사는 통과했으나 실제 화면 검증은 사용자 조건으로 미실행",
+            "evidence": "QA/CityLayout/logic-results.txt 및 QA/Prototype/{scene-verification.json,unity-compile.txt,editor-compile.txt}",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "코드·씬 정적 검사와 독립 검사는 통과했으나 실제 화면 검증은 사용자 조건으로 미실행",
+            "evidence": "QA/CityLayout/logic-results.txt 및 QA/Prototype/{scene-verification.json,unity-compile.txt,editor-compile.txt}",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-06T18:29:12.0721423+09:00",
+        "summary": "폰트 직접 저장과 코드 제거 후 독립 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "not_run",
+            "actual": "저장 참조·TTF 글리프·컴파일 통과. 실제 Unity 화면 검증 미실행",
+            "evidence": "QA/FontFix/verification.json, QA/Prototype/scene-verification.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}

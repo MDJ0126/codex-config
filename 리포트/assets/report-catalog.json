@@ -1,5 +1,35 @@
 [
   {
+    "title": "Unity UI 폰트·정적 설정의 씬 저장 원칙 통합",
+    "summary": "기존 Unity UI 항목을 강화해 런타임 폰트 할당과 UI 생성 도구 재실행에 의한 설정 덮어쓰기를 금지했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-06-result-20261106093112719-v1.0.0.html",
+    "date": "2026-11-06T09:31:12.719Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "UI 폰트를 씬에 직접 저장하고 런타임 UI 설정 제거",
+    "summary": "Text13개에 Lato TTF를 직접 연결하고 런타임 폰트 할당과 UI 생성 도구를 제거했습니다. 저장된 참조·글리프 검사는 통과했으나 실제 표시 재확인은 미실행입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106093112022-v1.0.0.html",
+    "date": "2026-11-06T09:31:12.022Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "시제품 후속 — UI·도시 배치·지면·하늘",
+    "summary": "건물을 조밀하게 모으고 이웃 연결에 따라 도로를 회전·교체하도록 수정했습니다. 맨땅·하늘·UI 폰트 연결을 추가했으며 실제 화면 재확인은 미실행입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-city-layout-followup-20261106093111529-v1.0.1.html",
+    "date": "2026-11-06T09:31:11.529Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "도시 밀집도·도로 방향·맨땅·하늘 및 버튼 글자 보완",
     "summary": "건물을 조밀하게 모으고 이웃 연결에 따라 도로를 회전·교체하도록 수정했습니다. 맨땅·하늘·UI 폰트 연결을 추가했으며 실제 화면 재확인은 미실행입니다.",
     "project": "growingcity",

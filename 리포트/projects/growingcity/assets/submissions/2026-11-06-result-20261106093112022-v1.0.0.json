@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "result",
+    "title": "UI 폰트를 씬에 직접 저장하고 런타임 UI 설정 제거",
+    "summary": "Text13개에 Lato TTF를 직접 연결하고 런타임 폰트 할당과 UI 생성 도구를 제거했습니다. 저장된 참조·글리프 검사는 통과했으나 실제 표시 재확인은 미실행입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- Assets/Settings/Fonts/Lato-Regular.ttf를 프로젝트 소유 사본으로 보관하고13개 Text의 Font 참조에 GUID를 직접 저장했습니다. Dynamic 임포트 및 Include Font Data가 설정되어 있습니다.\\n- 원본 TTF는 변경하지 않았고 OFL 라이선스를 보관했습니다. 현재 UI 영문·숫자·기호54종의 실제 글리프를 확인했습니다. 한글 UI 지원을 검증한 것은 아닙니다.\\n- CityPrototype.Start의 GetBuiltinResource 및 font 대입을 제거했습니다. UI 생성 도구 QA/Prototype/create-scene.mjs도 제거해 씬의 수동 설정을 다시 덮어쓰지 않도록 했습니다. 점수·상태 갱신과 기존 버튼 동작 연결은 유지했습니다.\\n- 프로젝트 지침에 폰트·정적 UI를 씬·프리팹에 저장하고 실행 중 덮어쓰지 않는 원칙을 기록했습니다. 전역 지침도 기존 Unity UI 항목에 통합하는 별도 설정 작업으로 처리합니다.",
+    "verification": "실제 실행한 검사: 씬 파일을 저장 후 다시 읽어13개 Font 참조가 모두 새 TTF GUID를 가리키는지 확인했습니다. TTF cmap에서 UI 문자54종 누락0개, 원본 TTF SHA-256 동일, 런타임 폰트 대입0개와 UI 생성 도구 제거를 확인했습니다.\\n\\n설치된 Unity6000.0.83f1 라이브러리를 대상으로 Runtime·Editor C# 컴파일 통과. 씬 정적 검사121개 오브젝트·243개 로컬 참조·70개 외부 참조·5개 버튼 이벤트 통과. 에셋 원본5,840개 파일 해시 변경0건.\\n\\nUnity 화면·Play·새 GUI 실행·스크린샷은 사용자의 화면 사용 조건으로 미실행입니다. 파일 재읽기를 Unity Editor 재열기나 실제 글자 표시 검증으로 보고하지 않습니다. 이전 기본 폰트 연결이 표시되지 않은 정확한 원인은 미확인입니다. 확인한 수정은 실제 프로젝트 폰트를 직렬화한 것입니다.\\n\\n교훈: 사용자가 지적한 런타임 UI 설정 금지를 기존 전역 Unity UI 규칙에 통합했습니다. 다른 작업의 미게시 전역 지침 변경은 설치본·기본 체크아웃에 그대로 보존하고 이번 규칙만 분리 게시합니다.",
+    "remaining": "실제 Unity에서 씬 재열기·폰트 Inspector 표시·게임 글자 렌더 확인은 미실행입니다. 컴퓨터 유즈를 다시 허용받지 않은 상태이므로 이 검증까지 완료했다고 하지 않습니다. UI 배치·스타일·정적 문구는 씬에서 편집해야 합니다.",
+    "outcome": "폰트 연결을 실행 코드에서 처리하던 방식을 제거하고 City Prototype 씬의13개 Text에 실제 폰트 에셋을 직접 저장했습니다. UI는 기존 씬 오브젝트와 Inspector 버튼 이벤트를 유지합니다. 표시 문제 해결 완료는 아직 주장하지 않습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "폰트 사본·씬 저장·독립 검사 2026-11-06 18:29:12 KST, 8분 34초. 실제 표시 검증과 지침 푸시·공개 게시 확인은 별도.",
+    "xerjEvidence": "제공 XERJ 연결 없음 — rg·씬 참조·TTF cmap 검사 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
