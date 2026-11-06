@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "건물 진화 연출과 발전도 증가 피드백",
+    "summary": "진화 도약·착지 링·발전도 카운트와 증가 표시, 도로 렌더링 묶음",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 컴퓨터 유즈 금지로 실제 Play·렌더링 수치·전후 화면 미검증",
+    "outcome": "구현과 독립 검사 완료, 실제 Play 연출과 렌더링 수치 미검증",
+    "proposedTime": "10~15분",
+    "actualTime": "시작2026-11-06 19:24:40 KST, 구현·독립 검사2026-11-06 19:30 KST; 공개 확인 진행 중",
+    "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "evolution-feedback",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "진화 도약·착지 링·발전도 카운트와 증가 표시, 도로 렌더링 묶음",
+    "completionCriteria": "다중 구역 점유·진화·단지·도로·발전도·파괴·재건 로직 실행 및 컴파일·씬 검사. 실제 화면과 Play 검증은 사용자 조건에 따라 미실행 구분",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "진화 연출",
+        "action": "성숙 건물 진화 시 도약·확대·착지 효과",
+        "expected": "저장된 구현과 실행 근거, 실제 화면은 미검증 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "컴파일·51개 논리·씬 정적 검사 통과; 실제 Play 미실행"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "발전도 연출과 영속 UI",
+        "action": "기존 UI 위치 유지, 증가 Text를 씬에 저장하고 동적 연출 연결",
+        "expected": "저장된 구현과 실행 근거, 실제 화면은 미검증 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "컴파일·51개 논리·씬 정적 검사 통과; 실제 Play 미실행"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "도로 렌더링 묶음과 검증",
+        "action": "원본 보존 사본·머테리얼별 도로 메시 묶음, 컴파일·회귀·공개 보고",
+        "expected": "저장된 구현과 실행 근거, 실제 화면은 미검증 구분",
+        "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "qa",
+        "revision": 1,
+        "result": "컴파일·51개 논리·씬 정적 검사 통과; 실제 Play 미실행"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T10:31:14.972Z",
+        "summary": "구현·정적 검사와 미실행 Play 측정 구분",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "51개 시나리오·컴파일·씬 저장 참조 검사 통과. 실제 화면 검증은 별도 미실행",
+            "evidence": "QA/EvolutionFeedback/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "51개 시나리오·컴파일·씬 저장 참조 검사 통과. 실제 화면 검증은 별도 미실행",
+            "evidence": "QA/EvolutionFeedback/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "도로 사본·코드·원본 보존 검사는 통과. Play 성능과 실제 표시 미실행",
+            "evidence": "QA/EvolutionFeedback/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
