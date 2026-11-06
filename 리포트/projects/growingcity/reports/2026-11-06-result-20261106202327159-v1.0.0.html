@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>GrowingCity GitHub 공개 및 WebGL Pages 실행 검증 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">성</span><span>성장하는 도시</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>GrowingCity GitHub 공개 및 WebGL Pages 실행 검증</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">소스·README·9개 언어 문서와 WebGL 빌드를 공개하고 실제 headless Chrome에서 시작·드래그 핵폭격·골드 획득을 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-06T20:23:27.159Z">2026년 11월 7일 오전 5:23 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://mdj0126.github.io/growing-city/">게임 실행</a> · <a class="report-link" href="https://github.com/MDJ0126/growing-city">GitHub 저장소</a> · <a class="report-link" href="https://mdj0126.github.io/growing-city/Documentation/">시스템 언어 다큐먼트</a></p>
+<p>공개 주소에서 실제 게임 시작과 드래그 핵폭격이 동작했습니다. 사용자 화면·기존 브라우저를 조작하지 않고 독립 headless Chrome으로 확인했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>Fantasya README의 중앙 제목·배지·문서·소개·구조·기능·환경 구성을 적용하고 실제 WebGL 스크린샷을 첨부했습니다. 다른 제품 로고는 복제하지 않았습니다.</li>
+<li>Unity 6000.0.83f1로 게임 씬을 빌드하고 gzip + decompression fallback을 적용했습니다. Pages는 고정된 33.45MB 산출물을 배포합니다. 파일별 SHA-256 목록을 포함합니다.</li>
+<li>시스템 언어 기본값과 9개 언어 문서를 보존했습니다. Actions에서 공개 파일 해시·문서·이미지를 검사합니다.</li>
+<li>공개 저장소에는 프로젝트 소유 소스·설정·OFL 폰트만 포함했습니다. 유료 Low Poly Epic City 원본은 제외하고 게임에 내장된 컴파일 결과만 게시했습니다. 소스 재빌드는 별도 구매·가져오기가 필요합니다.</li>
+<li>교훈 검토: 산출물 고정, 원본 보존, 공개 범위 분리 규칙을 적용했습니다. 기존 전역 지침과 중복되므로 추가·변경하지 않았습니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>Unity WebGL 배치 빌드 종료 코드 0. 외부 원본 5,840개 SHA-256 대조: 변경 0. 씬 직렬화·참조 검사 통과.</li>
+<li>독립 검사: 233개 시나리오 + 699개 언어·핵 쿨타임 검증 통과.</li>
+<li>로컬 및 공개 URL에서 Chrome headless, 1280×720, ko-KR, 실제 Unity ready=true. JS 예외·HTTP 오류·Unity 오류 배열 모두 0.</li>
+<li>공개 배포의 18개 산출물 SHA-256 일치. 9개 언어 HTML과 실제 화면 이미지 2개 HTTP 성공.</li>
+<li>실제 표시: 한글 버튼·발전도·골드, 파란 특수 건물 확인. 핵폭격 후 건물 감소·폐허·골드 증가·쿨타임 진행 확인.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/web-publish-20261107/gameplay.webp" alt="실행 후 — 핵폭격 전 도시와 한글 UI" loading="lazy"><figcaption>실행 후 — 핵폭격 전 도시와 한글 UI</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/web-publish-20261107/bombing.webp" alt="실행 후 — 핵폭격으로 폐허 생성, 골드 획득 및 재건" loading="lazy"><figcaption>실행 후 — 핵폭격으로 폐허 생성, 골드 획득 및 재건</figcaption></figure></p>
+<p>두 화면은 코드 수정 전후 비교가 아니라 같은 공개 빌드의 실제 플레이 상태 비교입니다. 이번 작업 이전의 WebGL 배포 화면은 없었습니다. 원본 캡처를 편집하지 않았으며 각 200KB 이하입니다.</p>
+<p>초기 headless 검사는 Chrome 실행 제한으로 실패했으나 승인된 실행 권한으로 복구했습니다. 이후 첫 실행의 favicon 404를 로딩 페이지의 빈 아이콘 선언으로 수정하고 재검증했습니다. 출격 입력은 프레임 간격을 두어 실제 실행을 검증했습니다. 검증용 Chrome·빌드 Unity 프로세스는 종료 확인했고 기존 사용자 앱은 보존했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>요청한 소스 공개·README·Pages 실행은 완료했습니다. 모든 브라우저·모바일 실기기 성능, 전체 언어의 모든 플레이 상태, 장시간 밸런스는 이번 검증 범위가 아닙니다. 도시 저장 기능은 없습니다. 공식 로고 원본 미확인으로 중앙 프로젝트 logo:null을 유지했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 30~50분 (시작 2026-11-07 04:56:30 KST)</li>
+<li>실제로 완료된 시간: 게임 구현·공개 실행 확인: 26분 55초, 2026-11-07 05:23:24 KST. 중앙 보고서 게시·접근 확인은 후속 배포 단계입니다.</li>
+<li>XERJ: 미사용 — XERJ 연결 도구가 제공되지 않아 rg와 현재 소스·실행 결과로 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-06-result-20261106202327159-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=growingcity&topic=qa&relatedReport=projects%2Fgrowingcity%2Freports%2F2026-11-06-result-20261106202327159-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=growingcity">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=growingcity">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

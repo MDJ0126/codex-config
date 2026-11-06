@@ -1,5 +1,25 @@
 [
   {
+    "title": "GrowingCity GitHub 공개 및 WebGL Pages 실행 검증",
+    "summary": "소스·README·9개 언어 문서와 WebGL 빌드를 공개하고 실제 headless Chrome에서 시작·드래그 핵폭격·골드 획득을 확인했습니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106202327159-v1.0.0.html",
+    "date": "2026-11-06T20:23:27.159Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "GrowingCity 소스·문서·WebGL 공개 실행 메뉴얼",
+    "summary": "상용 원본 보존부터 WebGL 실제 플레이와 공개 해시 대조까지 실행한 절차입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106202326021-v1.0.0.html",
+    "date": "2026-11-06T20:23:26.021Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "초기 도시·분산4칸 성장·유한 지도·후반 고레벨 건설",
     "summary": "시작96칸을미리채우고중심거리순대신여러가장자리에서4칸씩성장하며24×24영역안에서후반고레벨신축/재건이이어지도록변경했습니다.",
     "project": "growingcity",

@@ -1,0 +1,136 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "manual",
+    "title": "GrowingCity 소스·문서·WebGL 공개 실행 메뉴얼",
+    "summary": "상용 원본 보존부터 WebGL 실제 플레이와 공개 해시 대조까지 실행한 절차입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "게임 요청 범위 잔여 없음. 중앙 아카이브 배포 확인은 보고서 게시 절차에서 이어서 수행합니다.",
+    "outcome": "게임 소스·문서·배포와 실제 실행 QA를 완료했습니다. 이 메뉴얼은 실행 결과를 취합해 등록하며 작업 시작 시 선등록하지 못한 절차상 누락을 명시합니다.",
+    "proposedTime": "30~50분 (시작 2026-11-07 04:56:30 KST)",
+    "actualTime": "게임 구현·공개 실행 확인: 26분 55초, 2026-11-07 05:23:24 KST. 중앙 보고서 게시·접근 확인은 후속 배포 단계입니다.",
+    "xerjEvidence": "XERJ 연결 도구가 제공되지 않아 rg와 현재 소스·실행 결과로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "growingcity-web-publish",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "지정 GitHub 저장소에 소스와 README를 올리고 GitHub Pages에서 실행되게 합니다.",
+    "completionCriteria": "상용 원본 보존, 소스 푸시, 참고 프로젝트와 README 구조 일치, WebGL 빌드, 공개 실제 게임 실행 및 리소스 해시 일치",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공개 범위와 README 준비",
+        "action": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토",
+        "expected": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토",
+        "qa": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Unity WebGL 빌드와 원본 보존",
+        "action": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과",
+        "expected": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과",
+        "qa": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "실제 브라우저 동작 검증",
+        "action": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처",
+        "expected": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처",
+        "qa": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "GitHub 및 Pages 배포",
+        "action": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공",
+        "expected": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공",
+        "qa": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-06T20:23:24.644Z",
+        "summary": "각 완료 기준의 실제 결과 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토",
+            "evidence": "README 구조를 Fantasya와 대조, 원본·캐시 제외와 공개 스테이징 292개 검토",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과",
+            "evidence": "Unity 종료 코드0, 원본5840개 변경0, 독립검사932개 통과",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처",
+            "evidence": "로컬·공개 ready=true, 오류0, 실제 핵폭격 후 골드·폐허 캡처",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공",
+            "evidence": "origin/main 푸시 성공, 공개 파일18개 해시 일치·언어9종·이미지2개 성공",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
