@@ -1,5 +1,25 @@
 [
   {
+    "title": "초당 투하·V자 편대·대공 미사일과 고정50% 연속 출격",
+    "summary": "기체당 기본1발/초, V자 편대, 건물 대공 미사일과 기체 생존 강화를 구현했습니다. 도착1대당 고정50% 출격분을 누적하며 독립161개 검사는 통과했습니다. 실제 Play는 미검증입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106165227814-v1.0.0.html",
+    "date": "2026-11-06T16:52:27.814Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "초당 투하 속도·폭발 반경·V자 기체 편대",
+    "summary": "초당1발/기체·투하 속도와 V 편대·넓은 폭발 반경·레벨별 제한 추적 미사일·기체 체력/방어/속도·도착당 고정50% 출격 회복",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106165226165-v1.0.0.html",
+    "date": "2026-11-06T16:52:26.165Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "드래그 표시선을 화면 좌표의2D Canvas 선으로 수정",
     "summary": "3D 경계·고도 계산을 사용하던 표시선을 씬 Canvas의2D 선과 화살촉으로 교체했습니다. 독립127개와 컴파일·씬 검사는 통과했으며 실제 화면 검증은 미실행입니다.",
     "project": "growingcity",
