@@ -1,5 +1,136 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106193014739-v1.0.0.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106193014739-v1.0.0.md",
+    "date": "2026-11-06T19:30:14.739Z",
+    "version": "v1.0.0",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "prepared-scattered-bounded-city-20261107",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "초기 도시·분산4칸 성장·유한 지도·후반 고레벨 건설",
+      "summary": "시작96칸을미리채우고중심거리순대신여러가장자리에서4칸씩성장하며24×24영역안에서후반고레벨신축/재건이이어지도록변경했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제UnityPlay에서초기카메라/도시모양·4칸동시등장·지도끝·후반고레벨·성능/밸런스·웹플레이·씬재열기·전후캡처는사용자GUI금지로미검증입니다. 576칸은프로파일링전의초기튜닝값입니다.",
+      "outcome": "구현·독립233개/언어699개·참조컴파일·씬/원본검사완료. 실제Play미검증.",
+      "proposedTime": "10~15분",
+      "actualTime": "시작2026-11-07 04:18:34 KST. 구현/독립검사후중앙보고서배포확인진행. 실제Play미실행.",
+      "xerjEvidence": "도구 미제공 — rg·현재 소스/씬·설치 Unity 참조·독립 실행 검사",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "prepared-scattered-bounded-city-20261107",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "시작96칸을미리채우고중심거리순대신여러가장자리에서4칸씩성장하며24×24영역안에서후반고레벨신축/재건이이어지도록변경했습니다.",
+      "completionCriteria": "초기96/배치4/지도24×24/후반레벨/재건·독립/컴파일/원본보존과실제Play상태구분",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "준비된도시·분산배치·경계",
+          "action": "96칸초기채움/4칸분산/24경계/카메라초기화",
+          "expected": "시작점유·분산·576상한·재건·보상0",
+          "qa": "독립성장/경계/연결/재건검사",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "신규24개포함233시나리오통과"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "후반고레벨과네이티브연결",
+          "action": "시간기반출생단계·씬96/24/4·9언어메시지/문서",
+          "expected": "초반기본/후반2~3레벨신축재건·UI유지",
+          "qa": "모델/소스·씬·폰트/언어·C#컴파일",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "233시나리오/699assertion·참조컴파일·씬통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제도시/지도/후반QA·공개보고",
+          "action": "실제Play·성능·후화면·보고서배포확인",
+          "expected": "사용자화면/동작및중앙공개본문확인",
+          "qa": "UnityPlay·전후화면·공개GET/본문",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "GUI금지로실제Play/성능/후화면미실행,정적검사완료"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "사용자성장변경요청과후속고레벨직접생성요청을같은성장작업으로반영.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T19:30:13.324Z",
+          "summary": "구현·독립233개/언어699개·참조컴파일·씬/원본검사완료. 실제Play미검증.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "신규24개포함233시나리오통과",
+              "evidence": "QA/CityGrowth/logic-results.txt,verify.mjs;QA/Prototype/scene-verification.json,unity-compile.txt",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "233시나리오/699assertion·참조컴파일·씬통과",
+              "evidence": "QA/CityGrowth/logic-results.txt,verify.mjs;QA/Prototype/scene-verification.json,unity-compile.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "GUI금지로실제Play/성능/후화면미실행,정적검사완료",
+              "evidence": "QA/CityGrowth/logic-results.txt,verify.mjs;QA/Prototype/scene-verification.json,unity-compile.txt",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106190408158-v1.0.0.html",
     "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106190408158-v1.0.0.md",
     "date": "2026-11-06T19:04:08.158Z",

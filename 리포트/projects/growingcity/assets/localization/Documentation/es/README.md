@@ -29,3 +29,5 @@ Límites: imagen real de Unity, cambio de idioma en juego, despliegue web y equi
 [HTML](index.html)
 
 Los edificios explosivos tienen el cuerpo azul intenso; los cimientos amarillos, rojos y cian identifican el tipo. La destrucción combina caída lateral, torsión y elevación explosiva. Las secciones de fachada y escombros usan física; algunas salen de pantalla o pasan sobre tejados. Hasta 36 secciones comparten el presupuesto existente. Los efectos y el shader requieren verificación real en Play.
+
+La ciudad empieza con96 casillas ocupadas, combinaciones y edificios especiales. La simulación estándar independiente produce82 edificios. Cada ciclo añade hasta4 casillas en bordes conectados y separados mediante azar ponderado, sin ordenar por distancia al centro. El límite es24×24,576 casillas (aproximadamente384×384unidades Unity con casilla16). Al llenarse cesa la expansión, pero se reconstruye lo destruido. Entre90 y300 segundos de juego aumentan los niveles altos directos; desde300 segundos, nuevas construcciones y reconstrucciones normales tienen75% de nivel3,20% de nivel2 y5% básico. Los especiales mantienen sus reglas. Nueva ciudad reinicia el progreso.

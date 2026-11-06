@@ -13,3 +13,5 @@ External assets under `Assets/polyperfect/Low Poly Epic City/` must remain uncha
 City growth now accelerates automatically with time (up to 8x). Missiles start at building level 3. Fuel, ammunition and power facilities trigger chain explosions when destroyed.
 
 Volatile buildings use a bright blue body material. Destruction now uses multiple collapse motions and physical facade fragments. Actual Play/shader rendering remains unverified.
+
+Prepared city:96 cells; growth batches:4; bounded24×24 map. Advanced direct construction increases from90 to300 game seconds, including reconstruction.
