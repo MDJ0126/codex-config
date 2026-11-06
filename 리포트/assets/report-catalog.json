@@ -1,5 +1,25 @@
 [
   {
+    "title": "골드 획득 HUD·단계별 체력·피격과 건물 파괴 피드백",
+    "summary": "골드 획득량 HUD, 진화당1.5배 체력과 점유 축소 퇴화, 빨간 피격·건물 흔들림·카메라 셰이크·폭발을 연결했습니다. 독립83개 검사는 통과했으며 실제 Play는 미검증입니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-result-20261106142214133-v1.0.0.html",
+    "date": "2026-11-06T14:22:14.133Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "골드 보상 HUD·단계별 체력·피격과 폭발 연출",
+    "summary": "골드 획득 HUD, 진화당1.5배 체력과 퇴화, 피격 빨강·건물 흔들림·카메라 셰이크와 건물 폭발",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106142212485-v1.0.0.html",
+    "date": "2026-11-06T14:22:12.485Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "드래그 경로를 따라 비행기가 순차 폭격",
     "summary": "원클릭 공격을 드래그 경로 지정과 항공기 순차 폭격으로 바꿨습니다. 경로 예고·낙하·착탄을 기존 파괴와 점수에 연결했으며 독립64개 검사는 통과했습니다. 실제 Play는 미검증입니다.",
     "project": "growingcity",
