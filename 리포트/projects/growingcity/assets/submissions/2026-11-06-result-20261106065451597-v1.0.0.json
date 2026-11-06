@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "result",
+    "title": "성장하는 도시 — 자동 성장·파괴·재건 게임 시장조사",
+    "summary": "성장하는 세계를 파괴하는 수요와 자동 재건 선행 사례를 확인했습니다. 현대 도시의 일상·파괴·복구 연출에 집중하는 방향을 제안합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "| 비교작 | 공식 자료로 확인한 경험 | 본 프로젝트와의 관계 |\n| --- | --- | --- |\n| [WorldBox](https://store.steampowered.com/app/1206560/WorldBox__God_Simulator/) | 문명이 왕국을 만들고 영토를 확장하며, 플레이어가 핵·번개·토네이도 등을 사용 | 핵심 개념에 가까운 선행작. 판타지 픽셀 세계와 현대 3D 도시의 차이 |\n| [City Smash](https://play.google.com/store/apps/details?id=com.paradyme.citysmash) | 도시를 여러 무기와 재해로 파괴하는 샌드박스 | 파괴 도구와 즉각적인 반응의 기준. 자동 성장·연속 재건은 소개문에서 미확인 |\n| [City Smash 2](https://play.google.com/store/apps/details?id=com.paradyme.citysmash2) | 건물 붕괴·잔해·시민과 차량, 확대·축소, 즉시 리셋 | 가장 직접적인 도시 파괴 경쟁작. 소개문은 자동 재건보다 리셋을 설명 |\n| [Nuke a City!](https://www.roblox.com/games/76506771700642/Nuke-a-City) | 핵폭발·구조 붕괴·화재·재건과 파괴 보상·업그레이드 | 재건 반복까지 겹치는 직접적인 개념 선행 사례. 실제 품질·이용 규모는 미확인 |\n| [City Destruction: Sandbox](https://play.google.com/store/apps/details?id=com.wilson.citydestructionsimulator) | 도로 생성·건물·교통 구성 뒤 무기·재해로 파괴하고 리셋 | 살아 있는 도시의 생성과 파괴가 겹침. 자동으로 빈자리를 메우는지 미확인 |\n| [Townscaper](https://store.steampowered.com/app/1291340/Townscaper/) | 사용자가 놓은 블록을 알고리즘이 집·계단·아치·정원으로 연결 | 자연스러운 도시 형성과 보는 즐거움의 기준. 스스로 확장하는 도시나 재해 게임으로 확인한 것은 아님 |\n| [Kaboom Town](https://www.crazygames.com/game/kaboom-town) | 브라우저에서 건물 파괴, 코인, 무기·도시 확장 | 웹에서도 도시 파괴 경쟁작 존재. 자동 성장·재건은 미확인 |\n\n제안: 무기 개수 경쟁보다 평온한 도시의 생활음과 사람·차량, 충격파와 연쇄 붕괴, 잔해 정리와 도로·건물의 단계적 복구를 한 흐름으로 만드십시오. 핵폭발 한 번보다 ‘내가 만든 빈자리를 세상이 어떻게 회복하는가’를 반복해서 보게 만드는 것이 후보 차별점입니다.",
+    "verification": "2026-11-06 KST 공식 Steam·Google Play·Roblox·CrazyGames 상품 페이지를 직접 열어 소개문과 공개 지표를 확인했습니다. 게임을 설치하거나 직접 플레이하지 않은 문헌 조사입니다.\n\n시장 신호: City Smash는 Google Play 1,000만+ 다운로드, City Smash 2는 500만+ 다운로드로 표시됩니다. 이는 Android 누적 다운로드 구간이며 유료 구매자·활성 사용자·매출을 의미하지 않습니다. WorldBox는 확인한 Steam 영어 리뷰 30,149개 중 96% 긍정, Townscaper는 영어 리뷰 10,641개 중 95% 긍정으로 표시됩니다. 언어별 리뷰 범위와 조회 시점에 따라 값이 달라집니다. 이 수치는 인접 장르의 수요를 보여주지만 본 기획이나 웹 수익성을 보장하지 않습니다.\n\nNuke a City! 공식 설명은 재건과 크레이터 회복을 명시하지만 조회 페이지에는 실행 중인 체험이 없다고 표시되어, 현재 플레이 가능 여부·활성 규모·실제 완성도는 검증하지 못했습니다. City Destruction: Sandbox 역시 상품 소개와 실제 품질을 동일시하지 않았습니다.\n\n프로젝트 코드는 수정하지 않았으며 실행 화면이 없는 조사이므로 프로젝트 스크린샷은 만들지 않았습니다. 교훈 검토: 기존의 ‘확인한 사실과 미확인을 구분’하는 지침으로 충분하여 전역 지침 변경 없음.",
+    "remaining": "미확인: 각 게임의 실제 자동 복구 동작과 속도, 세션 유지율, 수익, 웹 광고 수익성, 사용 에셋의 파괴용 구조. 다음 검증은 WorldBox·City Smash 2의 실제 플레이 비교와 작은 웹 시제품 사용자 테스트입니다.\n\n시제품에서는 첫 파괴까지 걸린 시간, 파괴 후 재건을 끝까지 본 비율, 두 번째 파괴 비율, 5분 뒤 잔존 여부, 일반 PC·모바일에서 파괴 순간 프레임 저하를 관찰하십시오. 합격 수치는 아직 근거가 없으므로 정하지 않았습니다.\n\n로고 원본 미확인으로 프로젝트 등록은 logo:null을 사용합니다. 본 문서의 조사 완료는 게임 구현이나 플레이 검증 완료를 뜻하지 않습니다.",
+    "outcome": "비슷한 프로젝트가 존재합니다. 특히 WorldBox는 자율적으로 발전하는 문명과 재해 개입을 결합하고, Nuke a City!는 핵폭발 후 도시가 재건된다고 공식 소개에 명시합니다. 따라서 자동 재건 자체를 독창성으로 주장할 수 없습니다.\n\n본 프로젝트의 후보 포지션은 ‘스스로 자라는 현대 도시를 구경하다 원하는 곳을 파괴하고, 상처가 메워지는 과정을 계속 즐기는 웹 장난감’입니다. 이는 조사에 근거한 기획 제안이며 시장 성공이 검증된 결론은 아닙니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "조사 시작 2026-11-06 15:51:51 KST. 본문 조사 및 출처 대조 완료 시각은 게시 직전 기록합니다.",
+    "xerjEvidence": "코드 검색 불필요 — 공개 상품 자료 시장조사",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "검토",
+    "state": "complete"
+  }
+}

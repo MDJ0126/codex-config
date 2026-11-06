@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106065451046-v1.0.0.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106065451046-v1.0.0.md",
+    "date": "2026-11-06T06:54:51.046Z",
+    "version": "v1.0.0",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "city-market-research",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "도시 성장·파괴·재건 시장조사 메뉴얼",
+      "summary": "공식 상품 자료로 유사작과 시장 신호를 확인하고 미확인을 구분합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 플레이·수익성 검증은 이번 문헌 조사 범위 밖이며 결과 보고서에 명시",
+      "outcome": "공식 출처 비교를 수행했습니다. 공개 게시 검증은 결과 보고서와 함께 진행합니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "2026-11-06 15:51:51~15:54:12 KST, 조사 근거 대조 2분 21초. 게시 검증 별도 진행.",
+      "xerjEvidence": "코드 검색 불필요",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "city-market-research",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "자동 성장·지정 위치 파괴·재건 기획의 유사작과 차별화 후보 조사",
+      "completionCriteria": "공식 출처의 기능과 공개 지표를 대조하고 미확인과 기획 제안을 구분",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공식 자료 시장조사",
+          "action": "Steam·Google Play·Roblox·웹 게임 공식 페이지를 열어 비교",
+          "expected": "직접 유사작과 인접 사례, 지표 범위, 미확인을 기록",
+          "qa": "각 주장에 연결한 공식 소개문을 다시 읽고 실제 플레이 여부 구분",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "7개 비교작과 공개 지표를 결과 JSON에 기록"
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T15:54:12+09:00",
+          "summary": "공식 소개문과 주장 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "WorldBox 문명 확장·재해, Nuke a City 재건 명시, City Smash 2 리셋 명시와 각각 대조",
+              "evidence": "https://store.steampowered.com/app/1206560/WorldBox__God_Simulator/ 및 결과 JSON의 7개 공식 URL",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/pixora/reports/2026-11-05-manual-pixora-studio-101-ready-20261105233541224-v1.0.3.html",
     "postPath": "projects/pixora/posts/2026-11-05-manual-pixora-studio-101-ready-20261105233541224-v1.0.3.md",
     "date": "2026-11-05T23:35:41.224Z",
