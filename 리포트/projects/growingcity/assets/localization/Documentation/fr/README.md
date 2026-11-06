@@ -8,7 +8,9 @@ Ouvrez Assets/Scenes/City Prototype.unity avec Unity 6000.0.83f1 et URP 17.0.4. 
 
 Tracez une direction sur la ville puis relâchez pour lancer la formation. Les avions traversent tout l’écran depuis l’extérieur. 1 : bombe, 2 : nucléaire, Espace : pause/reprise, Échap : annuler.
 
-Chaque avion commence à une bombe par seconde. Améliorez cadence, capacité, rayon, dégâts, formation, vitesse, blindage et résistance. La croissance accélère les nouvelles constructions. Les améliorations concernent les prochains vols ou bâtiments.
+Chaque avion commence à une bombe par seconde. Améliorez cadence, capacité, rayon, puissance, formation, vitesse, blindage et résistance pour les prochains vols. La croissance urbaine ne s’achète plus.
+
+La croissance accélère avec le temps de jeu : 1x au départ, 2x à 60 secondes, jusqu’à 8x à 420 secondes, affiché sur le HUD. Seuls les bâtiments de niveau 3 ou plus tirent des missiles. Chaque douzième construction est un dépôt de carburant jaune, un dépôt de munitions rouge ou une centrale cyan. Leur destruction inflige des dégâts alentour et peut déclencher une chaîne. L’or est versé une seule fois pour la chaîne ; le développement baisse et les ruines restent reconstructibles.
 
 Chaque avion arrivé ajoute exactement 50% de recharge normale. Deux arrivées donnent une utilisation, les surplus sont conservés. La recharge passive prend 10 secondes de jeu et remplit au maximum une utilisation.
 

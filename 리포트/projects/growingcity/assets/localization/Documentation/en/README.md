@@ -8,7 +8,9 @@ Open Assets/Scenes/City Prototype.unity in Unity 6000.0.83f1 with URP 17.0.4. Th
 
 Drag across the city and release to launch a formation in that direction. Aircraft fly from outside the screen to outside the screen. Keys: 1 bomb, 2 nuclear, Space pause/resume, Esc cancel drag.
 
-Each aircraft starts at one bomb per second. Upgrade drop rate, bomb capacity, blast radius, bomber damage, formation size, flight speed, armor and health. City growth upgrades speed up new construction. Upgrades apply to subsequent sorties or new buildings.
+Each aircraft starts at one bomb per second. Upgrade drop rate, capacity, blast radius, bomber power, formation size, flight speed, armor and health. Aircraft upgrades apply from the next sortie. There is no manual city growth purchase.
+
+City growth accelerates automatically with elapsed game time: 1x initially, 2x at 60 seconds, up to 8x at 420 seconds. The HUD shows the current rate. Missiles only launch from level 3 buildings or above. Every twelfth construction introduces one of three volatile types: yellow fuel depot, red ammunition depot or cyan power station. Destroying one triggers nearby damage and can detonate other special buildings. A whole chain pays gold once, includes development loss, and leaves rebuildable ruins.
 
 Every aircraft that arrives adds a fixed 50% normal sortie charge. Two arrivals provide one use; extra uses are banked. Normal passive recharge takes 10 game seconds and fills only up to one use.
 

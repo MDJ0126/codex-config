@@ -8,7 +8,9 @@ Assets/Scenes/City Prototype.unity in Unity 6000.0.83f1 mit URP 17.0.4 öffnen. 
 
 Über die Stadt ziehen und loslassen, um die Formation in diese Richtung zu starten. Flugzeuge fliegen von außerhalb des Bildes nach außerhalb. 1: Bombe, 2: Nuklear, Leertaste: Pause/Weiter, Esc: Abbruch.
 
-Anfangs wirft jedes Flugzeug eine Bombe pro Sekunde ab. Verbessere Abwurfrate, Bombenlast, Radius, Schaden, Formation, Flugtempo, Panzerung und Leben. Stadtwachstum beschleunigt Neubauten. Änderungen gelten für kommende Flüge oder Neubauten.
+Jedes Flugzeug startet mit einer Bombe pro Sekunde. Abwurfrate, Bombenlast, Radius, Schaden, Formation, Tempo, Panzerung und Leben sind verbesserbar. Flugzeugverbesserungen gelten ab dem nächsten Einsatz. Stadtwachstum wird nicht mehr gekauft.
+
+Das Wachstum beschleunigt sich automatisch mit der Spielzeit: anfangs 1x, nach 60 Sekunden 2x, nach 420 Sekunden höchstens 8x. Das HUD zeigt den Wert. Nur Gebäude ab Stufe 3 feuern Raketen. Jeder zwölfte Neubau ist ein gelbes Treibstofflager, rotes Munitionslager oder türkisfarbenes Kraftwerk. Zerstörung verursacht Umgebungsschaden und Kettenreaktionen. Gold wird einmal für die ganze Kette ausgezahlt; Entwicklung sinkt und Ruinen werden wiederaufgebaut.
 
 Jedes angekommene Flugzeug gibt feste 50% normale Einsatzladung. Zwei Ankünfte erlauben einen Einsatz; Überschüsse bleiben erhalten. Passives Laden dauert 10 Spielsekunden und füllt höchstens einen Einsatz.
 

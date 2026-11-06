@@ -1,5 +1,154 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106180336451-v1.0.0.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106180336451-v1.0.0.md",
+    "date": "2026-11-06T18:03:36.451Z",
+    "version": "v1.0.0",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "automatic-growth-chain-buildings",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "자동 도시 성장·3레벨 방어·특수 건물 연쇄 폭발",
+      "summary": "수동 도시 성장 강화를 제거하고 시간 가속 성장·3레벨 이상 대공 미사일·세 종류의 폭발성 특수 건물을 연결했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "화면 조작 금지로 Unity 실행/Play·씬 재열기·실제3레벨 발사/연쇄 전투·9언어 표시·색/형상 식별성·밸런스/성능·전후 캡처·웹 플레이는 미검증입니다. 모델/색/음향/타이밍은 소스와 씬 연결까지 확인했으며 실제 체감 확인을 대신하지 않습니다.",
+      "outcome": "구현·독립188개 시나리오 및 언어699개 assertion·참조 컴파일·씬/폰트/문서 검사 통과. 실제 Play 미검증.",
+      "proposedTime": "15~25분",
+      "actualTime": "시작2026-11-07 02:52:44 KST. 구현·독립/참조 검사 완료 후 공개 배포 확인 진행. 실제 Play 미실행.",
+      "xerjEvidence": "도구 미제공 — rg·현재 소스/씬·설치 Unity 참조·독립 실행 검사",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "automatic-growth-chain-buildings",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "수동 도시 성장 강화를 제거하고 시간 가속 성장·3레벨 이상 대공 미사일·세 종류의 폭발성 특수 건물을 연결했습니다.",
+      "completionCriteria": "3레벨부터 방어·시간 성장·수동 구매 제거·3종 연쇄/단일 정산·9언어 문서·독립/컴파일/씬/원본 검사. 실제 Play는 GUI 제한으로 별도",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "시간 성장과 방어 제한",
+          "action": "수동 성장 API/씬 구매 제거·자동 성장·3레벨 게이트",
+          "expected": "성장 배율/실제 생성 빈도·레벨 경계·삭제된 구매 연결 검사",
+          "qa": "독립모델·소스/씬·컴파일",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "성장/방어/구매 제거 검사 통과"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "특수 건물과 연쇄 정산",
+          "action": "3종 생성·BFS 파동 피해·골드/축소/재건·연출 연결",
+          "expected": "연쇄3단·단일 지급·다중칸 중복 방지·재건",
+          "qa": "독립188시나리오·소스 연결·씬/원본 확인",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "독립188 시나리오 및 참조 컴파일 통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "언어/문서 및 실행 QA",
+          "action": "9언어 UI/문서 갱신·회귀·실제 Play",
+          "expected": "번역/글리프/문서·실제 표시/공중전 체감 확인",
+          "qa": "699 assertion·531글리프·씬·문서JS/링크·Play",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "독립/정적 검사 통과. 실제Play·캡처는 사용자 GUI 제한으로 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "신규 사용자 요청. 기존 전체 기능 중 도시 성장 수동 구매만 제거하고 항공기 강화/핵100초/고정50%는 유지.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-06T18:03:16.012Z",
+          "summary": "재폭격 테스트 범위의 최초 기대 실패를 보존",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "반경10에 원점 생존 주택이 포함되어 보상0 기대 실패. 이미 파괴된 영역 반경5로 테스트 수정.",
+              "evidence": "QA/SpecialBuildings/SpecialChecks.cs; 도구 실행 결과",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-06T18:03:16.020Z",
+          "summary": "독립/컴파일/정적 QA 통과, 실제Play 미실행 구분",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "성장/방어/구매 제거 검사 통과",
+              "evidence": "QA/SpecialBuildings/logic-results.txt,verification.json; QA/Localization/verify-fonts.mjs; QA/Prototype/unity-compile.txt,scene-verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립188 시나리오 및 참조 컴파일 통과",
+              "evidence": "QA/SpecialBuildings/logic-results.txt,verification.json; QA/Localization/verify-fonts.mjs; QA/Prototype/unity-compile.txt,scene-verification.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "독립/정적 검사 통과. 실제Play·캡처는 사용자 GUI 제한으로 미실행",
+              "evidence": "QA/SpecialBuildings/logic-results.txt,verification.json; QA/Localization/verify-fonts.mjs; QA/Prototype/unity-compile.txt,scene-verification.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106174221828-v1.0.0.html",
     "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106174221828-v1.0.0.md",
     "date": "2026-11-06T17:42:21.828Z",

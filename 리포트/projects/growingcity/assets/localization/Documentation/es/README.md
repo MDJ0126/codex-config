@@ -8,7 +8,9 @@ Abra Assets/Scenes/City Prototype.unity en Unity 6000.0.83f1 con URP 17.0.4. Es 
 
 Arrastre sobre la ciudad y suelte para enviar la formación en esa dirección. Los aviones entran y salen fuera de la pantalla. 1: bomba, 2: nuclear, Espacio: pausa/continuar, Esc: cancelar.
 
-Cada avión empieza con una bomba por segundo. Mejore cadencia, capacidad, radio, daño, formación, velocidad, blindaje y vida. El crecimiento acelera las construcciones nuevas. Las mejoras se aplican a próximos vuelos o edificios nuevos.
+Cada avión empieza con una bomba por segundo. Mejore cadencia, capacidad, radio, potencia, formación, velocidad, blindaje y vida para el próximo vuelo. El crecimiento urbano ya no se compra.
+
+El crecimiento acelera con el tiempo de juego: 1x al inicio, 2x a los 60 segundos y máximo 8x a los 420 segundos, indicado en el HUD. Solo edificios de nivel 3 o superior disparan misiles. Cada duodécima construcción es un depósito de combustible amarillo, municiones rojo o central cian. Destruirlos causa daño cercano y reacciones en cadena. El oro se paga una vez por toda la cadena; baja el desarrollo y quedan ruinas reconstruibles.
 
 Cada avión que llega añade un 50% fijo de carga normal. Dos llegadas dan un uso; el excedente se guarda. La recarga pasiva tarda 10 segundos de juego y llena como máximo un uso.
 

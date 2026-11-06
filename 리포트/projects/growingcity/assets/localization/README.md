@@ -9,3 +9,5 @@ Unity 6000.0.83f1 / URP 17.0.4. Open `Assets/Scenes/City Prototype.unity`.
 Automatically growing city and directional bomber combat prototype. Nuclear cooldown: 100 seconds, independent of normal sortie credits.
 
 External assets under `Assets/polyperfect/Low Poly Epic City/` must remain unchanged. Actual Play and browser deployment require separate verification.
+
+City growth now accelerates automatically with time (up to 8x). Missiles start at building level 3. Fuel, ammunition and power facilities trigger chain explosions when destroyed.
