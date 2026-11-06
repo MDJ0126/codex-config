@@ -1,5 +1,170 @@
 [
   {
+    "reportPath": "projects/codex-config/reports/2026-11-06-manual-pages-repair-growingcity-20261107-20261106184150426-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-06-manual-pages-repair-growingcity-20261107-20261106184150426-v1.0.1.md",
+    "date": "2026-11-06T18:41:50.426Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "pages-repair-growingcity-20261107",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "중앙 아카이브 Pages 배포 복구와 공개 본문 검증",
+      "summary": "자체 Pages 배포 코드를 공식 v5.0.1 액션과 회차별 고유 산출물 이름으로 교체하고 공개 HTML/첨부의 실제 바이트 검증을 추가했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "배포·공개 본문 검증은 완료했습니다. 최초 서버의 비공개 실패 사유는 여전히 미확인입니다. 브라우저 시각 렌더와 Unity Play는 이번 배포 복구 범위에서 실행하지 않았습니다.",
+      "outcome": "Actions42272026120 성공. 공개32개 보고서/첨부 HTTP200·포장본 SHA256 일치,9언어18문서 본문 확인.",
+      "proposedTime": "10~20분",
+      "actualTime": "시작2026-11-07 03:28:43 KST. 배포 및 공개검증 성공03:36:50 KST(CI),9언어 본문 추가 확인 완료. 최종 기록 재배포 확인은 별도 진행.",
+      "xerjEvidence": "XERJ 도구 미제공 — rg·현재 워크플로·공식 소스·실행 로그·API 응답 활용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pages-repair-growingcity-20261107",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "중앙 아카이브 배포를 복구하고 GrowingCity 개별 HTML과 문서 공개를 검증",
+      "completionCriteria": "로그/설정/산출물 대조·배포 복구·공개 HTML200 및 본문/첨부 확인",
+      "previousManual": "projects/codex-config/reports/2026-11-06-manual-20261106183351041-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "실패 근거 대조",
+          "action": "실패/성공 로그·API·공식 액션·포장본 대조",
+          "expected": "확인된 구성과 미확인 서버 원인 구분",
+          "qa": "실제 로그/API·파일/바이트·링크 검사",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실패상태·상세없음·기존코드/공식차이·1GiB미만 확인"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "배포 경로/공개 검사 수정",
+          "action": "공식액션·고유이름·SHA256 공개 검증",
+          "expected": "공식입력일치·200 stale/404 거부",
+          "qa": "독립4건·기존 아카이브 전체 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "독립4건·기존 링크/본문 검사 통과"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "실제 재배포·개별 공개 확인",
+          "action": "명시 경로 커밋/푸시·배포·공개 보고서/문서 대조",
+          "expected": "Actions 성공·HTML/연결문서 HTTP200·실제본문 일치",
+          "qa": "CI verify-public 및 외부 실제 GET",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Actions42272026120 성공. 공개32개 보고서/첨부 HTTP200·포장본 SHA256 일치,9언어18문서 본문 확인."
+        }
+      ],
+      "focusTasks": [
+        "T03"
+      ],
+      "scopeChange": "실제 배포와 공개32개 파일·9언어18문서 검증 성공을 후속 최종QA로 기록. 기존 절차/실패/미실행 기록 보존.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T18:33:49.181Z",
+          "summary": "구성/독립 검사 통과, 실제공개는 배포후 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실패로그/API/공식소스/포장 크기 대조",
+              "evidence": "공개 Actions42267356845/42268488536; package-check.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립4건·아카이브 검사 통과",
+              "evidence": "tests/public-deployment.test.mjs",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "배포 후 실제공개 검사 예정",
+              "evidence": "워크플로 Verify public reports and assets",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-06T18:41:48.926Z",
+          "summary": "Actions42272026120 성공. 공개32개 보고서/첨부 HTTP200·포장본 SHA256 일치,9언어18문서 본문 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실패상태·상세없음·기존코드/공식차이·1GiB미만 확인",
+              "evidence": "https://github.com/MDJ0126/codex-config/actions/runs/42272026120; 공개 GET 및 문서18개 본문 대조",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립4건·기존 링크/본문 검사 통과",
+              "evidence": "https://github.com/MDJ0126/codex-config/actions/runs/42272026120; 공개 GET 및 문서18개 본문 대조",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Actions42272026120 성공. 공개32개 보고서/첨부 HTTP200·포장본 SHA256 일치,9언어18문서 본문 확인.",
+              "evidence": "https://github.com/MDJ0126/codex-config/actions/runs/42272026120; 공개 GET 및 문서18개 본문 대조",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/codex-config/reports/2026-11-06-manual-20261106183351041-v1.0.0.html",
     "postPath": "projects/codex-config/posts/2026-11-06-manual-20261106183351041-v1.0.0.md",
     "date": "2026-11-06T18:33:51.041Z",
