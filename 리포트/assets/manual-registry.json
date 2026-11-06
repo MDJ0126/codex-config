@@ -1,5 +1,138 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106174221828-v1.0.0.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106174221828-v1.0.0.md",
+    "date": "2026-11-06T17:42:21.828Z",
+    "version": "v1.0.0",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "nine-languages-nuclear-100",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "9개 언어·시스템 기본 선택·핵폭격 100초",
+      "summary": "게임 정적 UI와 동적 상태를9개 언어로 연결하고, 언어별 README/HTML 문서와 핵폭격 독립100초 쿨타임을 추가했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 Unity Play·언어 전환 가독성·씬재열기·전후 캡처·브라우저 렌더 미검증",
+      "outcome": "구현·독립 검사·참조 컴파일·씬/글리프 검사 완료. 실제 Play·화면 전환은 미검증.",
+      "proposedTime": "15~25분",
+      "actualTime": "시작2026-11-07 02:29:04 KST. 구현·독립 검증 완료 후 보고서 공개 확인 진행. 실제 Play 미실행.",
+      "xerjEvidence": "도구 미제공 — rg·현재 소스/씬·설치 Unity 참조·독립 실행 검사",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "nine-languages-nuclear-100",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "게임 정적 UI와 동적 상태를9개 언어로 연결하고, 언어별 README/HTML 문서와 핵폭격 독립100초 쿨타임을 추가했습니다.",
+      "completionCriteria": "9언어 UI·문서/README·시스템 기본·100초 핵폭격·독립/참조 컴파일/씬·폰트 검증. 실제 화면은 제한으로 별도.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "9언어 씬 UI와 시스템 언어",
+          "action": "정적 variants·동적 번역·시스템 기본·저장 선택 연결",
+          "expected": "9언어 키/폰트/참조/선택 검사",
+          "qa": "실제 소스 대역 검사·글리프·씬·컴파일",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "독립672 assertion 포함 전체 검사 통과, 실제 Unity 렌더 별도"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "README·다큐먼트9언어",
+          "action": "문서18개·자동 진입·수동 선택 저장",
+          "expected": "9언어·100초/50% 규칙·로컬 링크/스크립트 검사",
+          "qa": "실제 HTML 내장 JS와 모든링크·본문 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서18개·진입점·자동/수동선택 검사 통과, 브라우저 렌더 미검증"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "핵폭격100초와 전체 QA",
+          "action": "독립100초/일반보상 분리·정적 통합·Play 검증",
+          "expected": "100초 경계·중복 거부·일시정지·속도 독립·기존회귀 및 실제표시",
+          "qa": "독립검사·통합소스/컴파일·Unity Play",
+          "dependsOn": [
+            "T01",
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "코드/독립/정적 검사 통과. 사용자 GUI 제한으로 Play·캡처 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "신규 요청. 언어 목록은 제안 후 응답 없이 기존 목록 없음 확인하여9언어 적용.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T17:42:20.683Z",
+          "summary": "언어672·기존161·문서JS/링크·폰트/씬·컴파일 통과, 실제Play 미실행",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립672 assertion 포함 전체 검사 통과, 실제 Unity 렌더 별도",
+              "evidence": "QA/Localization/logic-results.txt, verify.mjs, verify-fonts.mjs; QA/Prototype/scene-verification.json, unity-compile.txt",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서18개·진입점·자동/수동선택 검사 통과, 브라우저 렌더 미검증",
+              "evidence": "QA/Localization/logic-results.txt, verify.mjs, verify-fonts.mjs; QA/Prototype/scene-verification.json, unity-compile.txt",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "코드/독립/정적 검사 통과. 사용자 GUI 제한으로 Play·캡처 미실행",
+              "evidence": "QA/Localization/logic-results.txt, verify.mjs, verify-fonts.mjs; QA/Prototype/scene-verification.json, unity-compile.txt",
+              "dependencies": {
+                "T01": 1,
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/growingcity/reports/2026-11-06-manual-drop-rate-v-formation-20261106171937076-v1.0.1.html",
     "postPath": "projects/growingcity/posts/2026-11-06-manual-drop-rate-v-formation-20261106171937076-v1.0.1.md",
     "date": "2026-11-06T17:19:37.076Z",
