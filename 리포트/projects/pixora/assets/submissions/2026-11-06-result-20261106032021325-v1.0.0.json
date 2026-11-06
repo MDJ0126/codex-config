@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "result",
+    "title": "Pixora Studio 1.0.1 제출 작업 보관과 탭 종료",
+    "summary": "사용자 요청으로 후속 제출을 보류하고 문구·재개 안내를 프로젝트에 보관한 뒤 작업용 제출 탭을 닫았습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Docs/Store/Pixora/PixoraStudio-1.0.1-Resume.txt에 초안URL·심사 사유·변경 이력·패키지 위치와 재개 절차를 기록했습니다. Submission.json에는 사용자 보류와 열린 심사 사유 창 종료를 반영했습니다. 심사 사유873자를 기존 제출 JSON과 대조해 파일로 보존했습니다.",
+    "verification": "닫기 직전 실제 제출 확인 창에서 심사 사유와 미선택 소유권 선서·비활성 I accept를 확인했습니다. 문구 백업은 Submission.json과 문자열 일치를 검사했습니다. 제출 확인 창을 닫고 이번 작업용 탭1842185099를 종료한 뒤 browser.tabs.list 결과[]를 확인했습니다. 제품 UI 수정이 없는 보관·종료 작업이라 새 제품 실행 이미지를 만들지 않았습니다.",
+    "remaining": "사용자가 나중에 재개할 때 초안1547466의 최신 심사 상태와 서버 파일 목록 처리를 확인하고, 로컬 심사 사유를 다시 입력해야 합니다. 기존 심사·초안 삭제 및 최종 제출은 실행하지 않았습니다. 자동 제출 예약은 없습니다. 교훈 검토: 본문이 입력된 확인 창은 별도 문구 파일을 보관한 뒤 닫는 기존 저장·정리 규칙 적용, 전역 추가 없음.",
+    "outcome": "이번 보관·정리 요청을 완료했습니다. 1.0.1 초안과 고정 패키지는 유지하고 최종 제출은 하지 않았습니다.",
+    "proposedTime": "1분 내외",
+    "actualTime": "최초 계측2026-11-06 12:17:45 KST. 문구 보관 대조12:19:11 KST,작업용 탭 종료 확인12:19 KST. 기록 공개 확인 별도.",
+    "xerjEvidence": "코드 검색 불필요 — 문구 보관·탭 종료 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
