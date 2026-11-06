@@ -1,5 +1,182 @@
 [
   {
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-drop-rate-v-formation-20261106171937076-v1.0.1.html",
+    "postPath": "projects/growingcity/posts/2026-11-06-manual-drop-rate-v-formation-20261106171937076-v1.0.1.md",
+    "date": "2026-11-06T17:19:37.076Z",
+    "version": "v1.0.1",
+    "project": "growingcity",
+    "kind": "manual",
+    "manualId": "drop-rate-v-formation",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "growingcity",
+      "kind": "manual",
+      "title": "초당 투하 속도·폭발 반경·V자 기체 편대",
+      "summary": "초당1발/기체·투하 속도와 V 편대·넓은 폭발 반경·레벨별 제한 추적 미사일·기체 체력/방어/속도·도착당 고정50% 출격 회복",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 공중전·미사일 회피·편대 화면 출입·UI 가독성·난이도/성능·전후 캡처·Play 미검증",
+      "outcome": "후속 버튼 연결 수정·회귀 검사 통과. 기존 실제 Play QA는 미실행 유지",
+      "proposedTime": "최초15~25분, 항공 전투 범위 추가 후35~50분",
+      "actualTime": "시작2026-11-07 01:15:51 KST. 구현·독립 검사는 이 메뉴얼 생성 시점 완료, 실제 Play와 공개 확인 별도.",
+      "xerjEvidence": "XERJ 연결 제공 없음 — rg와 실제 소스·에셋·독립 실행 검사 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "drop-rate-v-formation",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "초당1발/기체·투하 속도와 V 편대·넓은 폭발 반경·레벨별 제한 추적 미사일·기체 체력/방어/속도·도착당 고정50% 출격 회복",
+      "completionCriteria": "전체 강화·투하 간격·편대·미사일 추적/속도/종료·체력/방어·고정50%/누적 사용권·씬 UI와 원본 보존 검사. 실제 Play는 GUI 제한으로 미실행 구분",
+      "previousManual": "projects/growingcity/reports/2026-11-06-manual-20261106165226165-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "투하·편대·아홉 강화 경로",
+          "action": "기체당 발사 속도와 V자 좌표·새 강화 구매 구현",
+          "expected": "구현과 실제 검증 범위 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "편대 비행·체력·씬 HUD",
+          "action": "각 기체의 비행/투하 연결과 정적 씬 UI 저장",
+          "expected": "구현과 실제 검증 범위 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T04",
+          "order": 3,
+          "title": "건물 대공 미사일",
+          "action": "단계별 피해·속도·반경과 제한 추적, 연속 충돌·수명 처리",
+          "expected": "레벨/회전/추적 종료/위치와 피해 검사",
+          "qa": "독립 모델 검사와 소스 연결·컴파일, 실제 Play 별도",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T05",
+          "order": 4,
+          "title": "고정50% 도착 보상과 연속 출격",
+          "action": "기체별 단일 도착·50% 누적·사용권 보관·대기열 연결",
+          "expected": "2대 도착 후 즉시 사용·4대 후2회 사용·격추 무보상",
+          "qa": "고정 비율/중복/뱅크/재충전 독립 검사와 연결 확인",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과"
+        },
+        {
+          "id": "T03",
+          "order": 5,
+          "title": "컴파일·회귀·공개 보고",
+          "action": "독립·컴파일·씬·원본 검증 및 실제 Play 제한 보고",
+          "expected": "구현과 실제 검증 범위 구분",
+          "qa": "독립 .NET 시나리오·참조 컴파일·씬 및 글리프 검사. 실제 Play 화면은 별도",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "qa",
+          "revision": 2,
+          "result": "독립161개·컴파일·씬 검사 통과, 실제 전투/표시/전후 화면 미실행"
+        }
+      ],
+      "focusTasks": [
+        "T03"
+      ],
+      "scopeChange": "사용자가 건물 대공 미사일과 기체 체력/속도/방어 강화를 추가 요청. 쿨타임은 최초 시간 절반 해석을 정정해 최신 명시인 도착1대당 고정50%,2대당1회 사용권 누적으로 확정. 후속: 구매 버튼2개 드래그 숨김 연결과 Canvas 계층 수정.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-06T16:52:24.070Z",
+          "summary": "실행한 독립/참조 검사와 미실행 Unity Play 구분",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/Formation/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/Formation/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/Formation/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T02": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "독립161개·소스 연결·Runtime/Editor 컴파일·씬 참조 검사 통과",
+              "evidence": "QA/Formation/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T04": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "독립161개·컴파일·씬 검사 통과, 실제 전투/표시/전후 화면 미실행",
+              "evidence": "QA/Formation/logic-results.txt, verification.json; QA/Prototype/unity-compile.txt, scene-verification.json",
+              "dependencies": {
+                "T05": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/growingcity/reports/2026-11-06-manual-20261106165226165-v1.0.0.html",
     "postPath": "projects/growingcity/posts/2026-11-06-manual-20261106165226165-v1.0.0.md",
     "date": "2026-11-06T16:52:26.165Z",

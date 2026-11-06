@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "growingcity",
+    "kind": "bug",
+    "title": "투하 속도·기체 추가 버튼 숨김 수정",
+    "summary": "구매 버튼을 드래그 표시선 목록에서 분리하고 Canvas 자식 연결을 복구했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Unity6000.0.83f1 / URP17.0.4",
+    "steps": "사용자 화면의 두 버튼 누락 확인 후 씬과 SetDragGuideVisible 대조",
+    "expected": "드래그와 무관하게 구매 버튼 표시",
+    "actual": "사용자 첨부 실행 화면에서 DROP RATE·ADD AIRCRAFT 누락",
+    "cause": "두 버튼이 dragGuideSegments에 포함되어 숨김 호출의 대상이 됨. Canvas 자식 목록에도 누락.",
+    "changes": "표시선 목록에서 구매 버튼2개 제거. Canvas 자식 목록에 각1회 연결. 런타임 코드·외부 원본 수정 없음.",
+    "verification": "변경 전 오류 구조 재현, 변경 후 표시선3개 정확 일치·구매 버튼2개 연결·전체 Transform 부모/자식 양방향 검사 통과. 기존 씬632객체·1398로컬 참조·240외부 참조·14버튼 검사와 Formation 검사 통과. 외부 원본5840개 해시 변경0. QA/UpgradeVisibility/verify.mjs 보존. 교훈은 정확한 표시 대상과 양방향 계층 검사이며 기존 전역 검증 규칙 적용, 전역 변경 없음.",
+    "remaining": "화면 조작 금지로 Unity Play·재열기·수정 후 캡처 미실행. 실제 표시 해결 완료로 보고하지 않음.",
+    "outcome": "씬 연결 수정·정적 회귀 검사 통과, 실제 Play 미검증",
+    "proposedTime": "3~5분",
+    "actualTime": "시작2026-11-07 02:16:55 KST. 씬 수정·정적 검사 완료. 보고서 배포 확인 별도.",
+    "xerjEvidence": "도구 미제공 — rg와 현재 소스/씬 검사",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "review",
+    "state": "progress"
+  }
+}

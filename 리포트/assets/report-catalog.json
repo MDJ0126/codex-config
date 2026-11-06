@@ -1,5 +1,25 @@
 [
   {
+    "title": "초당 투하 속도·폭발 반경·V자 기체 편대",
+    "summary": "초당1발/기체·투하 속도와 V 편대·넓은 폭발 반경·레벨별 제한 추적 미사일·기체 체력/방어/속도·도착당 고정50% 출격 회복",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-manual-drop-rate-v-formation-20261106171937076-v1.0.1.html",
+    "date": "2026-11-06T17:19:37.076Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "투하 속도·기체 추가 버튼 숨김 수정",
+    "summary": "구매 버튼을 드래그 표시선 목록에서 분리하고 Canvas 자식 연결을 복구했습니다.",
+    "project": "growingcity",
+    "reportPath": "projects/growingcity/reports/2026-11-06-bug-20261106171915922-v1.0.0.html",
+    "date": "2026-11-06T17:19:15.922Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "초당 투하·V자 편대·대공 미사일과 고정50% 연속 출격",
     "summary": "기체당 기본1발/초, V자 편대, 건물 대공 미사일과 기체 생존 강화를 구현했습니다. 도착1대당 고정50% 출격분을 누적하며 독립161개 검사는 통과했습니다. 실제 Play는 미검증입니다.",
     "project": "growingcity",
