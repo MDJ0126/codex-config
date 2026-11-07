@@ -1,0 +1,193 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "blog-manager",
+    "kind": "manual",
+    "title": "실제 네이버 디자인 기반 로컬 블로그 관리자 구현",
+    "summary": "로컬 초안·예약·미리보기와 최신 글 문체 갱신을 구현하고 네이버 발행 연결을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "확장 스크립트 연결, 정식 사진 업로드 경로의 실제 실행, 승인받은 원고의 최종 발행·공개 검증, 전체 최종 QA.",
+    "outcome": "로컬 디자인·초안·예약·편집·저장·사진·최신 실제 글 기반 지침·이웃 후보 관리는 확인했습니다. 실제 네이버 발행 연결은 검증 중입니다.",
+    "proposedTime": "초기 구현·로컬 검증 25~45분. 실제 발행 연결은 로그인된 편집기에서 별도 검증. 추가 예상 10~20분(이미지 파일 선택 도구 호출 반환에 23분 지연 확인 후 안내).",
+    "actualTime": "시작: 2026-11-07 20:03:59 Asia/Seoul. 기록 시각: 2026-11-07 21:00:09 Asia/Seoul. 56분 경과. 전체 작업은 진행 중이며 완료 시각은 없습니다.",
+    "xerjEvidence": "XERJ 도구가 제공되지 않아 현재 소스와 rg, 실제 실행 결과로 검증했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "blog-manager-20261107",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "실제 블로그를 본뜬 로컬 관리자에서 AI 초안·예약·실시간 편집과 네이버 발행을 제공하고 최신 글·디자인을 갱신합니다.",
+    "completionCriteria": "로컬 원고와 실제 게시물이 구분되고 수정·사진·저장·재열기·최신 문체/디자인 동기화가 동작하며, 확장 입력과 승인한 실제 발행의 결과 URL·공개 본문이 검증됩니다. 희망 사항인 이웃 기능은 검토 가능한 후보 관리로 제공하며 실제 신청과 구분합니다.",
+    "previousManual": "projects/blog-manager/reports/2026-11-07-manual-20261107114830021-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공개 원본과 디자인 확보",
+        "action": "실제 프롤로그·RSS·본문과 동적 위젯을 수집하고 디자인과 초안을 분리합니다.",
+        "expected": "최신 실제 글과 원본 배너·프로필을 로컬 화면에서 확인합니다.",
+        "qa": "실제 원본 DOM·화면과 로컬 화면을 대조하고 공개 본문 추출 결과를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 글 4개 본문 추출·원본 배너·프로필·최근 댓글 확보."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "로컬 초안·예약·실시간 수정",
+        "action": "목록 앞에 초안과 로컬 예약을 추가하고 파일 저장·사진·MD 편집을 구현합니다.",
+        "expected": "수정과 이미지가 미리보기에 반영되고 재열기 후 원고가 유지됩니다.",
+        "qa": "테스트 원고를 작성·수정·저장·재열기·이미지 삽입 후 삭제 백업을 확인합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "브라우저 수정·저장·재열기·이미지 삽입 통과. 테스트 원고 삭제 전 백업 보존."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "최신 실제 글 기반 문체 갱신",
+        "action": "최신 공개 본문 근거로 파생 지침을 재생성하고 중복을 통합합니다.",
+        "expected": "최신 글 포함·이전 근거 대체·동일 규칙 ID 중복 없음.",
+        "qa": "실제 본문과 근거를 대조하고 최신 글 교체·중복 테스트를 실행합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "최신 GrowingCity 포함 4개 실제 본문 기반 지침 생성. 자동 테스트 통과."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "게임 분야 이웃 후보 관리",
+        "action": "게임 블로그 검색·후보·메모·직접 신청 문구와 상태를 구현합니다.",
+        "expected": "후보를 저장·재열기하고 상태를 직접 기록할 수 있습니다.",
+        "qa": "후보 UI 저장·재열기·문구를 확인하며 실제 자동 신청과 구분합니다.",
+        "dependsOn": [
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 브라우저에서 본인 블로그를 QA 후보로 저장하고 창을 닫고 다시 열어 메모·상태 유지 확인. QA 후보는 백업 후 삭제. 실제 이웃 신청은 하지 않았습니다."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "네이버 입력·실제 발행 연결",
+        "action": "확장 설치 후 제목·본문·이미지를 네이버에 입력하고 사용자 확인을 거쳐 발행합니다.",
+        "expected": "실제 네이버 입력 일치와 공개 결과 URL·본문이 검증됩니다.",
+        "qa": "설치·권한·연결·이미지 전송을 실제 편집기에서 확인하고 승인된 게시의 공개 결과를 확인합니다.",
+        "dependsOn": [
+          "T04"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "확장 0.1.1 권한 선언 수정. 사용자 설치·권한 허용 완료 응답은 받았으나, 실제 관리자 DOM의 확장 주입 표시와 연결 응답은 아직 확인되지 않습니다. 네이버 서식 붙여넣기는 실제 확인. data URL 이미지는 들어가지 않아 정식 파일 업로드 코드로 수정했으며 실행 검증 대기."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "전체 회귀 QA·정리·공개 보고",
+        "action": "원본과 수정 화면·저장·지침·발행 상태를 대조하고 작업 자원을 정리해 보고서를 게시합니다.",
+        "expected": "필수 QA 통과 또는 미완료 근거가 정확히 기록되고 개별 공개 보고서가 열립니다.",
+        "qa": "화면·상태·파일·중앙 배포 결과와 개별 URL을 실제 확인합니다.",
+        "dependsOn": [
+          "T05"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": "진행 중."
+      }
+    ],
+    "focusTasks": [
+      "T04",
+      "T05",
+      "T06"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-07T11:48:28.696Z",
+        "summary": "실제 네이버 원문과 로컬 브라우저 실행·자동 테스트 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 글 4개 본문 추출·원본 배너·프로필·최근 댓글 확보.",
+            "evidence": "data/snapshot.json, data/published.json, work/evidence/source-home.png",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "브라우저 수정·저장·재열기·이미지 삽입 통과. 테스트 원고 삭제 전 백업 보존.",
+            "evidence": "work/evidence/local-editor-image.png; 재열기 원고 값과 naturalWidth 365 이미지 확인",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최신 GrowingCity 포함 4개 실제 본문 기반 지침 생성. 자동 테스트 통과.",
+            "evidence": "node --test tests/core.test.mjs: 7 tests passed; data/tone-profile.json",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-07T12:00:09.981Z",
+        "summary": "이웃 후보 파일 보존·브라우저 재열기 QA와 네이버 실제 입력 확인",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 브라우저에서 본인 블로그를 QA 후보로 저장하고 창을 닫고 다시 열어 메모·상태 유지 확인. QA 후보는 백업 후 삭제. 실제 이웃 신청은 하지 않았습니다.",
+            "evidence": "work/evidence/local-neighbors.png; data/backups/neighbor-ehdwns0126-*",
+            "dependencies": {
+              "T03": 1
+            }
+          },
+          {
+            "taskId": "T05",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "확장 0.1.1 권한 선언 수정. 사용자 설치·권한 허용 완료 응답은 받았으나, 실제 관리자 DOM의 확장 주입 표시와 연결 응답은 아직 확인되지 않습니다. 네이버 서식 붙여넣기는 실제 확인. data URL 이미지는 들어가지 않아 정식 파일 업로드 코드로 수정했으며 실행 검증 대기.",
+            "evidence": "실제 관리자 DOM data-miro-bridge=null; 실제 네이버 본문 서식은 입력되었으나 se-image count=0. 최종 발행 미실행.",
+            "dependencies": {
+              "T04": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
