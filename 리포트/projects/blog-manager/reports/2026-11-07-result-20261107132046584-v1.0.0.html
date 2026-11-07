@@ -1,0 +1,31 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>네이버 원본 목록에 초안 카드 통합과 읽기 진입 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">미</span><span>미로 블로그 매니저</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>네이버 원본 목록에 초안 카드 통합과 읽기 진입 수정</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">초안 카드 통합과 읽기 진입 구현·DOM 실행 검사는 끝났고 실제 확장 0.3.1 화면 확인을 기다립니다.</p><div class="post-byline"><time datetime="2026-11-07T13:20:46.584Z">2026년 11월 7일 오후 10:20 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>초안을 별도 영역에서 관리 패널로 열던 구현을 수정했습니다. 실제 네이버 카드 목록 앞에 원본 카드 구조로 삽입하며 클릭은 같은 탭의 읽기 화면으로 이동합니다. 실제 설치 버전 갱신 후 화면 확인은 남아 있습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>실제 #prologue dl.p_post_top의 dd.p_photo_d를 복제해 초안을 앞에 삽입하고 같은 4열로 배치합니다.</li>
+<li>카드 클릭 명령을 open-panel에서 read-draft로 변경했습니다. 읽기 화면에는 목록과 원고 수정 버튼을 제공합니다.</li>
+<li>원고 제목·본문은 네이버 실제 참조 글의 틀에 로컬로 표시하며 댓글·공감·참조 태그는 숨깁니다. 공개 원문을 수정하거나 게시하지 않습니다.</li>
+<li>확장 0.3.1과 전체 이동 패키지를 releases에 보관했습니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>실제 네이버 목록 HTML에서 초안 2개 → 기존 글 4개 순서, 기존 카드 마크업 보존, 4열 CSS, 클릭 시 read-draft와 패널 미실행을 검사했습니다. <a class="report-link" href="../assets/native-card-verification-v0.3.1.json">실행 근거</a></li>
+<li>기존 자동 검사 18개 통과.</li>
+<li>ZIP 독립 해제 235개 파일 해시·다른 경로 서버 실행을 검증하고 검증 서버를 종료했습니다.</li>
+<li>수정 전 실제 화면: <figure><img class="report-image" src="../assets/native-cards-before.png" alt="수정 전 별도 초안 영역" loading="lazy"><figcaption>수정 전 별도 초안 영역</figcaption></figure></li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<ul>
+<li>설치된 확장의 0.3.1 갱신 이후 실제 목록·클릭·읽기 화면 검증 대기.</li>
+<li>실제 네이버 발행 검증은 사용자 요청대로 보류합니다. 기존 원고는 복구·수정하지 않았습니다.</li>
+<li>교훈 검토: 같은 목록과 같은 클릭 흐름을 사용한다는 사용자 요구를 프로젝트 AGENTS.md에 반영했습니다. 전역은 기존 원본 대조·검증 규칙과 중복되어 변경하지 않았습니다.</li>
+<li>XERJ 연결 도구가 제공되지 않아 rg·현재 소스·원본 DOM 및 실행 검사로 검증했습니다.</li>
+</ul>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 이번 수정 5~10분</li>
+<li>실제로 완료된 시간: 시작 2026-11-07 22:15:44 Asia/Seoul. 기록 2026-11-07 22:19:42 Asia/Seoul. 실제 확장 검증 완료 시각은 아직 없습니다.</li>
+<li>XERJ: 미사용 — XERJ 도구 미제공. 현재 소스와 실제 원본 DOM으로 검사했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-07-result-20261107132046584-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=blog-manager&topic=qa&relatedReport=projects%2Fblog-manager%2Freports%2F2026-11-07-result-20261107132046584-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=blog-manager">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=blog-manager">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
