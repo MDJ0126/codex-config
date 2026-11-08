@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-08T07:02:01.240Z",
+  "testRoot": "C:\\Projects\\blog-manager\\work\\desktop-qa-1794121318102",
+  "checks": [
+    {
+      "name": "lifecycle",
+      "pass": true,
+      "authenticated": true,
+      "details": "자동 준비 중복 요청·실제 작업 프로세스·초안 저장·종료·사용자 경로 확인 (모형 CLI, 모델 호출 없음)"
+    },
+    {
+      "name": "fresh-account",
+      "pass": true,
+      "authenticated": false,
+      "details": "공식 CLI 새 계정 경로에서 미로그인 안내·작성기 미실행 확인"
+    }
+  ]
+}
