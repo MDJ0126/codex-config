@@ -1,5 +1,972 @@
 [
   {
+    "reportPath": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108153653842-v1.0.24.html",
+    "postPath": "projects/blog-manager/posts/2026-11-08-manual-blog-manager-20261107-20261108153653842-v1.0.24.md",
+    "date": "2026-11-08T15:36:53.842Z",
+    "version": "v1.0.24",
+    "project": "blog-manager",
+    "kind": "manual",
+    "manualId": "blog-manager-20261107",
+    "round": 21,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "blog-manager",
+      "kind": "manual",
+      "title": "발행 입력 복구·미게시3개 자동 유지·이웃 후보 추가",
+      "summary": "로컬 초안·예약·미리보기와 최신 글 문체 갱신을 구현하고 네이버 발행 연결을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "크롬확장재로딩·기존블로그페이지새로고침후 실제시각검증미완료. 사용자화면비조작조건으로 OS컴퓨터유즈·직접크롬조작·스크린샷촬영은 수행하지 않았습니다. 기존 미완료 항목·QA이력은 보존합니다.",
+      "outcome": "하단 예약 정보·시각 입력·동작 그룹 배치, 네이버 편집기로 제거, 예약글 즉시발행 숨김·원고수정 강조. 격리DOM·64검사통과, 설치확장2파일해시일치·원고해시불변. 실제크롬갱신·시각검증미실행.",
+      "proposedTime": "5~10분",
+      "actualTime": "시작2026-11-09 00:32:01 KST. 설치확장파일적용00:35:35 KST까지3분34초. 전체완료시각은 실제크롬시각검증이 남아 미기록.",
+      "xerjEvidence": "XERJ 도구가 제공되지 않아 현재 소스와 rg, 실제 실행 결과로 검증했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "blog-manager-20261107",
+      "round": 21,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "실제 블로그를 본뜬 로컬 관리자에서 AI 초안·예약·실시간 편집과 네이버 발행을 제공하고 최신 글·디자인을 갱신합니다.",
+      "completionCriteria": "로컬 원고와 실제 게시물이 구분되고 수정·사진·저장·재열기·최신 문체/디자인 동기화가 동작하며, 확장 입력과 승인한 실제 발행의 결과 URL·공개 본문이 검증됩니다. 희망 사항인 이웃 기능은 검토 가능한 후보 관리로 제공하며 실제 신청과 구분합니다. 게시물 읽기 화면은 실제 원문의 전체 틀과 대조하며, 다른 PC용 압축본은 해제 파일 해시와 이동 경로 실행을 확인합니다.",
+      "previousManual": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108150326119-v1.0.23.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 원본과 디자인 확보",
+          "action": "실제 게시물 전체 틀·뷰어 CSS·선명한 이미지 주소·동적 태그와 하단 목록을 확보하고 원문과 로컬을 대조합니다.",
+          "expected": "공개 게시물 4개의 읽기 화면이 원문 틀을 사용하고 제목·본문·사진의 실측이 일치합니다.",
+          "qa": "실제 원문과 로컬의 폭·제목·폰트·사진 크기·상대 위치를 측정하고 공개 글 4개와 동적 태그·하단 목록을 실행 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "공개 글 4개 실제 DOM·읽기 화면 확인. 대표 원문의 본문 773px, 제목 영역 693px, 제목 32px, 본문 15px/27px, 이미지 453×289px 및 상대 위치 일치."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "로컬 초안·예약·실시간 수정",
+          "action": "목록 앞에 초안과 로컬 예약을 추가하고 파일 저장·사진·MD 편집을 구현합니다. 목록 클릭은 원본 틀의 읽기 화면을 열고 별도 수정 버튼에서 편집합니다.",
+          "expected": "수정과 이미지가 미리보기에 반영되고 재열기 후 원고가 유지됩니다. 수정 후 원본 틀의 읽기 화면에 반영됩니다.",
+          "qa": "테스트 원고를 작성·수정·저장·재열기·이미지 삽입 후 삭제 백업을 확인합니다. 수정 문장을 추가·저장·읽기 화면에서 확인한 뒤 원문을 복원합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "실제 브라우저에서 원본 틀 읽기 → 원고 수정 → 저장 → 읽기 반영 확인 후 원고를 정확히 복원했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "최신 실제 글 기반 문체 갱신",
+          "action": "최신 공개 본문 근거로 파생 지침을 재생성하고 중복을 통합합니다.",
+          "expected": "최신 글 포함·이전 근거 대체·동일 규칙 ID 중복 없음.",
+          "qa": "실제 본문과 근거를 대조하고 최신 글 교체·중복 테스트를 실행합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "최신 GrowingCity 포함 4개 실제 본문 기반 지침 생성. 자동 테스트 통과."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "게임 분야 이웃 후보 관리",
+          "action": "게임 블로그 검색·후보·메모·직접 신청 문구와 상태를 구현합니다.",
+          "expected": "후보를 저장·재열기하고 상태를 직접 기록할 수 있습니다.",
+          "qa": "후보 UI 저장·재열기·문구를 확인하며 실제 자동 신청과 구분합니다.",
+          "dependsOn": [
+            "T03"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 브라우저에서 본인 블로그를 QA 후보로 저장하고 창을 닫고 다시 열어 메모·상태 유지 확인. QA 후보는 백업 후 삭제. 실제 이웃 신청은 하지 않았습니다."
+        },
+        {
+          "id": "T05",
+          "order": 5,
+          "title": "네이버 입력·실제 발행 연결",
+          "action": "확장 설치 후 제목·본문·이미지를 네이버에 입력하고 사용자 확인을 거쳐 발행합니다. 경로 하드코딩을 제거하고 관리자·확장 단독 이동용 ZIP과 해시를 보관합니다. 발행 확인 후 전송·설정·제출·공개 검증을 연속 호출합니다.",
+          "expected": "실제 네이버 입력 일치와 공개 결과 URL·본문이 검증됩니다. 이동 ZIP 파일 해시와 다른 경로 실행이 확인됩니다. 실제 제출의 성공은 별도 공개 검증이 필요합니다.",
+          "qa": "설치·권한·연결·이미지 전송을 실제 편집기에서 확인하고 승인된 게시의 공개 결과를 확인합니다. 실제 ZIP 해제·208개 해시·다른 경로 서버를 검증합니다.",
+          "dependsOn": [
+            "T04"
+          ],
+          "status": "pending",
+          "revision": 3,
+          "result": "최신 사용자 자동 예약 승인에 따라 실제 네이버 예약 3건 등록. 예정 시각 이후 공개 본문 확인은 미실행. 이전 QA·보류 기록은 과거 이력으로 보존."
+        },
+        {
+          "id": "T06",
+          "order": 6,
+          "title": "전체 회귀 QA·정리·공개 보고",
+          "action": "원본과 수정 화면·저장·지침·발행 상태를 대조하고 작업 자원을 정리해 보고서를 게시합니다.",
+          "expected": "필수 QA 통과 또는 미완료 근거가 정확히 기록되고 개별 공개 보고서가 열립니다.",
+          "qa": "화면·상태·파일·중앙 배포 결과와 개별 URL을 실제 확인합니다.",
+          "dependsOn": [
+            "T05"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "진행 중."
+        },
+        {
+          "id": "T07",
+          "order": 7,
+          "title": "네이버 확장 초안 카드 통합과 읽기 진입",
+          "action": "네이버 원본 카드 노드를 복제하여 초안을 같은 4열 목록 앞에 삽입하고 클릭은 같은 탭의 네이버 틀 읽기 화면으로 연결합니다. 원고 수정 버튼에서 패널을 엽니다.",
+          "expected": "초안 2개 뒤에 기존 글 4개가 이어지고 원본 카드 마크업을 보존하며, 초안 클릭은 관리 패널을 열지 않습니다.",
+          "qa": "실제 네이버 목록 HTML에서 카드 삽입 순서·원본 불변·4열 CSS·클릭 명령을 실행 검사하고 실제 확장 새로고침 후 목록과 읽기를 화면으로 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 크롬 0.3.1에서 초안 2개와 기존 글 4개가 첫 줄 4개·둘째 줄 2개로 배치됐고 폭은 모두 186px입니다. 초안 클릭 후 같은 탭의 실제 네이버 틀에서 제목·본문·미게시 표시와 773px 본문 폭을 확인했습니다."
+        },
+        {
+          "id": "T08",
+          "order": 8,
+          "title": "네이버 목록·직접 편집·태그와 초안 복원",
+          "action": "원본 4열 목록의 + 카드와 단일 미게시 배지, 네이버 태그, 목록 버튼 제거 및 직접 저장/취소·새로고침을 적용합니다.",
+          "expected": "연결 박스 없이 + 카드를 표시하고 원고 내용·사진·링크·글꼴이 편집/취소/새로고침에도 유지됩니다.",
+          "qa": "실제 확장에서 목록·태그·사진·직접 편집 저장·취소·반복 새로고침과 저장소 종료 상태를 검사합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 Chrome 0.4.1: + 카드 1개, 초안 4개, 미게시 배지 한 곳, 하단 목록 버튼 0개. 편집 취소 시 제목·본문 HTML·글꼴 일치(15px/27px), 직접 저장·새로고침 유지, 이미지 2장 693px 표시와 원본 링크 보존. 저장소 종료 후 캐시 초안 4개·사진 2장 읽기와 연결 박스 없음 확인."
+        },
+        {
+          "id": "T09",
+          "order": 9,
+          "title": "중앙 아카이브 이미지 예제·실제 AI 작성과 소스 보관",
+          "action": "출처/해시가 있는 실제 사진 예제와 사용자 요청 시만 동작하는 Codex 작성 에이전트를 제공하고 지정된 저장소로 공개 가능한 소스를 푸시합니다.",
+          "expected": "AI가 꺼져 있으면 + 클릭에서만 안내하고, 켜졌을 때 실제 자료 기반 로컬 초안을 생성하며 개인 데이터는 공개하지 않습니다.",
+          "qa": "실제 CLI 작성과 꺼진 상태의 UI, 원격 Git 커밋, 보관 ZIP 해제·파일 해시·다른 경로 실행을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "Codex 실제 작성 요청 1회가 17.631초에 완료되어 이미지 1장 포함 로컬 초안 생성. 대기 에이전트 종료 및 + 클릭의 꺼짐 안내 확인. 게임 예제 사진 2장 원본 해시 보존. 250개 ZIP 해제 파일과 이동 실행 확인. 공개 소스 53개 파일을 3a9b005로 MDJ0126/blog-manager main에 푸시하고 원격 SHA 일치 확인."
+        },
+        {
+          "id": "T10",
+          "order": 10,
+          "title": "Windows 설치와 원고 경로 분리",
+          "action": "Windows 설치와 원고 경로 분리",
+          "expected": "실제 설치·시작·중복 실행·종료와 설치 경로 무변경·사용자 데이터 보존 검사",
+          "qa": "실제 설치·시작·중복 실행·종료와 설치 경로 무변경·사용자 데이터 보존 검사",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 설치·46개 파일 해시·사용자 경로 분리·초안4/게시글4 보존·중복 앱 방지 확인"
+        },
+        {
+          "id": "T11",
+          "order": 11,
+          "title": "AI 작성기 자동 준비",
+          "action": "AI 작성기 자동 준비",
+          "expected": "미로그인 안내, 실제 요청·초안 생성·중복 시작 방지·소유 작업 종료 검사",
+          "qa": "미로그인 안내, 실제 요청·초안 생성·중복 시작 방지·소유 작업 종료 검사",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "프로세스 자동 준비·모형 CLI 작업·공식 CLI 미로그인 안내·실제 설치 앱 원고 생성·네이버 + 주제 입력창·소유 작업 종료 확인"
+        },
+        {
+          "id": "T12",
+          "order": 12,
+          "title": "설치 배포와 보고",
+          "action": "설치 배포와 보고",
+          "expected": "설치 파일·포함 파일 해시와 원격 SHA·공개 본문·첨부 검사",
+          "qa": "설치 파일·포함 파일 해시와 원격 SHA·공개 본문·첨부 검사",
+          "dependsOn": [
+            "T09"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "소스75fea07 원격 SHA·설치 EXE Git Chunk 복원 해시·설치본/커밋 런타임39개 파일 일치. Pages 42458123414 성공, 개별 보고서와 첨부6개 인증 없이 검증"
+        },
+        {
+          "id": "T13",
+          "order": 13,
+          "title": "확장 단일 작성 폼",
+          "action": "확장 단일 작성 폼",
+          "expected": "실제 네이버 + → 작성 폼·설정 저장·재열기·선택·AI 진행·초안 읽기 확인",
+          "qa": "실제 네이버 + → 작성 폼·설정 저장·재열기·선택·AI 진행·초안 읽기 확인",
+          "dependsOn": [
+            "T12"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 네이버 +에서 compose.html 작성 폼 탭 열림. 내부 페이지 제어는 보안 정책 차단. 사용자 추천·생성 확인 응답과 분리된 소스 DOM의 설정·선택·생성·폴링·읽기 연결 통과. 실제 생성 초안을 네이버에서 직접 열고 본문·태그·출처 확인"
+        },
+        {
+          "id": "T14",
+          "order": 14,
+          "title": "아카이브·게임 검색 추천",
+          "action": "아카이브·게임 검색 추천",
+          "expected": "실제 홈페이지·공개 보고서 출처·추천 10개·검색 인증/실패·자료 기반 AI 원고·출처 확인",
+          "qa": "실제 홈페이지·공개 보고서 출처·추천 10개·검색 인증/실패·자료 기반 AI 원고·출처 확인",
+          "dependsOn": [
+            "T12"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 홈페이지에서 추천10개 생성. 실제 설치 앱의 추천→아카이브 본문→AI 원고 저장·출처 보존 확인. 게임 검색 인증 헤더·키 비노출·오류·마크업 제거는 모의 API 검증. 실제 검색은 키 미등록으로 미실행"
+        },
+        {
+          "id": "T15",
+          "order": 15,
+          "title": "갱신 설치·푸시·공개 보고",
+          "action": "갱신 설치·푸시·공개 보고",
+          "expected": "0.6.0 설치 파일 해시·실제 설치 실행·확장 갱신·전후 화면·배포·공개 첨부 확인",
+          "qa": "0.6.0 설치 파일 해시·실제 설치 실행·확장 갱신·전후 화면·배포·공개 첨부 확인 갱신 전 폐기 파일5개·HTTP200 재현, 갱신 후 파일0개·HTTP404와 원고 보존 확인.",
+          "dependsOn": [
+            "T12"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "0.6.1 실제 설치44파일 해시 일치, 폐기파일5개 삭제·5개 URL404, 초안5/게시글4 보존, 회귀26개 통과. 소스fff9ff2·Git Chunk 복원 일치. 최종 보고 배포 확인은 진행 중"
+        },
+        {
+          "id": "T16",
+          "order": 16,
+          "title": "네이버 검색 글감10개",
+          "action": "네이버 검색 글감10개",
+          "expected": "공식 API헤더·100개 검색자료 중 중복 제거10개·부족 수·인증 실패·실검색 구분",
+          "qa": "공식 API헤더·100개 검색자료 중 중복 제거10개·부족 수·인증 실패·실검색 구분",
+          "dependsOn": [
+            "T15"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "구현·모의 응답 검증 완료. 사용자가 API키가 없다고 응답했고 실제 설치 앱 searchConfigured=false를 확인하여 실검색·실추천은 연결 대기입니다."
+        },
+        {
+          "id": "T17",
+          "order": 17,
+          "title": "자동 원고 파일 보관",
+          "action": "자동 원고 파일 보관",
+          "expected": "실제 작성요청 자동MD/JSON 저장·원본 이미지 복사·편집 이력·ZIP해제 해시·네이버 파일버튼 확인",
+          "qa": "실제 작성요청 자동MD/JSON 저장·원본 이미지 복사·편집 이력·ZIP해제 해시·네이버 파일버튼 확인",
+          "dependsOn": [
+            "T15"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 AI 요청이 별도 저장 없이 MD/JSON2파일 자동 보관. 기존 이미지 원고 ZIP4파일·사진2장, 독립tar해제 후 MD/사진SHA일치. 네이버ZIP링크 실제 확인. 수정 이력·오프라인 재저장 검사 통과"
+        },
+        {
+          "id": "T18",
+          "order": 18,
+          "title": "게임 분야 서로이웃 추천",
+          "action": "게임 분야 서로이웃 추천",
+          "expected": "게임키워드·자기블로그/중복/기존상태 제외·근거/후보저장·실추천 구분",
+          "qa": "게임키워드·자기블로그/중복/기존상태 제외·근거/후보저장·실추천 구분",
+          "dependsOn": [
+            "T15"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "구현·모의 응답 검증 완료. 사용자가 API키가 없다고 응답했고 실제 설치 앱 searchConfigured=false를 확인하여 실검색·실추천은 연결 대기입니다."
+        },
+        {
+          "id": "T19",
+          "order": 19,
+          "title": "설치·소스·공개 보고",
+          "action": "설치·소스·공개 보고",
+          "expected": "0.7 설치 파일 해시·기존데이터·확장갱신·원격푸시·공개보고/대화기록 확인",
+          "qa": "0.7 설치 파일 해시·기존데이터·확장갱신·원격푸시·공개보고/대화기록 확인",
+          "dependsOn": [
+            "T15"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "0.7 설치47파일 해시·기존5원고4게시글 보존, 원고 검증1개 추가, Git Chunk 복원 확인. 공개 보고 배포 확인 대기"
+        },
+        {
+          "id": "T20",
+          "order": 20,
+          "title": "로컬 예제 정리",
+          "action": "실제 게시글과 로컬 원고를 대조하고 기존6개를 백업 후 제거",
+          "expected": "로컬 예제0개·복구 백업6개·실제 게시글4개 보존",
+          "qa": "실제 API 상태와 백업 파일 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "기존6개 삭제백업 및 이전 파일 묶음 백업 이동, 실제 게시글4개 데이터 불변"
+        },
+        {
+          "id": "T21",
+          "order": 21,
+          "title": "실제 원고3편 작성·보관·읽기 검증",
+          "action": "문체·개발 기록 대조 후3편 작성, 사진·태그·파일 검사",
+          "expected": "새 원고3개·전체8개 이미지 표시·MD/메타/ZIP 보관",
+          "qa": "API상태·이미지 SHA·ZIP HTTP·실제 네이버 읽기 화면 대조",
+          "dependsOn": [
+            "T20"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "3개 원고 파일 보관ready=true, 이미지8개 해시 및 실제 로드 확인, ZIP3개 다운로드 정상. 미검증 내용을 경험처럼 단정하지 않음"
+        },
+        {
+          "id": "T22",
+          "order": 22,
+          "title": "미게시 원고3개 자동 유지",
+          "action": "앱주기·게시본문검증후보충,중복예약방지,실제AI작성·파일저장확인",
+          "expected": "현재3개보존·설정활성·격리2→3실작성·이미지보관·중복예약없음",
+          "qa": "실제API·격리프로필AI와파일·stockPlan검사",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "설치앱enabled=true available3 pending0. 별도프로필에서실AI1편·이미지1장·파일3개ready=true,2→3보충·jobCount1로중복방지확인. 실제공개발행후트리거는미실행."
+        },
+        {
+          "id": "T23",
+          "order": 23,
+          "title": "API키없는 직접 이웃 후보 추가",
+          "action": "추천현상태확인·블로그주소직접추가·실제신청과구분",
+          "expected": "현재키미보유명시·직접주소후보저장UI·방문후네이버신청흐름",
+          "qa": "설치설정조회·작성폼DOM검사·추천/실제신청미전송구분",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "현재searchConfigured=false. 직접후보추가UI구현. 확장실행화면확인대기. 실제서로이웃신청은자동전송하지않음."
+        },
+        {
+          "id": "T24",
+          "order": 24,
+          "title": "빈 편집기 전송 수정·설치 검증",
+          "action": "실제오류·입력영역대조·단계오류·포커스대기·입력전용경로·실제제목/본문/사진확인",
+          "expected": "입력성공의실제제목/본문/이미지확인,실패시단계표시·원고보존",
+          "qa": "Chrome실제편집기·모의확인취소·33검사·설치해시·공개보고",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 3,
+          "result": "복구창의 확인을 자동 처리하고 제목 영역 실제 히트 준비를 대기. 복구된 글을 로컬 원고와 다시 대조해 동일 글만 이어쓰기, 다른 글은 보존·중단. 49검사 통과·0.9.1 설치54파일 해시일치. 실제 화면의 기존 원고 복구·사진2장 유지 확인은 CUA 수동 실행이며 새 코드 자동 실행과 구분."
+        },
+        {
+          "id": "T25",
+          "order": 25,
+          "title": "즉시 발행 최종 제출·공개 확인·중복 방지",
+          "action": "최종 제출 전 상태 보존·두 네이버 결과 URL 형식 인식·공개 확인 재조회·이미 제출된 원고 재제출 방지",
+          "expected": "확인 후 한 번만 제출하고 공개 본문 검증 후 게시 완료 및 보충. 확인 취소는 제출하지 않음.",
+          "qa": "단위·실제 콘텐츠스크립트 재생·설치해시·실제 브라우저 적용과 공개결과 확인을 구분",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "0.9.0 구현·설치53파일검증,46검사·콘텐츠스크립트 확인 취소/확인 분기 통과. 실제 브라우저는 이전 게시하기 코드 유지. 확장 관리 조작은 도구 제한으로 불가, 사용자의 자동 진행 요구를 반영해 반복 갱신 요청 중단. 실제 신규 코드 실행·공개 등록 미검증."
+        },
+        {
+          "id": "T26",
+          "order": 26,
+          "title": "원고 3개 재작성과 원본 이미지 보존",
+          "action": "원고 3개 재작성과 원본 이미지 보존 구현·설치·실행 대조",
+          "expected": "실제 원고 재작성·네이버 입력·사진 2/2/4장과 예약 3건 대조",
+          "qa": "원문 사실·입력 사진·실제 예약 제목과 시간을 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 원고 재작성·네이버 입력·사진 2/2/4장과 예약 3건 대조"
+        },
+        {
+          "id": "T27",
+          "order": 27,
+          "title": "6시간 네이버 예약과 중복 제출 방지",
+          "action": "6시간 네이버 예약과 중복 제출 방지 구현·설치·실행 대조",
+          "expected": "실제 브라우저 동작과 원격 상태를 확인",
+          "qa": "새 UI·타이머·원격 예약 변경·검색 키 연결을 실제 실행",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "최초 실제 예약 3건 확인. 57검사 통과. 지속 자동 등록의 브라우저 활성화 미확인"
+        },
+        {
+          "id": "T28",
+          "order": 28,
+          "title": "개별 타이머·취소·주제 제외·API 설정",
+          "action": "개별 타이머·취소·주제 제외·API 설정 구현·설치·실행 대조",
+          "expected": "실제 브라우저 동작과 원격 상태를 확인",
+          "qa": "새 UI·타이머·원격 예약 변경·검색 키 연결을 실제 실행",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "앱 설정 실제 화면 확인. 크롬 새 버튼 미반영, 실제 예약 취소/시각 변경·키 등록 후 검색은 미검증"
+        },
+        {
+          "id": "T29",
+          "order": 29,
+          "title": "예약 원본 편집·기존 시간 유지·검증 후 로컬 반영",
+          "action": "예약 목록에서 제목·시각으로 원본을 열고 수정 저장 시 같은 접수번호·시각·본문을 재열기 검증한 후 로컬 파일을 갱신",
+          "expected": "새 글 중복 없이 같은 예약글 수정. 실패 시 기존 로컬 파일 유지.",
+          "qa": "격리 DOM 추출·원본 ID/시각/수정 버전 충돌·중복 저장 검사. 실제 크롬 검증은 사용자 사용 중이므로 보류.",
+          "dependsOn": [
+            "T27"
+          ],
+          "status": "pending",
+          "revision": 2,
+          "result": "실제 설치 파일·실행 서버0.10.3, 런타임47파일 SHA일치·원고 파일 SHA불변·새 API HTTP400 거부 확인. 62검사 통과. 크롬 새 코드 활성화·실제 예약 수정은 미검증."
+        },
+        {
+          "id": "T30",
+          "order": 30,
+          "title": "게시물 하단 관리 UI 정리",
+          "action": "하단 관리 영역의 예약 정보·시각 입력·수정/취소 배치를 정리하고 중복 편집기 버튼 제거",
+          "expected": "예약 상태·시간·동작 구분, 네이버 편집기로 버튼 없음, 본문·태그 보존",
+          "qa": "원문 DOM에 새 코드 실행 후 태그/본문 보존, 예약/미게시/취소 상태별 버튼, 편집 저장/취소 검증. 실제 화면 캡처는 사용자 화면 비조작 조건으로 미실행.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "하단 예약 정보·시각 입력·동작 그룹 배치, 네이버 편집기로 제거, 예약글 즉시발행 숨김·원고수정 강조. 격리DOM·64검사통과, 설치확장2파일해시일치·원고해시불변. 실제크롬갱신·시각검증미실행."
+        }
+      ],
+      "focusTasks": [
+        "T30"
+      ],
+      "scopeChange": "사용자가 첨부한 게시물 하단 영역만 재디자인하고 네이버 편집기로 버튼 제거 요청. 본문·태그 틀 유지, 직접 화면 조작 없이 격리 DOM 검증.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-07T11:48:28.696Z",
+          "summary": "실제 네이버 원문과 로컬 브라우저 실행·자동 테스트 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 글 4개 본문 추출·원본 배너·프로필·최근 댓글 확보.",
+              "evidence": "data/snapshot.json, data/published.json, work/evidence/source-home.png",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "브라우저 수정·저장·재열기·이미지 삽입 통과. 테스트 원고 삭제 전 백업 보존.",
+              "evidence": "work/evidence/local-editor-image.png; 재열기 원고 값과 naturalWidth 365 이미지 확인",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최신 GrowingCity 포함 4개 실제 본문 기반 지침 생성. 자동 테스트 통과.",
+              "evidence": "node --test tests/core.test.mjs: 7 tests passed; data/tone-profile.json",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-07T12:00:09.981Z",
+          "summary": "이웃 후보 파일 보존·브라우저 재열기 QA와 네이버 실제 입력 확인",
+          "results": [
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 브라우저에서 본인 블로그를 QA 후보로 저장하고 창을 닫고 다시 열어 메모·상태 유지 확인. QA 후보는 백업 후 삭제. 실제 이웃 신청은 하지 않았습니다.",
+              "evidence": "work/evidence/local-neighbors.png; data/backups/neighbor-ehdwns0126-*",
+              "dependencies": {
+                "T03": 1
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "확장 0.1.1 권한 선언 수정. 사용자 설치·권한 허용 완료 응답은 받았으나, 실제 관리자 DOM의 확장 주입 표시와 연결 응답은 아직 확인되지 않습니다. 네이버 서식 붙여넣기는 실제 확인. data URL 이미지는 들어가지 않아 정식 파일 업로드 코드로 수정했으며 실행 검증 대기.",
+              "evidence": "실제 관리자 DOM data-miro-bridge=null; 실제 네이버 본문 서식은 입력되었으나 se-image count=0. 최종 발행 미실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "regression",
+          "at": "2026-11-07T12:39:16.322Z",
+          "summary": "원본 게시물 읽기 화면·편집 왕복·최신 본문 파서·이동용 압축본 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "공개 글 4개 실제 DOM·읽기 화면 확인. 대표 원문의 본문 773px, 제목 영역 693px, 제목 32px, 본문 15px/27px, 이미지 453×289px 및 상대 위치 일치.",
+              "evidence": "work/article-metrics.json, work/article-checks.json, 실제 원문·로컬 스크린샷 4쌍",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "실제 브라우저에서 원본 틀 읽기 → 원고 수정 → 저장 → 읽기 반영 확인 후 원고를 정확히 복원했습니다.",
+              "evidence": "브라우저 editReflected=true, originalRestored=true; draft-native-after.png",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "본문 추출에서 제목과 본문 밖 텍스트를 제외하도록 수정하고 실제 공개 4개 본문을 다시 동기화했습니다. 실제 DOM 본문과 전부 일치하며 문체 지침을 재생성했습니다.",
+              "evidence": "node scripts/sync.mjs; finalize-article-cache.mjs 본문 일치 검증; 15개 테스트 통과",
+              "dependencies": {
+                "T02": 2
+              }
+            },
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "not_run",
+              "actual": "0.2.0 관리자 ZIP·확장 ZIP 생성 및 해시 고정. 208개 해제 파일 대조·다른 경로 실행·초안 2개와 공개 글 4개 보존·검증 서버 종료 확인. 실제 네이버 발행은 기존 원고 복구 단계에서 자동 승인 검토가 차단해 미검증입니다.",
+              "evidence": "work/portable-verification.json; 기존 원고 복구 확인 클릭 자동 승인 검토 거부. 최종 게시 미실행.",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "step",
+          "at": "2026-11-07T12:40:38.436Z",
+          "summary": "사용자 요청으로 기존 원고 보존 및 발행 검증 보류",
+          "results": [
+            {
+              "taskId": "T05",
+              "revision": 2,
+              "verdict": "blocked",
+              "actual": "기존 네이버 원고를 복구·열람하거나 발행하지 않고 사용자 요청대로 검증을 보류합니다.",
+              "evidence": "사용자 응답: 기존 원고 유지, 발행 검증 보류",
+              "dependencies": {
+                "T04": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "step",
+          "at": "2026-11-07T13:19:42.389Z",
+          "summary": "네이버 실제 목록 HTML에서 통합 카드와 읽기 명령 실행 검사",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "not_run",
+              "actual": "실제 원본 DOM 기반 카드 검사 및 기존 자동 검사 18개 통과. 0.3.1 압축본의 235개 파일·이동 실행 확인. 설치된 확장의 0.3.1 새로고침과 실제 화면 검증 대기.",
+              "evidence": "work/native-card-verification.json; 18 tests passed; portable-verification.json. 실제 설치 화면 재검증은 사용자 새로고침 대기.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "kind": "step",
+          "at": "2026-11-07T13:24:53.493Z",
+          "summary": "설치된 확장 0.3.1의 통합 목록과 실제 초안 읽기 검증",
+          "results": [
+            {
+              "taskId": "T07",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 크롬 0.3.1에서 초안 2개와 기존 글 4개가 첫 줄 4개·둘째 줄 2개로 배치됐고 폭은 모두 186px입니다. 초안 클릭 후 같은 탭의 실제 네이버 틀에서 제목·본문·미게시 표시와 773px 본문 폭을 확인했습니다.",
+              "evidence": "native-cards-after.png, native-draft-read-after.png, native-draft-read-top-after.png; Chrome DOM 실측 186px×4, y329/y569, 본문773px",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "kind": "regression",
+          "at": "2026-11-08T06:44:04.204Z",
+          "summary": "0.4.1 실제 확장·오프라인·AI·이미지·Git·보관본 검증",
+          "results": [
+            {
+              "taskId": "T08",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 Chrome 0.4.1: + 카드 1개, 초안 4개, 미게시 배지 한 곳, 하단 목록 버튼 0개. 편집 취소 시 제목·본문 HTML·글꼴 일치(15px/27px), 직접 저장·새로고침 유지, 이미지 2장 693px 표시와 원본 링크 보존. 저장소 종료 후 캐시 초안 4개·사진 2장 읽기와 연결 박스 없음 확인.",
+              "evidence": "nov8-live-verification.json; native-card-verification-v0.4.1.json; portable-verification-v0.4.1.json; 실제 화면 첨부; Git remote main SHA",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T09",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Codex 실제 작성 요청 1회가 17.631초에 완료되어 이미지 1장 포함 로컬 초안 생성. 대기 에이전트 종료 및 + 클릭의 꺼짐 안내 확인. 게임 예제 사진 2장 원본 해시 보존. 250개 ZIP 해제 파일과 이동 실행 확인. 공개 소스 53개 파일을 3a9b005로 MDJ0126/blog-manager main에 푸시하고 원격 SHA 일치 확인.",
+              "evidence": "nov8-live-verification.json; native-card-verification-v0.4.1.json; portable-verification-v0.4.1.json; 실제 화면 첨부; Git remote main SHA",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q08",
+          "kind": "step",
+          "at": "2026-11-08T07:13:43.708Z",
+          "summary": "설치형 실행과 AI 자동 준비",
+          "results": [
+            {
+              "taskId": "T10",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 설치·46개 파일 해시·사용자 경로 분리·초안4/게시글4 보존·중복 앱 방지 확인",
+              "evidence": "desktop-verification.json; installed-verification.json; desktop-live-verification.json; 실제 설정·네이버 화면",
+              "dependencies": {
+                "T09": 1
+              }
+            },
+            {
+              "taskId": "T11",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "프로세스 자동 준비·모형 CLI 작업·공식 CLI 미로그인 안내·실제 설치 앱 원고 생성·네이버 + 주제 입력창·소유 작업 종료 확인",
+              "evidence": "desktop-verification.json; installed-verification.json; desktop-live-verification.json; 실제 설정·네이버 화면",
+              "dependencies": {
+                "T09": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "kind": "step",
+          "at": "2026-11-08T07:19:42.069Z",
+          "summary": "설치 산출물과 공개 배포 검증",
+          "results": [
+            {
+              "taskId": "T12",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "소스75fea07 원격 SHA·설치 EXE Git Chunk 복원 해시·설치본/커밋 런타임39개 파일 일치. Pages 42458123414 성공, 개별 보고서와 첨부6개 인증 없이 검증",
+              "evidence": "desktop-source-verification.json; desktop-public-verification.json; GitHub Actions 42458123414 성공",
+              "dependencies": {
+                "T09": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "kind": "step",
+          "at": "2026-11-08T07:42:12.659Z",
+          "summary": "작성 폼·추천·실제 자료 원고 검증",
+          "results": [
+            {
+              "taskId": "T13",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 네이버 +에서 compose.html 작성 폼 탭 열림. 내부 페이지 제어는 보안 정책 차단. 사용자 추천·생성 확인 응답과 분리된 소스 DOM의 설정·선택·생성·폴링·읽기 연결 통과. 실제 생성 초안을 네이버에서 직접 열고 본문·태그·출처 확인",
+              "evidence": "compose-ui-verification.json; compose-archive-live.json; compose-real-result.json; 사용자 확인; 실제 생성 초안 화면",
+              "dependencies": {
+                "T12": 1
+              }
+            },
+            {
+              "taskId": "T14",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 홈페이지에서 추천10개 생성. 실제 설치 앱의 추천→아카이브 본문→AI 원고 저장·출처 보존 확인. 게임 검색 인증 헤더·키 비노출·오류·마크업 제거는 모의 API 검증. 실제 검색은 키 미등록으로 미실행",
+              "evidence": "compose-ui-verification.json; compose-archive-live.json; compose-real-result.json; 사용자 확인; 실제 생성 초안 화면",
+              "dependencies": {
+                "T12": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q11",
+          "kind": "step",
+          "at": "2026-11-08T07:45:24.554Z",
+          "summary": "설치·소스·공개 배포 실제 검증",
+          "results": [
+            {
+              "taskId": "T15",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "0.6.0 설치44파일·커밋 런타임37파일 SHA 일치, Git Chunk 복원 EXE 동일. 소스 f730a0e 푸시. Pages 42459919600 성공 및 개별 보고서·첨부6개 인증 없이 확인",
+              "evidence": "compose-installed-verification.json; compose-source-verification.json; compose-public-verification.json; Actions 42459919600 성공",
+              "dependencies": {
+                "T12": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "kind": "regression",
+          "at": "2026-11-08T07:46:12.625Z",
+          "summary": "업데이트 잔여 파일 발견",
+          "results": [
+            {
+              "taskId": "T15",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "0.6.0 갱신 설치에서 폐기 파일5개 존재, /index.html HTTP200",
+              "evidence": "compose-upgrade-check.json",
+              "dependencies": {
+                "T12": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "kind": "regression",
+          "at": "2026-11-08T07:48:06.385Z",
+          "summary": "0.6.1 갱신 재검증",
+          "results": [
+            {
+              "taskId": "T15",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "0.6.1 실제 설치44파일 해시 일치, 폐기파일5개 삭제·5개 URL404, 초안5/게시글4 보존, 회귀26개 통과. 소스fff9ff2·Git Chunk 복원 일치. 최종 보고 배포 확인은 진행 중",
+              "evidence": "compose-061-verification.json; compose-061-tests.log; Git Chunk 복원 SHA",
+              "dependencies": {
+                "T12": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q14",
+          "kind": "step",
+          "at": "2026-11-08T08:24:34.441Z",
+          "summary": "실제 자동 파일 보관·복원 검증",
+          "results": [
+            {
+              "taskId": "T17",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 AI 요청이 별도 저장 없이 MD/JSON2파일 자동 보관. 기존 이미지 원고 ZIP4파일·사진2장, 독립tar해제 후 MD/사진SHA일치. 네이버ZIP링크 실제 확인. 수정 이력·오프라인 재저장 검사 통과",
+              "evidence": "recommend-live-file-job.json; recommend-files-http.json; recommend-zip-verification.json; 실제 네이버 파일버튼 화면",
+              "dependencies": {
+                "T15": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q15",
+          "kind": "step",
+          "at": "2026-11-08T08:39:54.833Z",
+          "summary": "예제 정리·새 원고3편 실제 파일과 네이버 표시 확인",
+          "results": [
+            {
+              "taskId": "T20",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존6개 삭제백업 및 이전 파일 묶음 백업 이동, 실제 게시글4개 데이터 불변",
+              "evidence": "three-posts-verification.json; three-posts-ui.json; 실제 목록·읽기 캡처",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T21",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "3개 원고 파일 보관ready=true, 이미지8개 해시 및 실제 로드 확인, ZIP3개 다운로드 정상. 미검증 내용을 경험처럼 단정하지 않음",
+              "evidence": "three-posts-verification.json; three-posts-ui.json; 실제 목록·읽기 캡처",
+              "dependencies": {
+                "T20": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q16",
+          "kind": "step",
+          "at": "2026-11-08T10:16:48.566Z",
+          "summary": "실제격리AI2→3보충·파일·중복예약검증",
+          "results": [
+            {
+              "taskId": "T22",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "설치앱enabled=true available3 pending0. 별도프로필에서실AI1편·이미지1장·파일3개ready=true,2→3보충·jobCount1로중복방지확인. 실제공개발행후트리거는미실행.",
+              "evidence": "stock-live-result.json; stock-live-request.json; tests-080-live.log",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "kind": "step",
+          "at": "2026-11-08T11:26:56.335Z",
+          "summary": "실제제목/사진전송실패기록보존",
+          "results": [
+            {
+              "taskId": "T24",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "제목입력타임아웃과BODY포커스실제확인.0.8.4에서제목·2문단입력후사진전송실패.뒤이은시험에서자체자동저장복구창이클릭차단.",
+              "evidence": "transfer-pointer-diagnostic.json; transfer-086-live.json; transfer-title-body-after.png",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q18",
+          "kind": "step",
+          "at": "2026-11-08T11:55:43.672Z",
+          "summary": "실제 복구 원고 본문 전체 서식·사진·링크와 앱 입력 확인",
+          "results": [
+            {
+              "taskId": "T24",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "동일 시험 원고 복구 후 본문 전체 나눔고딕15px/27px,사진2장·출처링크 유지 확인. 실제 앱 prepare-draft가 네이버 원고 입력 확인 완료 반환. 공개 발행은 별도 최종 응답 대기이며 이 QA는 입력 단계만 통과.",
+              "evidence": "로컬 immediate-before.png; immediate-after.png; immediate-publish-ready.png (미게시 원고이므로 공개 보고서 제외). 전체 테스트42/42.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "kind": "step",
+          "at": "2026-11-08T12:16:22.412Z",
+          "summary": "즉시 발행 구현·설치와 브라우저 적용 제한 구분",
+          "results": [
+            {
+              "taskId": "T25",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "소스·모의 최종제출/공개검증지연/재시도/동시클릭 검사 포함46개 통과,설치53파일일치. 실제 네이버 새로고침 후 게시하기 이전 코드 확인: 브라우저 갱신 미적용으로 실제 즉시발행 성공 검증 미실행.",
+              "evidence": "installed-090.json; tests/immediate-publication.test.mjs; 실제브라우저DOM 관측. 미게시 원고 캡처는 로컬 보존.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "kind": "step",
+          "at": "2026-11-08T12:59:10.751Z",
+          "summary": "복구창 자동 처리 소스·설치와 실제 복구 확인",
+          "results": [
+            {
+              "taskId": "T24",
+              "revision": 3,
+              "verdict": "fail",
+              "actual": "자동 복구 1회·늦은 팝업·다른 글 보존·무관한 확인창 미수락 포함49검사 통과. 설치54파일일치. 실제기존시험원고복구·제목본문사진2장일치 확인. 새0.9.1 브라우저자동실행은 미검증. 실제공개발행확인창 수락은 자동승인검토에서 차단.",
+              "evidence": "installed-091.json; tests/editor-recovery.test.mjs; recovery-091-restored.png(미게시 원고로 로컬 보존)",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q21",
+          "kind": "step",
+          "at": "2026-11-08T14:31:18.808Z",
+          "summary": "실제 3건 예약·0.10.2 설치와 미검증 범위",
+          "results": [
+            {
+              "taskId": "T26",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 원고 재작성·네이버 입력·사진 2/2/4장과 예약 3건 대조",
+              "evidence": "실제 네이버 예약 목록 3건·설치57파일·57검사·첨부 실제 화면",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T27",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "최초 실제 예약 3건 확인. 57검사 통과. 지속 자동 등록의 브라우저 활성화 미확인",
+              "evidence": "실제 네이버 예약 목록 3건·설치57파일·57검사·첨부 실제 화면",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T28",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "앱 설정 실제 화면 확인. 크롬 새 버튼 미반영, 실제 예약 취소/시각 변경·키 등록 후 검색은 미검증",
+              "evidence": "실제 네이버 예약 목록 3건·설치57파일·57검사·첨부 실제 화면",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q22",
+          "kind": "step",
+          "at": "2026-11-08T14:51:12.885Z",
+          "summary": "예약 수정 코드·격리 서버 검증, 사용자 화면 보존",
+          "results": [
+            {
+              "taskId": "T29",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "예약 원본 제목·시각 선택, 수정 저장 버튼, 같은 접수번호·시각·재열기 본문/사진 확인 뒤 로컬 반영. 격리 예약 API와 62검사 통과. 실제 네이버 수정 저장 및 설치 적용은 미실행.",
+              "evidence": "tests/reservation-edit.test.mjs; 격리 HTTP 검증; 0.10.3 산출물 60파일/소스47파일 해시 일치. 실제 브라우저 미검증.",
+              "dependencies": {
+                "T27": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q23",
+          "kind": "step",
+          "at": "2026-11-08T15:03:21.147Z",
+          "summary": "실제 런타임 갱신·브라우저 활성화 대기",
+          "results": [
+            {
+              "taskId": "T29",
+              "revision": 2,
+              "verdict": "fail",
+              "actual": "실제 설치 파일·실행 서버0.10.3, 런타임47파일 SHA일치·원고 파일 SHA불변·새 API HTTP400 거부 확인. 62검사 통과. 크롬 새 코드 활성화·실제 예약 수정은 미검증.",
+              "evidence": "runtime-0103-applied.json; 실제health0.10.3; 전체62검사; 새 API거부 응답",
+              "dependencies": {
+                "T27": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q24",
+          "kind": "step",
+          "at": "2026-11-08T15:36:48.488Z",
+          "summary": "하단 관리 UI 변경·격리 동작 및 설치 파일 검증",
+          "results": [
+            {
+              "taskId": "T30",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "하단 예약 정보·시각 입력·동작 그룹 배치, 네이버 편집기로 제거, 예약글 즉시발행 숨김·원고수정 강조. 격리DOM·64검사통과, 설치확장2파일해시일치·원고해시불변. 실제크롬갱신·시각검증미실행.",
+              "evidence": "tests/footer-ui.test.mjs; 실제공개원문 DOM 재실행; footer-0104-applied.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108150326119-v1.0.23.html",
     "postPath": "projects/blog-manager/posts/2026-11-08-manual-blog-manager-20261107-20261108150326119-v1.0.23.md",
     "date": "2026-11-08T15:03:26.119Z",
