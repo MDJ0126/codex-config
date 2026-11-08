@@ -1,5 +1,15 @@
 [
   {
+    "title": "로컬 원고 썸네일이 가로로 납작하게 표시됨",
+    "summary": "기존185×185 썸네일과 달리 로컬 원고는185×104로 표시되어 원본 카드 크기를 적용하도록 수정했습니다. Chrome확장 갱신 후 실화면 재검증 대기입니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-bug-20261108093527060-v1.0.0.html",
+    "date": "2026-11-08T09:35:27.060Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "예제6개 정리와 실제 개발일지3편 작성",
     "summary": "로컬 시험 원고6개를 정리하고 실제 개발 기록·이미지를 담은 미게시 원고3편을 작성했습니다.",
     "project": "blog-manager",
