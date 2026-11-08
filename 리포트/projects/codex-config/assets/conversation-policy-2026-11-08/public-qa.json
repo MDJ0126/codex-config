@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "path": "guide/index.html",
+      "status": 200,
+      "body": true
+    },
+    {
+      "path": "guide/execution.html",
+      "status": 200,
+      "body": true
+    },
+    {
+      "path": "GitHub main AGENTS.md",
+      "status": 200,
+      "body": true
+    }
+  ],
+  "at": "2026-11-08T07:47:55.937Z"
+}
