@@ -1,0 +1,96 @@
+{
+  "source": "archive",
+  "ideas": [
+    {
+      "id": "1619941d-9dcb-49a3-babe-b6e40ea84a46",
+      "source": "archive",
+      "title": "LAST37N 전체 개발 종합: 구현 범위·구조·개선 수치·미구현 항목 — 개발 기록으로 정리하기",
+      "summary": "수원 Unity 웹 생존 게임의 전체 기능·서버 구조·실행 검증과 공개 서비스까지 남은 범위를 종합했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/last37n/reports/2026-10-31-result-20261031030056257-v1.0.0.html",
+      "date": "2026-10-31T03:00:56.257Z",
+      "score": 8
+    },
+    {
+      "id": "9b8dd795-07de-4d27-a7d1-f7f22f41c65c",
+      "source": "archive",
+      "title": "개발 중간 보고 2 · UI 재설계·캠프·NPC·경계 터렛과100명 부하 — 개발 기록으로 정리하기",
+      "summary": "새 배낭·거래 UI, Blender 물자·의료 천막·경계 터렛을 실제 게임에 적용했고 Web/Windows 상호운용과100명 지속 부하를 통과했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/last37n/reports/2026-10-30-result-20261030121254494-v1.0.0.html",
+      "date": "2026-10-30T12:12:54.494Z",
+      "score": 8
+    },
+    {
+      "id": "a25467ae-91fa-4694-95d0-aeac8d03351e",
+      "source": "archive",
+      "title": "9개 언어·시스템 기본 선택·핵폭격 100초 — 개발 기록으로 정리하기",
+      "summary": "게임 정적 UI와 동적 상태를9개 언어로 연결하고, 언어별 README/HTML 문서와 핵폭격 독립100초 쿨타임을 추가했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/growingcity/reports/2026-11-06-result-20261106174159238-v1.0.0.html",
+      "date": "2026-11-06T17:41:59.238Z",
+      "score": 5
+    },
+    {
+      "id": "9e07a74a-753e-4c9a-ae07-9dec59d73e75",
+      "source": "archive",
+      "title": "성장하는 도시 — 자동 성장·파괴·재건 게임 시장조사 — 개발 기록으로 정리하기",
+      "summary": "성장하는 세계를 파괴하는 수요와 자동 재건 선행 사례를 확인했습니다. 현대 도시의 일상·파괴·복구 연출에 집중하는 방향을 제안합니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/growingcity/reports/2026-11-06-result-20261106065451597-v1.0.0.html",
+      "date": "2026-11-06T06:54:51.597Z",
+      "score": 5
+    },
+    {
+      "id": "1efd644b-de57-4c46-b472-b19e348447a0",
+      "source": "archive",
+      "title": "Fantasya 재개발을 위한 스크립트와 샘플 초기화 — 개발 기록으로 정리하기",
+      "summary": "프로젝트 스크립트 전체와 샘플 씬·관련 리소스를 삭제하고 별도 추가 리소스를 보존했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/fantasya/reports/2026-11-06-result-20261106062131191-v1.0.0.html",
+      "date": "2026-11-06T06:21:31.191Z",
+      "score": 5
+    },
+    {
+      "id": "23e63df0-ba40-401d-8233-42b2389aac06",
+      "source": "archive",
+      "title": "블록 구름·프리팹·전용 캐릭터 리그·비행기 낙하 입장 — 개발 기록으로 정리하기",
+      "summary": "옥상/HUD/꽃집 보완·미니게임 제거·점프·UI/NPC 프리팹·16종 리그 보정·4초 비행기 입장. Play161/웹17/서버11 통과.",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-result-20261104095146480-v1.0.0.html",
+      "date": "2026-11-04T09:51:46.480Z",
+      "score": 5
+    },
+    {
+      "id": "b27d456a-cbe1-4e15-b677-a9a55a71e2cb",
+      "source": "archive",
+      "title": "가판대·고정 상인 적용과 최종 QA 완료 — 개발 기록으로 정리하기",
+      "summary": "커피·꽃·핫도그 가판대와 상인3명 적용. 최신 웹에서 수령·멀티/게임·0/4/6/12명 성능·복귀를 확인하고 임시 도구를 정리했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-result-20261104083118873-v1.0.0.html",
+      "date": "2026-11-04T08:31:18.873Z",
+      "score": 5
+    },
+    {
+      "id": "284eaf2a-fd2a-40c5-bc49-04300ddf4e04",
+      "source": "archive",
+      "title": "가판대3구역·고정 상인 적용과 최종 웹 QA — 개발 기록으로 정리하기",
+      "summary": "커피·꽃·핫도그 가판대와 상인3명 적용. 최신 웹에서 수령·멀티/게임·0/4/6/12명 성능·복귀를 확인하고 임시 도구를 정리했습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-result-20261104082603516-v1.0.0.html",
+      "date": "2026-11-04T08:26:03.516Z",
+      "score": 5
+    },
+    {
+      "id": "8d689a47-d48b-4051-b3ad-53371cbcd907",
+      "source": "archive",
+      "title": "옥상 소셜 광장: 멀티·공동 게임·스폰서·이미지판 구현과 상인 검증 대기 — 개발 기록으로 정리하기",
+      "summary": "기존 범위 Play86개·실제 두 웹29개 통과. 상인 추가는 코드 저장 후 화면 조작 중단으로 적용·최종 QA가 남았습니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/afternoon-pause/reports/2026-11-04-result-20261104072650557-v1.0.0.html",
+      "date": "2026-11-04T07:26:50.557Z",
+      "score": 5
+    },
+    {
+      "id": "1908b21b-1050-493b-9c87-be824c2cb37e",
+      "source": "archive",
+      "title": "Camera 전체19예제 — 따뜻한 파스텔·풍성한 정원 보강 — 개발 기록으로 정리하기",
+      "summary": "고객용3씬과 개발용16씬의 조명·재질을 부드럽게 조정하고 나무·관목·꽃과 이끼 동상을 추가했습니다. 전체 실제 Unity 전후를 첨부합니다.",
+      "url": "https://mdj0126.github.io/codex-config/projects/pixelcamera/reports/2026-11-03-result-20261103201116602-v1.0.0.html",
+      "date": "2026-11-03T20:11:16.602Z",
+      "score": 5
+    }
+  ],
+  "notice": "중앙 아카이브의 실제 공개 기록을 바탕으로 추천했습니다. 선택한 기록의 본문과 사진을 가져와 작성합니다."
+}
