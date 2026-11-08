@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-08T10:26:52.356Z",
+  "version": "0.8.0",
+  "filesVerified": 49,
+  "artifactBytes": 159825558,
+  "artifactSha256": "8329A7C6A1329D3FCE877531A0C07691348FC72C14D133EFFE571D0D7365F5F0",
+  "stock": {
+    "settings": {
+      "enabled": true,
+      "target": 3
+    },
+    "status": {
+      "enabled": true,
+      "available": 3,
+      "pending": 0,
+      "target": 3,
+      "at": "2026-11-08T10:25:34.165Z"
+    }
+  },
+  "productionDraftCount": 3,
+  "isolatedServerClosed": true,
+  "testsPassed": 34,
+  "added": "네이버 편집기에서 직접 발행 완료 시 검증·보충; 앱 재시작 시 대기 작업 재개"
+}
