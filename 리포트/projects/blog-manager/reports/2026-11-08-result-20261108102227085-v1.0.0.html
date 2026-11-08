@@ -1,0 +1,32 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>미게시 원고3개 자동 보충과 직접 이웃 후보 추가 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">미</span><span>미로 블로그 매니저</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>미게시 원고3개 자동 보충과 직접 이웃 후보 추가</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">0.8.0 설치와 자동 보충 설정을 마쳤고 별도 프로필에서 실제AI2→3보충·이미지보관을 검증했습니다. 실제 네이버 입력은 확장갱신 대기입니다.</p><div class="post-byline"><time datetime="2026-11-08T10:22:27.085Z">2026년 11월 8일 오후 7:22 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>미게시 원고 최소3개 자동 유지를 구현·설치하고 이 PC에서 켰습니다. 현재원고3개를보존했으며별도프로필에서실제AI1편과사진·파일생성으로2→3보충을확인했습니다. 실제발행은하지않았습니다.</p>
+<p><figure><img class="report-image" src="../assets/stock-three-preserved.png" alt="설치 후 원고3개 표시" loading="lazy"><figcaption>설치 후 원고3개 표시</figcaption></figure></p>
+<p>대화요약: 사용자는이웃기능확인·미게시3개유지·빈편집기문제를요청했습니다. <a class="report-link" href="../assets/stock-conversation.json">발언·결정 기록</a></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>게시결과URL·공개본문검증후에만원고를게시됨으로바꾸고부족한개수를보충합니다. 앱실행중60초주기에도확인합니다.</li>
+<li>진행중작업을보충예정수에포함하고같은출처·최근실패출처를제외합니다. 실제원고3개가있으면추가AI호출을하지않습니다.</li>
+<li>작성폼에자동유지토글·미게시/대기개수·오류표시를추가했습니다.</li>
+<li>키없이직접블로그주소를후보로추가하는UI를넣었습니다. 실제서로이웃신청은네이버에서사용자가진행하며자동전송하지않습니다. 게임후보자동검색은현재API키미보유로대기입니다.</li>
+<li>생성기카테고리를최신실제블로그카테고리와대조하고기존3편을실제작업카테고리로맞췄습니다.</li>
+</ul>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>실제설치48파일SHA일치·기존3편제목/본문보존·자동유지enabled=true·available3/pending0 확인. <a class="report-link" href="../assets/stock-install-verification.json">설치 검증</a>.</li>
+<li>별도실제프로필의2개원고에서실제Codex가1편작성해3개로보충. 사진1장과MD/메타총3파일ready=true. 다시검사시jobCount1로중복예약없음. <a class="report-link" href="../assets/stock-live-result.json">실제 생성</a> · <a class="report-link" href="../assets/stock-live-request.json">예약</a>. 최초분리서버검사에서요청후서버접속이종료돼실작성확인에실패했고,수명을검사종료까지유지하는방식으로재실행해위결과를확인했습니다.</li>
+<li>잘못된게시결과주소400거부·기존원고불변·추가예약없음. <a class="report-link" href="../assets/stock-failed-publication.json">실제 실패 검사</a>. 실제공개발행후트리거는미실행이며단위분기검사와구분합니다.</li>
+<li>실제HTTP포함33/33회귀검사통과. 작성폼토글·개수·이웃카드는분리된소스DOM검사입니다. <a class="report-link" href="../assets/stock-compose-ui.json">폼 검사</a>. 확장페이지는앞선도구보안정책차단으로실화면검증을대체했다고보고하지않습니다.</li>
+<li>최종설치본159824988바이트·SHA256 5B09D2DC25B813D7E18DC911392115F91FDA3D1B62488FF95C35844CEB26C36A. 공식GitChunk필터복원후같은SHA확인. <a class="report-link" href="../assets/stock-gitchunk-restore.json">복원</a>. 소스·설치본d1679ac,지침da2f44b푸시.</li>
+<li>원고목록은기존유지확인용이며폼변경의전후캡처를대신하지않습니다. 폼실화면의정확한전후캡처미확보.</li>
+</ul>
+<h2 id="section-5">남은 사항</h2>
+<p>실제네이버제목·본문·사진전송과직접후보폼실화면은확장새로고침응답대기입니다. 공개발행·실제서로이웃신청은전송하지않았습니다. 앱종료·AI로그인실패·자료부족시즉시3개완성을보장하지않고상태에오류를남깁니다.</p>
+<p>교훈: 사용자가요청한3개유지·검증성공후보충조건을프로젝트AGENTS기존요청조건과통합했습니다. 전역은사실검증·사용자동작구분규칙과중복되어변경없음. 별도프로필검사서버는정상종료했고새검증탭은닫았으며사용자기존탭은보존했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분</li>
+<li>실제로 완료된 시간: 시작2026-11-08 19:06:01 KST. 19:18설치48파일·원고보존검사,19:21GitChunk복원확인. 실제네이버입력검증은사용자확장갱신대기.</li>
+<li>XERJ: 미사용 — XERJ연결도구미제공. rg·실제DOM/HTTP/실AI/파일·공식Chrome문서·회귀검사사용.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-08-result-20261108102227085-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=blog-manager&topic=qa&relatedReport=projects%2Fblog-manager%2Freports%2F2026-11-08-result-20261108102227085-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=blog-manager">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=blog-manager">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,0 +1,23 @@
+{
+  "invalidPublicationRejected": 400,
+  "draftsUnchanged": true,
+  "stock": {
+    "settings": {
+      "enabled": true,
+      "target": 3
+    },
+    "status": {
+      "enabled": true,
+      "available": 3,
+      "pending": 0,
+      "target": 3,
+      "at": "2026-11-08T10:19:35.333Z"
+    }
+  },
+  "search": {
+    "preferredSource": "search",
+    "archiveBase": "https://mdj0126.github.io/codex-config/",
+    "query": "게임 개발",
+    "searchConfigured": false
+  }
+}

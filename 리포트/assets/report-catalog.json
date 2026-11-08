@@ -1,5 +1,35 @@
 [
   {
+    "title": "게시하기 후 빈 네이버 편집기: 전송 단계 진단 보강",
+    "summary": "실제편집기빈노드와원초안타임아웃을확인했습니다. 준비대기·입력포커스·단계오류·입력검토버튼을추가했으며실전송재검증대기입니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-bug-20261108102228347-v1.0.0.html",
+    "date": "2026-11-08T10:22:28.347Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미게시 원고3개 자동 보충과 직접 이웃 후보 추가",
+    "summary": "0.8.0 설치와 자동 보충 설정을 마쳤고 별도 프로필에서 실제AI2→3보충·이미지보관을 검증했습니다. 실제 네이버 입력은 확장갱신 대기입니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-result-20261108102227085-v1.0.0.html",
+    "date": "2026-11-08T10:22:27.085Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "발행 입력 복구·미게시3개 자동 유지·이웃 후보 추가",
+    "summary": "로컬 초안·예약·미리보기와 최신 글 문체 갱신을 구현하고 네이버 발행 연결을 검증합니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108101650344-v1.0.17.html",
+    "date": "2026-11-08T10:16:50.344Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "로컬 원고 썸네일 크기 수정 후 실제 화면 확인",
     "summary": "확장 새로고침 후 로컬3개와 기존4개가 모두185×185로 표시됨을 실제 Chrome에서 확인했습니다.",
     "project": "blog-manager",
