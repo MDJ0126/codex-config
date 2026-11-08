@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-08T07:24:11.702Z",
+  "results": [
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "route": "/index.html",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/app.js",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/api/ideas",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/api/ideas",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "route": "/api/search-settings",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "route": "/api/config",
+      "method": "GET",
+      "status": 200
+    }
+  ]
+}
