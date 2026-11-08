@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-08T08:15:04.661Z",
+  "bundle": {
+    "ready": true,
+    "relativePath": "draft-files/a480934d-1500-4b36-a3e5-c166b2ac8c7b/current/article.md",
+    "fileCount": 4,
+    "imageCount": 2,
+    "warnings": [],
+    "revision": 4
+  },
+  "zipBytes": 163741,
+  "missingKeyErrors": [
+    {
+      "route": "/api/compose/recommend",
+      "status": 400,
+      "message": "네이버 검색 API 키가 필요합니다. 검색 API 연결 설정에서 Client ID·Client Secret을 저장해 주세요."
+    },
+    {
+      "route": "/api/neighbors/recommend",
+      "status": 400,
+      "message": "네이버 검색 API 키가 필요합니다. 검색 API 연결 설정에서 Client ID·Client Secret을 저장해 주세요."
+    }
+  ]
+}

@@ -1,5 +1,25 @@
 [
   {
+    "title": "네이버 글감10개·원고 파일 보관·게임 이웃 추천",
+    "summary": "검색 기반 글감과 게임 이웃 추천을 추가하고 작성 요청 후 Markdown·사진 자동 파일 보관을 검증했습니다. 실검색은 API키 연결 대기입니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-result-20261108082437114-v1.0.0.html",
+    "date": "2026-11-08T08:24:37.114Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네이버 글감10개·원고 파일 보관·게임 이웃 추천",
+    "summary": "로컬 초안·예약·미리보기와 최신 글 문체 갱신을 구현하고 네이버 발행 연결을 검증합니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108082435766-v1.0.15.html",
+    "date": "2026-11-08T08:24:35.766Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "갱신 설치에서 폐기한 웹 관리자 파일이 남는 문제",
     "summary": "0.6.0 갱신 뒤 이전 웹 관리자 파일5개와 HTTP200을 재현하고0.6.1에서 삭제·차단했습니다.",
     "project": "blog-manager",
