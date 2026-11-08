@@ -1,0 +1,44 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>블로그 주소 설정·맞춤 글감 10개·썸네일 표시 개선 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">미</span><span>미로 블로그 매니저</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>블로그 주소 설정·맞춤 글감 10개·썸네일 표시 개선</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">사용할 블로그 주소를 입력하고 게시글·관심사에 맞는 글감 10개를 받도록 변경했습니다. 썸네일은 4열에서 원본 비율을 유지하며 표시 방식과 위치를 저장합니다.</p><div class="post-byline"><time datetime="2026-11-08T07:04:27.460Z">2026년 11월 8일 오후 4:04 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>블로그별 데이터 분리와 글감 10개 생성·원고 시작, 썸네일 설정 저장·재열기를 실제 실행했습니다. 네이버 검색 모드는 구현했으며 실제 API 호출은 사용자 키 등록 후 확인이 필요합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>상단에 블로그 주소 입력란을 추가하고 서버·확장의 고정 작성자 ID를 제거했습니다. 주소별 초안·문체·검색 설정을 분리하며 새 설치에는 개인 블로그 데이터를 넣지 않습니다.</li>
+<li>실제 게시글 제목·태그와 관심사를 분석해 서로 다른 접근법의 글감 10개를 제안합니다. 근거 링크·추가 문체 지침을 보존하고 선택한 글감으로 로컬 원고를 시작합니다. 이는 키워드 통계와 접근법 조합이며 의미 전체를 해석하는 생성형 AI 분석은 아닙니다.</li>
+<li>검색 API 키는 로컬에서만 읽고 화면·상태 API·일반 배포본에 반환하지 않습니다. 네이버 검색 결과는 참고 자료로만 표시합니다. <a class="report-link" href="https://developers.naver.com/docs/serviceapi/search/blog/blog.md">네이버 공식 API 문서</a>의 인증 헤더와 요청 형식을 적용했습니다.</li>
+<li>목록 4열·정사각 이미지 영역, 전체 보이기/영역 채우기와 위/가운데/아래 위치 저장을 적용했습니다. 공개 글은 본문에 있는 선명한 실제 이미지 주소를 우선 사용하고 원본 이미지 파일은 수정하지 않습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/personalization-general-before.png" alt="변경 전 목록" loading="lazy"><figcaption>변경 전 목록</figcaption></figure>
+변경 전: 작성자 이름이 고정되어 있고 주소·글감 메뉴가 없으며 목록은 3열입니다.</p>
+<p><figure><img class="report-image" src="../assets/personalization-general-after.png" alt="변경 후 목록" loading="lazy"><figcaption>변경 후 목록</figcaption></figure>
+변경 후: 주소 입력과 글감 메뉴, 4열 썸네일과 원본 비율 유지 표시입니다.</p>
+<p><figure><img class="report-image" src="../assets/personalization-blog-settings-after.png" alt="변경 후 관심사 및 검색 설정" loading="lazy"><figcaption>변경 후 관심사 및 검색 설정</figcaption></figure>
+신규 설정 화면: 관심사와 API 키 입력란입니다. 변경 전에는 해당 설정 화면이 없어 위의 변경 전 목록과 비교합니다.</p>
+<p><figure><img class="report-image" src="../assets/personalization-ideas-after.png" alt="변경 후 글감" loading="lazy"><figcaption>변경 후 글감</figcaption></figure>
+신규 글감 화면: 10개 제안과 기존 게시글의 실제 근거 링크가 생성됩니다. 변경 전에는 글감 기능이 없어 별도 동일 화면은 존재하지 않습니다.</p>
+<p><figure><img class="report-image" src="../assets/personalization-thumbnail-settings-before.png" alt="변경 전 원고 편집기" loading="lazy"><figcaption>변경 전 원고 편집기</figcaption></figure>
+보존된 0.4.1 실제 실행에서 재촬영한 편집기에는 대표 이미지 구성 옵션이 없습니다.</p>
+<p><figure><img class="report-image" src="../assets/personalization-thumbnail-settings-after.png" alt="변경 후 원고 편집기" loading="lazy"><figcaption>변경 후 원고 편집기</figcaption></figure>
+대표 이미지 주소와 표시 방식·위치를 저장합니다. 같은 브라우저 배율의 비교이며 본문은 검증용 원고입니다.</p>
+<h2 id="section-4">검증</h2>
+<ul>
+<li>자동 회귀 24개 통과, 기존 라이브 통합 1개는 해당 실행에서 미선택했습니다. 별도 실제 HTTP 검증에서 주소 전환/복원·키 비노출·10개 생성·키 없는 검색 거부를 확인했습니다.</li>
+<li>실제 브라우저에서 10개 제안 → 원고 시작 → 대표 이미지 cover/top 저장 → 새로고침·재열기의 값 유지 → 테스트 원고 백업 삭제를 확인했습니다.</li>
+<li>실제 네이버 원문 DOM 재생에서는 원본 카드 4개 보존·로컬 초안 2개 삽입·4열·본문 읽기·직접 편집 저장/취소·발행 확인 분기를 검증했습니다. 발행 호출은 모의이며 실제 게시하지 않았습니다.</li>
+<li>일반 배포 ZIP 해시·57개 해제 파일·공백 포함 다른 경로 실행에서 초안/게시물 0개를 확인했습니다.</li>
+<li>원본 PNG 6개는 각 200KB 미만입니다. Affinity doctor/status는 ECONNREFUSED여서 편집·재압축·GIF를 만들지 않고 실제 캡처 원본을 첨부했습니다.</li>
+</ul>
+<p><a class="report-link" href="../assets/personalization-personalization-http-qa.json">HTTP 실행 근거</a> · <a class="report-link" href="../assets/personalization-thumbnail-browser-qa.json">이미지 실측</a> · <a class="report-link" href="../assets/personalization-portable-verification.json">배포본 검증</a> · <a class="report-link" href="../assets/personalization-native-card-verification.json">확장 DOM 회귀</a></p>
+<h2 id="section-5">남은 사항</h2>
+<ul>
+<li>네이버 검색 실서비스는 API 키 미등록으로 미실행입니다. 키 없이도 내 게시글·관심사 기반 글감 10개는 동작합니다. 실제 검색 결과를 확인했다고 보고하지 않습니다.</li>
+<li>확장 변경은 소스·DOM 실행으로 확인했으며 이번 수정본의 설치된 Chrome 확장 재로드 검증은 미실행입니다. 설치형 패키지 작업은 별도 대화에서 진행 중이므로 이번 보고는 기능 변경과 검증한 일반 ZIP 범위입니다.</li>
+<li>교훈 검토: 전역 지침 변경 없음. 고정 사용자 정보 제거·데이터 보존·실제 실행 검증은 기존 지침과 중복되므로 추가 규칙을 만들지 않았습니다.</li>
+</ul>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분</li>
+<li>실제로 완료된 시간: 시작 2026-11-08 15:47:35 Asia/Seoul. 구현·로컬 검증 기록 시점 2026-11-08T07:04:23.840Z (1009초). 공개 게시 확인은 후속 QA와 최종 채팅에 기록합니다.</li>
+<li>XERJ: 미사용 — XERJ 도구/검색 스크립트 미제공. rg·현재 소스·실제 HTTP/브라우저·DOM 실행으로 검증했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-08-result-20261108070427460-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=blog-manager&topic=qa&relatedReport=projects%2Fblog-manager%2Freports%2F2026-11-08-result-20261108070427460-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=blog-manager">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=blog-manager">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
