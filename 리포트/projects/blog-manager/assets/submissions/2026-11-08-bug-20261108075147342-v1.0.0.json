@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "blog-manager",
+    "kind": "bug",
+    "title": "갱신 설치에서 폐기한 웹 관리자 파일이 남는 문제",
+    "summary": "0.6.0 갱신 뒤 이전 웹 관리자 파일5개와 HTTP200을 재현하고0.6.1에서 삭제·차단했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Windows x64, 설치 앱0.5.0→0.6.0→0.6.1",
+    "steps": "기존0.5.0 위에0.6.0 설치 후 설치 폴더의 public 파일과 /index.html HTTP 상태를 확인합니다.",
+    "expected": "폐기한 웹 관리자 파일이 제거되고 이전 주소는404이며 사용자 원고는 보존됩니다.",
+    "actual": "0.6.0 설치 후 index.html/app.js/app.css/mirror.css/article-render.js가 남고 /index.html이200을 반환했습니다.",
+    "cause": "0.6.0 설치 정의는 새 payload 복사만 정의하고 기존 폐기 파일 삭제를 정의하지 않았습니다. 실제 설치 경로와 HTTP 검사로 잔존을 확인했습니다.",
+    "changes": "0.6.1에 정확한5개 프로그램 파일의 InstallDelete와 서버의 이전 경로404 처리를 추가했습니다. 사용자 데이터 경로는 삭제 대상에 포함하지 않았습니다.",
+    "verification": "실제0.6.1 갱신 설치44파일 해시 일치. 폐기 파일0개·각 URL404, 초안5/게시글4, 회귀26/26 통과. [재현](../assets/compose-upgrade-check.json) · [수정 검증](../assets/compose-061-verification.json). 화면 변화가 없는 서버 경로·파일 정리 검사이며 별도 브라우저 캡처를 실행하지 않았습니다.\n\n[관련 작업 대화 기록](../assets/compose-conversation.json)",
+    "remaining": "확장 폼 내부 직접 화면 제어·캡처는 별도 도구 정책 제한으로 미실행입니다. 설치 잔여 파일의 수정 검증과 구분합니다.",
+    "outcome": "0.6.1 실제 갱신 설치에서5개 파일 삭제·5개 주소404와 사용자 원고 보존을 확인했습니다.",
+    "proposedTime": "단일 작성 폼 작업의15~25분 예상에 포함",
+    "actualTime": "제안15~25분. 시작2026-11-08 16:25:54 Asia/Seoul. 추가 갱신 문제 재현·0.6.1 설치 검증2026-11-08 16:48:06 Asia/Seoul. 최종 보고 배포 확인 진행 중",
+    "xerjEvidence": "XERJ 도구 미제공. 현재 소스·실제 설치·파일 해시·HTTP·회귀 검사로 검증.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  }
+}
