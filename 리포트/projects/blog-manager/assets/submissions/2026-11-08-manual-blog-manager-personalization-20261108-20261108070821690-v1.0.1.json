@@ -1,0 +1,144 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "blog-manager",
+    "kind": "manual",
+    "title": "블로그 주소 설정·맞춤 글감 10개·썸네일 개선",
+    "summary": "목표와 완료 기준을 확정하고 작업별 QA를 반복합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "API 키 미등록으로 실서비스 검색 호출 미실행. 새 확장의 Chrome 재로드 미검증. 오류 임시 탭 1개는 앱의 턴 종료 자동 정리 대상이며 수동 정리 완료로 표시하지 않습니다. 전체 final QA와 메뉴얼 complete는 등록하지 않았습니다.",
+    "outcome": "세 기능의 구현과 로컬·공개 보고 검증을 마쳤습니다. 실제 네이버 검색과 확장 설치 반영은 별도 확인이 필요합니다.",
+    "proposedTime": "15~25분",
+    "actualTime": "시작 2026-11-08 15:47:35 Asia/Seoul. 공개 보고 검증 2026-11-08 16:07:37 Asia/Seoul (20분 2초). 후속 검증 제한은 남은 사항에 기록했습니다.",
+    "xerjEvidence": "XERJ 도구와 검색 스크립트 미제공. rg와 현재 소스·실행 결과 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "blog-manager-personalization-20261108",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "주소 입력으로 사용할 블로그를 선택하고 성향 기반 글감 10개와 디자인에 맞는 썸네일을 제공합니다.",
+    "completionCriteria": "주소 저장·재시작·블로그별 데이터 분리, 검색 인증·실패 구분과 정확히 10개 글감 생성·근거·원고 시작, 4열 썸네일 표시와 설정 저장을 실제 실행하고 공개 보고합니다.",
+    "previousManual": "projects/blog-manager/reports/2026-11-08-manual-20261108070425882-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "주소 설정과 데이터 분리",
+        "action": "주소 입력·검증·블로그별 저장소와 확장 접근을 구현합니다.",
+        "expected": "다른 블로그 전환 후 기존 데이터가 섞이지 않고 복원됩니다.",
+        "qa": "다른 블로그 설정·재조회·원래 주소 복원, 잘못된 주소 거부와 확장 권한 검사를 실행합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "분리된 데이터 폴더의 실제 서버에서 주소 입력·다른 블로그 전환·초안/키 분리·기존 주소 복원과 잘못된 주소 거부를 확인했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "맞춤 글감 10개",
+        "action": "게시글·관심사를 분석하고 선택적 네이버 검색과 근거 링크·원고 시작을 구현합니다.",
+        "expected": "키 없는 개인화와 검색 결과 기반 제안이 구분되고 10개가 생성됩니다.",
+        "qa": "실제 개인화 HTTP 생성과 UI 원고 생성, API 인증·오류·결과 분석 모의 응답 검사를 실행합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "브라우저에서 10개 글감·실제 근거 링크·원고 시작을 확인하고 테스트 원고는 백업 후 삭제했습니다. 검색 API 인증 헤더·마크업 제거·실패 처리는 모의 응답으로 검증했습니다. 실제 검색 호출은 키 미등록으로 미실행입니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "썸네일 구성",
+        "action": "원본 보존·4열·정사각 영역과 contain/cover·위치 선택을 적용합니다.",
+        "expected": "가로/세로 이미지가 비율을 유지하고 제목과 배지가 겹치지 않습니다.",
+        "qa": "실제 이미지 로딩·치수·비율·설정 저장·재열기와 전후 화면을 비교합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 화면 4열 각 174.5px, 이미지 1280×720·773×435·453×289 로딩과 contain을 확인했습니다. cover/top 저장·재열기 유지도 확인했습니다."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "배포·보고·정리",
+        "action": "회귀 검사·일반 배포 ZIP·실행 화면·중앙 보고서를 생성합니다.",
+        "expected": "테스트와 공개 본문·첨부 검증 및 작업 세션 정리가 완료됩니다.",
+        "qa": "테스트 실행·배포본 해제·해시·다른 경로 실행·공개 보고서와 이미지 확인을 수행합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "일반 ZIP 57개 파일·해시·이동 경로 최초 실행과 중앙 배포 c7c16ef 성공, 개별 보고서 HTTP 200·실제 본문·이미지 6개 및 근거 4개 해시 일치를 확인했습니다. 검증 서버 4320/4321/4323 종료 및 4321/4323 연결 거부 확인. 정상 검증 탭 2개는 닫았습니다. 연결 오류 탭 1개는 URL 정책상 수동 닫기가 차단되어 턴 종료 시 앱의 임시 탭 자동 정리 대상입니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-08T07:04:23.840Z",
+        "summary": "실제 HTTP·브라우저·회귀 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "분리된 데이터 폴더의 실제 서버에서 주소 입력·다른 블로그 전환·초안/키 분리·기존 주소 복원과 잘못된 주소 거부를 확인했습니다.",
+            "evidence": "personalization-http-qa.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "브라우저에서 10개 글감·실제 근거 링크·원고 시작을 확인하고 테스트 원고는 백업 후 삭제했습니다. 검색 API 인증 헤더·마크업 제거·실패 처리는 모의 응답으로 검증했습니다. 실제 검색 호출은 키 미등록으로 미실행입니다.",
+            "evidence": "ideas-after.png; tests/personalization.test.mjs",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 화면 4열 각 174.5px, 이미지 1280×720·773×435·453×289 로딩과 contain을 확인했습니다. cover/top 저장·재열기 유지도 확인했습니다.",
+            "evidence": "thumbnail-browser-qa.json; thumbnail-settings-after.png",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-08T07:08:20.226Z",
+        "summary": "중앙 공개 배포·본문·첨부·정리 검사",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "GitHub Actions 배포 성공, 인증 없는 개별 보고서 HTTP 200, 이미지 6개·근거 4개 해시 일치. 검증 서버 종료. 오류 탭 1개 수동 닫기는 제한되어 자동 정리 대상임을 기록했습니다.",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/blog-manager/reports/2026-11-08-result-20261108070427460-v1.0.0.html; https://github.com/MDJ0126/codex-config/actions/runs/42457343606; personalization-public-qa.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
