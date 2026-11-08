@@ -1,5 +1,25 @@
 [
   {
+    "title": "발행 입력 복구·미게시3개 자동 유지·이웃 후보 추가",
+    "summary": "로컬 초안·예약·미리보기와 최신 글 문체 갱신을 구현하고 네이버 발행 연결을 검증합니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-manual-blog-manager-20261107-20261108115830493-v1.0.18.html",
+    "date": "2026-11-08T11:58:30.493Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "즉시 게시 중단 원인 확인·본문 복구·0.8.8 설치",
+    "summary": "실제 페이지 오류는 네이버 자동저장 복구창으로 인한 제목 입력 중단이었습니다. 자체 시험 원고를 복구하고 본문 전체 서식을 맞췄으며 입력 검증을 통과했습니다. 공개 발행 최종 응답은 대기 중입니다.",
+    "project": "blog-manager",
+    "reportPath": "projects/blog-manager/reports/2026-11-08-bug-20261108115828816-v1.0.0.html",
+    "date": "2026-11-08T11:58:28.816Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "네이버 전송 서식 불일치 확인·클립보드 서식 보완",
     "summary": "네이버 편집기로 내용이 들어간 것과 원본 서식 보존은 별개입니다. 원본 본문과 다른 글꼴·크기를 확인했고 명시적 서식 전송을 소스에 반영했습니다. 전체 재전송 검증은 남아 있습니다.",
     "project": "blog-manager",
