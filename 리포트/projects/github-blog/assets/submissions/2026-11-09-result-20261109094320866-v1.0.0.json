@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "미로 블로그 공식 주소를 miro-game로 변경",
+    "summary": "miro-game.pages.dev에 배포하고 이전 주소를 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기본 주소, canonical과 사이트맵, 예약 발행 대상을 새 주소로 변경했습니다. 이전 공개 주소는 같은 경로를 새 주소로 연결합니다.",
+    "verification": "새 주소의 홈과 게시물 응답, canonical, 이전 주소의 경로 및 쿼리 전달과 예약 발행 주소 설정을 확인했습니다.",
+    "remaining": "화면 디자인에는 변화가 없어 전후 UI 캡처 대신 공개 HTTP 응답을 근거로 기록했습니다. 전역 지침 변경은 없습니다.\n\n대화 기록 요약. 사용자는 다른 사이트 링크를 정리하고 “miro-game으로 하지?”라고 요청했습니다. AI는 miro-game을 대표 주소로 설정하고 이전 주소에서 기존 링크를 같은 경로로 전달하도록 구성했습니다.",
+    "outcome": "[미로 개발노트](https://miro-game.pages.dev/)의 공개 주소를 바꿨습니다.",
+    "proposedTime": "공식 주소 설정과 배포 확인 약 2~4분.",
+    "actualTime": "운영 주소 확인 2026-11-09T18:43:04+09:00. 확인 가능한 준비 기록 2026-11-09T18:40:42+09:00 이후 142초.",
+    "xerjEvidence": "주소 설정 변경으로 코드 검색 불필요.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
