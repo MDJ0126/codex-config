@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "이전 미로 블로그 주소 세 개 삭제",
+    "summary": "이전 Pages 프로젝트 세 개를 삭제했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 주소 miro-dev.pages.dev, miro-7rc.pages.dev, moondongjun-blog.pages.dev에 연결된 프로젝트를 삭제했습니다.",
+    "verification": "Wrangler가 miro-dev, miro, moondongjun-blog 삭제 성공을 반환했습니다. 프로젝트 목록에서 세 항목이 사라졌고 현재 주소는 HTTP 200을 반환했습니다. 이전 주소의 확인 응답은 DNS 미해결 한 건과 HTTP 522 두 건이었습니다.",
+    "remaining": "화면 디자인에는 변화가 없어 전후 UI 캡처 대신 공개 HTTP 응답을 근거로 기록했습니다. 전역 지침 변경은 없습니다.\n\n대화 기록 요약. AI가 이전 세 프로젝트의 영구 삭제 여부를 물었고, 사용자는 “ㅇㅇ 삭제해줘 마지막 주소만 사용할거니깐”이라고 승인했습니다.",
+    "outcome": "[미로 개발노트](https://miro-game.pages.dev/)의 정상 응답을 확인하고 이전 주소를 삭제했습니다.",
+    "proposedTime": "삭제와 확인 약 1~2분.",
+    "actualTime": "운영 주소 확인 2026-11-09T19:10:58+09:00. 확인 가능한 준비 기록 2026-11-09T19:10:33+09:00 이후 25초.",
+    "xerjEvidence": "주소 설정 변경으로 코드 검색 불필요.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
