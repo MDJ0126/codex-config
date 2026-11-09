@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "result",
+    "title": "아이소매트릭 시점 설명을 설정 아래로 이동",
+    "summary": "Inspector에 설정 카드를 먼저 표시하고 기존 설명 두 문단을 아래에 배치했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 설정 카드 아래에 줄바꿈과 여백이 있는 설명 영역을 배치했습니다. 기존 각도·복원 안내와 Transform·자유 시점 안내의 번역은 그대로 사용합니다.\n- 대화 (발언 시각 미기록): 사용자는 스크린샷을 보여주며 설명 디자인을 지적했고 이어 “설명은 아래로 내려줘”라고 요청했습니다. AI는 두 설명을 설정 카드 뒤에 배치했습니다.",
+    "verification": "설정 카드와 직렬화 필드 생성 후 설명이 추가되며 공용 보조 텍스트 스타일을 사용하는 것을 소스로 확인했습니다.",
+    "remaining": "Unity Inspector 실제 표시 및 수정 후 화면 캡처는 미확인입니다. 사용자가 제공한 이미지는 수정 전 참고 화면입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+    "outcome": "설정 카드 아래에서 간격과 공용 보조 텍스트 스타일을 적용한 설명을 읽을 수 있도록 구성했습니다.",
+    "proposedTime": "수정 및 코드 확인 2~4분",
+    "actualTime": "21:48:48 KST 작업 시작. 21:49:26 KST까지 코드 수정 및 정적 확인 (38초). 실제 Unity 화면 확인은 미실행.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
