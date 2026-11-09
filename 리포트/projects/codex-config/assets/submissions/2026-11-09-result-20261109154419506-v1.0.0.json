@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "프로젝트 전용 지침의 폴더 탐색",
+    "summary": "모아보기에서 프로젝트 20개를 폴더로 펼치고, 턴룸 제품은 하위 폴더에서 각각 열 수 있습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 개별 프로젝트마다 접고 펼칠 수 있는 폴더를 만들고, 턴룸에는 공통·통합과 제품 폴더를 묶었습니다.\n- 기존 프로젝트 지침 원문과 개별 URL을 그대로 사용합니다.\n- 교훈 검토: 전역·전용 기준 변경 없음. 기존 사이트 분류를 재사용한 화면 개선입니다.\n\n### 대화 기록\n\n- 사용자(시각 미기록): “폴더별로 나누고 폴더 단위로 지침 따로 만들어 전용”.\n- 사용자(범위 선택): “Tracefolio 사이트에서 프로젝트를 폴더로 표시”.\n- AI: 실제 프로젝트 파일은 수정하지 않고 사이트 모아보기를 폴더 탐색으로 변경했습니다.",
+    "verification": "- 생성본에서 20개 폴더와 해당 프로젝트 지침 URL을 대조했습니다.\n- 공개 브라우저에서 개별 프로젝트 폴더를 펼쳐 지침으로 이동하고, 턴룸 묶음을 접었다 펼쳐 DDT 전용 지침을 열었습니다.\n\n![변경 전 · 프로젝트 링크 목록](../assets/project-guideline-folders-20261110/before.jpg)\n\n변경 전 · 프로젝트 이름이 링크 목록으로 표시됐습니다.\n\n![변경 후 · 프로젝트 폴더 펼치기](../assets/project-guideline-folders-20261110/after.jpg)\n\n변경 후 · 개별 폴더를 펼치면 전용 지침과 프로젝트 기록이 나타납니다.\n\n![변경 전 · 턴룸 제품 링크 목록](../assets/project-guideline-folders-20261110/before-group.jpg)\n\n변경 전 · 턴룸 제품 이름이 일반 목록으로 표시됐습니다.\n\n![변경 후 · 턴룸 하위 폴더](../assets/project-guideline-folders-20261110/after-group.jpg)\n\n변경 후 · 턴룸을 펼쳐 제품별 폴더와 해당 지침 링크를 확인할 수 있습니다.",
+    "remaining": "없습니다.",
+    "outcome": "[프로젝트 전용 지침 사항](../../../guide/project-instructions.html)에서 프로젝트 폴더를 펼쳐 전용 지침과 프로젝트 기록을 열 수 있습니다.",
+    "proposedTime": "사이트 범위 확정 후 6~10분",
+    "actualTime": "2026-11-10 00:44:17 KST 공개 사이트 동작 확인 기록 (착수 후 9분 7초). 보고서 배포 확인은 별도.",
+    "xerjEvidence": "사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}

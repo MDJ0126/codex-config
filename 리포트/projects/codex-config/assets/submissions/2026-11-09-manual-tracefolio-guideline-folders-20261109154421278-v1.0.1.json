@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없습니다.",
+    "outcome": "프로젝트 폴더 탐색을 공개하고 각 지침 연결을 검증했습니다.",
+    "proposedTime": "사이트 범위 확정 후 6~10분",
+    "actualTime": "2026-11-10 00:44:17 KST 공개 사이트 동작 확인 기록 (착수 후 9분 7초). 보고서 배포 확인은 별도.",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "tracefolio-guideline-folders",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "Tracefolio 모아보기에서 프로젝트별 폴더를 펼쳐 각자의 전용 지침을 열 수 있게 합니다.",
+    "completionCriteria": "기존 프로젝트 지침이 각각 자기 폴더 아래 연결되고 턴룸 제품은 턴룸 하위에 표시됩니다. 공개 사이트에서 폴더와 전용 지침 이동을 확인합니다.",
+    "previousManual": "projects/codex-config/reports/2026-11-09-manual-20261109153819022-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "모아보기 폴더 탐색 구현 및 공개 검증",
+        "action": "기존 프로젝트 분류와 전용 지침 URL을 그대로 사용해 폴더를 구성하고 Pages에 배포합니다.",
+        "expected": "개별 프로젝트 및 턴룸 하위 제품 폴더에서 전용 지침이 열립니다.",
+        "qa": "등록 프로젝트와 생성된 폴더·링크를 대조하고 공개 브라우저에서 폴더를 펼쳐 본문을 엽니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "생성본의 폴더 20개와 실제 공개 사이트의 개별·턴룸 하위 폴더에서 지침 이동을 확인했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T00:44:17.1432610+09:00",
+        "summary": "공개 폴더 탐색과 지침 이동 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "생성본의 폴더 20개와 실제 공개 사이트의 개별·턴룸 하위 폴더에서 지침 이동을 확인했습니다.",
+            "evidence": "배포 커밋 1fa038d1 및 실제 브라우저 화면",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
