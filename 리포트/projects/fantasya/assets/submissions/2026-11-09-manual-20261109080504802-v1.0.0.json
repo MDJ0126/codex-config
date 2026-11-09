@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "manual",
+    "title": "DDT 캐릭터 데이터와 몬스터 상속",
+    "summary": "Fantasya에 스테이터스·캐릭터 표와 몬스터별 전용 스크립트를 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "15~25분 · 2026-11-09 16:59:11 KST 시작",
+    "actualTime": "실행 전",
+    "xerjEvidence": "연결 경로 미확인으로 rg 및 원본 코드 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "fantasya-ddt-monsters-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "DDT에서 고블린과 스켈레톤의 데이터를 관리하고 Monster 상속과 샘플 주석 규칙을 적용합니다.",
+    "completionCriteria": "두 표 등록과 원본·생성 데이터 검증, 씬의 전용 스크립트 참조, DDT 편집값의 Play Mode 반영과 전투 회귀, 프로젝트 문서 검증",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "DDT 스테이터스·캐릭터 등록",
+        "action": "DDT 2.0.2 API로 XLSX를 생성하고 원래 전투 값을 등록합니다.",
+        "expected": "두 원본과 대응 바이너리가 일치합니다.",
+        "qa": "DDT validate-game과 테이블 렌더를 수행합니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Monster 상속·씬 전투 적용",
+        "action": "공통 Monster와 고블린·스켈레톤 클래스를 연결하고 샘플 주석 규칙을 적용합니다.",
+        "expected": "두 전용 클래스가 DDT 값을 읽고 기존 전투가 동작합니다.",
+        "qa": "DDT 값을 바꾸고 씬을 저장·재열기한 뒤 Play Mode에서 전투와 재시작을 확인합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "프로젝트 문서와 실행 기록",
+        "action": "README·Dosc를 갱신하고 실제 실행 증거를 남깁니다.",
+        "expected": "표와 클래스 연결 및 편집 방법을 확인할 수 있습니다.",
+        "qa": "문서의 링크·앵커·실제 실행 첨부와 아카이브 빌드를 검증합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
