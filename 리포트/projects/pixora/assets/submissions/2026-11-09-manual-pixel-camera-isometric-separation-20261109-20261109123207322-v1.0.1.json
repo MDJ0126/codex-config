@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "manual",
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Unity에서 이동·회전 조작과 픽셀 효과의 실제 표시 및 전후 스크린샷은 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+    "outcome": "주시점을 중심으로 방향을 바꿀 수 있고 하늘정원 시장은 지정된 오브젝트 픽셀 렌더링을 다시 사용합니다.",
+    "proposedTime": "추가 범위를 포함해 3~5분",
+    "actualTime": "21:28:13 KST 시작. 21:30:59 KST까지 코드·예제·문서 정적 확인 (2분 46초). Unity 실행 검증 미완료.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "pixel-camera-isometric-separation-20261109",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "Pixel Camera는 지정한 Pixel Camera Object만 렌더링하고 Isometric Camera는 독립적으로 방향을 제어합니다.",
+    "completionCriteria": "Unity에서 추적 유무에 따른 이동과 월드 Y축 공전, 시장 픽셀 렌더링을 검증하고 화면을 캡처합니다.",
+    "previousManual": "projects/pixora/reports/2026-11-09-manual-20261109121020766-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "렌더 경로, 예제 및 사용 안내 분리",
+        "action": "카메라 Transform 이동을 주시점에 반영하고 시장 프리팹에 지정 오브젝트 픽셀 경로를 연결합니다.",
+        "expected": "추적 대상 없이 이동할 수 있고, 시장 예제의 지정 메시가 픽셀화됩니다.",
+        "qa": "씬 연결 대조 후 Unity에서 이동·공전과 실제 픽셀화 및 윤곽선을 확인합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 2,
+        "result": "정적 연결과 문서 확인 완료. Unity 실행 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "사용자 후속 요청으로 추적 대상 없는 이동과 지정 오브젝트 기반 픽셀 표현을 예제에 함께 적용합니다.",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}
