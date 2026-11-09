@@ -1,5 +1,287 @@
 [
   {
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109092518313-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109092518313-v1.0.0.md",
+    "date": "2026-11-09T09:25:18.313Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-press-redesign-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "미로 블로그 편집형 홈과 주소 변경 검증 메뉴얼",
+      "summary": "홈, 글 목록과 상세 화면을 개편하고 검색을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "10월 10일~11월 8일 30일간 게시판마다 60편이 목표입니다. 새로 각 한 편을 발행해 게임 개발 동향은 14편, AI 동향은 9편입니다. 각각 46편, 51편이 부족하며 기존 글 21편의 공유 카드 표시는 제거했으며, 기사에 직접 관련된 이미지 확보는 남아 있습니다. 전역 지침 변경은 없습니다.",
+      "outcome": "새 주소의 실제 Chrome에서 홈 데스크톱 3열과 모바일 1열, 새 글 두 편의 이미지와 출처, GrowingCity 검색을 확인했습니다. 빌드 HTML 755개와 게시물 702편의 내부 링크 오류는 0건입니다. 두 동향 게시판에서 저장소 공유 이미지가 표시되지 않는 것을 확인했습니다.",
+      "proposedTime": "디자인과 배포 검증 약 5~8분.",
+      "actualTime": "2026-11-09 18:15:16 KST 시작, 운영 검증 2026-11-09T18:25:16.7782589+09:00 완료, 601초.",
+      "xerjEvidence": "연결 도구가 없어 rg와 격리 Chrome으로 검증했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-press-redesign-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "개발 블로그의 첫 화면에서 최신 개발일지와 네 개 카테고리를 탐색합니다.",
+      "completionCriteria": "새 주소에서 Game Developer를 참고한 편집형 홈과 새 동향 글 두 편, 검색을 탐색할 수 있습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 개발 블로그 디자인 변경",
+          "action": "홈 헤더, 카테고리 목록과 글 상세 스타일을 수정한 뒤 운영 배포합니다.",
+          "expected": "새 주소에서 Game Developer를 참고한 편집형 홈과 새 동향 글 두 편, 검색을 탐색할 수 있습니다.",
+          "qa": "운영 사이트에서 PC와 모바일 홈, 목록, 상세, 검색을 열어 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "새 주소의 실제 Chrome에서 홈 데스크톱 3열과 모바일 1열, 새 글 두 편의 이미지와 출처, GrowingCity 검색을 확인했습니다. 빌드 HTML 755개와 게시물 702편의 내부 링크 오류는 0건입니다. 두 동향 게시판에서 저장소 공유 이미지가 표시되지 않는 것을 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-09T18:25:16.7782589+09:00",
+          "summary": "운영 데스크톱·모바일과 검색 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 주소의 실제 Chrome에서 홈 데스크톱 3열과 모바일 1열, 새 글 두 편의 이미지와 출처, GrowingCity 검색을 확인했습니다. 빌드 HTML 755개와 게시물 702편의 내부 링크 오류는 0건입니다. 두 동향 게시판에서 저장소 공유 이미지가 표시되지 않는 것을 확인했습니다.",
+              "evidence": "운영 Chrome 캡처 및 빌드 링크 검사",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/fantasya/reports/2026-11-09-manual-fantasya-monster-localization-20261109-20261109092100043-v1.0.1.html",
+    "postPath": "projects/fantasya/posts/2026-11-09-manual-fantasya-monster-localization-20261109-20261109092100043-v1.0.1.md",
+    "date": "2026-11-09T09:21:00.043Z",
+    "version": "v1.0.1",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-monster-localization-20261109",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "DDT 몬스터 이름 로컬라이징",
+      "summary": "캐릭터 이름을 DDT 키로 연결하고 언어 전환을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "요청 범위의 검증 완료",
+      "outcome": "DDT 이름 키·번역 파일과 Unity Play Mode 언어 전환을 확인했습니다.",
+      "proposedTime": "10~20분 · 2026-11-09 18:12:43 KST 시작",
+      "actualTime": "8분 13초 · 2026-11-09 18:20:56 KST 로컬 적용·검증 기준",
+      "xerjEvidence": "연결 경로 미확인으로 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-monster-localization-20261109",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "캐릭터 행에 번역 키를 두고 한국어·영어 이름을 DDT에서 관리합니다.",
+      "completionCriteria": "키와 번역 파일을 생성하고 한국어·영어 전환 및 기본 언어를 Unity Play Mode에서 확인합니다.",
+      "previousManual": "projects/fantasya/reports/2026-11-09-manual-20261109091445220-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "DDT 이름 키 및 번역 등록",
+          "action": "캐릭터 표의 Name을 NameKey로 바꾸고 로컬라이징 원본과 산출물을 생성합니다.",
+          "expected": "키 두 개와 한국어·영어 번역이 등록됩니다.",
+          "qa": "DDT 원본·바이너리 대조와 네이티브 표 렌더를 검증합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "두 키와 번역을 등록하고 원본과 바이너리 일치를 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Play Mode 및 문서 검증",
+          "action": "몬스터 이름 조회를 DDT 로컬라이징과 연결하고 문서를 갱신합니다.",
+          "expected": "같은 몬스터가 현재 언어에 맞는 이름을 반환합니다.",
+          "qa": "한국어→영어 전환, 기본 언어 및 체력 회귀를 확인하고 문서 링크를 검증합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "동일 몬스터 한국어·영어 전환과 영어 기본값을 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-09T18:19:25+09:00",
+          "summary": "첫 DDT 번역 표 캡처",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "첫 캡처가 검게 출력됐습니다.",
+              "evidence": "네이티브 범위 렌더를 별도로 재실행해 정상 캡처를 확인했습니다.",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-09T18:20:56.7584130+09:00",
+          "summary": "DDT 및 동일 몬스터 런타임 이름 조회 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 키와 번역을 등록하고 원본과 바이너리 일치를 확인했습니다.",
+              "evidence": "FANTASYA_LOC_SEED_PASS, DDT 실제 범위 렌더",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "동일 몬스터 한국어·영어 전환과 영어 기본값을 확인했습니다.",
+              "evidence": "FANTASYA_LOC_PLAY_PASS, FANTASYA_LOC_DOC_PASS",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/fantasya/reports/2026-11-09-manual-20261109091445220-v1.0.0.html",
+    "postPath": "projects/fantasya/posts/2026-11-09-manual-20261109091445220-v1.0.0.md",
+    "date": "2026-11-09T09:14:45.220Z",
+    "version": "v1.0.0",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-monster-localization-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "DDT 몬스터 이름 로컬라이징",
+      "summary": "캐릭터 이름을 DDT 키로 연결하고 언어 전환을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "10~20분 · 2026-11-09 18:12:43 KST 시작",
+      "actualTime": "실행 전",
+      "xerjEvidence": "연결 경로 미확인으로 rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-monster-localization-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "캐릭터 행에 번역 키를 두고 한국어·영어 이름을 DDT에서 관리합니다.",
+      "completionCriteria": "키와 번역 파일을 생성하고 한국어·영어 전환 및 기본 언어를 Unity Play Mode에서 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "DDT 이름 키 및 번역 등록",
+          "action": "캐릭터 표의 Name을 NameKey로 바꾸고 로컬라이징 원본과 산출물을 생성합니다.",
+          "expected": "키 두 개와 한국어·영어 번역이 등록됩니다.",
+          "qa": "DDT 원본·바이너리 대조와 네이티브 표 렌더를 검증합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Play Mode 및 문서 검증",
+          "action": "몬스터 이름 조회를 DDT 로컬라이징과 연결하고 문서를 갱신합니다.",
+          "expected": "같은 몬스터가 현재 언어에 맞는 이름을 반환합니다.",
+          "qa": "한국어→영어 전환, 기본 언어 및 체력 회귀를 확인하고 문서 링크를 검증합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109090843611-v1.0.0.html",
     "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109090843611-v1.0.0.md",
     "date": "2026-11-09T09:08:43.611Z",
