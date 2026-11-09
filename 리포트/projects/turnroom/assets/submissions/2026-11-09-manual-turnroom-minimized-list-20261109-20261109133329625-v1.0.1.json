@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "수정 후 Unity에서 실제 마우스 오버 화면은 미확인입니다. 전역 지침에 추가할 공통 교훈은 없었습니다.",
+    "outcome": "번역된 옵션 이름과 기존 안내를 공용 상세 카드에 전달합니다.",
+    "proposedTime": "코드 확인 및 수정 1~2분",
+    "actualTime": "22:31:56 KST 시작. 코드에서 공용 카드의 제목·본문 입력 규칙을 확인하고 토글 연결을 수정했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-minimized-list-20261109",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "기본으로 최소화 리스트를 사용하고 전역 설정에서 끌 수 있게 합니다.",
+    "completionCriteria": "Unity에서 첫 실행 기본값, 끄기와 다시 켜기, 기존 창과 네이티브 최소화 창 복원을 확인합니다.",
+    "previousManual": "projects/turnroom/reports/2026-11-09-manual-20261109130255858-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "전역 설정과 최소화 경로 연결",
+        "action": "토글 저장과 기존 리스트 및 Windows 기본 최소화 동작을 연결합니다. 툴팁 제목과 본문을 연결합니다.",
+        "expected": "기본값은 켜짐이며 끄면 Windows 기본 최소화가 동작합니다. 토글에 공용 상세 카드가 표시됩니다.",
+        "qa": "설정, UI 언어와 문서 확인 후 Unity에서 실제 토글과 창 복원을 확인합니다. 토글 위에서 상세 카드 표시를 확인합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 2,
+        "result": "공용 카드 입력 및 연결을 소스로 확인했습니다. 실제 화면 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "사용자 요청으로 최소화 리스트의 툴팁을 공용 상세 카드로 연결합니다.",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}

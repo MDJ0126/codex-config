@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "최소화 리스트의 공용 상세 툴팁 적용",
+    "summary": "최소화 리스트 옵션의 툴팁을 제목과 본문이 있는 공용 카드로 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 번역된 토글 이름과 기존 설명을 각각 제목과 본문으로 전달합니다.\n- 대화 (시각 미기록): 사용자는 최소화 리스트 툴팁 화면을 첨부하고 “우리 템플릿 있잖아”라고 요청했습니다.",
+    "verification": "ScreenTips가 줄바꿈으로 제목과 본문을 나누어 TipCard에 전달하는 경로를 확인했습니다.",
+    "remaining": "수정 후 Unity에서 실제 마우스 오버 화면은 미확인입니다. 전역 지침에 추가할 공통 교훈은 없었습니다.",
+    "outcome": "번역된 옵션 이름과 기존 안내를 공용 상세 카드에 전달합니다.",
+    "proposedTime": "코드 확인 및 수정 1~2분",
+    "actualTime": "22:31:56 KST 시작. 코드에서 공용 카드의 제목·본문 입력 규칙을 확인하고 토글 연결을 수정했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
