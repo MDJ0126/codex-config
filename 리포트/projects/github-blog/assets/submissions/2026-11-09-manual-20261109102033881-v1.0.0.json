@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "미로 블로그 카테고리 메뉴와 본문 위치 분리 메뉴얼",
+    "summary": "카테고리 메뉴를 열어도 본문이 밀리지 않는지 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "전역 지침 변경은 없습니다.",
+    "outcome": "운영 Chrome의 1440px와 1200px에서 본문 왼쪽 좌표와 너비를 메뉴 도입 전 화면과 비교했습니다. 두 화면 모두 같았으며 1200px에서 메뉴를 열어도 본문 좌표가 유지됐습니다. 모바일 390px의 상단 고정도 확인했습니다.",
+    "proposedTime": "배포와 확인 약 3~5분.",
+    "actualTime": "2026-11-09 19:17:51 KST 시작, 운영 검증 2026-11-09T19:20:32.2642706+09:00 완료, 161초.",
+    "xerjEvidence": "rg로 공통 카테고리 메뉴와 스타일 위치를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-category-overlay-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "스크롤하는 동안 카테고리를 쉽게 전환합니다.",
+    "completionCriteria": "카테고리 메뉴를 열어도 본문 너비와 가운데 위치가 유지됩니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "카테고리 메뉴와 본문 위치 분리",
+        "action": "별도 열을 없애고 왼쪽 여백에 메뉴를 띄웁니다. 여백이 좁으면 왼쪽 버튼으로 메뉴를 엽니다.",
+        "expected": "카테고리 메뉴를 열어도 본문 너비와 가운데 위치가 유지됩니다.",
+        "qa": "운영 화면에서 본문 좌표와 폭, 메뉴 열기 동작을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "운영 Chrome의 1440px와 1200px에서 본문 왼쪽 좌표와 너비를 메뉴 도입 전 화면과 비교했습니다. 두 화면 모두 같았으며 1200px에서 메뉴를 열어도 본문 좌표가 유지됐습니다. 모바일 390px의 상단 고정도 확인했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-09T19:20:32.2642706+09:00",
+        "summary": "공개 사이트 스크롤 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "운영 Chrome의 1440px와 1200px에서 본문 왼쪽 좌표와 너비를 메뉴 도입 전 화면과 비교했습니다. 두 화면 모두 같았으며 1200px에서 메뉴를 열어도 본문 좌표가 유지됐습니다. 모바일 390px의 상단 고정도 확인했습니다.",
+            "evidence": "운영 Chrome 전후 화면",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
