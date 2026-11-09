@@ -1,0 +1,139 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "자동 승인 검토가 기본 브랜치의 대규모 이동·삭제를 이유로 TurnRoom 푸시를 차단했습니다. 검토 가능한 로컬 커밋은 46968c72입니다. 화면 사용 제한으로 Unity 공식 Validator, 에디터 실행 및 스크린샷 촬영은 미실행입니다. 검증된 교훈을 검토했으며 전역·프로젝트 지침은 변경하지 않았습니다.",
+    "outcome": "Design Data Table 2.0.3 및 Entity Forge 0.3.2-preview 초안에 현재 소스로 구성한 바이너리를 등록했습니다. TurnRoom 변경은 로컬 커밋 46968c72에 보존했습니다.",
+    "proposedTime": "초기 상태 확인 약 1분, 패키지 확인 후 업로드 약 4~8분",
+    "actualTime": "2026-11-10 00:30:03 KST 재착수. 두 초안 저장 완료 00:36:36 KST (6분 33초). 전체 요청은 원격 푸시 차단으로 미완료입니다.",
+    "xerjEvidence": "rg와 Git, Publisher 응답, 패키지 압축 해제 결과를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-drafts-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "사용자 화면을 조작하지 않고 현재 변경을 푸시하고 Design Data Table과 Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+    "completionCriteria": "두 초안의 업로드와 저장 확인, TurnRoom 원격 main SHA 대조가 끝나야 합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 소스와 패키지 고정",
+        "action": "변경 범위를 분리해 커밋하고 최신 소스와 메타데이터를 두 바이너리에 포함합니다.",
+        "expected": "두 바이너리와 커밋을 해시로 식별할 수 있습니다.",
+        "qa": "패키지의 내용과 커밋에서 복원한 SHA-256을 원본과 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "로컬 46968c72. 두 패키지 원본과 커밋의 SHA-256이 일치합니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "두 제품 초안에 바이너리 등록",
+        "action": "기존 Unity Publisher 초안 ID를 확인하고 패키지를 등록합니다.",
+        "expected": "두 초안의 저장 상태와 크기가 API 응답에 표시됩니다.",
+        "qa": "업로드 성공 응답과 관리 API의 최신 초안 크기를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "1550964 및 1551034의 초안 상태와 69,737,382 및 32,048,119바이트를 확인했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "TurnRoom main 푸시",
+        "action": "로컬 검토 커밋을 원격 main에 푸시합니다.",
+        "expected": "원격 main에서 로컬 커밋을 확인할 수 있습니다.",
+        "qa": "git ls-remote로 원격 SHA를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "blocked",
+        "revision": 1,
+        "result": "자동 승인 검토가 대규모 이동·삭제를 이유로 푸시를 거부했습니다. 원격은 e8251761입니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T00:34:52+09:00",
+        "summary": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+            "evidence": "46968c72, 두 제품 archive-check.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-10T00:36:36+09:00",
+        "summary": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+            "evidence": "Publisher 초안 1550964, 1551034",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-10T00:36:48+09:00",
+        "summary": "자동 검토가 원격 main 푸시를 차단했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "자동 검토가 원격 main 푸시를 차단했습니다.",
+            "evidence": "git ls-remote origin refs/heads/main → e8251761",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}
