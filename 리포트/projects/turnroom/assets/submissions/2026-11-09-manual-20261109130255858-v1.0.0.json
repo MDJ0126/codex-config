@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Unity에서 실제 토글·작업 표시줄 복원·기존 창 복원과 화면 캡처는 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+    "outcome": "옵션을 끄면 기존 리스트에 숨은 창을 표시하고 새 최소화는 Windows 기본 동작을 사용합니다.",
+    "proposedTime": "구현 및 코드 확인 3~5분",
+    "actualTime": "21:59:27 KST 시작, 22:02:19 KST에 코드와 설정 UXML 및 문서 정적 확인 (2분 52초).",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-minimized-list-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "기본으로 최소화 리스트를 사용하고 전역 설정에서 끌 수 있게 합니다.",
+    "completionCriteria": "Unity에서 첫 실행 기본값, 끄기와 다시 켜기, 기존 창과 네이티브 최소화 창 복원을 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "전역 설정과 최소화 경로 연결",
+        "action": "토글 저장과 기존 리스트 및 Windows 기본 최소화 동작을 연결합니다.",
+        "expected": "기본값은 켜짐이며 끄면 Windows 기본 최소화가 동작합니다.",
+        "qa": "설정, UI 언어와 문서 확인 후 Unity에서 실제 토글과 창 복원을 확인합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "정적 확인 완료, Unity 화면과 실제 동작 검증 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}
