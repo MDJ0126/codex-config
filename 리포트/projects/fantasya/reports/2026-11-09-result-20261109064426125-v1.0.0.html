@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>고블린 플레이어와 스켈레톤 근접 전투 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/theme.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/discussions.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/manuals.css?v=2282e9231a8c"><link rel="stylesheet" href="../../../assets/copy-links.css?v=2282e9231a8c"><script defer src="../../../assets/copy-links.js?v=2282e9231a8c"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>고블린 플레이어와 스켈레톤 근접 전투</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">기존 크리처 에셋으로 1대1 근접 전투를 만들고 Unity에서 검증했습니다.</p><div class="post-byline"><time datetime="2026-11-09T06:44:26.125Z">2026년 11월 9일 오후 3:44 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Playground에서 고블린 전사를 조작해 스켈레톤 병사와 싸울 수 있습니다. 스켈레톤은 접근을 감지해 추격하고, 양쪽 모두 공격·피격·사망 처리가 적용됩니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>WASD·방향키로 이동, Space·왼쪽 클릭으로 공격, R로 재시작합니다.</li>
+<li>모체의 Pawn과 컨트롤러 분리를 적용했습니다. 모체 Pawn의 장비·버프와 AI의 Behavior·NavMesh는 이 장면의 요구보다 넓어 별도 의존 없이 구성했습니다.</li>
+<li>기존 모델과 Animator를 자식 프리팹으로 연결했습니다. 공용 코드 반영 후보 없음. README와 로컬 HTML 문서를 갱신했습니다.</li>
+</ul>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 · “일단 몬스터와 플레이어를 기준으로 간단하게 만들어볼래?” 기존 에셋 사용 및 SampleProjectForUnity 구조 검토를 요청했습니다.</li>
+<li>Codex · 프리팹 참조를 확인해 고블린 전사를 플레이어, 스켈레톤 병사를 상대로 선정했습니다.</li>
+<li>Codex · 열린 Unity 프로젝트를 보존하고 격리 복사본에서 씬을 저장·재열기하고 실행했습니다.</li>
+</ol>
+<p>발언 시각은 미기록입니다. 공유 대화에서는 구매 대기 중 임시 리소스로 개발을 시작한다는 맥락을 확인했습니다.</p>
+<h2 id="section-5">검증</h2>
+<ul>
+<li>Unity 6000.0.83f1에서 저장·재열기한 씬의 헛스윙, 가상 키보드 이동, AI 추격·공격, 플레이어 공격, 적 사망·충돌 해제 및 R 재시작을 확인했습니다.</li>
+<li>프로젝트 적용본의 씬·메타·머티리얼·소스 해시를 격리 검증본과 대조했습니다. README·HTML 파일 링크와 앵커, 목차 전환 및 역방향 전환을 검사했습니다.</li>
+<li>전 화면은 초기화 직후 Playground 씬이 없어 동일 조건으로 촬영할 대상이 없었습니다. 아래 이미지는 Unity Play Mode의 실제 카메라 출력입니다.</li>
+<li>교훈 검토 결과 기존 격리 검증·외부 원본 보존 규칙을 적용했습니다. 전역 지침 변경 없음.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/character-playground-20261109/01-start.png" alt="시작 화면" loading="lazy"><figcaption>시작 화면</figcaption></figure></p>
+<p>시작 위치에서 두 캐릭터를 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/character-playground-20261109/02-attack.png" alt="공격 화면" loading="lazy"><figcaption>공격 화면</figcaption></figure></p>
+<p>플레이어와 몬스터가 근접한 상태입니다.</p>
+<p><figure><img class="report-image" src="../assets/character-playground-20261109/03-victory.png" alt="처치 화면" loading="lazy"><figcaption>처치 화면</figcaption></figure></p>
+<p>스켈레톤 처치 후 상태입니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>Standalone·웹 빌드 및 실물 마우스·키보드 수동 플레이는 미실행입니다. 공개 보고서에는 실행 화면과 설명을 포함하며 Fantasya 프로젝트 소스는 로컬 적용했습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 15~25분</li>
+<li>실제로 완료된 시간: 15분 48초 · 2026-11-09 15:44:24 KST 로컬 적용·검증 기준</li>
+<li>XERJ: 미사용 — XERJ MCP·실행 경로 미확인, rg 및 프리팹·C# 소스 직접 확인</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-09-result-20261109064426125-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-09-result-20261109064426125-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
