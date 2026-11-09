@@ -1,0 +1,123 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "새 교훈은 작업별로 근거를 확인해 기존 지침에 반영합니다.",
+    "outcome": "프로젝트 지침 20개와 전역·전용 메뉴를 공개하고 브라우저에서 확인했습니다.",
+    "proposedTime": "12~18분",
+    "actualTime": "2026-11-10 00:02:12 KST 기능·공개 화면 확인 기록, 시작 후 12분 58초. 보고서 배포 확인은 별도.",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "tracefolio-project-guidelines",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "전역 지침과 프로젝트 전용 지침을 사이트에 연결하고 매 작업에서 교훈을 검토·갱신합니다.",
+    "completionCriteria": "상단 바에 전역·프로젝트 전용 지침 링크가 있고, 프로젝트별 카테고리와 모아보기에서 근거가 있는 지침 20개를 엽니다. 설치본 지침과 원격 문서를 대조하고 공개 배포를 확인합니다.",
+    "previousManual": "projects/codex-config/reports/2026-11-09-manual-20261109145039346-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "프로젝트별 근거와 지침 정리",
+        "action": "등록 프로젝트의 보고서에서 검증된 반복 기준을 선별해 프로젝트별 원문과 근거 링크를 작성합니다.",
+        "expected": "20개 프로젝트 원문과 확인 가능한 근거 링크",
+        "qa": "등록 ID와 지침 파일 및 연결 근거를 일대일 대조",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "프로젝트 20개 원문과 근거 링크 35개를 확인했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "사이트 접근 및 유지 규칙 연결",
+        "action": "상단 바, 모아보기, 선택한 프로젝트 화면, 지침 갱신 기준과 설치본을 연결합니다.",
+        "expected": "전역·전용 지침을 해당 메뉴와 프로젝트에서 열 수 있음",
+        "qa": "빌드 출력·목차·필터 링크·설치본 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "상단 바 두 메뉴, 선택 프로젝트 전용 링크 및 설치본 원문을 대조했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "공개 배포 및 화면 확인",
+        "action": "대상 파일만 커밋·푸시하고 사이트의 공개 동작을 확인합니다.",
+        "expected": "공개 사이트에서 지침과 보고서가 열림",
+        "qa": "공개 본문과 실제 브라우저 탐색 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 배포를 확인하고 브라우저에서 상단 바·모아보기·개별 및 묶음 이동과 390px 메뉴를 검증했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-09T15:02:12.698Z",
+        "summary": "등록 지침 원문, 사이트 메뉴, 공개 배포를 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "프로젝트 20개 원문과 근거 링크 35개를 확인했습니다.",
+            "evidence": "프로젝트 원문과 근거 보고서 대조 결과",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "상단 바 두 메뉴, 선택 프로젝트 전용 링크 및 설치본 원문을 대조했습니다.",
+            "evidence": "배포 커밋 2d102854 및 설치본 SHA-256 비교",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 배포를 확인하고 브라우저에서 상단 바·모아보기·개별 및 묶음 이동과 390px 메뉴를 검증했습니다.",
+            "evidence": "Pages 실행 42639599729과 실제 화면이 첨부된 공개 검증 보고서",
+            "dependencies": {
+              "T02": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
