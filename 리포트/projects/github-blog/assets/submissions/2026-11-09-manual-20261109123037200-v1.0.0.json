@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "미로 블로그 Markdown 카테고리 폴더 적용 메뉴얼",
+    "summary": "기존 원고를 옮기고 카테고리 이동 후 기존 주소에서 글을 볼 수 있는지 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "보고서 공개 확인을 이어갑니다.",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "21:25:02 KST 실행 확인 시작, 2026-11-09 21:29:48 KST 운영 확인.",
+    "xerjEvidence": "rg와 빌드 결과, 실제 Chrome 화면으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-category-folders-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "Markdown 파일 위치로 게시 카테고리를 정합니다.",
+    "completionCriteria": "원고 이동 후 새 목록과 기존 글 주소가 맞고, 운영 배포와 결과 보고서가 공개됩니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원고 폴더 이동과 운영 확인",
+        "action": "기존 원고를 폴더별로 분류하고 실제 원고 두 편을 임시로 옮겨 카테고리를 대조합니다.",
+        "expected": "기존 공개 주소에서 같은 글이 열리고 새 카테고리가 표시됩니다.",
+        "qa": "이동 전후의 분류 목록과 글 주소를 대조하고 운영 배포와 공개 보고서를 확인합니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
