@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "글 상세 폭과 본문 간격 정리, 홈 광고 미리보기",
+    "summary": "글 상세 폭을 홈과 맞추고 상단 로고와 파비콘을 통일했습니다. 홈에서 단축키로 광고 자리 미리보기를 켜고 끌 수 있습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "글 상세 폭, 챕터 간격, 상단 브랜드, 홈 광고 영역 제어를 수정했습니다. 대화 요약: 사용자가 글 가로 폭과 섹션 여백을 지적하고, “사이트 파비콘이랑 로고랑 따로 노니깐 한쪽으로 맞춰주고”, “홈페이지에서 특정 단축키”를 요청했습니다. 응답에서 Alt+Shift+A와 브라우저에 선택을 저장하는 방식을 안내했습니다. 발언 시각은 미기록입니다.",
+    "verification": "운영 Chrome의 동일한 1520px 화면에서 상세 폭 820 → 1060px, 본문 H2 위 여백 30 → 60px, 상단과 탭에 동일 SVG 연결을 확인했습니다. 초기 꺼짐, 단축키 버튼 표시, 켜짐, 재진입 유지, 다시 끄기를 확인했습니다. 사이트 846페이지, 게시물 791개, 이미지 참조 7859건 검사에서 깨진 참조는 0건입니다.\n\n![글 상세와 상단 로고 변경 전](../assets/article-layout-ad-preview/detail-before.png)\n![글 상세와 상단 로고 변경 후](../assets/article-layout-ad-preview/detail-after.png)\n![본문 섹션 여백 변경 전](../assets/article-layout-ad-preview/sections-before.png)\n![본문 섹션 여백 변경 후](../assets/article-layout-ad-preview/sections-after.png)\n![홈 광고 영역 변경 전 기본 화면](../assets/article-layout-ad-preview/ads-before.png)\n![홈 광고 영역 켜기 버튼](../assets/article-layout-ad-preview/ads-control.png)\n![홈 광고 영역을 켠 뒤의 화면](../assets/article-layout-ad-preview/ads-after.png)",
+    "remaining": "실제 광고는 송출하지 않습니다. 공통 콘텐츠 폭 기준의 범위를 글 상세까지 명확히 했으며, 전역 지침은 변경하지 않았습니다.",
+    "outcome": "운영 사이트에 배포했습니다. 글 상세는 같은 콘텐츠 열을 채우고 본문 문단은 읽기 좋은 폭을 유지합니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "289초 (첫 기록 00:04:03, 운영 확인 00:08:52 KST)",
+    "xerjEvidence": "사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
