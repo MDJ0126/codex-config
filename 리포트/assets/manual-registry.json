@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109101449143-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109101449143-v1.0.0.md",
+    "date": "2026-11-09T10:14:49.143Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-sticky-category-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "미로 블로그 카테고리 메뉴 고정 메뉴얼",
+      "summary": "데스크톱 왼쪽과 모바일 상단의 고정 메뉴를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전역 지침 변경은 없습니다.",
+      "outcome": "실제 운영 Chrome에서 홈과 글 상세를 스크롤한 뒤 메뉴가 본문 왼쪽에 유지되는 것을 확인했습니다. 모바일 390px에서는 메뉴가 화면 상단에 고정되고 페이지 가로 넘침이 없었습니다.",
+      "proposedTime": "배포와 확인 약 3~5분.",
+      "actualTime": "2026-11-09 19:12:04 KST 시작, 운영 검증 2026-11-09T19:14:47.0243209+09:00 완료, 163초.",
+      "xerjEvidence": "rg로 공통 카테고리 메뉴와 스타일 위치를 확인했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-sticky-category-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "스크롤하는 동안 카테고리를 쉽게 전환합니다.",
+      "completionCriteria": "홈과 글 상세에서 스크롤해도 메뉴를 사용할 수 있습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "카테고리 메뉴 고정",
+          "action": "공통 카테고리 메뉴를 데스크톱에서 본문 왼쪽에 배치하고 스크롤할 때 유지합니다.",
+          "expected": "홈과 글 상세에서 스크롤해도 메뉴를 사용할 수 있습니다.",
+          "qa": "운영 화면에서 스크롤 전후 메뉴 위치를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 운영 Chrome에서 홈과 글 상세를 스크롤한 뒤 메뉴가 본문 왼쪽에 유지되는 것을 확인했습니다. 모바일 390px에서는 메뉴가 화면 상단에 고정되고 페이지 가로 넘침이 없었습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-09T19:14:47.0243209+09:00",
+          "summary": "공개 사이트 스크롤 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 운영 Chrome에서 홈과 글 상세를 스크롤한 뒤 메뉴가 본문 왼쪽에 유지되는 것을 확인했습니다. 모바일 390px에서는 메뉴가 화면 상단에 고정되고 페이지 가로 넘침이 없었습니다.",
+              "evidence": "운영 Chrome 전후 화면",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109101158452-v1.0.0.html",
     "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109101158452-v1.0.0.md",
     "date": "2026-11-09T10:11:58.452Z",
