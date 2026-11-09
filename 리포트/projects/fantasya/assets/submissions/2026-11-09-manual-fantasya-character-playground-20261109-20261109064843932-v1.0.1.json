@@ -1,0 +1,192 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "manual",
+    "title": "고블린과 스켈레톤 근접 전투 프로토타입",
+    "summary": "기존 에셋과 모체 프로젝트 구조로 단일 전투 씬을 구현하고 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "Standalone·웹 빌드 및 실물 입력 장치 테스트는 이번 Play Mode 검증 범위 밖입니다.",
+    "outcome": "Playground 저장·재열기와 전체 근접 전투를 검증했습니다. 공개 결과 본문과 첨부가 외부에서 열립니다.",
+    "proposedTime": "15~25분 · 2026-11-09 15:28:35 KST 시작",
+    "actualTime": "20분 6초 · 2026-11-09 15:48:42 KST 공개 결과 확인 기준",
+    "xerjEvidence": "MCP와 프로젝트 검색 실행 경로가 확인되지 않아 rg로 대체",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "fantasya-character-playground-20261109",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "신규 구매 없이 고블린 플레이어와 스켈레톤 적을 배치하고 모체 구조를 검토합니다.",
+    "completionCriteria": "Unity에서 이동·추격·공격·피격·사망·재시작을 확인하고 씬과 문서를 보존합니다.",
+    "previousManual": "projects/fantasya/reports/2026-11-09-manual-20261109063447729-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "대화·모체·기존 에셋 검토",
+        "action": "공유 대화와 로컬 모체 코드, 크리처 프리팹을 읽습니다.",
+        "expected": "기존 플레이어와 상대 모델을 선정하고 가져올 구조를 정합니다.",
+        "qa": "프리팹 참조와 모체 컨트롤러·Pawn 의존성을 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공유 대화와 원본 프리팹을 확인하고 고블린과 스켈레톤을 선정했습니다. Pawn·컨트롤러 역할 분리를 채택했습니다."
+      },
+      {
+        "visualEvidence": [
+          {
+            "role": "current",
+            "image": "../assets/character-playground-20261109/01-start.png",
+            "caption": "시작 위치와 두 캐릭터"
+          },
+          {
+            "role": "current",
+            "image": "../assets/character-playground-20261109/02-attack.png",
+            "caption": "근접 공격 거리에서 교전"
+          },
+          {
+            "role": "current",
+            "image": "../assets/character-playground-20261109/03-victory.png",
+            "caption": "스켈레톤 사망 애니메이션"
+          }
+        ],
+        "id": "T02",
+        "order": 2,
+        "title": "전투 씬 구성 및 실행",
+        "action": "두 Pawn, 입력·AI, 카메라, 운동장을 씬에 연결합니다.",
+        "expected": "Playground에서 근접 전투와 재시작이 작동합니다.",
+        "qa": "저장·재열기한 씬에서 가상 키보드 상태를 게임 프레임에 적용하고, 사거리 도달 이후 양쪽 피해와 스켈레톤 사망·재시작을 검증합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "Unity Play Mode에서 이동·추격·헛스윙·피격·사망·재시작이 통과했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "문서 및 기록 검증",
+        "action": "README와 Dosc를 갱신하고 공개 아카이브용 결과를 등록합니다.",
+        "expected": "플레이 조작, 구조, 검증과 보고서 본문이 열립니다.",
+        "qa": "문서 링크·그림·내비게이션과 공개 결과 HTML을 확인합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "README·Dosc 로컬 문서 링크 및 내비게이션, Tracefolio 공개 본문·목록·첨부를 검증했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "열려 있는 프로젝트를 보존하기 위해 격리 복사본으로 검증했고, 배치 프레임의 짧은 이동과 포커스 문제를 구분하여 두 캐릭터의 최소 이동 거리와 QA 입력 절차를 조정했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-09T15:32:23+09:00",
+        "summary": "공유 대화와 프로젝트 구조 검토",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 에셋과 모체 역할 분리를 확인했습니다.",
+            "evidence": "CTL_Humanoids 컨트롤러, 고블린·스켈레톤 프리팹 참조, SampleProjectForUnity PawnController·Pawn·AIController 소스",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-09T15:43:04+09:00",
+        "summary": "재검증 전까지 관찰한 프로젝트 잠금과 배치 입력·미세 이동 실패 정리",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "첫 실행은 프로젝트 잠금으로 차단됐고, 격리 배치 실행에서 가상 입력과 미세 이동 문제로 이동·추격 검사가 실패했습니다.",
+            "evidence": "UnityLockfile 공유 위반, Keyboard movement failed, Monster chase failed 및 씬 m_MinMoveDistance 0.001",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "regression",
+        "at": "2026-11-09T15:44:01+09:00",
+        "summary": "씬 설정 조정 후 저장·재열기와 전체 전투 재실행",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "이동·추격·헛스윙·양쪽 피해·사망·R 재시작이 통과했습니다.",
+            "evidence": "Unity 6000.0.83f1 FANTASYA_QA_PASS, 저장한 씬·소스·머티리얼·스크린샷 해시 대조",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-09T15:48:42.3658659+09:00",
+        "summary": "모든 작업의 현재 버전과 결과 공개 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 에셋과 모체 역할 분리를 확인했습니다.",
+            "evidence": "CTL_Humanoids 컨트롤러, 고블린·스켈레톤 프리팹 참조, SampleProjectForUnity PawnController·Pawn·AIController 소스",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "이동·추격·헛스윙·양쪽 피해·사망·R 재시작이 통과했습니다.",
+            "evidence": "Unity 6000.0.83f1 FANTASYA_QA_PASS, 저장한 씬·소스·머티리얼·스크린샷 해시 대조",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "로컬 문서와 공개 결과가 확인되었습니다.",
+            "evidence": "로컬 경로·앵커 58개 및 내비게이션 검사, Tracefolio verify.mjs, 공개 보고서·카탈로그·PNG 3개 GET 및 PNG SHA-256 일치",
+            "dependencies": {
+              "T02": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
