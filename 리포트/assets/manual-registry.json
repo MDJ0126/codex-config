@@ -1,5 +1,150 @@
 [
   {
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109062659377-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109062659377-v1.0.0.md",
+    "date": "2026-11-09T06:26:59.377Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-launch-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "개발 블로그 독립 배포와 네이버 자동 작업 정리 메뉴얼",
+      "summary": "공개 기록 가져오기, Cloudflare 배포, GitHub 분리, 네이버 작업 정리",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "GitHub 커밋 후 Cloudflare 배포는 현재 Wrangler 직접 업로드로 진행합니다. 실제 애드센스 사이트 심사와 광고 활성화는 이후 단계입니다. 네이버 자동 예약과 원고 보충 설정은 꺼졌습니다. 서버에 예약된 글 두 건과 설치형 앱·확장·기존 폴더는 남아 있습니다. 자동 승인 검토는 설치형 앱 전체 제거가 네이버 기능과 작업 삭제 요청보다 넓을 수 있다고 판단해 공식 제거 명령을 차단했습니다. 새 폴더는 독립 복제본입니다. 이 신규 사이트에는 이전 운영 화면이 없습니다. 새 공식 로고 원본을 확인하지 못해 프로젝트 로고는 미등록입니다. 전역 지침 변경은 없습니다.",
+      "outcome": "블로그가 운영 주소에서 공개됐고, 네이버 자동 작업을 껐습니다.",
+      "proposedTime": "초기 확인 약 2분, 자료 선별 및 구현 10~20분 예상.",
+      "actualTime": "2026-11-09 15:15:52 KST 시작. 15:25:53 KST 최종 운영 HTTP 검증 완료. 약 10분.",
+      "xerjEvidence": "연결 도구 미제공. rg와 원문 대조, 설치형 API, 브라우저 및 HTTP 검사를 사용했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-launch-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "공개 개발 기록과 사진을 담은 블로그를 포트폴리오와 별도로 운영합니다.",
+      "completionCriteria": "운영 주소, 내부 링크, 대표 사진, 독립 작업 폴더와 기존 네이버 정리 상태를 검증합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 개발 기록 가져오기",
+          "action": "프로젝트 개발 보고서와 공개 첨부를 날짜 기준으로 가져옵니다.",
+          "expected": "17개 프로젝트 641편, 원본 사진 4,656개, 날짜와 공개일 구분.",
+          "qa": "HTML 688개에서 내부 링크 및 사진 경로를 검사합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "내부 링크 오류 0개, 사진 참조 6,579개."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "운영 배포와 애드센스 준비",
+          "action": "독립 Pages 프로젝트에 배포하고 게시자 ID 설정을 연결합니다.",
+          "expected": "공개 운영 주소 200, 광고 비활성 상태, 공개 원문 사진 확인.",
+          "qa": "대표 글 17편, 사진 해시 15개, 이전 링크 301, 테스트 ID 광고 코드·ads.txt 확인.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "운영 배포 e2af6779, 실제 블로그 화면 확인."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "새 폴더와 저장소 분리",
+          "action": "새 GitHub 저장소와 로컬 작업 폴더를 마련합니다.",
+          "expected": "C:/Projects/github-blog에서 같은 빌드 생성.",
+          "qa": "커밋, 이미지 해시, 로컬 빌드 및 링크 검사.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "b60c8c1 푸시 및 별도 폴더에서 재빌드 완료."
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "네이버 기능과 작업 정리",
+          "action": "자동 예약·원고 보충을 끄고 제거 범위를 확인합니다.",
+          "expected": "자동 작업 정지와 삭제 상태 확인.",
+          "qa": "설치본 설정 API에서 false 확인. 기존 예약과 설치본 상태 확인.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": "자동 예약·원고 보충 중지. 설치형 앱 전체 제거는 자동 승인 검토에서 차단."
+        }
+      ],
+      "focusTasks": [
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-09T15:25:53+09:00",
+          "summary": "최종 운영 배포 및 네이버 설정 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "내부 링크 오류 0개, 사진 참조 6,579개.",
+              "evidence": "HTML 688개에서 내부 링크 및 사진 경로를 검사합니다.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "운영 배포 e2af6779, 실제 블로그 화면 확인.",
+              "evidence": "대표 글 17편, 사진 해시 15개, 이전 링크 301, 테스트 ID 광고 코드·ads.txt 확인.",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "b60c8c1 푸시 및 별도 폴더에서 재빌드 완료.",
+              "evidence": "커밋, 이미지 해시, 로컬 빌드 및 링크 검사.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T04",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "자동 예약·원고 보충 중지. 설치형 앱 전체 제거는 자동 승인 검토에서 차단.",
+              "evidence": "설치본 설정 API에서 false 확인. 기존 예약과 설치본 상태 확인.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
     "reportPath": "projects/blog-manager/reports/2026-11-09-manual-blog-manager-20261107-20261109054832099-v1.0.28.html",
     "postPath": "projects/blog-manager/posts/2026-11-09-manual-blog-manager-20261107-20261109054832099-v1.0.28.md",
     "date": "2026-11-09T05:48:32.099Z",
