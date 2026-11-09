@@ -1,0 +1,211 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "이전 Entity Forge 초안 업로드는 이력에 남아 있습니다. 이번 Pixora Studio 패키지의 Unity 실행 및 공식 Validator는 미실행입니다.",
+    "outcome": "Design Data Table과 Pixora Studio 기존 초안에 바이너리를 저장했고 TurnRoom main을 푸시했습니다.",
+    "proposedTime": "대상 확인 약 30초, 패키지 갱신과 등록 확인 약 2~4분.",
+    "actualTime": "2026-11-10 01:10:45 KST 확인 시작, 01:14:28 KST Publisher 저장 확인. 약 3분 43초.",
+    "xerjEvidence": "rg와 Git, Publisher 응답, 패키지 압축 해제 결과를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-drafts-20261110",
+    "round": 3,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "TurnRoom 변경을 푸시하고 Design Data Table과 Pixora Studio 초안 바이너리를 갱신합니다.",
+    "completionCriteria": "두 초안의 업로드와 저장 확인, TurnRoom 원격 main SHA 대조가 끝나야 합니다.",
+    "previousManual": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "현재 소스와 패키지 고정",
+        "action": "커밋된 소스와 현재 패키지 내용 및 메타데이터를 대조합니다.",
+        "expected": "Design Data Table과 Pixora Studio 패키지의 소스와 해시를 식별할 수 있습니다.",
+        "qa": "패키지 내용을 읽어 현재 소스와 메타데이터를 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 2,
+        "result": "Design Data Table 및 Pixora Studio 패키지 검증 기록을 확인했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Design Data Table과 Pixora Studio 초안 등록",
+        "action": "기존 Unity Publisher 초안 ID를 확인하고 패키지를 등록합니다.",
+        "expected": "두 초안의 저장 상태와 크기가 API 응답에 표시됩니다.",
+        "qa": "업로드 성공 응답과 관리 API의 최신 초안 크기를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 2,
+        "result": "초안 1550964 및 1547466의 업로드 성공과 저장 크기를 확인했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "TurnRoom main 푸시",
+        "action": "로컬 검토 커밋을 원격 main에 푸시합니다.",
+        "expected": "원격 main에서 로컬 커밋을 확인할 수 있습니다.",
+        "qa": "git ls-remote로 원격 SHA를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "재지시 후 46968c72를 origin/main에 푸시했고 원격 SHA가 일치했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "사용자가 두 번째 제품은 Pixora Studio라고 정정했습니다. 이전 Entity Forge 등록과 판정 기록을 보존하며 T01과 T02를 새 대상에 맞게 갱신했습니다.",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T00:34:52+09:00",
+        "summary": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+            "evidence": "46968c72, 두 제품 archive-check.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-10T00:36:36+09:00",
+        "summary": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+            "evidence": "Publisher 초안 1550964, 1551034",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-10T00:36:48+09:00",
+        "summary": "자동 검토가 원격 main 푸시를 차단했습니다.",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "blocked",
+            "actual": "자동 검토가 원격 main 푸시를 차단했습니다.",
+            "evidence": "git ls-remote origin refs/heads/main → e8251761",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-10T00:52:36+09:00",
+        "summary": "동일한 커밋의 검증 근거와 두 초안의 기존 확인 결과를 대조하고 원격 SHA를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "검증한 로컬 커밋이 동일합니다.",
+            "evidence": "46968c72와 두 archive-check.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "두 초안의 기존 저장 확인 근거를 대조했습니다.",
+            "evidence": "초안 1550964, 1551034와 패키지 크기 대조 기록",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "원격 main SHA가 요청한 커밋과 일치합니다.",
+            "evidence": "46968c72e6b3808fe86417eab279223d30a7c44f",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "final",
+        "at": "2026-11-10T01:14:28+09:00",
+        "summary": "정정한 두 제품의 패키지와 초안 등록, 기존 원격 푸시 근거를 대조했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Pixora Studio 패키지의 파일과 메타데이터 읽기 확인을 완료했습니다.",
+            "evidence": "PixoraStudio-archive-check.json, 소스 파일 2,794개",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 2,
+            "verdict": "pass",
+            "actual": "Pixora Studio 1.0.1의 초안 저장 크기와 상태를 읽었습니다.",
+            "evidence": "Design Data Table 1550964와 Pixora Studio 1547466, 후자 65,834,533바이트",
+            "dependencies": {
+              "T01": 2
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 푸시 확인 기록에서 원격과 로컬 커밋이 일치합니다.",
+            "evidence": "원격 main 46968c72",
+            "dependencies": {
+              "T01": 2
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
