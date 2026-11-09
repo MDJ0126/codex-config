@@ -88,6 +88,11 @@ for(const [old,target] of Object.entries(redirects)){
 }
 console.log(`Generated ${aliasCount} compatibility routes`);
 
+const guidelinesSource=await readFile(path.join(root,'../AGENTS.md'),'utf8');
+const guidelines=renderMarkdown(guidelinesSource.replace(/^# /gm,(marker,offset)=>offset===0?marker:'## '));
+const guidelinesToc=guidelines.toc.map(({id,label})=>`<li><a href="#${id}">${label}</a></li>`).join('');
+await writeFile(path.join(root,'guide/global-instructions.html'),shell('Codex 전역 지침',`<main class="detail guide-page"><a class="back" href="index.html">← 작성 가이드</a><article><nav aria-label="전역 지침 목차"><h2>목차</h2><ul>${guidelinesToc}</ul></nav>${guidelines.html}<div class="post-actions"><a class="source" href="https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md">GitHub에서 원문 보기</a></div></article></main>`,'../'));
+
 const guideSource=await readFile(path.join(root,'guide/authoring.md'),'utf8');
 const guide=renderMarkdown(guideSource);
 await writeFile(path.join(root,'guide/index.html'),shell('AI 게시물 작성 가이드',`<main class="detail guide-page"><a class="back" href="../index.html">← 모든 기록</a><article><div class="eyebrow">TRACEFOLIO · AUTHORING STANDARD V2</div>${guide.html}<div class="post-actions"><a class="source" href="authoring.md" download>AI용 Markdown 가이드</a><a class="source" href="template-result.json" download>결과 JSON 템플릿</a><a class="source" href="template-bug.json" download>버그 JSON 템플릿</a><a class="source" href="template-discussion.json" download>토론 JSON 템플릿</a><a class="source" href="schema.json" download>메타데이터 스키마</a></div></article></main>`,'../'));

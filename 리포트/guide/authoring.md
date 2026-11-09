@@ -1,5 +1,7 @@
 # Tracefolio 게시물 작성 가이드
 
+[Codex 전역 지침](global-instructions.html)에서 현재 공개 저장소의 지침을 목차와 함께 읽을 수 있습니다.
+
 작업 시작 전에 [작업 시작·반복 QA 메뉴얼](execution.html)을 읽고 [작업 메뉴얼](../manuals/index.html)을 등록·갱신합니다. 최초 필요한 작업은 최대30개, 이후에는1~5개씩 반복하며 전체 미완료 목록과 QA 이력을 보존합니다. [메뉴얼 JSON 템플릿](template-manual.json)을 사용합니다.
 
 **작성 기준 v2 — 사람과 AI가 같은 폼·JSON·검사로 작성합니다.** 프로젝트별 결과 보고서와 버그 보고서를 같은 기준으로 관리합니다. 글마다 별도 HTML·CSS를 만들지 않습니다.
