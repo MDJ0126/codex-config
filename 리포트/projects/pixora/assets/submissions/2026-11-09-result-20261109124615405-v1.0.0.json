@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "pixora",
+    "kind": "result",
+    "title": "아이소매트릭 시점 이름과 자유 회전 설정",
+    "summary": "아이소매트릭 시점 활성화 중 Transform을 잠그고 자유 시점에서만 회전 값을 편집하도록 변경했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 활성화 시 Transform의 Inspector 잠금을 적용하고 비활성화 시 이 컴포넌트가 추가한 잠금만 해제합니다. Unity의 Transform 단위 잠금은 Scale도 포함합니다.\n- 자유 시점의 회전 값만 편집할 수 있습니다. 기존 회전 오프셋이 저장된 경우 자유 시점의 월드 Y축 각도로 변환합니다.\n- 대화 (발언 시각 미기록): 사용자는 이름 변경과 Transform 이동·회전 잠금을 요청했습니다. 이어 “자유시점이 아니면 수정 못 하게 디세이블”하라고 지정했습니다. AI는 아이소매트릭 시점 이름과 조건부 입력을 적용했습니다.",
+    "verification": "기존 이동 흡수 경로 제거, 잠금 설정 및 해제 코드, 자유 시점 조건, 9개 언어 UI 항목 및 가이드 예제를 정적으로 확인했습니다.",
+    "remaining": "Unity Inspector에서 실제 잠금, 방향 선택과 입력 비활성화, 비활성화 후 잠금 해제 및 화면 캡처는 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+    "outcome": "인스펙터와 메뉴의 표시 이름을 Isometric View로 바꾸고 고정 방향과 자유 회전을 분리했습니다.",
+    "proposedTime": "코드 및 문서 확인 3~5분",
+    "actualTime": "21:42:56 KST 시작. 21:45:27 KST에 소스·9개 언어 가이드 정적 확인 (2분 31초). Unity 실제 실행 검증 미완료.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
