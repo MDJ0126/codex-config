@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "사이트 범위 확정 후 6~10분",
+    "actualTime": "2026-11-10 00:35:10 KST 구조 확인 시작",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "tracefolio-guideline-folders",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "Tracefolio 모아보기에서 프로젝트별 폴더를 펼쳐 각자의 전용 지침을 열 수 있게 합니다.",
+    "completionCriteria": "기존 프로젝트 지침이 각각 자기 폴더 아래 연결되고 턴룸 제품은 턴룸 하위에 표시됩니다. 공개 사이트에서 폴더와 전용 지침 이동을 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "모아보기 폴더 탐색 구현 및 공개 검증",
+        "action": "기존 프로젝트 분류와 전용 지침 URL을 그대로 사용해 폴더를 구성하고 Pages에 배포합니다.",
+        "expected": "개별 프로젝트 및 턴룸 하위 제품 폴더에서 전용 지침이 열립니다.",
+        "qa": "등록 프로젝트와 생성된 폴더·링크를 대조하고 공개 브라우저에서 폴더를 펼쳐 본문을 엽니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

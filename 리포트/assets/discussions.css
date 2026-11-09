@@ -6,3 +6,14 @@ html[data-theme=dark] .qa-panel,html[data-theme=dark] .discussion-metrics>div{ba
 @media(max-width:760px){.discussion-metrics{grid-template-columns:repeat(2,1fr)}}
 
 @media(max-width:760px){header{height:auto;min-height:64px;flex-wrap:wrap;row-gap:12px;padding-top:14px;padding-bottom:14px}.header-nav{width:100%;justify-content:flex-start;flex-wrap:wrap;column-gap:12px;row-gap:8px}}
+
+.guideline-folders,.guideline-folder-children{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}
+.guideline-folder{border:1px solid var(--line);border-radius:8px;background:var(--paper);min-width:0}
+.guideline-folder summary{padding:11px 14px;font-weight:600;cursor:pointer;overflow-wrap:anywhere}
+.guideline-folder summary:focus-visible{outline:2px solid var(--green);outline-offset:-2px;border-radius:8px}
+.guideline-folder[open]>summary{border-bottom:1px solid var(--line)}
+.guideline-folder-links{display:flex;flex-wrap:wrap;gap:8px 18px;padding:10px 14px;font-size:13px}
+.guideline-folder-count{font-size:12px;font-weight:400;color:var(--muted);margin-left:6px}
+.guideline-folder-group{scroll-margin-top:16px}
+.guideline-folder-children{padding:12px}
+@media(max-width:620px){.guideline-folders,.guideline-folder-children{grid-template-columns:1fr}}
