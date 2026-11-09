@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "미로 블로그 홈과 메뉴 디자인 수정 메뉴얼",
+    "summary": "운영 화면과 소스를 확인한 뒤 홈·메뉴·본문을 수정하고 전후 화면을 대조합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "중앙 아카이브 게시 실행으로 개별 주소 확인을 이어갑니다.",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "디자인 구현과 화면 확인 약 5~8분.",
+    "actualTime": "2026-11-09 21:15 KST 착수, 2026-11-09 21:21:10 KST 운영 확인.",
+    "xerjEvidence": "rg와 운영 응답, 실제 Chrome 캡처를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-design-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기존 운영 주소에서 대표 글과 소식, 카테고리 메뉴를 구분하기 쉬운 디자인을 제공합니다.",
+    "completionCriteria": "데스크톱과 모바일 홈, 카테고리 목록 및 글 본문이 새 디자인으로 표시되고 중앙 아카이브의 개별 보고서가 공개됩니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "블로그 디자인 변경과 운영 대조",
+        "action": "홈과 공통 스타일을 바꾸고 운영 홈·글·카테고리 화면을 대조합니다.",
+        "expected": "새 디자인이 네 가지 실제 화면에서 확인됩니다.",
+        "qa": "동일한 화면 크기로 배포 전후를 캡처하고 운영 홈과 내부 링크 응답을 확인합니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

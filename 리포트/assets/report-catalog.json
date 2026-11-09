@@ -1,5 +1,45 @@
 [
   {
+    "title": "미로 블로그 홈과 카테고리 디자인 개편",
+    "summary": "상단 바, 대표 글, 소식 카드, 카테고리 메뉴와 글 본문의 디자인을 운영에 반영했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109122202797-v1.0.0.html",
+    "date": "2026-11-09T12:22:02.797Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미로 블로그 홈과 메뉴 디자인 수정 메뉴얼",
+    "summary": "운영 화면과 소스를 확인한 뒤 홈·메뉴·본문을 수정하고 전후 화면을 대조합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109122159957-v1.0.0.html",
+    "date": "2026-11-09T12:21:59.957Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-20261109121020766-v1.0.0.html",
+    "date": "2026-11-09T12:10:20.766Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera와 Isometric Camera 분리",
+    "summary": "픽셀 효과를 지정 오브젝트로 제한하고 아이소매트릭 카메라를 독립 예제로 분리했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109121019085-v1.0.0.html",
+    "date": "2026-11-09T12:10:19.085Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "미로 블로그 65편의 문체와 서술 정리",
     "summary": "개발일지는 작업의 고민을 중심으로, 동향과 기술 글은 읽는 사람에게 설명하는 존댓말로 다듬었습니다.",
     "project": "github-blog",

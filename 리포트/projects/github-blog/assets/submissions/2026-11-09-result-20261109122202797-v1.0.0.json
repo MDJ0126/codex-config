@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "미로 블로그 홈과 카테고리 디자인 개편",
+    "summary": "상단 바, 대표 글, 소식 카드, 카테고리 메뉴와 글 본문의 디자인을 운영에 반영했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "상단과 카드 색상, 홈의 대표 글 크기, 소식 카드와 목록의 간격을 조정했습니다. 넓은 화면은 왼쪽 카테고리, 좁은 화면은 상단 가로 메뉴를 사용합니다. 글 본문과 카테고리 목록에도 공통 색을 적용했습니다.\n\n### 대화 기록\n\n- 사용자(시각 미기록) — 「블로그 디자인 왜 보고 안 하고 왜 안 바꿈?」이라고 요청했습니다.\n- AI(시각 미기록) — 운영의 기존 디자인을 확인하고 상단·홈·카테고리·본문을 바꿔 배포하겠다고 답했습니다.",
+    "verification": "블로그 소스 커밋 9c4f91c, 빌드와 Cloudflare Pages 운영 응답을 확인했습니다. 같은 화면 크기로 네 가지 화면을 변경 전후 대조했습니다.\n\n![데스크톱 홈과 왼쪽 카테고리 변경 전](../assets/design-20261109/before-desktop.png)\n\n![데스크톱 홈과 왼쪽 카테고리 변경 후](../assets/design-20261109/after-desktop.png)\n\n![모바일 홈과 가로 카테고리 변경 전](../assets/design-20261109/before-mobile.png)\n\n![모바일 홈과 가로 카테고리 변경 후](../assets/design-20261109/after-mobile.png)\n\n![펭귄 모델 글 본문 변경 전](../assets/design-20261109/before-article.png)\n\n![펭귄 모델 글 본문 변경 후](../assets/design-20261109/after-article.png)\n\n![게임 기술 목록 변경 전](../assets/design-20261109/before-category.png)\n\n![게임 기술 목록 변경 후](../assets/design-20261109/after-category.png)",
+    "remaining": "전역 지침은 변경하지 않았습니다. 전후 스크린샷은 글자 판독을 위해 브라우저가 저장한 원본을 첨부했습니다.",
+    "outcome": "운영 홈이 짙은 상단 바와 흰 카드로 구분되고, 모바일과 중간 너비에서는 가로 카테고리를 바로 사용할 수 있습니다.",
+    "proposedTime": "첫 확인 약 1~2분. 디자인 구현과 화면 확인 약 5~8분.",
+    "actualTime": "2026-11-09 21:15 KST에 확인을 시작했고 2026-11-09 21:21:10 KST 운영 화면을 확인했습니다. 보고서 공개 확인은 최종 답변에 기록합니다.",
+    "xerjEvidence": "rg와 운영 응답, 실제 Chrome 캡처를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
