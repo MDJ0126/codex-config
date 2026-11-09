@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "게임 기술 카테고리와 본문 길이 적용 메뉴얼",
+    "summary": "게임 기술 첫 글과 카테고리, 본문 길이와 예약 발행 기준을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "예약 발행은 설정을 변경했으며 첫 예약 실행은 예정 상태입니다. 예전 글의 누락 썸네일 보강은 이번 원고 길이 변경 범위와 별개로 남아 있습니다. 전역 지침 변경은 없습니다.",
+    "outcome": "운영 사이트에서 카테고리, Factorio 첫 글의 원본 이미지와 출처, 기존 장문 게시글의 단축 본문을 확인했습니다. 1,500자를 넘은 원고 143개를 줄였으며 모든 게시물은 빌드에서 글자 수를 검사합니다. 예약 설정은 오전 10시 한국시간 하루 한 번입니다.",
+    "proposedTime": "카테고리와 예약 발행 구성 약 5~8분. 기존 글 길이 수정 요청을 작업 중 추가했습니다.",
+    "actualTime": "2026-11-09 19:32:30 KST 시작, 운영 검증 2026-11-09T19:39:15.1166665+09:00 완료, 405초.",
+    "xerjEvidence": "rg로 블로그 생성과 출처 검사 위치를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-game-tech-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "기술 글을 독립 카테고리에서 발견하고 짧게 읽을 수 있습니다.",
+    "completionCriteria": "새 카테고리와 썸네일이 열리고 본문 글자 수 기준과 예약이 설정됩니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "게임 기술과 글 길이 기준 적용",
+        "action": "새 카테고리와 첫 글을 올리고 기존 본문을 1,500자 이내로 정리합니다. 예약을 카테고리별 하루 한 편으로 바꿉니다.",
+        "expected": "새 카테고리와 썸네일이 열리고 본문 글자 수 기준과 예약이 설정됩니다.",
+        "qa": "공개 카테고리와 게시글, 이미지, 원고 길이, 예약 설정을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "운영 사이트에서 카테고리, Factorio 첫 글의 원본 이미지와 출처, 기존 장문 게시글의 단축 본문을 확인했습니다. 1,500자를 넘은 원고 143개를 줄였으며 모든 게시물은 빌드에서 글자 수를 검사합니다. 예약 설정은 오전 10시 한국시간 하루 한 번입니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-09T19:39:15.1166665+09:00",
+        "summary": "공개 사이트와 예약 설정 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "운영 사이트에서 카테고리, Factorio 첫 글의 원본 이미지와 출처, 기존 장문 게시글의 단축 본문을 확인했습니다. 1,500자를 넘은 원고 143개를 줄였으며 모든 게시물은 빌드에서 글자 수를 검사합니다. 예약 설정은 오전 10시 한국시간 하루 한 번입니다.",
+            "evidence": "운영 Chrome 화면과 빌드 검사",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
