@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "result",
+    "title": "DDT 영어 입력란 대비 수정과 Addressables 미설치 표시 정리",
+    "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 설정창의 텍스트 입력란이 DDT 카드 컨트롤과 같은 배경 스타일을 사용합니다.\n- Addressables 미설치 시 위쪽 런타임 옵션과 테이블별 설정 영역을 숨깁니다.\n\n### 대화 기록\n- 사용자(시각 미기록): 영어 화면에서 검게 보이는 입력란을 첨부하고 Addressables 미설치 시 비활성 항목 제거를 요청했습니다.\n- AI: 이전 코드의 공통 입력 스타일을 수정하고 설치 여부에 따라 런타임 및 카드 영역을 표시하도록 변경했습니다.",
+    "verification": "- Addressables 2.9.1이 있는 영어 Unity 검증 프로젝트와 패키지가 없는 한국어 TurnRoom에서 실제 화면을 대조했습니다.\n- 변경된 언어별 가이드와 캡처를 확인했습니다.\n\n![수정 전 사용자 첨부 영어 화면](../assets/ddt-english-fields-20261109/english-before.png)\n\n![수정 후 실제 영어 화면](../assets/ddt-english-fields-20261109/english-after.jpg)\n\n![미설치 이전 화면](../assets/ddt-english-fields-20261109/package-absent-before.jpg)\n\n![미설치 수정 후 화면](../assets/ddt-english-fields-20261109/package-absent.jpg)",
+    "remaining": "영어에만 발생하는지는 확인되지 않았습니다. 다른 가이드 장의 기존 캡처 불일치는 보존했습니다. Fantasya에는 설치하지 않았습니다. 전역 지침 변경 없음.",
+    "outcome": "영어 테이블 관리에서 폴더·검색·주소 입력란이 밝은 바탕과 읽을 수 있는 글자로 표시됩니다. 패키지 미설치 화면은 바이너리 출력과 테이블 목록을 바로 표시합니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-09 23:21:58 KST 착수. 공개 확인은 작성 시점 대기.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
