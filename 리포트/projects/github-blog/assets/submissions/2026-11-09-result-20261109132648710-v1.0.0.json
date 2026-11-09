@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "홈 섹션 상단선과 게시물 미리보기 추가",
+    "summary": "홈 두 섹션에 상단선을 넣고 홈과 게시판 목록에서 본문을 미리 읽을 수 있게 했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 이야기는 녹색, 게임 기술은 보라색 상단선을 적용했습니다. 홈과 게시판 목록에서는 원고에 적힌 요약을 먼저 표시하고, 요약이 비어 있으면 본문 첫 문단을 사용합니다.\n\n### 대화 기록\n\n- 사용자(시각 미기록): 최신 뉴스처럼 아래 카테고리에도 굵은 선을 넣고 게시판까지 한두 줄 미리보기를 요청했습니다.\n- AI(시각 미기록): 섹션별 색의 상단선과 최대 두 줄 요약을 적용하겠다고 답했습니다.",
+    "verification": "운영 Chrome에서 상단선 세 가지가 각각 3px이고 색이 서로 다른 것을 확인했습니다. 5개 게시판 150편의 미리보기를 확인했고 390px 모바일에서 두 줄을 넘지 않았습니다.\n\n![before-home-stories](../assets/post-previews-20261109/before-home-stories.png)\n\n![after-home-stories](../assets/post-previews-20261109/after-home-stories.png)\n\n![before-home-tech](../assets/post-previews-20261109/before-home-tech.png)\n\n![after-home-tech](../assets/post-previews-20261109/after-home-tech.png)\n\n![before-board](../assets/post-previews-20261109/before-board.png)\n\n![after-board](../assets/post-previews-20261109/after-board.png)\n\n![after-mobile](../assets/post-previews-20261109/after-mobile.png)",
+    "remaining": "전역 지침 변경 없음.",
+    "outcome": "운영 사이트에서 새 상단선과 최대 두 줄 미리보기를 확인했습니다.",
+    "proposedTime": "수정과 운영 확인 2~3분",
+    "actualTime": "2026-11-09 22:23:56 KST 착수, 22:26:11 KST 운영 확인 (2분 15초).",
+    "xerjEvidence": "생성 HTML 확인 및 운영 Chrome 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
