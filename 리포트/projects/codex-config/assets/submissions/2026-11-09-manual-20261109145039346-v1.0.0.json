@@ -1,0 +1,86 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "12~18분",
+    "actualTime": "2026-11-09 23:49:14 KST 시작",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "tracefolio-project-guidelines",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "전역 지침과 프로젝트 전용 지침을 사이트에 연결하고 매 작업에서 교훈을 검토·갱신합니다.",
+    "completionCriteria": "상단 바에 전역·프로젝트 전용 지침 링크가 있고, 프로젝트별 카테고리와 모아보기에서 근거가 있는 지침 20개를 엽니다. 설치본 지침과 원격 문서를 대조하고 공개 배포를 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "프로젝트별 근거와 지침 정리",
+        "action": "등록 프로젝트의 보고서에서 검증된 반복 기준을 선별해 프로젝트별 원문과 근거 링크를 작성합니다.",
+        "expected": "20개 프로젝트 원문과 확인 가능한 근거 링크",
+        "qa": "등록 ID와 지침 파일 및 연결 근거를 일대일 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "사이트 접근 및 유지 규칙 연결",
+        "action": "상단 바, 모아보기, 선택한 프로젝트 화면, 지침 갱신 기준과 설치본을 연결합니다.",
+        "expected": "전역·전용 지침을 해당 메뉴와 프로젝트에서 열 수 있음",
+        "qa": "빌드 출력·목차·필터 링크·설치본 비교",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "공개 배포 및 화면 확인",
+        "action": "대상 파일만 커밋·푸시하고 사이트의 공개 동작을 확인합니다.",
+        "expected": "공개 사이트에서 지침과 보고서가 열림",
+        "qa": "공개 본문과 실제 브라우저 탐색 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

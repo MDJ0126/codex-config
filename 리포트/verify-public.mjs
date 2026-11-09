@@ -13,7 +13,8 @@ export async function verifyResponse(url,expected,{request=fetch,attempts=12,del
 }
 export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.url)),base='https://mdj0126.github.io/codex-config/',request=fetch}={}){
  const site=path.join(root,'.site'),catalog=JSON.parse(await fs.readFile(path.join(root,'assets/report-catalog.json'),'utf8'));
- const reports=catalog.slice(0,5).map(r=>r.reportPath),targets=new Set(['index.html','guide/index.html','guide/global-instructions.html',...reports]);
+ const projects=JSON.parse(await fs.readFile(path.join(root,'projects.json'),'utf8'));
+ const reports=catalog.slice(0,5).map(r=>r.reportPath),targets=new Set(['index.html','guide/index.html','guide/global-instructions.html','guide/project-instructions.html',...Object.keys(projects).flatMap(id=>['guidelines.html','guidelines.md'].map(file=>`projects/${id}/${file}`)),...reports]);
  for(const report of reports){const html=await fs.readFile(path.join(site,report),'utf8');for(const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/g)){
   const url=new URL(match[1].replaceAll('&amp;','&'),new URL(report,base)),prefix=new URL(base);
   if(url.origin!==prefix.origin||!url.pathname.startsWith(prefix.pathname))continue;

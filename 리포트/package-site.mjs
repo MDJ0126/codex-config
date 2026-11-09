@@ -11,5 +11,6 @@ for(const entry of ['index.html','assets','reports','guide','write','discussions
 const projects=JSON.parse(await (await import('node:fs/promises')).readFile(path.join(root,'projects.json'),'utf8'));
 for(const id of Object.keys(projects)){for(const entry of ['posts','reports','assets']){const from=path.join(root,'projects',id,entry);try{await cp(from,path.join(output,'projects',id,entry),{recursive:true});}catch(e){if(e.code!=='ENOENT')throw e;}}}
 await writeFile(path.join(output,'.nojekyll'),'');
+for(const id of Object.keys(projects))for(const file of ['guidelines.html','guidelines.md'])await cp(path.join(root,'projects',id,file),path.join(output,'projects',id,file));
 await writeFile(path.join(output,'404.html'),'<!doctype html><html lang="ko"><meta charset="utf-8"><title>보고서를 찾을 수 없습니다</title><h1>보고서를 찾을 수 없습니다</h1><a href="/codex-config/">보고서 목록</a></html>');
 console.log('Packaged report site in 리포트/.site; configuration, tools, migration manifests and original backups are excluded.');
