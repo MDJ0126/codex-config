@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "실제 Windows Alt+Tab 목록, 선택 후 키보드 포커스, 창 닫기 후 목록 정리 및 전후 화면 캡처는 미확인입니다. 기존 전역 지침으로 적용 범위를 다룰 수 있어 지침을 수정하지 않았습니다.",
+    "outcome": "전역 설정과 제품 설정, 찾기·속성·버그 보고 등 독립 팝업의 등록 경로를 연결했습니다.",
+    "proposedTime": "코드 확인 및 수정 4~6분",
+    "actualTime": "22:06:33 KST 시작, 22:09:00 KST에 코드·9개 언어 문서 정적 확인 (2분 27초).",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-popup-alttab-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "독립 설정과 작업용 팝업을 Windows Alt+Tab에서 선택 가능하게 합니다.",
+    "completionCriteria": "실제 Windows Alt+Tab 등록과 선택 시 키보드 포커스를 확인하고 닫힌 창과 임시 메뉴가 목록에서 보이지 않는지 검증합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "독립 팝업을 공통 등록에 연결",
+        "action": "설정과 별도 도구 팝업을 등록하고 문서 전환과 임시 UI 진입 경로를 확인합니다.",
+        "expected": "독립 설정 및 도구 창을 Alt+Tab에서 전환할 수 있습니다.",
+        "qa": "소스 대조 후 Windows에서 실제 Alt+Tab 등록, 포커스, 종료 시 정리를 확인하고 화면을 캡처합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "정적 확인 완료. 실제 Windows 동작 확인 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}

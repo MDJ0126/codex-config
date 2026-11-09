@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "독립 설정 및 도구 팝업의 Windows Alt+Tab 등록",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 공통 팝업 복구 경로에서 독립 창 전환을 등록합니다. 별도 IMGUI 팝업은 명시적으로 등록하고, HWND의 프로세스와 제목을 확인합니다.\n- 사용자 발언 (시각 미기록): “전역 설정은 왜 알텝에 안 잡힘”과 “팝업 쓰는데는 다 잡혀야지”라고 지적했습니다. AI는 최소화 리스트 조건과 창 전환 등록을 분리했습니다.",
+    "verification": "전역 설정·제품 설정의 공통 등록과 DataTable 보조 창의 명시적 등록, 임시 UI 경로 및 9개 언어 문서를 소스로 확인했습니다.",
+    "remaining": "실제 Windows Alt+Tab 목록, 선택 후 키보드 포커스, 창 닫기 후 목록 정리 및 전후 화면 캡처는 미확인입니다. 기존 전역 지침으로 적용 범위를 다룰 수 있어 지침을 수정하지 않았습니다.",
+    "outcome": "전역 설정과 제품 설정, 찾기·속성·버그 보고 등 독립 팝업의 등록 경로를 연결했습니다.",
+    "proposedTime": "코드 확인 및 수정 4~6분",
+    "actualTime": "22:06:33 KST 시작, 22:09:00 KST에 코드·9개 언어 문서 정적 확인 (2분 27초).",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
