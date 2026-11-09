@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109102644932-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109102644932-v1.0.0.md",
+    "date": "2026-11-09T10:26:44.932Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-article-navigation-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "미로 블로그 상단과 글 탐색 개선 메뉴얼",
+      "summary": "상단 검색과 브랜드 디자인을 바꾸고 글 이동을 제공합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전역 지침 변경은 없습니다.",
+      "outcome": "운영 Chrome의 실제 글에서 이전·다음과 같은 카테고리의 추천 글 3개가 표시되고 모두 정상 응답하는 것을 확인했습니다. 이전 글을 눌러 이동했으며 모바일 390px에서 가로 넘침이 없었습니다.",
+      "proposedTime": "배포와 확인 약 3~5분.",
+      "actualTime": "2026-11-09 19:23:50 KST 시작, 운영 검증 2026-11-09T19:26:42.3971372+09:00 완료, 172초.",
+      "xerjEvidence": "rg로 상단과 게시글 템플릿을 찾았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-article-navigation-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "글을 읽고 같은 카테고리에서 다른 글로 이동할 수 있습니다.",
+      "completionCriteria": "카테고리 안에서 다른 글로 이동할 수 있고 상단이 PC와 모바일에서 읽히게 표시됩니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "블로그 상단과 글 탐색 개선",
+          "action": "상단의 브랜드와 검색을 정돈하고 글 하단에 같은 카테고리의 추천과 이전·다음 링크를 추가합니다.",
+          "expected": "카테고리 안에서 다른 글로 이동할 수 있고 상단이 PC와 모바일에서 읽히게 표시됩니다.",
+          "qa": "운영 사이트에서 글 링크와 이동, 상단과 글 하단의 전후 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "운영 Chrome의 실제 글에서 이전·다음과 같은 카테고리의 추천 글 3개가 표시되고 모두 정상 응답하는 것을 확인했습니다. 이전 글을 눌러 이동했으며 모바일 390px에서 가로 넘침이 없었습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-09T19:26:42.3971372+09:00",
+          "summary": "공개 블로그 글 이동과 반응형 화면 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "운영 Chrome의 실제 글에서 이전·다음과 같은 카테고리의 추천 글 3개가 표시되고 모두 정상 응답하는 것을 확인했습니다. 이전 글을 눌러 이동했으며 모바일 390px에서 가로 넘침이 없었습니다.",
+              "evidence": "운영 Chrome 전후 화면과 공개 URL",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109102033881-v1.0.0.html",
     "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109102033881-v1.0.0.md",
     "date": "2026-11-09T10:20:33.881Z",
