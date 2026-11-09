@@ -1,0 +1,71 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "manual",
+    "title": "DDT 몬스터 이름 로컬라이징",
+    "summary": "캐릭터 이름을 DDT 키로 연결하고 언어 전환을 검증합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "10~20분 · 2026-11-09 18:12:43 KST 시작",
+    "actualTime": "실행 전",
+    "xerjEvidence": "연결 경로 미확인으로 rg 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "fantasya-monster-localization-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "캐릭터 행에 번역 키를 두고 한국어·영어 이름을 DDT에서 관리합니다.",
+    "completionCriteria": "키와 번역 파일을 생성하고 한국어·영어 전환 및 기본 언어를 Unity Play Mode에서 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "DDT 이름 키 및 번역 등록",
+        "action": "캐릭터 표의 Name을 NameKey로 바꾸고 로컬라이징 원본과 산출물을 생성합니다.",
+        "expected": "키 두 개와 한국어·영어 번역이 등록됩니다.",
+        "qa": "DDT 원본·바이너리 대조와 네이티브 표 렌더를 검증합니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "Play Mode 및 문서 검증",
+        "action": "몬스터 이름 조회를 DDT 로컬라이징과 연결하고 문서를 갱신합니다.",
+        "expected": "같은 몬스터가 현재 언어에 맞는 이름을 반환합니다.",
+        "qa": "한국어→영어 전환, 기본 언어 및 체력 회귀를 확인하고 문서 링크를 검증합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

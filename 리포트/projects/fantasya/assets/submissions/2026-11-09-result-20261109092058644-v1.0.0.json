@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "result",
+    "title": "DDT 몬스터 이름 로컬라이징",
+    "summary": "FantasyaCharacter의 이름을 키로 바꾸고 DDT 로컬라이징에 한국어·영어를 등록했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- FantasyaCharacter의 Name을 NameKey로 교체했습니다. 키는 GoblinWarrior와 SkeletonSoldier입니다.\n- 새 Names 시트의 ko·en 번역과 영어 기본값을 DDT에서 등록했습니다. README와 Dosc에 편집 절차를 반영했습니다.\n\n### 대화 기록\n\n1. 사용자 · “DDT 로컬라이징 파일 만들어서 쓰자”라고 요청했습니다.\n2. Codex · 캐릭터 표에는 키를 두고 DDT 로컬라이징에서 한국어와 영어를 관리했습니다.\n\n발언 시각은 미기록입니다.",
+    "verification": "- DDT의 변경 전후 실제 범위 렌더와 캐릭터 원본·바이너리 일치를 확인했습니다.\n- Unity 6000.0.83f1 Playground Play Mode에서 같은 몬스터가 한국어→영어 전환 후 새 이름을 반환했습니다. 프랑스어 요청은 영어로 돌아갔고 초기 체력 100·90을 확인했습니다.\n- 검증본과 적용본의 해시 및 문서 링크를 대조했습니다. DDT 전용 연동으로 샘플 환류 후보가 없으며 전역 지침 변경 사항도 없습니다.\n\n![변경 전 캐릭터 표](../assets/monster-localization-20261109/character-before.png)\n\nName 열에 한국어 이름이 들어 있던 상태입니다.\n\n![변경 후 캐릭터 표](../assets/monster-localization-20261109/character-after.png)\n\nNameKey 열에 DDT 번역 키를 연결했습니다.\n\n![한국어·영어 번역](../assets/monster-localization-20261109/localization.png)\n\n이번에 등록한 Names 시트의 실제 DDT 렌더입니다.",
+    "remaining": "게임 화면에 이름 라벨은 배치되어 있지 않아 플레이 검증은 몬스터의 이름 조회값으로 수행했습니다.",
+    "outcome": "고블린 전사와 스켈레톤 병사의 이름을 FantasyaLocalization.xlsx에서 편집합니다. Monster.CharacterName은 현재 언어로 이름을 조회합니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "8분 13초 · 2026-11-09 18:20:56 KST 로컬 적용·검증 기준",
+    "xerjEvidence": "연결 경로 미확인으로 rg 및 패키지 원본 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
