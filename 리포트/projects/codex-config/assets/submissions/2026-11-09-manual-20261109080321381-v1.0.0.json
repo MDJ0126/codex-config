@@ -1,0 +1,87 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "Unity 샘플 공통 기준 적용 작업 메뉴얼",
+    "summary": "샘플의 문서·코드를 참조하고 검증한 개선을 되돌리는 전역 지침을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "공개 배포 확인",
+    "outcome": "설치본과 저장소에 규칙을 추가했습니다. 공개 배포 검증은 대기 중입니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "17:00:30 KST 시작, 공개 검증 대기",
+    "xerjEvidence": "코드 검색 불필요",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "unity-sample-policy-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "샘플의 문서·코드를 참조하고 검증한 개선을 되돌리는 전역 지침을 적용합니다.",
+    "completionCriteria": "설치본과 저장소의 신규 규칙 일치, 안내 및 결과 보고서 빌드, 원격 푸시와 공개 본문 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "샘플 확인 및 참조·환류 지침 적용",
+        "action": "샘플 README와 다큐먼트를 확인하고 전역 설치본·저장소·실행 가이드를 갱신합니다.",
+        "expected": "참조와 환류 규칙이 모두 기록되고 설치본과 로컬 사본이 일치합니다.",
+        "qa": "전역 설치본·로컬 저장소의 SHA-256과 별도 게시본의 두 규칙을 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "샘플 README·전역 설치본·설정 저장소·실행 가이드를 대조했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "게시와 공개 검증",
+        "action": "보고서를 생성·빌드한 뒤 푸시하고 공개 URL을 확인합니다.",
+        "expected": "별도 인증 없이 새 보고서와 실행 가이드 본문을 열 수 있습니다.",
+        "qa": "검증 스크립트, 원격 커밋, 공개 HTML 본문과 목록을 확인합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-09T17:03:17.5582148+09:00",
+        "summary": "설치본 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "설치본과 로컬 사본 일치",
+            "evidence": "Get-FileHash SHA-256 대조 및 AGENTS.md 변경 확인",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
