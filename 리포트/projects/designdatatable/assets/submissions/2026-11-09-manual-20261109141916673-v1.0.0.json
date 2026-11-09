@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "designdatatable",
+    "kind": "manual",
+    "title": "DDT Addressables 주소와 Inspector 형식 확인",
+    "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "다른 Addressables 버전과 플레이어 런타임 빌드는 미실행입니다. Fantasya에는 설치하지 않았습니다. 다른 가이드 장의 기존 캡처 불일치는 보존했습니다. 전역 지침 변경 없음.",
+    "outcome": "Unity에서 설치 및 미설치 UI와 주소 저장을 확인했습니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-09 23:08:26 KST 착수. 실제 Unity 확인과 기록 완료. 공개 확인은 작성 시점 대기.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "ddt-inspector-address-20261109",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "Inspector 형식의 등록과 주소 편집을 카드에서 제공한다.",
+    "completionCriteria": "실제 Unity에서 저장, 팝업, 비활성 표시를 확인하고 보고서를 공개한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "Unity 확인 및 보고서 공개",
+        "action": "체크박스 등록, 주소 편집, Select와 팝업, 미설치 표시 확인 후 보고서를 게시한다.",
+        "expected": "Unity 에셋에 주소가 저장되고 공개 링크와 증거가 열립니다.",
+        "qa": "실제 Unity 조작 및 그룹 에셋 대조, 보고서 HTTP 응답 확인.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "Unity 조작과 저장을 확인했습니다. 공개 검증 대기."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}
