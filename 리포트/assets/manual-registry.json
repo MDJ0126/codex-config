@@ -1,5 +1,86 @@
 [
   {
+    "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109090843611-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109090843611-v1.0.0.md",
+    "date": "2026-11-09T09:08:43.611Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-dev-journal-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "공개 개발 블로그 디자인 교체 메뉴얼",
+      "summary": "홈, 글 목록과 상세 화면을 개편하고 검색을 검증합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전역 지침 변경은 없습니다. 기존 개발일지의 게임 화면 원본을 사용했습니다.",
+      "outcome": "운영 Chrome에서 홈과 카테고리, 데스크톱 3열과 모바일 2열, 실제 이미지, 글 상세 출처 2개, GrowingCity 검색을 확인했습니다. 빌드 HTML 753개와 게시물 700편의 내부 링크 오류는 0건입니다. GitHub 32a3981을 푸시했습니다.",
+      "proposedTime": "디자인과 배포 검증 약 5~8분.",
+      "actualTime": "2026-11-09 18:04:40 KST 시작, 운영 검증 2026-11-09T18:08:27+09:00 완료, 227초.",
+      "xerjEvidence": "연결 도구가 없어 rg와 격리 Chrome으로 검증했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-dev-journal-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "개발 블로그의 첫 화면에서 최신 개발일지와 네 개 카테고리를 탐색합니다.",
+      "completionCriteria": "기존 네이버풍 배너와 사이드바를 걷어내고 새 레이아웃으로 게시물·검색을 탐색할 수 있습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 개발 블로그 디자인 변경",
+          "action": "홈 헤더, 카테고리 목록과 글 상세 스타일을 수정한 뒤 운영 배포합니다.",
+          "expected": "기존 네이버풍 배너와 사이드바를 걷어내고 새 레이아웃으로 게시물·검색을 탐색할 수 있습니다.",
+          "qa": "운영 사이트에서 PC와 모바일 홈, 목록, 상세, 검색을 열어 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "운영 Chrome에서 홈과 카테고리, 데스크톱 3열과 모바일 2열, 실제 이미지, 글 상세 출처 2개, GrowingCity 검색을 확인했습니다. 빌드 HTML 753개와 게시물 700편의 내부 링크 오류는 0건입니다. GitHub 32a3981을 푸시했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-09T18:08:27+09:00",
+          "summary": "운영 데스크톱·모바일과 검색 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "운영 Chrome에서 홈과 카테고리, 데스크톱 3열과 모바일 2열, 실제 이미지, 글 상세 출처 2개, GrowingCity 검색을 확인했습니다. 빌드 HTML 753개와 게시물 700편의 내부 링크 오류는 0건입니다. GitHub 32a3981을 푸시했습니다.",
+              "evidence": "운영 Chrome 캡처 및 빌드 링크 검사",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109081314083-v1.0.0.html",
     "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109081314083-v1.0.0.md",
     "date": "2026-11-09T08:13:14.083Z",
