@@ -49,7 +49,7 @@
  html[data-theme=dark] :is(.header-nav>a,.record-meta,.form-field>span){color:#f0a27b}
  html[data-theme=dark] :is(.post-summary,.form-field,.post-rail a,.post-rail>span,.submit-panel>p){color:#bdc9d9}
  html[data-theme=dark] :is(.sidebar-label,.sidebar-note,.stage-subfilters small,.list-summary button,.ticket-id,.ticket-date,.priority-tag,.table-heading,.post-rail p,.form-field small,footer,.number,.arrow){color:#a4b1c3}
- html[data-theme=dark] :is(.table-heading,.table-scroll th,.table-scroll tbody tr:nth-child(even),code,.project-fallback,.report-groups span,.stage-tag,.detail-workflow>span){background:#253244;color:#bcc9da}
+ html[data-theme=dark] :is(.table-heading,.table-scroll th,.table-scroll tbody tr:nth-child(even),code:where(:not(pre code)),.project-fallback,.report-groups span,.stage-tag,.detail-workflow>span){background:#253244;color:#bcc9da}
  html[data-theme=dark] .project-logo{background:#e7ecf3}
  html[data-theme=dark] .report-groups{border-color:var(--line)}
  html[data-theme=dark] .report-groups button{background:transparent}
