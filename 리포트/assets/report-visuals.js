@@ -34,12 +34,59 @@ const diagrams=[...document.querySelectorAll('.post-body pre.mermaid')];
 if(diagrams.length){
  try{
   const {default:mermaid}=await import('https://cdn.jsdelivr.net/npm/mermaid@12.3.0/dist/mermaid.esm.min.mjs');
-  mermaid.initialize({startOnLoad:false,securityLevel:'strict',htmlLabels:false,theme:'neutral',suppressErrorRendering:true});
-  for(const diagram of diagrams){
-   const source=diagram.textContent;
-   try{await mermaid.run({nodes:[diagram]});}
-   catch{diagram.textContent=source;}
+  const root=document.documentElement;
+  const sources=diagrams.map(diagram=>diagram.textContent);
+  let renderedTheme;
+  let rendering=Promise.resolve();
+
+  async function renderDiagrams(){
+   const theme=root.dataset.theme;
+   if(theme===renderedTheme)return;
+   renderedTheme=theme;
+   const style=getComputedStyle(diagrams[0]);
+   const color=name=>style.getPropertyValue(name).trim();
+   mermaid.initialize({
+    startOnLoad:false,
+    securityLevel:'strict',
+    htmlLabels:false,
+    suppressErrorRendering:true,
+    theme:'base',
+    look:'classic',
+    fontFamily:'Segoe UI, Malgun Gothic, system-ui, sans-serif',
+    themeCSS:'.node rect { rx: 6px; }',
+    themeVariables:{
+     darkMode:theme==='dark',
+     fontSize:'14px',
+     background:color('--paper'),
+     primaryColor:color('--diagram-node'),
+     primaryBorderColor:color('--diagram-border'),
+     primaryTextColor:color('--ink'),
+     lineColor:color('--green'),
+     edgeLabelBackground:color('--paper')
+    },
+    flowchart:{curve:'linear',nodeSpacing:28,rankSpacing:30,padding:10,wrappingWidth:115}
+   });
+   for(const [index,diagram] of diagrams.entries()){
+    const scrollLeft=diagram.scrollLeft;
+    const source=sources[index];
+    diagram.textContent=source;
+    diagram.removeAttribute('data-processed');
+    try{
+     await mermaid.run({nodes:[diagram]});
+     const svg=diagram.querySelector('svg');
+     if(svg)svg.style.minWidth=`${svg.viewBox.baseVal.width}px`;
+     diagram.scrollLeft=scrollLeft;
+    }catch{
+     diagram.textContent=source;
+    }
+   }
   }
+  const themeObserver=new MutationObserver(()=>{
+   rendering=rendering.then(renderDiagrams);
+  });
+  themeObserver.observe(root,{attributes:true,attributeFilter:['data-theme']});
+  rendering=renderDiagrams();
+  await rendering;
  }catch{
   // The original description remains above the diagram.
  }
