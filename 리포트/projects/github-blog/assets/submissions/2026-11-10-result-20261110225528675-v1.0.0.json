@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 카테고리 NEW 표시를 발행 후 24시간으로 변경",
+    "summary": "카테고리 최신 글의 확인된 발행 시각부터 24시간 동안 NEW를 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 발행 후 24시간 기준에 동의했습니다. 페이지 생성 시 카테고리별 최근 발행 시각을 넣고, 브라우저에서 경과 시간을 확인합니다.\n\n```js\nconst newWindowMs = 24 * 60 * 60 * 1000;\nconst badges = document.querySelectorAll('.category-new');\n\nfor (const badge of badges) {\n  const publishedAt = Date.parse(badge.dataset.publicationTime);\n  const age = Date.now() - publishedAt;\n  badge.hidden = !(age >= 0 && age < newWindowMs);\n  if (!badge.hidden) {\n    setTimeout(() => { badge.hidden = true; }, newWindowMs - age);\n  }\n}\n```",
+    "verification": "같은 운영 홈에서 변경 전후를 비교했습니다. 한국시간 전날 발행된 글도 24시간 이내면 카테고리에 NEW가 표시되는 것을 확인했습니다.\n\n![자정 기준 표시](../assets/miro-new24-before.png)\n\n![발행 시각 기준 표시](../assets/miro-new24-after.png)",
+    "remaining": "발행 시각을 확인할 수 없는 글은 24시간 계산에서 제외했습니다. 지침 추가 사항 없음.",
+    "outcome": "한국시간 자정을 지나도 발행 후 24시간 이내라면 NEW가 표시됩니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "07:53:04 KST 시작. 07:55:27 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
