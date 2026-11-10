@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "탑바와 모바일 그래프 로딩 공간 확보",
+    "summary": "탑바의 3px 로딩 공간과 모바일 방문자 그래프의 높이를 첫 프레임에 확보했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "build.mjs의 첫 화면 스크립트에서 로딩 상태를 시작합니다. style.css의 탑바는 3px 공간을 처음부터 포함하며, 모바일 방문자 그래프의 로딩 문구와 그래프가 같은 30px 행을 공유합니다. 탑바 전체 높이는 PC 82px, 모바일 67px입니다.\n\n```js\nconst root = document.documentElement;\nroot.dataset.pageLoading = 'pending';\n```\n\n```css\n.visitor-summary-chart {\n  display: grid;\n  grid-template-rows: 30px;\n  margin-block-start: 8px;\n}\n.visitor-summary-chart > * { grid-area: 1 / 1; }\n```\n\n### 대화 기록\n\n- 사용자 — “뒤늦게 픽셀 밀리는게 보임 미리 공간 잡아놔줘”\n- AI — 공개 홈을 새로고침하며 탑바와 본문 위치를 기록했습니다. 탑바 높이 자체는 유지됐으며, 방문자 그래프가 로딩 문구를 대체할 때 모바일 본문이 약 10.2px 내려갔습니다. 두 로딩 영역의 공간을 사전에 확보했습니다.",
+    "verification": "커밋 0782378을 푸시했습니다. 공개 Chrome에서 1440px과 390px 화면을 각각 새로고침했습니다. 수정 전 모바일 본문 시작은 212.56px에서 222.77px로 바뀌었습니다. 수정 후 모바일은 222.77px, PC는 82px로 첫 관측 프레임부터 방문자 그래프가 표시된 뒤까지 고정됐습니다. 두 화면의 레이아웃 이동 이벤트가 없었습니다. 검증 브라우저에서 외부 광고와 폰트 요청은 제외했습니다.\n\n![PC 수정 전](../assets/topbar-space-20261110/topbar-space-before-desktop.jpg)\n\n![PC 수정 후](../assets/topbar-space-20261110/topbar-space-after-desktop.jpg)\n\n![모바일 수정 전](../assets/topbar-space-20261110/topbar-space-before-mobile.jpg)\n\n![모바일 수정 후](../assets/topbar-space-20261110/topbar-space-after-mobile.jpg)",
+    "remaining": "비동기 영역의 공간 확보와 새로고침 검증을 프로젝트 지침에 추가했습니다. 전역 지침 변경은 없습니다.",
+    "outcome": "공개 홈의 PC와 모바일 새로고침에서 본문 시작 위치가 유지됩니다.",
+    "proposedTime": "약 1분",
+    "actualTime": "블로그 공개 확인까지 약 3분 18초. 2026-11-10 18:18:46 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
