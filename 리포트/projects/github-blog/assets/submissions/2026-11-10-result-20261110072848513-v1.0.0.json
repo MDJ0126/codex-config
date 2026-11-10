@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "홈 섹션 색상에 맞춘 카드 호버",
+    "summary": "최신 뉴스는 붉은색, 제작 이야기는 초록색, 게임 기술은 보라색으로 호버를 맞췄습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제목과 카드 강조가 같은 섹션 색상 값을 공유합니다.\n\n### 대화 기록\n\n- 사용자 요청 — ‘그 색에 맞게 강조 색상 적용해줘’\n- AI 결정 — 기존에 별도 색이 있는 홈 섹션 세 곳에 해당 색을 적용했습니다.",
+    "verification": "블로그 커밋 960c80c를 푸시했습니다. 공개 Chrome에서 세 섹션의 제목과 호버 배경색이 같고 외곽선이 1px임을 확인했습니다.\n\n![section-hover-news-before.jpg](../assets/section-hover-20261110/section-hover-news-before.jpg)\n\n![section-hover-news-after.jpg](../assets/section-hover-20261110/section-hover-news-after.jpg)\n\n![section-hover-stories-before.jpg](../assets/section-hover-20261110/section-hover-stories-before.jpg)\n\n![section-hover-stories-after.jpg](../assets/section-hover-20261110/section-hover-stories-after.jpg)\n\n![section-hover-tech-before.jpg](../assets/section-hover-20261110/section-hover-tech-before.jpg)\n\n![section-hover-tech-after.jpg](../assets/section-hover-20261110/section-hover-tech-after.jpg)",
+    "remaining": "전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "세 섹션의 제목과 카드 호버에 같은 색이 적용됩니다.",
+    "proposedTime": "수정과 로컬 확인 약 1분",
+    "actualTime": "블로그 공개 확인까지 약 4분 29초. 2026-11-10 16:28:18 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
