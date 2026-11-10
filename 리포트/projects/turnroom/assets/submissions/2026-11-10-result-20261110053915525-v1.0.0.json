@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "세 Publisher 업로드본의 Unity 설치·실행 및 공식 Validator 결과",
+    "summary": "대표 예제 5개 실행, 공식 Validator 실패 0개 및 Pixora Studio 추가 파일 1개를 확인했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 Pixora Studio의 실제 설치본과 분리 보존된 샘플을 복원해 비교했습니다. 2,794개에서 2,795개로 늘어난 유일한 경로는 Assets/TurnRoom/PixoraStudio/Editor/.xerjignore 입니다. 기존 배포 도구가 제외하는 개발 검색 설정이며, 이번 업로드본에서는 실제 설치된 파일도 확인했습니다. 이전 작업에서 수동 패키징 필터가 이 파일을 누락 대상으로 걸러내지 못했습니다.\n\n### 대화 요약\n\n- 사용자 · 세 업로드본 설치·실행과 공식 Validator 실행, Pixora Studio 추가 파일 식별을 요청했습니다.\n- Codex · 각 업로드본을 격리 프로젝트에 설치해 검사하고, 보존된 이전 설치본을 이용해 추가 경로를 찾았습니다.",
+    "verification": "Unity 6000.0.83f1의 제품별 새 프로젝트에서 SHA-256이 업로드 기록과 일치하는 .unitypackage를 직접 ImportPackage로 설치했습니다. 제품 메뉴 5개를 실행했고, 상점, Image Maker, Isometric Atelier, Meadow Breeze, Drone Hangar 예제의 Play Mode 오류가 0개였습니다.\n\n공식 Asset Store Tools 11.3.1 Validator를 설치 범위 Assets/TurnRoom 전체에 실행했습니다.\n\n- Design Data Table 2.0.3 · 통과 25, 경고 4, 실패 0.\n- Pixora Studio 1.0.1 · 통과 26, 경고 3, 실패 0.\n- Entity Forge 0.3.2-preview · 통과 28, 경고 1, 실패 0.\n\n경고는 압축 파일, 줄바꿈, 텍스처 크기 또는 JPG 사용입니다. 세 제품 모두 JPG 경고가 있었고, 텍스처 크기 경고는 Design Data Table에만 있었습니다.",
+    "remaining": "배치 모드에서 검증해 화면 렌더링과 포커스 전환의 시각 확인은 범위에 포함하지 않았습니다. Pixora Studio의 개발 설정이 들어간 현재 업로드본을 대상으로 검증했습니다. 세 제품의 초안은 검증 대상입니다. 기존 배포 규칙이 해당 파일의 제외를 명시하고 있어 전역·프로젝트 지침은 변경하지 않았습니다.",
+    "outcome": "Design Data Table, Pixora Studio, Entity Forge 업로드본을 별도 Unity 프로젝트에 설치해 실행했습니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-10 14:29:44 KST부터 14:38:04 KST까지 8분 20초. 마지막 제품의 실행 결과 및 설치 파일 확인 기준입니다.",
+    "xerjEvidence": "Unity 로그, 압축 경로 목록, rg로 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "검토",
+    "state": "complete"
+  }
+}

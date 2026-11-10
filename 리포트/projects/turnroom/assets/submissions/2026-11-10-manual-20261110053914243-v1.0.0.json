@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "Publisher 업로드 패키지 3종 설치·실행·Validator 메뉴얼",
+    "summary": "업로드된 패키지를 격리 환경에 설치하고 실행·Validator·파일 목록을 검증했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "배치 모드에서 검증해 화면 렌더링과 포커스 전환의 시각 확인은 범위에 포함하지 않았습니다. Pixora Studio의 개발 설정이 들어간 현재 업로드본을 대상으로 검증했습니다. 세 제품의 초안은 검증 대상입니다.",
+    "outcome": "세 패키지의 대표 실행과 공식 Validator 및 Pixora 추가 파일 비교를 완료했습니다.",
+    "proposedTime": "10~20분",
+    "actualTime": "2026-11-10 14:29:44 KST부터 14:38:04 KST까지 8분 20초. 마지막 제품의 실행 결과 및 설치 파일 확인 기준입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "turnroom-uploaded-draft-validation-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "업로드 해시와 일치하는 파일 설치 및 실행 검증",
+    "completionCriteria": "대표 실행, 공식 검사 결과, 추가 파일 이름을 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "업로드본 설치·실행·Validator 및 경로 비교",
+        "action": "세 업로드본을 Unity에서 각각 설치·실행하고 공식 Validator를 호출합니다. 이전 Pixora Studio 설치 트리와 현재 아카이브를 대조합니다.",
+        "expected": "세 검증이 끝나고 공식 결과와 추가 파일 경로를 확인합니다.",
+        "qa": "업로드 해시, Unity Play Mode 로그, Validator 출력, 이전과 현재 파일 목록을 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "세 패키지 설치와 대표 예제 실행 완료. 공식 Validator 실패 0, 경고 8. 추가 경로 1개 확인."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T14:38:04+09:00",
+        "summary": "세 패키지의 설치와 실행 및 검증 도구의 결과를 확인했습니다.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "다섯 예제를 실행하고 공식 Validator 87개 결과를 기록했습니다. 실패 0개, 경고 8개입니다.",
+            "evidence": "세 SHA-256, Unity 실행 JSONL, PixoraStudio-path-comparison.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
