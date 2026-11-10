@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "상단 검색 버튼 글씨를 흰색으로 변경",
+    "summary": "검색 버튼의 글자색을 흰색으로 지정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 요청 원문(시각 미기록) — ‘검색바의 버튼 글씨 검색 흰색으로’\n\nAI 조치 — 상단 버튼 CSS 글자색과 CSS 캐시 버전을 수정했습니다.",
+    "verification": "Git 차이 검사와 빌드 스크립트 문법 확인을 마쳤습니다.",
+    "remaining": "보고서 작성 시점의 운영 반영 및 전후 화면은 미확인입니다. 지침 변경은 없습니다.",
+    "outcome": "상단 검색 버튼 글씨를 흰색으로 설정하고 커밋 f60dc55를 블로그 main에 푸시했습니다.",
+    "proposedTime": "수정과 푸시 약 1분",
+    "actualTime": "수정과 푸시 약 21초, 2026-11-10 16:30:07 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
