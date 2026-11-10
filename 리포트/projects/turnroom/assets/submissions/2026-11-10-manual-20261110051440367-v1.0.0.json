@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "manual",
+    "title": "최소화 목록의 창 깜박임 완화 검증",
+    "summary": "별도 Windows 목록 창에 클릭 보호를 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "버튼을 누르고 있는 동안 메인 창이 문서를 덮는지 미확인",
+    "outcome": "구현과 문서 전환을 확인했습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-10 14:08:39 KST 작업 시작. 코드 적용과 실제 선택 확인은 14:12대 KST.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "shelf-activation-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "Unity가 목록 클릭 중 열린 도구를 잠깐 덮는 현상 완화",
+    "completionCriteria": "두 문서 교차 선택 및 눌림 구간의 문서 노출 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "별도 목록 창의 클릭 보호 연결",
+        "action": "기존 창 순서 보호를 별도 목록 창의 실제 입력에 연결합니다.",
+        "expected": "두 문서를 선택할 수 있고 버튼을 누르는 동안 메인 창이 다른 문서를 덮지 않습니다.",
+        "qa": "Unity에서 목록 항목을 번갈아 선택하고 버튼을 누르는 동안의 화면을 확인합니다.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "두 문서 전환 확인. 누르는 중 프레임은 미확인."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "verification"
+  }
+}

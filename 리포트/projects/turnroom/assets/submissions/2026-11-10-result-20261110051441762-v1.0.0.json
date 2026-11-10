@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "최소화 목록 클릭의 메인 창 덮임 완화",
+    "summary": "별도 Windows 목록 창에도 기존 클릭 보호를 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "목록 창과 그 자식 창에서 입력을 받아 Unity 메인 창의 Z 순서를 보호합니다. 목록 항목 영역에 적용하며 목록 창 재생성과 도메인 리로드에서 연결을 해제합니다.\n\n### 대화 요약\n\n- 사용자가 최소화 목록 클릭 중 열려 있던 창의 순간적인 깜박임 완화를 요청했습니다.\n- 기존 덮임 기록과 현재 소스를 대조하고 실제 목록 창에 보호를 연결했습니다.",
+    "verification": "TurnRoom.Editor와 DesignDataTable.Editor 컴파일 종료 코드 0. 열린 Unity 에디터에서 어셈블리 재컴파일 후 실제 목록의 두 항목을 양방향으로 선택했습니다.",
+    "remaining": "클릭 중간 프레임과 깜박임 완화 정도는 미확인입니다. 실제 화면은 외부 공개 검토 제한으로 첨부하지 않았습니다. 기존 지침이 눌림 구간 검증을 다루고 있어 전역·프로젝트 지침을 변경하지 않았습니다.",
+    "outcome": "Unity 6000.0.83f1에서 수정 코드를 다시 빌드하고 목록에서 두 문서가 양방향으로 전환되는 것을 확인했습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-10 14:08:39 KST 작업 시작. 코드 적용과 실제 선택 확인은 14:12대 KST.",
+    "xerjEvidence": "rg 및 Git 변경 이력 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
