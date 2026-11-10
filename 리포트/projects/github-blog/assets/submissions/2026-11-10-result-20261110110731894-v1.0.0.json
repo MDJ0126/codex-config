@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 모바일 탑바 문구와 카테고리 배치 수정",
+    "summary": "모바일 탑바의 소개 문구를 숨겨 MIRO 이름만 표시하고 카테고리를 탑바 아래 한 줄로 복구했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 소개 문구가 줄바꿈돼 답답하다고 지적하고, 모바일에 MIRO만 표시하며 카테고리는 탑바 아래에 유지해 달라고 정정했습니다.\n\n```css\n.mobile-categories { display: flex; overflow-x: auto; }\n.mobile-categories a { flex: none; white-space: nowrap; }\n```",
+    "verification": "운영 홈의 320px, 390px 모바일 화면과 1500px 데스크톱 화면을 비교했습니다. 변경 전은 직전 운영 버전의 실제 캡처를 사용했습니다.\n\n![기존 모바일 탑바](../assets/miro-mobile-tabs-before.png)\n\n![MIRO와 하단 카테고리](../assets/miro-mobile-tabs-closed.png)\n\n![블로그 정보 메뉴](../assets/miro-mobile-tabs-open.png)",
+    "remaining": "전역·프로젝트 지침 변경 없음.",
+    "outcome": "블로그 정보 메뉴에는 프로필 이미지와 소개, 방문자 수를 유지했습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "20:05:50 KST 시작. 20:07:30 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
