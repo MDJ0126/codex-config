@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "푸터 위 여백 줄이기",
+    "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "푸터 상단 여백을 화면 너비에 따라 12~24px로 적용했습니다.\n\n### 대화 기록\n\n- 사용자(개별 시각 미기록) — ‘푸터 위에 여백 없어줘 적당히’라고 요청했습니다.\n- AI — 본문과 푸터의 구분을 위해 화면 크기에 따라 12~24px를 남기기로 했습니다.",
+    "verification": "공개 홈의 1280px·390px 브라우저 화면에서 계산된 상단 여백을 확인했습니다. 각각 72→24px와 42→12px였습니다. 두 폭 모두 푸터 메뉴 다섯 개가 표시됐습니다. 블로그 커밋은 e38112b입니다.\n\n![데스크톱 변경 전 푸터 위 여백](../assets/footer-gap-20261110/footer-gap-desktop-before.jpg)\n\n![데스크톱 변경 후 푸터 위 여백](../assets/footer-gap-20261110/footer-gap-desktop-after.jpg)\n\n![모바일 변경 전 푸터 위 여백](../assets/footer-gap-20261110/footer-gap-mobile-before.jpg)\n\n![모바일 변경 후 푸터 위 여백](../assets/footer-gap-20261110/footer-gap-mobile-after.jpg)\n\n교훈 검토 결과, 추가할 공통 또는 프로젝트 규칙 없음.",
+    "remaining": "없음",
+    "outcome": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "블로그 수정 및 공개 화면 확인 약 1분 21초. 2026-11-10 17:15:22 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
