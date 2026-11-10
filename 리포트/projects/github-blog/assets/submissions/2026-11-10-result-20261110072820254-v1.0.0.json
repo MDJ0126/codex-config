@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "웹폰트 준비 전 전체 화면 로딩 표시",
+    "summary": "블로그 첫 방문과 새로고침에서 웹폰트가 준비될 때까지 로딩 표시를 보여 줍니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 요청 요약(시각 미기록) — 방문·새로고침 때 폰트 교체가 보이므로 첫 화면을 로딩 표시로 덮어 달라고 요청했습니다.\n\nAI 조치 — 첫 레이아웃과 웹폰트 준비를 기다리고, 지연이 길면 4초 뒤에 화면을 표시합니다.",
+    "verification": "154개 게시물 빌드가 성공했고 공통 홈 HTML에서 초기 로딩 처리가 웹폰트 링크보다 앞에 들어간 것을 확인했습니다.",
+    "remaining": "보고서 작성 시점에는 운영 브라우저 확인과 전후 캡처가 남았습니다. 지침 변경은 없습니다.",
+    "outcome": "공통 페이지 템플릿에 초기 로딩 처리를 추가하고 블로그 main에 커밋 a056dfc를 푸시했습니다.",
+    "proposedTime": "수정과 확인 약 2분",
+    "actualTime": "빌드 및 푸시 약 1분 10초, 2026-11-10 16:24:21 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
