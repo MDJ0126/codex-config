@@ -16,6 +16,7 @@
 - **프로젝트 작업** — 대상 저장소 지침과 `리포트/projects/<project>/guidelines.md`, 기존 메뉴얼·QA·토론
 - **신규 작업 메뉴얼** — 리포트/guide/execution.md. 해당 프로젝트 지침과 필요한 작업별 절만 확인한다.
 - **결과 보고 작성** — 리포트/guide/authoring.md. 버그 상태·토론을 다룰 때는 workflow.md를 확인한다.
+- **작업 기록과 블로그** — 화면이 달라지는 작업은 시작 전에 기준 화면을 촬영하고 변경 후 전후 쌍을 첨부한다. 모든 작업을 블로그에 기록하고 글마다 썸네일을 등록한다. 게시 전 검증 기준은 work-instructions.md의 Tracefolio 절에 있다.
 - **코드 변경 보고** — 핵심 함수·메서드 전체를 제시하고, 조건에 해당하는 독립 흐름마다 Mermaid를 넣어 공개 페이지에서 확인한다. 적용 조건은 work-instructions.md의 Tracefolio 절에 있다.
 - **Unity 또는 Unreal Blueprint** — `리포트/guide/work-instructions.md`의 해당 엔진 절. Blueprint는 동등한 스크립트 또는 C++ 실행 구조로 옮긴 뒤 실행이나 구체적인 증거로 검증한다.
 - **Affinity, 디자인 또는 앱 조작** — `리포트/guide/work-instructions.md`의 디자인·Affinity·저장과 종료 절. 실제 Affinity가 필수이며 GUI보다 전용 CLI의 `doctor`와 `status`를 먼저 사용한다.
