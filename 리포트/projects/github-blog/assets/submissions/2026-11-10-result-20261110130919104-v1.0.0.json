@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 홈 최근 개발일지 항목 높이 고정",
+    "summary": "홈의 왼쪽 최근 개발일지 네 항목을 아래쪽 항목의 기존 크기인 105px로 맞췄습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 홈의 왼쪽 요소가 커지면서 옆 레이아웃도 늘어난다고 보고하고 아래쪽 항목 크기를 기준으로 고정해 달라고 요청했습니다. 데스크톱에서만 적용합니다.\n\n```css\n.press-devlog .press-brief li { block-size: 105px; overflow: hidden; }\n.press-devlog .press-brief .digest-copy strong {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  overflow: hidden;\n}\n```",
+    "verification": "운영 홈에서 변경 전 항목 높이는 약 125px, 146px, 105px, 105px였습니다. 변경 전후는 같은 1500px 브라우저 뷰포트에서 촬영했습니다.\n\n![최근 개발일지 변경 전](../assets/miro-devlog-height-before.png)\n\n![최근 개발일지 변경 후](../assets/miro-devlog-height-after.png)",
+    "remaining": "전역·프로젝트 지침 변경 없음.",
+    "outcome": "긴 제목을 두 줄로 표시해 가운데 대표 글과 오른쪽 카드가 함께 커지는 문제를 줄였습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "22:07:20 KST 시작. 22:09:17 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
