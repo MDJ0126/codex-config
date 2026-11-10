@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "전역 지침 압축 작업 메뉴얼",
+    "summary": "설치본의 공통 규칙과 작업별 절차를 분리하고 동기화·공개 배포를 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "실행 전 계획입니다.",
+    "proposedTime": "2~4분, 공개 배포 대기 별도",
+    "actualTime": "20:34:57 KST 작업 시작",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "global-instructions-condense-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "반복 로딩되는 전역 지침을 압축하고 기존 조건과 예외를 유지합니다.",
+    "completionCriteria": "전역 파일 크기 감소, 세부 지침 보존, 설치본과 저장소의 해시 일치 및 공개 배포 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "지침 압축과 동기화",
+        "action": "설치본을 기준으로 공통 요약과 작업별 절차를 분리한 뒤 해당 파일만 커밋하고 배포한다.",
+        "expected": "전역 파일 크기 감소, 세부 지침 보존, 설치본과 저장소의 해시 일치 및 공개 배포 확인",
+        "qa": "전후 바이트, 상세 절차의 보존, 설치본 해시, 공개 본문과 링크를 대조한다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
