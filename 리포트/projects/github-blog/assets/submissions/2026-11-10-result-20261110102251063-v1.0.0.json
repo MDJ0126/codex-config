@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 탑바와 검색창의 스크롤 전환 개선",
+    "summary": "탑바와 검색창이 함께 부드럽게 줄어듭니다. 원래 글 제목이 탑바 뒤로 가려지면 읽는 제목이 작은 줄로 나타납니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 탑바 축소 애니메이션과 더 작은 검색창, 원래 제목이 사라진 다음에 나타나는 작은 제목을 요청했습니다. 이전에는 탑바 축소와 작은 제목 표시가 동시에 시작됐습니다. 검색창의 너비와 안쪽 여백을 전환하고, 원래 제목의 아래쪽 경계와 탑바 아래쪽 경계를 비교하도록 변경했습니다.\n\n```js\nconst headingHidden = articleHeading &&\n  articleHeading.getBoundingClientRect().bottom <= utility.getBoundingClientRect().bottom;\npage.toggleAttribute('data-reading-title', Boolean(scrolled && headingHidden));\n```",
+    "verification": "Chrome에서 데스크톱 검색창 너비 310px, 전환 중 약 271px, 전환 후 250px을 확인했습니다. 원래 제목이 보이는 상태에서는 작은 제목이 숨겨졌고, 더 내리면 나타났습니다. 빌드에서 게시물 154개와 이미지 참조 214개를 확인했습니다.\n\n![원래 제목이 보이는 구간 수정 전](../assets/miro-motion-before-visible-heading.png)\n\n![원래 제목이 보이는 구간 수정 후](../assets/miro-motion-after-visible-heading.png)\n\n![원래 제목이 지나간 구간 수정 전](../assets/miro-motion-before-reading.png)\n\n![원래 제목이 지나간 구간 수정 후](../assets/miro-motion-after-reading.png)",
+    "remaining": "전역·프로젝트 지침에 추가할 공통 규칙은 확인되지 않았습니다.",
+    "outcome": "검색창을 데스크톱에서 310px에서 250px로, 좁은 화면에서 최대 156px로 줄였습니다. 모션 감소 설정에서는 즉시 전환합니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "19:19:44 KST 시작. 19:22:49 KST에 스크롤 검증과 보고 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
