@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "result",
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- `MonsterBehavior.asset`은 Unity Behavior 1.0.16을 사용합니다. `MonsterBehaviorAction`이 순찰·추격·공격 단계를 연결하고 `MonsterAI`가 행동을 실행합니다.\n- 기본 순찰 4m, 감지 7m, 생성 지점 기준 추격 한계 12m입니다. 순찰 이동 시도는 최대 6초입니다. 대기는 0.6초에서 3초로 늘린 후 무작위 간격으로 조정했습니다.\n- 샘플의 전역 `eTeam`을 가져왔습니다. 활성 캐릭터 중 다른 전투 진영을 고르며 같은 팀과 `None`은 제외합니다. 기본 배치는 플레이어 `MyTeam`, 몬스터 `Enemy`입니다.\n\n`MonsterAI.Patrol`의 목적지 재선정 대기입니다.\n\n```csharp\n_nextPatrolTime = Time.time + Random.Range(2f, 5f);\n```\n\n### 대화 기록\n\n1. 사용자 · 미기록 · “AI는 단순하게 하나로만 만들어봐 몬스터 공용으로”.\n2. 사용자 · 미기록 · “몬스터 ai 유니티 비헤비어로 만들어야지”와 “생성 지점을 기준으로 패트롤하게 해”.\n3. Codex · 11월 9일 21:33 KST · 공용 그래프와 순찰·추격 범위의 파일 연결을 보고했습니다.\n4. 사용자 · 미기록 · “글로벌 이넘으로 team 가져와”라고 요청했습니다.\n5. 사용자 · 미기록 · “너무 짧아 좀 더 텀을 주자” 이후 “고정 시간은 좀 그렇지 않나”.\n6. Codex · 11월 10일 19:06 KST · 몬스터별 무작위 대기를 적용했습니다.",
+    "verification": "그래프와 48개 몬스터 프리팹 연결, 현재 소스의 팀 필터 및 무작위 대기값을 대조했습니다.",
+    "remaining": "Unity Play Mode의 실제 순찰, 추격, 팀 전투와 전후 화면은 미확인입니다.",
+    "outcome": "플레이어가 탐지되지 않으면 몬스터는 생성 지점 주변을 순찰합니다. 목적지에 도착하거나 이동이 중단되면 몬스터마다 2~5초 사이의 대기 시간을 새로 뽑습니다.",
+    "proposedTime": "원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.",
+    "actualTime": "원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

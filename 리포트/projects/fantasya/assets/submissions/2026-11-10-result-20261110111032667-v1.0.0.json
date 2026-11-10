@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "result",
+    "title": "DDT Addressables 전환과 캐릭터 프리팹",
+    "summary": "DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- Addressables 2.9.1을 사용합니다. `Characters` 그룹에는 플레이어와 몬스터, `Design Data Tables`에는 DDT 바이너리와 번역 참조 에셋을 등록했습니다.\n- 캐릭터와 스테이터스는 DDT 생성 테이블의 비동기 API로 읽습니다. 이름은 DDT 번역 원본을 참조하는 프로젝트 에셋을 Addressables로 읽습니다. 새 DDT 테이블 바이너리 등록은 DDT 가져오기 흐름을 사용합니다.\n- 보유 팩의 말·사슴도 시험용 몬스터 범위에 포함했습니다. 기존 Playground에는 처음 배치한 두 몬스터가 남아 있습니다. Data 에셋은 파일 종류별로 `Tables`, `Behavior`, `Localization`으로 정리하고 기존 GUID를 보존했습니다.\n\n`Monster.Start`의 공유 초기화입니다. 캐릭터별 초기화가 한 로드 작업을 기다립니다.\n\n```csharp\nawait (_tableLoad ??= Task.WhenAll(\n    FantasyaCharacterTable.instance.LoadAsync(),\n    FantasyaStatusTable.instance.LoadAsync(),\n    CharacterLocalization.LoadAsync()));\n```\n\n### 대화 기록\n\n1. 사용자 · 미기록 · “아 프리팹화 하라고 하려고 했던거임”.\n2. 사용자 · 미기록 · “어드레서블 설치하고 정리해둬”. DDT의 Addressables 로드도 요청했습니다.\n3. 사용자 · 미기록 · “현재 있는 모든 몬스터들 비슷하게 구현해서 프리팹화 하고 어드레서블에 등록해줘.”\n4. Codex · 11월 9일 21:00 KST · 몬스터 48종과 DDT, Addressables 연결을 보고하고 Play Mode는 미확인으로 구분했습니다.\n5. 사용자 · 미기록 · “파일 종류 단위로 폴더 구분하라고”. Codex는 파일마다 만들었던 폴더를 세 종류로 다시 묶었습니다.",
+    "verification": "현재 작업 트리에서 캐릭터 프리팹 49개와 플레이어 빌드의 Addressables 설정을 대조했습니다. 당시 프리팹 ID, 주소, DDT 바이너리 연결은 정적으로 대조했습니다.",
+    "remaining": "Unity 임포트, 최신 콘텐츠 빌드 및 Play Mode는 미확인입니다. 동일 상태의 전후 화면은 당시 확보하지 못했습니다.",
+    "outcome": "Playground의 기존 플레이어·스켈레톤·오크를 프리팹으로 분리했습니다. 이어 보유 Creatures 48종을 몬스터로 구성했고, 플레이어를 포함해 주소는 49개입니다.",
+    "proposedTime": "원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.",
+    "actualTime": "원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

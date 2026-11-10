@@ -1,0 +1,71 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "manual",
+    "title": "Fantasya 누락 보고서 정리와 공개 확인",
+    "summary": "11월 9~10일의 누락된 작업과 버그를 주제별 보고서로 정리하고 중앙 아카이브의 공개 주소를 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "개별 보고서 생성, 중앙 아카이브 빌드·공개 확인.",
+    "outcome": "현재 작업 트리와 기존 보고서를 대조해 누락 범위를 분류했습니다.",
+    "proposedTime": "초안 5~10분, 공개 배포 대기는 별도",
+    "actualTime": "2026-11-10 20:07:54 KST 시작",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "fantasya-report-backfill-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "기존 보고서 이후의 변경을 중앙 아카이브에 추가하고 검증 상태를 구분합니다.",
+    "completionCriteria": "개별 보고서와 목록의 공개 페이지가 인증 없이 열리고 본문을 확인할 수 있습니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "누락 내역 대조와 보고서 작성",
+        "action": "대화, 현재 프로젝트, 기존 중앙 아카이브를 대조하고 결과·버그 JSON을 생성합니다.",
+        "expected": "주제별 원본과 본문이 등록되고 미확인 사항이 표시됩니다.",
+        "qa": "등록 제목, 내용, 소스 확인 범위와 남은 검증을 대조합니다.",
+        "dependsOn": [],
+        "status": "doing",
+        "revision": 1,
+        "result": "보고서 초안 다섯 건 작성 및 이전 보고서 범위 대조."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "중앙 아카이브 빌드와 공개 확인",
+        "action": "격리된 최신 main에서 빌드하고 이번 작업 파일만 커밋·푸시한 뒤 Pages 본문을 확인합니다.",
+        "expected": "개별 공개 URL과 목록이 열립니다.",
+        "qa": "공개 URL의 제목, 본문, 목록 링크를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
