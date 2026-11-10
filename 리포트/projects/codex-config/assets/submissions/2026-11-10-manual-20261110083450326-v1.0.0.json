@@ -1,0 +1,88 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "코드 수정 보고 지침 반영 및 배포 메뉴얼",
+    "summary": "전역 지침 수정, 설치본 대조, 아카이브 배포를 순서대로 수행합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "아카이브 빌드·공개 확인.",
+    "outcome": "지침 반영 및 설치본 해시 대조를 마쳤습니다.",
+    "proposedTime": "수정 및 동기화 확인 약 1~2분. 공개 배포 확인 별도.",
+    "actualTime": "로컬 반영 및 해시 확인 약 56초. 2026-11-10 17:34:13 KST.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "code-report-highlighting-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "구문 강조와 핵심 설명을 전역 보고 기준에 명시합니다.",
+    "completionCriteria": "지침과 설치본이 일치하고 개별 보고서의 공개 본문이 열립니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "전역 지침 및 설치본 반영",
+        "action": "보고서 형식에 규칙 한 항목을 추가하고 설치본에 반영합니다.",
+        "expected": "코드 구문 강조와 필요한 변경 맥락이 한 항목에 포함됩니다.",
+        "qa": "Git diff 및 두 파일의 SHA-256을 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "지침 한 항목 추가 및 해시 일치."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "결과 보고서 공개",
+        "action": "분리 작업 트리에서 보고서를 빌드하고 이번 작업 파일만 커밋·푸시합니다.",
+        "expected": "인증 없이 개별 HTML 보고서 본문을 열 수 있습니다.",
+        "qa": "생성 HTML과 공개 URL의 본문을 확인합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T17:34:13+09:00",
+        "summary": "지침과 설치본 비교",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "지침 한 항목 추가 및 설치본 일치.",
+            "evidence": "git diff 및 Get-FileHash SHA-256 일치",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
