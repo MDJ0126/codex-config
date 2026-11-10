@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "게시물 삭제·정정 요청 안내 페이지",
+    "summary": "공개 연락처를 설정 변수로 관리하고 게시물 문의 페이지를 푸터에 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 요청 요약(시각 미기록) — 연락용 이메일을 설정 변수로 두고 삭제 요청을 확인해 반영한다는 안내와 링크를 추가해 달라고 요청했습니다.\n\nAI 조치 — site.json의 contactEmail을 build.mjs에서 읽어 새 문의 페이지의 이메일 링크를 렌더링하고, 푸터에서 연결했습니다.\n\n```javascript\nconst contactEmail = escape(settings.contactEmail);\n```",
+    "verification": "176페이지 빌드·링크 검사 통과. 운영 홈의 문의 링크, 안내 문구, 이메일 링크를 확인했습니다.\n\n![운영 게시물 문의 페이지](../assets/miro-contact.png)",
+    "remaining": "새 안내 페이지이므로 이전 버전에는 해당 페이지가 없었습니다. 푸터 변경 전 캡처는 미확보입니다. 전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "운영 문의 페이지와 푸터 링크를 확인했습니다.",
+    "proposedTime": "수정 및 배포 확인 2~4분",
+    "actualTime": "첫 확인 18:10:27 KST, 운영 확인 18:11:56 KST, 약 1분 29초, 2026-11-10.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
