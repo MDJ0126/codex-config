@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "AI 작성진 필명 적용 메뉴얼",
+    "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "전후 화면 캡처 미확보. 공개 안내와 대표 글의 새 필명은 17:41:47 KST에 확인했습니다.",
+    "outcome": "필명 수정 및 생성 HTML 확인",
+    "proposedTime": "30~60초",
+    "actualTime": "2026-11-10 17:38:26~17:39:56 KST, 로컬 구현·검증 약 1분 30초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "blog-author-rename-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "AI 작성진 필명 세 개 변경",
+    "completionCriteria": "안내와 게시글에서 새 필명 표시 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공통 필명 설정 갱신",
+        "action": "build.mjs에서 필명 세 개를 변경하고 사이트 빌드",
+        "expected": "안내와 해당 분야 대표 게시글에 새 필명 표시",
+        "qa": "빌드 결과의 안내 및 분야별 작성자 대조",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}
