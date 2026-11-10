@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "관리자 댓글 목록을 행으로 정리하고 원글 제목 연결",
+    "summary": "작성자와 시각, 댓글 본문, 클릭할 수 있는 원글 제목을 행마다 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- `admin/comments-panel.html`에서 댓글을 작성자·시각, 본문, 원글 제목 순으로 배치하고 삭제 버튼을 오른쪽에 뒀습니다. 기존 관리자 탭과 대시보드 테마를 사용합니다.\n- `admin/comments.mjs`에서 공개 검색 색인의 경로와 댓글의 게시물 경로를 맞춰 제목을 가져옵니다. 색인에서 확인할 수 없는 글은 경로 식별자를 표시해 관리 동작이 계속됩니다.\n\n```js\nasync function postTitles(blog) {\n  try {\n    const response = await fetch(blog + '/search-index.json', {signal: AbortSignal.timeout(2500)});\n    if (response.ok) {\n      const index = await response.json();\n      return new Map(index.map(([title, , , path]) => [path, title]));\n    }\n  } catch {\n    // A temporary index error must not prevent moderation.\n  }\n  return new Map();\n}\n\nfunction render(comment) {\n    const item = document.createElement('li');\n    const content = document.createElement('div');\n    const meta = document.createElement('div');\n    meta.className = 'comment-meta';\n    const name = document.createElement('strong');\n    name.textContent = comment.nickname;\n    const time = document.createElement('time');\n    time.dateTime = comment.created_at;\n    time.textContent = date.format(new Date(comment.created_at));\n    const body = document.createElement('p');\n    body.textContent = comment.body;\n    const link = document.createElement('a');\n    link.className = 'comment-post';\n    link.href = comment.postUrl;\n    const icon = document.createElement('span');\n    icon.setAttribute('aria-hidden', 'true');\n    icon.textContent = '▤';\n    const title = document.createElement('span');\n    title.textContent = comment.postTitle;\n    link.append(icon, title);\n    const remove = document.createElement('button');\n    remove.className = 'record-policy';\n    remove.type = 'button';\n    remove.textContent = '삭제';\n    remove.setAttribute('aria-label', comment.nickname + '님의 댓글 삭제');\n    remove.addEventListener('click', () => removeComment(comment.id, remove));\n    meta.append(name, time);\n    content.append(meta, body, link);\n    item.append(content, remove);\n    return item;\n  }\n```\n\n```mermaid\nflowchart LR\n A[\"관리자 댓글 목록 요청\"] --> B[\"D1 댓글 조회\"]\n B --> C[\"공개 검색 색인의 글 경로와 제목 조회\"]\n C --> D[\"행에 작성자·시각·본문·원글 제목 표시\"]\n D --> E[\"제목 클릭\"]\n E --> F[\"해당 게시물 댓글 위치로 이동\"]\n```\n\n### 대화 기록\n\n1. 사용자 (시각 미기록) · “티스토리 댓글 관리 페이지 처럼 레이아웃 구성해줘 게시물 이름도 보이게 하고 그걸 누르면 이동하고”\n2. AI (21:46 KST) · 댓글을 행으로 정리하고 실제 글 제목과 클릭 이동을 확인했습니다.\n3. AI (21:47 KST) · 운영 Worker에서 새 목록 코드를 확인했습니다.",
+    "verification": "- 로컬 관리자 로그인에서 실제 제목 “첫 접속에 50MB가 들던 웹 빌드 줄이기”가 표시됐습니다. 제목 클릭 후 공개 게시글의 댓글 위치로 이동했고, 삭제 버튼도 동작했습니다.\n- 390px 너비에서 가로 넘침이 없었습니다. 운영 Worker의 새 목록 HTML을 확인했고, 비로그인 목록 요청은 401을 반환했습니다.\n\n![변경 전 댓글 카드](../assets/comments-tab-20261110/comments-tab-after.png)\n변경 전에는 별도 게시물 이동 버튼만 표시됐습니다.\n\n![변경 후 관리자 댓글 행과 제목](../assets/comment-rows-20261110/comment-rows-after-desktop.png)\n변경 후에는 본문 아래에 원글 제목이 표시됩니다. 로컬 로그인 상태에서 샘플 댓글로 확인했습니다.\n\n![모바일 댓글 행과 제목](../assets/comment-rows-20261110/comment-rows-after-mobile.png)\n390px 화면에서도 제목과 삭제 버튼을 확인했습니다.",
+    "remaining": "운영 Google 계정으로 로그인한 실제 댓글 목록은 미확인입니다. 운영 번들과 로컬 로그인 동작을 구분해 확인했습니다. 기존 전역·전용 지침 변경 사항은 없습니다.",
+    "outcome": "[관리자 댓글 탭](https://miro-blog-admin.ehdwns0126.workers.dev/#comments)에 새 행 레이아웃을 배포했습니다. 댓글 아래 글 제목을 누르면 해당 글의 댓글 위치로 이동합니다.",
+    "proposedTime": "6~10분",
+    "actualTime": "기능 배포·검증 2분 25초. 2026-11-10 21:44:50 시작, 21:47:15 KST 완료.",
+    "xerjEvidence": "지정 검색 도구 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}

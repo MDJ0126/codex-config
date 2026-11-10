@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "관리자 댓글 목록의 행 레이아웃과 원글 제목",
+    "summary": "댓글 행에 작성자, 내용, 클릭 가능한 원글 제목을 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "운영 Google 세션으로 로그인한 실제 댓글 목록은 미확인.",
+    "outcome": "관리자 대시보드에 행 레이아웃을 배포하고 공개 제목과 이동 동작을 확인했습니다.",
+    "proposedTime": "6~10분",
+    "actualTime": "2026-11-10 21:44:50 시작, 21:47:15 KST 기능 배포·검증 완료. 2분 25초.",
+    "xerjEvidence": "지정 검색 도구 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "comment-rows-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "댓글을 행으로 구성하고 댓글 아래 실제 게시물 제목을 링크로 표시한다.",
+    "completionCriteria": "로컬 로그인 브라우저에서 공개 색인의 제목 표시 및 공개 원글 이동, 운영 관리자 자산과 인증 응답을 확인한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "댓글 행과 게시물 제목 링크 구성",
+        "action": "공개 검색 색인으로 제목을 연결하고 기존 탭 안의 댓글을 행으로 배치한다.",
+        "expected": "제목을 누르면 해당 게시물 댓글 위치로 이동한다.",
+        "qa": "로그인 상태의 로컬 브라우저에서 제목과 이동을 확인하고 운영 배포와 접근 제어를 확인한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "실제 글 제목, 링크 이동, 삭제 및 모바일 가로 넘침 없음을 확인. 운영 Worker 배포 완료."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T21:47:15+09:00",
+        "summary": "로컬 로그인 브라우저와 운영 응답 확인.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "실제 게시물 제목을 눌러 공개 댓글 위치로 이동했습니다. 삭제와 모바일 레이아웃을 확인했습니다. 운영 관리자 API 비로그인 401.",
+            "evidence": "로컬 Chromium 실행 및 Worker 0e21d0d3 운영 응답.",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
