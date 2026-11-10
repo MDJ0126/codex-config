@@ -14,6 +14,7 @@ export function renderMarkdown(source,{bodyMode=false,enhanceCode=false}={}){
    if(!enhanceCode)return Object.getPrototypeOf(this).code.call(this,token);
    const language=codeLanguage(token.text,token.lang);
    if(!language)return Object.getPrototypeOf(this).code.call(this,token);
+   if(language==='mermaid')return '<pre class="mermaid">'+escapeHTML(token.text)+'\n</pre>\n';
    return '<pre><code data-language="'+escapeHTML(language)+'">'+escapeHTML(token.text)+'\n</code></pre>\n';
   },
   html({text}){return escapeHTML(text);},

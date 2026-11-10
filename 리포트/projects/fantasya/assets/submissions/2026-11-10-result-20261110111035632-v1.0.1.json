@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "result",
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- `MonsterBehavior.asset`은 Unity Behavior 1.0.16을 사용합니다. `MonsterBehaviorAction`이 순찰·추격·공격 단계를 연결하고 `MonsterAI`가 행동을 실행합니다.\n- 기본 순찰 4m, 감지 7m, 생성 지점 기준 추격 한계 12m입니다. 순찰 이동 시도는 최대 6초입니다. 대기는 0.6초에서 3초로 늘린 후 무작위 간격으로 조정했습니다.\n- 샘플의 전역 `eTeam`을 가져왔습니다. 활성 캐릭터 중 다른 전투 진영을 고르며 같은 팀과 `None`은 제외합니다. 기본 배치는 플레이어 `MyTeam`, 몬스터 `Enemy`입니다.\n\n### 몬스터 행동 전환\n\n순찰 중 대상이 감지되면 그래프가 공유 Target을 다음 단계에 넘깁니다. 추격과 공격은 대상을 재검사합니다. 순찰 목적지에 도착하거나 이동 시도가 끝나면 2~5초 쉬고 다음 목적지를 고릅니다.\n\n```mermaid\nflowchart TD\n A[\"Unity Behavior: 순찰 단계\"] --> B{\"FindTarget 결과가 있는가?\"}\n B -- \"아니요\" --> C[\"생성 지점 주변 순찰 · 지면 검사 · 2~5초 대기\"]\n C --> A\n B -- \"예\" --> D[\"공유 Target에 저장 · 순찰 중단\"]\n D --> E{\"CanPursue?\"}\n E -- \"아니요\" --> F[\"현재 단계 실패 반환\"]\n E -- \"예\" --> G{\"공격 거리까지 추격했는가?\"}\n G -- \"아니요\" --> E\n G -- \"예\" --> H[\"공격 단계에서도 CanPursue 재검사\"]\n H --> I[\"Attack 결과에 따라 Running 또는 Failure\"]\n```\n\n**Assets/Scripts/InGame/Object/AI/MonsterBehaviorAction.cs**\n\n```csharp\nprotected override Status OnStart() => Execute();\n\nprotected override Status OnUpdate() => Execute();\n\n/// <summary>\n/// 단계의 결과를 그래프에 반환해 다음 행동을 선택하게 한다.\n/// </summary>\nprivate Status Execute()\n{\n    if (_controller == null || !_controller.isActiveAndEnabled || !_controller.IsAlive)\n    {\n        return Status.Failure;\n    }\n\n    if (Step.Value == eStep.Patrol)\n    {\n        Monster found = _controller.FindTarget();\n        Target.Value = found != null ? found.gameObject : null;\n        if (found == null)\n        {\n            _controller.Patrol();\n            return Status.Running;\n        }\n\n        _controller.InterruptPatrol();\n        return Status.Success;\n    }\n\n    Monster target = Target.Value != null ? Target.Value.GetComponent<Monster>() : null;\n    if (!_controller.CanPursue(target))\n    {\n        return Status.Failure;\n    }\n\n    if (Step.Value == eStep.Approach)\n    {\n        return _controller.Approach(target) ? Status.Success : Status.Running;\n    }\n\n    return _controller.Attack(target) ? Status.Running : Status.Failure;\n}\n```\n\n**Assets/Scripts/InGame/Object/AI/MonsterAI.cs**\n\n```csharp\ninternal void Patrol()\n{\n    if (_hasPatrolPoint)\n    {\n        Vector3 direction = PlanarOffset(transform.position, _patrolPoint);\n        if (direction.sqrMagnitude > 0.16f && Time.time < _patrolDeadline &&\n            HasGround(transform.position + direction.normalized * 0.5f))\n        {\n            _monster.Drive(direction.normalized);\n            return;\n        }\n\n        _hasPatrolPoint = false;\n        _nextPatrolTime = Time.time + Random.Range(2f, 5f);\n    }\n\n    _monster.Drive(Vector3.zero);\n    if (Time.time < _nextPatrolTime)\n    {\n        return;\n    }\n\n    Vector2 offset = Random.insideUnitCircle * _patrolRadius;\n    _patrolPoint = PlanarOffset(_spawnPosition, transform.position).sqrMagnitude > _patrolRadius * _patrolRadius\n        ? _spawnPosition\n        : _spawnPosition + new Vector3(offset.x, 0f, offset.y);\n    _hasPatrolPoint = HasGround(_patrolPoint);\n    _patrolDeadline = Time.time + 6f;\n    if (!_hasPatrolPoint)\n    {\n        _nextPatrolTime = Time.time + Random.Range(2f, 5f);\n    }\n}\n```\n\n### 대화 기록\n\n1. 사용자 · 미기록 · “AI는 단순하게 하나로만 만들어봐 몬스터 공용으로”.\n2. 사용자 · 미기록 · “몬스터 ai 유니티 비헤비어로 만들어야지”와 “생성 지점을 기준으로 패트롤하게 해”.\n3. Codex · 11월 9일 21:33 KST · 공용 그래프와 순찰·추격 범위의 파일 연결을 보고했습니다.\n4. 사용자 · 미기록 · “글로벌 이넘으로 team 가져와”라고 요청했습니다.\n5. 사용자 · 미기록 · “너무 짧아 좀 더 텀을 주자” 이후 “고정 시간은 좀 그렇지 않나”.\n6. Codex · 11월 10일 19:06 KST · 몬스터별 무작위 대기를 적용했습니다.\n\n### 보고서 보완 요청\n\n- 사용자 · 미기록 · “코드 조각은 앞으로 최소 함수 단위 ~ 클래스 단위로 작성”하고, 누락한 Mermaid 도표를 추가해 달라고 요청했습니다.",
+    "verification": "그래프와 48개 몬스터 프리팹 연결, 현재 소스의 팀 필터 및 무작위 대기값을 대조했습니다. v1.0.1에서 코드 예시를 현재 소스의 전체 함수와 대조하고 동작 흐름을 Mermaid로 추가했습니다.",
+    "remaining": "Unity Play Mode의 실제 순찰, 추격, 팀 전투와 전후 화면은 미확인입니다.",
+    "outcome": "플레이어가 탐지되지 않으면 몬스터는 생성 지점 주변을 순찰합니다. 목적지에 도착하거나 이동이 중단되면 몬스터마다 2~5초 사이의 대기 시간을 새로 뽑습니다.",
+    "proposedTime": "원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.",
+    "actualTime": "원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
