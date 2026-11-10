@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "홈과 게시판의 호버 강조선 두께 조정",
+    "summary": "하늘색 그라데이션 강조선을 2px에서 1px로 줄였습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공용 카드 호버 규칙의 외곽선 두께를 1px로 조정했습니다.\n\n### 대화 기록\n\n- 사용자 요청 요약 — 하늘색 카드 강조선을 더 얇게 해 달라고 요청했습니다.\n- AI 결정 — 기존 2px을 1px로 조정했습니다.",
+    "verification": "블로그 커밋 4559671을 푸시하고 공개 Chrome에서 실제 호버 시 네 변 모두 1px인 것을 확인했습니다.\n\n![홈 수정 전 2px](../assets/thin-hover-20261110/sky-theme-lead.jpg)\n\n![홈 수정 후 1px](../assets/thin-hover-20261110/thin-hover-lead.jpg)\n\n![게시판 수정 전 2px](../assets/thin-hover-20261110/sky-theme-board.jpg)\n\n![게시판 수정 후 1px](../assets/thin-hover-20261110/thin-hover-board.jpg)",
+    "remaining": "전역·프로젝트 지침에 추가할 새 교훈은 없었습니다.",
+    "outcome": "공개 홈과 게시판에서 강조선 네 변의 1px 적용을 확인했습니다.",
+    "proposedTime": "수정과 로컬 확인 약 30초",
+    "actualTime": "블로그 공개 확인까지 약 1분 5초. 2026-11-10 16:20:27 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
