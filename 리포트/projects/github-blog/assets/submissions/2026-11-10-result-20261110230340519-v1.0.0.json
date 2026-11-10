@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 홈의 게시물 발행 시각을 경과 시간으로 표시",
+    "summary": "홈 게시물 카드의 날짜가 발행 후 경과한 분, 시간, 일로 표시됩니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 “홈 페이지에서 게시물들 몇 시간 / 몇 일 전으로 표시 해줘”라고 요청했습니다. 홈 카드가 화면에 나타날 때 기존 발행 시각으로 경과 시간을 계산합니다.\n\n```js\nconst hourMs = 60 * 60 * 1000;\nconst dayMs = 24 * hourMs;\nconst relativeTime = new Intl.RelativeTimeFormat('ko', { numeric: 'always' });\n\nfunction updatePublicationTime(time, now) {\n  const stamp = time.dateTime;\n  const age = now - Date.parse(stamp);\n  if (!Number.isFinite(age)) return;\n\n  let label;\n  if (stamp.length === 10) {\n    const seoulDay = Math.floor((now + 9 * hourMs) / dayMs);\n    const days = seoulDay - Date.parse(stamp) / dayMs;\n    if (days < 0) return;\n    label = days === 0 ? '오늘' : relativeTime.format(-days, 'day');\n  } else {\n    if (age < 0) return;\n    if (age >= dayMs) label = relativeTime.format(-Math.floor(age / dayMs), 'day');\n    else if (age >= hourMs) label = relativeTime.format(-Math.floor(age / hourMs), 'hour');\n    else if (age >= 60000) label = relativeTime.format(-Math.floor(age / 60000), 'minute');\n    else label = '방금 전';\n  }\n\n  time.title = time.textContent;\n  time.textContent = label;\n}\n```",
+    "verification": "운영 홈에서 변경 전후 날짜를 비교했습니다.\n\n![홈 게시물 날짜 변경 전](../assets/miro-home-time-before.png)\n\n![홈 게시물 날짜 변경 후](../assets/miro-home-time-after.png)",
+    "remaining": "발행 날짜만 있는 글은 한국시간 날짜 차이로 표시합니다. 지침 추가 사항 없음.",
+    "outcome": "정확한 발행 시각을 카드의 시간 텍스트에 마우스를 올려 확인할 수 있습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "08:01:42 KST 시작. 08:03:38 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
