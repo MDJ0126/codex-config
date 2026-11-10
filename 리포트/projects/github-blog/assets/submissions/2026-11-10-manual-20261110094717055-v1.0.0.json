@@ -1,0 +1,113 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "OG 공유 카드와 검색 예시 검증",
+    "summary": "홈과 개발일지 한 편을 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "보고서 배포 확인",
+    "outcome": "두 카드와 로컬 사이트 HTML을 확인했습니다.",
+    "proposedTime": "초기 30초, 이어서 1~2분",
+    "actualTime": "18:39:23 KST 시작",
+    "xerjEvidence": "미사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "miro-og-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "active",
+    "goal": "홈과 게시글 OG 이미지를 만들고 검색 노출 예시를 제공합니다.",
+    "completionCriteria": "편집 원본을 다시 열고 JPEG와 로컬 HTML을 대조합니다. 공개 보고서를 게시합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공개 메타데이터 확인",
+        "action": "공개 홈·글 HTML의 제목과 설명을 읽습니다.",
+        "expected": "검색 예시의 근거 확보",
+        "qa": "HTTP 응답 HTML에서 메타 태그를 대조합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 홈과 글의 제목·설명을 읽었습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "OG 카드 제작 및 연결",
+        "action": "Affinity에서 이미지와 원본을 만든 후 경로별 메타 태그를 생성합니다.",
+        "expected": "홈과 글의 OG 참조가 JPEG로 연결",
+        "qa": "원본 재열기, JPEG 시각 확인, 빌드 HTML과 JPEG 대조",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Affinity 원본과 JPEG, 로컬 HTML을 확인했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "결과 보고서 공개",
+        "action": "중앙 아카이브에 결과를 등록합니다.",
+        "expected": "개별 보고서와 두 이미지 공개",
+        "qa": "HTTPS 본문과 이미지 확인",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "doing",
+        "revision": 1,
+        "result": "공개 배포 대기"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T18:45:34+09:00",
+        "summary": "공개 소스 및 로컬 OG 출력 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 홈과 개발일지 HTML의 제목 및 설명 확인",
+            "evidence": "공개 HTTP HTML title 및 description",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "재열기에서 미저장 변경 없음, 대상 HTML 두 개와 JPEG 일치",
+            "evidence": "Affinity status 및 dist 메타 태그와 JPEG 바이트 대조",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "progress"
+  }
+}
