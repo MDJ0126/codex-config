@@ -14,7 +14,9 @@
 중앙 저장소는 `$CODEX_HOME/config-repo`이며 미설정 시 사용자 홈의 `.codex/config-repo`다. 아래 경로는 이 저장소 기준이다. 로컬 원문을 사용할 수 없으면 [GitHub의 작업별 지침](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md)을 참조한다.
 
 - **프로젝트 작업** — 대상 저장소 지침과 `리포트/projects/<project>/guidelines.md`, 기존 메뉴얼·QA·토론
-- **신규 작업 메뉴얼 및 결과 보고** — `리포트/guide/execution.md`, `authoring.md`, `work-instructions.md`의 메뉴얼·Tracefolio 절
+- **신규 작업 메뉴얼** — 리포트/guide/execution.md. 해당 프로젝트 지침과 필요한 작업별 절만 확인한다.
+- **결과 보고 작성** — 리포트/guide/authoring.md. 버그 상태·토론을 다룰 때는 workflow.md를 확인한다.
+- **코드 변경 보고** — 핵심 함수·메서드 전체를 제시하고, 조건에 해당하는 독립 흐름마다 Mermaid를 넣어 공개 페이지에서 확인한다. 적용 조건은 work-instructions.md의 Tracefolio 절에 있다.
 - **Unity 또는 Unreal Blueprint** — `리포트/guide/work-instructions.md`의 해당 엔진 절. Blueprint는 동등한 스크립트 또는 C++ 실행 구조로 옮긴 뒤 실행이나 구체적인 증거로 검증한다.
 - **Affinity, 디자인 또는 앱 조작** — `리포트/guide/work-instructions.md`의 디자인·Affinity·저장과 종료 절. 실제 Affinity가 필수이며 GUI보다 전용 CLI의 `doctor`와 `status`를 먼저 사용한다.
 - **대용량 파일, 외부 JSON·PowerShell, 배포 산출물** — `리포트/guide/work-instructions.md`의 해당 절. 개인 프로젝트의 대용량 파일에는 Git Chunk를 우선하고, 사용자 요청 없이 Git LFS를 도입하지 않는다.

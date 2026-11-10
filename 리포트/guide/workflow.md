@@ -24,27 +24,11 @@
 
 ## 사람이 작성하기
 
-1. 사이트 상단의 보고서 작성으로 이동합니다.
-2. 프로젝트와 결과·버그 분류를 고르고 실제 내용을 입력합니다.
-3. 검사·미리보기로 공통 JSON과 게시물 내용을 확인합니다.
-4. 공개 가능한 정보인지 확인하고 GitHub에서 최종 등록을 누릅니다.
-5. GitHub 로그인 후 최종 제출합니다. 자동 검사·배포가 끝나면 사이트에 TF-이슈번호로 표시됩니다.
-
-브라우저 임시저장은 해당 기기의 초안일 뿐 공개 등록이 아닙니다. 등록 전 GitHub 화면으로 이동했다는 것만으로 제출 완료로 간주하지 않습니다. 내용이 등록 URL 제한보다 길면 JSON을 복사·다운로드해 GitHub의 Tracefolio 등록 양식에 붙여넣습니다.
+[작성 가이드](index.html)의 작성 폼 절을 따릅니다. GitHub 접수 글은 TF-이슈번호로 표시됩니다. URL 길이 제한을 넘으면 JSON을 복사하거나 다운로드해 GitHub의 Tracefolio 등록 양식에 붙여넣습니다.
 
 ## AI가 작성하기
 
-같은 JSON 템플릿을 실제 값으로 채운 다음 공통 CLI를 실행합니다. CLI는 프로젝트의 assets/submissions에 원본 JSON, posts에 Markdown을 생성합니다.
-
-```sh
-node 리포트/create-report.mjs --input report.json --dry-run
-node 리포트/create-report.mjs --input report.json
-node 리포트/build.mjs
-node 리포트/verify.mjs
-node --test 리포트/tests/*.test.mjs
-```
-
-AI도 접수 저장소를 사용할 때는 GitHub 이슈 본문에 <!-- tracefolio:v2 --> 표시와 JSON 코드 블록을 넣습니다. 이슈 제목·본문은 공개되며 인증정보와 개인 로그를 포함하지 않습니다.
+CLI와 생성 경로는 [작성 가이드](index.html)를 따릅니다. GitHub 이슈로 접수할 때는 본문에 `<!-- tracefolio:v2 -->` 표시와 JSON 코드 블록을 넣습니다.
 
 ## 단계 변경과 이력
 
