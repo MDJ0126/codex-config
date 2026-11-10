@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "홈 푸터 위 실제 간격 제거 작업 메뉴얼",
+    "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "블로그 수정 및 공개 화면 확인 약 1분 40초. 2026-11-10 17:27:02 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-footer-flush-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "홈 마지막 콘텐츠와 푸터 사이의 빈 공간을 없앱니다.",
+    "completionCriteria": "1280px·390px 공개 홈에서 두 영역의 경계 간격이 0px입니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "홈 콘텐츠와 푸터 사이 실제 간격 제거",
+        "action": "경계 간격을 측정하고 원인인 하단 패딩과 상단 마진을 제거합니다.",
+        "expected": "두 공개 화면 폭에서 마지막 콘텐츠와 푸터가 맞닿습니다.",
+        "qa": "공개 브라우저에서 마지막 콘텐츠 하단과 푸터 상단 좌표 차이 및 전후 화면을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T17:27:02.7863527+09:00",
+        "summary": "공개 홈에서 인접 영역의 경계 간격 측정",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "데스크톱 48px→0px, 모바일 36px→0px.",
+            "evidence": "https://miro-game.pages.dev/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-10T17:27:02.7863527+09:00",
+        "summary": "공개 홈에서 인접 영역의 경계 간격 측정",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "데스크톱 48px→0px, 모바일 36px→0px.",
+            "evidence": "https://miro-game.pages.dev/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
