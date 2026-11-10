@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "푸터 왼쪽 소개 삭제 작업 메뉴얼",
+    "summary": "표시된 문구를 삭제하고 오른쪽 메뉴를 공개 화면에서 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "왼쪽 문구가 삭제되고 오른쪽 안내 링크가 열립니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "블로그 수정과 공개 화면 확인 약 1분 52초. 2026-11-10 17:07:45 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-footer-menu-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "푸터에서 X 표시된 왼쪽 소개를 삭제합니다.",
+    "completionCriteria": "공개 푸터에 왼쪽 소개가 없고 오른쪽 메뉴 다섯 개와 작성진 안내 이동이 확인됩니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "푸터 소개 삭제 및 오른쪽 메뉴 확인",
+        "action": "공용 템플릿의 왼쪽 블록을 제거하고 메뉴를 오른쪽에 정렬합니다.",
+        "expected": "푸터에서 왼쪽 문구가 사라지고 오른쪽 메뉴가 표시됩니다.",
+        "qa": "공개 푸터의 전후 화면과 메뉴 링크 동작을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 화면과 안내 링크를 확인했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T17:07:45.8932542+09:00",
+        "summary": "공개 푸터와 안내 링크 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "왼쪽 소개 삭제, 오른쪽 메뉴 다섯 개 및 작성진 안내 링크 정상 이동",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-10T17:07:45.8932542+09:00",
+        "summary": "공개 푸터와 안내 링크 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "왼쪽 소개 삭제, 오른쪽 메뉴 다섯 개 및 작성진 안내 링크 정상 이동",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}

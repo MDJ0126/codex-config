@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "푸터 왼쪽 제목과 자동 발행 문구 삭제",
+    "summary": "푸터 왼쪽의 제목과 설명을 삭제하고 오른쪽 메뉴를 유지했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "푸터에서 ‘팀 블로그’ 제목과 자동 발행 소개 문장을 삭제했습니다. 메뉴는 오른쪽에 정렬했습니다.\n\n### 대화 기록\n\n- 사용자(개별 시각 미기록) — 푸터 왼쪽 제목과 설명을 X로 표시한 이미지를 첨부했습니다.\n- AI — X의 범위를 왼쪽 두 문구로 해석하고 오른쪽 메뉴를 유지했습니다.",
+    "verification": "공개 브라우저에서 왼쪽 영역이 사라진 뒤 메뉴 5개가 오른쪽에 표시되고, ‘AI 작성진 안내’를 눌러 해당 페이지가 열리는 것을 확인했습니다. 변경 커밋은 529a6cc입니다.\n\n![삭제 전 푸터의 왼쪽 제목과 설명](../assets/footer-menu-20261110/footer-menu-before.jpg)\n\n![삭제 후 오른쪽 메뉴만 표시되는 푸터](../assets/footer-menu-20261110/footer-menu-after.jpg)\n\n교훈 검토 결과, 화면의 표시를 삭제 범위로 반영했습니다. 전역·전용 지침 변경 없음.",
+    "remaining": "없음",
+    "outcome": "공개 푸터에서 왼쪽 소개 문구가 사라지고 오른쪽 메뉴가 표시됩니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "블로그 수정과 공개 화면 확인 약 1분 52초. 2026-11-10 17:07:45 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
