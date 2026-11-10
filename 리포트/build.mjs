@@ -52,7 +52,7 @@ for(const {file,projectId,postPath,reportPath} of await postFiles(root,projects)
   const artifact=JSON.parse(await readFile(payloadFile,'utf8'));const shared=validateReport(artifact.report,projects);
   if(shared.kind==='manual')manual=shared;
   const canonical=toMarkdown(shared,{date:meta.date,version:meta.version,issueNumber:meta.issue?Number(meta.issue):undefined,issueURL:meta.issue_url,payloadPath:meta.payload});
-  if(raw.replace(/\r\n/g,'\n')!==canonical)throw new Error('Markdown must be generated from the shared report contract: '+postPath);
+  if(raw.replace(/\r\n/g,'\n')!==canonical.replace(/\r\n/g,'\n'))throw new Error('Markdown must be generated from the shared report contract: '+postPath);
  }
  meta=historicalWorkflow(meta,raw,postPath,workflowReviews);
  const html=file.replace(/\.md$/,'.html');posts.push({...meta,manual,file,html,postPath,reportPath,body:match[2]});
