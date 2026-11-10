@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "탑바를 유지하는 부드러운 페이지 전환",
+    "summary": "전체 화면 가림을 제거하고 본문만 짧고 약하게 페이드하도록 조정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "build.mjs의 폰트 대기용 전체 화면 가림을 제거했습니다. 탑바 로딩 상태는 첫 화면에서 초기화하고, style.css는 본문만 약하게 180ms 동안 페이드합니다.\n\n```css\n@media (prefers-reduced-motion: no-preference) {\n  #main { animation: page-enter 180ms ease-out; }\n}\n@keyframes page-enter {\n  from { opacity: .88; }\n  to { opacity: 1; }\n}\n```\n\n### 대화 기록\n\n- 사용자 — “페이지 전환 때 너무 깜박임 탑바는 안 없어져도 될 것 같아”\n- AI — 전체 화면 가림을 제거하고 페이드 범위와 강도를 줄였습니다.",
+    "verification": "커밋 e4f1400을 푸시했습니다. 공개 Chrome에서 폰트 준비가 늦는 조건을 재현해 홈에서 개발일지로 이동했습니다. 수정 전에는 탑바가 숨겨지고 전체 화면의 로딩 문구가 나타났습니다. 수정 후 첫 프레임부터 탑바가 보였으며 본문은 0.88에서 시작해 180ms 페이드했습니다. 모션 줄이기에서는 불투명도 1, 애니메이션 없음으로 관찰했습니다.\n\n![수정 전 전체 화면 가림](../assets/calm-navigation-20261110/calm-navigation-before.jpg)\n\n![수정 후 탑바와 본문이 보이는 전환](../assets/calm-navigation-20261110/calm-navigation-after.jpg)",
+    "remaining": "전환 기준을 프로젝트 지침에 반영했습니다. 전역 지침 변경은 없습니다.",
+    "outcome": "공개 사이트에서 탑바 표시와 두 모션 설정을 확인했습니다.",
+    "proposedTime": "수정과 로컬 확인 약 2분",
+    "actualTime": "블로그 공개 확인까지 약 2분 18초. 2026-11-10 18:42:21 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
