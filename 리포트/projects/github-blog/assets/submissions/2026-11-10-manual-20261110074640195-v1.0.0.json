@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "게시글 작성자와 태그 표시 작업 메뉴얼",
+    "summary": "게시판별 작성자와 글마다 태그 다섯 개를 반영하고 공개 화면을 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "공개 글에 작성자와 다섯 개 태그를 표시하고 모바일 줄바꿈을 확인했습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "블로그 구현과 공개 화면 확인 약 4분 24초. 2026-11-10 16:45:46 KST 확인. 이후 중앙 보고서 배포를 별도로 확인했습니다.",
+    "xerjEvidence": "사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-post-byline-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "개발일지와 다른 게시글의 작성자 표기를 구분하고 각 글에 주제 태그 다섯 개를 표시합니다.",
+    "completionCriteria": "전체 원고에 태그 5개를 확보하고 공개 글에서 작성자 이름과 태그, 모바일 줄바꿈을 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "게시글 작성자와 태그 디자인",
+        "action": "게시판별 필명과 원고별 태그를 설정하고 공용 글 헤더에 배치합니다.",
+        "expected": "개발일지는 미로, 나머지는 지정 필명이 표시되고 글마다 서로 다른 태그 다섯 개가 보입니다.",
+        "qa": "빌드 결과의 상세 글을 대조하고 공개 대표 글의 전후 화면과 390px 줄바꿈을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "원고 154개에 태그를 지정하고 공개 대표 글 네 건과 모바일 두 건에서 확인했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T16:45:46.2347176+09:00",
+        "summary": "게시글 작성자 및 다섯 태그 공개 표시 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "미로·루미·노바·픽셀 표기를 공개 글에서 확인하고 태그 5개와 모바일 폭을 확인했습니다.",
+            "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-10T16:45:46.2347176+09:00",
+        "summary": "게시글 작성자 및 다섯 태그 공개 표시 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "미로·루미·노바·픽셀 표기를 공개 글에서 확인하고 태그 5개와 모바일 폭을 확인했습니다.",
+            "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
