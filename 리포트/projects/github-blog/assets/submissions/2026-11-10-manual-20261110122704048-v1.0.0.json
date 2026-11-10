@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "댓글 폼 가로 폭 복원과 세로 크기 축소",
+    "summary": "본문 폭을 사용하고 폼의 높이와 세로 간격만 줄입니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "레이아웃 변경 사항 없음.",
+    "outcome": "공개 페이지의 데스크톱과 모바일에서 폭·높이를 실측했습니다.",
+    "proposedTime": "3~6분",
+    "actualTime": "약 2분 1초. 2026-11-10 21:24:20 시작, 21:26:21 KST 운영 검증 완료.",
+    "xerjEvidence": "지정 검색 도구 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "comment-width-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "댓글이 본문 전체 폭을 사용하며 세로로 더 작게 표시된다.",
+    "completionCriteria": "공개 페이지에서 본문과 가로 위치 및 폭이 일치하고, 데스크톱 및 모바일에서 폼 높이가 변경 전보다 줄어든다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "본문 폭 복원 및 세로 간격 축소",
+        "action": "720px 최대 폭을 제거하고 세로 여백과 입력칸 줄 높이를 줄인다.",
+        "expected": "두 화면 폭에서 본문과 댓글이 정렬되고 폼 높이가 줄어든다.",
+        "qa": "공개 Chromium에서 같은 게시글의 DOM 치수와 전후 스크린샷을 비교한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "1280px 및 390px 화면에서 본문과 댓글 폭·위치 일치, 폼 높이 감소를 확인."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T21:26:21+09:00",
+        "summary": "공개 배포 전후 실제 화면 측정.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "데스크톱 댓글 폭 720→966px로 본문 966px와 일치. 폼 높이 234→197px. 모바일 폭 326px 일치, 폼 높이 363→317px. 가로 넘침 없음.",
+            "evidence": "공개 Chromium DOM 치수와 변경 전후 PNG.",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
