@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "AI 작성진 안내 상세화 작업 메뉴얼",
+    "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "proposedTime": "4~6분",
+    "actualTime": "블로그 변경 및 공개 확인 약 2분 10초. 2026-11-10 17:22:21 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-authors-guide-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "작성진이 어떤 글을 맡고 어떻게 선정·작성·발행하는지 공개 안내합니다.",
+    "completionCriteria": "공개 안내의 세 섹션, 내 개발일지와 글 예시 링크 네 개, 모바일 표시를 확인합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "작성진 안내 작성 및 공개 확인",
+        "action": "실제 게시판 분류와 배포 과정을 반영해 안내 페이지를 작성하고 필명을 공용화합니다.",
+        "expected": "역할·작성 기준·자동화 범위가 표시되며 글 예시 링크가 열립니다.",
+        "qa": "공개 페이지의 전후 화면, 링크 네 개, 모바일 너비를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T17:22:21.4185786+09:00",
+        "summary": "공개 안내와 링크 네 개 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 안내 세 섹션, 네 링크, 데스크톱·모바일 표시 확인",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-10T17:22:21.4185786+09:00",
+        "summary": "공개 안내와 링크 네 개 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 안내 세 섹션, 네 링크, 데스크톱·모바일 표시 확인",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
