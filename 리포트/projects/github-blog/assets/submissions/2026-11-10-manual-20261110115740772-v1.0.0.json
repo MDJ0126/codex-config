@@ -1,0 +1,94 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "댓글 UI 축소와 관리자 댓글 관리 추가",
+    "summary": "4자 삭제 비밀번호와 관리자 목록·삭제·원글 링크를 운영에 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "운영 Google 로그인 세션에서 관리자 목록·삭제 직접 검증은 미실행.",
+    "outcome": "Cloudflare Pages와 관리자 Worker에 각각 배포하고 가능한 운영 및 로컬 검증을 마쳤습니다.",
+    "proposedTime": "8~15분",
+    "actualTime": "운영 반영과 기능 확인 5분 31초, 2026-11-10 20:51:05~20:56:36 KST.",
+    "xerjEvidence": "지정 검색 도구를 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "comments-moderation-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "게시글 댓글 폼을 줄이고 댓글 비밀번호를 최소 4자로 허용하며 관리자 페이지에 댓글 목록·삭제·원글 링크를 제공한다.",
+    "completionCriteria": "운영 글에서 4자 비밀번호 등록·삭제를 확인하고, 관리 화면에서 인증 후 목록과 원글 이동 및 비밀번호 없는 삭제를 확인한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공개 댓글 UI 및 비밀번호 변경",
+        "action": "레이아웃과 입력 높이를 줄이고 폼과 서버 최소 길이를 함께 변경합니다.",
+        "expected": "4자 비밀번호로 등록과 삭제가 됩니다.",
+        "qa": "운영 글에서 실제 브라우저로 등록, 조회, 삭제를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "운영 Pages 배포 및 4자 등록·삭제 확인."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "관리자 댓글 목록과 삭제",
+        "action": "기존 세션 인증 뒤 D1 목록과 삭제를 제공하고 원글 링크를 연결합니다.",
+        "expected": "로그인한 관리자만 목록을 조회하고 비밀번호 없이 삭제할 수 있습니다.",
+        "qa": "격리된 관리자 세션으로 목록·원글·삭제를 확인하고 운영에서 비로그인 요청이 차단되는지 검사합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "운영 Worker 배포. 로그인 흐름은 공개 응답, 인증된 목록·삭제는 로컬 브라우저에서 확인."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T20:56:36+09:00",
+        "summary": "블로그 운영과 관리자 경계·로그인 상태를 분리해 확인.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 페이지에서 4자 등록과 삭제, 닉네임 복원 확인.",
+            "evidence": "Actions 42811380954, 공개 Chromium 캡처와 API에서 검증용 댓글 제거 확인.",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "로컬 인증된 브라우저에서 원글과 무암호 삭제. 운영 GET 비로그인 303 및 POST 비로그인 401.",
+            "evidence": "관리 Worker 배포 391ab958, 로컬 Chromium 캡처와 운영 HTTP 응답.",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
