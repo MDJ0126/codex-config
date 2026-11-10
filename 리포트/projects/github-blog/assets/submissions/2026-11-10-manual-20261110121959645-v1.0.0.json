@@ -1,0 +1,73 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "댓글 관리를 기존 관리자 탭에 통합",
+    "summary": "댓글 관리의 별도 페이지를 대시보드 중앙 패널로 이동합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "운영 Google 로그인 세션에서 댓글 삭제 직접 검증은 미실행.",
+    "outcome": "같은 주소에서 목록과 삭제가 동작하는 탭을 운영 Worker에 배포했습니다.",
+    "proposedTime": "5~9분",
+    "actualTime": "기능 배포와 확인 3분 8초. 2026-11-10 21:15:43~21:18:51 KST.",
+    "xerjEvidence": "지정 검색 도구 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "comments-admin-tab-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "댓글 관리가 기존 관리자 대시보드에서 탭으로 열리고, 동일한 디자인으로 목록·삭제·원글 이동을 제공한다.",
+    "completionCriteria": "인증된 로컬 브라우저에서 주소 유지, 댓글 삭제 및 통계 탭 복귀를 확인하고 운영 Worker의 패널 및 인증 경계를 확인한다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "대시보드에 댓글 탭 통합",
+        "action": "기존 대시보드 메뉴와 디자인 요소를 재사용하고 인증된 JSON API로 목록과 삭제를 연결한다.",
+        "expected": "주소와 헤더가 유지되고 댓글 탭만 바뀐다. 삭제하면 현재 목록이 갱신된다.",
+        "qa": "로컬 브라우저의 탭·삭제·원글 링크와 운영 Worker의 공개 라우팅을 확인한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "로컬 화면·기능 확인과 운영 Worker 배포 및 인증 응답 확인."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "final",
+        "at": "2026-11-10T21:18:51+09:00",
+        "summary": "로컬 로그인 상태의 브라우저와 운영 주소를 확인.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "로컬에서 주소 유지, 목록 표시, 원글 링크, 댓글 삭제, 통계 복귀 확인. 운영 별도 주소 303 및 미로그인 API 401.",
+            "evidence": "로컬 Chromium 캡처 및 Worker 배포 cf2ee719, 실제 HTTP 응답.",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
