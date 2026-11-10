@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "헤드라인 Next 간소화와 가로 모션 보완",
+    "summary": "Next를 작은 텍스트로 바꾸고 모션 줄이기에서도 짧은 가로 전환을 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "style.css의 Next 버튼을 11px 텍스트로 바꾸고 배경과 테두리를 제거했습니다. 이전 공개 CSS는 모션 줄이기 설정에서 티커 애니메이션을 적용하지 않았습니다. 이제 일반 설정에서는 420ms 동안 오른쪽에서 들어오고, 모션 줄이기에서는 12px만 220ms 동안 이동합니다. 자동 재생 간격은 4초입니다.\n\n```css\n.press-masthead li:not([hidden]) {\n  --headline-slide-distance: 24%;\n  animation: headline-enter 420ms ease-out;\n}\n@media (prefers-reduced-motion: reduce) {\n  .press-masthead li:not([hidden]) {\n    --headline-slide-distance: 12px;\n    animation-duration: 220ms;\n  }\n}\n@keyframes headline-enter {\n  from { transform: translateX(var(--headline-slide-distance)); opacity: 0; }\n}\n```\n\n### 대화 기록\n\n- 사용자 — “next는 작게해줘”, “배경이랑 테두리도 지우고”, “애니메이션 안됨”\n- AI — 버튼을 텍스트로 정리하고, 두 모션 설정에서 가로 이동을 확인했습니다.",
+    "verification": "커밋 7fab0b5와 8c512d4를 푸시했습니다. 공개 Chrome에서 PC와 모바일 모두 Next가 11px, 투명 배경, 0px 테두리임을 확인했습니다. Next 클릭과 자동 전환에서 PC translateX(24%) 420ms 및 모바일 모션 줄이기 translateX(12px) 220ms의 animationstart를 관찰했습니다. 검증 브라우저에서 외부 광고와 폰트 요청을 제외했습니다. 사용자의 브라우저 설정은 미확인입니다.\n\n![PC 수정 전 배경과 테두리가 있는 버튼](../assets/ticker-motion-20261110/ticker-next-desktop.jpg)\n\n![PC 수정 후 작은 Next 글자](../assets/ticker-motion-20261110/ticker-motion-desktop.jpg)\n\n![모바일 수정 전](../assets/ticker-motion-20261110/ticker-next-mobile.jpg)\n\n![모바일 수정 후](../assets/ticker-motion-20261110/ticker-motion-mobile.jpg)",
+    "remaining": "전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "공개 PC·모바일에서 Next 모양과 자동·수동 가로 전환을 확인했습니다.",
+    "proposedTime": "버튼 수정과 로컬 확인 약 30초, 애니메이션은 후속 요청",
+    "actualTime": "블로그 공개 확인까지 약 3분 20초. 2026-11-10 18:04:49 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
