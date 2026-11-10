@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "블로그 이름을 MIRO로 변경",
+    "summary": "블로그 상단과 페이지 제목에 MIRO를 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 요청 원문(시각 미기록) — ‘블로그 이름 그냥 MIRO로 해줘’.\n\nAI 조치 — build.mjs의 공통 상단, 홈 제목, 페이지 제목 접미사와 문의 이메일 제목에 새 이름을 적용했습니다.\n\n```javascript\npublish('/', 'MIRO', '개발일지와 게임, 게임 개발, AI 동향', front, true);\n```",
+    "verification": "176페이지 빌드 및 링크 검사 통과. 같은 문의 페이지의 상단 이름 전후를 Chrome으로 확인했습니다.\n\n![기존 블로그 이름](../assets/miro-brand-before.png)\n\n![MIRO로 변경한 이름](../assets/miro-brand-after.png)",
+    "remaining": "전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "운영 문의 페이지의 제목이 MIRO로 표시되는 것을 확인했습니다.",
+    "proposedTime": "수정과 배포 확인 2~4분",
+    "actualTime": "첫 확인 18:14:26 KST, 운영 문의 페이지 캡처 18:15:49 KST, 약 1분 23초, 2026-11-10.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
