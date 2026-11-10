@@ -1,0 +1,56 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "manual",
+    "title": "Affinity 전용 CLI 우선 적용 메뉴얼",
+    "summary": "전역 지침에 Affinity CLI 선행과 GUI 전환 조건을 명시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "작업·QA 미실행",
+    "outcome": "2026-11-10 16:12:59 KST에 작업을 시작했습니다.",
+    "proposedTime": "수정·동기화 1~2분, 배포 확인 별도 1~3분",
+    "actualTime": "실행 전",
+    "xerjEvidence": "실행 전",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "affinity-cli-first-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "planned",
+    "goal": "Affinity 작업을 전용 CLI에서 시작하고 GUI는 필요한 경우에만 사용하도록 합니다.",
+    "completionCriteria": "저장소·설치본 일치, Git 푸시, 공개 보고서와 전역 지침 본문 확인",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "전역 지침 수정 및 동기화",
+        "action": "Affinity CLI 선행 조건과 GUI 전환 조건을 수정하고 설치본 및 저장소에 적용합니다.",
+        "expected": "저장소·설치본 일치, Git 푸시, 공개 보고서와 전역 지침 본문 확인",
+        "qa": "변경 diff, 설치본 해시, 원격 커밋 및 공개 HTML 본문을 확인합니다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": ""
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [],
+    "state": "progress"
+  }
+}

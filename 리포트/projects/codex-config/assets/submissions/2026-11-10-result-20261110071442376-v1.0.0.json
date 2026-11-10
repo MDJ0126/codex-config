@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "Affinity CLI 우선 사용을 전역 지침에 명시",
+    "summary": "Affinity 작업은 전용 CLI의 연결 확인부터 시작합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 앱을 조회하거나 조작하기 전 전용 CLI의 doctor와 status를 실행합니다.\n- CLI가 지원하는 작업과 검증은 CLI로 진행합니다. 실제 제약이 확인되고 GUI 조작이 필수인 단계에만 컴퓨터 유즈를 사용합니다.\n- 교훈 검토 — 기존 CLI 우선 규칙에 실행 순서와 전환 조건을 통합했습니다. 프로젝트 지침 변경은 없습니다.\n\n### 대화 기록\n\n- 사용자, 시각 미기록 — “어피니티 CLI를 쓸 수 있는 것 같은데 왜 컴퓨트 유즈를 우선으로 쓰지? 바꿔 전역 지시 사항”\n- AI, 시각 미기록 — 전역 지침에서 CLI 선행과 GUI 전환 조건을 명시하고 설치본·저장소·공개 배포를 확인하기로 했습니다.",
+    "verification": "두 문단의 변경을 diff로 확인했고, 설치본과 수정된 저장소 원본의 SHA-256이 일치했습니다. 지침 변경이라 앱 화면 캡처는 해당하지 않습니다.",
+    "remaining": "작성 시점에 원격 푸시와 공개 페이지 확인이 남아 있습니다.",
+    "outcome": "설치된 전역 AGENTS.md에 CLI 선행과 컴퓨터 유즈 전환 조건을 반영했습니다.",
+    "proposedTime": "수정·동기화 1~2분, 배포 확인 별도 1~3분",
+    "actualTime": "설치본 적용 및 해시 확인은 약 1분 11초, 2026-11-10 16:14:10 KST",
+    "xerjEvidence": "Git diff 및 파일 해시 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
