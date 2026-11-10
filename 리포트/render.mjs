@@ -1,3 +1,4 @@
+import {codeLanguage} from './report-code.mjs';
 import {Marked} from './vendor/marked/marked.esm.js';
 export const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function safeURL(value){
@@ -6,9 +7,15 @@ export function safeURL(value){
  if(/^[a-z][a-z0-9+.-]*:/i.test(url)&&!/^https?:\/\//i.test(url))return null;
  return url;
 }
-export function renderMarkdown(source,{bodyMode=false}={}){
+export function renderMarkdown(source,{bodyMode=false,enhanceCode=false}={}){
  const toc=[];let number=0;
  const parser=new Marked({gfm:true,breaks:false,renderer:{
+  code(token){
+   if(!enhanceCode)return Object.getPrototypeOf(this).code.call(this,token);
+   const language=codeLanguage(token.text,token.lang);
+   if(!language)return Object.getPrototypeOf(this).code.call(this,token);
+   return '<pre><code data-language="'+escapeHTML(language)+'">'+escapeHTML(token.text)+'\n</code></pre>\n';
+  },
   html({text}){return escapeHTML(text);},
   heading({tokens,depth}){if(bodyMode)depth=Math.max(2,depth);const html=this.parser.parseInline(tokens),id=`section-${++number}`;if(depth>1)toc.push({id,depth,label:html.replace(/<[^>]*>/g,'')});return `<h${depth} id="${id}">${html}</h${depth}>\n`;},
   link({href,title,tokens}){const text=this.parser.parseInline(tokens),url=safeURL(href);return url?`<a class="report-link" href="${escapeHTML(url)}"${title?` title="${escapeHTML(title)}"`:''}>${text}</a>`:text;},

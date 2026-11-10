@@ -1,0 +1,448 @@
+{
+  "total": {
+    "reports": 1462,
+    "codePages": 31,
+    "blocks": 488,
+    "diagramPages": 28,
+    "changedPages": 59
+  },
+  "projects": {
+    "codex-config": {
+      "reports": 118,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 3,
+      "changedPages": 3
+    },
+    "affinity-cli": {
+      "reports": 5,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "pixora": {
+      "reports": 142,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 3,
+      "changedPages": 3
+    },
+    "designdatatable": {
+      "reports": 234,
+      "codePages": 1,
+      "blocks": 1,
+      "diagramPages": 0,
+      "changedPages": 1
+    },
+    "enginemigrator": {
+      "reports": 12,
+      "codePages": 1,
+      "blocks": 4,
+      "diagramPages": 1,
+      "changedPages": 2
+    },
+    "codeassist": {
+      "reports": 141,
+      "codePages": 21,
+      "blocks": 475,
+      "diagramPages": 2,
+      "changedPages": 23
+    },
+    "windowsfoldersize": {
+      "reports": 19,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "turnroom": {
+      "reports": 194,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "moa": {
+      "reports": 3,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "last37n": {
+      "reports": 110,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 1,
+      "changedPages": 1
+    },
+    "pixelcamera": {
+      "reports": 43,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 2,
+      "changedPages": 2
+    },
+    "sampleprojectforunity": {
+      "reports": 30,
+      "codePages": 1,
+      "blocks": 1,
+      "diagramPages": 6,
+      "changedPages": 7
+    },
+    "pengutown": {
+      "reports": 11,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "entityforge": {
+      "reports": 90,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 1,
+      "changedPages": 1
+    },
+    "pixelfoliage": {
+      "reports": 50,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 2,
+      "changedPages": 2
+    },
+    "afternoon-pause": {
+      "reports": 64,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 2,
+      "changedPages": 2
+    },
+    "fantasya": {
+      "reports": 10,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "growingcity": {
+      "reports": 42,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 0,
+      "changedPages": 0
+    },
+    "blog-manager": {
+      "reports": 64,
+      "codePages": 0,
+      "blocks": 0,
+      "diagramPages": 5,
+      "changedPages": 5
+    },
+    "github-blog": {
+      "reports": 80,
+      "codePages": 7,
+      "blocks": 7,
+      "diagramPages": 0,
+      "changedPages": 7
+    }
+  },
+  "checked": [
+    {
+      "report": "projects/codex-config/reports/2026-10-29-Affinity-품질우선-CLI-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/codex-config/reports/2026-10-29-result-20261029125313371-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/codex-config/reports/2026-10-30-result-20261030080929241-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixora/reports/2026-10-29-bug-20261029132249879-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixora/reports/2026-10-29-Pixora-usage-examples-v1.1.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixora/reports/2026-10-29-result-20261029173856236-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/designdatatable/reports/2026-10-29-import-designdatatable-fd1af80bd721-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/enginemigrator/reports/2026-10-29-EngineMigrator-외부의존성-동의와-사전진단-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/enginemigrator/reports/2026-10-29-import-enginemigrator-a678a73d064c-v1.0.0.html",
+      "highlightedCodeBlocks": 4,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-04d10456fa5e-v1.0.0.html",
+      "highlightedCodeBlocks": 7,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-07e8ad75eb11-v1.0.0.html",
+      "highlightedCodeBlocks": 4,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-0c1893b007b7-v1.0.0.html",
+      "highlightedCodeBlocks": 17,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-0cdd9c6debec-v1.0.0.html",
+      "highlightedCodeBlocks": 13,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-1307321470ca-v1.0.0.html",
+      "highlightedCodeBlocks": 99,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-1fcd24c289cc-v1.0.0.html",
+      "highlightedCodeBlocks": 2,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-25e441a2c6b1-v1.0.0.html",
+      "highlightedCodeBlocks": 3,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-41009ddbe289-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-4d3d12c9de6d-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-5349b000d44f-v1.0.0.html",
+      "highlightedCodeBlocks": 98,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-5ab4014feb34-v1.0.0.html",
+      "highlightedCodeBlocks": 99,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-905e3675242d-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-94b396c93252-v1.0.0.html",
+      "highlightedCodeBlocks": 98,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-9b587580ad5d-v1.0.0.html",
+      "highlightedCodeBlocks": 3,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-a29011f01450-v1.0.0.html",
+      "highlightedCodeBlocks": 3,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-bcad3c290fb3-v1.0.0.html",
+      "highlightedCodeBlocks": 4,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-bfa4f1c90438-v1.0.0.html",
+      "highlightedCodeBlocks": 7,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-cd65d8bd1429-v1.0.0.html",
+      "highlightedCodeBlocks": 2,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-d7e041216dad-v1.0.0.html",
+      "highlightedCodeBlocks": 3,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-dc192c7a486e-v1.0.0.html",
+      "highlightedCodeBlocks": 2,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-dc7a02473579-v1.0.0.html",
+      "highlightedCodeBlocks": 4,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-e13f046d6ad4-v1.0.0.html",
+      "highlightedCodeBlocks": 4,
+      "mermaid": false
+    },
+    {
+      "report": "projects/codeassist/reports/2026-10-29-import-codeassist-f21a16d19068-v1.0.0.html",
+      "highlightedCodeBlocks": 2,
+      "mermaid": false
+    },
+    {
+      "report": "projects/last37n/reports/2026-10-30-bug-20261030200231591-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixelcamera/reports/2026-10-31-result-20261031192350406-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixelcamera/reports/2026-10-31-result-20261031192910012-v1.0.1.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101174828301-v1.0.3.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101180841801-v1.0.4.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101184405969-v1.0.5.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-manual-combat-framework-20261102-20261101185126054-v1.0.6.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101061915292-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101184318119-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/sampleprojectforunity/reports/2026-11-01-result-20261101220456873-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/entityforge/reports/2026-11-02-bug-20261102103155494-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixelfoliage/reports/2026-11-04-result-20261104045257294-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/pixelfoliage/reports/2026-11-04-result-20261104051337902-v1.0.1.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/afternoon-pause/reports/2026-11-03-bug-20261103151737455-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/afternoon-pause/reports/2026-11-03-bug-20261103185829401-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/blog-manager/reports/2026-11-07-result-20261107120012443-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/blog-manager/reports/2026-11-07-result-20261107123918944-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/blog-manager/reports/2026-11-08-bug-20261108115828816-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/blog-manager/reports/2026-11-08-bug-20261108121624858-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/blog-manager/reports/2026-11-08-bug-20261108125914743-v1.0.0.html",
+      "highlightedCodeBlocks": 0,
+      "mermaid": true
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110083529556-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110083715334-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110084148661-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110084232571-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110084317422-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110084608423-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    },
+    {
+      "report": "projects/github-blog/reports/2026-11-10-result-20261110084624494-v1.0.0.html",
+      "highlightedCodeBlocks": 1,
+      "mermaid": false
+    }
+  ]
+}

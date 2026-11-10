@@ -1,0 +1,10 @@
+.post-body pre > code.hljs{color:inherit;background:transparent;padding:0}
+.post-body .hljs-keyword,.post-body .hljs-selector-tag,.post-body .hljs-doctag{color:#c084fc;font-weight:600}
+.post-body .hljs-string,.post-body .hljs-regexp,.post-body .hljs-addition{color:#86efac}
+.post-body .hljs-number,.post-body .hljs-literal,.post-body .hljs-deletion{color:#fda4af}
+.post-body .hljs-title,.post-body .hljs-attr,.post-body .hljs-built_in{color:#93c5fd}
+.post-body .hljs-comment,.post-body .hljs-quote{color:#b4bed2}
+.post-body pre:has(> code[data-language]){background:#111827;color:#f3f4f6}
+.post-body pre.mermaid{background:#f8fafc;color:#1e293b;text-align:center;overflow-x:auto}
+.post-body pre.mermaid svg{height:auto;display:block;margin-inline:auto}
+.post-body .historical-diagram,.post-body .historical-code{margin-block:1.5rem}
