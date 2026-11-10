@@ -1,0 +1,148 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+    "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "블로그 작업에서 확인된 남은 사항이 없습니다.",
+    "outcome": "블로그 main 반영과 공개 본문 검증을 완료했습니다.",
+    "proposedTime": "1~2분. 확인 시작 2026-11-10 17:42:29 KST.",
+    "actualTime": "11분 50초. 블로그 공개 본문 검증을 2026-11-10 17:54:19 KST에 기록했습니다.",
+    "xerjEvidence": "Git, rg 및 블로그 빌드 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "devlog-formatting-20261110",
+    "round": 2,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "테이블별 로딩 분기와 초기 전송 예산의 검사 조건을 간결하게 설명합니다.",
+    "completionCriteria": "두 게시물의 공개 본문에 각각 Mermaid 도식과 구문 강조 코드가 표시되고 기존 이미지와 작업 근거 링크가 유지됩니다.",
+    "previousManual": "projects/github-blog/reports/2026-11-10-manual-20261110084635167-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원고와 블로그 렌더러 갱신",
+        "action": "DDT 글에 로딩 분기 도식을 넣고 수원 웹 글에 예산 검사 예시를 추가합니다. 기존 코드 강조를 재사용합니다.",
+        "expected": "두 글에 각각 한 블록이 추가됩니다.",
+        "qa": "Git 원본과 생성 HTML을 대조하고 구문 강조 토큰 및 Mermaid 로더 연결을 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "게시 및 화면 확인",
+        "action": "변경 파일만 푸시한 뒤 두 공개 글을 열어 렌더링을 확인합니다.",
+        "expected": "도식과 코드가 공개 글 본문에 정상 표시됩니다.",
+        "qa": "공개 HTML 및 실제 브라우저에서 두 블록을 확인하고 기존 첨부 링크를 대조합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T08:52:02.000Z",
+        "summary": "기존 배포 검사의 스크립트 목록 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "기존 검사는 Mermaid 모듈을 허용 목록에 포함하지 않았습니다.",
+            "evidence": "블로그 719afb8의 verify.mjs 스크립트 목록",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-10T08:54:19.094Z",
+        "summary": "로컬 빌드와 렌더링 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다.",
+            "evidence": "블로그 main 719afb8 및 node media.mjs / node build.mjs 실행",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-10T08:54:19.094Z",
+        "summary": "공개 두 게시물 표시 확인",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다.",
+            "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/ · https://miro-game.pages.dev/posts/story-suwon-web-budget/",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "final",
+        "at": "2026-11-10T08:54:19.094Z",
+        "summary": "공개 게시물과 기존 미디어·출처 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다.",
+            "evidence": "블로그 main 719afb8 및 node media.mjs / node build.mjs 실행",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다.",
+            "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/ · https://miro-game.pages.dev/posts/story-suwon-web-budget/",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
