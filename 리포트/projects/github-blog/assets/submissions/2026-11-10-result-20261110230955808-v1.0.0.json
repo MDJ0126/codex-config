@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 게시판 목록의 글별 NEW 표시",
+    "summary": "게시판 목록의 각 글 제목 옆에 발행 후 24시간 동안 NEW를 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 “각 게시판으로 갔을 때도 하루 이내 있던 게시물들에 NEW 표시 넣어줘”라고 요청했습니다. 게시판 카드가 나타날 때 아래 함수를 호출합니다.\n\n```js\nconst newWindowMs = 24 * 60 * 60 * 1000;\n\nexport function updateNewBadges(root) {\n  const now = Date.now();\n  for (const badge of root.querySelectorAll('.category-new')) {\n    const publishedAt = Date.parse(badge.dataset.publicationTime);\n    const age = now - publishedAt;\n    badge.hidden = !(age >= 0 && age < newWindowMs);\n    if (!badge.hidden) {\n      setTimeout(() => { badge.hidden = true; }, newWindowMs - age);\n    }\n  }\n}\n\nupdateNewBadges(document);\n```",
+    "verification": "운영 게시판의 변경 전후를 브라우저에서 비교했습니다.\n\n![게시판 제목 변경 전](../assets/miro-board-new-before.png)\n\n![게시판 제목 변경 후](../assets/miro-board-new-after.png)",
+    "remaining": "발행 시각을 확인할 수 없는 글은 표시 대상에서 제외했습니다. 지침 추가 사항 없음.",
+    "outcome": "스크롤 후 나타나는 카드에도 기존 카테고리와 같은 경과 시간 규칙을 적용합니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "08:06:15 KST 시작. 08:09:08 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
