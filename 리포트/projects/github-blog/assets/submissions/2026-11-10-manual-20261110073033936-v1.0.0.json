@@ -1,0 +1,89 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "팀 블로그 푸터와 AI 작성진 안내 작업 메뉴얼",
+    "summary": "공용 푸터 수정 후 공개 안내 페이지의 링크와 내용을 확인합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "없음",
+    "outcome": "공개 홈의 푸터를 바꾸고 안내 링크 이동을 확인했습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "블로그 반영 및 공개 브라우저 확인 약 3분 15초. 2026-11-10 16:29:11 KST 확인. 이후 중앙 보고서 공개 확인을 별도로 진행했습니다.",
+    "xerjEvidence": "사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "github-blog-ai-footer-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "푸터를 팀 블로그로 표시하고 AI 자동 발행과 작성진을 안내합니다.",
+    "completionCriteria": "공개 홈 푸터에서 AI 안내 링크를 열면 AI 필명 3개와 자동 발행 안내를 볼 수 있습니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "공용 푸터 및 AI 안내 페이지 반영",
+        "action": "변경 전 공개 화면을 확보하고 공용 푸터와 안내 경로를 수정한 뒤 공개 배포합니다.",
+        "expected": "팀 블로그 문구와 AI 작성진 안내 링크가 보이며 링크로 본문을 엽니다.",
+        "qa": "공개 홈페이지의 푸터 문구와 링크를 확인하고 클릭하여 안내 제목과 필명 세 개를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "공개 푸터와 AI 작성진 안내 페이지를 확인하고 화면을 캡처했습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T16:29:11+09:00",
+        "summary": "공개 브라우저에서 변경 문구, 링크 이동 및 필명 목록 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "팀 블로그 푸터에서 안내를 클릭해 제목과 작성진 목록 3개를 확인했습니다.",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-10T16:29:11+09:00",
+        "summary": "공개 브라우저에서 변경 문구, 링크 이동 및 필명 목록 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "팀 블로그 푸터에서 안내를 클릭해 제목과 작성진 목록 3개를 확인했습니다.",
+            "evidence": "https://miro-game.pages.dev/ai-authors/",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
