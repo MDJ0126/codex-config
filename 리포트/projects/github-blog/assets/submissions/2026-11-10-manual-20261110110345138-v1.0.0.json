@@ -1,0 +1,113 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "manual",
+    "title": "블로그 게시글에 비회원 댓글 추가",
+    "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "사용자 승인 후 PR 병합, Pages 배포, 공개 댓글 등록·삭제 확인.",
+    "outcome": "댓글 구현과 로컬 동작 확인을 마쳤고 운영 D1과 시크릿을 구성했습니다. 운영 배포는 사용자 승인 대기입니다.",
+    "proposedTime": "8~15분",
+    "actualTime": "2026-11-10 19:50:36 KST 시작, 20:02:57 KST까지 구현·로컬 검증·PR 준비 약 12분 21초. 운영 검증은 대기.",
+    "xerjEvidence": "별도 검색 도구를 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "guest-comments-d1-20261110",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "blocked",
+    "goal": "방문자가 로그인 없이 닉네임과 삭제 비밀번호로 게시글 댓글을 등록하고 지울 수 있도록 합니다.",
+    "completionCriteria": "실제 블로그에서 댓글 작성·조회·비밀번호 삭제·닉네임 재입력을 확인하고 전후 화면을 기록합니다.",
+    "previousManual": "",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "댓글 저장과 API 구현",
+        "action": "D1 스키마와 Pages API를 만들고 마이그레이션을 적용합니다.",
+        "expected": "게시글별로 댓글을 조회하며 올바른 비밀번호로만 삭제됩니다.",
+        "qa": "로컬 Pages에서 등록, 조회, 잘못된 비밀번호 거부, 삭제를 확인합니다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "로컬 Pages/D1에서 조회·등록·오류 비밀번호 거부·삭제를 실행했습니다. 운영 D1에는 마이그레이션을 적용했습니다."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "댓글 화면과 닉네임 기억",
+        "action": "글 하단에 반응형 댓글 영역과 삭제 대화상자를 붙입니다.",
+        "expected": "등록 후 새로고침해도 닉네임이 남고 모바일에서 입력 항목이 세로로 배치됩니다.",
+        "qa": "실제 브라우저에서 등록·재로딩·삭제 흐름을 확인하고 전후 화면을 촬영합니다.",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Chromium 데스크톱과 모바일 너비에서 폼·댓글 목록·삭제 화면을 확인하고 닉네임 복원을 검증했습니다."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "운영 배포와 확인",
+        "action": "최신 main에 댓글 변경만 적용해 Pages에 배포합니다.",
+        "expected": "공개 게시글의 댓글 API가 D1에 연결되고 실제 댓글을 등록·삭제할 수 있습니다.",
+        "qa": "CI 배포 결과와 공개 페이지·API를 확인하고 검증 데이터를 정리합니다.",
+        "dependsOn": [
+          "T02"
+        ],
+        "status": "blocked",
+        "revision": 1,
+        "result": "댓글 전용 브랜치 fbc5a77 및 GitHub PR #1. 기본 브랜치 직접 푸시는 자동 승인 검토에서 운영 영향에 대한 명시적 승인이 없다는 이유로 거부됐습니다."
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-10T20:02:16+09:00",
+        "summary": "로컬 Pages/D1과 Chromium 검증",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "조회 200, 등록 201, 잘못된 비밀번호 삭제 403, 올바른 비밀번호 삭제 200.",
+            "evidence": "Wrangler 로컬 HTTP 로그와 브라우저 DOM에서 결과를 대조했습니다.",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "새로고침 뒤 저장된 닉네임과 등록한 댓글을 확인했습니다. 390px 너비에서 폼과 삭제 대화상자를 확인했습니다.",
+            "evidence": "결과 보고서의 로컬 Chromium 캡처와 실제 브라우저 실행 결과.",
+            "dependencies": {
+              "T01": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "blocked"
+  }
+}
