@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "블로그 관리 푸터 운영 배포 확인",
+    "summary": "공개 블로그에 관리 링크를 반영했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "승인된 관리 변경 7개 파일을 원격 최신 커밋 위에 적용하고 main에 푸시했습니다.\n\n### 대화 기록\n- 사용자: OAuth 설정 작업 후 푸시를 승인했습니다.\n- Codex: 운영 링크와 Google 로그인 도착 페이지를 확인했습니다.\n\n교훈 검토: 지침 변경 없음.",
+    "verification": "커밋 a514f42. 공개 블로그 HTML의 관리 링크와 스타일시트의 관리 링크 스타일, 도착 페이지의 Google 로그인 스크립트를 확인했습니다.\n\n![운영 관리 페이지의 Google 로그인 화면](../assets/2026-11-10-blog-admin-google-login.png)",
+    "remaining": "실제 계정 로그인과 푸터 전후 캡처는 미확인입니다. 백그라운드 브라우저에서 푸터가 로드되지 않았습니다.",
+    "outcome": "블로그 푸터의 개인정보 안내 옆 관리 링크를 운영에 반영했습니다.",
+    "proposedTime": "푸시 10~30초, Pages 확인 1~3분",
+    "actualTime": "15:43:47 KST 착수, 15:44:41 푸시, 15:47:02 운영 확인. 총 3분 15초.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
