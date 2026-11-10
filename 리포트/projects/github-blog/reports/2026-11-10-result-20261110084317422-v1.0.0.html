@@ -1,0 +1,32 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>팀 블로그 상단 표기와 작성진 안내 제목 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/theme.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/discussions.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/manuals.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/copy-links.css?v=376b70681a1b"><script defer src="../../../assets/copy-links.js?v=376b70681a1b"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">문</span><span>문동준 개발 블로그</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>팀 블로그 상단 표기와 작성진 안내 제목 수정</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.</p><div class="post-byline"><time datetime="2026-11-10T08:43:17.422Z">2026년 11월 10일 오후 5:43 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p><code>build.mjs</code>의 공용 페이지 템플릿에서 상단 설명에 ‘팀 블로그’를 추가하고 푸터 안내 링크의 표시 문구를 ‘작성진 안내’로 변경했습니다. <code>/ai-authors/</code> 페이지 제목과 브라우저 탭 제목도 같은 이름으로 맞췄습니다.</p>
+<pre><code class="language-html">&lt;small&gt;게임 개발 · 기술 동향 · 팀 블로그&lt;/small&gt;
+&lt;h1&gt;작성진 안내&lt;/h1&gt;
+</code></pre>
+<p>공용 상단과 푸터에 문구가 적용됩니다. 안내는 기존 <code>/ai-authors/</code> 주소에서 열립니다.</p>
+<h3 id="section-4">대화 기록</h3>
+<ul>
+<li>사용자(시각 미기록) — ‘AI 작성진 안내 -&gt; 작성진 안내 로 수정’과 상단의 ‘팀 블로그’ 추가를 요청했습니다.</li>
+<li>AI — 상단 보조 문구에 팀 블로그를 붙이고, 링크·안내 제목·탭 제목을 통일했습니다.</li>
+</ul>
+<h2 id="section-5">검증</h2>
+<p>공개 사이트에서 상단, 안내 제목, 푸터 링크 문구를 확인했습니다. 390px 화면에서 상단 문구의 가로 넘침이 없고, 푸터에서 기존 안내 주소로 이동합니다. 적용 커밋은 70274c9입니다.</p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-header-before.jpg" alt="블로그 상단 변경 전" loading="lazy"><figcaption>블로그 상단 변경 전</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-header-after.jpg" alt="블로그 상단 변경 후" loading="lazy"><figcaption>블로그 상단 변경 후</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-title-before.jpg" alt="안내 본문 제목 변경 전" loading="lazy"><figcaption>안내 본문 제목 변경 전</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-title-after.jpg" alt="안내 본문 제목 변경 후" loading="lazy"><figcaption>안내 본문 제목 변경 후</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-footer-before.jpg" alt="푸터 안내 링크 변경 전" loading="lazy"><figcaption>푸터 안내 링크 변경 전</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/team-brand-20261110/team-brand-footer-after.jpg" alt="푸터 안내 링크 변경 후" loading="lazy"><figcaption>푸터 안내 링크 변경 후</figcaption></figure></p>
+<p>교훈 검토 결과, 전역·프로젝트 지침 변경 없음.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>없음</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 3~5분</li>
+<li>실제로 완료된 시간: 블로그 수정 및 공개 화면 확인 약 1분 28초. 2026-11-10 17:42:58 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110084317422-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-10-result-20261110084317422-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
