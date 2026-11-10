@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "홈 대표 게시물 제목 크기 조정",
+    "summary": "홈 가운데 대표 카드 제목을 PC 22px, 모바일 18px로 줄였습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "style.css의 .press-lead h3 글자 크기 범위를 줄였습니다. 큰 화면에서는 22px까지, 작은 화면에서는 18px로 표시됩니다.\n\n```css\n.press-lead h3 {\n  margin-top: 16px;\n  font-size: clamp(1.125rem, 1rem + .45vw, 1.375rem);\n}\n```\n\n### 대화 기록\n\n- 사용자 — “가운데 이 게시물 제목이 너무 커 적당히 조절 좀”\n- AI — 홈 가운데 대표 카드 제목만 작게 조정했습니다.",
+    "verification": "커밋 2445cb6을 푸시했습니다. 공개 Chrome에서 1440px 화면의 제목이 22px, 390px 화면의 제목이 18px로 표시되는 것을 확인했습니다.\n\n![PC 수정 전](../assets/home-lead-title-20261110/ticker-desktop-first.jpg)\n\n![PC 수정 후](../assets/home-lead-title-20261110/lead-title-after-desktop.jpg)\n\n![모바일 수정 전](../assets/home-lead-title-20261110/ticker-mobile.jpg)\n\n![모바일 수정 후](../assets/home-lead-title-20261110/lead-title-after-mobile.jpg)",
+    "remaining": "전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "공개 홈에서 PC와 모바일 제목 크기를 확인했습니다.",
+    "proposedTime": "수정과 로컬 확인 약 30초",
+    "actualTime": "블로그 공개 확인까지 약 1분 5초. 2026-11-10 17:45:38 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
