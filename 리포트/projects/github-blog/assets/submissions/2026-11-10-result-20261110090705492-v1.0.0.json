@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "푸터 링크 위의 내부 여백 제거",
+    "summary": "본문과 푸터 사이 간격을 복원하고 푸터 링크 위쪽 내부 패딩만 제거했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 요청 요약(시각 미기록) — 푸터의 여백을 제거해 달라고 했고, 후속 캡처의 빨간 표시로 링크 위 검은 공간을 지목했습니다.\n\nAI 조치 — 첫 수정은 푸터 안쪽 양쪽 여백을 제거했습니다. 후속 요청에 맞춰 style.css에서 본문 사이 간격과 링크 아래쪽 패딩을 복원하고 위쪽 패딩만 제거했습니다.\n\n```css\n.footer { margin-top: clamp(12px, 2vw, 24px); }\n.foot { padding-block-end: clamp(34px, 5vw, 58px); }\n```",
+    "verification": "운영 Chrome 1440px 화면에서 푸터 내부 위 58px → 0px, 아래 58px 유지, 바깥 0px → 24px를 확인했습니다. 사이트 빌드·검사 통과.\n\n![수정 전 푸터](../assets/miro-footer-before.png)\n\n![수정 후 푸터](../assets/miro-footer-after.png)",
+    "remaining": "전역·프로젝트 지침 변경은 없습니다.",
+    "outcome": "운영 홈에서 푸터 안쪽 위 0px, 아래 58px, 본문 사이 24px를 확인했습니다.",
+    "proposedTime": "수정 및 배포 확인 2~4분",
+    "actualTime": "첫 확인 18:02:51 KST, 운영 Chrome 확인 18:06:14 KST, 약 3분 23초, 2026-11-10.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
