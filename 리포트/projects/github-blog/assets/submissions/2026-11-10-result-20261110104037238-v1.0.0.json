@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 축소 탑바 소개 문구 배치",
+    "summary": "탑바를 축소할 때 블로그 소개 문구가 MIRO 오른쪽에 표시됩니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 축소 애니메이션 중 “게임 개발 · 기술 동향 · 팀 블로그”가 사라진다고 지적하고 MIRO 옆으로 옮겨 달라고 요청했습니다.\n\n```css\n[data-compact-topbar] .brand-copy { display: flex; align-items: center; font-size: 1rem; gap: 8px; }\n[data-compact-topbar] .brand-copy small { order: 1; word-break: keep-all; }\n```",
+    "verification": "운영 홈의 펼친 상태와 축소 상태를 비교했습니다. 이전 화면은 같은 운영 홈의 축소 상태에서 이전의 숨김 스타일을 재현했습니다.\n\n![축소 탑바 변경 전](../assets/miro-brand-caption-before.png)\n\n![축소 탑바 변경 후](../assets/miro-brand-caption-after.png)",
+    "remaining": "전역·프로젝트 지침 변경 없음.",
+    "outcome": "펼친 상태에는 기존처럼 MIRO 위에 두고 축소 상태에는 가로 배치를 적용했습니다.",
+    "proposedTime": "2~3분",
+    "actualTime": "19:39:02 KST 시작. 19:40:35 KST에 화면 비교 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
