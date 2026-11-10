@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "게시글 OG의 MIRO 영문 표기",
+    "summary": "모든 게시글 OG가 공유하는 로고 옆 표기를 MIRO로 변경했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "수정 전\n![한글 표기 카드](../assets/miro-auto-og-story-20261110.jpg)\n\n수정 후\n![영문 MIRO 표기 카드](../assets/miro-og-english-brand-20261110.jpg)\n\n`social-card.mjs`의 게시글 로고 옆 표기를 바꿨습니다.\n```js\nctx.fillText('MIRO',154,85);\n```\n\n사용자 원문: “아 미로가 영어로 나와야해 왜 한글이니”\n\nAI: 공용 렌더러의 게시글 표기만 변경해 배포했습니다.",
+    "verification": "블로그 배포 실행 42802468159 성공. 공개 예시 글의 새 og:image가 HTTP 200 image/jpeg를 반환했고, 새 JPEG에서 로고 옆 MIRO를 확인했습니다.",
+    "remaining": "프로젝트 지침의 영문 표기를 갱신했습니다. 전역 지침 변경 없음.",
+    "outcome": "블로그 main 커밋 64c1641을 배포했고 공개 게시글 카드의 MIRO 표기를 확인했습니다.",
+    "proposedTime": "코드 수정·푸시 30초~1분, 자동 배포 별도",
+    "actualTime": "19:50:00 KST 시작, 19:50:06 KST 푸시, 19:50:54 KST 공개 검증. 약 54초.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
