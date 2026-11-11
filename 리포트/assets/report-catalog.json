@@ -3,6 +3,16 @@
     "title": "동료 대화·PC 에이전트 참여·채팅과 마이크 입력 작업 기록",
     "summary": "실제 Unity와 사용자 PC Codex로 대화·약속·행동을 확인하고 음성 입력을 분리합니다.",
     "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-fantasya-companion-conversation-20261111-20261111111754516-v1.0.1.html",
+    "date": "2026-11-11T11:17:54.516Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 대화·PC 에이전트 참여·채팅과 마이크 입력 작업 기록",
+    "summary": "실제 Unity와 사용자 PC Codex로 대화·약속·행동을 확인하고 음성 입력을 분리합니다.",
+    "project": "fantasya",
     "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111110848696-v1.0.0.html",
     "date": "2026-11-11T11:08:48.696Z",
     "kind": "manual",
@@ -35,6 +45,26 @@
     "project": "fantasya",
     "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111110709384-v1.0.0.html",
     "date": "2026-11-11T11:07:09.384Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Turnlume 자동 배포를 사이트 게시 변경으로 제한",
+    "summary": "main의 모든 푸시에서 실행되던 Pages 배포를 게시글·사이트 입력 파일 변경으로 제한했습니다. Unity 개발과 일반 문서 수정은 제외합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111105200868-v1.0.0.html",
+    "date": "2026-11-11T10:52:00.868Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 등록 실패 수정과 댓글 목록 배경 적용",
+    "summary": "Cloudflare에서 지원하지 않는 redirect:error가 등록 전 게시글 확인을 중단시켰습니다. manual로 수정하고 실제 등록·조회·삭제까지 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111103538288-v1.0.0.html",
+    "date": "2026-11-11T10:35:38.288Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""

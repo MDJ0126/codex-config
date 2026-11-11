@@ -1,0 +1,258 @@
+{
+  "at": "2026-11-11T11:16:42.373Z",
+  "base": "https://mdj0126.github.io/codex-config/",
+  "results": [
+    {
+      "file": "projects/fantasya/reports/2026-11-11-manual-20261111110848696-v1.0.0.html",
+      "status": 200,
+      "bytes": 14337,
+      "sha256": "914f8c7c7d5c3125ee1988b7e983f3a834ba0226f6e709a31dea221bfbf33a61",
+      "matchesExpectedBytes": false,
+      "htmlEquivalentIgnoringAssetCacheHashes": true,
+      "expected": "packaged Windows HTML; asset hashes may differ from Linux build line endings"
+    },
+    {
+      "file": "projects/fantasya/reports/2026-11-11-result-20261111110709384-v1.0.0.html",
+      "status": 200,
+      "bytes": 11565,
+      "sha256": "e071a265f76c8ecd857584d557f70d9d274a85affef7231a1bd18325b578744f",
+      "matchesExpectedBytes": false,
+      "htmlEquivalentIgnoringAssetCacheHashes": true,
+      "expected": "packaged Windows HTML; asset hashes may differ from Linux build line endings"
+    },
+    {
+      "file": "projects/fantasya/reports/2026-11-11-result-20261111110710940-v1.0.0.html",
+      "status": 200,
+      "bytes": 11783,
+      "sha256": "0a245653bbf496acb654ccac2821c0bff5e14c0472eff39f0573f03eccffcf4d",
+      "matchesExpectedBytes": false,
+      "htmlEquivalentIgnoringAssetCacheHashes": true,
+      "expected": "packaged Windows HTML; asset hashes may differ from Linux build line endings"
+    },
+    {
+      "file": "projects/fantasya/reports/2026-11-11-result-20261111110712583-v1.0.0.html",
+      "status": 200,
+      "bytes": 14121,
+      "sha256": "91eb029bd99b7fcdc7e2c2ba87a3b0b01398255a84bcdfdbdc7fe435e23e9318",
+      "matchesExpectedBytes": false,
+      "htmlEquivalentIgnoringAssetCacheHashes": true,
+      "expected": "packaged Windows HTML; asset hashes may differ from Linux build line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/03-native-codex-dialogue.png",
+      "status": 200,
+      "bytes": 703588,
+      "sha256": "a4d824ecc33c07db3eba0e09e723dc44632cb92e35de71dd38431b9121d28225",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/04-follow-after-promise.png",
+      "status": 200,
+      "bytes": 675941,
+      "sha256": "12c4ba69f902020f573cdc89eb98a90a834a82eaa5a2d06500d518a46a8379e5",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/05-bram-personality.png",
+      "status": 200,
+      "bytes": 680918,
+      "sha256": "6bde907d00c5922dbf80765dfed020cfebec134c0d5073c2bb8c80cb4eb735cb",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/09-speech-promise-applied.png",
+      "status": 200,
+      "bytes": 688278,
+      "sha256": "b0c623ec1fef9a69d6f90973e18bb294899d164c216128ee5496929ac313a28b",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/10-keyboard-mode.png",
+      "status": 200,
+      "bytes": 686774,
+      "sha256": "a28fbc595fa11acf8f2394e741c9d69944fdf294535f6e6d0239fdfdc8af5e35",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/10-virtual-walk-after.json",
+      "status": 200,
+      "bytes": 3013,
+      "sha256": "a3fbc62f324f6a99c444d1261637fcefcf5c00a9ca4746f8ce21063363e3369b",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/13-typing-after.json",
+      "status": 200,
+      "bytes": 2759,
+      "sha256": "50562c0d7770ff3c9ef82611590c3a771ab9dc4f9e1f659051f74c9f1b5cccfb",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/15-native-observed.json",
+      "status": 200,
+      "bytes": 6655,
+      "sha256": "2d662cee50e8e54950c368992861cca6fd55822990bc3800a1e03740bee2f2d0",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/18-follow-after.json",
+      "status": 200,
+      "bytes": 2682,
+      "sha256": "656e652d4590611ea99e19cfeafa364a35fabcf67390cd64fb34d501a4d1fe58",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/26-speech-review-before-send.json",
+      "status": 200,
+      "bytes": 2816,
+      "sha256": "e20989a25bb85322653bf0a32181741c732f7712bddff68be226859b77bb5129",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/27-promise-before-confirm.json",
+      "status": 200,
+      "bytes": 10125,
+      "sha256": "a6d1f1d070356c58d70feb8a5f4e522816458a510f9747544260a77c89dd7eb0",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/29-promise-after-confirm.json",
+      "status": 200,
+      "bytes": 11270,
+      "sha256": "45a09bf44b71e2141d583a879eb1397672e05307a800795ed2b505a0054b1265",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/31-cancellation-after-wait.json",
+      "status": 200,
+      "bytes": 2796,
+      "sha256": "736f3a15c55fe52626d24975f0198a357b8840c82be0a0bdb52e28febeaa090d",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/34-shared-speech-preview.json",
+      "status": 200,
+      "bytes": 2816,
+      "sha256": "43d83f812eda4eafbc9899f29a42b10cdb59b0bee8c26660d624382d3f3e3468",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/36-final-acknowledged.json",
+      "status": 200,
+      "bytes": 13509,
+      "sha256": "9335e5fcb012dc6d0ebc5f363d0a978a6ebe4444a512fff7cf67d5df480d0fff",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/after.png",
+      "status": 200,
+      "bytes": 673115,
+      "sha256": "7c7be1cc73632d99c45715713adee1497c4538295914690e7820ac60010121c6",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/before.png",
+      "status": 200,
+      "bytes": 808087,
+      "sha256": "36caf01ddf13bc92f70a759b81f354d46d876eb6e60a5a2c25837fff8ba91d25",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/bridge-tests.log",
+      "status": 200,
+      "bytes": 968,
+      "sha256": "1b19c4a2fe792d1c65c51bf159a70defc78118cbaff7c97f39d48fc0620be41a",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/final-text.png",
+      "status": 200,
+      "bytes": 673392,
+      "sha256": "10ab8afaa5158bfac5066df6a88ec0b17cc1e63182dbcba6dead55349603ccd6",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/final-voice.png",
+      "status": 200,
+      "bytes": 673716,
+      "sha256": "020ffc2dc721693b221fa0bb6904c4edb4851c99ee1121edb056edbdc540069a",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/manual.json",
+      "status": 200,
+      "bytes": 8170,
+      "sha256": "c8ad3745d48465873aa0445aea7250d5976bfcced5d05275d138725e3608f859",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/report-preparation.json",
+      "status": 200,
+      "bytes": 607,
+      "sha256": "34648a9a0bfeb4df21a6b5bc7453f0a4ed528c656bfdfa9d445d8734737e846e",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/shared-module-public.json",
+      "status": 200,
+      "bytes": 496,
+      "sha256": "10cc455b2244bc7bfbbbae0ba8da867f42ffa920d72ad758a0b0b05daab44218",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/source.zip",
+      "status": 200,
+      "bytes": 61500,
+      "sha256": "6508fb39ad229c05cb1ee69ed0d0c8475d79d9a9427264a691d5d0a4fe6ed8d6",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/speech-recognition.json",
+      "status": 200,
+      "bytes": 526,
+      "sha256": "5d3aa73f073793a9c2fff67b0e1b9a6e1442d78721eeb665fee375c24f626b47",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    },
+    {
+      "file": "projects/fantasya/assets/companion-conversation-20261111/verification-summary.json",
+      "status": 200,
+      "bytes": 346,
+      "sha256": "8ee492ca52d229fafdfec5c00a12a6b46629ed7e9f91e2fea8f5995f6b3d430c",
+      "matchesExpectedBytes": true,
+      "expected": "committed Git blob; Git normalizes text line endings"
+    }
+  ],
+  "browser": {
+    "reports": 3,
+    "renderedMermaid": 4,
+    "highlightedCodeBlocks": 7,
+    "allArticleImagesLoaded": true,
+    "listCardThumbnails": false,
+    "observation": "실제 공개 브라우저에서 3개 본문·4개 Mermaid·코드 강조·스크롤 후 전후 이미지 로딩을 확인했습니다. 목록 카드는 이미지 0개로 썸네일 미지원 상태를 확인했습니다."
+  }
+}
