@@ -1,0 +1,191 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "fantasya",
+    "kind": "manual",
+    "title": "Fantasya AI 동료 컨트롤러 구성",
+    "summary": "공통 모터, 긴급 대응, 다중 동료, 지연 HUD와 로컬 모델을 순서대로 구성합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "원격 유료 API·LM Studio·32명 부하·긴급 후퇴 자연 발생은 미확인입니다. Fantasya의 기존 미커밋 작업은 보존했습니다. 현재 아카이브 목록은 개별 썸네일 미지원이며 본문 대표 화면을 등록했습니다.",
+    "outcome": "요청한 동료 컨트롤러·다중 동료·지연 HUD·로컬 모델 설치와 실측·연결 문서 및 공개 기록을 완료했습니다. 승인된 공용 모듈은 모체 main b80b771에 푸시하고 문서 배포까지 확인했습니다.",
+    "proposedTime": "35~50분, 2026-11-11 17:37 KST 시작",
+    "actualTime": "2026-11-11 17:37:11~18:32:35 KST, 구현·설치·실행·공개 확인 약55분24초. 완료 기록 후속 배포 확인은 최종 채팅에 별도 기록합니다.",
+    "xerjEvidence": "사용자 전역 지침에 따라 XERJ 미사용, rg 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "fantasya-ai-companions-20261111",
+    "round": 1,
+    "phase": "initial",
+    "execution": "sequential",
+    "manualState": "complete",
+    "goal": "동료별 AI 컨트롤러와 로컬·원격 모델 연결 및 실측 지연 표시",
+    "completionCriteria": "구현·씬 저장·문서·실제 실행 근거와 미확인 범위 기록",
+    "previousManual": "projects/fantasya/reports/2026-11-11-manual-20261111091836492-v1.0.0.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "동료 제어와 모델 연결",
+        "action": "기존 플레이어 모터를 공유하고 모델 응답을 제한·검증",
+        "expected": "개별 컨트롤러와 동시 호출 제한",
+        "qa": "Unity 컴파일 및 실제 동료 행동 관찰",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "최종 소스 컴파일과 실제 로컬 모델 요청·적용 확인"
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "다중 동료와 지연 HUD",
+        "action": "Playground에 3명 생성과 편집 가능한 UI 저장",
+        "expected": "동료별 요청·대기·적용·긴급 명령 시간 표시",
+        "qa": "씬 저장·재열기와 카메라 출력 확인",
+        "dependsOn": [
+          "T01"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "씬 저장·재열기, 동료 3명과 오른쪽 지연 HUD 실제 카메라 출력 확인"
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "로컬 모델 설치와 실측",
+        "action": "Ollama 설치와 소형 모델 실제 요청",
+        "expected": "실제 로컬 모델 응답과 적용 시간 확보",
+        "qa": "실제 Unity 모델 요청 결과와 메트릭 저장",
+        "dependsOn": [
+          "T01",
+          "T02"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "Ollama 0.40.16과 Qwen2.5 0.5B 설치, 최종 24회 중 21회 적용·3회 폐기·오류0, 평균190.2~233.5ms"
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "문서와 공개 기록",
+        "action": "README·Dosc·Tracefolio 보고서 작성",
+        "expected": "연결·확장·측정 의미와 제한 안내",
+        "qa": "링크·첨부·공개 본문 확인",
+        "dependsOn": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "status": "done",
+        "revision": 1,
+        "result": "README·Dosc 로컬 참조53개 확인, 공개 보고서2개와 화면·메트릭·소스HTTP200, 공개 Mermaid3개+1개 렌더링·전후 이미지 로딩 확인"
+      }
+    ],
+    "focusTasks": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "scopeChange": "",
+    "qaRuns": [
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-11T18:12:52+09:00",
+        "summary": "최종 Unity 로컬 모델 실행과 소스 대조",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 소스 컴파일과 실제 로컬 모델 요청·적용 확인",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "씬 저장·재열기, 동료 3명과 오른쪽 지연 HUD 실제 카메라 출력 확인",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Ollama 0.40.16과 Qwen2.5 0.5B 설치, 최종 24회 중 21회 적용·3회 폐기·오류0, 평균190.2~233.5ms",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+            "dependencies": {
+              "T01": 1,
+              "T02": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "final",
+        "at": "2026-11-11T18:32:35+09:00",
+        "summary": "전체 구현 범위와 실제 실행·공개 본문·첨부·다이어그램 최종 확인",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최종 소스 컴파일과 실제 로컬 모델 요청·적용 확인",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "씬 저장·재열기, 동료 3명과 오른쪽 지연 HUD 실제 카메라 출력 확인",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json",
+            "dependencies": {
+              "T01": 1
+            }
+          },
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "Ollama 0.40.16과 Qwen2.5 0.5B 설치, 최종 24회 중 21회 적용·3회 폐기·오류0, 평균190.2~233.5ms",
+            "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json",
+            "dependencies": {
+              "T01": 1,
+              "T02": 1
+            }
+          },
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "README·Dosc 로컬 참조53개 확인, 공개 보고서2개와 화면·메트릭·소스HTTP200, 공개 Mermaid3개+1개 렌더링·전후 이미지 로딩 확인",
+            "evidence": "https://mdj0126.github.io/codex-config/projects/fantasya/reports/2026-11-11-result-20261111091516119-v1.0.0.html; https://mdj0126.github.io/codex-config/projects/sampleprojectforunity/reports/2026-11-11-result-20261111091517893-v1.0.0.html; CUA 공개 페이지 확인",
+            "dependencies": {
+              "T01": 1,
+              "T02": 1,
+              "T03": 1
+            }
+          }
+        ]
+      }
+    ],
+    "state": "complete"
+  }
+}
