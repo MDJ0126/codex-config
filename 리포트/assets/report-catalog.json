@@ -1,5 +1,15 @@
 [
   {
+    "title": "Pixora Studio / Pixel Camera에 URP 인스턴싱 반짝임 수정 반영",
+    "summary": "Fantasya에서 확인한 수정을 제품 원본에 반영했습니다. Runtime·URP만 설치한 실제 Unity에서 기본24프레임·법선 외곽선12프레임의 변동과 경고가 0이었습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111164414605-v1.0.0.html",
+    "date": "2026-11-11T16:44:14.605Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "실행 중 캐릭터 픽셀 반짝임 재현과 수정",
     "summary": "실제 열린 Unity에서 시간적 변동을 재현하고 교체 패스 인스턴싱만 제한했습니다.",
     "project": "fantasya",

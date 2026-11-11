@@ -1,0 +1,57 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Pixora Studio / Pixel Camera에 URP 인스턴싱 반짝임 수정 반영 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">턴</span><span>턴룸 › 공통 · 통합 작업</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Pixora Studio / Pixel Camera에 URP 인스턴싱 반짝임 수정 반영</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">Fantasya에서 확인한 수정을 제품 원본에 반영했습니다. Runtime·URP만 설치한 실제 Unity에서 기본24프레임·법선 외곽선12프레임의 변동과 경고가 0이었습니다.</p><div class="post-byline"><time datetime="2026-11-11T16:44:14.605Z">2026년 11월 12일 오전 1:44 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>턴룸 저장소의 Pixora Studio / Pixel Camera 원본 렌더 코드에 교체 셰이더 패스의 GPU 인스턴싱 제한을 반영했습니다. 일반 색상 패스·기존 API·샘플 씬과 제품/판매 버전은 유지했습니다. 패키지 재수출·스토어 업로드는 하지 않았습니다.</p>
+<p>참조 · 동일 격리 장면에서 효과 OFF(구버전 버그 화면이 아닙니다)</p>
+<p><figure><img class="report-image" src="../assets/pixel-camera-instancing-20261112/before.png" alt="실제 제품 격리 렌더의 효과 OFF 참조" loading="lazy"><figcaption>실제 제품 격리 렌더의 효과 OFF 참조</figcaption></figure></p>
+<p>결과 · 수정 제품으로 대상 3개만 4/8px 합성</p>
+<p><figure><img class="report-image" src="../assets/pixel-camera-instancing-20261112/after-first.png" alt="수정한 제품 원본의 선택 객체 픽셀 렌더" loading="lazy"><figcaption>수정한 제품 원본의 선택 객체 픽셀 렌더</figcaption></figure></p>
+<p>법선 외곽선 경로</p>
+<p><figure><img class="report-image" src="../assets/pixel-camera-instancing-20261112/outline.png" alt="수정 제품의 깊이와 법선 외곽선 렌더" loading="lazy"><figcaption>수정 제품의 깊이와 법선 외곽선 렌더</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>변경 경로는 Assets/TurnRoom/PixoraStudio/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs입니다. 원본 재질의 인스턴스 데이터와 다른 교체 셰이더를 함께 사용한 패스에서 정의되지 않은 행렬·오브젝트 ID가 관찰됐던 문제를 수정합니다. Fantasya 전용 클래스의 전체 파일을 덮어쓰지 않고 제품 원본의 해당 목록 생성 분기에만 적용했습니다.</p>
+<pre class="mermaid">flowchart TD
+ A[제품 렌더러 목록 생성] --&gt; B{교체 셰이더인가?}
+ B --&gt;|예| C[enableInstancing false]
+ C --&gt; D[교체 셰이더와 패스 지정]
+ B --&gt;|일반 색상| E[기존 인스턴싱 설정 보존]
+ D --&gt; F[컬링·렌더 레이어 필터 적용]
+ E --&gt; F
+</pre>
+<p>핵심 수정 메서드 전체:</p>
+<pre><code data-language="csharp">            RendererListHandle List(RenderGraph graph, ContextContainer frame, int mask, bool transparent, Shader replacement = null, uint renderingMask = uint.MaxValue)
+            {
+                var rendering = frame.Get&lt;UniversalRenderingData&gt;(); var camera = frame.Get&lt;UniversalCameraData&gt;(); var light = frame.Get&lt;UniversalLightData&gt;();
+                var drawing = RenderingUtils.CreateDrawingSettings(tags, rendering, camera, light, transparent ? SortingCriteria.CommonTransparent : camera.defaultOpaqueSortFlags);
+                if (replacement != null)
+                {
+                    drawing.enableInstancing = false;
+                    drawing.overrideShader = replacement;
+                    drawing.overrideShaderPassIndex = 0;
+                }
+                return graph.CreateRendererList(new RendererListParams(rendering.cullResults, drawing, new FilteringSettings(transparent ? RenderQueueRange.transparent : RenderQueueRange.opaque, mask, renderingMask)));
+            }
+</code></pre>
+<p>Pixel Camera 원본 문서 9개 언어와 Studio 통합·Pixel Camera 생성 문서 18개를 갱신했습니다. Version.json의 검증 범위와 모듈/루트 README도 갱신했습니다. Tools/PixelCamera/CaptureTemporal.ps1 -Launch로 실행하는 소유 표식 기반 격리 캡처 도구와 실제 근거를 Docs/Testing/2026-11-12/pixel-camera-instancing에 남겼습니다. 다른 DDT·Templete 창 작업은 보존했습니다.</p>
+<h2 id="section-4">검증</h2>
+<p>현재 제품 Runtime과 URP 소스를 그대로 새 격리 프로젝트에 복사했습니다. 소스 SHA-256 일치를 확인했고 Editor·Samples·Development를 설치하지 않은 상태에서 컴파일과 실제 렌더를 수행했습니다.</p>
+<ul>
+<li>Unity 6000.0.83f1 / URP 17.0.4 RenderGraph / Windows DX11 / Linear / 1280×720</li>
+<li>대상3개·4/8px 두 그룹·배경 인스턴스55개</li>
+<li>기본24프레임: 인접 변동0·인스턴싱 경고0</li>
+<li>깊이/법선 외곽선12프레임: 인접 변동0·경고0</li>
+<li>비대상 배경 검사 영역521600픽셀 차이0, renderingLayerMask 복원 확인</li>
+<li>효과 OFF/ON 차이3465픽셀, 실제 geometry captures7</li>
+</ul>
+<p><a class="report-link" href="../assets/pixel-camera-instancing-20261112/render.json">제품 렌더 수치</a> · <a class="report-link" href="../assets/pixel-camera-instancing-20261112/source.json">복사 소스 해시</a> · <a class="report-link" href="../assets/pixel-camera-instancing-20261112/documentation.json">생성 문서 근거</a></p>
+<p>생성된 문서18개, 장396개, 본문 링크·이미지1053개를 실제 생성 JavaScript를 실행하는 정적 어댑터로 확인했습니다. 장·언어 전환, 아이콘 경로, DDT 공통 CSS 일치를 검사했고 네이티브 브라우저 QA와 구분합니다. 초기 임시 캡처 도구의 internal Active 참조 컴파일 오류는 공개 FindObjectsByType로 수정한 뒤 통과했으며 원본 실패 로그는 보존했습니다.</p>
+<p>대화 기록(발언 시각 미기록): 사용자 “턴룸 프로젝트, 픽셀 스튜디오에도 반영해줘” → AI가 제품 원본과9개 언어 문서 반영을 안내 → 원본에서 동일 분기를 확인하고 실제 제품 격리 렌더 결과를 안내했습니다. 원래 Fantasya 재현은 <a class="report-link" href="https://mdj0126.github.io/codex-config/projects/fantasya/reports/2026-11-11-bug-20261111155151183-v1.0.0.html">기존 보고서</a>에 분리해 보존했습니다. 썸네일 후보는 실제 after-first.png이며 이미지 편집 없이 직접 캡처 PNG를 보존했습니다.</p>
+<p>2026-11-12 사용자 승인: “턴룸 보고 자료 공개·main 반영·푸시·배포 승인”. 이 승인으로 제품 격리 렌더 4장·핵심 수정 함수·프레임/경고 수치·문서 검증 근거를 중앙 아카이브에 게시합니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>제품 Editor UI는 변경하지 않았습니다. 전체 Editor/판매 패키지 신규 설치,9개 언어의 네이티브 브라우저 눈 검토, 다른 GPU·모바일·정량 GPU 성능·패키지 재수출·스토어 업로드는 미실행입니다. 제품 원본의 소스 반영과 판매 배포는 구분합니다. 고객 패키지에는 개발 캡처 도구를 포함하지 않습니다. 목록 카드 썸네일은 아카이브 기능 제한으로 미확인입니다. 새 모체 공용 후보는 없습니다. 이 코드는 Pixora URP 제품에 직접 의존하며 SampleProjectForUnity는 변경하지 않았습니다. 실제 실행·시간적 비교는 기존 지침으로 충분해 지침 추가 없음입니다. 턴룸 저장소 자체의 커밋·푸시는 하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-12 01:29:18 KST 시작, 제안15~25분</li>
+<li>실제로 완료된 시간: 원본 소스·문서·실제 제품 렌더 완료: 18분 52초, 2026-11-12 01:48:10 KST. 승인 후 공개 게시: 2026-11-12 01:54:25 KST 시작, 배포·외부 확인 진행 중입니다.</li>
+<li>XERJ: 미사용 — 사용자 전역 지침에 따라 rg·정확한 제품 원본·Unity 로그·직접 렌더·해시 대조를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111164414605-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=turnroom&topic=qa&relatedReport=projects%2Fturnroom%2Freports%2F2026-11-11-result-20261111164414605-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=turnroom">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=turnroom">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
