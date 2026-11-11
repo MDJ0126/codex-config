@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "추천 카드 튕기는 등장과 최초 노출 유지",
+    "summary": "추천 카드에 680ms 아래에서 위로 튕기는 효과를 적용하고 스크롤을 올려도 유지하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 220ms 전환 대신 680ms 키프레임으로 화면 아래에서 출발해 -14px, +6px, -3px를 지나 정착합니다. 사용자가 요청한 효과를 위해 이 카드의 동작 감소 비활성화 조건을 제거했습니다. 최초 생성 이후 nearEnd 조건이 false가 되어도 유지하며 닫기 상태는 그대로 보관합니다. 추천 기준은 같은 카테고리에서 현재 글과 이전·다음 글을 제외한 최신 글입니다. 스크립트와 스타일 URL의 캐시 식별자를 갱신했습니다.\n\n![변경 전](../assets/recommendation-bounce-20261111/reading-recommendation-after.png)\n\n![변경 후](../assets/recommendation-bounce-20261111/recommendation-bounce-after.png)\n\n## 전체 카드 갱신 코드\n```javascript\nconst article = document.querySelector('.post-detail .prose');\r\nconst candidate = document.querySelector('.post-related .digest-row');\r\nif (article && candidate) {\r\n  let dismissed = false;\r\n  let card;\r\n  let queued = false;\r\n  const key = 'miro-recommendation-dismissed:' + location.pathname;\r\n  try { dismissed = sessionStorage.getItem(key) === '1'; } catch {}\r\n\r\n  function updateRecommendation() {\r\n    queued = false;\r\n    const bounds = article.getBoundingClientRect();\r\n    const visibleEnd = innerHeight - bounds.top;\r\n    const nearEnd = visibleEnd >= bounds.height * .8 && bounds.top < 0;\r\n    if (dismissed || (!nearEnd && !card)) return;\r\n    if (!card) {\r\n      card = document.createElement('aside');\r\n      card.className = 'reading-recommendation';\r\n      card.setAttribute('aria-label', '추천 게시물');\r\n      const heading = document.createElement('p');\r\n      heading.className = 'reading-recommendation-label';\r\n      heading.textContent = '이 글도 읽어보세요';\r\n      const close = document.createElement('button');\r\n      close.type = 'button';\r\n      close.className = 'reading-recommendation-close';\r\n      close.setAttribute('aria-label', '추천 게시물 닫기');\r\n      close.textContent = '×';\r\n      close.addEventListener('click', () => {\r\n        dismissed = true;\r\n        try { sessionStorage.setItem(key, '1'); } catch {}\r\n        card.remove();\r\n      });\r\n      const link = document.createElement('a');\r\n      link.href = candidate.href;\r\n      const originalImage = candidate.querySelector('img');\r\n      if (originalImage) {\r\n        const image = originalImage.cloneNode();\r\n        image.loading = 'eager';\r\n        image.removeAttribute('fetchpriority');\r\n        link.append(image);\r\n      }\r\n      const title = document.createElement('strong');\r\n      title.textContent = candidate.querySelector('strong').textContent;\r\n      link.append(title);\r\n      card.append(heading, close, link);\r\n      document.body.append(card);\r\n      requestAnimationFrame(() => requestAnimationFrame(() => {\r\n        if (!dismissed) card.classList.add('is-visible');\r\n      }));\r\n    } else card.classList.add('is-visible');\r\n    card.inert = false;\r\n  }\r\n  function scheduleRecommendation() {\r\n    if (queued || dismissed) return;\r\n    queued = true;\r\n    requestAnimationFrame(updateRecommendation);\r\n  }\r\n  addEventListener('scroll', scheduleRecommendation, {passive: true});\r\n  addEventListener('resize', scheduleRecommendation);\r\n  addEventListener('pageshow', scheduleRecommendation);\r\n  new ResizeObserver(scheduleRecommendation).observe(article);\r\n  scheduleRecommendation();\r\n}\r\n\n```\n\n```mermaid\nflowchart TD\n A[스크롤 또는 크기 변경] --> B{닫혔는가}\n B -->|예| C[표시하지 않음]\n B -->|아니오| D{카드가 이미 있는가}\n D -->|예| E[계속 유지]\n D -->|아니오| F{본문 80% 도달}\n F -->|예| G[생성 후 680ms 튕기는 등장]\n F -->|아니오| C\n```",
+    "verification": "Actions가 최종 커밋 6e4c16d에 대해 success입니다. 운영 글을 실제 headless Chrome에서 열어 prefers-reduced-motion: reduce 상태로 확인했습니다. animationName=recommendation-bounce-in, duration=0.68s, 실행 중 animation 수=1과 translateY=173.797을 확인했습니다. 상단으로 돌아간 뒤 visible=true/inert=false, 닫기 후 DOM 없음=true입니다. 별도 테스트 파일은 작성하지 않았습니다. 운영 코드와 source syntax를 확인했습니다.",
+    "remaining": "전역 지침 변경 없음: 이번 동작은 사용자가 지정한 개별 UI 요구이며 공통 동작 감소 정책으로 확대하지 않습니다.",
+    "outcome": "6e4c16d main 푸시와 Actions 성공, 실제 운영 화면의 애니메이션·위로 스크롤 후 유지·닫기를 확인했습니다.",
+    "proposedTime": "2~4분, 시작 2026-11-11 18:49:23 KST",
+    "actualTime": "운영 확인 18:51:44 KST, 2분21초. 보고서 공개 확인 별도.",
+    "xerjEvidence": "소스와 실제 브라우저 애니메이션 상태 및 Actions 결과를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
