@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 전용 GA4 속성으로 포트폴리오와 통계 분리",
+    "summary": "측정 ID G-MV60PQ4FH0와 숫자 속성 563715828로 연결을 분리하고 운영 배포를 확인했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "site.json gaMeasurementId를 G-MQJ2P5ENMQ에서 G-MV60PQ4FH0로 변경했습니다. admin/wrangler.toml GA_PROPERTY_ID를 546066893에서 563715828로 변경했습니다. UI 변경이 없는 설정 작업입니다. 기존 포트폴리오 소스는 수정하지 않았습니다.",
+    "verification": "운영 https://miro-lab.pages.dev/blog-analytics.js 에서 NEW_TAG=True, OLD_TAG=False를 확인했습니다. Actions Publish blog가 커밋 98c54b3에 대해 success입니다. Wrangler 4.158.0으로 관리자 miro-blog-admin을 배포했고 GA_PROPERTY_ID=563715828 바인딩과 버전 c57133c9-cc1a-4b8d-8ced-64027a91ce6f를 확인했습니다. 관리자 주소 HTTP 200입니다. secret list에는 SERVICE_ACCOUNT_EMAIL과 SERVICE_ACCOUNT_PRIVATE_KEY가 없으므로 Google 조회 연결은 미완료이며 자체 방문 기록을 표시합니다. 로컬 빌드는 임시 작업 폴더의 @napi-rs/canvas 의존성 부재로 실행하지 못했고 CI 빌드와 배포 성공으로 확인했습니다. 테스트 추가 및 수동 테스트 실행 없음.",
+    "remaining": "GA 실시간 수신과 신규 Google 속성 조회 권한은 미확인입니다. 관리자 GA 조회에는 서비스 계정 자격과 새 속성 열람 권한 설정이 필요합니다. 이 작업은 과거 데이터 이동을 하지 않습니다. 지침 변경 없음: 기존 사이트별 속성 분리 기준으로 충분합니다.",
+    "outcome": "98c54b3 main 푸시, GitHub Actions 성공, 운영 analytics 스크립트 신규 ID 확인, 관리자 Worker 배포 완료",
+    "proposedTime": "3~5분, 시작 2026-11-11 17:08:25 KST",
+    "actualTime": "운영 반영 확인 17:11:51 KST, 3분 26초. 보고서 게시 시간 별도.",
+    "xerjEvidence": "소스 설정, Actions 실행 결과, Wrangler 배포 결과와 공개 스크립트를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
