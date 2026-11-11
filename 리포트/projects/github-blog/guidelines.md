@@ -28,3 +28,5 @@
 - [홈과 게시판의 공통 폭](reports/2026-11-09-result-20261109133032789-v1.0.0.html)
 - [글 상세 공통 폭과 본문 여백](reports/2026-11-09-result-20261109150854869-v1.0.0.html)
 - [한글 입력 중 검색 미리보기](reports/2026-11-09-result-20261109153129008-v1.0.0.html)
+
+- Cloudflare Pages Functions에서 fetch의 redirect 옵션은 manual 또는 follow를 사용합니다. 댓글 처리 변경 시 실제 운영에서 확인용 댓글 등록·조회·비밀번호 삭제를 확인하고 확인용 댓글만 정리합니다.
