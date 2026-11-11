@@ -1,0 +1,122 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>플레이어 모터를 공유하는 AI 동료와 로컬 모델 실측 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>플레이어 모터를 공유하는 AI 동료와 로컬 모델 실측</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">AI 동료 3명, 지연 HUD와 Ollama 연결을 구성했습니다. 최종 정상 판단 평균 190.2~233.5ms; 원격·32명 부하는 미확인입니다.</p><div class="post-byline"><time datetime="2026-11-11T09:15:16.119Z">2026년 11월 11일 오후 6:15 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>동료마다 모델 판단과 게임 프레임 실행을 분리했습니다. 최종 Unity 실행에서 21회 적용, 3회 폐기, 연결 오류 0회를 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/ai-companions-20261111/final.png" alt="실제 동료 3명과 우측 지연 패널 · 보고서 대표 화면" loading="lazy"><figcaption>실제 동료 3명과 우측 지연 패널 · 보고서 대표 화면</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>기존 플레이어와 같은 DrivePlayer·Attack을 사용합니다. 따라가기·엄호·공격·후퇴·대기 중 제공한 행동만 적용하고 저체력 후퇴가 우선합니다. AgentParty는 기본 3명, 구성 상한 32명이며 대규모 성능 보장은 아닙니다. UI 배치·폰트·버튼 연결은 씬에 저장했습니다.</p>
+<h3 id="section-4">판단과 실행</h3>
+<pre class="mermaid">flowchart LR
+A[최신 관측과 허용 선택지] --&gt; B[모델 비동기 판단]
+B --&gt; C{시간과 대상 검증}
+C --&gt;|유효| D[행동 유효 기간 설정]
+C --&gt;|무효| E[안전한 기존 행동 유지]
+D --&gt; F[매 프레임 공통 모터 실행]
+F --&gt; A
+</pre>
+<h3 id="section-5">허용 행동 적용 전체 메서드</h3>
+<p>AIAgentController.TryApply는 모델에 제공한 요청별 짧은 대상 번호를 현재 캐릭터 참조로 확인합니다. 죽거나 범위를 벗어난 대상은 폐기합니다.</p>
+<pre><code data-language="csharp">private bool TryApply(AgentDecision decision)
+{
+    Monster target = null;
+    if (decision.action == &quot;attack&quot;)
+    {
+        if (!_offeredTargets.TryGetValue(decision.targetId, out target) || !IsAllowedEnemy(target))
+        {
+            return false;
+        }
+    }
+    else if (decision.targetId != 0 || !(decision.action == &quot;hold&quot; || decision.action == &quot;guard&quot; || decision.action == &quot;retreat&quot; ||
+        (decision.action == &quot;follow&quot; &amp;&amp; _leader != null &amp;&amp; _leader.IsAlive)))
+    {
+        return false;
+    }
+    _action = decision.action;
+    _target = target;
+    _leaseEnds = Time.time + decision.seconds;
+    return true;
+}
+</code></pre>
+<h3 id="section-6">호출 수명과 정리</h3>
+<pre class="mermaid">flowchart TD
+A[설정별 슬롯 대기] --&gt; B[슬롯 확보 후 관측 생성]
+B --&gt; C[HTTP 요청]
+C --&gt; D[응답 또는 오류]
+D --&gt; E[Dispose와 슬롯 반환]
+B --&gt; F[비활성화 또는 사망]
+C --&gt; F
+F --&gt; G[코루틴 중단과 요청 Abort]
+G --&gt; E
+</pre>
+<p>모델 연결은 <a class="report-link" href="../assets/ai-companions-20261111/AgentModelClient.cs">AgentModelClient 전체</a>, 상태·수명 전체는 <a class="report-link" href="../assets/ai-companions-20261111/AIAgentController.cs">AIAgentController 전체</a>에 보존했습니다. 게임별 해석은 컨트롤러에 남기고 공통 통신은 사용자 승인으로 모체에 반영했습니다.</p>
+<h3 id="section-7">대화 기록</h3>
+<p>사용자는 여러 AI 동료·반응 시간 표시·로컬 모델을 요청했습니다. 설치 질문에는 “Ollama와 소형 모델 설치·실측까지 진행”, 공용화 질문에는 “공용화해서 모체에도 반영”을 선택했습니다. 발언 시각은 미기록입니다.</p>
+<h2 id="section-8">검증</h2>
+<p>Unity 6000.0.83f1의 실제 Play Mode 카메라 출력과 <a class="report-link" href="../assets/ai-companions-20261111/final.json">실측 JSON</a>을 보존했습니다. 사용자 Unity 세션은 보존하고 격리 사본을 사용했습니다. 최종 적용 씬·소스와 사본을 해시 대조했습니다.</p>
+<ul>
+<li>Ollama 0.40.16, qwen2.5:0.5b 약 397MB 설치. GPU 실행 확인.</li>
+<li>최종 동료별 정상 요청 평균 190.2~233.5ms; 21/24회 적용. 폐기는 실패를 숨기지 않고 HUD에 별도로 표시합니다.</li>
+<li>첫 로딩은 약 25.1초, 첫 직접 요청 전체 약 27.0초. 20초 제한 실패를 보존하고 60초 제한과 사전 로딩 스크립트를 추가했습니다.</li>
+<li>C# 컴파일, 씬 저장·재열기, 실제 동료 생성·이동·공격·모델 판단·HUD 표시를 확인했습니다.</li>
+<li>테스트 스위트 작성·실행 없음. 로컬 HTML 브라우저 열기는 도구의 file URL 정책으로 차단되어 소스·링크 검사로 범위를 구분했습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/ai-companions-20261111/before.png" alt="변경 전 실제 Playground" loading="lazy"><figcaption>변경 전 실제 Playground</figcaption></figure></p>
+<h3 id="section-9">프레임 판단 전체 메서드</h3>
+<pre><code data-language="csharp">private void Update()
+{
+    if (!_monster.IsAlive)
+    {
+        CancelThinking();
+        Status = _monster.MaxHealth == 0 ? &quot;Loading character&quot; : &quot;Dead&quot;;
+        return;
+    }
+    Monster nearest = FindNearestEnemy();
+    bool emergency = nearest != null &amp;&amp; _monster.Health &lt;= _monster.MaxHealth * _retreatHealthRatio;
+    if (emergency &amp;&amp; !_isEmergency)
+    {
+        _threatObservedAt = _monster.LastDamageRealtime &gt;= 0d ? _monster.LastDamageRealtime : Time.realtimeSinceStartupAsDouble;
+    }
+    _isEmergency = emergency;
+
+    if (_isEmergency)
+    {
+        MoveAway(nearest);
+        if (_threatObservedAt &gt; 0d)
+        {
+            LastReflexMilliseconds = (Time.realtimeSinceStartupAsDouble - _threatObservedAt) * 1000d;
+            _threatObservedAt = 0d;
+        }
+    }
+    else
+    {
+        ExecuteAction(nearest);
+    }
+
+    if (_modelSettings != null &amp;&amp; _modelSettings.useModel)
+    {
+        if (_thinking == null &amp;&amp; Time.realtimeSinceStartupAsDouble &gt;= _nextDecision)
+        {
+            _queuedAt = Time.realtimeSinceStartupAsDouble;
+            _thinking = StartCoroutine(Think(_generation));
+        }
+    }
+    else
+    {
+        Status = &quot;Rules only&quot;;
+    }
+}
+</code></pre>
+<h3 id="section-10">생성과 표시</h3>
+<pre class="mermaid">flowchart LR
+P[리더와 Player 프리팹] --&gt; S[동료별 생성과 대형 배정]
+S --&gt; C[각자 독립 컨트롤러]
+C --&gt; H[지연 HUD: 4명씩 페이지 표시]
+</pre>
+<h2 id="section-11">남은 사항</h2>
+<p>원격 유료 API·LM Studio·최대 32명 부하·긴급 후퇴 자연 발생 실측은 미확인입니다. 이번 코업은 한 게임 인스턴스 안의 AI 동료이며 네트워크 코업은 구현하지 않았습니다. 전역 길찾기 대신 짧은 장애물 회피와 막힘 만료를 사용합니다. 작은 모델의 선택 품질에는 한계가 있습니다. Fantasya는 기존 미커밋 변경이 많아 다른 작업을 포함하는 프로젝트 커밋·푸시는 하지 않았습니다. 실행용 설치와 모델은 사용자 요청에 따라 유지합니다. Affinity doctor/status는 ECONNREFUSED라 이미지 재편집·압축 없이 실제 PNG를 보존했습니다. 대표 화면은 본문에 등록했으며 현재 아카이브 목록의 개별 썸네일 기능은 미지원입니다. 전역 지침 변경 없음; 기존 비동기·실측·원본 보존 규칙 적용.</p>
+<h2 id="section-12">작업 시간</h2>
+<ul>
+<li>제안 시간: Fantasya 35<del>50분 + 승인된 모체 공용화 10</del>15분</li>
+<li>실제로 완료된 시간: 17:37:11 시작 → 2026-11-11 18:15:13 KST, 보고 원본 작성까지 실측 38.0분. 공개 배포 확인 시간은 최종 채팅에 별도 기록합니다.</li>
+<li>XERJ: 미사용 — 사용자 전역 지침에 따라 XERJ 미사용. rg·현재 소스·Unity 로그·실제 Ollama 응답으로 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111091516119-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-11-result-20261111091516119-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-8">검증</a><a href="#section-11">남은 사항</a><a href="#section-12">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,5 +1,1875 @@
 [
   {
+    "title": "Fantasya AI 동료 컨트롤러 구성",
+    "summary": "공통 모터, 긴급 대응, 다중 동료, 지연 HUD와 로컬 모델을 순서대로 구성합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111091836492-v1.0.0.html",
+    "date": "2026-11-11T09:18:36.492Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya에서 환류한 공용 모델 통신과 요청 슬롯",
+    "summary": "사용자 승인으로 게임 행동 해석을 분리한 Game.AgentModels 모듈과 연결·정리 계약 문서를 추가했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-11-result-20261111091517893-v1.0.0.html",
+    "date": "2026-11-11T09:15:17.893Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "플레이어 모터를 공유하는 AI 동료와 로컬 모델 실측",
+    "summary": "AI 동료 3명, 지연 HUD와 Ollama 연결을 구성했습니다. 최종 정상 판단 평균 190.2~233.5ms; 원격·32명 부하는 미확인입니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111091516119-v1.0.0.html",
+    "date": "2026-11-11T09:15:16.119Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 전용 GA4 속성으로 포트폴리오와 통계 분리",
+    "summary": "측정 ID G-MV60PQ4FH0와 숫자 속성 563715828로 연결을 분리하고 운영 배포를 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111081218663-v1.0.0.html",
+    "date": "2026-11-11T08:12:18.663Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 팀 프로필과 공용 로고 적용, Analytics 속성 연결 확인",
+    "summary": "개인 소개를 팀 소개로 바꾸고 기존 MIRO 로고를 사용했습니다. 운영 데스크톱과 모바일에서 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111075955183-v1.0.0.html",
+    "date": "2026-11-11T07:59:55.183Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 방문 상세 수집과 본인 방문 제외 연결",
+    "summary": "날짜별 방문 합계만 저장하던 경로에 상세 방문 저장과 조회를 연결했습니다. 포트폴리오의 무시 규칙 3개를 블로그로 복사했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111061147787-v1.0.0.html",
+    "date": "2026-11-11T06:11:47.787Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Turnlume 저장소 이름과 공개 사이트 주소 적용",
+    "summary": "GitHub 저장소와 origin을 Turnlume으로 변경하고 새 Pages 주소에 배포했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111055145125-v1.0.0.html",
+    "date": "2026-11-11T05:51:45.125Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume의 Design Data Table 로고 교체",
+    "summary": "제품에 포함된 둥근 픽셀 로고를 웹사이트의 제품 카드, 게시물과 공유 미리보기에 적용했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111000804863-v1.0.0.html",
+    "date": "2026-11-11T00:08:04.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume 9개 언어 사이트와 푸시 배포 구성",
+    "summary": "기존 주소에서 게시물 14건과 사이트를 9개 언어로 공개했습니다. Actions는 배포 토큰 등록이 필요합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110235710019-v1.0.0.html",
+    "date": "2026-11-10T23:57:10.019Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈과 게시물 상세의 1년 기준 시간 표시",
+    "summary": "홈과 게시물 상세는 발행 후 1년 미만이면 경과 시간으로 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110234527912-v1.0.0.html",
+    "date": "2026-11-10T23:45:27.912Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume 사이트 병합과 제품 버전별 Journal 공개",
+    "summary": "기존 Pages 주소를 유지하고 통합 저장소에서 5개 제품의 13개 버전 글을 배포했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110232228961-v1.0.0.html",
+    "date": "2026-11-10T23:22:28.961Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 게시판 목록의 글별 NEW 표시",
+    "summary": "게시판 목록의 각 글 제목 옆에 발행 후 24시간 동안 NEW를 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110230955808-v1.0.0.html",
+    "date": "2026-11-10T23:09:55.808Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈의 게시물 발행 시각을 경과 시간으로 표시",
+    "summary": "홈 게시물 카드의 날짜가 발행 후 경과한 분, 시간, 일로 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110230340519-v1.0.0.html",
+    "date": "2026-11-10T23:03:40.519Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 카테고리 NEW 표시를 발행 후 24시간으로 변경",
+    "summary": "카테고리 최신 글의 확인된 발행 시각부터 24시간 동안 NEW를 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110225528675-v1.0.0.html",
+    "date": "2026-11-10T22:55:28.675Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 블로그를 miro-lab.pages.dev로 이전했습니다",
+    "summary": "새 주소에 블로그를 배포하고 이전 링크를 301로 연결했습니다. GA4 URL을 바꾸고 AdSense와 Search Console의 새 주소 등록을 접수했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110153036338-v1.0.0.html",
+    "date": "2026-11-10T15:30:36.338Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 체크박스와 전체 IP 표시",
+    "summary": "댓글 선택 삭제와 관리자 전용 전체 IP 표시를 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110143627961-v1.0.0.html",
+    "date": "2026-11-10T14:36:27.961Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 선택과 전체 IP 표시",
+    "summary": "현재 페이지 선택·삭제 및 관리자 전용 전체 IP를 추가합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110143625933-v1.0.0.html",
+    "date": "2026-11-10T14:36:25.933Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈 최근 개발일지 항목 높이 고정",
+    "summary": "홈의 왼쪽 최근 개발일지 네 항목을 아래쪽 항목의 기존 크기인 105px로 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110130919104-v1.0.0.html",
+    "date": "2026-11-10T13:09:19.104Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 색과 구분선 정리",
+    "summary": "작성자 강조색, 옅은 구분선, 차분한 원글 링크를 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110130058244-v1.0.0.html",
+    "date": "2026-11-10T13:00:58.244Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 티스토리풍 스타일 적용",
+    "summary": "작성자 강조와 옅은 행 구분선을 기존 관리자 탭에 적용합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110130056710-v1.0.0.html",
+    "date": "2026-11-10T13:00:56.710Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록을 행으로 정리하고 원글 제목 연결",
+    "summary": "작성자와 시각, 댓글 본문, 클릭할 수 있는 원글 제목을 행마다 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110124800582-v1.0.0.html",
+    "date": "2026-11-10T12:48:00.582Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 행 레이아웃과 원글 제목",
+    "summary": "댓글 행에 작성자, 내용, 클릭 가능한 원글 제목을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110124759037-v1.0.0.html",
+    "date": "2026-11-10T12:47:59.037Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 폭을 본문에 맞추고 세로 크기 줄이기",
+    "summary": "댓글 폼이 본문 좌우에 정렬되며 입력칸과 위아래 여백이 줄었습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110122705807-v1.0.0.html",
+    "date": "2026-11-10T12:27:05.807Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 폼 가로 폭 복원과 세로 크기 축소",
+    "summary": "본문 폭을 사용하고 폼의 높이와 세로 간격만 줄입니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110122704048-v1.0.0.html",
+    "date": "2026-11-10T12:27:04.048Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.2.html",
+    "date": "2026-11-10T12:23:20.530Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.2.html",
+    "date": "2026-11-10T12:23:20.527Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Playground 터레인과 파스텔 배경",
+    "summary": "Playground를 32×32m 초원으로 확장하고 배경과 색감을 조정했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111037114-v1.0.1.html",
+    "date": "2026-11-10T12:23:20.519Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 관리를 같은 관리자 대시보드 탭으로 통합",
+    "summary": "왼쪽 메뉴와 테마를 유지하며 댓글 관리가 중앙 패널에 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110122001830-v1.0.0.html",
+    "date": "2026-11-10T12:20:01.830Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 관리를 기존 관리자 탭에 통합",
+    "summary": "댓글 관리의 별도 페이지를 대시보드 중앙 패널로 이동합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110121959645-v1.0.0.html",
+    "date": "2026-11-10T12:19:59.645Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio 코드 강조와 Mermaid 테마 정리",
+    "summary": "코드 줄마다 보이던 배경을 제거하고 Mermaid를 사이트의 라이트·다크 테마에 맞췄습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110120336973-v1.0.0.html",
+    "date": "2026-11-10T12:03:36.973Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 지침 중복 정리와 필요한 문서만 읽는 경로",
+    "summary": "공통 가이드 4개를 86,118바이트에서 61,870바이트로 줄이고, 프로젝트별 예외와 코드·Mermaid 기준을 보존했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110115747227-v1.0.0.html",
+    "date": "2026-11-10T11:57:47.227Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 화면 축소와 관리자 댓글 관리 배포",
+    "summary": "4자 삭제 비밀번호를 지원하고 관리자 댓글 목록에 삭제와 원글 이동을 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110115742503-v1.0.0.html",
+    "date": "2026-11-10T11:57:42.503Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 UI 축소와 관리자 댓글 관리 추가",
+    "summary": "4자 삭제 비밀번호와 관리자 목록·삭제·원글 링크를 운영에 적용합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110115740772-v1.0.0.html",
+    "date": "2026-11-10T11:57:40.772Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Codex 전역 지침 압축과 작업별 절차 분리",
+    "summary": "전역 AGENTS.md를 46,807바이트에서 4,686바이트로 줄이고 세부 절차를 작업별 문서로 옮겼습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110113818267-v1.0.0.html",
+    "date": "2026-11-10T11:38:18.267Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 지침 압축 작업 메뉴얼",
+    "summary": "설치본의 공통 규칙과 작업별 절차를 분리하고 동기화·공개 배포를 확인합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110113646253-v1.0.0.html",
+    "date": "2026-11-10T11:36:46.253Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "비회원 댓글 운영 배포와 공개 동작 확인",
+    "summary": "공개 블로그에서 댓글 작성과 비밀번호 삭제를 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110113158432-v1.0.0.html",
+    "date": "2026-11-10T11:31:58.432Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 게시글에 비회원 댓글 추가",
+    "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-guest-comments-d1-20261110-20261110113156732-v1.0.1.html",
+    "date": "2026-11-10T11:31:56.732Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.557Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.555Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111035632-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.554Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 전환과 캐릭터 프리팹",
+    "summary": "DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111032667-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.543Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 메뉴 바깥 터치 닫기",
+    "summary": "모바일 메뉴가 열리면 바깥 화면이 어두워지고, 바깥을 누르면 닫힙니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110111758258-v1.0.0.html",
+    "date": "2026-11-10T11:17:58.258Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 화면의 가로 넘침 수정",
+    "summary": "400px 모바일 화면에서 문서가 644px로 넓어지던 문제를 수정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110111119749-v1.0.0.html",
+    "date": "2026-11-10T11:11:19.749Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.0.html",
+    "date": "2026-11-10T11:11:08.899Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.0.html",
+    "date": "2026-11-10T11:10:38.571Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Playground 터레인과 파스텔 배경",
+    "summary": "Playground를 32×32m 초원으로 확장하고 배경과 색감을 조정했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111037114-v1.0.0.html",
+    "date": "2026-11-10T11:10:37.114Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111035632-v1.0.0.html",
+    "date": "2026-11-10T11:10:35.632Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "FantasyaCharacter Addressables InvalidKeyException 수정",
+    "summary": "잘못 중첩된 번역 항목을 정리해 DDT 그룹 목록을 복구했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-bug-20261110111034171-v1.0.0.html",
+    "date": "2026-11-10T11:10:34.171Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 전환과 캐릭터 프리팹",
+    "summary": "DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111032667-v1.0.0.html",
+    "date": "2026-11-10T11:10:32.667Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 누락 보고서 정리와 공개 확인",
+    "summary": "11월 9~10일의 누락된 작업과 버그를 주제별 보고서로 정리하고 중앙 아카이브의 공개 주소를 확인합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-manual-20261110111030921-v1.0.0.html",
+    "date": "2026-11-10T11:10:30.921Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 탑바 문구와 카테고리 배치 수정",
+    "summary": "모바일 탑바의 소개 문구를 숨겨 MIRO 이름만 표시하고 카테고리를 탑바 아래 한 줄로 복구했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110731894-v1.0.0.html",
+    "date": "2026-11-10T11:07:31.894Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글에 로그인 없는 댓글과 비밀번호 삭제 추가",
+    "summary": "D1 댓글 API와 반응형 폼을 구현했습니다. 운영 반영은 PR 병합 승인 대기입니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110346663-v1.0.0.html",
+    "date": "2026-11-10T11:03:46.663Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 게시글에 비회원 댓글 추가",
+    "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110110345138-v1.0.0.html",
+    "date": "2026-11-10T11:03:45.138Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 카테고리 메뉴와 방문자 수 배치",
+    "summary": "모바일 가로 메뉴와 방문자 그래프를 치우고 탑바의 햄버거 메뉴로 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110343755-v1.0.0.html",
+    "date": "2026-11-10T11:03:43.755Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 OG의 MIRO 영문 표기",
+    "summary": "모든 게시글 OG가 공유하는 로고 옆 표기를 MIRO로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110105143083-v1.0.0.html",
+    "date": "2026-11-10T10:51:43.083Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글과 함께 자동 생성되는 MIRO OG 카드",
+    "summary": "블로그 빌드가 홈과 글의 공유 이미지를 자동 생성하고 제목, 발행일, 썸네일 변경을 카드에 반영합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110104529869-v1.0.0.html",
+    "date": "2026-11-10T10:45:29.869Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 축소 탑바 소개 문구 배치",
+    "summary": "탑바를 축소할 때 블로그 소개 문구가 MIRO 오른쪽에 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110104037238-v1.0.0.html",
+    "date": "2026-11-10T10:40:37.238Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 게시물 하단의 네 구역 분리",
+    "summary": "빨간 표시선을 기준으로 본문과 배너, 이전·다음 게시물, 헤드라인, 관련 글을 분리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110103821105-v1.0.0.html",
+    "date": "2026-11-10T10:38:21.105Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 스크롤 제목의 왼쪽 여백 정렬",
+    "summary": "스크롤 중 작은 제목의 시작 위치를 본문 제목과 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110103056174-v1.0.0.html",
+    "date": "2026-11-10T10:30:56.174Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 기본 Chrome 환경의 스크롤 애니메이션 수정",
+    "summary": "기본 Chrome의 모션 감소 설정에서 전환 시간이 0초로 적용됐습니다. 탑바와 검색창은 0.18초 동안 줄어들고 제목은 제자리에서 페이드됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110102737751-v1.0.0.html",
+    "date": "2026-11-10T10:27:37.751Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 탑바와 검색창의 스크롤 전환 개선",
+    "summary": "탑바와 검색창이 함께 부드럽게 줄어듭니다. 원래 글 제목이 탑바 뒤로 가려지면 읽는 제목이 작은 줄로 나타납니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110102251063-v1.0.0.html",
+    "date": "2026-11-10T10:22:51.063Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 본문 제목과 좌우 패널의 스크롤 위치 수정",
+    "summary": "글 제목을 검색 탑바 아래 본문 너비의 전용 줄로 분리했습니다. 상단 헤드라인도 본문 열로 옮겼습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110101625435-v1.0.0.html",
+    "date": "2026-11-10T10:16:25.435Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 공유 카드와 검색 예시 검증",
+    "summary": "홈과 개발일지 한 편을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-miro-og-20261110-20261110101343669-v1.0.1.html",
+    "date": "2026-11-10T10:13:43.669Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미로 블로그의 라이트 테마 OG 카드 개편",
+    "summary": "흰 배경의 홈 카드와 제목·썸네일·발행일을 담은 게시글 카드 153장을 Affinity에서 제작했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110101342282-v1.0.0.html",
+    "date": "2026-11-10T10:13:42.282Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 스크롤 탑바와 게시물 탐색 개선",
+    "summary": "검색창을 포함한 탑바가 스크롤 중 작게 유지됩니다. 헤드라인은 본문과 함께 스크롤되고, 글 하단에 한 번 더 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110100810610-v1.0.0.html",
+    "date": "2026-11-10T10:08:10.610Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 공유 카드와 검색 예시 검증",
+    "summary": "홈과 개발일지 한 편을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110094717055-v1.0.0.html",
+    "date": "2026-11-10T09:47:17.055Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈·게시글 OG 카드와 Google 검색 예시",
+    "summary": "홈과 개발일지 한 편의 링크 공유 이미지 2종을 제작하고 Google 일반 검색에서의 제목·설명 예시를 작성했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094641412-v1.0.0.html",
+    "date": "2026-11-10T09:46:41.412Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모든 페이지의 고정 헤드라인",
+    "summary": "홈 전용 헤드라인을 공통 위치로 옮기고 스크롤 시 상단에 고정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094635065-v1.0.0.html",
+    "date": "2026-11-10T09:46:35.065Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "탑바를 유지하는 부드러운 페이지 전환",
+    "summary": "전체 화면 가림을 제거하고 본문만 짧고 약하게 페이드하도록 조정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094306437-v1.0.0.html",
+    "date": "2026-11-10T09:43:06.437Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 상단 요약 제거와 태그 하단 배치",
+    "summary": "상단 요약을 제거하고 태그를 본문 아래로 옮겼습니다. 제목 아래에 작성 정보 간격을 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094019610-v1.0.0.html",
+    "date": "2026-11-10T09:40:19.610Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 공개 페이지의 공용 레이아웃",
+    "summary": "푸터에서 열리는 다섯 페이지의 본문 폭과 좌우 패널을 일반 게시물에 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110093706640-v1.0.0.html",
+    "date": "2026-11-10T09:37:06.640Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시판 우측 세로 광고 슬롯 추가",
+    "summary": "내 개발일지 등 게시판에서 기존 우측 세로 광고 미리보기를 쓸 수 있습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110093107902-v1.0.0.html",
+    "date": "2026-11-10T09:31:07.902Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 링크 아래에 문의 이메일 표시",
+    "summary": "이메일 링크를 푸터 메뉴 아래에 문의 문구로 배치했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092733944-v1.0.0.html",
+    "date": "2026-11-10T09:27:33.944Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "페이지 본문 공개 후 페이드 시작",
+    "summary": "폰트 대기 중 소진되던 페이드를 본문이 보이는 시점으로 옮겼습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092542348-v1.0.0.html",
+    "date": "2026-11-10T09:25:42.348Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 이메일과 AI 게시물 삭제 요청 안내",
+    "summary": "공개 이메일을 문의 본문에서 공통 푸터로 옮기고 삭제·정정 절차를 보강했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092116814-v1.0.0.html",
+    "date": "2026-11-10T09:21:16.814Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "탑바와 모바일 그래프 로딩 공간 확보",
+    "summary": "탑바의 3px 로딩 공간과 모바일 방문자 그래프의 높이를 첫 프레임에 확보했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091932888-v1.0.0.html",
+    "date": "2026-11-10T09:19:32.888Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 이름을 MIRO로 변경",
+    "summary": "블로그 상단과 페이지 제목에 MIRO를 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091642967-v1.0.0.html",
+    "date": "2026-11-10T09:16:42.967Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 삭제·정정 요청 안내 페이지",
+    "summary": "공개 연락처를 설정 변수로 관리하고 게시물 문의 페이지를 푸터에 연결했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091241745-v1.0.0.html",
+    "date": "2026-11-10T09:12:41.745Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 링크 위의 내부 여백 제거",
+    "summary": "본문과 푸터 사이 간격을 복원하고 푸터 링크 위쪽 내부 패딩만 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110090705492-v1.0.0.html",
+    "date": "2026-11-10T09:07:05.492Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "헤드라인 Next 간소화와 가로 모션 보완",
+    "summary": "Next를 작은 텍스트로 바꾸고 모션 줄이기에서도 짧은 가로 전환을 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110090527399-v1.0.0.html",
+    "date": "2026-11-10T09:05:27.399Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기존 개발 기록에 코드 구문 강조와 Mermaid 적용",
+    "summary": "기준 커밋의 20개 프로젝트 1,462편을 조사하고 기존 게시글 59편에 코드 또는 도표를 적용했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110085650583-v1.0.0.html",
+    "date": "2026-11-10T08:56:50.583Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "과거 개발 기록의 코드·Mermaid 적용 메뉴얼",
+    "summary": "공개 게시글 목록 조사, 원문 근거 기반 보강, 브라우저 검사, 공개 확인을 순서대로 수행합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110085648574-v1.0.0.html",
+    "date": "2026-11-10T08:56:48.574Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "헤드라인 자동 재생과 가로 전환",
+    "summary": "4초 자동 재생을 기본으로 하고 가로 슬라이드와 Next 버튼을 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110085514009-v1.0.0.html",
+    "date": "2026-11-10T08:55:14.009Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 로딩 분기와 예산 검사 추가",
+    "summary": "테이블별 로딩 선택을 Mermaid로 나타내고 웹 빌드의 전송 예산은 짧은 JavaScript 예제로 보여 줍니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110085424722-v1.0.0.html",
+    "date": "2026-11-10T08:54:24.722Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+    "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-devlog-formatting-20261110-20261110085422390-v1.0.1.html",
+    "date": "2026-11-10T08:54:22.390Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+    "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084635167-v1.0.0.html",
+    "date": "2026-11-10T08:46:35.167Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 대표 게시물 제목 크기 조정",
+    "summary": "홈 가운데 대표 카드 제목을 PC 22px, 모바일 18px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084624494-v1.0.0.html",
+    "date": "2026-11-10T08:46:24.494Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물별 공개 조회수와 발행 시각 분산",
+    "summary": "게시물 상세에 조회수를 표시하고 기존 150개 글의 표시 시각을 30일에 걸쳐 분산했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084608423-v1.0.0.html",
+    "date": "2026-11-10T08:46:08.423Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고서에 Mermaid 사용 기준 추가",
+    "summary": "실행 흐름, 구조, 의존 관계의 이해를 돕는 경우 Mermaid 다이어그램을 사용합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110084402791-v1.0.0.html",
+    "date": "2026-11-10T08:44:02.791Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 상단 표기와 작성진 안내 제목 수정",
+    "summary": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084317422-v1.0.0.html",
+    "date": "2026-11-10T08:43:17.422Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그와 작성진 안내 표기 수정 작업 메뉴얼",
+    "summary": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084312431-v1.0.0.html",
+    "date": "2026-11-10T08:43:12.431Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈의 최신 게시물 헤드라인 티커",
+    "summary": "최신 게시물 다섯 개의 제목을 작은 글씨로 한 줄에 차례로 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084232571-v1.0.0.html",
+    "date": "2026-11-10T08:42:32.571Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 필명 적용 메뉴얼",
+    "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084214829-v1.0.0.html",
+    "date": "2026-11-10T08:42:14.829Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 필명 변경",
+    "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084148661-v1.0.0.html",
+    "date": "2026-11-10T08:41:48.661Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 코드 블록에 문법 강조 적용",
+    "summary": "마크다운에 언어를 적으면 코드가 빌드 단계에서 문법 강조됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083715334-v1.0.0.html",
+    "date": "2026-11-10T08:37:15.334Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 상단 뉴스 헤드라인 적용",
+    "summary": "홈 상단 고정 소개 문구를 기사로 연결되는 뉴스 헤드라인으로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083529556-v1.0.0.html",
+    "date": "2026-11-10T08:35:29.556Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고서의 구문 강조와 핵심 설명 기준",
+    "summary": "핵심 코드에는 구문 강조를 적용하고 보고서만으로 변경을 이해할 수 있도록 맥락을 남깁니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110083452612-v1.0.0.html",
+    "date": "2026-11-10T08:34:52.612Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고 지침 반영 및 배포 메뉴얼",
+    "summary": "전역 지침 수정, 설치본 대조, 아카이브 배포를 순서대로 수행합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110083450326-v1.0.0.html",
+    "date": "2026-11-10T08:34:50.326Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 홈 방문자 수와 최근 7일 추이",
+    "summary": "홈 왼쪽 프로필 아래에 오늘·어제·누적 방문자 수와 7일 그래프를 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083015321-v1.0.0.html",
+    "date": "2026-11-10T08:30:15.321Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 콘텐츠와 푸터 사이에 남은 여백 제거",
+    "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110082713364-v1.0.0.html",
+    "date": "2026-11-10T08:27:13.364Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 푸터 위 실제 간격 제거 작업 메뉴얼",
+    "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082711817-v1.0.0.html",
+    "date": "2026-11-10T08:27:11.817Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 안내와 게시 기준 구체화",
+    "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110082230432-v1.0.0.html",
+    "date": "2026-11-10T08:22:30.432Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 안내 상세화 작업 메뉴얼",
+    "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082228835-v1.0.0.html",
+    "date": "2026-11-10T08:22:28.835Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NEW 그라데이션의 방향과 속도 조정",
+    "summary": "NEW 표시가 0.9초 주기로 한 방향으로 흐르도록 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081614209-v1.0.0.html",
+    "date": "2026-11-10T08:16:14.209Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 위 여백 줄이기",
+    "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081534981-v1.0.0.html",
+    "date": "2026-11-10T08:15:34.981Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 상단 여백 조정 작업 메뉴얼",
+    "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110081533276-v1.0.0.html",
+    "date": "2026-11-10T08:15:33.276Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "광고 관리 버튼과 패널 디자인 개선",
+    "summary": "블로그 하늘색을 기준으로 광고 관리 탭의 동작과 선택 상태를 구분했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081424507-v1.0.0.html",
+    "date": "2026-11-10T08:14:24.507Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 왼쪽 제목과 자동 발행 문구 삭제",
+    "summary": "푸터 왼쪽의 제목과 설명을 삭제하고 오른쪽 메뉴를 유지했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110080756928-v1.0.0.html",
+    "date": "2026-11-10T08:07:56.928Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 왼쪽 소개 삭제 작업 메뉴얼",
+    "summary": "표시된 문구를 삭제하고 오른쪽 메뉴를 공개 화면에서 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110080755180-v1.0.0.html",
+    "date": "2026-11-10T08:07:55.180Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "광고 관리에서 수익 CSV 가져오기 제거",
+    "summary": "광고 관리에서 CSV 수익 조회 메뉴와 처리 코드를 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110080620651-v1.0.0.html",
+    "date": "2026-11-10T08:06:20.651Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 작성자와 주제 태그 다섯 개 표시",
+    "summary": "개발일지는 미로로, 나머지 글은 게시판별 필명으로 표시하고 제목 아래에 태그 다섯 개를 배치했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110074641760-v1.0.0.html",
+    "date": "2026-11-10T07:46:41.760Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 작성자와 태그 표시 작업 메뉴얼",
+    "summary": "게시판별 작성자와 글마다 태그 다섯 개를 반영하고 공개 화면을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110074640195-v1.0.0.html",
+    "date": "2026-11-10T07:46:40.195Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 광고 관리에 AdSense 수익 보고서 추가",
+    "summary": "AdSense 읽기 전용 인증과 블로그 도메인 수익 보고서를 운영에 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110074519273-v1.0.0.html",
+    "date": "2026-11-10T07:45:19.273Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리자 왼쪽 메뉴에 광고 관리 배치",
+    "summary": "광고 관리를 왼쪽 탭으로 옮기고 관리자 사이트맵 안내를 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073644670-v1.0.0.html",
+    "date": "2026-11-10T07:36:44.670Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 검색 버튼 글씨를 흰색으로 변경",
+    "summary": "검색 버튼의 글자색을 흰색으로 지정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073056858-v1.0.0.html",
+    "date": "2026-11-10T07:30:56.858Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 푸터와 AI 작성진 안내",
+    "summary": "공용 푸터를 팀 블로그로 바꾸고 AI 자동 발행 안내와 작성진 페이지 링크를 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073035907-v1.0.0.html",
+    "date": "2026-11-10T07:30:35.907Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 푸터와 AI 작성진 안내 작업 메뉴얼",
+    "summary": "공용 푸터 수정 후 공개 안내 페이지의 링크와 내용을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110073033936-v1.0.0.html",
+    "date": "2026-11-10T07:30:33.936Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 GA4 측정 태그 운영 반영",
+    "summary": "블로그의 측정 태그와 개인정보 안내를 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072920178-v1.0.0.html",
+    "date": "2026-11-10T07:29:20.178Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 섹션 색상에 맞춘 카드 호버",
+    "summary": "최신 뉴스는 붉은색, 제작 이야기는 초록색, 게임 기술은 보라색으로 호버를 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072848513-v1.0.0.html",
+    "date": "2026-11-10T07:28:48.513Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "웹폰트 준비 전 전체 화면 로딩 표시",
+    "summary": "블로그 첫 방문과 새로고침에서 웹폰트가 준비될 때까지 로딩 표시를 보여 줍니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072820254-v1.0.0.html",
+    "date": "2026-11-10T07:28:20.254Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그와 관리 화면의 하늘색 및 파비콘 일치",
+    "summary": "블로그 운영 색상과 탭 아이콘을 관리 Worker에 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072740103-v1.0.0.html",
+    "date": "2026-11-10T07:27:40.103Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판의 호버 강조선 두께 조정",
+    "summary": "하늘색 그라데이션 강조선을 2px에서 1px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072119233-v1.0.0.html",
+    "date": "2026-11-10T07:21:19.233Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity CLI 우선 사용을 전역 지침에 명시",
+    "summary": "Affinity 작업은 전용 CLI의 연결 확인부터 시작합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110071442376-v1.0.0.html",
+    "date": "2026-11-10T07:14:42.376Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity 전용 CLI 우선 적용 메뉴얼",
+    "summary": "전역 지침에 Affinity CLI 선행과 GUI 전환 조건을 명시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110071409855-v1.0.0.html",
+    "date": "2026-11-10T07:14:09.855Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 공용 하늘색 테마 복원",
+    "summary": "탑바, 검색 버튼, 글 카드 강조를 하늘색 계열로 맞추고 기존 파란 로고를 복원했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110071400338-v1.0.0.html",
+    "date": "2026-11-10T07:14:00.338Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "명시적 사용자 지시의 전체 이행 원칙 추가",
+    "summary": "전역 AGENTS.md에 사용자 지시 이행 원칙을 추가했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110071152222-v1.0.0.html",
+    "date": "2026-11-10T07:11:52.222Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "포트폴리오 원본 관리 화면 이식",
+    "summary": "원본 관리자 UI와 탐색·통계 API를 블로그 관리 Worker에 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110071007472-v1.0.0.html",
+    "date": "2026-11-10T07:10:07.472Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "파비콘 모서리 투명 처리와 흰색 로고 선",
+    "summary": "Affinity에서 둥근 주황색 로고의 바깥 모서리를 투명하게 만들고 내부 선을 흰색으로 바꿨습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110070511341-v1.0.0.html",
+    "date": "2026-11-10T07:05:11.341Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "포트폴리오 구조를 반영한 블로그 관리 화면",
+    "summary": "관리 로그인과 대시보드의 공통 스타일, 메뉴 및 통계 구성을 운영에 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110065823019-v1.0.0.html",
+    "date": "2026-11-10T06:58:23.019Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리 푸터 운영 배포 확인",
+    "summary": "공개 블로그에 관리 링크를 반영했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110064850863-v1.0.0.html",
+    "date": "2026-11-10T06:48:50.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리 페이지 Google 로그인과 푸터 진입점",
+    "summary": "관리 Worker를 Google 로그인으로 전환했습니다. 푸터 변경은 로컬 빌드에 반영됐습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110063443523-v1.0.0.html",
+    "date": "2026-11-10T06:34:43.523Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "세 Publisher 업로드본의 Unity 설치·실행 및 공식 Validator 결과",
+    "summary": "대표 예제 5개 실행, 공식 Validator 실패 0개 및 Pixora Studio 추가 파일 1개를 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110053915525-v1.0.0.html",
+    "date": "2026-11-10T05:39:15.525Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Publisher 업로드 패키지 3종 설치·실행·Validator 메뉴얼",
+    "summary": "업로드된 패키지를 격리 환경에 설치하고 실행·Validator·파일 목록을 검증했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110053914243-v1.0.0.html",
+    "date": "2026-11-10T05:39:14.243Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "템플릿 변경을 세 제품의 Publisher 초안에 반영",
+    "summary": "Design Data Table 2.0.3, Pixora Studio 1.0.1, Entity Forge 0.3.2-preview의 바이너리를 갱신했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110052621625-v1.0.0.html",
+    "date": "2026-11-10T05:26:21.625Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "템플릿 변경 후 세 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "Design Data Table, Pixora Studio, Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110052620324-v1.0.0.html",
+    "date": "2026-11-10T05:26:20.324Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록 클릭의 메인 창 덮임 완화",
+    "summary": "별도 Windows 목록 창에도 기존 클릭 보호를 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110051441762-v1.0.0.html",
+    "date": "2026-11-10T05:14:41.762Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록의 창 깜박임 완화 검증",
+    "summary": "별도 Windows 목록 창에 클릭 보호를 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110051440367-v1.0.0.html",
+    "date": "2026-11-10T05:14:40.367Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제품 지정 정정 및 Pixora Studio 1.0.1 초안 바이너리 갱신",
+    "summary": "두 번째 제품을 Entity Forge로 잘못 해석한 업로드 기록을 정정하고 Pixora Studio 1.0.1 바이너리를 기존 초안에 등록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109161505594-v1.0.0.html",
+    "date": "2026-11-09T16:15:05.594Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109161503946-v1.0.2.html",
+    "date": "2026-11-09T16:15:03.946Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom main 푸시 및 원격 커밋 확인",
+    "summary": "사용자 재지시 후 기존 로컬 커밋 46968c72를 origin/main에 푸시하고 원격 SHA를 대조했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109155426712-v1.0.0.html",
+    "date": "2026-11-09T15:54:26.712Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.html",
+    "date": "2026-11-09T15:54:24.828Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검정과 주황의 개발 블로그 테마",
+    "summary": "홈, 게시판, 글 상세, 검색과 푸터를 짙은 검정과 주황 포인트로 통일했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109154923882-v1.0.0.html",
+    "date": "2026-11-09T15:49:23.882Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-guideline-folders-20261109154421278-v1.0.1.html",
+    "date": "2026-11-09T15:44:21.278Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침의 폴더 탐색",
+    "summary": "모아보기에서 프로젝트 20개를 폴더로 펼치고, 턴룸 제품은 하위 폴더에서 각각 열 수 있습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109154419506-v1.0.0.html",
+    "date": "2026-11-09T15:44:19.506Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 변경 커밋과 Unity Asset Store 초안 바이너리 갱신",
+    "summary": "Design Data Table과 Entity Forge의 바이너리를 기존 초안에 저장했습니다. TurnRoom 변경은 로컬에 커밋했으며 원격 main 푸시는 자동 승인 검토에서 차단됐습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109153850576-v1.0.0.html",
+    "date": "2026-11-09T15:38:50.576Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109153848658-v1.0.0.html",
+    "date": "2026-11-09T15:38:48.658Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109153819022-v1.0.0.html",
+    "date": "2026-11-09T15:38:19.022Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "한글 입력 중 검색 미리보기 즉시 갱신",
+    "summary": "입력마다 미리보기가 사라지는 동작을 제거하고 검색창 브라우저 자동완성을 끕니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109153129008-v1.0.0.html",
+    "date": "2026-11-09T15:31:29.008Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글 상세 폭과 본문 간격 정리, 홈 광고 미리보기",
+    "summary": "글 상세 폭을 홈과 맞추고 상단 로고와 파비콘을 통일했습니다. 홈에서 단축키로 광고 자리 미리보기를 켜고 끌 수 있습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109150854869-v1.0.0.html",
+    "date": "2026-11-09T15:08:54.869Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-project-guidelines-20261109150214760-v1.0.1.html",
+    "date": "2026-11-09T15:02:14.760Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 메뉴와 20개 프로젝트 전용 지침",
+    "summary": "공개 상단 메뉴와 프로젝트 전용 지침 20개를 확인하고 실제 브라우저 전후 화면을 첨부했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-project-guidelines-20261109150212698-v1.0.1.html",
+    "date": "2026-11-09T15:02:12.698Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 메뉴와 20개 프로젝트 전용 지침",
+    "summary": "전역 지침을 상단 메뉴에 두고, 각 프로젝트 화면과 모아보기에서 전용 지침을 연결했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109145440152-v1.0.0.html",
+    "date": "2026-11-09T14:54:40.152Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 작업 메뉴얼",
+    "summary": "테이블별 등록과 로딩을 구현하고 실제 Unity에서 확인합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109145351037-v1.0.0.html",
+    "date": "2026-11-09T14:53:51.037Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 선택",
+    "summary": "전체 적용을 제거했습니다. 체크된 테이블만 Addressables를 사용하며, 샘플은 자동 등록되지 않습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109145315072-v1.0.0.html",
+    "date": "2026-11-09T14:53:15.072Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109145039346-v1.0.0.html",
+    "date": "2026-11-09T14:50:39.346Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio에서 Codex 전역 지침 열람",
+    "summary": "작성 가이드에 전역 지침 링크를 추가하고 저장소 원문으로 목차와 본문을 생성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109143936010-v1.0.0.html",
+    "date": "2026-11-09T14:39:36.010Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio 전역 지침 열람 페이지 작업 메뉴얼",
+    "summary": "공개 저장소의 전역 지침을 작성 가이드에서 열고 원문과 대조합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109143839686-v1.0.0.html",
+    "date": "2026-11-09T14:38:39.686Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블 관리 입력란과 미설치 화면 검증",
+    "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109142643933-v1.0.0.html",
+    "date": "2026-11-09T14:26:43.933Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 영어 입력란 대비 수정과 Addressables 미설치 표시 정리",
+    "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109142641920-v1.0.0.html",
+    "date": "2026-11-09T14:26:41.920Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 주소와 Inspector 형식 확인",
+    "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109141916673-v1.0.0.html",
+    "date": "2026-11-09T14:19:16.673Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 주소 편집과 Inspector 형식",
+    "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109141915167-v1.0.0.html",
+    "date": "2026-11-09T14:19:15.167Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 등록과 기본 팝업 검증 메뉴얼",
+    "summary": "DDT 테이블에서 바이너리를 등록하고 Unity Addressables 기본 그룹·레이블 창을 열 수 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109140049564-v1.0.0.html",
+    "date": "2026-11-09T14:00:49.564Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 등록과 Unity 기본 팝업",
+    "summary": "DDT 테이블에서 바이너리를 등록하고 Unity Addressables 기본 그룹·레이블 창을 열 수 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109140048187-v1.0.0.html",
+    "date": "2026-11-09T14:00:48.187Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 바이너리 저장 위치와 설정창 검증 메뉴얼",
+    "summary": "DDT에서 새 바이너리의 기본 출력 경로를 분리하고, 테이블 관리에서 기존 파일의 위치를 바꾸도록 수정했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109134244684-v1.0.0.html",
+    "date": "2026-11-09T13:42:44.684Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 바이너리 저장 위치와 테이블 관리 바로가기",
+    "summary": "DDT에서 새 바이너리의 기본 출력 경로를 분리하고, 테이블 관리에서 기존 파일의 위치를 바꾸도록 수정했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109134243397-v1.0.0.html",
+    "date": "2026-11-09T13:42:43.397Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판의 화면 진입 렌더링",
+    "summary": "화면 밖에 있는 카드에 자리만 잡아 두고 스크롤 시 제목과 썸네일을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133936320-v1.0.0.html",
+    "date": "2026-11-09T13:39:36.320Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 각진 박스와 제목 옆 글 수 적용",
+    "summary": "홈 박스 모서리를 통일하고 상단 높이를 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133456919-v1.0.0.html",
+    "date": "2026-11-09T13:34:56.919Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-minimized-list-20261109-20261109133329625-v1.0.1.html",
+    "date": "2026-11-09T13:33:29.625Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 리스트의 공용 상세 툴팁 적용",
+    "summary": "최소화 리스트 옵션의 툴팁을 제목과 본문이 있는 공용 카드로 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109133327284-v1.0.0.html",
+    "date": "2026-11-09T13:33:27.284Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판 목록의 공통 가로 폭 적용",
+    "summary": "게시판에 별도로 적용된 800px 폭 제한을 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133032789-v1.0.0.html",
+    "date": "2026-11-09T13:30:32.789Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 섹션 상단선과 게시물 미리보기 추가",
+    "summary": "홈 두 섹션에 상단선을 넣고 홈과 게시판 목록에서 본문을 미리 읽을 수 있게 했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109132648710-v1.0.0.html",
+    "date": "2026-11-09T13:26:48.710Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-popup-alttab-20261109-20261109131856007-v1.0.1.html",
+    "date": "2026-11-09T13:18:56.007Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 설정의 Alt+Tab 제목 번역 일치",
+    "summary": "전역 설정 창의 내부 제목과 Windows 창 제목에 같은 번역을 사용합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109131854353-v1.0.0.html",
+    "date": "2026-11-09T13:18:54.353Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시판별 30일 모아보기와 중복 썸네일 정리",
+    "summary": "공개 게시판 5곳에 각각 30편을 표시하고 대표 이미지 중복을 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109131807302-v1.0.0.html",
+    "date": "2026-11-09T13:18:07.302Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130940378-v1.0.0.html",
+    "date": "2026-11-09T13:09:40.378Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 설정 및 도구 팝업의 Windows Alt+Tab 등록",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109130938952-v1.0.0.html",
+    "date": "2026-11-09T13:09:38.952Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130255858-v1.0.0.html",
+    "date": "2026-11-09T13:02:55.858Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 설정에 최소화 리스트 토글 추가",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109130254452-v1.0.0.html",
+    "date": "2026-11-09T13:02:54.452Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 썸네일 교체 및 홈 높이와 푸터 조정",
+    "summary": "기존 공유 카드를 실제 화면이나 출처가 있는 관련 이미지로 바꾸고 홈 높이와 푸터를 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109125620619-v1.0.0.html",
+    "date": "2026-11-09T12:56:20.619Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109125009623-v1.0.3.html",
+    "date": "2026-11-09T12:50:09.623Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 시점 설명을 설정 아래로 이동",
+    "summary": "Inspector에 설정 카드를 먼저 표시하고 기존 설명 두 문단을 아래에 배치했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109125008013-v1.0.0.html",
+    "date": "2026-11-09T12:50:08.013Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 개발일지 통합 및 한 줄 게시판 복원",
+    "summary": "홈 섹션을 구별해 세로로 배치하고 카테고리 게시판은 한 줄에 글 하나씩 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109124822233-v1.0.0.html",
+    "date": "2026-11-09T12:48:22.233Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109124616733-v1.0.2.html",
+    "date": "2026-11-09T12:46:16.733Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 시점 이름과 자유 회전 설정",
+    "summary": "아이소매트릭 시점 활성화 중 Transform을 잠그고 자유 시점에서만 회전 값을 편집하도록 변경했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109124615405-v1.0.0.html",
+    "date": "2026-11-09T12:46:15.405Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 제목 크기와 카테고리 목록 개편",
+    "summary": "제목 크기를 줄이고 홈과 카테고리 목록에 썸네일을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109124328748-v1.0.0.html",
+    "date": "2026-11-09T12:43:28.748Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109123207322-v1.0.1.html",
+    "date": "2026-11-09T12:32:07.322Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 카메라 자유 이동 및 시장 픽셀 효과 복원",
+    "summary": "추적 대상 없는 카메라의 Transform 이동을 허용하고 시장 예제의 픽셀화와 윤곽선을 복원했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109123146042-v1.0.0.html",
+    "date": "2026-11-09T12:31:46.042Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Markdown 폴더로 블로그 카테고리 결정",
     "summary": "Markdown 파일이 들어 있는 폴더에 따라 목록과 본문의 카테고리를 정합니다.",
     "project": "github-blog",

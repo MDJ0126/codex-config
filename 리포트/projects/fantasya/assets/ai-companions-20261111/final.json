@@ -1,0 +1,68 @@
+{
+    "capturedAt": "2026-11-11T18:12:52.8044640+09:00",
+    "agents": [
+        {
+            "name": "AI Companion 1",
+            "model": "qwen2.5:0.5b",
+            "action": "retreat",
+            "status": "Applied",
+            "decision": "{\"action\":\"retreat\",\"targetId\":0,\"seconds\":3.0}",
+            "health": 100,
+            "position": {
+                "x": -2.6999998092651369,
+                "y": 0.07999978214502335,
+                "z": -2.0
+            },
+            "success": 6,
+            "errors": 0,
+            "rejected": 2,
+            "requestMs": 181.1586000000034,
+            "meanMs": 233.52646666666744,
+            "queueMs": 0.5043999999969628,
+            "applyMs": 181.72690000000103,
+            "reflexMs": -1.0
+        },
+        {
+            "name": "AI Companion 3",
+            "model": "qwen2.5:0.5b",
+            "action": "guard",
+            "status": "Applied",
+            "decision": "{\"action\":\"guard\",\"targetId\":0,\"seconds\":3.0}",
+            "health": 100,
+            "position": {
+                "x": 0.8999999761581421,
+                "y": 0.07999978214502335,
+                "z": -2.0
+            },
+            "success": 8,
+            "errors": 0,
+            "rejected": 0,
+            "requestMs": 173.76509999999713,
+            "meanMs": 200.8197124999982,
+            "queueMs": 0.45250000000152115,
+            "applyMs": 174.2800000000031,
+            "reflexMs": -1.0
+        },
+        {
+            "name": "AI Companion 2",
+            "model": "qwen2.5:0.5b",
+            "action": "retreat",
+            "status": "Applied",
+            "decision": "{\"action\":\"retreat\",\"targetId\":0,\"seconds\":3.0}",
+            "health": 100,
+            "position": {
+                "x": -0.8999999761581421,
+                "y": 0.07999978214502335,
+                "z": -2.0
+            },
+            "success": 7,
+            "errors": 0,
+            "rejected": 1,
+            "requestMs": 174.12769999999967,
+            "meanMs": 190.24002857142873,
+            "queueMs": 0.5096000000008871,
+            "applyMs": 174.7075000000038,
+            "reflexMs": -1.0
+        }
+    ]
+}

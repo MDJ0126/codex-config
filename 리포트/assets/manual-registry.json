@@ -1,5 +1,4724 @@
 [
   {
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111091836492-v1.0.0.html",
+    "postPath": "projects/fantasya/posts/2026-11-11-manual-20261111091836492-v1.0.0.md",
+    "date": "2026-11-11T09:18:36.492Z",
+    "version": "v1.0.0",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-ai-companions-20261111",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "Fantasya AI 동료 컨트롤러 구성",
+      "summary": "공통 모터, 긴급 대응, 다중 동료, 지연 HUD와 로컬 모델을 순서대로 구성합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "공개 보고서 배포 확인 진행 중. 원격 모델·32명 부하·긴급 후퇴 자연 발생은 미확인.",
+      "outcome": "동료 3명과 로컬 모델 실제 실행, 지연 HUD와 소스·문서 확인을 완료했으며 공개 기록 확인 단계입니다.",
+      "proposedTime": "35~50분, 2026-11-11 17:37 KST 시작",
+      "actualTime": "17:37 KST 시작, 18:19 KST 기준 구현·설치·실제 실행 완료, 공개 기록 확인 중",
+      "xerjEvidence": "사용자 전역 지침에 따라 XERJ 미사용, rg 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-ai-companions-20261111",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "동료별 AI 컨트롤러와 로컬·원격 모델 연결 및 실측 지연 표시",
+      "completionCriteria": "구현·씬 저장·문서·실제 실행 근거와 미확인 범위 기록",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "동료 제어와 모델 연결",
+          "action": "기존 플레이어 모터를 공유하고 모델 응답을 제한·검증",
+          "expected": "개별 컨트롤러와 동시 호출 제한",
+          "qa": "Unity 컴파일 및 실제 동료 행동 관찰",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "최종 소스 컴파일과 실제 로컬 모델 요청·적용 확인"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "다중 동료와 지연 HUD",
+          "action": "Playground에 3명 생성과 편집 가능한 UI 저장",
+          "expected": "동료별 요청·대기·적용·긴급 명령 시간 표시",
+          "qa": "씬 저장·재열기와 카메라 출력 확인",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "씬 저장·재열기, 동료 3명과 오른쪽 지연 HUD 실제 카메라 출력 확인"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "로컬 모델 설치와 실측",
+          "action": "Ollama 설치와 소형 모델 실제 요청",
+          "expected": "실제 로컬 모델 응답과 적용 시간 확보",
+          "qa": "실제 Unity 모델 요청 결과와 메트릭 저장",
+          "dependsOn": [
+            "T01",
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Ollama 0.40.16과 Qwen2.5 0.5B 설치, 최종 24회 중 21회 적용·3회 폐기·오류0, 평균190.2~233.5ms"
+        },
+        {
+          "id": "T04",
+          "order": 4,
+          "title": "문서와 공개 기록",
+          "action": "README·Dosc·Tracefolio 보고서 작성",
+          "expected": "연결·확장·측정 의미와 제한 안내",
+          "qa": "링크·첨부·공개 본문 확인",
+          "dependsOn": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "README·Dosc·결과 JSON 생성 완료, 공개 배포 확인 중"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-11T18:12:52+09:00",
+          "summary": "최종 Unity 로컬 모델 실행과 소스 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "최종 소스 컴파일과 실제 로컬 모델 요청·적용 확인",
+              "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "씬 저장·재열기, 동료 3명과 오른쪽 지연 HUD 실제 카메라 출력 확인",
+              "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "Ollama 0.40.16과 Qwen2.5 0.5B 설치, 최종 24회 중 21회 적용·3회 폐기·오류0, 평균190.2~233.5ms",
+              "evidence": "Dosc/reference/agents/final.json, final.png, source-hashes.json 및 Unity 실행 로그",
+              "dependencies": {
+                "T01": 1,
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110143625933-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110143625933-v1.0.0.md",
+    "date": "2026-11-10T14:36:25.933Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comment-select-ip-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "관리자 댓글 선택과 전체 IP 표시",
+      "summary": "현재 페이지 선택·삭제 및 관리자 전용 전체 IP를 추가합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 관리자 로그인 후 실제 IP 목록과 일괄 삭제는 미확인.",
+      "outcome": "운영에서 새 댓글의 IP 저장과 공개 응답 비노출을 확인했습니다.",
+      "proposedTime": "6~10분",
+      "actualTime": "2026-11-10 23:31:15 시작, 23:35:36 KST 기능 배포·확인 완료. 4분 21초.",
+      "xerjEvidence": "지정 검색 도구 미사용.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comment-select-ip-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "관리자가 댓글을 선택해 삭제하고 새 댓글의 전체 IP를 볼 수 있게 한다.",
+      "completionCriteria": "로컬 브라우저에서 선택·삭제·전체 IP를 확인하고, 운영에서 D1 저장 및 공개 응답 비노출을 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "댓글 선택과 일괄 삭제",
+          "action": "댓글 행과 목록 상단에 체크박스를 배치하고 인증된 일괄 삭제를 연결한다.",
+          "expected": "현재 페이지의 개별·전체 선택 및 확인 후 삭제가 동작한다.",
+          "qa": "로컬 관리자 브라우저에서 3개를 선택해 삭제하고 목록 갱신을 확인한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "3개 선택·삭제 및 모바일 배치 확인."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "전체 IP 저장과 관리자 표시",
+          "action": "D1에 선택적인 IP 열을 추가하고 공개 응답에서 제외한다.",
+          "expected": "신규 댓글의 IPv4·IPv6를 관리자가 확인하며 기존 댓글은 미기록으로 보인다.",
+          "qa": "로컬 예시 IP와 기존 행을 확인하고, 운영에서는 저장 여부와 공개 비노출만 확인한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "D1 저장과 공개 비노출 확인. 검증 댓글 제거."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T23:35:36+09:00",
+          "summary": "관리자 로컬 브라우저 및 운영 D1·공개 API 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "부분·전체 선택, 확인 후 3개 삭제 및 모바일 배치 확인.",
+              "evidence": "Chromium에서 체크박스와 목록 갱신, SQLite에서 삭제 확인.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "예시 IPv4·IPv6 및 미기록 표시. 운영 D1 저장 여부와 공개 GET·POST 응답 비노출 확인.",
+              "evidence": "운영 임시 댓글의 D1 값 존재 여부만 확인하고 댓글을 삭제했습니다.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110130056710-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110130056710-v1.0.0.md",
+    "date": "2026-11-10T13:00:56.710Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comment-list-tone-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "관리자 댓글 목록의 티스토리풍 스타일 적용",
+      "summary": "작성자 강조와 옅은 행 구분선을 기존 관리자 탭에 적용합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 관리자 로그인 화면은 미확인.",
+      "outcome": "밝은 테마, 어두운 테마, 모바일을 확인하고 운영 Worker에 배포했습니다.",
+      "proposedTime": "4~7분",
+      "actualTime": "2026-11-10 21:57:55 시작, 22:00:17 KST 기능 배포·확인 완료. 2분 22초.",
+      "xerjEvidence": "지정 검색 도구 미사용.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comment-list-tone-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "기존 댓글 행을 유지하면서 첨부 참고 화면의 색과 구분선을 적용한다.",
+      "completionCriteria": "로컬 대시보드에서 밝은·어두운·모바일 스타일을 확인하고 운영 Worker에서 최종 CSS가 응답한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "댓글 목록 시각 스타일 개선",
+          "action": "목록 CSS에 작성자 강조색, 중립적인 배경과 구분선, 작은 원글 링크를 적용한다.",
+          "expected": "기존 정보 순서가 유지되고 각 테마에서 계층이 명확하다.",
+          "qa": "Chromium 밝은·어두운 테마와 390px 화면 및 운영 CSS를 확인한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "세 가지 화면과 운영 응답 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T22:00:17+09:00",
+          "summary": "렌더링과 운영 스타일 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 테마의 작성자 색과 배경 표시, 모바일 한 줄 메뉴와 가로 넘침 없음. 운영에서 최종 CSS 응답 확인.",
+              "evidence": "로컬 Chromium 화면 및 Worker 141f098f 운영 응답.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110124759037-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110124759037-v1.0.0.md",
+    "date": "2026-11-10T12:47:59.037Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comment-rows-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "관리자 댓글 목록의 행 레이아웃과 원글 제목",
+      "summary": "댓글 행에 작성자, 내용, 클릭 가능한 원글 제목을 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 Google 세션으로 로그인한 실제 댓글 목록은 미확인.",
+      "outcome": "관리자 대시보드에 행 레이아웃을 배포하고 공개 제목과 이동 동작을 확인했습니다.",
+      "proposedTime": "6~10분",
+      "actualTime": "2026-11-10 21:44:50 시작, 21:47:15 KST 기능 배포·검증 완료. 2분 25초.",
+      "xerjEvidence": "지정 검색 도구 미사용.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comment-rows-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "댓글을 행으로 구성하고 댓글 아래 실제 게시물 제목을 링크로 표시한다.",
+      "completionCriteria": "로컬 로그인 브라우저에서 공개 색인의 제목 표시 및 공개 원글 이동, 운영 관리자 자산과 인증 응답을 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "댓글 행과 게시물 제목 링크 구성",
+          "action": "공개 검색 색인으로 제목을 연결하고 기존 탭 안의 댓글을 행으로 배치한다.",
+          "expected": "제목을 누르면 해당 게시물 댓글 위치로 이동한다.",
+          "qa": "로그인 상태의 로컬 브라우저에서 제목과 이동을 확인하고 운영 배포와 접근 제어를 확인한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "실제 글 제목, 링크 이동, 삭제 및 모바일 가로 넘침 없음을 확인. 운영 Worker 배포 완료."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T21:47:15+09:00",
+          "summary": "로컬 로그인 브라우저와 운영 응답 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "실제 게시물 제목을 눌러 공개 댓글 위치로 이동했습니다. 삭제와 모바일 레이아웃을 확인했습니다. 운영 관리자 API 비로그인 401.",
+              "evidence": "로컬 Chromium 실행 및 Worker 0e21d0d3 운영 응답.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110122704048-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110122704048-v1.0.0.md",
+    "date": "2026-11-10T12:27:04.048Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comment-width-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "댓글 폼 가로 폭 복원과 세로 크기 축소",
+      "summary": "본문 폭을 사용하고 폼의 높이와 세로 간격만 줄입니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "레이아웃 변경 사항 없음.",
+      "outcome": "공개 페이지의 데스크톱과 모바일에서 폭·높이를 실측했습니다.",
+      "proposedTime": "3~6분",
+      "actualTime": "약 2분 1초. 2026-11-10 21:24:20 시작, 21:26:21 KST 운영 검증 완료.",
+      "xerjEvidence": "지정 검색 도구 미사용.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comment-width-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "댓글이 본문 전체 폭을 사용하며 세로로 더 작게 표시된다.",
+      "completionCriteria": "공개 페이지에서 본문과 가로 위치 및 폭이 일치하고, 데스크톱 및 모바일에서 폼 높이가 변경 전보다 줄어든다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "본문 폭 복원 및 세로 간격 축소",
+          "action": "720px 최대 폭을 제거하고 세로 여백과 입력칸 줄 높이를 줄인다.",
+          "expected": "두 화면 폭에서 본문과 댓글이 정렬되고 폼 높이가 줄어든다.",
+          "qa": "공개 Chromium에서 같은 게시글의 DOM 치수와 전후 스크린샷을 비교한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "1280px 및 390px 화면에서 본문과 댓글 폭·위치 일치, 폼 높이 감소를 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T21:26:21+09:00",
+          "summary": "공개 배포 전후 실제 화면 측정.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "데스크톱 댓글 폭 720→966px로 본문 966px와 일치. 폼 높이 234→197px. 모바일 폭 326px 일치, 폼 높이 363→317px. 가로 넘침 없음.",
+              "evidence": "공개 Chromium DOM 치수와 변경 전후 PNG.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110121959645-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110121959645-v1.0.0.md",
+    "date": "2026-11-10T12:19:59.645Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comments-admin-tab-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "댓글 관리를 기존 관리자 탭에 통합",
+      "summary": "댓글 관리의 별도 페이지를 대시보드 중앙 패널로 이동합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 Google 로그인 세션에서 댓글 삭제 직접 검증은 미실행.",
+      "outcome": "같은 주소에서 목록과 삭제가 동작하는 탭을 운영 Worker에 배포했습니다.",
+      "proposedTime": "5~9분",
+      "actualTime": "기능 배포와 확인 3분 8초. 2026-11-10 21:15:43~21:18:51 KST.",
+      "xerjEvidence": "지정 검색 도구 미사용.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comments-admin-tab-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "댓글 관리가 기존 관리자 대시보드에서 탭으로 열리고, 동일한 디자인으로 목록·삭제·원글 이동을 제공한다.",
+      "completionCriteria": "인증된 로컬 브라우저에서 주소 유지, 댓글 삭제 및 통계 탭 복귀를 확인하고 운영 Worker의 패널 및 인증 경계를 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "대시보드에 댓글 탭 통합",
+          "action": "기존 대시보드 메뉴와 디자인 요소를 재사용하고 인증된 JSON API로 목록과 삭제를 연결한다.",
+          "expected": "주소와 헤더가 유지되고 댓글 탭만 바뀐다. 삭제하면 현재 목록이 갱신된다.",
+          "qa": "로컬 브라우저의 탭·삭제·원글 링크와 운영 Worker의 공개 라우팅을 확인한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "로컬 화면·기능 확인과 운영 Worker 배포 및 인증 응답 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T21:18:51+09:00",
+          "summary": "로컬 로그인 상태의 브라우저와 운영 주소를 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "로컬에서 주소 유지, 목록 표시, 원글 링크, 댓글 삭제, 통계 복귀 확인. 운영 별도 주소 303 및 미로그인 API 401.",
+              "evidence": "로컬 Chromium 캡처 및 Worker 배포 cf2ee719, 실제 HTTP 응답.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110115740772-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110115740772-v1.0.0.md",
+    "date": "2026-11-10T11:57:40.772Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "comments-moderation-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "댓글 UI 축소와 관리자 댓글 관리 추가",
+      "summary": "4자 삭제 비밀번호와 관리자 목록·삭제·원글 링크를 운영에 적용합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 Google 로그인 세션에서 관리자 목록·삭제 직접 검증은 미실행.",
+      "outcome": "Cloudflare Pages와 관리자 Worker에 각각 배포하고 가능한 운영 및 로컬 검증을 마쳤습니다.",
+      "proposedTime": "8~15분",
+      "actualTime": "운영 반영과 기능 확인 5분 31초, 2026-11-10 20:51:05~20:56:36 KST.",
+      "xerjEvidence": "지정 검색 도구를 사용하지 않았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "comments-moderation-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "게시글 댓글 폼을 줄이고 댓글 비밀번호를 최소 4자로 허용하며 관리자 페이지에 댓글 목록·삭제·원글 링크를 제공한다.",
+      "completionCriteria": "운영 글에서 4자 비밀번호 등록·삭제를 확인하고, 관리 화면에서 인증 후 목록과 원글 이동 및 비밀번호 없는 삭제를 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 댓글 UI 및 비밀번호 변경",
+          "action": "레이아웃과 입력 높이를 줄이고 폼과 서버 최소 길이를 함께 변경합니다.",
+          "expected": "4자 비밀번호로 등록과 삭제가 됩니다.",
+          "qa": "운영 글에서 실제 브라우저로 등록, 조회, 삭제를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "운영 Pages 배포 및 4자 등록·삭제 확인."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "관리자 댓글 목록과 삭제",
+          "action": "기존 세션 인증 뒤 D1 목록과 삭제를 제공하고 원글 링크를 연결합니다.",
+          "expected": "로그인한 관리자만 목록을 조회하고 비밀번호 없이 삭제할 수 있습니다.",
+          "qa": "격리된 관리자 세션으로 목록·원글·삭제를 확인하고 운영에서 비로그인 요청이 차단되는지 검사합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "운영 Worker 배포. 로그인 흐름은 공개 응답, 인증된 목록·삭제는 로컬 브라우저에서 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T20:56:36+09:00",
+          "summary": "블로그 운영과 관리자 경계·로그인 상태를 분리해 확인.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 페이지에서 4자 등록과 삭제, 닉네임 복원 확인.",
+              "evidence": "Actions 42811380954, 공개 Chromium 캡처와 API에서 검증용 댓글 제거 확인.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "로컬 인증된 브라우저에서 원글과 무암호 삭제. 운영 GET 비로그인 303 및 POST 비로그인 401.",
+              "evidence": "관리 Worker 배포 391ab958, 로컬 Chromium 캡처와 운영 HTTP 응답.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110113646253-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-10-manual-20261110113646253-v1.0.0.md",
+    "date": "2026-11-10T11:36:46.253Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "global-instructions-condense-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "전역 지침 압축 작업 메뉴얼",
+      "summary": "설치본의 공통 규칙과 작업별 절차를 분리하고 동기화·공개 배포를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "2~4분, 공개 배포 대기 별도",
+      "actualTime": "20:34:57 KST 작업 시작",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "global-instructions-condense-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "반복 로딩되는 전역 지침을 압축하고 기존 조건과 예외를 유지합니다.",
+      "completionCriteria": "전역 파일 크기 감소, 세부 지침 보존, 설치본과 저장소의 해시 일치 및 공개 배포 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "지침 압축과 동기화",
+          "action": "설치본을 기준으로 공통 요약과 작업별 절차를 분리한 뒤 해당 파일만 커밋하고 배포한다.",
+          "expected": "전역 파일 크기 감소, 세부 지침 보존, 설치본과 저장소의 해시 일치 및 공개 배포 확인",
+          "qa": "전후 바이트, 상세 절차의 보존, 설치본 해시, 공개 본문과 링크를 대조한다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-guest-comments-d1-20261110-20261110113156732-v1.0.1.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-guest-comments-d1-20261110-20261110113156732-v1.0.1.md",
+    "date": "2026-11-10T11:31:56.732Z",
+    "version": "v1.0.1",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "guest-comments-d1-20261110",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "블로그 게시글에 비회원 댓글 추가",
+      "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "운영 댓글 기능의 남은 작업 없음.",
+      "outcome": "공개 블로그에서 댓글 등록, 닉네임 복원, 비밀번호 삭제를 확인했습니다.",
+      "proposedTime": "8~15분",
+      "actualTime": "운영 배포 회차 3분 2초. 20:27:59~20:31:01 KST.",
+      "xerjEvidence": "별도 검색 도구를 사용하지 않았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "guest-comments-d1-20261110",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "방문자가 로그인 없이 닉네임과 삭제 비밀번호로 게시글 댓글을 등록하고 지울 수 있도록 합니다.",
+      "completionCriteria": "실제 블로그에서 댓글 작성·조회·비밀번호 삭제·닉네임 재입력을 확인하고 전후 화면을 기록합니다.",
+      "previousManual": "projects/github-blog/reports/2026-11-10-manual-20261110110345138-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "댓글 저장과 API 구현",
+          "action": "D1 스키마와 Pages API를 만들고 마이그레이션을 적용합니다.",
+          "expected": "게시글별로 댓글을 조회하며 올바른 비밀번호로만 삭제됩니다.",
+          "qa": "로컬 Pages에서 등록, 조회, 잘못된 비밀번호 거부, 삭제를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "로컬 Pages/D1에서 조회·등록·오류 비밀번호 거부·삭제를 실행했습니다. 운영 D1에는 마이그레이션을 적용했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "댓글 화면과 닉네임 기억",
+          "action": "글 하단에 반응형 댓글 영역과 삭제 대화상자를 붙입니다.",
+          "expected": "등록 후 새로고침해도 닉네임이 남고 모바일에서 입력 항목이 세로로 배치됩니다.",
+          "qa": "실제 브라우저에서 등록·재로딩·삭제 흐름을 확인하고 전후 화면을 촬영합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Chromium 데스크톱과 모바일 너비에서 폼·댓글 목록·삭제 화면을 확인하고 닉네임 복원을 검증했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "운영 배포와 확인",
+          "action": "최신 main에 댓글 변경만 적용해 Pages에 배포합니다.",
+          "expected": "공개 게시글의 댓글 API가 D1에 연결되고 실제 댓글을 등록·삭제할 수 있습니다.",
+          "qa": "CI 배포 결과와 공개 페이지·API를 확인하고 검증 데이터를 정리합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "PR #1 병합과 검사 수정 커밋 8450779 배포 완료. 공개 API 200 및 실제 브라우저에서 등록, 조회, 삭제를 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T20:02:16+09:00",
+          "summary": "로컬 Pages/D1과 Chromium 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "조회 200, 등록 201, 잘못된 비밀번호 삭제 403, 올바른 비밀번호 삭제 200.",
+              "evidence": "Wrangler 로컬 HTTP 로그와 브라우저 DOM에서 결과를 대조했습니다.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새로고침 뒤 저장된 닉네임과 등록한 댓글을 확인했습니다. 390px 너비에서 폼과 삭제 대화상자를 확인했습니다.",
+              "evidence": "결과 보고서의 로컬 Chromium 캡처와 실제 브라우저 실행 결과.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T20:28:36+09:00",
+          "summary": "첫 운영 배포 검사가 댓글 스크립트를 거부했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "verify.mjs 허용 목록에서 댓글 스크립트가 빠져 배포가 건너뛰어졌습니다.",
+              "evidence": "GitHub Actions 42807716050의 verify.mjs 실패 로그.",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "final",
+          "at": "2026-11-10T20:31:01+09:00",
+          "summary": "검사 수정 후 공개 Pages/D1과 브라우저에서 최종 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 API 조회 성공, 등록과 삭제 성공, 틀린 비밀번호 삭제 거부.",
+              "evidence": "공개 댓글 API 200 및 Chromium에서 실제 등록·삭제를 확인했습니다.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새로고침 후 닉네임 복원과 모바일 폼 표시를 확인했습니다.",
+              "evidence": "공개 글의 Chromium 캡처.",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "빌드, 검사, Pages 배포 성공. 검증용 댓글 제거 확인.",
+              "evidence": "GitHub Actions 42807927834 및 공개 API 확인.",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/fantasya/reports/2026-11-10-manual-20261110111030921-v1.0.0.html",
+    "postPath": "projects/fantasya/posts/2026-11-10-manual-20261110111030921-v1.0.0.md",
+    "date": "2026-11-10T11:10:30.921Z",
+    "version": "v1.0.0",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-report-backfill-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "Fantasya 누락 보고서 정리와 공개 확인",
+      "summary": "11월 9~10일의 누락된 작업과 버그를 주제별 보고서로 정리하고 중앙 아카이브의 공개 주소를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "개별 보고서 생성, 중앙 아카이브 빌드·공개 확인.",
+      "outcome": "현재 작업 트리와 기존 보고서를 대조해 누락 범위를 분류했습니다.",
+      "proposedTime": "초안 5~10분, 공개 배포 대기는 별도",
+      "actualTime": "2026-11-10 20:07:54 KST 시작",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-report-backfill-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "기존 보고서 이후의 변경을 중앙 아카이브에 추가하고 검증 상태를 구분합니다.",
+      "completionCriteria": "개별 보고서와 목록의 공개 페이지가 인증 없이 열리고 본문을 확인할 수 있습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "누락 내역 대조와 보고서 작성",
+          "action": "대화, 현재 프로젝트, 기존 중앙 아카이브를 대조하고 결과·버그 JSON을 생성합니다.",
+          "expected": "주제별 원본과 본문이 등록되고 미확인 사항이 표시됩니다.",
+          "qa": "등록 제목, 내용, 소스 확인 범위와 남은 검증을 대조합니다.",
+          "dependsOn": [],
+          "status": "doing",
+          "revision": 1,
+          "result": "보고서 초안 다섯 건 작성 및 이전 보고서 범위 대조."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "중앙 아카이브 빌드와 공개 확인",
+          "action": "격리된 최신 main에서 빌드하고 이번 작업 파일만 커밋·푸시한 뒤 Pages 본문을 확인합니다.",
+          "expected": "개별 공개 URL과 목록이 열립니다.",
+          "qa": "공개 URL의 제목, 본문, 목록 링크를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110110345138-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110110345138-v1.0.0.md",
+    "date": "2026-11-10T11:03:45.138Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "guest-comments-d1-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "블로그 게시글에 비회원 댓글 추가",
+      "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "사용자 승인 후 PR 병합, Pages 배포, 공개 댓글 등록·삭제 확인.",
+      "outcome": "댓글 구현과 로컬 동작 확인을 마쳤고 운영 D1과 시크릿을 구성했습니다. 운영 배포는 사용자 승인 대기입니다.",
+      "proposedTime": "8~15분",
+      "actualTime": "2026-11-10 19:50:36 KST 시작, 20:02:57 KST까지 구현·로컬 검증·PR 준비 약 12분 21초. 운영 검증은 대기.",
+      "xerjEvidence": "별도 검색 도구를 사용하지 않았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "guest-comments-d1-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "방문자가 로그인 없이 닉네임과 삭제 비밀번호로 게시글 댓글을 등록하고 지울 수 있도록 합니다.",
+      "completionCriteria": "실제 블로그에서 댓글 작성·조회·비밀번호 삭제·닉네임 재입력을 확인하고 전후 화면을 기록합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "댓글 저장과 API 구현",
+          "action": "D1 스키마와 Pages API를 만들고 마이그레이션을 적용합니다.",
+          "expected": "게시글별로 댓글을 조회하며 올바른 비밀번호로만 삭제됩니다.",
+          "qa": "로컬 Pages에서 등록, 조회, 잘못된 비밀번호 거부, 삭제를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "로컬 Pages/D1에서 조회·등록·오류 비밀번호 거부·삭제를 실행했습니다. 운영 D1에는 마이그레이션을 적용했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "댓글 화면과 닉네임 기억",
+          "action": "글 하단에 반응형 댓글 영역과 삭제 대화상자를 붙입니다.",
+          "expected": "등록 후 새로고침해도 닉네임이 남고 모바일에서 입력 항목이 세로로 배치됩니다.",
+          "qa": "실제 브라우저에서 등록·재로딩·삭제 흐름을 확인하고 전후 화면을 촬영합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Chromium 데스크톱과 모바일 너비에서 폼·댓글 목록·삭제 화면을 확인하고 닉네임 복원을 검증했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "운영 배포와 확인",
+          "action": "최신 main에 댓글 변경만 적용해 Pages에 배포합니다.",
+          "expected": "공개 게시글의 댓글 API가 D1에 연결되고 실제 댓글을 등록·삭제할 수 있습니다.",
+          "qa": "CI 배포 결과와 공개 페이지·API를 확인하고 검증 데이터를 정리합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "댓글 전용 브랜치 fbc5a77 및 GitHub PR #1. 기본 브랜치 직접 푸시는 자동 승인 검토에서 운영 영향에 대한 명시적 승인이 없다는 이유로 거부됐습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T20:02:16+09:00",
+          "summary": "로컬 Pages/D1과 Chromium 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "조회 200, 등록 201, 잘못된 비밀번호 삭제 403, 올바른 비밀번호 삭제 200.",
+              "evidence": "Wrangler 로컬 HTTP 로그와 브라우저 DOM에서 결과를 대조했습니다.",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새로고침 뒤 저장된 닉네임과 등록한 댓글을 확인했습니다. 390px 너비에서 폼과 삭제 대화상자를 확인했습니다.",
+              "evidence": "결과 보고서의 로컬 Chromium 캡처와 실제 브라우저 실행 결과.",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-miro-og-20261110-20261110101343669-v1.0.1.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-miro-og-20261110-20261110101343669-v1.0.1.md",
+    "date": "2026-11-10T10:13:43.669Z",
+    "version": "v1.0.1",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "miro-og-20261110",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "OG 공유 카드와 검색 예시 검증",
+      "summary": "홈과 개발일지 한 편을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "보고서 배포 확인",
+      "outcome": "두 카드와 로컬 사이트 HTML을 확인했습니다.",
+      "proposedTime": "초기 30초, 이어서 1~2분",
+      "actualTime": "18:39:23 KST 시작",
+      "xerjEvidence": "미사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "miro-og-20261110",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "홈과 게시글 OG 이미지를 만들고 검색 노출 예시를 제공합니다.",
+      "completionCriteria": "편집 원본을 다시 열고 JPEG와 로컬 HTML을 대조합니다. 공개 보고서를 게시합니다.",
+      "previousManual": "projects/github-blog/reports/2026-11-10-manual-20261110094717055-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 메타데이터 확인",
+          "action": "공개 홈·글 HTML의 제목과 설명을 읽습니다.",
+          "expected": "검색 예시의 근거 확보",
+          "qa": "HTTP 응답 HTML에서 메타 태그를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 홈과 글의 제목·설명을 읽었습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "OG 카드 제작 및 연결",
+          "action": "Affinity에서 이미지와 원본을 만든 후 경로별 메타 태그를 생성합니다.",
+          "expected": "홈과 게시글 153개의 맞춤 OG가 라이트 테마로 출력되고 사이트 빌드와 연결됩니다.",
+          "qa": "원본 재열기, JPEG 시각 확인, 빌드 HTML과 JPEG 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "153개 게시글과 홈의 1200×630 이미지, 편집 원본 재열기, 빌드 연결을 확인했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "결과 보고서 공개",
+          "action": "중앙 아카이브에 결과를 등록합니다.",
+          "expected": "개별 보고서와 두 이미지 공개",
+          "qa": "HTTPS 본문과 이미지 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": "공개 배포 대기"
+        }
+      ],
+      "focusTasks": [
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "사용자 디자인 피드백에 따라 라이트 테마와 전체 글의 제목·썸네일·발행일로 제작 범위를 구체화했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T18:45:34+09:00",
+          "summary": "공개 소스 및 로컬 OG 출력 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 홈과 개발일지 HTML의 제목 및 설명 확인",
+              "evidence": "공개 HTTP HTML title 및 description",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "재열기에서 미저장 변경 없음, 대상 HTML 두 개와 JPEG 일치",
+              "evidence": "Affinity status 및 dist 메타 태그와 JPEG 바이트 대조",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T19:13:04+09:00",
+          "summary": "라이트 테마 OG 전체 빌드 확인",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "홈과 153개 글의 OG JPEG 연결 및 해상도 확인, 네이티브 원본 재열기",
+              "evidence": "node build.mjs 173개 경로, OG 154개 바이트 대조, Affinity status dirty:false",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110094717055-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110094717055-v1.0.0.md",
+    "date": "2026-11-10T09:47:17.055Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "miro-og-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "OG 공유 카드와 검색 예시 검증",
+      "summary": "홈과 개발일지 한 편을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "보고서 배포 확인",
+      "outcome": "두 카드와 로컬 사이트 HTML을 확인했습니다.",
+      "proposedTime": "초기 30초, 이어서 1~2분",
+      "actualTime": "18:39:23 KST 시작",
+      "xerjEvidence": "미사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "miro-og-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "홈과 게시글 OG 이미지를 만들고 검색 노출 예시를 제공합니다.",
+      "completionCriteria": "편집 원본을 다시 열고 JPEG와 로컬 HTML을 대조합니다. 공개 보고서를 게시합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공개 메타데이터 확인",
+          "action": "공개 홈·글 HTML의 제목과 설명을 읽습니다.",
+          "expected": "검색 예시의 근거 확보",
+          "qa": "HTTP 응답 HTML에서 메타 태그를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 홈과 글의 제목·설명을 읽었습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "OG 카드 제작 및 연결",
+          "action": "Affinity에서 이미지와 원본을 만든 후 경로별 메타 태그를 생성합니다.",
+          "expected": "홈과 글의 OG 참조가 JPEG로 연결",
+          "qa": "원본 재열기, JPEG 시각 확인, 빌드 HTML과 JPEG 대조",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "Affinity 원본과 JPEG, 로컬 HTML을 확인했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "결과 보고서 공개",
+          "action": "중앙 아카이브에 결과를 등록합니다.",
+          "expected": "개별 보고서와 두 이미지 공개",
+          "qa": "HTTPS 본문과 이미지 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": "공개 배포 대기"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T18:45:34+09:00",
+          "summary": "공개 소스 및 로컬 OG 출력 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 홈과 개발일지 HTML의 제목 및 설명 확인",
+              "evidence": "공개 HTTP HTML title 및 description",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "재열기에서 미저장 변경 없음, 대상 HTML 두 개와 JPEG 일치",
+              "evidence": "Affinity status 및 dist 메타 태그와 JPEG 바이트 대조",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110085648574-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-10-manual-20261110085648574-v1.0.0.md",
+    "date": "2026-11-10T08:56:48.574Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "historical-code-mermaid-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "과거 개발 기록의 코드·Mermaid 적용 메뉴얼",
+      "summary": "공개 게시글 목록 조사, 원문 근거 기반 보강, 브라우저 검사, 공개 확인을 순서대로 수행합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Pages 배포 및 공개 접근 확인.",
+      "outcome": "기준 게시글 1,462편에서 적용 대상 59편을 확인하고 모두 브라우저에서 검증했습니다.",
+      "proposedTime": "목록·렌더러 조사 약 2~4분. 마지막 적용 대상 확대 후 브라우저 검증·보고서 정리에 약 2~4분 추가 예상. Pages 배포 대기 별도.",
+      "actualTime": "17:46:18 KST 착수. 17:55:44 KST까지 약 9분 26초 동안 조사·구현·로컬 검증을 완료했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "historical-code-mermaid-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "기존 개발 기록에 코드 구문 강조와 필요한 Mermaid 도표를 반영합니다.",
+      "completionCriteria": "기준 아카이브 전체를 조사하고 해당 글에 근거와 원문을 보존해 적용한 뒤 브라우저 렌더링과 공개 URL을 검증합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "기존 아카이브와 코드 근거 조사",
+          "action": "게시글을 열거하고 코드 블록, 실행 흐름과 버전 고정 공개 소스 연결을 조사합니다.",
+          "expected": "전체 원문 수와 적용할 근거가 확인됩니다.",
+          "qa": "원문 내용과 인용한 공개 커밋 소스를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "기준 1,462편 및 정확한 공개 커밋 한 곳 대조."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "하이라이트와 Mermaid 적용 및 브라우저 검증",
+          "action": "원문 파일을 보존하며 기존 글 HTML에 코드를 강조하고 근거 있는 도표를 표시합니다.",
+          "expected": "갱신 글에서 실제 색상 토큰과 SVG 노드가 렌더링됩니다.",
+          "qa": "실제 브라우저에서 대상 전체를 열고 원문·링크·전후 화면을 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "변경 59편의 브라우저 대조와 링크·원문 검사 통과."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "공개 아카이브 배포",
+          "action": "변경 소스와 보고서 원본을 명시적으로 스테이징해 푸시하고 Pages 본문을 확인합니다.",
+          "expected": "개별 결과 보고서와 갱신된 실제 과거 글이 비로그인 상태에서 열립니다.",
+          "qa": "공개 URL의 본문, 시각화 자원, 캡처와 검증 자료를 확인합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:55:44+09:00",
+          "summary": "원문과 실제 브라우저 표시 비교",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "20개 프로젝트 1,462편 조사와 공개 코드 대조.",
+              "evidence": "기준 21583ae6 및 공개 소스 SHA 85eba531",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "갱신 글 59편의 실제 색상 토큰과 Mermaid 노드 확인.",
+              "evidence": "coverage.json, Chrome 캡처 및 verify.mjs·verify-editorial.mjs 출력",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-devlog-formatting-20261110-20261110085422390-v1.0.1.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-devlog-formatting-20261110-20261110085422390-v1.0.1.md",
+    "date": "2026-11-10T08:54:22.390Z",
+    "version": "v1.0.1",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "devlog-formatting-20261110",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+      "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "블로그 작업에서 확인된 남은 사항이 없습니다.",
+      "outcome": "블로그 main 반영과 공개 본문 검증을 완료했습니다.",
+      "proposedTime": "1~2분. 확인 시작 2026-11-10 17:42:29 KST.",
+      "actualTime": "11분 50초. 블로그 공개 본문 검증을 2026-11-10 17:54:19 KST에 기록했습니다.",
+      "xerjEvidence": "Git, rg 및 블로그 빌드 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "devlog-formatting-20261110",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "테이블별 로딩 분기와 초기 전송 예산의 검사 조건을 간결하게 설명합니다.",
+      "completionCriteria": "두 게시물의 공개 본문에 각각 Mermaid 도식과 구문 강조 코드가 표시되고 기존 이미지와 작업 근거 링크가 유지됩니다.",
+      "previousManual": "projects/github-blog/reports/2026-11-10-manual-20261110084635167-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원고와 블로그 렌더러 갱신",
+          "action": "DDT 글에 로딩 분기 도식을 넣고 수원 웹 글에 예산 검사 예시를 추가합니다. 기존 코드 강조를 재사용합니다.",
+          "expected": "두 글에 각각 한 블록이 추가됩니다.",
+          "qa": "Git 원본과 생성 HTML을 대조하고 구문 강조 토큰 및 Mermaid 로더 연결을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "게시 및 화면 확인",
+          "action": "변경 파일만 푸시한 뒤 두 공개 글을 열어 렌더링을 확인합니다.",
+          "expected": "도식과 코드가 공개 글 본문에 정상 표시됩니다.",
+          "qa": "공개 HTML 및 실제 브라우저에서 두 블록을 확인하고 기존 첨부 링크를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T08:52:02.000Z",
+          "summary": "기존 배포 검사의 스크립트 목록 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "기존 검사는 Mermaid 모듈을 허용 목록에 포함하지 않았습니다.",
+              "evidence": "블로그 719afb8의 verify.mjs 스크립트 목록",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T08:54:19.094Z",
+          "summary": "로컬 빌드와 렌더링 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다.",
+              "evidence": "블로그 main 719afb8 및 node media.mjs / node build.mjs 실행",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-10T08:54:19.094Z",
+          "summary": "공개 두 게시물 표시 확인",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다.",
+              "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/ · https://miro-game.pages.dev/posts/story-suwon-web-budget/",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-10T08:54:19.094Z",
+          "summary": "공개 게시물과 기존 미디어·출처 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 글 두 편에 필요한 블록 하나씩을 추가했습니다. 154편 HTML이 생성됐고 로컬 Edge에서 도식과 구문 강조가 표시됐습니다.",
+              "evidence": "블로그 main 719afb8 및 node media.mjs / node build.mjs 실행",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 글에서 Mermaid SVG 1개와 JavaScript 키워드 강조 3개를 확인했습니다. 기존 이미지 10개와 근거 링크 3개를 열었습니다.",
+              "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/ · https://miro-game.pages.dev/posts/story-suwon-web-budget/",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084635167-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110084635167-v1.0.0.md",
+    "date": "2026-11-10T08:46:35.167Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "devlog-formatting-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+      "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "게시 및 화면 확인",
+      "outcome": "원고와 빌드 결과를 확인하며 공개 배포를 검증합니다.",
+      "proposedTime": "1~2분. 확인 시작 2026-11-10 17:42:29 KST.",
+      "actualTime": "작업 진행 중",
+      "xerjEvidence": "Git, rg 및 블로그 빌드 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "devlog-formatting-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "테이블별 로딩 분기와 초기 전송 예산의 검사 조건을 간결하게 설명합니다.",
+      "completionCriteria": "두 게시물의 공개 본문에 각각 Mermaid 도식과 구문 강조 코드가 표시되고 기존 이미지와 작업 근거 링크가 유지됩니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "원고와 블로그 렌더러 갱신",
+          "action": "DDT 글에 로딩 분기 도식을 넣고 수원 웹 글에 예산 검사 예시를 추가합니다. 기존 코드 강조를 재사용합니다.",
+          "expected": "두 글에 각각 한 블록이 추가됩니다.",
+          "qa": "Git 원본과 생성 HTML을 대조하고 구문 강조 토큰 및 Mermaid 로더 연결을 확인합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "게시 및 화면 확인",
+          "action": "변경 파일만 푸시한 뒤 두 공개 글을 열어 렌더링을 확인합니다.",
+          "expected": "도식과 코드가 공개 글 본문에 정상 표시됩니다.",
+          "qa": "공개 HTML 및 실제 브라우저에서 두 블록을 확인하고 기존 첨부 링크를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084312431-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110084312431-v1.0.0.md",
+    "date": "2026-11-10T08:43:12.431Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-team-brand-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "팀 블로그와 작성진 안내 표기 수정 작업 메뉴얼",
+      "summary": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "블로그 수정 및 공개 화면 확인 약 1분 28초. 2026-11-10 17:42:58 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-team-brand-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "상단의 팀 블로그 표기와 작성진 안내 명칭을 적용합니다.",
+      "completionCriteria": "공개 사이트에서 상단 문구와 안내 제목·푸터 링크가 바뀌고 모바일에 잘리지 않습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "상단과 작성진 안내 문구 수정",
+          "action": "공용 상단과 푸터, 안내 페이지 제목을 수정하고 공개 사이트에 반영합니다.",
+          "expected": "상단에 팀 블로그가 보이고 푸터 링크와 안내 제목은 작성진 안내입니다.",
+          "qa": "세 위치의 전후 문구, 390px 상단 표시, 푸터 링크 이동을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:42:58.1428693+09:00",
+          "summary": "공개 상단·안내·푸터 문구 및 링크 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T17:42:58.1428693+09:00",
+          "summary": "공개 상단·안내·푸터 문구 및 링크 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084214829-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110084214829-v1.0.0.md",
+    "date": "2026-11-10T08:42:14.829Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "blog-author-rename-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "AI 작성진 필명 적용 메뉴얼",
+      "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "전후 화면 캡처 미확보. 공개 안내와 대표 글의 새 필명은 17:41:47 KST에 확인했습니다.",
+      "outcome": "필명 수정 및 생성 HTML 확인",
+      "proposedTime": "30~60초",
+      "actualTime": "2026-11-10 17:38:26~17:39:56 KST, 로컬 구현·검증 약 1분 30초",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "blog-author-rename-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "AI 작성진 필명 세 개 변경",
+      "completionCriteria": "안내와 게시글에서 새 필명 표시 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공통 필명 설정 갱신",
+          "action": "build.mjs에서 필명 세 개를 변경하고 사이트 빌드",
+          "expected": "안내와 해당 분야 대표 게시글에 새 필명 표시",
+          "qa": "빌드 결과의 안내 및 분야별 작성자 대조",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110083450326-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-10-manual-20261110083450326-v1.0.0.md",
+    "date": "2026-11-10T08:34:50.326Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "code-report-highlighting-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "코드 수정 보고 지침 반영 및 배포 메뉴얼",
+      "summary": "전역 지침 수정, 설치본 대조, 아카이브 배포를 순서대로 수행합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "아카이브 빌드·공개 확인.",
+      "outcome": "지침 반영 및 설치본 해시 대조를 마쳤습니다.",
+      "proposedTime": "수정 및 동기화 확인 약 1~2분. 공개 배포 확인 별도.",
+      "actualTime": "로컬 반영 및 해시 확인 약 56초. 2026-11-10 17:34:13 KST.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "code-report-highlighting-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "active",
+      "goal": "구문 강조와 핵심 설명을 전역 보고 기준에 명시합니다.",
+      "completionCriteria": "지침과 설치본이 일치하고 개별 보고서의 공개 본문이 열립니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 지침 및 설치본 반영",
+          "action": "보고서 형식에 규칙 한 항목을 추가하고 설치본에 반영합니다.",
+          "expected": "코드 구문 강조와 필요한 변경 맥락이 한 항목에 포함됩니다.",
+          "qa": "Git diff 및 두 파일의 SHA-256을 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "지침 한 항목 추가 및 해시 일치."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "결과 보고서 공개",
+          "action": "분리 작업 트리에서 보고서를 빌드하고 이번 작업 파일만 커밋·푸시합니다.",
+          "expected": "인증 없이 개별 HTML 보고서 본문을 열 수 있습니다.",
+          "qa": "생성 HTML과 공개 URL의 본문을 확인합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "doing",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:34:13+09:00",
+          "summary": "지침과 설치본 비교",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "지침 한 항목 추가 및 설치본 일치.",
+              "evidence": "git diff 및 Get-FileHash SHA-256 일치",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082711817-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110082711817-v1.0.0.md",
+    "date": "2026-11-10T08:27:11.817Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-footer-flush-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "홈 푸터 위 실제 간격 제거 작업 메뉴얼",
+      "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "블로그 수정 및 공개 화면 확인 약 1분 40초. 2026-11-10 17:27:02 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-footer-flush-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "홈 마지막 콘텐츠와 푸터 사이의 빈 공간을 없앱니다.",
+      "completionCriteria": "1280px·390px 공개 홈에서 두 영역의 경계 간격이 0px입니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "홈 콘텐츠와 푸터 사이 실제 간격 제거",
+          "action": "경계 간격을 측정하고 원인인 하단 패딩과 상단 마진을 제거합니다.",
+          "expected": "두 공개 화면 폭에서 마지막 콘텐츠와 푸터가 맞닿습니다.",
+          "qa": "공개 브라우저에서 마지막 콘텐츠 하단과 푸터 상단 좌표 차이 및 전후 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:27:02.7863527+09:00",
+          "summary": "공개 홈에서 인접 영역의 경계 간격 측정",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "데스크톱 48px→0px, 모바일 36px→0px.",
+              "evidence": "https://miro-game.pages.dev/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T17:27:02.7863527+09:00",
+          "summary": "공개 홈에서 인접 영역의 경계 간격 측정",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "데스크톱 48px→0px, 모바일 36px→0px.",
+              "evidence": "https://miro-game.pages.dev/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082228835-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110082228835-v1.0.0.md",
+    "date": "2026-11-10T08:22:28.835Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-authors-guide-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "AI 작성진 안내 상세화 작업 메뉴얼",
+      "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+      "proposedTime": "4~6분",
+      "actualTime": "블로그 변경 및 공개 확인 약 2분 10초. 2026-11-10 17:22:21 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-authors-guide-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "작성진이 어떤 글을 맡고 어떻게 선정·작성·발행하는지 공개 안내합니다.",
+      "completionCriteria": "공개 안내의 세 섹션, 내 개발일지와 글 예시 링크 네 개, 모바일 표시를 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "작성진 안내 작성 및 공개 확인",
+          "action": "실제 게시판 분류와 배포 과정을 반영해 안내 페이지를 작성하고 필명을 공용화합니다.",
+          "expected": "역할·작성 기준·자동화 범위가 표시되며 글 예시 링크가 열립니다.",
+          "qa": "공개 페이지의 전후 화면, 링크 네 개, 모바일 너비를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:22:21.4185786+09:00",
+          "summary": "공개 안내와 링크 네 개 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 안내 세 섹션, 네 링크, 데스크톱·모바일 표시 확인",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T17:22:21.4185786+09:00",
+          "summary": "공개 안내와 링크 네 개 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 안내 세 섹션, 네 링크, 데스크톱·모바일 표시 확인",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110081533276-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110081533276-v1.0.0.md",
+    "date": "2026-11-10T08:15:33.276Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-footer-gap-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "푸터 상단 여백 조정 작업 메뉴얼",
+      "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+      "proposedTime": "2~4분",
+      "actualTime": "블로그 수정 및 공개 화면 확인 약 1분 21초. 2026-11-10 17:15:22 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-footer-gap-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "푸터 위의 빈 공간을 적당히 줄입니다.",
+      "completionCriteria": "공개 홈에서 데스크톱 24px와 모바일 12px의 푸터 상단 여백을 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "푸터 상단 여백 조정 및 확인",
+          "action": "공용 스타일의 푸터 상단 여백을 줄이고 공개 사이트에 반영합니다.",
+          "expected": "1280px에서 24px, 390px에서 12px 여백을 표시합니다.",
+          "qa": "같은 화면 크기에서 변경 전후 브라우저 계산값과 실제 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:15:22.7724215+09:00",
+          "summary": "공개 홈의 푸터 상단 여백 측정",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+              "evidence": "https://miro-game.pages.dev/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T17:15:22.7724215+09:00",
+          "summary": "공개 홈의 푸터 상단 여백 측정",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+              "evidence": "https://miro-game.pages.dev/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110080755180-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110080755180-v1.0.0.md",
+    "date": "2026-11-10T08:07:55.180Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-footer-menu-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "푸터 왼쪽 소개 삭제 작업 메뉴얼",
+      "summary": "표시된 문구를 삭제하고 오른쪽 메뉴를 공개 화면에서 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "왼쪽 문구가 삭제되고 오른쪽 안내 링크가 열립니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "블로그 수정과 공개 화면 확인 약 1분 52초. 2026-11-10 17:07:45 KST 확인. 중앙 보고서 공개는 별도로 확인했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-footer-menu-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "푸터에서 X 표시된 왼쪽 소개를 삭제합니다.",
+      "completionCriteria": "공개 푸터에 왼쪽 소개가 없고 오른쪽 메뉴 다섯 개와 작성진 안내 이동이 확인됩니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "푸터 소개 삭제 및 오른쪽 메뉴 확인",
+          "action": "공용 템플릿의 왼쪽 블록을 제거하고 메뉴를 오른쪽에 정렬합니다.",
+          "expected": "푸터에서 왼쪽 문구가 사라지고 오른쪽 메뉴가 표시됩니다.",
+          "qa": "공개 푸터의 전후 화면과 메뉴 링크 동작을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 화면과 안내 링크를 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T17:07:45.8932542+09:00",
+          "summary": "공개 푸터와 안내 링크 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "왼쪽 소개 삭제, 오른쪽 메뉴 다섯 개 및 작성진 안내 링크 정상 이동",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T17:07:45.8932542+09:00",
+          "summary": "공개 푸터와 안내 링크 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "왼쪽 소개 삭제, 오른쪽 메뉴 다섯 개 및 작성진 안내 링크 정상 이동",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110074640195-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110074640195-v1.0.0.md",
+    "date": "2026-11-10T07:46:40.195Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-post-byline-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "게시글 작성자와 태그 표시 작업 메뉴얼",
+      "summary": "게시판별 작성자와 글마다 태그 다섯 개를 반영하고 공개 화면을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "공개 글에 작성자와 다섯 개 태그를 표시하고 모바일 줄바꿈을 확인했습니다.",
+      "proposedTime": "5~8분",
+      "actualTime": "블로그 구현과 공개 화면 확인 약 4분 24초. 2026-11-10 16:45:46 KST 확인. 이후 중앙 보고서 배포를 별도로 확인했습니다.",
+      "xerjEvidence": "사용하지 않았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-post-byline-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "개발일지와 다른 게시글의 작성자 표기를 구분하고 각 글에 주제 태그 다섯 개를 표시합니다.",
+      "completionCriteria": "전체 원고에 태그 5개를 확보하고 공개 글에서 작성자 이름과 태그, 모바일 줄바꿈을 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "게시글 작성자와 태그 디자인",
+          "action": "게시판별 필명과 원고별 태그를 설정하고 공용 글 헤더에 배치합니다.",
+          "expected": "개발일지는 미로, 나머지는 지정 필명이 표시되고 글마다 서로 다른 태그 다섯 개가 보입니다.",
+          "qa": "빌드 결과의 상세 글을 대조하고 공개 대표 글의 전후 화면과 390px 줄바꿈을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "원고 154개에 태그를 지정하고 공개 대표 글 네 건과 모바일 두 건에서 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T16:45:46.2347176+09:00",
+          "summary": "게시글 작성자 및 다섯 태그 공개 표시 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "미로·루미·노바·픽셀 표기를 공개 글에서 확인하고 태그 5개와 모바일 폭을 확인했습니다.",
+              "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T16:45:46.2347176+09:00",
+          "summary": "게시글 작성자 및 다섯 태그 공개 표시 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "미로·루미·노바·픽셀 표기를 공개 글에서 확인하고 태그 5개와 모바일 폭을 확인했습니다.",
+              "evidence": "https://miro-game.pages.dev/posts/story-ddt-per-table-addressables/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110073033936-v1.0.0.html",
+    "postPath": "projects/github-blog/posts/2026-11-10-manual-20261110073033936-v1.0.0.md",
+    "date": "2026-11-10T07:30:33.936Z",
+    "version": "v1.0.0",
+    "project": "github-blog",
+    "kind": "manual",
+    "manualId": "github-blog-ai-footer-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "github-blog",
+      "kind": "manual",
+      "title": "팀 블로그 푸터와 AI 작성진 안내 작업 메뉴얼",
+      "summary": "공용 푸터 수정 후 공개 안내 페이지의 링크와 내용을 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없음",
+      "outcome": "공개 홈의 푸터를 바꾸고 안내 링크 이동을 확인했습니다.",
+      "proposedTime": "2~4분",
+      "actualTime": "블로그 반영 및 공개 브라우저 확인 약 3분 15초. 2026-11-10 16:29:11 KST 확인. 이후 중앙 보고서 공개 확인을 별도로 진행했습니다.",
+      "xerjEvidence": "사용하지 않았습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "github-blog-ai-footer-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "푸터를 팀 블로그로 표시하고 AI 자동 발행과 작성진을 안내합니다.",
+      "completionCriteria": "공개 홈 푸터에서 AI 안내 링크를 열면 AI 필명 3개와 자동 발행 안내를 볼 수 있습니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "공용 푸터 및 AI 안내 페이지 반영",
+          "action": "변경 전 공개 화면을 확보하고 공용 푸터와 안내 경로를 수정한 뒤 공개 배포합니다.",
+          "expected": "팀 블로그 문구와 AI 작성진 안내 링크가 보이며 링크로 본문을 엽니다.",
+          "qa": "공개 홈페이지의 푸터 문구와 링크를 확인하고 클릭하여 안내 제목과 필명 세 개를 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 푸터와 AI 작성진 안내 페이지를 확인하고 화면을 캡처했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T16:29:11+09:00",
+          "summary": "공개 브라우저에서 변경 문구, 링크 이동 및 필명 목록 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "팀 블로그 푸터에서 안내를 클릭해 제목과 작성진 목록 3개를 확인했습니다.",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "final",
+          "at": "2026-11-10T16:29:11+09:00",
+          "summary": "공개 브라우저에서 변경 문구, 링크 이동 및 필명 목록 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "팀 블로그 푸터에서 안내를 클릭해 제목과 작성진 목록 3개를 확인했습니다.",
+              "evidence": "https://miro-game.pages.dev/ai-authors/",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110071409855-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-10-manual-20261110071409855-v1.0.0.md",
+    "date": "2026-11-10T07:14:09.855Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "affinity-cli-first-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "Affinity 전용 CLI 우선 적용 메뉴얼",
+      "summary": "전역 지침에 Affinity CLI 선행과 GUI 전환 조건을 명시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "2026-11-10 16:12:59 KST에 작업을 시작했습니다.",
+      "proposedTime": "수정·동기화 1~2분, 배포 확인 별도 1~3분",
+      "actualTime": "실행 전",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "affinity-cli-first-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "Affinity 작업을 전용 CLI에서 시작하고 GUI는 필요한 경우에만 사용하도록 합니다.",
+      "completionCriteria": "저장소·설치본 일치, Git 푸시, 공개 보고서와 전역 지침 본문 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 지침 수정 및 동기화",
+          "action": "Affinity CLI 선행 조건과 GUI 전환 조건을 수정하고 설치본 및 저장소에 적용합니다.",
+          "expected": "저장소·설치본 일치, Git 푸시, 공개 보고서와 전역 지침 본문 확인",
+          "qa": "변경 diff, 설치본 해시, 원격 커밋 및 공개 HTML 본문을 확인합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110053914243-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-10-manual-20261110053914243-v1.0.0.md",
+    "date": "2026-11-10T05:39:14.243Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-uploaded-draft-validation-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "Publisher 업로드 패키지 3종 설치·실행·Validator 메뉴얼",
+      "summary": "업로드된 패키지를 격리 환경에 설치하고 실행·Validator·파일 목록을 검증했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "배치 모드에서 검증해 화면 렌더링과 포커스 전환의 시각 확인은 범위에 포함하지 않았습니다. Pixora Studio의 개발 설정이 들어간 현재 업로드본을 대상으로 검증했습니다. 세 제품의 초안은 검증 대상입니다.",
+      "outcome": "세 패키지의 대표 실행과 공식 Validator 및 Pixora 추가 파일 비교를 완료했습니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-10 14:29:44 KST부터 14:38:04 KST까지 8분 20초. 마지막 제품의 실행 결과 및 설치 파일 확인 기준입니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-uploaded-draft-validation-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "업로드 해시와 일치하는 파일 설치 및 실행 검증",
+      "completionCriteria": "대표 실행, 공식 검사 결과, 추가 파일 이름을 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "업로드본 설치·실행·Validator 및 경로 비교",
+          "action": "세 업로드본을 Unity에서 각각 설치·실행하고 공식 Validator를 호출합니다. 이전 Pixora Studio 설치 트리와 현재 아카이브를 대조합니다.",
+          "expected": "세 검증이 끝나고 공식 결과와 추가 파일 경로를 확인합니다.",
+          "qa": "업로드 해시, Unity Play Mode 로그, Validator 출력, 이전과 현재 파일 목록을 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "세 패키지 설치와 대표 예제 실행 완료. 공식 Validator 실패 0, 경고 8. 추가 경로 1개 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T14:38:04+09:00",
+          "summary": "세 패키지의 설치와 실행 및 검증 도구의 결과를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "다섯 예제를 실행하고 공식 Validator 87개 결과를 기록했습니다. 실패 0개, 경고 8개입니다.",
+              "evidence": "세 SHA-256, Unity 실행 JSONL, PixoraStudio-path-comparison.json",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110052620324-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-10-manual-20261110052620324-v1.0.0.md",
+    "date": "2026-11-10T05:26:20.324Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-template-three-drafts-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "템플릿 변경 후 세 제품 초안 바이너리 갱신 메뉴얼",
+      "summary": "Design Data Table, Pixora Studio, Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "이번 검증은 초안 바이너리 저장 범위입니다. 새 패키지의 Unity 설치·실행과 공식 Validator는 미실행입니다. 초안 상태에서 마쳤습니다.",
+      "outcome": "세 초안의 저장 크기와 상태를 확인했습니다.",
+      "proposedTime": "기록 확인 1~2분, 패키지 검증 및 업로드 4~8분.",
+      "actualTime": "2026-11-10 14:18:00 KST부터 14:25:28 KST까지 7분 28초. 시각은 세 번째 초안 저장 조회 기준입니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-template-three-drafts-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "최신 Templete를 세 제품의 기존 초안 바이너리에 반영",
+      "completionCriteria": "세 패키지의 소스와 해시 및 초안 저장 상태·바이트를 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "세 제품 바이너리 갱신",
+          "action": "기존 초안을 확인하고 최신 Templete를 반영한 unitypackage를 업로드합니다.",
+          "expected": "세 초안의 상태와 저장된 파일 크기가 새 패키지와 일치합니다.",
+          "qa": "패키지 소스 및 SHA-256 검증 후 업로드와 관리 API 응답을 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "세 기존 초안 모두 업로드 및 서버 저장 확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T14:25:28+09:00",
+          "summary": "세 초안 저장 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "현재 템플릿 수정 파일을 세 unitypackage에서 읽어 소스와 바이트 단위로 대조하고 SHA-256을 고정했습니다. 업로드 성공 응답 이후 Publisher 관리 API에서 초안 상태와 파일 크기를 각각 대조했습니다. Design Data Table 69,737,573바이트, Pixora Studio 60,123,987바이트, Entity Forge 32,048,420바이트.",
+              "evidence": "세 파일의 SHA-256과 Publisher 관리 API의 draft 및 크기 조회",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110051440367-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-10-manual-20261110051440367-v1.0.0.md",
+    "date": "2026-11-10T05:14:40.367Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "shelf-activation-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "최소화 목록의 창 깜박임 완화 검증",
+      "summary": "별도 Windows 목록 창에 클릭 보호를 연결했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "버튼을 누르고 있는 동안 메인 창이 문서를 덮는지 미확인",
+      "outcome": "구현과 문서 전환을 확인했습니다.",
+      "proposedTime": "5~10분",
+      "actualTime": "2026-11-10 14:08:39 KST 작업 시작. 코드 적용과 실제 선택 확인은 14:12대 KST.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "shelf-activation-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Unity가 목록 클릭 중 열린 도구를 잠깐 덮는 현상 완화",
+      "completionCriteria": "두 문서 교차 선택 및 눌림 구간의 문서 노출 확인",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "별도 목록 창의 클릭 보호 연결",
+          "action": "기존 창 순서 보호를 별도 목록 창의 실제 입력에 연결합니다.",
+          "expected": "두 문서를 선택할 수 있고 버튼을 누르는 동안 메인 창이 다른 문서를 덮지 않습니다.",
+          "qa": "Unity에서 목록 항목을 번갈아 선택하고 버튼을 누르는 동안의 화면을 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "두 문서 전환 확인. 누르는 중 프레임은 미확인."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109161503946-v1.0.2.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-turnroom-drafts-20261110-20261109161503946-v1.0.2.md",
+    "date": "2026-11-09T16:15:03.946Z",
+    "version": "v1.0.2",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-drafts-20261110",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+      "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "이전 Entity Forge 초안 업로드는 이력에 남아 있습니다. 이번 Pixora Studio 패키지의 Unity 실행 및 공식 Validator는 미실행입니다.",
+      "outcome": "Design Data Table과 Pixora Studio 기존 초안에 바이너리를 저장했고 TurnRoom main을 푸시했습니다.",
+      "proposedTime": "대상 확인 약 30초, 패키지 갱신과 등록 확인 약 2~4분.",
+      "actualTime": "2026-11-10 01:10:45 KST 확인 시작, 01:14:28 KST Publisher 저장 확인. 약 3분 43초.",
+      "xerjEvidence": "rg와 Git, Publisher 응답, 패키지 압축 해제 결과를 사용했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-drafts-20261110",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "TurnRoom 변경을 푸시하고 Design Data Table과 Pixora Studio 초안 바이너리를 갱신합니다.",
+      "completionCriteria": "두 초안의 업로드와 저장 확인, TurnRoom 원격 main SHA 대조가 끝나야 합니다.",
+      "previousManual": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "현재 소스와 패키지 고정",
+          "action": "커밋된 소스와 현재 패키지 내용 및 메타데이터를 대조합니다.",
+          "expected": "Design Data Table과 Pixora Studio 패키지의 소스와 해시를 식별할 수 있습니다.",
+          "qa": "패키지 내용을 읽어 현재 소스와 메타데이터를 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "Design Data Table 및 Pixora Studio 패키지 검증 기록을 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "Design Data Table과 Pixora Studio 초안 등록",
+          "action": "기존 Unity Publisher 초안 ID를 확인하고 패키지를 등록합니다.",
+          "expected": "두 초안의 저장 상태와 크기가 API 응답에 표시됩니다.",
+          "qa": "업로드 성공 응답과 관리 API의 최신 초안 크기를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 2,
+          "result": "초안 1550964 및 1547466의 업로드 성공과 저장 크기를 확인했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "TurnRoom main 푸시",
+          "action": "로컬 검토 커밋을 원격 main에 푸시합니다.",
+          "expected": "원격 main에서 로컬 커밋을 확인할 수 있습니다.",
+          "qa": "git ls-remote로 원격 SHA를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "재지시 후 46968c72를 origin/main에 푸시했고 원격 SHA가 일치했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "사용자가 두 번째 제품은 Pixora Studio라고 정정했습니다. 이전 Entity Forge 등록과 판정 기록을 보존하며 T01과 T02를 새 대상에 맞게 갱신했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T00:34:52+09:00",
+          "summary": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+              "evidence": "46968c72, 두 제품 archive-check.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T00:36:36+09:00",
+          "summary": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+              "evidence": "Publisher 초안 1550964, 1551034",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-10T00:36:48+09:00",
+          "summary": "자동 검토가 원격 main 푸시를 차단했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "자동 검토가 원격 main 푸시를 차단했습니다.",
+              "evidence": "git ls-remote origin refs/heads/main → e8251761",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-10T00:52:36+09:00",
+          "summary": "동일한 커밋의 검증 근거와 두 초안의 기존 확인 결과를 대조하고 원격 SHA를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "검증한 로컬 커밋이 동일합니다.",
+              "evidence": "46968c72와 두 archive-check.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 초안의 기존 저장 확인 근거를 대조했습니다.",
+              "evidence": "초안 1550964, 1551034와 패키지 크기 대조 기록",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원격 main SHA가 요청한 커밋과 일치합니다.",
+              "evidence": "46968c72e6b3808fe86417eab279223d30a7c44f",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q05",
+          "kind": "final",
+          "at": "2026-11-10T01:14:28+09:00",
+          "summary": "정정한 두 제품의 패키지와 초안 등록, 기존 원격 푸시 근거를 대조했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "Pixora Studio 패키지의 파일과 메타데이터 읽기 확인을 완료했습니다.",
+              "evidence": "PixoraStudio-archive-check.json, 소스 파일 2,794개",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "Pixora Studio 1.0.1의 초안 저장 크기와 상태를 읽었습니다.",
+              "evidence": "Design Data Table 1550964와 Pixora Studio 1547466, 후자 65,834,533바이트",
+              "dependencies": {
+                "T01": 2
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "기존 푸시 확인 기록에서 원격과 로컬 커밋이 일치합니다.",
+              "evidence": "원격 main 46968c72",
+              "dependencies": {
+                "T01": 2
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.md",
+    "date": "2026-11-09T15:54:24.828Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-drafts-20261110",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+      "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity 에디터와 공식 Validator는 기존 화면 사용 제한으로 미실행입니다.",
+      "outcome": "두 초안 바이너리를 등록했고 TurnRoom origin/main 푸시도 확인했습니다.",
+      "proposedTime": "초기 상태 확인 약 1분, 패키지 확인 후 업로드 약 4~8분",
+      "actualTime": "2026-11-10 00:51:34 KST 시작, 00:52:36 KST 원격 확인 완료. 실제 1분 2초.",
+      "xerjEvidence": "rg와 Git, Publisher 응답, 패키지 압축 해제 결과를 사용했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-drafts-20261110",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "사용자 화면을 조작하지 않고 현재 변경을 푸시하고 Design Data Table과 Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+      "completionCriteria": "두 초안의 업로드와 저장 확인, TurnRoom 원격 main SHA 대조가 끝나야 합니다.",
+      "previousManual": "projects/turnroom/reports/2026-11-09-manual-20261109153848658-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "현재 소스와 패키지 고정",
+          "action": "변경 범위를 분리해 커밋하고 최신 소스와 메타데이터를 두 바이너리에 포함합니다.",
+          "expected": "두 바이너리와 커밋을 해시로 식별할 수 있습니다.",
+          "qa": "패키지의 내용과 커밋에서 복원한 SHA-256을 원본과 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "로컬 46968c72. 두 패키지 원본과 커밋의 SHA-256이 일치합니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "두 제품 초안에 바이너리 등록",
+          "action": "기존 Unity Publisher 초안 ID를 확인하고 패키지를 등록합니다.",
+          "expected": "두 초안의 저장 상태와 크기가 API 응답에 표시됩니다.",
+          "qa": "업로드 성공 응답과 관리 API의 최신 초안 크기를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "1550964 및 1551034의 초안 상태와 69,737,382 및 32,048,119바이트를 확인했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "TurnRoom main 푸시",
+          "action": "로컬 검토 커밋을 원격 main에 푸시합니다.",
+          "expected": "원격 main에서 로컬 커밋을 확인할 수 있습니다.",
+          "qa": "git ls-remote로 원격 SHA를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "재지시 후 46968c72를 origin/main에 푸시했고 원격 SHA가 일치했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T00:34:52+09:00",
+          "summary": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+              "evidence": "46968c72, 두 제품 archive-check.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T00:36:36+09:00",
+          "summary": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+              "evidence": "Publisher 초안 1550964, 1551034",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-10T00:36:48+09:00",
+          "summary": "자동 검토가 원격 main 푸시를 차단했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "자동 검토가 원격 main 푸시를 차단했습니다.",
+              "evidence": "git ls-remote origin refs/heads/main → e8251761",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "kind": "final",
+          "at": "2026-11-10T00:52:36+09:00",
+          "summary": "동일한 커밋의 검증 근거와 두 초안의 기존 확인 결과를 대조하고 원격 SHA를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "검증한 로컬 커밋이 동일합니다.",
+              "evidence": "46968c72와 두 archive-check.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 초안의 기존 저장 확인 근거를 대조했습니다.",
+              "evidence": "초안 1550964, 1551034와 패키지 크기 대조 기록",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "원격 main SHA가 요청한 커밋과 일치합니다.",
+              "evidence": "46968c72e6b3808fe86417eab279223d30a7c44f",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-guideline-folders-20261109154421278-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-09-manual-tracefolio-guideline-folders-20261109154421278-v1.0.1.md",
+    "date": "2026-11-09T15:44:21.278Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "tracefolio-guideline-folders",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "프로젝트 전용 지침 모아보기 폴더화",
+      "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "없습니다.",
+      "outcome": "프로젝트 폴더 탐색을 공개하고 각 지침 연결을 검증했습니다.",
+      "proposedTime": "사이트 범위 확정 후 6~10분",
+      "actualTime": "2026-11-10 00:44:17 KST 공개 사이트 동작 확인 기록 (착수 후 9분 7초). 보고서 배포 확인은 별도.",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "tracefolio-guideline-folders",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "Tracefolio 모아보기에서 프로젝트별 폴더를 펼쳐 각자의 전용 지침을 열 수 있게 합니다.",
+      "completionCriteria": "기존 프로젝트 지침이 각각 자기 폴더 아래 연결되고 턴룸 제품은 턴룸 하위에 표시됩니다. 공개 사이트에서 폴더와 전용 지침 이동을 확인합니다.",
+      "previousManual": "projects/codex-config/reports/2026-11-09-manual-20261109153819022-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "모아보기 폴더 탐색 구현 및 공개 검증",
+          "action": "기존 프로젝트 분류와 전용 지침 URL을 그대로 사용해 폴더를 구성하고 Pages에 배포합니다.",
+          "expected": "개별 프로젝트 및 턴룸 하위 제품 폴더에서 전용 지침이 열립니다.",
+          "qa": "등록 프로젝트와 생성된 폴더·링크를 대조하고 공개 브라우저에서 폴더를 펼쳐 본문을 엽니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "생성본의 폴더 20개와 실제 공개 사이트의 개별·턴룸 하위 폴더에서 지침 이동을 확인했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-10T00:44:17.1432610+09:00",
+          "summary": "공개 폴더 탐색과 지침 이동 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "생성본의 폴더 20개와 실제 공개 사이트의 개별·턴룸 하위 폴더에서 지침 이동을 확인했습니다.",
+              "evidence": "배포 커밋 1fa038d1 및 실제 브라우저 화면",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109153848658-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-20261109153848658-v1.0.0.md",
+    "date": "2026-11-09T15:38:48.658Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-drafts-20261110",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+      "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "자동 승인 검토가 기본 브랜치의 대규모 이동·삭제를 이유로 TurnRoom 푸시를 차단했습니다. 검토 가능한 로컬 커밋은 46968c72입니다. 화면 사용 제한으로 Unity 공식 Validator, 에디터 실행 및 스크린샷 촬영은 미실행입니다. 검증된 교훈을 검토했으며 전역·프로젝트 지침은 변경하지 않았습니다.",
+      "outcome": "Design Data Table 2.0.3 및 Entity Forge 0.3.2-preview 초안에 현재 소스로 구성한 바이너리를 등록했습니다. TurnRoom 변경은 로컬 커밋 46968c72에 보존했습니다.",
+      "proposedTime": "초기 상태 확인 약 1분, 패키지 확인 후 업로드 약 4~8분",
+      "actualTime": "2026-11-10 00:30:03 KST 재착수. 두 초안 저장 완료 00:36:36 KST (6분 33초). 전체 요청은 원격 푸시 차단으로 미완료입니다.",
+      "xerjEvidence": "rg와 Git, Publisher 응답, 패키지 압축 해제 결과를 사용했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-drafts-20261110",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "blocked",
+      "goal": "사용자 화면을 조작하지 않고 현재 변경을 푸시하고 Design Data Table과 Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+      "completionCriteria": "두 초안의 업로드와 저장 확인, TurnRoom 원격 main SHA 대조가 끝나야 합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "현재 소스와 패키지 고정",
+          "action": "변경 범위를 분리해 커밋하고 최신 소스와 메타데이터를 두 바이너리에 포함합니다.",
+          "expected": "두 바이너리와 커밋을 해시로 식별할 수 있습니다.",
+          "qa": "패키지의 내용과 커밋에서 복원한 SHA-256을 원본과 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "로컬 46968c72. 두 패키지 원본과 커밋의 SHA-256이 일치합니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "두 제품 초안에 바이너리 등록",
+          "action": "기존 Unity Publisher 초안 ID를 확인하고 패키지를 등록합니다.",
+          "expected": "두 초안의 저장 상태와 크기가 API 응답에 표시됩니다.",
+          "qa": "업로드 성공 응답과 관리 API의 최신 초안 크기를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "1550964 및 1551034의 초안 상태와 69,737,382 및 32,048,119바이트를 확인했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "TurnRoom main 푸시",
+          "action": "로컬 검토 커밋을 원격 main에 푸시합니다.",
+          "expected": "원격 main에서 로컬 커밋을 확인할 수 있습니다.",
+          "qa": "git ls-remote로 원격 SHA를 대조합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "blocked",
+          "revision": 1,
+          "result": "자동 승인 검토가 대규모 이동·삭제를 이유로 푸시를 거부했습니다. 원격은 e8251761입니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-10T00:34:52+09:00",
+          "summary": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "새 패키지의 파일과 메타데이터를 대조하고 로컬 커밋을 만들었습니다.",
+              "evidence": "46968c72, 두 제품 archive-check.json",
+              "dependencies": {}
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-10T00:36:36+09:00",
+          "summary": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "두 업로드 성공 응답과 초안 상태를 확인했습니다.",
+              "evidence": "Publisher 초안 1550964, 1551034",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q03",
+          "kind": "step",
+          "at": "2026-11-10T00:36:48+09:00",
+          "summary": "자동 검토가 원격 main 푸시를 차단했습니다.",
+          "results": [
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "blocked",
+              "actual": "자동 검토가 원격 main 푸시를 차단했습니다.",
+              "evidence": "git ls-remote origin refs/heads/main → e8251761",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "blocked"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109153819022-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-09-manual-20261109153819022-v1.0.0.md",
+    "date": "2026-11-09T15:38:19.022Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "tracefolio-guideline-folders",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "프로젝트 전용 지침 모아보기 폴더화",
+      "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "사이트 범위 확정 후 6~10분",
+      "actualTime": "2026-11-10 00:35:10 KST 구조 확인 시작",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "tracefolio-guideline-folders",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "Tracefolio 모아보기에서 프로젝트별 폴더를 펼쳐 각자의 전용 지침을 열 수 있게 합니다.",
+      "completionCriteria": "기존 프로젝트 지침이 각각 자기 폴더 아래 연결되고 턴룸 제품은 턴룸 하위에 표시됩니다. 공개 사이트에서 폴더와 전용 지침 이동을 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "모아보기 폴더 탐색 구현 및 공개 검증",
+          "action": "기존 프로젝트 분류와 전용 지침 URL을 그대로 사용해 폴더를 구성하고 Pages에 배포합니다.",
+          "expected": "개별 프로젝트 및 턴룸 하위 제품 폴더에서 전용 지침이 열립니다.",
+          "qa": "등록 프로젝트와 생성된 폴더·링크를 대조하고 공개 브라우저에서 폴더를 펼쳐 본문을 엽니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-project-guidelines-20261109150214760-v1.0.1.html",
+    "postPath": "projects/codex-config/posts/2026-11-09-manual-tracefolio-project-guidelines-20261109150214760-v1.0.1.md",
+    "date": "2026-11-09T15:02:14.760Z",
+    "version": "v1.0.1",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "tracefolio-project-guidelines",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+      "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "새 교훈은 작업별로 근거를 확인해 기존 지침에 반영합니다.",
+      "outcome": "프로젝트 지침 20개와 전역·전용 메뉴를 공개하고 브라우저에서 확인했습니다.",
+      "proposedTime": "12~18분",
+      "actualTime": "2026-11-10 00:02:12 KST 기능·공개 화면 확인 기록, 시작 후 12분 58초. 보고서 배포 확인은 별도.",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "tracefolio-project-guidelines",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "전역 지침과 프로젝트 전용 지침을 사이트에 연결하고 매 작업에서 교훈을 검토·갱신합니다.",
+      "completionCriteria": "상단 바에 전역·프로젝트 전용 지침 링크가 있고, 프로젝트별 카테고리와 모아보기에서 근거가 있는 지침 20개를 엽니다. 설치본 지침과 원격 문서를 대조하고 공개 배포를 확인합니다.",
+      "previousManual": "projects/codex-config/reports/2026-11-09-manual-20261109145039346-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "프로젝트별 근거와 지침 정리",
+          "action": "등록 프로젝트의 보고서에서 검증된 반복 기준을 선별해 프로젝트별 원문과 근거 링크를 작성합니다.",
+          "expected": "20개 프로젝트 원문과 확인 가능한 근거 링크",
+          "qa": "등록 ID와 지침 파일 및 연결 근거를 일대일 대조",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "프로젝트 20개 원문과 근거 링크 35개를 확인했습니다."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "사이트 접근 및 유지 규칙 연결",
+          "action": "상단 바, 모아보기, 선택한 프로젝트 화면, 지침 갱신 기준과 설치본을 연결합니다.",
+          "expected": "전역·전용 지침을 해당 메뉴와 프로젝트에서 열 수 있음",
+          "qa": "빌드 출력·목차·필터 링크·설치본 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "상단 바 두 메뉴, 선택 프로젝트 전용 링크 및 설치본 원문을 대조했습니다."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "공개 배포 및 화면 확인",
+          "action": "대상 파일만 커밋·푸시하고 사이트의 공개 동작을 확인합니다.",
+          "expected": "공개 사이트에서 지침과 보고서가 열림",
+          "qa": "공개 본문과 실제 브라우저 탐색 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "공개 배포를 확인하고 브라우저에서 상단 바·모아보기·개별 및 묶음 이동과 390px 메뉴를 검증했습니다."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-09T15:02:12.698Z",
+          "summary": "등록 지침 원문, 사이트 메뉴, 공개 배포를 대조했습니다.",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "프로젝트 20개 원문과 근거 링크 35개를 확인했습니다.",
+              "evidence": "프로젝트 원문과 근거 보고서 대조 결과",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "상단 바 두 메뉴, 선택 프로젝트 전용 링크 및 설치본 원문을 대조했습니다.",
+              "evidence": "배포 커밋 2d102854 및 설치본 SHA-256 비교",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "공개 배포를 확인하고 브라우저에서 상단 바·모아보기·개별 및 묶음 이동과 390px 메뉴를 검증했습니다.",
+              "evidence": "Pages 실행 42639599729과 실제 화면이 첨부된 공개 검증 보고서",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109145351037-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-11-09-manual-20261109145351037-v1.0.0.md",
+    "date": "2026-11-09T14:53:51.037Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-per-table-addressables-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "DDT 테이블별 Addressables 작업 메뉴얼",
+      "summary": "테이블별 등록과 로딩을 구현하고 실제 Unity에서 확인합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "이전 가이드 캡처의 원본 해시 불일치 102건.",
+      "outcome": "테이블별 로딩과 화면 확인 완료. 기존 가이드 불일치 별도 기록.",
+      "proposedTime": "10~20분. 2026-11-09 23:43:52 KST 시작.",
+      "actualTime": "2026-11-09 23:49:55 KST에 최종 Unity 화면 확인. 소요 6분 3초. 이후 가이드 검증과 게시를 별도 진행.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-per-table-addressables-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "전체 적용을 없애고 선택한 테이블만 Addressables를 사용합니다.",
+      "completionCriteria": "등록·해제, 혼합 로딩, 샘플 미등록과 실제 UI를 확인하고 가이드를 갱신합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "등록 및 로딩",
+          "action": "테이블별 체크와 두 로딩 경로 구현",
+          "expected": "샘플이 직접 참조로 남고 해제 시 복귀",
+          "qa": "격리 Unity 콘텐츠 빌드와 혼합 동기·비동기 로딩",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "DDT_PER_TABLE_QA_PASS"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "UI 및 가이드",
+          "action": "실제 화면 캡처와 9개 언어 문서 갱신",
+          "expected": "새 이미지 해시와 문서 링크 확인",
+          "qa": "Unity 설정 조작 및 문서 검사",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "새 이미지 통과. 전체 문서에 기존 불일치 102건."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-09T14:49:55Z",
+          "summary": "Unity 실행 검증",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "동기·비동기 혼합 로딩과 체크 해제 복귀 확인",
+              "evidence": "격리 Unity 실제 실행 DDT_PER_TABLE_QA_PASS",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109145039346-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-09-manual-20261109145039346-v1.0.0.md",
+    "date": "2026-11-09T14:50:39.346Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "tracefolio-project-guidelines",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+      "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "12~18분",
+      "actualTime": "2026-11-09 23:49:14 KST 시작",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "tracefolio-project-guidelines",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "전역 지침과 프로젝트 전용 지침을 사이트에 연결하고 매 작업에서 교훈을 검토·갱신합니다.",
+      "completionCriteria": "상단 바에 전역·프로젝트 전용 지침 링크가 있고, 프로젝트별 카테고리와 모아보기에서 근거가 있는 지침 20개를 엽니다. 설치본 지침과 원격 문서를 대조하고 공개 배포를 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "프로젝트별 근거와 지침 정리",
+          "action": "등록 프로젝트의 보고서에서 검증된 반복 기준을 선별해 프로젝트별 원문과 근거 링크를 작성합니다.",
+          "expected": "20개 프로젝트 원문과 확인 가능한 근거 링크",
+          "qa": "등록 ID와 지침 파일 및 연결 근거를 일대일 대조",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "사이트 접근 및 유지 규칙 연결",
+          "action": "상단 바, 모아보기, 선택한 프로젝트 화면, 지침 갱신 기준과 설치본을 연결합니다.",
+          "expected": "전역·전용 지침을 해당 메뉴와 프로젝트에서 열 수 있음",
+          "qa": "빌드 출력·목차·필터 링크·설치본 비교",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "공개 배포 및 화면 확인",
+          "action": "대상 파일만 커밋·푸시하고 사이트의 공개 동작을 확인합니다.",
+          "expected": "공개 사이트에서 지침과 보고서가 열림",
+          "qa": "공개 본문과 실제 브라우저 탐색 확인",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109143839686-v1.0.0.html",
+    "postPath": "projects/codex-config/posts/2026-11-09-manual-20261109143839686-v1.0.0.md",
+    "date": "2026-11-09T14:38:39.686Z",
+    "version": "v1.0.0",
+    "project": "codex-config",
+    "kind": "manual",
+    "manualId": "tracefolio-global-instructions",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "codex-config",
+      "kind": "manual",
+      "title": "Tracefolio 전역 지침 열람 페이지 작업 메뉴얼",
+      "summary": "공개 저장소의 전역 지침을 작성 가이드에서 열고 원문과 대조합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "작업·QA 미실행",
+      "outcome": "실행 전 계획입니다.",
+      "proposedTime": "3~5분",
+      "actualTime": "2026-11-09 23:37:18 KST 시작",
+      "xerjEvidence": "실행 전",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "tracefolio-global-instructions",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "planned",
+      "goal": "전역 지침을 Tracefolio 사이트에서 열람할 수 있게 합니다.",
+      "completionCriteria": "작성 가이드의 링크에서 공개 지침 본문과 목차를 열고 공개 저장소 원문과 대조합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 지침 페이지 생성 및 공개",
+          "action": "저장소 AGENTS.md를 기존 사이트 빌드로 렌더링하고 작성 가이드에서 연결한 뒤 배포합니다.",
+          "expected": "공개 작성 가이드와 전역 지침 페이지가 정상 응답합니다.",
+          "qa": "원문, 렌더링 본문, 목차 앵커와 공개 URL을 대조합니다.",
+          "dependsOn": [],
+          "status": "pending",
+          "revision": 1,
+          "result": ""
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "progress"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109142643933-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-11-09-manual-20261109142643933-v1.0.0.md",
+    "date": "2026-11-09T14:26:43.933Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-english-fields-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "DDT 테이블 관리 입력란과 미설치 화면 검증",
+      "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "영어에만 발생하는지는 확인되지 않았습니다. 다른 가이드 장의 기존 캡처 불일치는 보존했습니다. Fantasya에는 설치하지 않았습니다. 전역 지침 변경 없음.",
+      "outcome": "입력란과 미설치 UI를 실제 Unity에서 확인했습니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-09 23:21:58 KST 착수. 공개 확인은 작성 시점 대기.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-english-fields-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "입력란 가독성을 복구하고 미설치 상태의 Addressables 컨트롤을 제거한다.",
+      "completionCriteria": "영어 설치 화면 및 미설치 Unity 화면에서 수정 사항을 확인하고 개별 보고서와 첨부를 공개한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "Unity 화면과 공개 결과 확인",
+          "action": "입력란 스타일을 통일하고 미설치 화면에서 관련 설정을 숨깁니다.",
+          "expected": "입력 값이 읽히고 미설치 화면에는 관련 항목이 없습니다.",
+          "qa": "Unity 화면과 입력 결과를 비교하고 보고서 본문 및 첨부를 공개 주소에서 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "Unity 화면 확인. 공개 검증 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109141916673-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-11-09-manual-20261109141916673-v1.0.0.md",
+    "date": "2026-11-09T14:19:16.673Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-inspector-address-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "DDT Addressables 주소와 Inspector 형식 확인",
+      "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "다른 Addressables 버전과 플레이어 런타임 빌드는 미실행입니다. Fantasya에는 설치하지 않았습니다. 다른 가이드 장의 기존 캡처 불일치는 보존했습니다. 전역 지침 변경 없음.",
+      "outcome": "Unity에서 설치 및 미설치 UI와 주소 저장을 확인했습니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "2026-11-09 23:08:26 KST 착수. 실제 Unity 확인과 기록 완료. 공개 확인은 작성 시점 대기.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-inspector-address-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Inspector 형식의 등록과 주소 편집을 카드에서 제공한다.",
+      "completionCriteria": "실제 Unity에서 저장, 팝업, 비활성 표시를 확인하고 보고서를 공개한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "Unity 확인 및 보고서 공개",
+          "action": "체크박스 등록, 주소 편집, Select와 팝업, 미설치 표시 확인 후 보고서를 게시한다.",
+          "expected": "Unity 에셋에 주소가 저장되고 공개 링크와 증거가 열립니다.",
+          "qa": "실제 Unity 조작 및 그룹 에셋 대조, 보고서 HTTP 응답 확인.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "Unity 조작과 저장을 확인했습니다. 공개 검증 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109140049564-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-11-09-manual-20261109140049564-v1.0.0.md",
+    "date": "2026-11-09T14:00:49.564Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-addressables-popup-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "DDT Addressables 등록과 기본 팝업 검증 메뉴얼",
+      "summary": "DDT 테이블에서 바이너리를 등록하고 Unity Addressables 기본 그룹·레이블 창을 열 수 있습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "다른 Addressables 버전과 플레이어 빌드, 런타임 콘텐츠 로드는 미확인입니다. 전체 다국어 문서 검증의 다른 장에 기존 캡처 불일치가 남았습니다. Fantasya 프로젝트 설치는 수행하지 않았습니다. 전역 지침 및 샘플 저장소는 변경하지 않았습니다.",
+      "outcome": "설치·미설치 Unity 에디터에서 요청한 UI를 확인했습니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "구현·Unity 검증·보고서 작성까지 10분 13초. 시작 22:50:08 KST. 공개 배포 확인은 작성 시점 대기.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-addressables-popup-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "선택 의존성을 유지하면서 테이블별로 Addressables 등록 및 Unity 기본 설정창을 제공한다.",
+      "completionCriteria": "2.9.1에서 실제 등록·그룹·레이블 저장을 확인하고 미설치 카드에서 새 행이 없음을 확인한 후 공개 보고서와 캡처를 검증한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "선택 의존성과 Unity 팝업 검증",
+          "action": "기존 테이블 관리에서 패키지 설치 때만 등록·그룹·레이블 기능을 표시합니다.",
+          "expected": "등록 및 선택이 Unity 에셋에 저장되고 설치하지 않은 카드에는 행이 없습니다.",
+          "qa": "Unity 6000.0.83f1의 설치·미설치 에디터를 실제 조작하고 그룹 에셋을 대조합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "2.9.1 설치 검증본에서 등록·그룹·레이블 저장 및 미설치 TurnRoom에서 숨김 확인."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "가이드와 보고서 검증",
+          "action": "9개 언어에 실행 예시와 실제 화면을 반영하고 결과를 게시합니다.",
+          "expected": "새 가이드 본문과 캡처, 공개 개별 보고서에 접근할 수 있습니다.",
+          "qa": "가이드 본문·이미지 해시와 공개 URL 응답을 확인합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "가이드 변경 반영, 공개 검증 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02"
+      ],
+      "scopeChange": "",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-09T14:00:21.000Z",
+          "summary": "Unity 기본 팝업과 Addressables 에셋 저장 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "등록·그룹·레이블 선택 후 카드와 저장된 그룹 에셋이 일치하고 미설치 카드는 새 행을 숨겼습니다.",
+              "evidence": "실제 Unity 화면 5장과 종료 후 그룹 에셋 기록.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109134244684-v1.0.0.html",
+    "postPath": "projects/designdatatable/posts/2026-11-09-manual-20261109134244684-v1.0.0.md",
+    "date": "2026-11-09T13:42:44.684Z",
+    "version": "v1.0.0",
+    "project": "designdatatable",
+    "kind": "manual",
+    "manualId": "ddt-binary-output-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "designdatatable",
+      "kind": "manual",
+      "title": "DDT 바이너리 저장 위치와 설정창 검증 메뉴얼",
+      "summary": "DDT에서 새 바이너리의 기본 출력 경로를 분리하고, 테이블 관리에서 기존 파일의 위치를 바꾸도록 수정했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "- 실제 새 테이블 생성·이동 뒤 재생성·Addressables 콘텐츠 빌드는 미실행입니다. 확인용 프로젝트에 Addressables가 설치되지 않았습니다.\n- 전체 문서 검증기는 다른 장의 캡처와 현재 소스 해시 불일치 등을 보고했습니다. 이번 테이블 관리 화면은 다시 캡처했고 나머지 캡처 기록은 유지했습니다.\n- Fantasya에는 설치하지 않았습니다. 사용자 제보 화면은 외부 게시에 포함하지 않았습니다.\n- 공통화할 코드 변경이 없어 Unity 샘플 저장소 환류 및 전역 지침 변경은 없습니다.",
+      "outcome": "UI 및 실제 파일 이동을 확인했습니다. 새 등록·재생성·Addressables 런타임 확인은 대기입니다.",
+      "proposedTime": "10~20분",
+      "actualTime": "구현 및 수행한 검증 기록: 13분 14초, 2026-11-09 22:42:14 KST. 전체 런타임·배포 검증은 이 시각 기준 미완료.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "ddt-binary-output-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "생성 코드를 유지하고 .bytes 저장 위치를 선택하도록 하며, 원본 선택 때 설정창을 유지합니다.",
+      "completionCriteria": "기본 및 개별 폴더 설정, 파일 이동과 생성/재생성 유지, 메뉴 바로가기와 원본 선택, 런타임 로딩 및 문서 확인.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "테이블 관리와 바이너리 이동",
+          "action": "바이너리 위치 상시 표시, 원본 선택과 메뉴 바로가기, 파일 위치 변경.",
+          "expected": "설정창이 유지되고 선택된 위치로 파일이 옮겨지며 GUID가 보존됩니다.",
+          "qa": "Unity에서 메뉴, 선택 취소, 이동 후 파일 경로와 SHA-256/GUID 및 복원을 확인합니다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 2,
+          "result": "Unity 6000.0.83f1에서 메뉴, 선택 취소, 샘플 이동 및 복원 확인."
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "생성·재생성과 런타임 검증",
+          "action": "새 등록과 재생성 때 선택 경로를 사용하고 런타임 로딩을 확인합니다.",
+          "expected": "기본 경로와 개별 이동 경로에서 올바른 바이너리를 로드합니다.",
+          "qa": "새 등록·재생성 후 파일 위치를 검사하고 직접 참조 및 Addressables 모드를 실행합니다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "코드 컴파일은 통과했으며 생성·재생성·런타임 재현은 미실행."
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "문서와 결과 게시",
+          "action": "9개 언어 문서에 예시 및 실화면을 반영하고 결과 보고서를 게시합니다.",
+          "expected": "문서 본문과 캡처를 확인할 수 있습니다.",
+          "qa": "문서 검증기와 공개 보고서의 본문·첨부를 확인합니다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "pending",
+          "revision": 1,
+          "result": "가이드와 관련 캡처는 반영했습니다. 전체 문서 검증은 미통과."
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "추가 요청에 따라 상세 설정을 제거하고 바이너리 상시 표시와 Unity 메뉴 진입을 추가했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-09T22:40:18+09:00",
+          "summary": "실제 Unity 테이블 관리와 샘플 바이너리 이동/복원 확인",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 2,
+              "verdict": "pass",
+              "actual": "메뉴 바로가기, 원본 선택 패널과 Esc, 샘플 이동 및 복원 확인.",
+              "evidence": "동일 SHA-256과 GUID 확인; 실화면은 결과 보고서 첨부.",
+              "dependencies": {}
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-minimized-list-20261109-20261109133329625-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-turnroom-minimized-list-20261109-20261109133329625-v1.0.1.md",
+    "date": "2026-11-09T13:33:29.625Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-minimized-list-20261109",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+      "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "수정 후 Unity에서 실제 마우스 오버 화면은 미확인입니다. 전역 지침에 추가할 공통 교훈은 없었습니다.",
+      "outcome": "번역된 옵션 이름과 기존 안내를 공용 상세 카드에 전달합니다.",
+      "proposedTime": "코드 확인 및 수정 1~2분",
+      "actualTime": "22:31:56 KST 시작. 코드에서 공용 카드의 제목·본문 입력 규칙을 확인하고 토글 연결을 수정했습니다.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-minimized-list-20261109",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "기본으로 최소화 리스트를 사용하고 전역 설정에서 끌 수 있게 합니다.",
+      "completionCriteria": "Unity에서 첫 실행 기본값, 끄기와 다시 켜기, 기존 창과 네이티브 최소화 창 복원을 확인합니다.",
+      "previousManual": "projects/turnroom/reports/2026-11-09-manual-20261109130255858-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 설정과 최소화 경로 연결",
+          "action": "토글 저장과 기존 리스트 및 Windows 기본 최소화 동작을 연결합니다. 툴팁 제목과 본문을 연결합니다.",
+          "expected": "기본값은 켜짐이며 끄면 Windows 기본 최소화가 동작합니다. 토글에 공용 상세 카드가 표시됩니다.",
+          "qa": "설정, UI 언어와 문서 확인 후 Unity에서 실제 토글과 창 복원을 확인합니다. 토글 위에서 상세 카드 표시를 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 2,
+          "result": "공용 카드 입력 및 연결을 소스로 확인했습니다. 실제 화면 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자 요청으로 최소화 리스트의 툴팁을 공용 상세 카드로 연결합니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-popup-alttab-20261109-20261109131856007-v1.0.1.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-turnroom-popup-alttab-20261109-20261109131856007-v1.0.1.md",
+    "date": "2026-11-09T13:18:56.007Z",
+    "version": "v1.0.1",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-popup-alttab-20261109",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+      "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "수정 후 Unity 실제 Alt+Tab 화면과 열린 창에서 언어 전환은 미확인입니다. 전역 지침에 추가할 공통 교훈은 없었습니다.",
+      "outcome": "창을 처음 열 때와 언어 설정을 바꿀 때 같은 번역을 사용하도록 수정했습니다.",
+      "proposedTime": "코드 확인 및 수정 1~2분",
+      "actualTime": "22:17:25 KST 시작, 22:18:20 KST에 코드와 Unity 6 참조 소스 확인 (55초).",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-popup-alttab-20261109",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "독립 설정과 작업용 팝업을 Windows Alt+Tab에서 선택 가능하게 합니다.",
+      "completionCriteria": "실제 Windows Alt+Tab 등록과 선택 시 키보드 포커스를 확인하고 닫힌 창과 임시 메뉴가 목록에서 보이지 않는지 검증합니다.",
+      "previousManual": "projects/turnroom/reports/2026-11-09-manual-20261109130940378-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "독립 팝업을 공통 등록에 연결",
+          "action": "설정과 별도 도구 팝업을 등록하고 문서 전환과 임시 UI 진입 경로를 확인합니다. 전역 설정의 Windows 창 제목과 내부 제목 번역을 통일합니다.",
+          "expected": "독립 설정 및 도구 창을 Alt+Tab에서 전환할 수 있습니다. 전역 설정은 현재 언어로 같은 제목을 사용합니다.",
+          "qa": "소스 대조 후 Windows에서 실제 Alt+Tab 등록, 포커스, 종료 시 정리를 확인하고 화면을 캡처합니다. 열린 설정 창에서 표시 언어를 바꿔 두 제목을 대조합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 2,
+          "result": "제목 갱신 코드 및 Unity 참조 소스 확인. 실제 화면 확인 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자 확인에서 발견된 전역 설정의 내부 제목과 Alt+Tab 제목 불일치를 수정합니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130940378-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-20261109130940378-v1.0.0.md",
+    "date": "2026-11-09T13:09:40.378Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-popup-alttab-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+      "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "실제 Windows Alt+Tab 목록, 선택 후 키보드 포커스, 창 닫기 후 목록 정리 및 전후 화면 캡처는 미확인입니다. 기존 전역 지침으로 적용 범위를 다룰 수 있어 지침을 수정하지 않았습니다.",
+      "outcome": "전역 설정과 제품 설정, 찾기·속성·버그 보고 등 독립 팝업의 등록 경로를 연결했습니다.",
+      "proposedTime": "코드 확인 및 수정 4~6분",
+      "actualTime": "22:06:33 KST 시작, 22:09:00 KST에 코드·9개 언어 문서 정적 확인 (2분 27초).",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-popup-alttab-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "독립 설정과 작업용 팝업을 Windows Alt+Tab에서 선택 가능하게 합니다.",
+      "completionCriteria": "실제 Windows Alt+Tab 등록과 선택 시 키보드 포커스를 확인하고 닫힌 창과 임시 메뉴가 목록에서 보이지 않는지 검증합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "독립 팝업을 공통 등록에 연결",
+          "action": "설정과 별도 도구 팝업을 등록하고 문서 전환과 임시 UI 진입 경로를 확인합니다.",
+          "expected": "독립 설정 및 도구 창을 Alt+Tab에서 전환할 수 있습니다.",
+          "qa": "소스 대조 후 Windows에서 실제 Alt+Tab 등록, 포커스, 종료 시 정리를 확인하고 화면을 캡처합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "정적 확인 완료. 실제 Windows 동작 확인 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130255858-v1.0.0.html",
+    "postPath": "projects/turnroom/posts/2026-11-09-manual-20261109130255858-v1.0.0.md",
+    "date": "2026-11-09T13:02:55.858Z",
+    "version": "v1.0.0",
+    "project": "turnroom",
+    "kind": "manual",
+    "manualId": "turnroom-minimized-list-20261109",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "turnroom",
+      "kind": "manual",
+      "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+      "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity에서 실제 토글·작업 표시줄 복원·기존 창 복원과 화면 캡처는 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+      "outcome": "옵션을 끄면 기존 리스트에 숨은 창을 표시하고 새 최소화는 Windows 기본 동작을 사용합니다.",
+      "proposedTime": "구현 및 코드 확인 3~5분",
+      "actualTime": "21:59:27 KST 시작, 22:02:19 KST에 코드와 설정 UXML 및 문서 정적 확인 (2분 52초).",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "turnroom-minimized-list-20261109",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "기본으로 최소화 리스트를 사용하고 전역 설정에서 끌 수 있게 합니다.",
+      "completionCriteria": "Unity에서 첫 실행 기본값, 끄기와 다시 켜기, 기존 창과 네이티브 최소화 창 복원을 확인합니다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "전역 설정과 최소화 경로 연결",
+          "action": "토글 저장과 기존 리스트 및 Windows 기본 최소화 동작을 연결합니다.",
+          "expected": "기본값은 켜짐이며 끄면 Windows 기본 최소화가 동작합니다.",
+          "qa": "설정, UI 언어와 문서 확인 후 Unity에서 실제 토글과 창 복원을 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 1,
+          "result": "정적 확인 완료, Unity 화면과 실제 동작 검증 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109125009623-v1.0.3.html",
+    "postPath": "projects/pixora/posts/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109125009623-v1.0.3.md",
+    "date": "2026-11-09T12:50:09.623Z",
+    "version": "v1.0.3",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixel-camera-isometric-separation-20261109",
+    "round": 4,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+      "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity Inspector 실제 표시 및 수정 후 화면 캡처는 미확인입니다. 사용자가 제공한 이미지는 수정 전 참고 화면입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+      "outcome": "설정 카드 아래에서 간격과 공용 보조 텍스트 스타일을 적용한 설명을 읽을 수 있도록 구성했습니다.",
+      "proposedTime": "수정 및 코드 확인 2~4분",
+      "actualTime": "21:48:48 KST 작업 시작. 21:49:26 KST까지 코드 수정 및 정적 확인 (38초). 실제 Unity 화면 확인은 미실행.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-isometric-separation-20261109",
+      "round": 4,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Pixel Camera는 지정한 Pixel Camera Object만 렌더링하고 Isometric Camera는 독립적으로 방향을 제어합니다.",
+      "completionCriteria": "Unity에서 활성화 중 Transform 잠금과 해제, 자유 시점에서만 회전 입력 가능, 시장 픽셀 표현을 확인하고 화면을 캡처합니다.",
+      "previousManual": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109124616733-v1.0.2.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "렌더 경로, 예제 및 사용 안내 분리",
+          "action": "시점 이름 변경, Transform 잠금과 해제, 자유 시점 전용 각도 입력, 기존 시장 예제와 문서 연결 확인 및 설명을 설정 아래로 이동",
+          "expected": "고정 방향의 회전 입력이 비활성화되고 자유 시점에서만 월드 Y축 회전 값을 편집할 수 있습니다. 설정 아래에 설명이 표시됩니다.",
+          "qa": "소스 및 UI 연결 대조 후 Unity에서 기본 방향, 자유 시점, 컴포넌트 활성화와 해제를 확인합니다. 설정 카드와 안내 영역의 실제 순서와 가독성을 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 4,
+          "result": "설명 배치와 스타일 연결을 소스로 확인했습니다. Unity 실제 화면 확인 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자 후속 요청으로 설명 두 문단을 아이소매트릭 설정 카드 아래에 배치합니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109124616733-v1.0.2.html",
+    "postPath": "projects/pixora/posts/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109124616733-v1.0.2.md",
+    "date": "2026-11-09T12:46:16.733Z",
+    "version": "v1.0.2",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixel-camera-isometric-separation-20261109",
+    "round": 3,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+      "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity Inspector에서 실제 잠금, 방향 선택과 입력 비활성화, 비활성화 후 잠금 해제 및 화면 캡처는 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+      "outcome": "인스펙터와 메뉴의 표시 이름을 Isometric View로 바꾸고 고정 방향과 자유 회전을 분리했습니다.",
+      "proposedTime": "코드 및 문서 확인 3~5분",
+      "actualTime": "21:42:56 KST 시작. 21:45:27 KST에 소스·9개 언어 가이드 정적 확인 (2분 31초). Unity 실제 실행 검증 미완료.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-isometric-separation-20261109",
+      "round": 3,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Pixel Camera는 지정한 Pixel Camera Object만 렌더링하고 Isometric Camera는 독립적으로 방향을 제어합니다.",
+      "completionCriteria": "Unity에서 활성화 중 Transform 잠금과 해제, 자유 시점에서만 회전 입력 가능, 시장 픽셀 표현을 확인하고 화면을 캡처합니다.",
+      "previousManual": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109123207322-v1.0.1.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "렌더 경로, 예제 및 사용 안내 분리",
+          "action": "시점 이름 변경, Transform 잠금과 해제, 자유 시점 전용 각도 입력, 기존 시장 예제와 문서 연결 확인",
+          "expected": "고정 방향의 회전 입력이 비활성화되고 자유 시점에서만 월드 Y축 회전 값을 편집할 수 있습니다.",
+          "qa": "소스 및 UI 연결 대조 후 Unity에서 기본 방향, 자유 시점, 컴포넌트 활성화와 해제를 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 3,
+          "result": "소스와 가이드 정적 확인 완료. Unity 실제 조작 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "후속 지시로 Transform 이동 허용을 잠금으로 변경하고, 방향 목록에 자유 시점과 조건부 회전 값 입력을 추가합니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109123207322-v1.0.1.html",
+    "postPath": "projects/pixora/posts/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109123207322-v1.0.1.md",
+    "date": "2026-11-09T12:32:07.322Z",
+    "version": "v1.0.1",
+    "project": "pixora",
+    "kind": "manual",
+    "manualId": "pixel-camera-isometric-separation-20261109",
+    "round": 2,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "pixora",
+      "kind": "manual",
+      "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+      "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "Unity에서 이동·회전 조작과 픽셀 효과의 실제 표시 및 전후 스크린샷은 미확인입니다. 전역 지침에 추가할 검증된 공통 교훈은 없었습니다.",
+      "outcome": "주시점을 중심으로 방향을 바꿀 수 있고 하늘정원 시장은 지정된 오브젝트 픽셀 렌더링을 다시 사용합니다.",
+      "proposedTime": "추가 범위를 포함해 3~5분",
+      "actualTime": "21:28:13 KST 시작. 21:30:59 KST까지 코드·예제·문서 정적 확인 (2분 46초). Unity 실행 검증 미완료.",
+      "xerjEvidence": "",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "pixel-camera-isometric-separation-20261109",
+      "round": 2,
+      "phase": "followup",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Pixel Camera는 지정한 Pixel Camera Object만 렌더링하고 Isometric Camera는 독립적으로 방향을 제어합니다.",
+      "completionCriteria": "Unity에서 추적 유무에 따른 이동과 월드 Y축 공전, 시장 픽셀 렌더링을 검증하고 화면을 캡처합니다.",
+      "previousManual": "projects/pixora/reports/2026-11-09-manual-20261109121020766-v1.0.0.html",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "렌더 경로, 예제 및 사용 안내 분리",
+          "action": "카메라 Transform 이동을 주시점에 반영하고 시장 프리팹에 지정 오브젝트 픽셀 경로를 연결합니다.",
+          "expected": "추적 대상 없이 이동할 수 있고, 시장 예제의 지정 메시가 픽셀화됩니다.",
+          "qa": "씬 연결 대조 후 Unity에서 이동·공전과 실제 픽셀화 및 윤곽선을 확인합니다.",
+          "dependsOn": [],
+          "status": "qa",
+          "revision": 2,
+          "result": "정적 연결과 문서 확인 완료. Unity 실행 대기."
+        }
+      ],
+      "focusTasks": [
+        "T01"
+      ],
+      "scopeChange": "사용자 후속 요청으로 추적 대상 없는 이동과 지정 오브젝트 기반 픽셀 표현을 예제에 함께 적용합니다.",
+      "qaRuns": [],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/github-blog/reports/2026-11-09-manual-20261109123037200-v1.0.0.html",
     "postPath": "projects/github-blog/posts/2026-11-09-manual-20261109123037200-v1.0.0.md",
     "date": "2026-11-09T12:30:37.200Z",
