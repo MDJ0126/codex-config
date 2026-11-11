@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-11T12:58:46.762Z",
+  "backup": ".utmp\\RemovedAIAgent-20261111-2156",
+  "removedSceneBlocks": 242,
+  "preservedSceneBlocks": 212,
+  "removedRoots": [
+    "AI Cooperative Party",
+    "Agent UI Event System"
+  ],
+  "removedPaths": [
+    "Assets/Scripts/InGame/Object/AI",
+    "Assets/Scripts/InGame/Object/AI.meta",
+    "Assets/Scripts/Shared",
+    "Assets/Scripts/Shared.meta",
+    "Assets/Scripts/Editor/Verification",
+    "Assets/Scripts/Editor/Verification.meta",
+    "Assets/Scripts/Editor/AgentPlaygroundCapture.cs",
+    "Assets/Scripts/Editor/AgentPlaygroundCapture.cs.meta",
+    "Assets/Scripts/Editor/AgentPlaygroundSetup.cs",
+    "Assets/Scripts/Editor/AgentPlaygroundSetup.cs.meta",
+    "Assets/Scripts/Editor/CompanionConversationSetup.cs",
+    "Assets/Scripts/Editor/CompanionConversationSetup.cs.meta",
+    "Assets/Data/Companions",
+    "Assets/Data/Companions.meta",
+    "Assets/Data/AgentModelSettings.asset",
+    "Assets/Data/AgentModelSettings.asset.meta",
+    "Tools/AgentBridge",
+    "Tools/Start-LocalAgentModel.ps1",
+    "Tools/Start-CompanionService.ps1",
+    "Tools/Install-LocalSpeech.ps1",
+    "Dosc/ai-companions.html",
+    "Dosc/companion-conversation.html",
+    "Dosc/companion-voice.html",
+    "Dosc/reference/agents",
+    "Dosc/reference/conversation",
+    "Dosc/reference/transparent-chat"
+  ]
+}
