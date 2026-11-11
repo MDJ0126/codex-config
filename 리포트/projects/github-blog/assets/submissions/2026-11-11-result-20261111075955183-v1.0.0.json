@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 팀 프로필과 공용 로고 적용, Analytics 속성 연결 확인",
+    "summary": "개인 소개를 팀 소개로 바꾸고 기존 MIRO 로고를 사용했습니다. 운영 데스크톱과 모바일에서 확인했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공유 sidebarProfile을 MIRO 팀 / 사람과 AI가 함께 만들고 기록합니다. / 게임 개발 이야기와 기술 소식을 전합니다.로 변경했습니다. 이미지 경로는 /tab-icon.svg입니다. 팀 이미지에는 object-fit: contain과 border-radius: 14px를 적용했습니다. CSS 캐시 식별자를 갱신했습니다.\n\n![변경 전 재구성](../assets/team-profile-20261111/miro-team-profile-before.png)\n\n![변경 후](../assets/team-profile-20261111/miro-team-profile-after.png)\n\n![모바일](../assets/team-profile-20261111/miro-team-profile-mobile.png)",
+    "verification": "운영 주소 https://miro-lab.pages.dev/ 에서 1500px 및 390px 뷰포트의 팀 소개 문구와 로고 로딩을 확인하고 Chrome 캡처 API로 저장했습니다. 변경 전 캡처는 동일 운영 화면에 이전 프로필 마크업을 복원해 재구성했습니다. site.json의 gaMeasurementId는 G-MQJ2P5ENMQ, 관리자 Worker의 GA_PROPERTY_ID는 546066893으로 스크린샷의 기존 속성과 일치합니다. 로그인 계정 내부 데이터 스트림 이름과 URL은 미확인입니다. 별도 테스트는 실행하지 않았습니다.",
+    "remaining": "Google Analytics 계정 내부 데이터 스트림 URL은 미확인입니다. Analytics 계정 설정은 변경하지 않았습니다. 전역 지침 변경 없음: 기존 프로필 공용화 규칙으로 충분합니다.",
+    "outcome": "ade011c를 main에 푸시했고 miro-lab.pages.dev 운영 반영을 확인했습니다.",
+    "proposedTime": "4~6분",
+    "actualTime": "2026-11-11 16:55:19 KST 시작, 운영 화면 확인 16:57:23 KST (2분 4초), 결과 보고 작성 포함 약 5분",
+    "xerjEvidence": "소스와 운영 화면 직접 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
