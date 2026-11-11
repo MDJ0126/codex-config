@@ -1,5 +1,45 @@
 [
   {
+    "title": "Pixora Studio와 플레이어·몬스터 전용 픽셀 카메라 적용",
+    "summary": "제품은 Pixora Studio만 가져오며 배경을 제외한 캐릭터만 실제 렌더로 비교합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111134807418-v1.0.0.html",
+    "date": "2026-11-11T13:48:07.418Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 동료 제거에 함께 누락된 기존 몬스터 행동 코드 복원",
+    "summary": "기존 MonsterAI와 MonsterBehaviorAction을 원본 GUID로 복원했습니다. AI 동료·대화·연결 기능은 복원하지 않았습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111134634009-v1.0.0.html",
+    "date": "2026-11-11T13:46:34.009Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 도입과 플레이어·몬스터 전용 픽셀 카메라",
+    "summary": "Pixora Studio만 도입하고 캐릭터 프리팹 49개를 구성했습니다. 실제 URP 화면에서 배경 815,995픽셀은 동일했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111134632367-v1.0.0.html",
+    "date": "2026-11-11T13:46:32.367Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 동료·대화·마이크·PC 에이전트 연결 제거",
+    "summary": "AI 기능을 제거하고 플레이어·몬스터 전투 구성으로 되돌렸습니다. 다른 작업과 삭제 전 복구 백업은 보존했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111130655924-v1.0.0.html",
+    "date": "2026-11-11T13:06:55.924Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "왼쪽 투명 동료 대화창 디자인",
     "summary": "왼쪽의 작은 투명 대화창과 채팅·마이크 모드를 실제 Unity에서 확인합니다.",
     "project": "fantasya",

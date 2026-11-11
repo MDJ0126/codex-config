@@ -1,0 +1,47 @@
+{
+    "at": "2026-11-11T22:42:17.4467140+09:00",
+    "renderPath": "URP object buckets: 3 roots / 1 sizes",
+    "sceneCaptures": 5,
+    "actorCount": 3,
+    "targetCount": 3,
+    "nonActorTargets": 0,
+    "changedPixels": 14438,
+    "backgroundChangedPixels": 0,
+    "inspectedBackgroundPixels": 815995,
+    "originalRenderingMasksRestored": true,
+    "targets": [
+        {
+            "name": "Player",
+            "pixelSize": 4,
+            "screenBounds": {
+                "serializedVersion": "2",
+                "x": 547.2554321289063,
+                "y": 87.71672058105469,
+                "width": 181.80389404296876,
+                "height": 238.3329315185547
+            }
+        },
+        {
+            "name": "Orc Warrior",
+            "pixelSize": 4,
+            "screenBounds": {
+                "serializedVersion": "2",
+                "x": 710.8939819335938,
+                "y": 277.82708740234377,
+                "width": 229.08648681640626,
+                "height": 207.126220703125
+            }
+        },
+        {
+            "name": "Skeleton Soldier",
+            "pixelSize": 4,
+            "screenBounds": {
+                "serializedVersion": "2",
+                "x": 578.1773681640625,
+                "y": 307.90911865234377,
+                "width": 125.260986328125,
+                "height": 143.62811279296876
+            }
+        }
+    ]
+}

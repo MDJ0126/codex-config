@@ -1,5 +1,144 @@
 [
   {
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111134807418-v1.0.0.html",
+    "postPath": "projects/fantasya/posts/2026-11-11-manual-20261111134807418-v1.0.0.md",
+    "date": "2026-11-11T13:48:07.418Z",
+    "version": "v1.0.0",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-pixora-character-pixels-20261111",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "Pixora Studio와 플레이어·몬스터 전용 픽셀 카메라 적용",
+      "summary": "제품은 Pixora Studio만 가져오며 배경을 제외한 캐릭터만 실제 렌더로 비교합니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "이번 승인 범위의 공개 배포와 본문·첨부·Mermaid 확인 진행 중. 인스턴싱 경고·다른 플랫폼·자연 전투·Image Maker 생성·목록 카드 썸네일은 기존 제한입니다.",
+      "outcome": "게임 적용과 문서 반영 완료. 2026-11-12 사용자가 이번 자료 공개·main 반영·푸시·배포를 승인했습니다. 공개 확인을 진행합니다.",
+      "proposedTime": "2026-11-11 22:11 KST 시작, 30~50분",
+      "actualTime": "34분 37초, 기록 시각 2026-11-11 22:46:30 KST. 공개 배포 확인은 후속 단계입니다.",
+      "xerjEvidence": "사용자 지침에 따라 rg·정확한 로컬 제품/URP 소스·실제 Unity 로그 사용",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-pixora-character-pixels-20261111",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "qa",
+      "goal": "Pixora Studio를 도입하고 플레이어·몬스터만 픽셀화한다.",
+      "completionCriteria": "원본 DDT·다른 제품을 보존하고 캐릭터 한정 실제 렌더·배경 보존·정적 설정 저장·문서 근거를 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "Pixora 제품과 의존성 격리 도입",
+          "action": "DDT 데이터는 보존하고 Pixora Studio와 필수 Templete만 사본에 도입한다.",
+          "expected": "기존 DDT와 신규 제품 어셈블리 컴파일",
+          "qa": "도입 전 파일 목록과 코드·버전·Unity 로그를 비교한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "제품·DDT Unity 컴파일 확인"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "캐릭터 전용 픽셀 렌더 구성",
+          "action": "카메라 전용 Forward 렌더러와 4픽셀 캐릭터 표식을 저장한다.",
+          "expected": "플레이어·몬스터만 픽셀화, 배경 원본 유지",
+          "qa": "같은 프레임 OFF/ON 이미지와 배경 픽셀 차이, 대상 목록·상태 복구를 비교한다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "캐릭터 3개만 픽셀화, 배경 815995픽셀 차이 0"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "원본 반영과 사용·검증 문서",
+          "action": "검증한 제품과 게임 에셋을 원본에 반영하고 문서와 공개 근거를 정리한다.",
+          "expected": "데이터 보존·씬 재열기·문서 링크·공개 결과 확인",
+          "qa": "원본 사본 해시와 실제 실행, 데이터·원본 보존 근거를 확인한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "qa",
+          "revision": 1,
+          "result": "원본 적용·DDT 2811파일 해시 보존·README/Dosc 갱신"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "사용자가 전체 제품 대신 Pixora Studio만 지정했습니다. 진행 중 기존 몬스터 AI 파일 누락을 발견해 백업에서 해당 두 클래스만 복원했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "step",
+          "at": "2026-11-11T22:29:58+09:00",
+          "summary": "최초 렌더에서 배경 차이 발견",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "제품·DDT 컴파일 및 일반 몬스터 코드 복원",
+              "evidence": "Unity import 및 pixora-character-render 로그",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "fail",
+              "actual": "배경 563픽셀 차이, 원인 조사",
+              "evidence": "최초 OFF/ON 비교",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "Q02",
+          "kind": "step",
+          "at": "2026-11-11T22:42:17+09:00",
+          "summary": "워밍업 후 실제 동일 프레임 비교 통과",
+          "results": [
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "캐릭터3개, 비캐릭터0개, 배경815995픽셀 차이0, OFF반복 차이0",
+              "evidence": "../assets/pixora-20261111/render.json 및 before.png/after.png",
+              "dependencies": {
+                "T01": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "verification"
+    }
+  },
+  {
     "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111123837110-v1.0.0.html",
     "postPath": "projects/fantasya/posts/2026-11-11-manual-20261111123837110-v1.0.0.md",
     "date": "2026-11-11T12:38:37.110Z",
