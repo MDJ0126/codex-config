@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "Turnlume 저장소 이름과 공개 사이트 주소 적용",
+    "summary": "GitHub 저장소와 origin을 Turnlume으로 변경하고 새 Pages 주소에 배포했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![새 이름의 홈페이지](../assets/turnlume-rename-20261111/home-after.png)\n\nGitHub 저장소 ID 672617668을 유지하며 TurnRoom을 Turnlume으로 변경했습니다. 로컬 origin은 https://github.com/MDJ0126/Turnlume.git 입니다. main 커밋 8c94b7b7273896622b8a86aa0f57d69d9ac6b4a2가 로컬과 원격에서 일치합니다.\n\n```mermaid\nflowchart LR\n  A[\"기존 GitHub 저장소 ID\"] --> B[\"이름 Turnlume\"]\n  B --> C[\"로컬 origin 갱신\"]\n  C --> D[\"새 주소 main에 푸시\"]\n  D --> E[\"로컬과 원격 커밋 대조\"]\n```\n\n새 Cloudflare Pages 프로젝트 turnlume에 사이트를 배포했습니다. 사이트 표기와 공식 URL, 언어별 대체 URL, 사이트맵, 배포 명령과 프로젝트 지침을 새 이름으로 갱신했습니다. 저장소의 Website/Ternlume 폴더는 기존 작업 경로입니다.\n\n```mermaid\nflowchart LR\n  A[\"이전 Pages 주소\"] -->|301과 기존 경로| B[\"turnlume.pages.dev\"]\n  C[\"다국어 사이트 빌드\"] --> B\n  B --> D[\"공식 주소와 이름 확인\"]\n  B --> E[\"기존 글과 문서 응답 확인\"]\n```\n\n이전 프로젝트의 배포 소스는 다음 두 규칙입니다.\n\n```text\n/ https://turnlume.pages.dev/ 301\n/* https://turnlume.pages.dev/:splat 301\n```\n\n### 사이트 이름 적용 함수\n\n공통 HTML이 설정의 이름과 URL을 사용하도록 조정했습니다. shell 함수 전체입니다.\n\n```javascript\nfunction shell(locale, path, title, description, body, thumbnail) {\n  const t = locales[locale];\n  const local = target => localizedPath(locale, target);\n  const canonical = config.url + local(path);\n  const alternates = Object.keys(languages).map(code =>\n    `<link rel=\"alternate\" hreflang=\"${code}\" href=\"${escape(config.url + localizedPath(code, path))}\">`).join('');\n  const languageLinks = Object.entries(languages).map(([code, label]) =>\n    `<a href=\"${localizedPath(code, path)}\" lang=\"${code}\" hreflang=\"${code}\"${code === locale ? ' aria-current=\"page\"' : ''}>${escape(label)}</a>`).join('');\n  return `<!doctype html><html lang=\"${locale}\"><head><meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>${escape(title)}</title>\n    <meta name=\"description\" content=\"${escape(description)}\"><meta name=\"theme-color\" content=\"#123c32\">\n    <link rel=\"canonical\" href=\"${escape(canonical)}\">${alternates}\n    <link rel=\"alternate\" hreflang=\"x-default\" href=\"${escape(config.url + path)}\">\n    <meta property=\"og:title\" content=\"${escape(title)}\"><meta property=\"og:description\" content=\"${escape(description)}\">\n    <meta property=\"og:url\" content=\"${escape(canonical)}\"><meta property=\"og:image\" content=\"${escape(config.url + (thumbnail || designDataTableLogo))}\">\n    <link rel=\"icon\" href=\"/assets/ternlume.svg\" type=\"image/svg+xml\">\n    <link rel=\"stylesheet\" href=\"/assets/site.css\"><link rel=\"stylesheet\" href=\"/assets/localized.css?v=${localizedStyle}\">\n    <script src=\"/assets/site.js\" defer></script></head><body>\n    <a class=\"skip\" href=\"#main\">${escape(t.skip)}</a>\n    <header class=\"site-header wrap\">\n      <a class=\"brand\" href=\"${local('/')}\"><img src=\"/assets/ternlume.svg\" width=\"38\" height=\"38\" alt=\"\">${escape(config.name)}</a>\n      <nav><a href=\"${local('/')}#tools\">${escape(t.tools)}</a><a href=\"${local('/updates/')}\">${escape(t.journal)}</a><a href=\"${guide(locale)}\">${escape(t.docs)}</a></nav>\n      <details class=\"language-menu\"><summary>${escape(t.language)} <span aria-hidden=\"true\">▾</span></summary><div>${languageLinks}</div></details>\n    </header>\n    ${body}\n    <footer class=\"wrap footer\"><a class=\"brand\" href=\"${local('/')}\"><img src=\"/assets/ternlume.svg\" width=\"30\" height=\"30\" alt=\"\">${escape(config.name)}</a>\n      <p>${escape(t.tagline)}</p><div><a href=\"${escape(config.publisher)}\">Unity Asset Store ↗</a>\n      <a href=\"${local('/')}#contact\">${escape(t.contact)}</a><a href=\"${local('/privacy/')}\">${escape(t.privacy)}</a></div>\n      <small>© ${new Date().getUTCFullYear()} ${escape(config.name)}</small></footer></body></html>`;\n}\n```\n\n### 대화 기록\n\n- 사용자 · 자동완성으로 이름이 잘못됐다고 정정하고 “Turnlume으로 리포지토리 이름 바꾸고 깃도 바꾸고 주소도 그렇게 적용해”라고 요청했습니다.\n- Codex · 저장소 ID와 이름 사용 가능 여부를 확인한 뒤 이름을 변경하고 새 Pages 주소를 배포했습니다.",
+    "verification": "9개 언어로 생성한 HTML 183개와 로컬 참조 4,928개를 확인했습니다. 새 공개 주소의 171개 경로가 빌드와 일치합니다. 이전 주소의 언어별 글·홈·목록·개인정보, 이미지와 쿼리를 포함한 155개 301 응답을 대조했습니다. 홈페이지와 한국어 목록·글에서 새 이름과 공식 주소를 확인했습니다.\n\n![홈 이전 이름](../assets/turnlume-rename-20261111/home-before.png)\n![홈 새 이름](../assets/turnlume-rename-20261111/home-after.png)\n\n![Journal 이전 이름](../assets/turnlume-rename-20261111/journal-before.png)\n![Journal 새 이름](../assets/turnlume-rename-20261111/journal-after.png)\n\n![게시물 이전 이름](../assets/turnlume-rename-20261111/post-before.png)\n![게시물 새 이름](../assets/turnlume-rename-20261111/post-after.png)",
+    "remaining": "사이트는 Wrangler로 직접 배포했습니다. 기존 푸시 자동 배포의 Cloudflare API 토큰 등록은 별도 미완료 사항이며, 이번 변경으로 워크플로의 대상은 새 turnlume 프로젝트가 됐습니다. 과거 게시물의 당시 이름과 출처 기록은 유지했습니다.",
+    "outcome": "[MDJ0126/Turnlume](https://github.com/MDJ0126/Turnlume) 저장소와 [Turnlume 사이트](https://turnlume.pages.dev/)를 적용했습니다. 기존 ternlume.pages.dev는 각 경로를 새 주소로 301 연결합니다.",
+    "proposedTime": "초기 확인 3~5분, 전체 8~15분. 장시간 중단 후 14:47 KST 재개 시점에는 5~8분 예상.",
+    "actualTime": "2026-11-11 09:10:53 KST 시작. 중단 구간을 거쳐 14:47:45 KST 재개. 14:50:22 KST에 사이트·리디렉션·원격 검증 완료. 전체 경과 5시간 39분 29초, 재개 후 해당 검증까지 2분 37초. 보고서 공개 검증 별도.",
+    "xerjEvidence": "GitHub 저장소 ID, origin, 원격 커밋, Cloudflare 배포 응답과 공개 HTML·301 응답을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
