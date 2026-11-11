@@ -1,0 +1,147 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>채팅·마이크 모드 분리와 로컬 한국어 음성 인식·확인 후 전송 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>채팅·마이크 모드 분리와 로컬 한국어 음성 인식·확인 후 전송</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">마이크를 직접 시작하고 인식한 문장을 확인 후 보내도록 분리했습니다. 공용 WAV 인코더를 모체에도 반영했습니다.</p><div class="post-byline"><time datetime="2026-11-11T11:07:12.583Z">2026년 11월 11일 오후 8:07 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>채팅 입력과 마이크 모드를 분리했습니다. 마이크는 버튼으로만 시작하고 녹음 → 로컬 인식 → 문장 검토 → 보내기 순서로 처리합니다. 실제 합성 한국어 샘플을 인식했으며, 확인 버튼 전에는 약속이 바뀌지 않았습니다.</p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/final-voice.png" alt="대표 실제 화면: 음성 검토란과 모드" loading="lazy"><figcaption>대표 실제 화면: 음성 검토란과 모드</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>키보드 초안과 음성 검토란을 분리했습니다. 녹음은 최대 30초, 기본 마이크·16kHz PCM16 모노를 사용합니다. 모드·동료 변경과 취소는 마이크·요청을 정리하고 늦은 결과를 폐기합니다. 음성 합성 TTS는 추가하지 않았습니다.</p>
+<pre class="mermaid">flowchart TD
+ A[사용자가 마이크 모드 선택] --&gt; B[녹음 시작 버튼]
+ B --&gt; C[마이크 녹음 최대 30초]
+ C --&gt; D[종료 후 공용 WAV 변환]
+ D --&gt; E[로컬 Whisper 인식]
+ E --&gt; F[별도 문장 검토란]
+ F --&gt; G{사용자가 보내기를 눌렀나?}
+ G --&gt;|아니오| F
+ G --&gt;|예| H[같은 동료 대화와 약속 처리]
+</pre>
+<p>다음은 AgentVoiceInput.cs의 현재 결과 적용과 취소 생명주기 전체입니다. 전송은 별도 Send 메서드에서만 처리합니다.</p>
+<pre><code data-language="csharp">private IEnumerator Recognize(byte[] wave, int version)
+{
+    yield return null;
+    yield return _link.Transcribe(wave, (success, text, milliseconds) =&gt;
+    {
+        if (version != _requestVersion || !IsVoiceMode || _panel.Selected?.CompanionId != _companionId)
+        {
+            return;
+        }
+        if (success)
+        {
+            _review.text = text;
+            _status.text = &quot;인식 &quot; + milliseconds.ToString(&quot;F0&quot;) + &quot;ms · 문장을 확인하고 보내기를 눌러 주세요.&quot;;
+        }
+        else
+        {
+            _status.text = text;
+        }
+    });
+    _recognition = null;
+    _record.interactable = true;
+}
+</code></pre>
+<pre><code data-language="csharp">public void Cancel()
+{
+    _requestVersion++;
+    if (_clip != null)
+    {
+        Microphone.End(null);
+        Destroy(_clip);
+        _clip = null;
+    }
+    if (_recognition != null)
+    {
+        StopCoroutine(_recognition);
+        _recognition = null;
+    }
+    _link.CancelSpeech();
+    _review.text = string.Empty;
+    _record.interactable = true;
+    _stop.interactable = false;
+    _status.text = &quot;녹음하지 않는 중 · 녹음 시작 버튼을 눌러 주세요.&quot;;
+}
+</code></pre>
+<pre class="mermaid">flowchart TD
+ A[모드 변경 또는 동료 변경 또는 취소] --&gt; B[요청 버전 증가]
+ B --&gt; C[마이크 종료와 메모리 해제]
+ C --&gt; D[진행 코루틴과 HTTP 취소]
+ D --&gt; E[이전 검토 문장 폐기]
+ E --&gt; F[다른 동료에 늦은 결과 적용 금지]
+</pre>
+<h2 id="section-4">검증</h2>
+<p>공식 whisper.cpp b5454 Windows CPU 실행기와 다국어 base 모델을 프로젝트 전용 폴더에 설치하고 체크섬을 확인했습니다. 물리 마이크를 켜지 않고 Microsoft Heami Desktop이 만든 4.11초 합성 한국어를 사용했습니다. “루나, 내가 신호할 때까지 기다려 주세요.”가 “루나, 내가 신호할 때까지 기다려주세요.”로 인식됐습니다. 직접 1603ms, 초기 Unity 2153ms, 공용화 후 최종 Unity 약 2382ms였습니다. <a class="report-link" href="../assets/companion-conversation-20261111/speech-recognition.json">실측</a> · <a class="report-link" href="../assets/companion-conversation-20261111/34-shared-speech-preview.json">최종 검토 상태</a></p>
+<p>확인 전 auto → 확인 뒤 hold, 실제 약속 적용 기록을 확인했습니다. 모드 전환 후 인식 결과가 다시 나타나지 않았고 임시 WAV·문장 파일도 정리됐습니다. 7개 Node 테스트에는 WAV·무음 거부와 모델 JSON 교정도 포함됩니다.</p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/after.png" alt="전: 단일 입력창" loading="lazy"><figcaption>전: 단일 입력창</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/final-text.png" alt="후: 채팅 입력 모드" loading="lazy"><figcaption>후: 채팅 입력 모드</figcaption></figure></p>
+<p>공용 Game.Audio.AudioWaveEncoder는 Fantasya·모체·실제 실행 사본의 소스 SHA256이 같습니다. 아래는 실제 공용 클래스 전체입니다.</p>
+<pre><code data-language="csharp">using System;
+using System.IO;
+using System.Text;
+using UnityEngine;
+
+namespace Game.Audio
+{
+    /// &lt;summary&gt;
+    /// 게임별 입력·통신·UI에 의존하지 않고 Unity 오디오 샘플을 표준 PCM WAV로 변환한다.
+    /// &lt;/summary&gt;
+    public static class AudioWaveEncoder
+    {
+        /// &lt;summary&gt;
+        /// 16kHz 클립의 유효 샘플을 모노 PCM16 WAV로 반환하며 원본 클립과 디스크를 변경하지 않는다.
+        /// &lt;/summary&gt;
+        public static byte[] EncodePcm16Mono(AudioClip clip, int samples)
+        {
+            if (clip == null)
+            {
+                throw new ArgumentNullException(nameof(clip));
+            }
+            if (clip.frequency != 16000 || samples &lt; 1 || samples &gt; clip.samples)
+            {
+                throw new ArgumentException(&quot;16kHz 클립의 유효한 샘플 수가 필요합니다.&quot;);
+            }
+            var data = new float[clip.samples * clip.channels];
+            if (!clip.GetData(data, 0))
+            {
+                throw new InvalidOperationException(&quot;읽을 수 있는 오디오 데이터가 필요합니다.&quot;);
+            }
+            using var stream = new MemoryStream();
+            using var writer = new BinaryWriter(stream);
+            writer.Write(Encoding.ASCII.GetBytes(&quot;RIFF&quot;));
+            writer.Write(36 + samples * 2);
+            writer.Write(Encoding.ASCII.GetBytes(&quot;WAVEfmt &quot;));
+            writer.Write(16);
+            writer.Write((short)1);
+            writer.Write((short)1);
+            writer.Write(16000);
+            writer.Write(32000);
+            writer.Write((short)2);
+            writer.Write((short)16);
+            writer.Write(Encoding.ASCII.GetBytes(&quot;data&quot;));
+            writer.Write(samples * 2);
+            for (int index = 0; index &lt; samples; index++)
+            {
+                float mono = 0f;
+                for (int channel = 0; channel &lt; clip.channels; channel++)
+                {
+                    mono += data[index * clip.channels + channel];
+                }
+                float normalized = mono / clip.channels;
+                if (float.IsNaN(normalized) || float.IsInfinity(normalized))
+                {
+                    throw new ArgumentException(&quot;유한한 오디오 샘플이 필요합니다.&quot;);
+                }
+                writer.Write((short)Mathf.RoundToInt(Mathf.Clamp(normalized, -1f, 1f) * short.MaxValue));
+            }
+            return stream.ToArray();
+        }
+    }
+}
+</code></pre>
+<p>모체 main c7b40e5 반영·푸시와 <a class="report-link" href="https://github.com/MDJ0126/SampleProjectForUnity/actions/runs/43008565911">문서 배포</a> 성공, <a class="report-link" href="https://mdj0126.github.io/SampleProjectForUnity/docs/documentation/29-wave-encoding.html">공개 본문·Mermaid</a> 표시를 확인했습니다. 모체 전체 게임은 미확인입니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>물리 마이크 녹음·사용자 발화 정확도, Claude/Cursor 앱의 실제 접속, 최대 32명 부하·네트워크 코업·게임 빌드 배포는 미확인입니다. 아카이브의 목록 카드 썸네일은 현재 템플릿이 지원하지 않아 표시 검증을 완료하지 못했습니다. 대표 실제 화면을 각 본문에 등록했고 이 제한 때문에 게시물 상태를 부분 확인으로 기록합니다. 물리 마이크 녹음 성공과 합성 샘플 인식 성공을 구분합니다. 설치 명령: pwsh -File Tools/Install-LocalSpeech.ps1. 마이크 원본을 공개 자료에 포함하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 18:47 KST 시작, 최초 70<del>100분. 채팅·마이크 모드 추가 요청으로 20</del>35분 추가 예상(총 90~135분).</li>
+<li>실제로 완료된 시간: 구현·실제 게임 검증·모체 반영은 2026-11-11 20:04 KST까지 완료(시작부터 약 77분). 아카이브 게시와 외부 검증은 별도 진행 중이며 실제 최종 시각을 작업 기록에 남깁니다.</li>
+<li>XERJ: 미사용 — 사용자 전역 지침에 따라 XERJ에 연결하지 않고 rg·현재 소스·로그·실제 Unity 결과를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111110712583-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-11-result-20261111110712583-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

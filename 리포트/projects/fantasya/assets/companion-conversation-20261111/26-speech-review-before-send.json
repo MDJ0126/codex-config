@@ -1,0 +1,93 @@
+{
+  "id": "42f24f1d-8ccb-4824-9ce7-753792218eea",
+  "success": true,
+  "message": "Actual Play Mode snapshot",
+  "at": "2026-11-11T19:51:46.8127639+09:00",
+  "selected": "luna",
+  "input": "",
+  "typing": false,
+  "virtualForwardPressed": false,
+  "microphoneMode": true,
+  "recording": false,
+  "recognizedText": "루나, 내가 신호할 때까지 기다려주세요.",
+  "speechStatus": "인식 2153ms · 문장을 확인하고 보내기를 눌러 주세요.",
+  "playerPosition": {
+    "x": 0,
+    "y": 0.07999980449676514,
+    "z": 0
+  },
+  "companions": [
+    {
+      "id": "luna",
+      "name": "루나",
+      "personality": "신중하고 관찰력이 좋은 정찰 동료. 짧고 차분하게 말하며 위험과 약속을 먼저 확인한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "follow",
+      "reason": "모델이 주변 상황을 보고 follow 선택",
+      "receipt": "약속 적용: 약속 해제 [auto; 2026-11-11T10:37:38.607Z]",
+      "position": {
+        "x": -2.6999998092651367,
+        "y": 0.07999978214502335,
+        "z": -2
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 0
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": []
+    },
+    {
+      "id": "bram",
+      "name": "브람",
+      "personality": "듬직하고 솔직한 수호 동료. 동료 보호를 좋아하고 실천할 수 있는 약속만 한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "follow",
+      "reason": "모델이 주변 상황을 보고 follow 선택",
+      "receipt": "약속 적용: 자유롭게 판단하며 플레이어를 도와주세요. [auto; 2026-11-11T10:04:16.862Z]",
+      "position": {
+        "x": -0.8999999761581421,
+        "y": 0.07999978214502335,
+        "z": -2
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 0
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": []
+    },
+    {
+      "id": "sera",
+      "name": "세라",
+      "personality": "호기심 많고 다정한 탐험 동료. 함께 겪은 일을 기억하며 다음 모험을 제안한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "follow",
+      "reason": "모델이 주변 상황을 보고 follow 선택",
+      "receipt": "약속 적용: 자유롭게 판단하며 플레이어를 도와주세요. [auto; 2026-11-11T10:04:16.863Z]",
+      "position": {
+        "x": 0.8999999761581421,
+        "y": 0.07999978214502335,
+        "z": -2
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 0
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": []
+    }
+  ]
+}

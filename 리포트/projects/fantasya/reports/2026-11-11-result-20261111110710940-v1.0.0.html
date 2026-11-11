@@ -1,0 +1,66 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>사용자 PC의 Codex·Claude·Cursor가 같은 게임 동료에 참여하는 MCP 연결 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>사용자 PC의 Codex·Claude·Cursor가 같은 게임 동료에 참여하는 MCP 연결</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">실제 Codex CLI가 게임의 질문을 받고 자기 모델로 답변한 뒤 Unity 행동 적용을 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-11T11:07:10.940Z">2026년 11월 11일 오후 8:07 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>사용자 PC의 에이전트가 자기 모델·기존 계정으로 동료를 맡습니다. 실제 Codex CLI가 루나의 게임 메시지함을 읽고 방패 역할 선호 기억을 사용해 답했으며, 대기 명령의 실제 Unity receipt를 확인하고 제어권을 해제했습니다.</p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/03-native-codex-dialogue.png" alt="대표 화면: Codex CLI 직접 응답" loading="lazy"><figcaption>대표 화면: Codex CLI 직접 응답</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>stdio MCP와 셸 CLI는 같은 로컬 서비스를 사용합니다. Codex 전역 MCP와 Claude Code .mcp.json·Cursor .cursor/mcp.json 설정기를 제공합니다. 호스트별 절대 경로와 개인 기억은 Git에서 제외합니다. 같은 동료는 5~120초 독점 제어권 하나만 허용하고 다른 동료는 별도 에이전트가 맡을 수 있습니다. 외부 제어 중 일반 게임 대화는 Qwen 대신 해당 PC 에이전트에게 전달됩니다.</p>
+<pre class="mermaid">flowchart TD
+ A[PC 에이전트가 관측] --&gt; B[동료 제어권 획득]
+ B --&gt; C[게임 메시지 대기]
+ C --&gt; D[자신의 모델로 답변]
+ D --&gt; E[확인한 메시지 ID까지 처리]
+ E --&gt; F[유효 행동 요청]
+ F --&gt; G[Unity가 세션과 약속 재검사]
+ G --&gt; H[실제 receipt 확인 후 해제 또는 갱신]
+</pre>
+<p>서버의 접수 검사에 더해 Unity 메인 스레드에서 실제 상태를 다시 확인합니다. 다음은 AIAgentController.Conversation.cs의 완전한 적용 메서드와 허용 검사입니다.</p>
+<pre><code data-language="csharp">private bool ApplyExternalCommand(CompanionCommand command, string sessionId)
+{
+    long age = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - command.issuedAt;
+    if (!_externalActive || command.owner != _externalControllerName || !_monster.IsAlive || command.sessionId != sessionId || age &lt; -1000 || age &gt; 8000 ||
+        !IsActionPermitted(command.action) || float.IsNaN(command.seconds) || float.IsInfinity(command.seconds) || command.seconds &lt; 1f || command.seconds &gt; 6f)
+    {
+        return false;
+    }
+    Monster target = null;
+    if (command.action == &quot;attack&quot;)
+    {
+        target = Monster.ActiveMonsters.FirstOrDefault(candidate =&gt; candidate.GetInstanceID() == command.targetId &amp;&amp; IsAllowedEnemy(candidate));
+        if (target == null)
+        {
+            return false;
+        }
+    }
+    else if (command.targetId != 0 || (command.action == &quot;follow&quot; &amp;&amp; (_leader == null || !_leader.IsAlive)))
+    {
+        return false;
+    }
+    _action = command.action;
+    _target = target;
+    _leaseEnds = Time.time + command.seconds;
+    _actionReason = command.owner + &quot;: &quot; + command.reason;
+    return true;
+}
+</code></pre>
+<pre><code data-language="csharp">private bool IsActionPermitted(string action)
+{
+    bool known = IsPromiseMode(action) &amp;&amp; action != &quot;auto&quot; || action == &quot;attack&quot;;
+    return known &amp;&amp; (_promise.mode == &quot;auto&quot; || _promise.mode == action) &amp;&amp; (action != &quot;attack&quot; || _promise.allowAttack);
+}
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>Codex CLI v0.167.0-alpha.3.2가 실제 fantasia stdio MCP에 연결했습니다. 플레이어 메시지 저장 2026-11-11T10:30:26.428Z → Codex 답변 저장 2026-11-11T10:30:32.911Z, 서비스 기준 약 6483ms였습니다. 모델 추론·호스트 도구 왕복이 포함되며 화면 표시까지의 지연 보장은 아닙니다.</p>
+<p>응답: “저장된 기억에는 플레이어님께서 방패 역할을 좋아하시고, 이번 모험에서는 동료와 함께 움직이기를 원하신다고 되어 있어요. 현재 실제로 방패 역할을 맡고 계신지는 아직 확인하지 못했어요. 저는 신중하게 주변을 살피는 정찰 동료 루나이고, 지금은 게임 밖의 Codex CLI가 저를 직접 제어하며 답하고 있어요. 신호하실 때까지 기다리겠다는 약속도 확인했으니, 조용히 대기하겠습니다.”</p>
+<p>실제 명령 ID 0de11f9a-bb85-46a7-9041-d1f10b9200a3을 Unity receipt에서 확인했습니다. <a class="report-link" href="../assets/companion-conversation-20261111/15-native-observed.json">동료의 실제 기록</a></p>
+<p>두 실제 MCP 프로세스의 공유 기억과 제어권 충돌 테스트, 외부 대화 확인 시 새 미확인 메시지가 남는 테스트, 약속 위반·오래된 관측·잘못된 대상 거부가 통과했습니다. Claude/Cursor 설정은 재실행해도 보존됐지만 앱이 설치되지 않아 실제 호스트 접속은 미확인입니다.</p>
+<p>설정: node Tools/AgentBridge/configure.mjs codex 또는 claude 또는 cursor. 새 MCP 세션에서 PLAYER_AGENT.md를 읽고 observe → claim → wait → say_as → act → 실제 receipt → release 순으로 참여합니다. <a class="report-link" href="../assets/companion-conversation-20261111/source.zip">현재 연결 소스</a></p>
+<p>공식 근거: <a class="report-link" href="https://developers.openai.com/codex/mcp">Codex MCP</a>, <a class="report-link" href="https://code.claude.com/docs/en/mcp">Claude Code MCP</a>, <a class="report-link" href="https://cursor.com/docs/mcp">Cursor MCP</a>.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>물리 마이크 녹음·사용자 발화 정확도, Claude/Cursor 앱의 실제 접속, 최대 32명 부하·네트워크 코업·게임 빌드 배포는 미확인입니다. 아카이브의 목록 카드 썸네일은 현재 템플릿이 지원하지 않아 표시 검증을 완료하지 못했습니다. 대표 실제 화면을 각 본문에 등록했고 이 제한 때문에 게시물 상태를 부분 확인으로 기록합니다. 앱이나 대화가 종료되면 외부 에이전트가 자동으로 계속 플레이하지 않습니다. 이 Codex 대화는 CLI를 통해 동일한 서비스에 연결하며 전체 채팅 기억을 자동 동기화하지 않습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 18:47 KST 시작, 최초 70<del>100분. 채팅·마이크 모드 추가 요청으로 20</del>35분 추가 예상(총 90~135분).</li>
+<li>실제로 완료된 시간: 구현·실제 게임 검증·모체 반영은 2026-11-11 20:04 KST까지 완료(시작부터 약 77분). 아카이브 게시와 외부 검증은 별도 진행 중이며 실제 최종 시각을 작업 기록에 남깁니다.</li>
+<li>XERJ: 미사용 — 사용자 전역 지침에 따라 XERJ에 연결하지 않고 rg·현재 소스·로그·실제 Unity 결과를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111110710940-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-11-result-20261111110710940-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

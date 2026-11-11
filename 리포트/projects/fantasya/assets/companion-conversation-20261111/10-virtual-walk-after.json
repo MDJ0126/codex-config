@@ -1,0 +1,103 @@
+{
+  "id": "76d0b2e8-eaae-44a4-ad49-6098ad06aacd",
+  "success": true,
+  "message": "Actual Play Mode snapshot",
+  "at": "2026-11-11T19:30:26.6048467+09:00",
+  "selected": "luna",
+  "input": "",
+  "typing": false,
+  "virtualForwardPressed": false,
+  "playerPosition": {
+    "x": 0,
+    "y": 0.07999980449676514,
+    "z": 3.465188980102539
+  },
+  "companions": [
+    {
+      "id": "luna",
+      "name": "루나",
+      "personality": "신중하고 관찰력이 좋은 정찰 동료. 짧고 차분하게 말하며 위험과 약속을 먼저 확인한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "hold",
+      "reason": "약속 우선: 내가 신호할 때까지 기다려",
+      "receipt": "약속 적용: 내가 신호할 때까지 기다려 [hold; 2026-11-11T10:19:53.677Z]",
+      "position": {
+        "x": -2.6999998092651367,
+        "y": 0.07999978214502335,
+        "z": -2
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 3.465188980102539
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": []
+    },
+    {
+      "id": "bram",
+      "name": "브람",
+      "personality": "듬직하고 솔직한 수호 동료. 동료 보호를 좋아하고 실천할 수 있는 약속만 한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "follow",
+      "reason": "모델이 주변 상황을 보고 follow 선택",
+      "receipt": "약속 적용: 자유롭게 판단하며 플레이어를 도와주세요. [auto; 2026-11-11T10:04:16.862Z]",
+      "position": {
+        "x": 2.406679630279541,
+        "y": 0.0799999013543129,
+        "z": 5.575076580047607
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 3.465188980102539
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": [
+        {
+          "id": -1310,
+          "name": "오크 전사",
+          "health": 40,
+          "distance": 1.4593818187713623
+        }
+      ]
+    },
+    {
+      "id": "sera",
+      "name": "세라",
+      "personality": "호기심 많고 다정한 탐험 동료. 함께 겪은 일을 기억하며 다음 모험을 제안한다.",
+      "alive": true,
+      "health": 100,
+      "maxHealth": 100,
+      "action": "follow",
+      "reason": "모델이 주변 상황을 보고 follow 선택",
+      "receipt": "약속 적용: 자유롭게 판단하며 플레이어를 도와주세요. [auto; 2026-11-11T10:04:16.863Z]",
+      "position": {
+        "x": 0.8536458611488342,
+        "y": 0.0799999013543129,
+        "z": 2.4052531719207764
+      },
+      "leaderPosition": {
+        "x": 0,
+        "y": 0.07999980449676514,
+        "z": 3.465188980102539
+      },
+      "leaderAlive": true,
+      "leaderHealth": 100,
+      "targets": [
+        {
+          "id": -1310,
+          "name": "오크 전사",
+          "health": 40,
+          "distance": 4.981884956359863
+        }
+      ]
+    }
+  ]
+}

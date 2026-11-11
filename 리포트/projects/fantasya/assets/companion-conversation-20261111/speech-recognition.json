@@ -1,0 +1,20 @@
+{
+  "source": "Microsoft Heami Desktop synthetic Korean, not physical microphone",
+  "expected": "루나, 내가 신호할 때까지 기다려 주세요.",
+  "status": {
+    "ready": true,
+    "language": "ko",
+    "model": "Whisper base multilingual",
+    "busy": false
+  },
+  "audio": {
+    "seconds": 4.11,
+    "rms": 0.0769336270715719
+  },
+  "result": {
+    "text": "루나, 내가 신호할 때까지 기다려주세요.",
+    "requestMs": 1602.992,
+    "audioSeconds": 4.11,
+    "requiresPlayerConfirmation": true
+  }
+}

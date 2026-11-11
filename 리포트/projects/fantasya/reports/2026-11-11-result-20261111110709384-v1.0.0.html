@@ -1,0 +1,66 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>같은 동료와 게임 안팎에서 대화하고 기억·약속을 실제 행동에 연결 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>같은 동료와 게임 안팎에서 대화하고 기억·약속을 실제 행동에 연결</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">동료별 성격·공유 기억·대화창과 약속 우선 행동을 추가하고 실제 Unity에서 대기·추종 전환을 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-11T11:07:09.384Z">2026년 11월 11일 오후 8:07 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>게임 안팎의 루나가 같은 ID와 기억을 사용합니다. 대화창에는 현재 행동·이유·제어자와 성격, 기억·대화를 표시합니다. 기다려 약속 중 플레이어가 3.465m 움직여도 루나는 제자리에 머물렀고 따라와 지시 후 실제 이동했습니다.</p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/03-native-codex-dialogue.png" alt="대표 실제 결과: Codex가 루나로 대화" loading="lazy"><figcaption>대표 실제 결과: Codex가 루나로 대화</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>루나·브람·세라의 기본 성격 에셋, 동료당 명시 기억 32개·최근 메시지 60개, 게임과 독립된 로컬 서비스를 추가했습니다. 명시적 명령만 지속 약속으로 처리하며 긴급 생존 대응이 우선합니다. 모델이 바뀌어도 같은 ID를 사용하지만 인격·답변 품질이 완전히 같다는 보장은 아닙니다.</p>
+<pre class="mermaid">flowchart TD
+ A[게임 대화 또는 게임 밖 발언] --&gt; B[같은 동료 ID의 로컬 저장소]
+ B --&gt; C{명시적 약속인가?}
+ C --&gt;|예| D[약속 저장]
+ D --&gt; E[Unity 동기화와 실제 적용 기록]
+ C --&gt;|아니오| F[현재 응답 담당자와 대화]
+ E --&gt; G[실제 상태와 이유 표시]
+</pre>
+<p>대화창은 선택한 모드의 입력을 보내고, 공용 기억 문맥은 행동 판단에도 전달합니다. 아래는 현재 소스의 완전한 메서드입니다.</p>
+<pre><code data-language="csharp">public void Send()
+{
+    if (_talk != null || Selected == null || string.IsNullOrWhiteSpace(ActiveInput.text) || (_voice != null &amp;&amp; _voice.IsRecording))
+    {
+        return;
+    }
+    string text = ActiveInput.text.Trim();
+    ActiveInput.text = string.Empty;
+    _requestStatus = &quot;동료가 답하는 중이에요…&quot;;
+    _talk = StartCoroutine(SendMessage(Selected.CompanionId, text));
+}
+</code></pre>
+<pre><code data-language="csharp">private string BuildCompanionContext()
+{
+    var text = new StringBuilder();
+    text.Append(&quot;Identity: &quot; + _agentName + &quot;. Personality: &quot; + _personality + &quot;. &quot;);
+    text.Append(&quot;Player promise: &quot; + JsonUtility.ToJson(_promise) + &quot;. &quot;);
+    if (_companionState?.memories != null)
+    {
+        foreach (CompanionMemory memory in _companionState.memories.TakeLast(8))
+        {
+            text.Append(&quot;Remembered: &quot; + memory.text + &quot;. &quot;);
+        }
+    }
+    if (_companionState?.messages != null)
+    {
+        foreach (CompanionMessage message in _companionState.messages.TakeLast(6))
+        {
+            text.Append(&quot;Recent &quot; + message.role + &quot;: &quot; + message.text + &quot;. &quot;);
+        }
+    }
+    return text.ToString();
+}
+</code></pre>
+<h3 id="section-4">대화 기록</h3>
+<p>시각은 대화 기록에 따로 없으므로 미기록입니다. 사용자: “동료별 성격이랑 기억, 게임 내 대화창부터 만들어줘”, “여기서도 같은 동료랑 대화하고, 나눈 약속이 실제 게임 행동에 반영”, “사용자가 본인이 가지고 있는 PC의 에이전트를 사용하는 경험”. Codex: 공유 로컬 서비스·동료 ID·MCP 제어권과 실제 적용 기록으로 연결하기로 했습니다. 사용자 추가 지시: “채팅입력 모드랑 마이크 모드랑 구분해서 개발”. Codex: 녹음 → 인식 → 문장 확인 → 보내기로 분리했습니다. 사용자: WAV 인코더 “공용화해서 모체에도 반영” 승인. 원본 세션 전체 덤프·인증정보는 게시하지 않습니다.</p>
+<h2 id="section-5">검증</h2>
+<p>실제 Unity 6000.0.83f1 Play Mode와 저장된 보내기 버튼을 사용했습니다. 첫 일반 전투 세션에서 외부 행동 적용을 확인했고, 대화·입력 재현 세션은 적 AI를 검증 전용으로 정지했습니다. Node 통합 테스트 7개가 통과했습니다. 입력창 선택 중 W·F·R에도 플레이어 위치·세션이 유지됐습니다.</p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/before.png" alt="전: 지연 HUD만 표시" loading="lazy"><figcaption>전: 지연 HUD만 표시</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/companion-conversation-20261111/after.png" alt="후: 동료 대화와 현재 행동 표시" loading="lazy"><figcaption>후: 동료 대화와 현재 행동 표시</figcaption></figure></p>
+<p><a class="report-link" href="../assets/companion-conversation-20261111/10-virtual-walk-after.json">실제 이동 중 대기 관측</a> · <a class="report-link" href="../assets/companion-conversation-20261111/18-follow-after.json">추종 전환 관측</a> · <a class="report-link" href="../assets/companion-conversation-20261111/source.zip">소스 묶음</a></p>
+<p>최초 배치 가상 입력은 포커스 때문에 이동하지 않았습니다. 검증 도구의 배경 입력 설정과 명시적 InputSystem.Update를 보완한 뒤 재실행했습니다. 원본 씬과 최종 실행 씬의 SHA256이 동일하며 관련 블록만 이관했습니다. 로컬 파일 브라우저 확인은 URL 정책으로 차단돼 우회하지 않았고 문서 링크는 파일 검사로 확인합니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>물리 마이크 녹음·사용자 발화 정확도, Claude/Cursor 앱의 실제 접속, 최대 32명 부하·네트워크 코업·게임 빌드 배포는 미확인입니다. 아카이브의 목록 카드 썸네일은 현재 템플릿이 지원하지 않아 표시 검증을 완료하지 못했습니다. 대표 실제 화면을 각 본문에 등록했고 이 제한 때문에 게시물 상태를 부분 확인으로 기록합니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 18:47 KST 시작, 최초 70<del>100분. 채팅·마이크 모드 추가 요청으로 20</del>35분 추가 예상(총 90~135분).</li>
+<li>실제로 완료된 시간: 구현·실제 게임 검증·모체 반영은 2026-11-11 20:04 KST까지 완료(시작부터 약 77분). 아카이브 게시와 외부 검증은 별도 진행 중이며 실제 최종 시각을 작업 기록에 남깁니다.</li>
+<li>XERJ: 미사용 — 사용자 전역 지침에 따라 XERJ에 연결하지 않고 rg·현재 소스·로그·실제 Unity 결과를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111110709384-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-11-result-20261111110709384-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
