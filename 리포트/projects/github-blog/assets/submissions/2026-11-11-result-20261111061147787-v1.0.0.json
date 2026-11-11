@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "github-blog",
+    "kind": "result",
+    "title": "MIRO 방문 상세 수집과 본인 방문 제외 연결",
+    "summary": "날짜별 방문 합계만 저장하던 경로에 상세 방문 저장과 조회를 연결했습니다. 포트폴리오의 무시 규칙 3개를 블로그로 복사했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 합계가 있지만 시간대·기기·페이지 표가 빈 이유를 확인해 달라고 요청했고, 이어 포트폴리오의 본인 방문 제외와 무시 규칙 3개를 가져오라고 요청했습니다. GA 서비스 계정 설정이 없을 때 사용하는 응답이 상세 항목을 빈 배열로 반환하고 있었습니다. 기존 방문 기록 저장소를 집계에 연결하고 현재 블로그 주소를 허용했습니다. 서버는 무시 규칙을 조회한 뒤 기록하며 클라이언트도 GA 실행 전에 제외 여부를 확인합니다.\n\n```js\nexport async function visitDetails(env, start, end) {\n  const store = env.CRAWLER_REPORTS.get(env.CRAWLER_REPORTS.idFromName('crawler-reports'));\n  const url = new URL('https://internal/visitors');\n  url.searchParams.set('start', start);\n  url.searchParams.set('end', end);\n  url.searchParams.set('all', '1');\n  const response = await store.fetch(url);\n  if (!response.ok) throw new Error('Visit details are unavailable');\n  const { records, summary } = await response.json();\n  const devices = new Map();\n  const landings = new Map();\n  const recent = new Map();\n  const clock = new Intl.DateTimeFormat('sv-SE', { timeZone:'Asia/Seoul', year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', hourCycle:'h23' });\n  for (const row of records) {\n    const device = /ipad|tablet/i.test(row.userAgent || '') ? 'tablet' : /mobile|android|iphone/i.test(row.userAgent || '') ? 'mobile' : 'desktop';\n    devices.set(device, (devices.get(device) || 0) + 1);\n    const page = new URL(row.pageUrl);\n    if (!row.referer || !row.referer.startsWith(page.origin + '/')) landings.set(page.pathname, (landings.get(page.pathname) || 0) + 1);\n    const hour = clock.format(new Date(row.submittedAt)).replace(/[- :]/g, '').slice(0, 10);\n    const key = JSON.stringify([hour, row.city || row.country || '알 수 없음', device]);\n    recent.set(key, (recent.get(key) || 0) + 1);\n  }\n  return {\n    hours: summary.hours,\n    devices: [...devices],\n    cities: summary.cities,\n    pages: summary.pages,\n    sources: summary.sources.map(([name, count]) => [name, 'referral', count]),\n    landings: [...landings].sort((a,b) => b[1]-a[1]).slice(0, 10),\n    recent: [...recent].sort((a,b) => b[0].localeCompare(a[0])).slice(0, 10).map(([key,count]) => [...JSON.parse(key), count]),\n  };\n}\n```",
+    "verification": "- 포트폴리오 원본 무시 규칙 3개, 복사된 블로그 규칙 3개, 조건 일치 3개를 확인했습니다. IP와 기기 ID 원문은 보고서에 포함하지 않았습니다.\n- 각 규칙을 조회했을 때 모두 ignored=true가 반환됐습니다.\n- 현재 접속을 블로그에서 조회했을 때 제외 대상으로 판정됐습니다.\n- 운영 브라우저에서 제외 플래그와 GA 비활성화를 확인했고 방문 저장 요청과 Google 태그 요청이 발생하지 않았습니다.\n- 운영 집계에 영향을 주지 않는 별도 저장소에서 상세 레코드를 생성하고 시간대·기기·도시·페이지·유입·첫 진입·최근 방문 배열이 채워지는 것을 확인한 후 레코드를 삭제했습니다.\n- 원래 운영 상세 기록 수는 0개였습니다. 이전 합계에 해당하는 상세 기록은 복원할 자료가 없습니다.\n- 수정 대상은 데이터 수집과 API입니다. 관리자 로그인 세션에는 접근하지 못했으므로 로그인된 관리자 화면의 변경 후 캡처와 실제 표시는 미확인입니다.",
+    "remaining": "새로운 제외 대상 외 방문부터 상세 표가 채워집니다. 과거 합계의 상세 이력과 측정되지 않은 체류시간은 복원하지 않았습니다. 전역·프로젝트 지침 추가 사항 없음.",
+    "outcome": "운영 Worker 배포, 블로그 클라이언트 배포, 세 규칙 일치와 실제 제외 동작을 확인했습니다.",
+    "proposedTime": "최초 5~8분. 본인 방문 제외와 무시 규칙 복사 추가로 3~5분 추가 예상 보고.",
+    "actualTime": "2026-11-11 14:58:02 KST 시작. 2026-11-11 15:11:46 KST에 API 검증 및 보고 기록.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
