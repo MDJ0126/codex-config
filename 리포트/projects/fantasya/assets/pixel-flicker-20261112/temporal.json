@@ -1,0 +1,72 @@
+{
+    "at": "2026-11-12T00:46:56.0763552+09:00",
+    "context": "Live Unity Editor; timeScale=0, actor controllers/animators disabled in memory; same camera and poses; 6 warmup + 24 frames per variant; 1280x720",
+    "phases": [
+        {
+            "name": "before",
+            "frames": 24,
+            "instancingWarnings": 2232,
+            "maxChangedPixels": 915104,
+            "maxChannelDelta": 225,
+            "unstableFramePairs": 14,
+            "changedPixels": [
+                62185,
+                62246,
+                61,
+                127216,
+                127216,
+                17,
+                17,
+                0,
+                0,
+                0,
+                462,
+                462,
+                0,
+                127216,
+                127216,
+                0,
+                0,
+                0,
+                0,
+                0,
+                20733,
+                20733,
+                915104
+            ]
+        },
+        {
+            "name": "after",
+            "frames": 24,
+            "instancingWarnings": 0,
+            "maxChangedPixels": 0,
+            "maxChannelDelta": 0,
+            "unstableFramePairs": 0,
+            "changedPixels": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}

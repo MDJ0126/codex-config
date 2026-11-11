@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-11T15:49:20.255Z",
+  "upstream": {
+    "source": "Assets/TurnRoom/PixoraStudio/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs",
+    "sha256": "72c98c3be994a61dee4999d79ce58a0c6defa6b9eb39d570a7f48259fc92b22e",
+    "change": "replacement shader drawing.enableInstancing=false; original vendor preserved"
+  },
+  "upstreamOriginalUnchanged": true,
+  "extension": "Assets/Scripts/InGame/Rendering/CharacterPixelRendererFeature.cs",
+  "scope": "URP replacement shader renderer list only; normal color instancing unchanged",
+  "backup": ".utmp/PixelFlickerBackup",
+  "width": 1280,
+  "height": 720
+}

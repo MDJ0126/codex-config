@@ -1,5 +1,136 @@
 [
   {
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111155315670-v1.0.0.html",
+    "postPath": "projects/fantasya/posts/2026-11-11-manual-20261111155315670-v1.0.0.md",
+    "date": "2026-11-11T15:53:15.670Z",
+    "version": "v1.0.0",
+    "project": "fantasya",
+    "kind": "manual",
+    "manualId": "fantasya-pixel-flicker-20261112",
+    "round": 1,
+    "manual": {
+      "schemaVersion": 2,
+      "project": "fantasya",
+      "kind": "manual",
+      "title": "실행 중 캐릭터 픽셀 반짝임 재현과 수정",
+      "summary": "실제 열린 Unity에서 시간적 변동을 재현하고 교체 패스 인스턴싱만 제한했습니다.",
+      "reporter": "",
+      "assignee": "",
+      "environment": "",
+      "steps": "",
+      "expected": "",
+      "actual": "",
+      "cause": "",
+      "changes": "",
+      "verification": "",
+      "remaining": "수정 전부터 Play 진입 시 존재한 Unity 내부 fidA != fidB assertion 3건은 남아 있으며 원인 미확인입니다. 이번 반짝임의 인스턴싱 경고와 구분합니다. 교체 패스의 드로 콜 증가량·GPU 성능, 다른 GPU·모바일 빌드는 미확인입니다. 최초 보고의 배경 단일 프레임 비교를 시간적 안정성 검증으로 일반화하지 않습니다. 목록 카드 썸네일은 아카이브 기능 제한으로 미확인입니다. 이번 근거는 기존 실제 실행·전후 대조 지침으로 충분하므로 지침 추가 없음입니다. 게임 저장소 커밋·푸시는 별도로 하지 않았습니다. 공개 보고서 커밋·푸시·배포·외부 접근은 후속 확인 단계입니다.",
+      "outcome": "로컬 구현·실제 실행·문서 확인을 완료했습니다. 사용자가 이번 수정 자료 공개·main 반영·푸시·배포를 승인해 공개 확인을 진행합니다.",
+      "proposedTime": "2026-11-12 00:41:26 KST 시작, 제안 20~40분",
+      "actualTime": "로컬 구현·컴파일·실제 실행·문서 완료: 14분 3초, 2026-11-12 00:55:29 KST. 승인 후 공개 게시: 2026-11-12 01:14:23 KST 시작, 배포·외부 확인 진행 중입니다.",
+      "xerjEvidence": "사용자 지침에 따라 rg·원본 소스·실제 Unity Editor.log·카메라 PNG·컴퓨터 유즈로 확인했습니다.",
+      "priority": "normal",
+      "severity": "normal",
+      "xerjUsage": "미사용",
+      "type": "작업 메뉴얼",
+      "manualId": "fantasya-pixel-flicker-20261112",
+      "round": 1,
+      "phase": "initial",
+      "execution": "sequential",
+      "manualState": "complete",
+      "goal": "캐릭터 픽셀 카메라의 반짝임을 실제 재현하고 수정·문서 근거를 남긴다.",
+      "completionCriteria": "고정 장면의 연속 프레임 변동과 경고를 비교하고 제품 원본·캐릭터 범위를 유지하며 자연 Play와 로컬 문서를 확인한다.",
+      "previousManual": "",
+      "relatedDiscussions": [],
+      "tasks": [
+        {
+          "id": "T01",
+          "order": 1,
+          "title": "실제 반짝임과 시간적 변동 재현",
+          "action": "컴퓨터 유즈로 원본 Unity에서 실행하고 고정 장면 24프레임과 경고를 기록한다.",
+          "expected": "수정 전 실제 시간적 오류 수치와 원본 화면",
+          "qa": "인접 23구간의 차이와 경고·화면을 대조한다.",
+          "dependsOn": [],
+          "status": "done",
+          "revision": 1,
+          "result": "14구간 변동·최대915104픽셀 차이·경고2232회 재현"
+        },
+        {
+          "id": "T02",
+          "order": 2,
+          "title": "제품 원본 보존 및 게임 전용 수정",
+          "action": "교체 셰이더 패스만 인스턴싱을 끈 확장을 비교하고 실제 설정에 연결한다.",
+          "expected": "동일 위치 24프레임 변동0·경고0, 원본 보존",
+          "qa": "같은 Play에서 원본→수정 전환과 해시, 실제 자연 플레이를 확인한다.",
+          "dependsOn": [
+            "T01"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "24프레임 차이0·경고0; 00:48:16~00:50:12 자연 플레이에서 이동·추격·공격 관찰"
+        },
+        {
+          "id": "T03",
+          "order": 3,
+          "title": "문서·근거와 임시 관찰 코드 정리",
+          "action": "README와 Dosc를 갱신하고 v2 보고서·실제 전후 화면을 준비한다.",
+          "expected": "로컬 문서와 근거 링크·보고서 JSON 일치, 임시 에디터 코드 제거",
+          "qa": "문서 링크와 v2 생성·빌드를 확인하고 원본 Unity 창을 보존한다.",
+          "dependsOn": [
+            "T02"
+          ],
+          "status": "done",
+          "revision": 1,
+          "result": "문서 갱신·v2 보고서 생성과 55364 로컬 링크 검사 통과, 임시 캡처 소스 제거"
+        }
+      ],
+      "focusTasks": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "scopeChange": "원래 요청대로 반짝임을 확인·수정합니다. 기존 Unity fidA != fidB assertion은 별도로 미확인 기록합니다. 메뉴얼 JSON은 작업 시작의 안내와 실제 실행 기록을 바탕으로 정리했습니다.",
+      "qaRuns": [
+        {
+          "id": "Q01",
+          "kind": "final",
+          "at": "2026-11-11T15:53:13.841Z",
+          "summary": "실행·해시·문서 근거 최종 대조",
+          "results": [
+            {
+              "taskId": "T01",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "14구간 변동·최대915104픽셀 차이·경고2232회 재현",
+              "evidence": "../assets/pixel-flicker-20261112/temporal.json 및 source.json, runtime-observation.json",
+              "dependencies": {}
+            },
+            {
+              "taskId": "T02",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "24프레임 차이0·경고0; 00:48:16~00:50:12 자연 플레이에서 이동·추격·공격 관찰",
+              "evidence": "../assets/pixel-flicker-20261112/temporal.json 및 source.json, runtime-observation.json",
+              "dependencies": {
+                "T01": 1
+              }
+            },
+            {
+              "taskId": "T03",
+              "revision": 1,
+              "verdict": "pass",
+              "actual": "문서 갱신·v2 보고서 생성과 55364 로컬 링크 검사 통과, 임시 캡처 소스 제거",
+              "evidence": "README·Dosc와 v2 build/verify 실행 로그",
+              "dependencies": {
+                "T02": 1
+              }
+            }
+          ]
+        }
+      ],
+      "state": "complete"
+    }
+  },
+  {
     "reportPath": "projects/fantasya/reports/2026-11-11-manual-fantasya-pixora-character-pixels-20261111-20261111153651055-v1.0.1.html",
     "postPath": "projects/fantasya/posts/2026-11-11-manual-fantasya-pixora-character-pixels-20261111-20261111153651055-v1.0.1.md",
     "date": "2026-11-11T15:36:51.055Z",
