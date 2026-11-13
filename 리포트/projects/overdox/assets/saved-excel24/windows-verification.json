@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-11-13T21:08:30.8890620+09:00",
+  "scope": "Actual Windows manual UI after saved-XLSX compiler path; one weapon and fixed armor",
+  "weaponId": 10750,
+  "baselineBuild": "Build23",
+  "changedBuild": "Build24",
+  "baselineCardDamage": 203,
+  "changedCardDamage": 215,
+  "baselineEquippedAttack": 213,
+  "changedEquippedAttack": 226,
+  "sourceRestored": true,
+  "runtimeExceptionsBaseline": 0,
+  "runtimeExceptionsChanged": 0,
+  "captures": [
+    "equipment-scale100-build23.png",
+    "equipment-scale110-build24.png"
+  ],
+  "limitations": [
+    "No all-equipment formula mutation coverage",
+    "No new ten-hour run",
+    "DDT formula engine Excel compatibility beyond used functions remains unverified"
+  ]
+}

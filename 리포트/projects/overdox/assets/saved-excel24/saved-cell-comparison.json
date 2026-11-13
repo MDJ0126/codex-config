@@ -1,0 +1,90 @@
+{
+  "scope": "All sheets: saved values/formulas, cell style IDs, row/column metadata and other non-value sheet XML; package inventory and styles bytes compared",
+  "beforeSheetCount": 31,
+  "afterSheetCount": 31,
+  "sameSheetNames": true,
+  "changes": [
+    {
+      "sheet": "Gear",
+      "cell": "H39",
+      "before": {
+        "value": 120.0,
+        "formula": "AW39*AX39",
+        "type": "n"
+      },
+      "after": {
+        "value": 132.0,
+        "formula": "AW39*AX39",
+        "type": "n"
+      }
+    },
+    {
+      "sheet": "Gear",
+      "cell": "AX39",
+      "before": {
+        "value": 1.0,
+        "formula": "",
+        "type": "n"
+      },
+      "after": {
+        "value": 1.1,
+        "formula": "",
+        "type": "n"
+      }
+    },
+    {
+      "sheet": "Weapons",
+      "cell": "G39",
+      "before": {
+        "value": 120.0,
+        "formula": "INDEX('Gear'!$H$5:$H$42,MATCH($A39,'Gear'!$A$5:$A$42,0))",
+        "type": "n"
+      },
+      "after": {
+        "value": 132.0,
+        "formula": "INDEX('Gear'!$H$5:$H$42,MATCH($A39,'Gear'!$A$5:$A$42,0))",
+        "type": "n"
+      }
+    },
+    {
+      "sheet": "Balance",
+      "cell": "E39",
+      "before": {
+        "value": 120.0,
+        "formula": "INDEX('Gear'!$H$5:$H$42,MATCH($A39,'Gear'!$A$5:$A$42,0))",
+        "type": "n"
+      },
+      "after": {
+        "value": 132.0,
+        "formula": "INDEX('Gear'!$H$5:$H$42,MATCH($A39,'Gear'!$A$5:$A$42,0))",
+        "type": "n"
+      }
+    },
+    {
+      "sheet": "Balance",
+      "cell": "H39",
+      "before": {
+        "value": 203.0,
+        "formula": "E39+G39",
+        "type": "n"
+      },
+      "after": {
+        "value": 215.0,
+        "formula": "E39+G39",
+        "type": "n"
+      }
+    }
+  ],
+  "packageEntriesAdded": [],
+  "packageEntriesRemoved": [],
+  "packageEntriesChanged": [
+    "_rels/.rels",
+    "xl/_rels/workbook.xml.rels",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet18.xml",
+    "xl/worksheets/sheet29.xml"
+  ],
+  "sheetMetadataChanges": [],
+  "stylesByteIdentical": true
+}
