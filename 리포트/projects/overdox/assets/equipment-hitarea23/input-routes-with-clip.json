@@ -1,0 +1,50 @@
+{
+    "utc": "2026-11-13T11:24:32.0736286Z",
+    "samples": [
+        {
+            "localPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "firstHit": "EquipmentElement (6)",
+            "dragHandler": "Scroll View",
+            "routesToCarousel": true
+        },
+        {
+            "localPoint": {
+                "x": -236.0,
+                "y": 140.0
+            },
+            "firstHit": "Native clip viewport",
+            "dragHandler": "Scroll View",
+            "routesToCarousel": true
+        },
+        {
+            "localPoint": {
+                "x": 236.0,
+                "y": 140.0
+            },
+            "firstHit": "Native clip viewport",
+            "dragHandler": "Scroll View",
+            "routesToCarousel": true
+        },
+        {
+            "localPoint": {
+                "x": -236.0,
+                "y": -140.0
+            },
+            "firstHit": "Native clip viewport",
+            "dragHandler": "Scroll View",
+            "routesToCarousel": true
+        },
+        {
+            "localPoint": {
+                "x": 236.0,
+                "y": -140.0
+            },
+            "firstHit": "Native clip viewport",
+            "dragHandler": "Scroll View",
+            "routesToCarousel": true
+        }
+    ]
+}

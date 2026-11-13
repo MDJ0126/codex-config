@@ -1,0 +1,85 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 장비 빈 영역 입력을 원작 클리핑 크기에 맞춰 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 장비 빈 영역 입력을 원작 클리핑 크기에 맞춰 수정</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">투명 입력 이미지의100×100 부모 연결을590×400 클리핑 자식으로 옮겼습니다. 실제5개 레이캐스트와 Windows 빈 영역 휠을 확인했으며 OS 드래그는 미확인입니다.</p><div class="post-byline"><time datetime="2026-11-13T11:33:43.934Z">2026년 11월 13일 오후 8:33 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Build22의 연결기는 투명 입력 이미지를 기본100×100 부모 Rect에 붙였습니다. 원작590×400 클리핑 범위는 Native clip viewport 자식에 저장되어 있어 카드 밖 빈 영역의 입력 범위가 작았습니다. 투명 이미지를 마스크와 같은 자식에 옮겨 씬에 저장했습니다. 이 변경은 이미지·카메라 배치를 바꾸지 않는 입력 영역 수정입니다.</p>
+<p><a class="report-link" href="../assets/equipment-hitarea23/hit-area.json">수정 전후 실제 Rect 크기</a>에서100×100 →590×400과 마스크·입력 Rect 동일성을 확인할 수 있습니다. 실제 실행 캡처는 프로젝트의 equipment-hitarea-editor-after.png와 equipment-hitarea-build23-after.png에 보존했습니다.</p>
+<p><a class="report-link" href="2026-11-13-result-20261113111406784-v1.0.0.html">이전 캐러셀·장착 보고</a>의 고정 Build22 첨부는 덮어쓰지 않았습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>빈 영역은 투명 Graphic이, 카드 위는 자식 카드 Graphic이 먼저 레이캐스트됩니다. 실제 드래그 수신 컴포넌트는 기존 Scroll View 부모에 유지합니다.</p>
+<pre class="mermaid">flowchart TD
+    A[장비 목록의 원본 부모] --&gt; B[Native clip viewport 590x400]
+    B --&gt; C[투명 입력 Graphic과 RectMask2D]
+    C --&gt; D[빈 영역 레이캐스트]
+    B --&gt; E[자식 카드가 먼저 레이캐스트]
+    D --&gt; F[기존 부모 캐러셀 입력 처리]
+    E --&gt; F
+</pre>
+<p>수정한 씬 연결 메서드 전체:</p>
+<pre><code data-language="csharp">public static void RestoreEquipmentCarousel()
+        {
+            if (EditorApplication.isPlaying || SceneManager.GetActiveScene().isDirty)
+            {
+                throw new InvalidOperationException(&quot;현재 씬을 저장하고 재생을 종료하세요.&quot;);
+            }
+            var setup = EditorSceneManager.GetSceneManagerSetup();
+            var scene = EditorSceneManager.OpenScene(&quot;Assets/Scenes/OverdoxLobby.unity&quot;, OpenSceneMode.Single);
+            var controller = UnityEngine.Object.FindFirstObjectByType&lt;RestoredLobbyController&gt;();
+            var document = controller.GetComponent&lt;RestoredUiDocument&gt;();
+            var viewport = document.Find(37814);
+            var carousel = viewport.GetComponent&lt;RestoredEquipmentCarousel&gt;() ?? viewport.gameObject.AddComponent&lt;RestoredEquipmentCarousel&gt;();
+            carousel.owner = controller;
+            carousel.items = controller.cards.Select(card =&gt; (RectTransform)card.transform.parent).ToArray();
+            carousel.cellWidth = 210;
+            carousel.springStrength = 16;
+            carousel.neighborScale = .65f;
+            controller.carousel = carousel;
+
+            // 원본 UIPanel의 부모 Rect는 기본 크기다. 실제 원작 클리핑 크기는 별도 자식에 저장된다.
+            var clipViewport = viewport.Find(&quot;Native clip viewport&quot;) as RectTransform;
+            if (clipViewport == null || clipViewport.GetComponent&lt;RectMask2D&gt;() == null)
+            {
+                throw new InvalidOperationException(&quot;장비 목록의 원작 클리핑 영역을 먼저 복원하세요.&quot;);
+            }
+            var previousSize = viewport.rect.size;
+            var previousHitArea = viewport.GetComponent&lt;Image&gt;();
+            if (previousHitArea != null)
+            {
+                UnityEngine.Object.DestroyImmediate(previousHitArea);
+            }
+
+            // 투명 Graphic을 마스크와 같은 Rect에 둔다. 빈 곳도 입력을 받되 자식 카드가 우선한다.
+            var hitArea = clipViewport.GetComponent&lt;Image&gt;() ?? clipViewport.gameObject.AddComponent&lt;Image&gt;();
+            hitArea.color = Color.clear;
+            hitArea.raycastTarget = true;
+            Wire(document.Find(36204), controller.EquipFocused);
+            document.Find(34159).gameObject.SetActive(false);
+            document.Find(36204).gameObject.SetActive(true);
+            EditorSceneManager.SaveScene(scene);
+            var hitAreaResult = new EquipmentHitAreaResult
+            {
+                utc = DateTime.UtcNow.ToString(&quot;o&quot;),
+                previousSize = previousSize,
+                clipSize = clipViewport.rect.size,
+                hitSize = hitArea.rectTransform.rect.size,
+                sharesClipRect = hitArea.transform == clipViewport,
+                raycastTarget = hitArea.raycastTarget
+            };
+            Directory.CreateDirectory(&quot;Docs/Verification/EquipmentCarousel&quot;);
+            File.WriteAllText(&quot;Docs/Verification/EquipmentCarousel/hit-area.json&quot;, JsonUtility.ToJson(hitAreaResult, true));
+            EditorSceneManager.RestoreSceneManagerSetup(setup);
+            Debug.Log(&quot;OVERDOX_EQUIPMENT_CAROUSEL_READY cards=10 spacing=210 spring=16&quot;);
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>Unity 에디터 컴파일20:23:17 KST, 실제 씬 저장20:22:40 KST입니다.20:24:32 KST의 실제 EventSystem 레이캐스트에서 중앙 카드는 EquipmentElement (6), 네 모서리는 Native clip viewport를 먼저 맞췄고 모두 Scroll View 캐러셀로 전달됐습니다.20:25:56 KST의 별도 이벤트 재생은0→1 이동을 통과했습니다.</p>
+<p>Windows Build23은20:27:12 KST 성공258,961,274B이며150파일 고정 사본과 전체 해시를 보존했습니다. 실제 Windows에서 카드 밖 우측 위 빈 영역(1180,230)의 휠 입력으로 열람3→4를 확인했습니다. 히드라를 열람해도 장착 모델과 공격력50은 유지됐고 로비 뒤로가기가 동작했습니다. OS 드래그 자동 조작에서는 시작·종료 로그가0건이므로 성공을 판정하지 않습니다.</p>
+<p><a class="report-link" href="../assets/equipment-hitarea23/input-routes-with-clip.json">실제5개 입력 경로</a> · <a class="report-link" href="../assets/equipment-hitarea23/drag-events-with-clip.json">이벤트 재생</a> · <a class="report-link" href="../assets/equipment-hitarea23/build23-verification.json">Windows 실행 범위</a> · <a class="report-link" href="../assets/equipment-hitarea23/build23-manifest.json">고정 빌드 해시</a>. 씬 연결 변경이므로 런타임 DLL은Build22와 같으며 DLL 해시만으로 이 변경을 검증하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>OS 마우스 드래그·원작 관성·장비119개 전수 화면·전체 UI와 효과의 동일성은 남습니다. Build23 새10시간 검증은 미실행입니다. Windows 확인은 빈 영역 휠·열람 중 장착 유지·로비 뒤로가기 범위이며 전투·사망은 이번 빌드에서 재검증하지 않았습니다.</p>
+<p><a class="report-link" href="../assets/equipment-hitarea23/RestoredEquipmentBuilder.cs">연결기·입력 검사 전체 소스</a> · <a class="report-link" href="../assets/equipment-hitarea23/06-equipment-and-death.md">갱신된 개발 문서</a>. 한국어 주석으로 실제 클리핑 자식에 연결하는 이유와 OS 입력·이벤트 재생 검증의 차이를 남겼습니다. 전역 지침 변경 없음, 제품 고유 자산 계층 전용 수정이므로 샘플 환류는 보류합니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 19:57:25 KST 게시·첫 입력 확인30~60분 예상으로 시작한 지속 회차. 입력 영역 후속 구현은20:21 KST에 시작했습니다.</li>
+<li>실제로 완료된 시간: 입력 영역 구현·Windows 확인20:21:01~20:30:37 KST, 실측9분36초. 빌드20:27:12, 실행 확인 기록20:30:37 KST. 보고 게시 시간은 별도이며 전체 복원은 진행 중입니다.</li>
+<li>XERJ: 미사용 — XERJ 연결 확인 없음. 기존 소스·실제 Unity API 레이캐스트·Windows 고정 빌드로 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113113343934-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113113343934-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

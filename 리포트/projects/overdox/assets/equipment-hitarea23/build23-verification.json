@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-11-13T20:30:37.8130742+09:00",
+  "build": "Build23",
+  "result": "partial",
+  "verified": [
+    "Actual Windows Lobby to Equipment and Back",
+    "Wheel over blank upper-right clip area changes focus from index3 to4",
+    "Browsing Hydra keeps equipped sword-and-shield model and attack50"
+  ],
+  "physicalDrag": "Not verified: OS drag over blank area produced no begin/end entries",
+  "dragBeginCount": 0,
+  "dragEndCount": 0,
+  "eventSystemReplay": "Editor actual raycast and 0 to1 event replay, separate scope",
+  "runtimeErrors": [],
+  "capture": "equipment-hitarea-build23-after.png",
+  "build23New10HourRun": "Not run"
+}
