@@ -1,0 +1,33 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "overdox",
+    "kind": "discussion",
+    "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
+    "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "보고서의 장비 데이터 연결·명중 성공과 능력 실행 범위를 구분합니다. README·원작 대조표·장비별 검토 목록에 두 누락을 기록했습니다.",
+    "verification": "[현재 소스와 원작 표의 정적 대조 기록](../assets/review16/known-omissions.json). 원본 QA의35개 회귀 검사와38종 일반 명중은 이 두 효과를 검사하지 않았습니다. 새 런타임 검증은 하지 않았습니다.",
+    "remaining": "두 효과의 실행 구현과 독립 검증. 사용자 PC 사용 중 GUI·입력·포커스 조작은 하지 않습니다.",
+    "outcome": "히드라의 투척·순간이동 피해와 탈진 상태 적용은 별개입니다. ConditionType60을 처리하지 않아 탈진은 적용되지 않습니다. 팬텀 하데스의 패시브55도 데이터만 보존됐고 실행되지 않습니다.\n\n[탈진 미적용·설명 정정](2026-11-13-bug-20261113053502809-v1.0.0.html) · [비전투 은신 미구현](2026-11-13-bug-20261113053504340-v1.0.0.html)",
+    "proposedTime": "추가 구현은 중단하고 검토 기록을 보정하는 범위입니다.",
+    "actualTime": "2026-11-13 14:34 KST 무렵 정적 대조로 확인. 실행 수정 완료 시각 없음.",
+    "xerjEvidence": "XERJ 연결·검색 없음. 기존 소스·표·rg 검색 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "토론",
+    "topic": "qa",
+    "discussionState": "deferred",
+    "relatedReport": "projects/overdox/reports/2026-11-13-result-20261113052415634-v1.0.0.html",
+    "replyTo": "",
+    "decision": "사용자가 추가 구현 중단과 검토를 요청했으므로 검토용 build16은 바꾸지 않습니다. 원작 공식 확인과 실행 수정·독립 검증은 후속 개선으로 남깁니다. 문서 보정은 문제 해결을 의미하지 않습니다.",
+    "state": "progress"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "checkedUtc": "2026-11-13T05:35:01.193888+00:00",
+  "scope": "static source/data checks; no new GUI or runtime test after user freeze",
+  "build": "Build16",
+  "runtimeDllSha256": "8AC1146BCCA6A1A9FF04486A0963512FEDCA4EEFC1A86FC46FCF7BE7387600A4",
+  "hydra": {
+    "weapon": 10150,
+    "skill": 10014,
+    "hit": 1024,
+    "condition": 501,
+    "conditionType": 60,
+    "supportedConditionTypes": [
+      1,
+      2,
+      3,
+      4,
+      25
+    ],
+    "supported": false
+  },
+  "phantomHades": {
+    "armorIds": [
+      20631,
+      20632,
+      20633
+    ],
+    "abilityType": 55,
+    "values": [
+      5,
+      5,
+      7
+    ],
+    "runtimeHandler": false
+  },
+  "sourceSha256": {
+    "Assets/Scripts/InGame/Fighter.cs": "38fb787e658ab80ddeeea2beb78a11f958a509b41afa8577fa9c1d5670bf90f1",
+    "Assets/Scripts/InGame/FighterSpecialSkills.cs": "d333f19ebb42fd5c07f28bd9adce8baaf931ab3e147c4baa1203509a385fc2fd",
+    "Assets/Scripts/InGame/EquipmentEffects.cs": "4686908ba883a3ca3cbde8a3797813f2b321b7902483ae26519569b691820d68"
+  }
+}

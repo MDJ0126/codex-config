@@ -1,5 +1,49 @@
 [
   {
+    "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
+    "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-discussion-20261113053635645-v1.0.0.html",
+    "date": "2026-11-13T05:36:35.645Z",
+    "kind": "discussion",
+    "relatedReport": "projects/overdox/reports/2026-11-13-result-20261113052415634-v1.0.0.html",
+    "replyTo": "",
+    "topic": "qa",
+    "discussionState": "deferred"
+  },
+  {
+    "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
+    "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-discussion-20261113053634296-v1.0.0.html",
+    "date": "2026-11-13T05:36:34.296Z",
+    "kind": "discussion",
+    "relatedReport": "projects/overdox/reports/2026-11-13-result-20261113051936494-v1.0.0.html",
+    "replyTo": "",
+    "topic": "qa",
+    "discussionState": "deferred"
+  },
+  {
+    "title": "팬텀 하데스 비전투 은신 패시브 미구현",
+    "summary": "방어구의 패시브55 데이터는 보존됐지만 비전투 시간과 은신 발동을 처리하는 실행 경로가 없습니다. 스킬 잠행과 구분해 알려진 누락으로 기록합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-bug-20261113053504340-v1.0.0.html",
+    "date": "2026-11-13T05:35:04.340Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "히드라 탈진 미적용과 앞선 구현 설명 정정",
+    "summary": "전설 검의 피해·순간이동은 연결됐지만 탈진501의 타입60을 처리하지 않아 탈진은 적용되지 않습니다. 앞선 적용 완료 설명을 정정합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-bug-20261113053502809-v1.0.0.html",
+    "date": "2026-11-13T05:35:02.809Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
     "summary": "원작 장비119종과 한국어 원문을 DDT·Unity에 연결하고, 고정 빌드의 실제10시간 검증을 진행합니다.",
     "project": "overdox",
