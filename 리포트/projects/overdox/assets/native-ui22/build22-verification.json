@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-11-13T19:44:06.5562840+09:00",
+  "build": "Build22",
+  "result": "partial",
+  "verified": [
+    "Native carousel center and smaller adjacent cards visible",
+    "Wheel browsing keeps equipped model and attack unchanged",
+    "Equip button changes model and attack 50 to 158, checkmark follows equipped item",
+    "Sword-and-shield 10140 equipped again before match",
+    "Actual Windows 0HP player lies in native death pose",
+    "Arena returns to Lobby"
+  ],
+  "physicalDrag": "Not verified: OS drag calls produced card-click focus changes without drag begin/end logs",
+  "eventSystemReplay": "Passed separately: actual raycast route and 0 to 1 card drag",
+  "deathRuntimeScope": "Male sword-and-shield player, one actual match",
+  "rigVerification": "18 pose changes passed, 13 fully matched; additional hair/gender/hash paths remain",
+  "errors": [],
+  "captures": [
+    "equipment-build22-after.png",
+    "equipment-build22-equipped.png",
+    "death-build22-after.png"
+  ],
+  "flowLines": [
+    "OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140",
+    "OVERDOX_FLOW_READY phase=Lobby weapon=10140",
+    "OVERDOX_EQUIPMENT_FOCUS slot=-1 index=2",
+    "OVERDOX_EQUIPMENT_EQUIPPED slot=-1 index=2",
+    "OVERDOX_EQUIPMENT_FOCUS slot=-1 index=3",
+    "OVERDOX_EQUIPMENT_EQUIPPED slot=-1 index=3",
+    "OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140",
+    "OVERDOX_FLOW_READY phase=Arena weapon=10140",
+    "OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140",
+    "OVERDOX_FLOW_READY phase=Lobby weapon=10140"
+  ]
+}

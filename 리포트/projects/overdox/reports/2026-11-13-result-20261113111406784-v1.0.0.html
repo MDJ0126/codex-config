@@ -1,0 +1,60 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 장비 캐러셀과 열람·장착 분리 복원 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 장비 캐러셀과 열람·장착 분리 복원</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">원작 카드 간격210·중앙 정렬 강도16을 연결하고 열람과 장착을 분리했습니다. Build22 클릭·휠·장착을 확인했으며 OS 드래그는 미확인입니다.</p><div class="post-byline"><time datetime="2026-11-13T11:14:06.784Z">2026년 11월 13일 오후 8:14 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>원작 로비 직렬화 자료에서 UIGrid.cellWidth=210, UICenterOnChild.springStrength=16을 확인했습니다. <a class="report-link" href="https://cdn-media.sforum.vn/storage/app/media/quangduy/review-overdox-vu-khi.jpg">공개 원작 장비 화면</a>과 비교해 중앙을 크게, 옆 카드를 작게 배치했습니다. 축소율0.65는 화면 대응값이며 원작 상수로 확인한 값이 아닙니다. 카드10개를 재사용하며 무기38종·방어구 각27종을 연결합니다.</p>
+<p><figure><img class="report-image" src="../assets/native-ui22/equipment-before.webp" alt="이전 동일 장비 화면" loading="lazy"><figcaption>이전 동일 장비 화면</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/native-ui22/equipment-after.webp" alt="캐러셀 적용 후" loading="lazy"><figcaption>캐러셀 적용 후</figcaption></figure></p>
+<p>장착 무기는 같지만 이전 화면은 목록 첫 항목을 표시했고 변경 후에는 장착 항목을 중앙에 표시합니다.</p>
+<p><figure><img class="report-image" src="../assets/native-ui22/equipment-equipped.webp" alt="다른 무기 장착 후" loading="lazy"><figcaption>다른 무기 장착 후</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>카드 클릭·휠·드래그 처리기는 Focus로 열람만 변경합니다. 별도 EquipFocused에서 세션에 장착 명령을 전달합니다. 원작 EquipmentListController의 별도 장착 버튼 구조에 맞췄습니다. 샘플 프로젝트 기준으로 수명주기 우선 배치, 조건문 블록, 한국어 XML 주석에 책임·좌표 기준·포인터 소유권을 기록했습니다. 기존 직렬화 필드명은 보존했습니다.</p>
+<pre class="mermaid">flowchart TD
+    A[카드 클릭·휠·드래그] --&gt; B[Focus 열람 변경]
+    B --&gt; C[고정 카드 풀 위치·크기 갱신]
+    D[장착 버튼] --&gt; E[EquipFocused]
+    E --&gt; F[세션 장비 변경]
+    F --&gt; G[모델·공격력·표시 갱신]
+</pre>
+<pre><code data-language="csharp">private void UpdateLayout()
+        {
+            if (items == null)
+            {
+                return;
+            }
+            int center = items.Length / 2;
+            for (int index = 0; index &lt; items.Length; index++)
+            {
+                int dataIndex = _focus + index - center;
+                var item = items[index];
+                item.gameObject.SetActive(dataIndex &gt;= 0 &amp;&amp; dataIndex &lt; _count);
+                float distance = dataIndex - _position;
+                item.anchoredPosition = new Vector2(distance * cellWidth, 0);
+                item.localScale = Vector3.one * Mathf.Lerp(1, neighborScale, Mathf.Clamp01(Mathf.Abs(distance)));
+            }
+        }
+</code></pre>
+<pre><code data-language="csharp">public void OnDrag(PointerEventData data)
+        {
+            if (_pointer != data.pointerId || !TryGetPoint(data, out var point))
+            {
+                return;
+            }
+            // UI 로컬 좌표를 사용하므로 해상도나 Canvas 배율이 달라도 같은 카드 간격을 유지한다.
+            _position = Mathf.Clamp(_dragStartPosition - (point.x - _dragStartPoint.x) / cellWidth, 0, _count - 1);
+            owner.Focus(Mathf.RoundToInt(_position));
+            UpdateLayout();
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>고정 Windows Build22를 Computer Use로 실행하여 클릭·휠 열람과 장착을 확인했습니다. 열람만으로 모델·공격력이 바뀌지 않았고 장착 버튼에서50→158, 원래 무기로 재장착하면50으로 돌아왔습니다. 전투 진입과 로비 복귀도 확인했습니다. Unity 실제 레이캐스트와 EventSystem의 beginDrag/drag/endDrag 재생에서는0→1 이동을 확인했습니다. OS 입력 드래그 자동 조작은 시작·종료 로그가 없어 미확인입니다. 두 검증을 같은 것으로 취급하지 않습니다.</p>
+<p><a class="report-link" href="../assets/native-ui22/build22-verification.json">Windows 확인 요약</a> · <a class="report-link" href="../assets/native-ui22/drag-events.json">EventSystem 재생</a> · <a class="report-link" href="../assets/native-ui22/build22-flow.log">공개 흐름 로그</a> · <a class="report-link" href="../assets/native-ui22/build22-manifest.json">고정 빌드 해시 목록</a> · <a class="report-link" href="../assets/native-ui22/image-captures.json">이미지 용량</a>. 런타임 DLL SHA256 <code>1D12B96AD95DC267D3FD919B66BF4E0EA3903057A39DDBE0392E5E5661AA33B0</code>입니다. 실행 로그의 오류는0건이며 빌드에는 기존 원작 FX 누락 MonoBehaviour 경고1건이 남습니다.</p>
+<p>보고용5장은 실제 Affinity 3.3.3 GUI에서1600×900 고품질 WebP로 내보냈습니다. 원본 PNG와 별도 AF5개를 보존하고 실제 닫기·재열기 후5개 모두 clean 상태를 확인했습니다. SDK 저장·내보내기는 PERMISSION_DENIED로 실패하여 GUI를 사용했고 보안 설정은 변경하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>실제 OS 드래그, 원작 관성 곡선, 열람 중 캐릭터 미리보기,119개 전수 화면 점검, 미연결 메뉴·세부 UI가 남습니다. 이번 변경의10시간 검증은 수행하지 않았습니다. 모델은 새로 조형한 것이 아니라 보존된 원작 자산의 재연결입니다.</p>
+<p><a class="report-link" href="../assets/native-ui22/RestoredEquipmentCarousel.cs">캐러셀 전체 소스</a> · <a class="report-link" href="../assets/native-ui22/RestoredLobbyController.cs">로비 제어 전체</a> · <a class="report-link" href="../assets/native-ui22/RestoredGearCard.cs">카드 전체</a> · <a class="report-link" href="../assets/native-ui22/RestoredEquipmentBuilder.cs">에디터 연결·검증 전체</a> · <a class="report-link" href="../assets/native-ui22/06-equipment-and-death.md">개발 문서</a>. 전역 규칙 변경은 없으며 프로젝트 문서에 확인된 차이를 기록했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 19:11:05 KST 시작. 캐러셀·사망 클립 구현과 첫 실행 확인40~60분 예상. 지속 목표는 중단 지시까지 유지합니다.</li>
+<li>실제로 완료된 시간: 구현·Windows 실행 확인19:11:05~19:44:06 KST, 실측33분1초. 첫 컴파일19:23:37, Build22 런타임 DLL19:36:31, 수동 실행 확인 종료19:44:06 KST. 문서·공개 보고 작성 시간은 별도이며 전체 프로젝트 완료가 아닙니다.</li>
+<li>XERJ: 미사용 — XERJ는 연결 확인을 포함해 사용하지 않았습니다. 보존된 자료의 직렬화 필드, Unity API, 실제 Windows 실행 화면과 로그를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113111406784-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113111406784-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

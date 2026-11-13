@@ -1,5 +1,35 @@
 [
   {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "Build22 장비 캐러셀·별도 장착·사망 자세와 샘플 작성 규칙·개발 문서의 부분 적용 결과를 보존하며 전체 복원을 이어갑니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113111422005-v1.0.3.html",
+    "date": "2026-11-13T11:14:22.005Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 무기군별 영웅 사망 클립 연결과 0HP 자세 수정",
+    "summary": "영웅 리그에 연결되지 않던 공통 Die_01을 무기군별 클립으로 교체했습니다.18개 리그 포즈 변화와 Build22 남성 검·방패의 실제 사망 자세를 확인했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113111408715-v1.0.0.html",
+    "date": "2026-11-13T11:14:08.715Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 장비 캐러셀과 열람·장착 분리 복원",
+    "summary": "원작 카드 간격210·중앙 정렬 강도16을 연결하고 열람과 장착을 분리했습니다. Build22 클릭·휠·장착을 확인했으며 OS 드래그는 미확인입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113111406784-v1.0.0.html",
+    "date": "2026-11-13T11:14:06.784Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "OVERDOX 샘플 기준 코드 주석과 개발 다큐먼트 최초 적용",
     "summary": "SampleProjectForUnity의 작성 문서와 실제 예제를 확인하고 UI 컴포넌트5개의 주석·형식을 정리했습니다. 구조·흐름·사용법·규칙 문서를 작성했으며 전체 코드 적용은 진행 중입니다.",
     "project": "overdox",

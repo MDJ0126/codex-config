@@ -1,0 +1,122 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 무기군별 영웅 사망 클립 연결과 0HP 자세 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 무기군별 영웅 사망 클립 연결과 0HP 자세 수정</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">영웅 리그에 연결되지 않던 공통 Die_01을 무기군별 클립으로 교체했습니다.18개 리그 포즈 변화와 Build22 남성 검·방패의 실제 사망 자세를 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-13T11:14:08.715Z">2026년 11월 13일 오후 8:14 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>기존 Die_01은 몬스터 뼈 경로를 사용해 영웅 리그에서330개 커브가 모두 연결되지 않았습니다.8개 무기군별 사망 클립과 확인되는 전설 전용 클립을 연결했습니다. 원본은 보존하고 시각 라이브러리 참조를 수정했습니다.</p>
+<p><figure><img class="report-image" src="../assets/native-ui22/death-before.webp" alt="이전0HP 직립 상태" loading="lazy"><figcaption>이전0HP 직립 상태</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/native-ui22/death-after.webp" alt="Build22 0HP 사망 자세" loading="lazy"><figcaption>Build22 0HP 사망 자세</figcaption></figure></p>
+<p>같은 맵의0HP 상태 비교입니다. 수정 전은Build20, 수정 후는Build22이며 무기·전투 시각·주변 봇 배치가 다릅니다. Build21 후보 화면은121HP여서 이 비교에서 제외했습니다.</p>
+<pre><code data-language="csharp">private static AnimationClip SelectHeroDeathClip(IEnumerable&lt;AnimationClip&gt; clips, string family, bool isLegendary)
+        {
+            var clip = clips.Where(candidate =&gt; candidate.name.IndexOf(&quot;_die&quot;, StringComparison.OrdinalIgnoreCase) &gt;= 0)
+                .Where(candidate =&gt; (candidate.name.IndexOf(&quot;_LE&quot;, StringComparison.OrdinalIgnoreCase) &gt;= 0) == isLegendary)
+                .OrderBy(candidate =&gt; candidate.name.Length).FirstOrDefault();
+            if (clip == null)
+            {
+                if (isLegendary)
+                {
+                    return null;
+                }
+                throw new InvalidOperationException($&quot;영웅 사망 클립 누락: {family}&quot;);
+            }
+
+            // 같은 이름의 몬스터 클립이 섞여도 실제 영웅 뼈 경로를 확인해 잘못된 연결을 막는다.
+            bool hasHeroBinding = AnimationUtility.GetCurveBindings(clip).Any(binding =&gt; binding.path.StartsWith(&quot;motion/Bip001&quot;, StringComparison.Ordinal));
+            if (!hasHeroBinding)
+            {
+                throw new InvalidOperationException($&quot;영웅 리그와 다른 사망 클립: {clip.name}&quot;);
+            }
+            return clip;
+        }
+</code></pre>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>사망 상태는 지속 시간이0이므로 StateProgress 대신 진입 이후의 StateElapsed를 사용합니다. 첫 프레임에서 클립 마지막으로 건너뛰는 문제를 수정하고 끝 자세를 유지합니다. 전체 전투 클립1,293개를 로드하는 대신 경로에서 사망 후보18개를 먼저 거릅니다.</p>
+<pre class="mermaid">flowchart LR
+    A[체력0 Dead 진입] --&gt; B[진입 시각 기록]
+    B --&gt; C[무기군·전설 여부로 클립 선택]
+    C --&gt; D[StateElapsed로 샘플링]
+    D --&gt; E[마지막 자세 유지]
+</pre>
+<p>핵심 실행 메서드 전체:</p>
+<pre><code data-language="csharp">private void LateUpdate()
+        {
+            if (_fighter == null || _animations == null) { return; }
+            bool hidden=_fighter.IsHidden;
+            if(hidden!=_wasHidden&amp;&amp;_allRenderers!=null)
+            {
+                _wasHidden=hidden;
+                var properties=new MaterialPropertyBlock();
+                properties.SetColor(&quot;_OccludedColor&quot;,_fighter.isPlayer?new Color(.1f,.75f,1,.6f):new Color(1,.25f,.15f,.5f));
+                properties.SetFloat(&quot;_Opacity&quot;,hidden ? (_fighter.isPlayer ? .28f : .03f) : 1);
+                foreach(var renderer in _allRenderers) { renderer.SetPropertyBlock(properties); }
+            }
+            AnimationClip source;
+            bool loop = false;
+            float time = _fighter.AttackElapsed * _fighter.AnimationRate;
+            switch (_fighter.State)
+            {
+                case CombatState.Windup:
+                case CombatState.Active:
+                case CombatState.Recovery:
+                {
+                    source = AttackClip(_fighter.ComboIndex, _fighter.IsSkillAttack);
+                    break;
+                }
+                case CombatState.Guard:
+                {
+                    source = _animations.guard;
+                    time = Time.time;
+                    loop = true;
+                    break;
+                }
+                case CombatState.Dash:
+                {
+                    source = _animations.dash;
+                    time = _fighter.StateProgress * (source != null ? source.length : 1);
+                    break;
+                }
+                case CombatState.Dead:
+                {
+                    // 최종 프레임으로 즉시 건너뛰지 않고 사망 상태 진입 시각부터 재생한다.
+                    source = _fighter.weapon.rarity == 4 &amp;&amp; _animations.legendaryDeath != null ? _animations.legendaryDeath : _animations.death;
+                    time = _fighter.StateElapsed;
+                    break;
+                }
+                default:
+                {
+                    source = ArenaSession.Instance != null &amp;&amp; ArenaSession.Instance.IsLobby &amp;&amp; _animations.lobbyIdle != null
+                        ? _animations.lobbyIdle : _fighter.MoveIntent.sqrMagnitude &gt; .01f ? _animations.move : _animations.idle;
+                    time = Time.time;
+                    loop = true;
+                    break;
+                }
+            }
+            if (source == null) { source = _animations.idle; }
+            if (source == null) { return; }
+            if (!CLIPS.TryGetValue(source, out var clip))
+            {
+                clip = Instantiate(source);
+                clip.name = source.name + &quot; (visual adapter)&quot;;
+                clip.events = Array.Empty&lt;AnimationEvent&gt;();
+                clip.legacy = true;
+                CLIPS.Add(source, clip);
+            }
+            float sample = loop &amp;&amp; clip.length &gt; 0 ? time % clip.length : Mathf.Min(time, clip.length);
+            // 비반복 클립은 마지막 자세에 머문다. 사망 상태는 Idle로 자동 복귀하지 않는다.
+            clip.SampleAnimation(gameObject, sample);
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>Unity 실제 AnimationUtility 커브와 남녀 리그를 사용해8개 일반·1개 전설 클립의18경우를 검사했습니다.18개 모두 포즈 회전 변화가 있었고13개는 커브가 모두 연결됐습니다.5개에는 추가 머리카락·성별 뼈·회수되지 않은 해시 경로가 남습니다. 포즈 변화만으로 완전한 원작 일치를 판정하지 않습니다. Build22 실제 Windows 경기에서 남성 검·방패 캐릭터가0HP에서 쓰러지는 것을 확인했습니다. 다른 무기군·성별은 리그 검사 범위입니다.</p>
+<p><a class="report-link" href="../assets/native-ui22/rig-bindings.json">리그별 결과·누락 경로</a> · <a class="report-link" href="../assets/native-ui22/build22-verification.json">Windows 확인 요약</a> · <a class="report-link" href="../assets/native-ui22/build22-manifest.json">고정 빌드 해시</a>. 이번 빌드의 새10시간 검증은 수행하지 않았습니다.</p>
+<p>보고용5장은 실제 Affinity 3.3.3 GUI에서1600×900 고품질 WebP로 내보냈습니다. 원본 PNG와 별도 AF5개를 보존하고 실제 닫기·재열기 후5개 모두 clean 상태를 확인했습니다. SDK 저장·내보내기는 PERMISSION_DENIED로 실패하여 GUI를 사용했고 보안 설정은 변경하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>추가 커브 경로5경우, 나머지 무기군·성별의 실제 경기, 사망 FX·페이드·결과 화면이 남았습니다. 이번 회차에는 Blender·Affinity 자산 편집을 수행하지 않았습니다. 샘플 규칙의 전체 코드 적용도 진행 중이며 기존 압축 작성 코드 일부는 남습니다.</p>
+<p><a class="report-link" href="../assets/native-ui22/RestoredDeathBuilder.cs">클립 선택·연결 전체</a> · <a class="report-link" href="../assets/native-ui22/RestoredDeathVerification.cs">리그 검사 전체</a> · <a class="report-link" href="../assets/native-ui22/RestoredFighterVisual.cs">시각 어댑터 전체</a> · <a class="report-link" href="../assets/native-ui22/06-equipment-and-death.md">개발 문서</a>.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 19:11:05 KST 시작. 캐러셀·사망 클립 구현과 첫 실행 확인40~60분 예상. 지속 목표는 중단 지시까지 유지합니다.</li>
+<li>실제로 완료된 시간: 구현·Windows 실행 확인19:11:05~19:44:06 KST, 실측33분1초. 첫 컴파일19:23:37, Build22 런타임 DLL19:36:31, 수동 실행 확인 종료19:44:06 KST. 문서·공개 보고 작성 시간은 별도이며 전체 프로젝트 완료가 아닙니다.</li>
+<li>XERJ: 미사용 — XERJ는 연결 확인을 포함해 사용하지 않았습니다. 보존된 자료의 직렬화 필드, Unity API, 실제 Windows 실행 화면과 로그를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113111408715-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113111408715-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
