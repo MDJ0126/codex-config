@@ -1,0 +1,66 @@
+[
+  {
+    "transformId": 34185,
+    "name": "previousEquipmentButton",
+    "components": [
+      {
+        "type": "BoxCollider",
+        "pathId": 60978,
+        "fields": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 2216
+          },
+          "m_Material": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_IsTrigger": true,
+          "m_Enabled": true,
+          "m_Size": {
+            "x": 30.0,
+            "y": 350.0,
+            "z": 0.0
+          },
+          "m_Center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "transformId": 36471,
+    "name": "nextEquipmentButton",
+    "components": [
+      {
+        "type": "BoxCollider",
+        "pathId": 60999,
+        "fields": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 3381
+          },
+          "m_Material": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_IsTrigger": true,
+          "m_Enabled": true,
+          "m_Size": {
+            "x": 30.0,
+            "y": 350.0,
+            "z": 0.0
+          },
+          "m_Center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    ]
+  }
+]

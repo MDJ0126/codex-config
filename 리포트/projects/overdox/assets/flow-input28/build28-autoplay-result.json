@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-11-13T23:22:24.896154+09:00",
+  "processRunning": false,
+  "completed": true,
+  "scope": "20초 자동 흐름 검증이며10시간 결과가 아닙니다.",
+  "flowOrder": [
+    "OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140",
+    "OVERDOX_FLOW_READY phase=Lobby weapon=10140",
+    "OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140",
+    "OVERDOX_FLOW_READY phase=Arena weapon=10140",
+    "OVERDOX_ROUND_START round=1 weapon=그림자 칼날 set=인펜튜리"
+  ]
+}

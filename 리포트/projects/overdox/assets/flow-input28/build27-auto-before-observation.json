@@ -1,0 +1,11 @@
+{
+  "pid": 1888,
+  "startedAt": "2026-11-13T23:38:04.5415205+09:00",
+  "elapsedSeconds": 48.9,
+  "flow": [
+    "OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140",
+    "OVERDOX_SESSION_START utc=2026-11-13T14:38:09.1441133Z autoplay=True soak=False duration=36000 weapons=38 armor=81",
+    "OVERDOX_FLOW_READY phase=Lobby weapon=10140"
+  ],
+  "capture": "숨김 실행은 조작 가능한 창이 반환되지 않아 자동 진입 수정 전 화면 촬영 미확보. 상태 로그 대조로 한정."
+}

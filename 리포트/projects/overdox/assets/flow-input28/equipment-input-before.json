@@ -1,0 +1,37 @@
+{
+    "recordedAt": "2026-11-13T14:15:27.8941515Z",
+    "width": 1920,
+    "height": 1080,
+    "records": [
+        {
+            "sourceId": 34185,
+            "point": {
+                "x": 980.9990234375,
+                "y": 554.9989013671875
+            },
+            "size": {
+                "x": 20.0,
+                "y": 46.0
+            },
+            "isInteractable": true,
+            "clickTargets": [
+                "OriginalLobbyUI.v2/UICamera_2D/EquipmentWindow/Main/Anchor - Right/EquipmentListController/EquipmentListGroup/previousEquipmentButton -> OriginalLobbyUI.v2/UICamera_2D/EquipmentWindow/Main/Anchor - Right/EquipmentListController/EquipmentListGroup/previousEquipmentButton"
+            ]
+        },
+        {
+            "sourceId": 36471,
+            "point": {
+                "x": 1880.998046875,
+                "y": 554.9999389648438
+            },
+            "size": {
+                "x": 20.0,
+                "y": 46.0
+            },
+            "isInteractable": true,
+            "clickTargets": [
+                "OriginalLobbyUI.v2/UICamera_2D/EquipmentWindow/Main/Anchor - Right/EquipmentListController/EquipmentListGroup/nextEquipmentButton -> OriginalLobbyUI.v2/UICamera_2D/EquipmentWindow/Main/Anchor - Right/EquipmentListController/EquipmentListGroup/nextEquipmentButton"
+            ]
+        }
+    ]
+}

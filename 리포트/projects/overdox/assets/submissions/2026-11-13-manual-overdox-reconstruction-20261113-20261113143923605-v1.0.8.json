@@ -1,0 +1,485 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "overdox",
+    "kind": "manual",
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "이전·다음 버튼을 원본 콜라이더30×350으로 복구하고 자동 전투 요청을 로딩 완료 뒤 전달했습니다. Build28에서 같은 좌표 클릭·여성 전투와20초 자동 흐름을 확인했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "",
+    "remaining": "T04 원작 전투 효과, T05 Affinity 후속 디자인, T07 공개 근거 갱신, T08 한 무기 저장 왕복 검증 완료,119장비 수식 전수·함수 호환 미확인, T10 원본 UI 연동, T11 FX/음향, T12 카메라·입력 세부 동일성. 전체 목표 진행 중. T13 샘플 작성 규칙·주석·개발 문서의 전체 코드 적용. 새 Build22의10시간은 미실행이며 이전 Build11과 구분합니다. Build26 추가 부모·자식 및 가지 간 depth,원본 템플릿 등급·브랜드 값 동적 바인딩,새10시간 실행 미완료. Build27 전체 UI·이전 버튼 히트 영역·전 장비 실제 전투·10시간 미완료. 앞선 S등급 지칭은 세트 표식으로 정정. Build27 고정 사본은23:04:31 KST부터 기존 Arena 직접 진입 옵션으로10시간 실행 중이며 완료 전입니다. 로비 자동 진입은 로딩 중 거부되는 기존 문제를 별도 수정해야 합니다. Build28 기본자동진입과두버튼클릭은확인. OS드래그·전체원작입력·추가UIdepth·Build28 10시간미완료. Build27 고정장시간은별도진행중.",
+    "outcome": "원작 데이터 복원과 기본 전투 구현 후 전체 스킬·입력·장시간 검증 진행 중.",
+    "proposedTime": "재개 첫 개선 회차90~150분 예상. 원작 UI/FX 전체 복원의 완료 예상과 구분합니다.",
+    "actualTime": "재개2026-11-13 15:06:39 KST. build17 빌드16:12:56 KST 완료(약66분17초). 실제 Windows 진입·성별 선택·전투·복귀 확인16:18 KST 무렵. 복원 build11 10시간은15:58:16.693 KST 완료. 전체 복원 완료 시각 미정. 후속 구현19:11:05~19:44:06 KST 33분1초. Build22 DLL19:36:31, 문서·로컬 커밋31703d4 저장19:57:06 KST. 게시 후 확인은 별도 진행 중. 입력 영역 후속20:21:01~20:30:37 KST 9분36초, Build23 빌드20:27:12 성공. 공개 보고13fb7efc 배포20:17:36 KST success, 개발일지97e7e46 공개 확인. 저장XLSX→Windows 대조20:53:46~21:04 KST, 복구Build25 21:05:58 완료. 실제 실행은Build23·24이며 Build25는149파일 동일성 확인. UI depth21:28:21 시작,Build26 21:43:41,Windows 남녀·장비·전투·로비 복귀21:55:58 KST 확인. Build27 회차22:11:09 시작,22:32:55 구현,22:38:04 빌드,22:50 무렵 실제 남녀·장비 표시 확인 KST. Build28 후속23:12:32 시작,23:18:22 입력영역저장,23:20경빌드,23:21:51 자동20초종료,23:24:53 수동여성전투후로비복귀 KST.",
+    "xerjEvidence": "사용자 지침에 따라 XERJ 연결·검색 없음. rg·공식 자료·영상 관찰·공개 원작 파일의 정적 데이터 대조 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 메뉴얼",
+    "manualId": "overdox-reconstruction-20261113",
+    "round": 8,
+    "phase": "followup",
+    "execution": "sequential",
+    "manualState": "qa",
+    "goal": "OVERDOX를 Unity 로컬 봇 전투로 재현하고 모든 장비·브랜드를 원작 근거로 복원합니다.\n\n![원작 자산 복원 빌드 실제 전투](../assets/reconstruction/combat-build11.png)",
+    "completionCriteria": "Unity 소스·Windows 실행 빌드, 실제 Blender·Affinity 네이티브 원본, DDT 장비 데이터, 실제10시간 실행 증거와 남은 차이 목록, 공개 결과 보고서.",
+    "previousManual": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113140544762-v1.0.7.html",
+    "relatedDiscussions": [],
+    "tasks": [
+      {
+        "id": "T01",
+        "order": 1,
+        "title": "원작 조사·데이터·DDT 연결",
+        "action": "공식 자료·실제 영상·원작 패키지 정적 자료를 대조하고 DDT 테이블로 연결한다.",
+        "expected": "무기38·방어구81·브랜드6, 성장 수치 및 한국어 원문 근거 보존.",
+        "qa": "DDT 로딩·성장 원작 화면203/420·스키마·전체 장비 참조 테스트.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "원작 표·DDT 및 최신35/35 회귀 검사 통과. 원작 수치203/420 대조 포함."
+      },
+      {
+        "id": "T02",
+        "order": 2,
+        "title": "원작 모델·기본 봇 전투 복원",
+        "action": "원작 스킨·뼈·애니메이션을 프로젝트 소유 표현 어댑터에 연결한다.",
+        "expected": "남녀 장비 전체 참조와 실제 로컬 전투 실행.",
+        "qa": "전체 장비 순환 렌더 및 봇 실전 로그·화면 대조.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "CatalogReview03 무기38·남녀54세트 구성 예외0. RestoredSmoke06 실제 이동·타격·가드·패링·사망, y=.06 유지. 복합 고유스킬 전체 검증은 T04에 별도 기록."
+      },
+      {
+        "id": "T03",
+        "order": 3,
+        "title": "Blender 편집 가능한 장비 원본",
+        "action": "원작 메시·UV·텍스처·스킨 가중치를 Blender 네이티브 라이브러리로 만든다.",
+        "expected": "장비119종, 남녀 변형 및 packed textures 재열기.",
+        "qa": "실제 Blender 재열기, 장비ID 수·텍스처 내장·렌더 확인.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "OverdoxRestoredEquipment.blend 저장·재열기. 장비119, armature162, FILE image198/198 packed, 실제 Cycles 렌더."
+      },
+      {
+        "id": "T04",
+        "order": 4,
+        "title": "고유스킬·혼합 장착·실제 입력 QA",
+        "action": "원작 스킬 설명·수치와 능력을 대조하고 전체 장비/성별/성장/전투를 재현한다.",
+        "expected": "지원 동작·미확인 동작을 분리하고 재현 가능한 빌드 제공.",
+        "qa": "고유스킬별 실행, UI 입력·전투 로그·재현 후 수정·재검증.",
+        "dependsOn": [],
+        "status": "qa",
+        "revision": 1,
+        "result": "Build22에서 남성 검·방패0HP 사망 자세 확인. 리그18경우 포즈 변화·13경우 전체 커브 연결.5경우 추가 경로·전체 고유능력·FX 일치가 남음."
+      },
+      {
+        "id": "T05",
+        "order": 5,
+        "title": "Affinity 네이티브 디자인 저장·재열기",
+        "action": "실제 Affinity 문서와 렌더를 저장하고 미저장 상태를 해소한다.",
+        "expected": "네이티브 원본의 파일·재열기·dirty=false 확인.",
+        "qa": "CLI 및 실제 앱 문서 상태와 출력 바이트 확인.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "wordmark.af 실제 저장됨. 임시 atlas 네이티브 저장과 세션 정리는 Windows 보안 모달 및 사용자 PC 사용 제약으로 최종 판정 대기."
+      },
+      {
+        "id": "T06",
+        "order": 6,
+        "title": "실측 10시간 연속 검증",
+        "action": "고정한 복원 빌드로 자동 봇 전투·장비 순환·메모리·오류를 기록한다.",
+        "expected": "실제36000초 이상 완료 JSON과 실행 로그, 발견 오류 재검증.",
+        "qa": "해시·시작/종료·텔레메트리·장비별 공격/스킬 커버리지 대조.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "고정 build11 36000.0195초·350경기 완료. 38/81 장비 및38종 공격·스킬 명령 기록. 시작 시 기록한2개 해시 일치. 알려진 FX 스크립트 누락1건. 최신 build17 결과와 구분."
+      },
+      {
+        "id": "T07",
+        "order": 7,
+        "title": "최종 소스·빌드·보고서 공개",
+        "action": "검증 결과와 실제 전후 화면, 변경 핵심 메서드·흐름, 대화 요약·제한을 정리한다.",
+        "expected": "소스·실행 파일, HTTPS 개별 본문 및 첨부 외부 접근 확인.",
+        "qa": "현재 버전 빌드/최종 QA, 보고서 스키마·사이트 검사, 커밋·푸시·배포 분리 확인.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "build16·소스 로컬 커밋·중간 보고서·개발일지 전달. 후속 결과 보고서 공개와 장시간 최종 집계 대기."
+      },
+      {
+        "id": "T08",
+        "order": 8,
+        "title": "Excel 수식 원본과 DDT 연동",
+        "action": "원작 표·119종 장비를 수식 포함 XLSX로 편집하고 기존 DDT 엔진으로 계산·컴파일한다.",
+        "expected": "변경 수식의 실제 DDT·실행 값 반영과 복구를 확인한다.",
+        "qa": "XLSX 수식 변경→Unity 메뉴 컴파일→DDT 값 비교→원본 복구.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "31시트의 저장 사본에서 흑조10750 배율1→1.1, 기본120→132, 실제 Windows 카드203→215·장착213→226 확인. 제작 컴파일 뒤 원본30파일 복구·재컴파일 해시 일치. 전체119장비 수식 전수·임의함수 호환은 미확인. 순차 메뉴얼 첫 미완료T04를 유지하므로 T08 상태는 pending으로 보존합니다."
+      },
+      {
+        "id": "T09",
+        "order": 9,
+        "title": "스플래시·로비·전투 진입",
+        "action": "저장 씬·비동기 로딩·장비 선택 전달·전투 시작·로비 복귀를 연결한다.",
+        "expected": "Unity와 Windows에서 기본 진입·장비/성별 선택 유지·복귀가 동작한다.",
+        "qa": "실제 버튼·입력과 플레이어 로그로 기본 흐름을 확인한다.",
+        "dependsOn": [],
+        "status": "done",
+        "revision": 1,
+        "result": "build17 고정 사본과 실제 Windows 흐름 확인. Unity에서10150 유지, Windows에서 여성 선택 유지. 전체 UI 동일성·모든 해상도 검증은 별도. Build28 로딩 완료 후 자동 시작,우회 없는 Splash→Lobby→Arena와20초 종료 확인. 수동 여성 선택→전투→Esc 로비 복귀 확인. 전 장비·해상도 검증은 별도."
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "title": "원본 로비·장비·전투 HUD",
+        "action": "원작 직렬화 UI의 계층·스프라이트·색상·폰트를 저장 프리팹으로 복원하고 전투·장비 값에 연결한다.",
+        "expected": "원작 배치 대조와 실제 장비 선택·전투 HUD 표시·화면 전후 근거.",
+        "qa": "원본 영상·이미지와 실제 Unity/Windows 화면을 비교한다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "Build22 실제 클릭·휠 열람·별도 장착·모델과 공격력50→158→50 확인. 원작 간격210·강도16. OS 드래그와119개 화면 전수·전체 메뉴 일치는 미완료. Build23에서 입력 크기100×100→590×400 보정,5개 레이캐스트와 실제 Windows 빈 영역 휠·장착 유지·로비 뒤로가기 확인. Build26에서 재화 그림자8쌍·직접 형제 depth 수정과 남녀 장비·전투·로비 복귀 확인. 다른 가지와 부모·자식 겹침,등급·브랜드 동적 바인딩은 미완료. Build27 세트 제목 배경 depth와 실제 DDT 레벨·프레임·SetMark·브랜드 문구·무기군 제목 연결. 녹색S는 희귀도가 아닌 방어구 세트 표식으로 정정. 전체 UI는 미완료."
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "title": "원본 이펙트·음향과 효율",
+        "action": "원작 이벤트·FX·오디오를 프로젝트 소유 어댑터·파생 자산으로 연결하고 중복 자원 사용을 측정한다.",
+        "expected": "장비 공격·스킬·피격의 실제 타이밍과 자원 사용 근거.",
+        "qa": "각 이벤트와 실제 렌더·음향·할당을 대조한다.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "원본 클립의 AttackEffect·PlaySound 이름 확인. 구현 및 실제 대조 남음."
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "title": "카메라·입력·장비 동작 세부 복원",
+        "action": "원본 카메라·추적·피격·사망 시점과 입력 반응을 대조하고 누락 능력을 구현한다.",
+        "expected": "카메라·조작·핵심 장비 동작의 실제 전후 대조와 알려진 차이 기록.",
+        "qa": "직접 조작·장비별 검증·원본 자료와 수치 대조.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "Build21 실제 로비 맵과 홈↔장비 왕복 카메라 확인. 원작 셰이더 본문·관성 곡선·세부 타이밍·전체 입력 일치는 미완료. Build28 장비 이전·다음 원본30×350 입력 영역 복구. 같은 좌표3→2와 위쪽2→1·다음1→2,장착50 유지. OS드래그·전체 조작감은 미완료."
+      },
+      {
+        "id": "T13",
+        "order": 13,
+        "title": "샘플 작성 규칙·주석·개발 문서",
+        "action": "SampleProjectForUnity의 문서와 실제 예제를 함께 확인하고 프로젝트 소유 코드에 책임·전제·상태 변경 주석과 작성 형식을 적용한다.",
+        "expected": "런타임·에디터 전체 적용 검토, 구조·실행 흐름·사용법·한계·변경 이력 문서와 원작 근거·대응값 구분.",
+        "qa": "직렬화 필드·참조 보존, 변경 코드의 컴파일과 해당 실행 흐름, 문서 본문·링크 확인.",
+        "dependsOn": [],
+        "status": "pending",
+        "revision": 1,
+        "result": "5개 UI 클래스 최초 적용과 개발 문서6장+색인 작성. 새 캐러셀·사망 도구 주석 추가. 전투 본체·기존 에디터 전체 적용은 미완료."
+      }
+    ],
+    "focusTasks": [
+      "T04",
+      "T09",
+      "T10",
+      "T12",
+      "T13"
+    ],
+    "scopeChange": "사용자가 샘플 프로젝트의 작성 규칙·충분한 주석·개발 문서를 요청하여T13을 추가합니다. 기존12개 작업·완료 상태·QA 이력은 보존합니다. 이번5개 후속 검토는 부분 구현과 전체 완료를 구분합니다.",
+    "qaRuns": [
+      {
+        "id": "Q03",
+        "kind": "step",
+        "at": "2026-11-12T20:30:15.716228+00:00",
+        "summary": "Blender 검증 JSON 실제 기록 시각 기준",
+        "results": [
+          {
+            "taskId": "T03",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "119장비ID·198/198 FILE image 내장 확인 및 실제 렌더.",
+            "evidence": "로컬 blender-restored-validation.json, blender-reopen-02.log, blender-restored-preview.png. 초기 assertion 실패 로그도 보존.",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q02",
+        "kind": "step",
+        "at": "2026-11-12T20:50:48.6441267Z",
+        "summary": "기존 실제 실행 증거의 종료 시각 기준",
+        "results": [
+          {
+            "taskId": "T02",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "CatalogReview03 구성예외0. RestoredSmoke06 실제 전투 및 이동 높이 정상.",
+            "evidence": "로컬 CatalogReview03/catalog-review.json, RestoredSmoke06/telemetry.log·combat-3.png. 원작 T-pose 실패는 앞선 CatalogReview01에 보존.",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q01",
+        "kind": "step",
+        "at": "2026-11-12T20:58:25Z",
+        "summary": "DDT·성장·참조·원작 무게 경계·혼합 브랜드 회귀 검사",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "29/29 passed, failed0.",
+            "evidence": "로컬 Docs/Verification/editmode-03.xml, 원작 장비 화면203/420 대조 테스트 포함.",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q04",
+        "kind": "regression",
+        "at": "2026-11-13T04:59:40Z",
+        "summary": "최신35개 회귀 검사 모두 통과.",
+        "results": [
+          {
+            "taskId": "T01",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "최신35개 회귀 검사 모두 통과.",
+            "evidence": "Docs/Verification/editmode-05.xml",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q05",
+        "kind": "step",
+        "at": "2026-11-13T05:01:44.0579923Z",
+        "summary": "전체 무기 일반 명중38/38과 충전 소비38/38 관찰. 전체 원작 효과 동일성은 미검증으로 남김.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "전체 무기 일반 명중38/38과 충전 소비38/38 관찰. 전체 원작 효과 동일성은 미검증으로 남김.",
+            "evidence": "Docs/Verification/GearContact15/gear-contact-results.json, Manual15 실제 입력 캡처",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q06",
+        "kind": "step",
+        "at": "2026-11-13T05:19:39.8918059Z",
+        "summary": "초기 빌드36000.0078초·1422라운드 완료. 복원 build11의 별도10시간은 미완료.",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "초기 빌드36000.0078초·1422라운드 완료. 복원 build11의 별도10시간은 미완료.",
+            "evidence": "Docs/Verification/Soak10h/soak-complete.json, long-run-summary.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q07",
+        "kind": "step",
+        "at": "2026-11-13T06:58:16.6933687Z",
+        "summary": "고정 복원 build11의10시간 연속 실행 완료. 알려진 경고1건과 해시 검증 범위2개를 함께 기록.",
+        "results": [
+          {
+            "taskId": "T06",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "고정 build11 36000.0195초·350경기 완료. 38/81 장비 및38종 공격·스킬 명령 기록. 시작 시 기록한2개 해시 일치. 알려진 FX 스크립트 누락1건. 최신 build17 결과와 구분.",
+            "evidence": "Docs/Verification/RestoredSoak10h/soak-complete.json; long-run-summary.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q08",
+        "kind": "step",
+        "at": "2026-11-13T07:41:53.693651+00:00",
+        "summary": "build17 기본 진입·선택 전달·복귀를 실제 Unity 및 Windows에서 확인한 결과 등록.",
+        "results": [
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "build17 고정 사본과 실제 Windows 흐름 확인. Unity에서10150 유지, Windows에서 여성 선택 유지. 전체 UI 동일성·모든 해상도 검증은 별도.",
+            "evidence": "Docs/Verification/Phase2Flow/verification.json; build17-manual-player.log",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q09",
+        "kind": "step",
+        "at": "2026-11-13T09:23:53.801Z",
+        "summary": "Excel 메모리 계산과 DDT 왕복 부분 검증. 전체 저장 변경 경로는 미실행.",
+        "results": [
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "메모리 수식120→132, 실제 DDT 쓰기·읽기132와 원본 XLSX 불변 확인.31시트. 저장한 XLSX 변경→Windows 화면까지는 미검증.",
+            "evidence": "Docs/Verification/ExcelDdtRoundTrip/result.json; compiled-comparison.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q10",
+        "kind": "step",
+        "at": "2026-11-13T10:44:06.556Z",
+        "summary": "장비 열람·착용 실행 범위와 전체 UI의 알려진 차이를 구분.",
+        "results": [
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Build22 실제 클릭·휠 열람·별도 장착·모델과 공격력50→158→50 확인. 원작 간격210·강도16. OS 드래그와119개 화면 전수·전체 메뉴 일치는 미완료.",
+            "evidence": "Docs/Verification/NativeUI/build22-verification.json; EquipmentCarousel/drag-events.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q11",
+        "kind": "step",
+        "at": "2026-11-13T10:44:06.556Z",
+        "summary": "사망 포즈 부분 확인은 전체 능력·효과 검증을 대신하지 않음.",
+        "results": [
+          {
+            "taskId": "T04",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "Build22에서 남성 검·방패0HP 사망 자세 확인. 리그18경우 포즈 변화·13경우 전체 커브 연결.5경우 추가 경로·전체 고유능력·FX 일치가 남음.",
+            "evidence": "Docs/Verification/DeathAnimations/rig-bindings.json; NativeUI/death-build22-after.png",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q12",
+        "kind": "step",
+        "at": "2026-11-13T10:44:06.556Z",
+        "summary": "샘플 규칙·문서 첫 적용 후 전체 적용 범위 검토는 미완료.",
+        "results": [
+          {
+            "taskId": "T13",
+            "revision": 1,
+            "verdict": "not_run",
+            "actual": "5개 UI 클래스 최초 적용과 개발 문서6장+색인 작성. 새 캐러셀·사망 도구 주석 추가. 전투 본체·기존 에디터 전체 적용은 미완료.",
+            "evidence": "Docs/Development/README.md; 04-coding-rules.md; 05-history.md",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q13",
+        "kind": "step",
+        "at": "2026-11-13T11:30:37.813Z",
+        "summary": "장비 빈 영역 입력 후속 수정 확인. 전체 UI 동일성 기준은 알려진 미완료가 있어 통과 처리하지 않음.",
+        "results": [
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Build22 실제 클릭·휠 열람·별도 장착·모델과 공격력50→158→50 확인. 원작 간격210·강도16. OS 드래그와119개 화면 전수·전체 메뉴 일치는 미완료. Build23에서 입력 크기100×100→590×400 보정,5개 레이캐스트와 실제 Windows 빈 영역 휠·장착 유지·로비 뒤로가기 확인.",
+            "evidence": "Docs/Verification/EquipmentCarousel/input-routes-with-clip.json; NativeUI/build23-verification.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q14",
+        "kind": "step",
+        "at": "2026-11-13T12:08:30.889Z",
+        "summary": "T08의 저장 수식→실제 제작 DDT→Windows 표시와 원본 복구를 한 무기로 확인. 전체 장비·함수 범위와 구분.",
+        "results": [
+          {
+            "taskId": "T08",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "31시트의 저장 사본에서 흑조10750 배율1→1.1, 기본120→132, 실제 Windows 카드203→215·장착213→226 확인. 제작 컴파일 뒤 원본30파일 복구·재컴파일 해시 일치. 전체119장비 수식 전수·임의함수 호환은 미확인. 순차 메뉴얼 첫 미완료T04를 유지하므로 T08 상태는 pending으로 보존합니다.",
+            "evidence": "Docs/Verification/ExcelSavedRoundTrip/windows-verification.json; unity-saved-ddt.json; production-recompiled-restored.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q15",
+        "kind": "step",
+        "at": "2026-11-13T12:55:58.434Z",
+        "summary": "UI depth의 확인 범위는 개선됐으나 전체 동일성 기준은 미완료로 실패 유지.",
+        "results": [
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Build22 실제 클릭·휠 열람·별도 장착·모델과 공격력50→158→50 확인. 원작 간격210·강도16. OS 드래그와119개 화면 전수·전체 메뉴 일치는 미완료. Build23에서 입력 크기100×100→590×400 보정,5개 레이캐스트와 실제 Windows 빈 영역 휠·장착 유지·로비 뒤로가기 확인. Build26에서 재화 그림자8쌍·직접 형제 depth 수정과 남녀 장비·전투·로비 복귀 확인. 다른 가지와 부모·자식 겹침,등급·브랜드 동적 바인딩은 미완료.",
+            "evidence": "Docs/Verification/UiDepth/shadow-repair.json; serialized-preservation.json; avatar-preserved.json; build26-flow.log",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q16",
+        "kind": "step",
+        "at": "2026-11-13T14:00:05.995163+00:00",
+        "summary": "장비 표시·추가 depth는 개선했으나 전체 UI 동일성은 미완료. 시각은 QA 결과 기록 시각.",
+        "results": [
+          {
+            "taskId": "T10",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Build22 실제 클릭·휠 열람·별도 장착·모델과 공격력50→158→50 확인. 원작 간격210·강도16. OS 드래그와119개 화면 전수·전체 메뉴 일치는 미완료. Build23에서 입력 크기100×100→590×400 보정,5개 레이캐스트와 실제 Windows 빈 영역 휠·장착 유지·로비 뒤로가기 확인. Build26에서 재화 그림자8쌍·직접 형제 depth 수정과 남녀 장비·전투·로비 복귀 확인. 다른 가지와 부모·자식 겹침,등급·브랜드 동적 바인딩은 미완료. Build27 세트 제목 배경 depth와 실제 DDT 레벨·프레임·SetMark·브랜드 문구·무기군 제목 연결. 녹색S는 희귀도가 아닌 방어구 세트 표식으로 정정. 전체 UI는 미완료.",
+            "evidence": "Docs/Verification/EquipmentDisplay/ddt-display-verification.json; draw-order-after-backdrop-fix.json; build27-flow.log; avatar-preserved.json",
+            "dependencies": {}
+          }
+        ]
+      },
+      {
+        "id": "Q17",
+        "kind": "step",
+        "at": "2026-11-13T14:37:09.995880+00:00",
+        "summary": "기본 자동·수동 진입은 통과,전체 입력 동일성은 미완료. 시각은 결과 기록 시각.",
+        "results": [
+          {
+            "taskId": "T09",
+            "revision": 1,
+            "verdict": "pass",
+            "actual": "build17 고정 사본과 실제 Windows 흐름 확인. Unity에서10150 유지, Windows에서 여성 선택 유지. 전체 UI 동일성·모든 해상도 검증은 별도. Build28 로딩 완료 후 자동 시작,우회 없는 Splash→Lobby→Arena와20초 종료 확인. 수동 여성 선택→전투→Esc 로비 복귀 확인. 전 장비·해상도 검증은 별도.",
+            "evidence": "Docs/Verification/FlowInput/build28-autoplay-after.log; build28-short-run-complete.json; build28-manual-flow.log",
+            "dependencies": {}
+          },
+          {
+            "taskId": "T12",
+            "revision": 1,
+            "verdict": "fail",
+            "actual": "Build21 실제 로비 맵과 홈↔장비 왕복 카메라 확인. 원작 셰이더 본문·관성 곡선·세부 타이밍·전체 입력 일치는 미완료. Build28 장비 이전·다음 원본30×350 입력 영역 복구. 같은 좌표3→2와 위쪽2→1·다음1→2,장착50 유지. OS드래그·전체 조작감은 미완료.",
+            "evidence": "Docs/Verification/FlowInput/original-button-colliders.json; build28-manual-result.json; preservation.json",
+            "dependencies": {}
+          }
+        ]
+      }
+    ],
+    "state": "verification"
+  }
+}
