@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="29" result="Passed" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.7852886">
+  <test-suite type="TestSuite" id="1000" name="OVERDOX · Combat Prototype" fullname="OVERDOX · Combat Prototype" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.785289" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1034" name="Overdox.Tests.dll" fullname="C:/Projects/FH/Library/ScriptAssemblies/Overdox.Tests.dll" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.777190" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1956" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1035" name="Overdox" fullname="Overdox" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.776642" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1036" name="Tests" fullname="Overdox.Tests" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.776369" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="CombatAndCatalogTests" fullname="Overdox.Tests.CombatAndCatalogTests" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:25Z" duration="4.775718" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1022" name="AllCatalogEntriesLoadThroughRealDdtAndHaveModels" fullname="Overdox.Tests.CombatAndCatalogTests.AllCatalogEntriesLoadThroughRealDdtAndHaveModels" methodname="AllCatalogEntriesLoadThroughRealDdtAndHaveModels" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1593538182" result="Passed" start-time="2026-11-12 20:58:20Z" end-time="2026-11-12 20:58:21Z" duration="0.099708" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1021" name="CommittedStatesRejectNewActions" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.004859" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1013" name="CommittedStatesRejectNewActions(Idle,True)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Idle,True)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="974671819" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.001312" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="CommittedStatesRejectNewActions(Guard,True)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Guard,True)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1397965150" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000106" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="CommittedStatesRejectNewActions(Windup,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Windup,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="825371064" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000055" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="CommittedStatesRejectNewActions(Active,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Active,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1308432143" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000045" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="CommittedStatesRejectNewActions(Recovery,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Recovery,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="893948799" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000092" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="CommittedStatesRejectNewActions(Stunned,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Stunned,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="401770422" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000189" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="CommittedStatesRejectNewActions(Dead,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Dead,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="806179087" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000106" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1020" name="CommittedStatesRejectNewActions(Dash,False)" fullname="Overdox.Tests.CombatAndCatalogTests.CommittedStatesRejectNewActions(Dash,False)" methodname="CommittedStatesRejectNewActions" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="680489737" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000154" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1024" name="DdtRejectsDuplicateIdentifiers" fullname="Overdox.Tests.CombatAndCatalogTests.DdtRejectsDuplicateIdentifiers" methodname="DdtRejectsDuplicateIdentifiers" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="102157532" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.015475" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="DdtRoundTripPreservesEveryWeaponField" fullname="Overdox.Tests.CombatAndCatalogTests.DdtRoundTripPreservesEveryWeaponField" methodname="DdtRoundTripPreservesEveryWeaponField" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="129515115" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.013295" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="EveryWeaponResolvesAllComboHitsAndSpecialSkillThroughDdt" fullname="Overdox.Tests.CombatAndCatalogTests.EveryWeaponResolvesAllComboHitsAndSpecialSkillThroughDdt" methodname="EveryWeaponResolvesAllComboHitsAndSpecialSkillThroughDdt" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="2138854666" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.027032" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="GuardAndArmorReduceDamageWithoutNegativeDamage" fullname="Overdox.Tests.CombatAndCatalogTests.GuardAndArmorReduceDamageWithoutNegativeDamage" methodname="GuardAndArmorReduceDamageWithoutNegativeDamage" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="37489549" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.001178" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="MeleeArcRejectsBehindAndOutOfRange" fullname="Overdox.Tests.CombatAndCatalogTests.MeleeArcRejectsBehindAndOutOfRange" methodname="MeleeArcRejectsBehindAndOutOfRange" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="819794850" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.000905" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="MixedBrandArmorDoesNotRetainFullBrandSetBonus" fullname="Overdox.Tests.CombatAndCatalogTests.MixedBrandArmorDoesNotRetainFullBrandSetBonus" methodname="MixedBrandArmorDoesNotRetainFullBrandSetBonus" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="466745000" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.001446" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="OriginalGrowthMatchesArchivedEquipmentScreenshot" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalGrowthMatchesArchivedEquipmentScreenshot" methodname="OriginalGrowthMatchesArchivedEquipmentScreenshot" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="917328748" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:21Z" duration="0.032390" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="OriginalVisualLibraryResolvesEveryEquipmentPart" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalVisualLibraryResolvesEveryEquipmentPart" methodname="OriginalVisualLibraryResolvesEveryEquipmentPart" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="503111178" result="Passed" start-time="2026-11-12 20:58:21Z" end-time="2026-11-12 20:58:25Z" duration="4.557581" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1033" name="OriginalWeightThresholdUsesSourceTable" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalWeightThresholdUsesSourceTable" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.008048" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1029" name="OriginalWeightThresholdUsesSourceTable(40,1.0f)" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalWeightThresholdUsesSourceTable(40,1.0f)" methodname="OriginalWeightThresholdUsesSourceTable" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="390591470" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.006579" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1030" name="OriginalWeightThresholdUsesSourceTable(41,0.95f)" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalWeightThresholdUsesSourceTable(41,0.95f)" methodname="OriginalWeightThresholdUsesSourceTable" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1033581114" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000133" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1031" name="OriginalWeightThresholdUsesSourceTable(55,0.95f)" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalWeightThresholdUsesSourceTable(55,0.95f)" methodname="OriginalWeightThresholdUsesSourceTable" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="204671179" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000108" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="OriginalWeightThresholdUsesSourceTable(56,0.9f)" fullname="Overdox.Tests.CombatAndCatalogTests.OriginalWeightThresholdUsesSourceTable(56,0.9f)" methodname="OriginalWeightThresholdUsesSourceTable" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1372201685" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000071" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1010" name="WeightBoundaryUsesExpectedTier" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.001561" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="WeightBoundaryUsesExpectedTier(40,5.9f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(40,5.9f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="367934367" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000258" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="WeightBoundaryUsesExpectedTier(41,5.5f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(41,5.5f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1194329702" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000071" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="WeightBoundaryUsesExpectedTier(54,5.5f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(54,5.5f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="618785226" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000057" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="WeightBoundaryUsesExpectedTier(55,5.1f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(55,5.1f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="474365121" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000071" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="WeightBoundaryUsesExpectedTier(70,5.1f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(70,5.1f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="1589849500" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000046" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="WeightBoundaryUsesExpectedTier(71,4.7f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(71,4.7f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="52898156" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000076" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="WeightBoundaryUsesExpectedTier(85,4.7f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(85,4.7f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="365185269" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000051" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="WeightBoundaryUsesExpectedTier(86,4.3f)" fullname="Overdox.Tests.CombatAndCatalogTests.WeightBoundaryUsesExpectedTier(86,4.3f)" methodname="WeightBoundaryUsesExpectedTier" classname="Overdox.Tests.CombatAndCatalogTests" runstate="Runnable" seed="2067270312" result="Passed" start-time="2026-11-12 20:58:25Z" end-time="2026-11-12 20:58:25Z" duration="0.000043" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Projects/FH/Docs/Verification/editmode-03.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
