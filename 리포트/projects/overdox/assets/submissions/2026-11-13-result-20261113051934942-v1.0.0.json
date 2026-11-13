@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "overdox",
+    "kind": "result",
+    "title": "OVERDOX 고유 스킬 분기와 돌진 접촉 폭발 검토",
+    "summary": "회복·검기·오라·돌진·잠행과 전설 검 투척/순간이동을 연결했습니다. 비공격 유틸리티의 충전 소비를 효과 정확성 통과로 바꾸지 않았습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "원작 Skill ID로 로컬 유틸리티와 물리 스킬을 구분합니다. 지원하지 않는 ID는 일반 물리 스킬 상태 기계로 반환합니다.\n\n```mermaid\nflowchart TD\n    A[원작 스킬 조회] --> B[자기 대상 참조 효과]\n    B --> C{ID별 유틸리티 경로}\n    C -->|있음| D[로컬 실행 후 공격 시각 갱신]\n    C -->|없음| E[물리 스킬 상태 기계]\n```\n\n`Assets/Scripts/InGame/FighterSpecialSkills.cs`\n\n```csharp\nprivate bool ExecuteUtilitySpecialCore()\n{\n    var database = ArenaSession.Instance.originalData;\n    if (database == null) { return false; }\n    var skill = database.GetSkill(weapon, _combo, true);\n    _skillAttack = true;\n    ApplyReferencedConditions(skill, this, true);\n    switch (skill.Id)\n    {\n        case 10010:\n            _basicIgnoreUntil = Time.time + .8f;\n            StartCoroutine(Regenerate(skill.VariableValue3, skill.VariableValue2, skill.VariableValue1));\n            SetState(CombatState.Recovery,.8f);return true;\n        case 10011:\n            StartCoroutine(EnergyWave(1.25f,12,9));SetState(CombatState.Recovery,.5f);return true;\n        case 10012:\n            StartCoroutine(ShadowDimension(skill));SetState(CombatState.Recovery,.25f);return true;\n        case 10013: AddBuff(20201);SetState(CombatState.Recovery,.4f);return true;\n        case 10014:\n            StartCoroutine(ThrowAndTeleport(skill));return true;\n        case 10021: AddBuff(20701);SetState(CombatState.Recovery,.5f);return true;\n        case 10031: AddBuff(20001);SetState(CombatState.Recovery,.35f);return true;\n        case 10032:\n            StartCoroutine(DamageAura(3.6f,5,.5f,20,0));SetState(CombatState.Recovery,.4f);return true;\n        case 10033:\n            foreach(var target in TargetsInRange(8.5f)) { target.AddBuff(20301); }\n            SetState(CombatState.Recovery,.5f);return true;\n        case 10041:\n            StartCoroutine(RandomConditionAura(4.2f,8,.2f));SetState(CombatState.Recovery,.4f);return true;\n        case 10052: AddBuff(20101);AddBuff(20102);SetState(CombatState.Recovery,.35f);return true;\n        case 10054:\n            StartCoroutine(ChargeExplosion(3,1.6f));return true;\n        case 10064: AddBuff(21701);AddBuff(21601);SetState(CombatState.Recovery,.45f);return true;\n        case 10073: AddBuff(20801);AddBuff(20802);SetState(CombatState.Recovery,.35f);return true;\n        case 10082:\n        case 10087:\n            StartCoroutine(DashSlash(skill.Id==10087));return true;\n        default: return false;\n    }\n}\n```\n\n`Assets/Scripts/InGame/FighterSpecialSkills.cs`\n\n```csharp\nprivate IEnumerator ChargeExplosion(float radius,float rate)\n{\n    _dashDirection=AimIntent.sqrMagnitude>.01f?AimIntent.normalized:transform.forward;\n    SetState(CombatState.Dash,.4f);\n    float finish=Time.time+.4f;\n    while(Time.time<finish&&IsAlive)\n    {\n        bool contact=false;\n        foreach(var target in TargetsInRange(.85f)) { contact=true;break; }\n        if(contact) { break; }\n        yield return null;\n    }\n    if(IsAlive) { AreaStrike(radius,rate,2);SetState(CombatState.Recovery,.3f); }\n}\n```",
+    "verification": "[최신 회귀 검사](../assets/review16/editmode-05.xml):35/35통과, 종료2026-11-13 13:59:40 KST. [실제 무기 명중 결과](../assets/review16/gear-contact-results.json):고정 build15의38/38종 일반 공격 명중,38종 모두 고유 스킬 충전 소비. 완료14:01:44 KST. build16은 이후 UI 막대와 사용하지 않는 원작 FX 참조를 수정했습니다.\n\n[장비 집계](../assets/review16/equipment-review-summary.json), [무기별 CSV](../assets/review16/weapon-review.csv), [방어구별 CSV](../assets/review16/armor-review.csv). 스킬 피해24종과 체력 증가8종을 관찰했습니다. 체력 증가에는 장비 패시브가 포함될 수 있어 스킬 회복량 독립 검증으로 사용하지 않습니다.\n\n원본 이미지의 크기와 작은 UI 글자를 보존했습니다. Affinity 저장 모달과 사용자 PC 사용 제약으로 추가 이미지 편집·압축은 하지 않았으며200KB 목표를 초과한 PNG를 사용합니다. GIF를 대신한 실제 정지 전후 증거입니다.\n\n[관련 partial 파일 전체](../assets/review16/FighterSpecialSkills.cs)도 함께 보존합니다.",
+    "remaining": "실측10시간 종료·최종 장비/오류/메모리 집계는 아직 진행 중입니다. 전체 장비 데이터·외형 연결을 원작 서버 계산 전체 동일성으로 보고하지 않습니다. 변신 외형·일부 범위 버프·드론 능력·몬스터·상점·보급품, 일부 스킬 효과·애니메이션이 남아 있습니다. 가드 피해 비율·기본 회피·일부 감전·시작 충전량은 프로토타입 가정입니다.\n\n사용자가 검토와 PC 사용을 요청하여 추가 기능 구현·창 표시·입력·포커스 변경을 멈췄습니다. 기존 자동 검증만 유지합니다. 실제 Affinity wordmark.af는 저장했지만 초기 임시 atlas 네이티브 저장은 미완료입니다. 제품에서는 원작 아이콘으로 대체했습니다. 전역 지침 변경 없음. 프로젝트 전용 지침에 검증된 리그·클립·버전 차이·검증 사본 보존 기준을 기록했습니다.",
+    "outcome": "고유 스킬 재구현은 원작 Skill·HitReference·ConditionEffect와 한국어 설명을 근거로 합니다. 원작 서버 구현을 확보한 것은 아니며, 미확인 표현·타이밍은 별도로 기록했습니다.\n\n![고유 스킬 충전 수와 전투를 표시하는 실제 검토 빌드](../assets/review16/bar-after.png)",
+    "proposedTime": "최초 플레이 가능90~150분, 구현 후 실측10시간 검증. 원작 복원 고정 빌드의10시간 도달 예정2026-11-13 15:58 KST.",
+    "actualTime": "작업 시작2026-11-13 03:50:50 KST. 검토용 build16 전달14:03 KST, 경과약10시간12분(자동 검증·대기 포함). 이 문서는 전달본의 후속 근거 기록이며 전체 목표 완료 보고가 아닙니다.",
+    "xerjEvidence": "연결 확인을 포함해 XERJ를 사용하지 않았습니다. 기존 원작 정적 자료·실행 증거·프로젝트 소스만 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

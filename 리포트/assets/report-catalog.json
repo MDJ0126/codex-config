@@ -1,5 +1,95 @@
 [
   {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "원작 장비119종과 한국어 원문을 DDT·Unity에 연결하고, 고정 빌드의 실제10시간 검증을 진행합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113052537799-v1.0.1.html",
+    "date": "2026-11-13T05:25:37.799Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 검토 빌드 전달·38종 명중·초기10시간 검증 결과",
+    "summary": "build16을 검토용으로 전달했습니다.35개 회귀 검사와38종 일반 명중을 확인했고, 초기 빌드의 실측10시간이 완료됐습니다. 복원 빌드의 별도10시간은 계속 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113052415634-v1.0.0.html",
+    "date": "2026-11-13T05:24:15.634Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 전설 검 투척·순간이동과 지연 피해 검토",
+    "summary": "회복·검기·오라·돌진·잠행과 전설 검 투척/순간이동을 연결했습니다. 비공격 유틸리티의 충전 소비를 효과 정확성 통과로 바꾸지 않았습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051936494-v1.0.0.html",
+    "date": "2026-11-13T05:19:36.494Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 고유 스킬 분기와 돌진 접촉 폭발 검토",
+    "summary": "회복·검기·오라·돌진·잠행과 전설 검 투척/순간이동을 연결했습니다. 비공격 유틸리티의 충전 소비를 효과 정확성 통과로 바꾸지 않았습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051934942-v1.0.0.html",
+    "date": "2026-11-13T05:19:34.942Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 종류별 상태 중첩·만료 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051933394-v1.0.0.html",
+    "date": "2026-11-13T05:19:33.394Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 방향 가드·패링과 스킬 피해 분류 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051931871-v1.0.0.html",
+    "date": "2026-11-13T05:19:31.871Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 공격·가드·상태 실행과 전체 무기 명중 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051930336-v1.0.0.html",
+    "date": "2026-11-13T05:19:30.336Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 클립 이벤트 참조와 체력 막대 표시 수정",
+    "summary": "뼈 목록이 비어 있던 원작 스킨과 클립을 연결하고,0HP에서도 가득 차 보이던 uGUI 막대를 수정했습니다. 실제 전후 화면과35개 테스트를 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051928854-v1.0.0.html",
+    "date": "2026-11-13T05:19:28.854Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 리그와 장비 부착 검토",
+    "summary": "뼈 목록이 비어 있던 원작 스킨과 클립을 연결하고,0HP에서도 가득 차 보이던 uGUI 막대를 수정했습니다. 실제 전후 화면과35개 테스트를 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051927376-v1.0.0.html",
+    "date": "2026-11-13T05:19:27.376Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "OVERDOX 장비119종·DDT·원작 자산 복원 중간 결과",
     "summary": "Unity 봇 전투와 장비119종·브랜드6종을 연결했습니다. 실제 Blender 원본과29개 테스트 통과를 확인했으며,10시간 검증과 세부 전투 대조는 진행 중입니다.",
     "project": "overdox",

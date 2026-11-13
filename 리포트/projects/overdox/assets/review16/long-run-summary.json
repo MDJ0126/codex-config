@@ -1,0 +1,63 @@
+{
+  "capturedUtc": "2026-11-13T05:21:56.527215+00:00",
+  "runs": [
+    {
+      "build": "Baseline",
+      "complete": {
+        "utc": "2026-11-13T05:19:39.8918059Z",
+        "elapsedSeconds": 36000.0078125,
+        "rounds": 1422,
+        "weapons": 38,
+        "armor": 81
+      },
+      "latestSample": {
+        "elapsed": 36000.0,
+        "rounds": 1422,
+        "memory": 65565286,
+        "objects": 1378
+      },
+      "samples": 601,
+      "lastTelemetry": "utc=2026-11-13T05:19:39.8918059Z elapsed=36000.0 rounds=1422 alive=2 memory=65565286 objects=1378 [attack, 61746],[skill, 14777],[parry, 7871],[block, 3120],[hit, 88914],[dash, 13665],[death, 15662],[round, 1421]",
+      "recordedStartHashes": 140,
+      "startHashMismatches": [],
+      "errorsOrMissingScriptLines": [],
+      "memoryRangeAfterFirstHour": {
+        "min": 65482302,
+        "max": 69935572
+      }
+    },
+    {
+      "build": "Restored11",
+      "complete": null,
+      "latestSample": {
+        "elapsed": 30183.0,
+        "rounds": 291,
+        "memory": 184432498,
+        "objects": 9607
+      },
+      "samples": 504,
+      "lastTelemetry": "utc=2026-11-13T05:21:19.6620761Z elapsed=30183.0 rounds=291 alive=1 playerPosition=(-4.57, 0.06, 3.74) memory=184432498 objects=9607 [attack, 47915],[skill, 8924],[dash, 18033],[buff, 9073],[hit, 71980],[death, 3080],[block, 5223],[parry, 261],[round, 291]",
+      "recordedStartHashes": 2,
+      "startHashMismatches": [],
+      "errorsOrMissingScriptLines": [
+        "The referenced script on this Behaviour (Game Object 'fx_paxeandshield_attack_03_trail') is missing!"
+      ],
+      "memoryRangeAfterFirstHour": {
+        "min": 184357314,
+        "max": 184496378
+      },
+      "coverageCounts": {
+        "weaponsSeen": 38,
+        "armorSeen": 81,
+        "weaponsAttacked": 38,
+        "weaponsSkilled": 38
+      }
+    }
+  ],
+  "reviewBuild": {
+    "build": "Build16",
+    "files": 141,
+    "allFilesMatchFixedCopy": true,
+    "runtimeDllSha256": "8AC1146BCCA6A1A9FF04486A0963512FEDCA4EEFC1A86FC46FCF7BE7387600A4"
+  }
+}
