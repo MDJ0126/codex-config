@@ -1,0 +1,12 @@
+OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140
+OVERDOX_SESSION_START utc=2026-11-13T09:04:48.7419893Z autoplay=False soak=False duration=36000 weapons=38 armor=81
+OVERDOX_FLOW_READY phase=Lobby weapon=10140
+OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140
+OVERDOX_SESSION_START utc=2026-11-13T09:05:04.0274742Z autoplay=False soak=False duration=36000 weapons=38 armor=81
+OVERDOX_ROUND_START round=1 weapon=그림자 칼날 set=인펜튜리
+OVERDOX_TELEMETRY utc=2026-11-13T09:05:04.0717687Z elapsed=0.0 rounds=1 alive=12 playerPosition=(0.00, 0.10, -4.00) memory=184285980 objects=9828 
+OVERDOX_FLOW_READY phase=Arena weapon=10140
+OVERDOX_TELEMETRY utc=2026-11-13T09:06:04.0786964Z elapsed=60.1 rounds=1 alive=2 playerPosition=(-2.57, 0.03, -2.44) memory=196413450 objects=9670 [attack, 122],[skill, 16],[dash, 54],[hit, 80],[condition-4, 5],[buff, 19],[condition-2, 3],[death, 10],[condition-3, 7],[condition-1, 4],[block, 1]
+OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140
+OVERDOX_SESSION_START utc=2026-11-13T09:06:19.3241573Z autoplay=False soak=False duration=36000 weapons=38 armor=81
+OVERDOX_FLOW_READY phase=Lobby weapon=10140

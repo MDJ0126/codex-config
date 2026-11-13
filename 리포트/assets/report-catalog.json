@@ -1,5 +1,35 @@
 [
   {
+    "title": "OVERDOX 원본 전투 HUD와 조이스틱 입력 연결",
+    "summary": "원본 전투 HUD를 봇 전투에 연결하고, 실행 코드로 확인한30HP 단위 체력 표시를 적용했습니다. Windows Build20 실행 범위와 미확인 입력을 분리합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113090841436-v1.0.0.html",
+    "date": "2026-11-13T09:08:41.436Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원본 로비·장비 UI 연결과 Windows 진입 흐름 검증",
+    "summary": "원작 NGUI 배치·아틀라스를 편집 가능한 uGUI로 옮겨 장비 선택과 전투 진입에 연결했습니다. Build19 실제 전후 화면과 남은 표시 문제를 기록합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113090840126-v1.0.0.html",
+    "date": "2026-11-13T09:08:40.126Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "사용자 재개 지시에 따라 Excel 수식·원작 카메라·진입 씬을 개선하고 원본 UI·FX 복원을 이어갑니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113074247737-v1.0.2.html",
+    "date": "2026-11-13T07:42:47.737Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
     "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
     "project": "overdox",

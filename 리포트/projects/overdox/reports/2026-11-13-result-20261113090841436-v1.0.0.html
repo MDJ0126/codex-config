@@ -1,0 +1,133 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 원본 전투 HUD와 조이스틱 입력 연결 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 원본 전투 HUD와 조이스틱 입력 연결</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">원본 전투 HUD를 봇 전투에 연결하고, 실행 코드로 확인한30HP 단위 체력 표시를 적용했습니다. Windows Build20 실행 범위와 미확인 입력을 분리합니다.</p><div class="post-byline"><time datetime="2026-11-13T09:08:41.436Z">2026년 11월 13일 오후 6:08 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>원본 배치의 체력 구간·시간·킬·생존자 표시와 공격·가드·회피·스킬 버튼을 로컬 세션에 연결했습니다. 정적 위치·폰트·그림은 씬에 저장하고 동적 수치만 갱신합니다. 원작 HeroInfoUI 생성자 RVA0x1A0DF00에서 오프셋0x68에30을 저장하고, ChangeHitPointMaxAmount RVA0x1A0D8E8에서 이를 나누는 구조를 확인했습니다. 체력390이면13칸을 사용합니다.</p>
+<p><figure><img class="report-image" src="../assets/native-ui20/combat-before.webp" alt="이전 전투 HUD" loading="lazy"><figcaption>이전 전투 HUD</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/native-ui20/combat-after.webp" alt="원본 HUD 연결 후" loading="lazy"><figcaption>원본 HUD 연결 후</figcaption></figure></p>
+<p>서로 다른 전투 시점·무기이며 HUD 교체 범위 비교용입니다. 수정 후 화면은0HP 상태입니다.</p>
+<pre class="mermaid">flowchart TD
+    A[기존 전투 세션] --&gt; B[체력과 최대 체력]
+    B --&gt; C[30 HP 단위로 구간 계산]
+    C --&gt; D[원본 구간의 활성과 fill 갱신]
+    A --&gt; E[시간 생존자 킬 쿨다운]
+    E --&gt; F[저장된 UI 값 갱신]
+</pre>
+<p><code>Assets/Scripts/UI/RestoredCombatHud.cs</code> 전체:</p>
+<pre><code data-language="csharp">using UnityEngine;
+using UnityEngine.UI;
+
+namespace Overdox
+{
+    /// &lt;summary&gt;저장된 원본 전투 HUD의 수치와 체력 구간을 갱신한다.&lt;/summary&gt;
+    public sealed class RestoredCombatHud : MonoBehaviour
+    {
+        public Text health, stamina, timer, alive, total, kills;
+        public Image[] healthSegments;
+        public Text skillTime, dashTime;
+        public Image skillCharge, dashCooldown;
+        public GameObject[] skillCountRings;
+        private void LateUpdate()
+        {
+            var session = ArenaSession.Instance;
+            if (session == null || session.Player == null) { return; }
+            var player = session.Player;
+            health.text = $&quot;{player.Health:0}/{player.MaxHealth:0}&quot;;
+            stamina.text = $&quot;{player.Stamina:0}/{player.MaxStamina:0}&quot;;
+            timer.text = $&quot;{Mathf.FloorToInt(session.Remaining / 60):00}:{Mathf.FloorToInt(session.Remaining % 60):00}&quot;;
+            alive.text = session.AliveCount.ToString();
+            total.text = session.Fighters.Count.ToString();
+            kills.text = player.Kills.ToString();
+            // HeroInfoUI native constructor: _hpUnitValue = 0x1e (30 HP).
+            int count = Mathf.Min(healthSegments.Length, Mathf.CeilToInt(player.MaxHealth / 30));
+            float segments = player.Health / 30;
+            for (int index = 0; index &lt; healthSegments.Length; index++)
+            {
+                healthSegments[index].transform.parent.gameObject.SetActive(index &lt; count);
+                healthSegments[index].fillAmount = Mathf.Clamp01(segments - index);
+            }
+            if (count &gt; 0)
+            {
+                var unit = (RectTransform)healthSegments[count - 1].transform.parent;
+                var position = health.rectTransform.anchoredPosition;
+                position.x = unit.anchoredPosition.x + healthSegments[count - 1].rectTransform.rect.width + 8;
+                health.rectTransform.anchoredPosition = position;
+            }
+            float skillRemaining = Mathf.Max(0, player.SkillReadyAt - Time.time);
+            skillTime.text = skillRemaining &gt; 0 ? Mathf.CeilToInt(skillRemaining).ToString() : &quot;&quot;;
+            dashTime.text = player.DashRemaining &gt; 0 ? Mathf.CeilToInt(player.DashRemaining).ToString() : &quot;&quot;;
+            skillCharge.fillAmount = player.SkillChargeFraction;
+            dashCooldown.fillAmount = player.DashCooldownFraction;
+            for (int index = 0; index &lt; skillCountRings.Length; index++)
+            {
+                skillCountRings[index].SetActive(index == player.SkillCharges - 1);
+            }
+        }
+    }
+}
+
+</code></pre>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<pre class="mermaid">flowchart TD
+    A[원본 조이스틱 PointerDown] --&gt; B[포인터 소유권 기록]
+    B --&gt; C[화면 좌표를 로컬 좌표로 변환]
+    C --&gt; D[반경으로 정규화하고 크기 제한]
+    D --&gt; E[카메라 기준 이동 입력]
+    B --&gt; F[PointerUp 또는 비활성]
+    F --&gt; G[입력과 손잡이 초기화]
+</pre>
+<p><code>Assets/Scripts/UI/RestoredMoveStick.cs</code> 전체:</p>
+<pre><code data-language="csharp">using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace Overdox
+{
+    public sealed class RestoredMoveStick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
+    {
+        public RectTransform knob, arrow;
+        public float radius = 60;
+        private int _pointer = int.MinValue;
+        public void OnPointerDown(PointerEventData data)
+        {
+            if (_pointer != int.MinValue) { return; }
+            _pointer = data.pointerId;
+            OnDrag(data);
+        }
+        public void OnDrag(PointerEventData data)
+        {
+            var session = ArenaSession.Instance;
+            if (_pointer != data.pointerId || session == null || !session.IsFighting) { return; }
+            if (!RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)transform, data.position, data.pressEventCamera, out var point)) { return; }
+            var value = Vector2.ClampMagnitude(point / radius, 1);
+            session.TouchMove = value;
+            knob.anchoredPosition = value * radius;
+            arrow.gameObject.SetActive(value.sqrMagnitude &gt; .01f);
+            arrow.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(value.y, value.x) * Mathf.Rad2Deg - 90);
+        }
+        public void OnPointerUp(PointerEventData data)
+        {
+            if (_pointer == data.pointerId) { Release(); }
+        }
+        private void OnDisable() { Release(); }
+        private void Release()
+        {
+            _pointer = int.MinValue;
+            if (ArenaSession.Instance != null) { ArenaSession.Instance.TouchMove = Vector2.zero; }
+            if (knob != null) { knob.anchoredPosition = Vector2.zero; }
+            if (arrow != null) { arrow.gameObject.SetActive(false); }
+        }
+    }
+}
+
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>고정 Windows Build20에서 Splash → Lobby → Battle → 원본 HUD Arena → Escape → Lobby를 Computer Use로 확인했습니다. 생존자12→8→3→2와 시간 감소,390→66→0 체력 표시에 따라 파란 구간이 줄어드는 것을 관찰했습니다. 조이스틱 드래그와 회피 버튼을 조작했고 전투 중 위치 변화가 나타났습니다. 스킬 버튼은 사망 후 눌려 효과를 검증하지 못했습니다. 버튼 입력 각각의 이동량·명중·쿨다운 정확도는 추가 검증 대상입니다.</p>
+<p><a class="report-link" href="../assets/native-ui20/build20-manual-player.log">Build20 공개 요약 로그</a> · <a class="report-link" href="../assets/native-ui20/RestoredCombatUiBuilder.cs">전투 UI 연결기 전체</a>. 빌드 성공253718046bytes, 런타임 DLL SHA256 <code>1ECCB61CE5C9F4B33DF2929750494E4D75C04FFD076EBA9511BD45237B2FB665</code>. 현재 빌드에 원작 FX의 누락 MonoBehaviour 경고1건이 남습니다. 파티클 모듈 비활성 경고는 제거됐습니다.</p>
+<p>요청 기록(개별 메시지 시각은 미기록): 사용자는 원작 카메라·조작감·이펙트·UI 복원을 요청했고, 앱 창 조작을 다시 허용한 뒤 중단 지시까지 계속하도록 요청했습니다. 이후 데이터 원본은 수식이 있는 Excel, 진입은 스플래시 → 로비 → 인게임으로 지정했고, 마지막으로 “컴퓨터 유즈 써가며 최대한 복원하도록해”라고 요청했습니다. 이 보고서는 해당 지속 작업의 중간 결과입니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>원본 미니맵·버프·피격 체력 잔상·장비 레벨·관전·결과 화면, 스킬별 아이콘과 버튼 제스처를 추가 연결해야 합니다. 기본 수치와 조작 연결만으로 원작 조작감 동일성을 주장하지 않습니다. 현재 사망 자세·전투 FX·음향·봇 균형은 추가 복원 대상입니다. 이번10시간 검증은 새 Build20에서 수행하지 않았습니다. 이전 Build11의10시간 결과와 별도 구간입니다. UI 풀의 불필요한 비활성 객체와 기존 HUD의 숨은 갱신 비용은 측정 후 개선할 예정입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 17:50 KST 시작, 전투 HUD와 장비 화면 후속 회차45–75분 예상. 이 문서는 먼저 끝난 HUD 실행 구간을 기록합니다.</li>
+<li>실제로 완료된 시간: HUD 구현·실행 구간17:50–18:07 KST 약17분. Build20 런타임 DLL 생성18:03:53 KST, 실제 Windows Arena 시작18:05:04 KST, Lobby 복귀18:06:19 KST. 장비 화면 후속 작업은 진행 중입니다.</li>
+<li>XERJ: 미사용 — XERJ 연결 확인을 포함해 사용하지 않았습니다. rg, 보존된 원작 배포 자료와 실제 Unity·Windows 화면 및 로그로 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113090841436-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113090841436-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
