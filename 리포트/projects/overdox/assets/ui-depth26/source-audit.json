@@ -1,0 +1,3956 @@
+[
+  {
+    "layout": "Lobby",
+    "widgetCount": 1816,
+    "inversions": [
+      {
+        "id": 30113,
+        "name": "10. Sprite - EnergyIcon",
+        "parentId": 30295,
+        "parentName": "100. Label - Energy",
+        "depth": 10,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": -57.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30143,
+        "name": "8. Sprite - Icon",
+        "parentId": 30437,
+        "parentName": "9. Sprite - Icon_Add",
+        "depth": 8,
+        "parentDepth": 9,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 3.0,
+          "y": -2.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30222,
+        "name": "3. Sprite - Circle",
+        "parentId": 30174,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30224,
+        "name": "15. Sprite - Guide",
+        "parentId": 31020,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30265,
+        "name": "5. Sprite - Gradation",
+        "parentId": 30947,
+        "parentName": "6. Sprite - TimeIcon",
+        "depth": 5,
+        "parentDepth": 6,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 51.20000076293945,
+          "y": -0.10000000149011612,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0008001327514648,
+          "y": 1.0008001327514648,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30278,
+        "name": "8. Sprite - Icon",
+        "parentId": 31076,
+        "parentName": "9. Sprite - Icon_Add",
+        "depth": 8,
+        "parentDepth": 9,
+        "sameSprite": true,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 3.0,
+          "y": -2.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30447,
+        "name": "3. Sprite - Circle",
+        "parentId": 31031,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30471,
+        "name": "25. Sprite - Guide",
+        "parentId": 31025,
+        "parentName": "100. Label - Count",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -0.9999847412109375,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30487,
+        "name": "15. Sprite - Guide",
+        "parentId": 30690,
+        "parentName": "100. Label - NewCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30563,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30901,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30597,
+        "name": "4. Sprite - Shadow",
+        "parentId": 30600,
+        "parentName": "5. Sprite - Icon",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": true,
+        "offset": {
+          "x": 0.0,
+          "y": -65.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30607,
+        "name": "9. Sprite - Background",
+        "parentId": 30145,
+        "parentName": "10. Sprite - Color (3)",
+        "depth": 9,
+        "parentDepth": 10,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30612,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30464,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30615,
+        "name": "10. Sprite - League_Back",
+        "parentId": 58293,
+        "parentName": "11. Sprite - League",
+        "depth": 10,
+        "parentDepth": 11,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30664,
+        "name": "5. Sprite - TimeIcon",
+        "parentId": 30470,
+        "parentName": "100. Label - NextTime",
+        "depth": 5,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": -37.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30677,
+        "name": "9. Sprite - Background",
+        "parentId": 30734,
+        "parentName": "10. Sprite - Color (2)",
+        "depth": 9,
+        "parentDepth": 10,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30718,
+        "name": "15. Sprite - Guide",
+        "parentId": 30585,
+        "parentName": "100. Label - NewCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30736,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30216,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30755,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30186,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30805,
+        "name": "3. Sprite - Shadow",
+        "parentId": 31007,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30822,
+        "name": "9. Sprite - Background",
+        "parentId": 30964,
+        "parentName": "10. Sprite - Color",
+        "depth": 9,
+        "parentDepth": 10,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30848,
+        "name": "15. Sprite - Guide",
+        "parentId": 30129,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30888,
+        "name": "3. Sprite - Circle",
+        "parentId": 30544,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30893,
+        "name": "4. Sprite - Shadow",
+        "parentId": 30158,
+        "parentName": "5. Sprite - Icon",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": true,
+        "offset": {
+          "x": 0.0,
+          "y": -65.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30904,
+        "name": "3. Sprite - Circle",
+        "parentId": 30562,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30910,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30617,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30987,
+        "name": "9. Sprite - Background",
+        "parentId": 30595,
+        "parentName": "10. Sprite - Color (1)",
+        "depth": 9,
+        "parentDepth": 10,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 30991,
+        "name": "3. Sprite - Circle",
+        "parentId": 30704,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31082,
+        "name": "15. Sprite - Guide",
+        "parentId": 30330,
+        "parentName": "100. Label - NewCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31115,
+        "name": "3. Sprite - Circle",
+        "parentId": 30367,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31159,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30760,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31165,
+        "name": "3. Sprite - Shadow",
+        "parentId": 30097,
+        "parentName": "4. Sprite - Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": true,
+        "sameSize": true,
+        "shadow": true,
+        "offset": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31171,
+        "name": "15. Sprite - Guide",
+        "parentId": 30467,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 56972,
+        "name": "3. Sprite - Circle",
+        "parentId": 53069,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 32118,
+        "name": "4. Sprite - Gradation",
+        "parentId": 33865,
+        "parentName": "100. Label - SetAbility",
+        "depth": 4,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -10.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 34773,
+        "name": "25. Sprite - Guide",
+        "parentId": 32705,
+        "parentName": "100. Label - NewCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 33592,
+        "name": "25. Sprite - Guide",
+        "parentId": 32898,
+        "parentName": "100. Label - NewCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 37062,
+        "name": "25. Sprite - Guide",
+        "parentId": 36810,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 33061,
+        "name": "25. Sprite - Guide",
+        "parentId": 34581,
+        "parentName": "100. Label - NewCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 31592,
+        "name": "25. Sprite - Guide",
+        "parentId": 38003,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 33984,
+        "name": "25. Sprite - Guide",
+        "parentId": 34867,
+        "parentName": "100. Label - NewCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 38064,
+        "name": "5. Sprite - Gradation",
+        "parentId": 35057,
+        "parentName": "100. Label - SetAbilityTitle",
+        "depth": 5,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 32719,
+        "name": "15. Sprite - Guide",
+        "parentId": 32542,
+        "parentName": "100. Label - NewCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 37511,
+        "name": "25. Sprite - Guide",
+        "parentId": 32508,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 32144,
+        "name": "15. Sprite - Guide",
+        "parentId": 35368,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 15,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 36083,
+        "name": "25. Sprite - Guide",
+        "parentId": 32254,
+        "parentName": "100. Label - UpgradeCount",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42288,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48332,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42289,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48330,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42290,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48331,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42291,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48329,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42292,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48334,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42293,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48333,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42295,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48322,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42294,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48323,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42296,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48320,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42297,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48321,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42298,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48317,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42299,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48319,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42300,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48318,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42302,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48327,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42301,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48328,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42303,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48326,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42304,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48324,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42305,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48325,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42307,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48311,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42306,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48312,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42308,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48310,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42310,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48308,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42309,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48309,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42311,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48305,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42313,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48306,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42312,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48307,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42314,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48316,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42315,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48315,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42316,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48313,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42317,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48314,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42318,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48302,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42320,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48300,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42319,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48301,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42322,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48298,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42321,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48297,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42323,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48299,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42325,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48295,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42324,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48296,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42326,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48304,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 42327,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 48303,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 43880,
+        "name": "3. Sprite - Circle",
+        "parentId": 52342,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 4,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 51675,
+        "name": "equipmentFrame_1(Awakening)",
+        "parentId": 55274,
+        "parentName": "equipmentFrame_2",
+        "depth": 1,
+        "parentDepth": 2,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 39809,
+        "name": "3. Sprite - Circle",
+        "parentId": 55836,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 45697,
+        "name": "3. Sprite - Circle",
+        "parentId": 59868,
+        "parentName": "5. Icon",
+        "depth": 3,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "layout": "GameRoom",
+    "widgetCount": 2471,
+    "inversions": [
+      {
+        "id": 5088,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 5597,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 3.0517578125E-05,
+          "y": 0.0029296875,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6321,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 5383,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 1.52587890625E-05,
+          "y": 0.0061397552490234375,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9488,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8167,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9897,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8655,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7182,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 7025,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7181,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 7026,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7184,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 7028,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7185,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 7029,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7183,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 7027,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6815,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 6763,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6816,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 6762,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6817,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 6765,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6818,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 6766,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 6819,
+        "name": "4. Sprite - CountryFrame",
+        "parentId": 6764,
+        "parentName": "5. Sprite - Country",
+        "depth": 4,
+        "parentDepth": 5,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7683,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 7728,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8023,
+        "name": "30. Sprite - Shadow",
+        "parentId": 8144,
+        "parentName": "35. Sprite - Frame",
+        "depth": 30,
+        "parentDepth": 35,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": true,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9447,
+        "name": "30. Sprite - Shadow",
+        "parentId": 9622,
+        "parentName": "31. Sprite - Check",
+        "depth": 30,
+        "parentDepth": 31,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": true,
+        "offset": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9398,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8280,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9931,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8280,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9523,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8446,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8640,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 9096,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9455,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 6871,
+        "parentName": "16. Sprite - TypeIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9331,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9081,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8304,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9560,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8452,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8390,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8386,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9050,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8029,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8034,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8599,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 8166,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9951,
+        "name": "25. Sprite - Frame",
+        "parentId": 8319,
+        "parentName": "100. Label - Nickname",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9332,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 8671,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7981,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 9380,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8025,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 8332,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9307,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 9083,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9563,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 9394,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7983,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8167,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9176,
+        "name": "25. Sprite - Frame",
+        "parentId": 9177,
+        "parentName": "26. Sprite - Flag",
+        "depth": 45,
+        "parentDepth": 46,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8387,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9673,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8565,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8390,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9623,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 8721,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8585,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 6902,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8371,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8446,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8316,
+        "name": "25. Sprite - Frame",
+        "parentId": 9521,
+        "parentName": "100. Label - Nickname",
+        "depth": 25,
+        "parentDepth": 100,
+        "sameSprite": false,
+        "sameSize": true,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8156,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 9083,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9298,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 8593,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9704,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 6871,
+        "parentName": "16. Sprite - TypeIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9368,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 9394,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9152,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 6902,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9475,
+        "name": "25. Sprite - Frame",
+        "parentId": 9476,
+        "parentName": "26. Sprite - Flag",
+        "depth": 45,
+        "parentDepth": 46,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": -0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9046,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9542,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9979,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8655,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8135,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 8134,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9107,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 9380,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 9434,
+        "name": "15. Sprite - Awakening1",
+        "parentId": 9096,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 7993,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8034,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8570,
+        "name": "19. Sprite - CountryFrame",
+        "parentId": 9042,
+        "parentName": "20. Sprite - Country",
+        "depth": 19,
+        "parentDepth": 20,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.015430450439453125,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.9989999532699585,
+          "y": 0.9989999532699585,
+          "z": 1.0008001327514648
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      },
+      {
+        "id": 8552,
+        "name": "15. Sprite - Awakening2",
+        "parentId": 8332,
+        "parentName": "16. Sprite - WeaponIcon",
+        "depth": 15,
+        "parentDepth": 16,
+        "sameSprite": false,
+        "sameSize": false,
+        "shadow": false,
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        }
+      }
+    ]
+  }
+]

@@ -1,17 +1,30 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../assets/theme-init.js"></script><title>OVERDOX 복원 전용 지침 사항 · Tracefolio</title><link rel="icon" type="image/png" href="../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../assets/theme.js"></script></head><body><header><a class="brand" href="../../index.html"><img class="archive-brand-logo" src="../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../manuals/index.html">작업 메뉴얼</a><a href="../../discussions/index.html">QA 토론</a><a href="../../guide/index.html">작성 가이드</a><a href="../../guide/global-instructions.html">전역 지침 사항</a><a href="../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail guide-page"><a class="back" href="../../guide/project-instructions.html">← 프로젝트 전용 지침 모아보기</a><article><h1>OVERDOX 복원 전용 지침 사항</h1><h2 id="section-1">OVERDOX 복원 프로젝트 지침</h2>
 <p>전역 지침은 <a class="report-link" href="../../guide/global-instructions.html">공통 지침</a>을 따릅니다. 아래는 이 프로젝트에서 실제 검증한 자산·버전 조건입니다.</p>
 <ul>
-<li>재현 프로젝트는 Unity6000.0.83f1, 원작 자료는 Unity2018.4.31f1입니다. 원작 파일은 보존하고 수정은 프로젝트 소유 어댑터·파생 에셋에 적용합니다. 원작 스크립트·서비스 연결을 재사용하지 않습니다.</li>
-<li>공개 main81 OBB와 APK87의 MonoScript 경로 ID가 서로 다른 클래스로 해석되는 사례를 확인했습니다. 두 자료를 조합한 추출 결과의 MonoBehaviour 클래스 이름을 그대로 신뢰하지 않습니다. 사용한 표·모델·메타데이터 버전을 출처에 각각 기록하고 실제 필드·화면으로 대조합니다.</li>
-<li>원작의 최적화된 SkinnedMeshRenderer는 뼈 목록이 비어 있을 수 있습니다. 원작 Avatar의 경로·포즈와 메시 bone hash를 대조하여 프로젝트 소유 리그를 구성합니다. 남녀 장비 모두 실제 렌더로 확인합니다.</li>
-<li>원작 AnimationClip을 런타임에서 legacy로 복제하는 것만으로 실제 재생되지 않은 사례가 있습니다. 이 프로젝트에서는 에디터에서 AnimationUtility의 바인딩·커브·이벤트를 새 legacy 클립으로 옮겨 실제 전투 포즈를 확인했습니다. 원본 클립은 변경하지 않습니다.</li>
-<li>원작 scene YAML을 확장자만 prefab으로 바꾸면 참조가 손상됩니다. 에디터에서 별도 씬으로 열고 PrefabUtility.SaveAsPrefabAsset으로 프로젝트 소유 프리팹을 저장합니다.</li>
-<li>장시간 검증은 실행 파일과 전체 데이터 폴더를 고정 사본으로 분리합니다. 이후 빌드가 실행 중인 검증 사본을 덮어쓰지 않게 하고, 소스 수정 후 빌드 결과와 이전 장시간 검증 범위를 구분합니다.</li>
-<li>장비 명령 실행 커버리지, 실제 명중, 원작 규칙 일치는 별개의 검증입니다. 무기38종·방어구81종의 참조 성공만으로 모든 능력과 서버 계산이 동일하다고 보고하지 않습니다.</li>
-<li>원작 NGUI를 읽을 때 MonoBehaviour의 enabled 바이트 뒤 정렬과 UIAtlas의 packed 좌표·replacement 연결을 엄격히 검사합니다. 이번 자료에서 UnityPy Boost 경로의 정렬 차이를 발견해 Python 경로와 전체 읽기 검사를 사용했습니다. 회수한 원본은 보존합니다.</li>
-<li>플레이용 UI 프리팹 내부의 정적 글자·레이어 수정이 저장되지 않은 Build18 사례가 있습니다. 프로젝트 소유 플레이용 인스턴스를 편집 가능한 씬으로 풀어 저장하고, 씬 재로딩과 Windows Build19에서 유지 여부를 확인했습니다. 회수 원본 프리팹은 변경하지 않습니다.</li>
-<li>로비 카메라·캐릭터 자세와 전투 카메라는 별개입니다. 원작 LobbyHeroController.ResetLobbyPosition의180도 회전, 로비 카메라20도 FOV, 전투26.1도 FOV를 구분합니다. HeroInfoUI는 실행 코드에서30HP당 한 구간임을 확인했습니다. 이 수치의 적용만으로 전체 조작감 동일성을 판정하지 않습니다.</li>
-<li>원작 파티클을 사용할 때 Unity 모듈을 명시하고, ParticleSystemRenderer의 사용하지 않는 두 번째 trail 재질 슬롯이 null인 경우를 주 재질 누락과 구분합니다. 복구 프리팹에서는 원작 서비스 스크립트를 제거하고 프로젝트 소유 재질을 사용합니다. 프리뷰 재생과 실제 전투 효과 검증은 별도입니다.</li>
+<li><p>재현 프로젝트는 Unity6000.0.83f1, 원작 자료는 Unity2018.4.31f1입니다. 원작 파일은 보존하고 수정은 프로젝트 소유 어댑터·파생 에셋에 적용합니다. 원작 스크립트·서비스 연결을 재사용하지 않습니다.</p>
+</li>
+<li><p>공개 main81 OBB와 APK87의 MonoScript 경로 ID가 서로 다른 클래스로 해석되는 사례를 확인했습니다. 두 자료를 조합한 추출 결과의 MonoBehaviour 클래스 이름을 그대로 신뢰하지 않습니다. 사용한 표·모델·메타데이터 버전을 출처에 각각 기록하고 실제 필드·화면으로 대조합니다.</p>
+</li>
+<li><p>원작의 최적화된 SkinnedMeshRenderer는 뼈 목록이 비어 있을 수 있습니다. 원작 Avatar의 경로·포즈와 메시 bone hash를 대조하여 프로젝트 소유 리그를 구성합니다. 남녀 장비 모두 실제 렌더로 확인합니다.</p>
+</li>
+<li><p>원작 AnimationClip을 런타임에서 legacy로 복제하는 것만으로 실제 재생되지 않은 사례가 있습니다. 이 프로젝트에서는 에디터에서 AnimationUtility의 바인딩·커브·이벤트를 새 legacy 클립으로 옮겨 실제 전투 포즈를 확인했습니다. 원본 클립은 변경하지 않습니다.</p>
+</li>
+<li><p>원작 scene YAML을 확장자만 prefab으로 바꾸면 참조가 손상됩니다. 에디터에서 별도 씬으로 열고 PrefabUtility.SaveAsPrefabAsset으로 프로젝트 소유 프리팹을 저장합니다.</p>
+</li>
+<li><p>장시간 검증은 실행 파일과 전체 데이터 폴더를 고정 사본으로 분리합니다. 이후 빌드가 실행 중인 검증 사본을 덮어쓰지 않게 하고, 소스 수정 후 빌드 결과와 이전 장시간 검증 범위를 구분합니다.</p>
+</li>
+<li><p>장비 명령 실행 커버리지, 실제 명중, 원작 규칙 일치는 별개의 검증입니다. 무기38종·방어구81종의 참조 성공만으로 모든 능력과 서버 계산이 동일하다고 보고하지 않습니다.</p>
+</li>
+<li><p>원작 NGUI를 읽을 때 MonoBehaviour의 enabled 바이트 뒤 정렬과 UIAtlas의 packed 좌표·replacement 연결을 엄격히 검사합니다. 이번 자료에서 UnityPy Boost 경로의 정렬 차이를 발견해 Python 경로와 전체 읽기 검사를 사용했습니다. 회수한 원본은 보존합니다.</p>
+</li>
+<li><p>플레이용 UI 프리팹 내부의 정적 글자·레이어 수정이 저장되지 않은 Build18 사례가 있습니다. 프로젝트 소유 플레이용 인스턴스를 편집 가능한 씬으로 풀어 저장하고, 씬 재로딩과 Windows Build19에서 유지 여부를 확인했습니다. 회수 원본 프리팹은 변경하지 않습니다.</p>
+</li>
+<li><p>로비 카메라·캐릭터 자세와 전투 카메라는 별개입니다. 원작 LobbyHeroController.ResetLobbyPosition의180도 회전, 로비 카메라20도 FOV, 전투26.1도 FOV를 구분합니다. HeroInfoUI는 실행 코드에서30HP당 한 구간임을 확인했습니다. 이 수치의 적용만으로 전체 조작감 동일성을 판정하지 않습니다.</p>
+</li>
+<li><p>원작 파티클을 사용할 때 Unity 모듈을 명시하고, ParticleSystemRenderer의 사용하지 않는 두 번째 trail 재질 슬롯이 null인 경우를 주 재질 누락과 구분합니다. 복구 프리팹에서는 원작 서비스 스크립트를 제거하고 프로젝트 소유 재질을 사용합니다. 프리뷰 재생과 실제 전투 효과 검증은 별도입니다.</p>
+</li>
+<li><p>NGUI Widget.depth는 계층 순서와 별개입니다. uGUI 변환에서 직접 형제는 depth로 안정 정렬하되 비위젯 슬롯·좌표를 보존합니다. 낮은 depth의 검정 자식 그림자가 부모와 같은 atlas·sprite·크기·pivot·flip인 경우만 부모 Shadow 메시로 옮기고 원본 자식과 바인딩을 보존합니다. 다른 모양·가지 간 순서는 별도 화면 대조 없이 자동 교정하지 않습니다. Build26에서8쌍 그림자·직접 형제 정렬과 남녀 전환·전투·로비 복귀를 확인했으며 전체 UI 동일성은 미완료입니다.</p>
+</li>
 </ul>
 <p>근거: <a class="report-link" href="posts/2026-11-13-result-20261113044127119-v1.0.0.md">2026-11-13 중간 결과</a>의 실제 실행 화면, EditMode XML 및 Blender 재열기 결과. 전체 완료 판정은 최종 검증 보고에서 별도로 수행합니다.</p>
 <div class="post-actions"><a class="source" href="../../index.html?project=overdox">프로젝트 기록 보기</a><a class="source" href="../../guide/global-instructions.html">전역 지침 사항</a><a class="source" href="guidelines.md" download>Markdown 원문</a></div></article></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

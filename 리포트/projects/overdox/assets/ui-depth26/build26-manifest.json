@@ -1,0 +1,757 @@
+{
+  "recordedAt": "2026-11-13T21:44:12.8475223+09:00",
+  "build": "Build26",
+  "reportedBytes": 258962218,
+  "files": [
+    {
+      "path": "Overdox.exe",
+      "bytes": 671744,
+      "sha256": "82AE3F53F3BA9EC73A8F51C5D84E48605669D0B796FBDC9EA04D2C7F828AED91"
+    },
+    {
+      "path": "UnityCrashHandler64.exe",
+      "bytes": 1655208,
+      "sha256": "854EFC5F2121CE172FAF604FDFAE0836F906B60414595B3D1ED8FB7605424F9D"
+    },
+    {
+      "path": "UnityPlayer.dll",
+      "bytes": 34428336,
+      "sha256": "9DF6BDE3463BB58D13A329FA5E00961B9ABE1313D233FDDA627C78FD8A016596"
+    },
+    {
+      "path": "D3D12\\D3D12Core.dll",
+      "bytes": 5908408,
+      "sha256": "31F364F2B3AA1753E7BA9FF912D0721C8F424BE5FA14503EFDDAFBB30C635D3B"
+    },
+    {
+      "path": "Evidence\\coverage.json",
+      "bytes": 842,
+      "sha256": "0E522AED3A0605EC0B5FEEB09880662958BA9200D2A6C2C7A37741CDBEA11C4A"
+    },
+    {
+      "path": "Evidence\\telemetry.log",
+      "bytes": 132,
+      "sha256": "3B9585F6397CFBDA8512BA0DD1438ECAD14960D597C7192E887208CBB5906816"
+    },
+    {
+      "path": "MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+      "bytes": 7831472,
+      "sha256": "0BE4B8A4AC18E251F05669849D03C79C628B9A6FBB3E6E4A0A0A94CB099A69C5"
+    },
+    {
+      "path": "MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+      "bytes": 611240,
+      "sha256": "F5257590904D05BE66552780B2F8EBD5916677D83341AD57E034EB35BBB779EF"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\browscap.ini",
+      "bytes": 311984,
+      "sha256": "4DDD50F31FB968F30BEDEFC253A46DC3F2890192D05CDAA9E0A64A056EEE807E"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\config",
+      "bytes": 3815,
+      "sha256": "5776169973A26A387B8B3E5C0F2301A7AB9A6DD7C7D3EFA22A96ABC47FBF8662"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+      "bytes": 60575,
+      "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+      "bytes": 29066,
+      "sha256": "E91782A27FA39FC6C1D6EE8B08529F5D35052310D0006034B878EB04B8F2AF30"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+      "bytes": 2622,
+      "sha256": "49C6160F9D54AF4270A3B4E997FC4A8301F79B9E2070118FA46DDBCBBC44F9A2"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+      "bytes": 11635,
+      "sha256": "CF2B54339E069B9E42F7D6795EECBF562C50C1011F4CA8F65F578FE52D97FF92"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+      "bytes": 1605,
+      "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+      "bytes": 60575,
+      "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+      "bytes": 33598,
+      "sha256": "E60AEC2C5115D65B3ACB3C55EA21576DBD770F579166C017125571E46AE560ED"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+      "bytes": 2622,
+      "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+      "bytes": 18802,
+      "sha256": "E38BB8CC68FE5B4EDECDFD288D094B9E8CED7629039B2A347682ABA0D8BD7492"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+      "bytes": 1605,
+      "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+      "bytes": 60575,
+      "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+      "bytes": 34056,
+      "sha256": "EE950004B576FB28DC85F4B0435ED04BF96612DE2E8B53BE84D07AFE85A0DE6C"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+      "bytes": 2622,
+      "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+      "bytes": 18811,
+      "sha256": "C4CBDDD4FD9347B58CC5A72B36DC4BA1AD2BB699E65869D05CD3FB9865F0D824"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+      "bytes": 1605,
+      "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+    },
+    {
+      "path": "MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+      "bytes": 25817,
+      "sha256": "0C56E34C69124510FA8C19E7B4C2CA6C1C4FF460AE19F798DD0CA035809E396D"
+    },
+    {
+      "path": "Overdox_Data\\app.info",
+      "bytes": 50,
+      "sha256": "0828912B20640AD286D80893C264BD5D9358D36ED6AB1AE49EC26546CD9B34A8"
+    },
+    {
+      "path": "Overdox_Data\\boot.config",
+      "bytes": 156,
+      "sha256": "3500AD84F052166F51A6784783A39F1A474D23A1A2E6F80F06954D56C5FB3B29"
+    },
+    {
+      "path": "Overdox_Data\\globalgamemanagers",
+      "bytes": 37556,
+      "sha256": "0754F6BF0526667B93643301AECC5ADDA07307018C47CB7CDE079790E525E3AD"
+    },
+    {
+      "path": "Overdox_Data\\globalgamemanagers.assets",
+      "bytes": 24548,
+      "sha256": "254A661BA4DBCD279C727113740CBAD4023874A3BAD1FC07DCD40E72B8E274EF"
+    },
+    {
+      "path": "Overdox_Data\\globalgamemanagers.assets.resS",
+      "bytes": 2796240,
+      "sha256": "39DD38FCD8DD95D41D6D55FE16A448D29FE2C31D9A162C825C24C6D99A893D7A"
+    },
+    {
+      "path": "Overdox_Data\\level0",
+      "bytes": 5244,
+      "sha256": "69DA25114363387381D8A7489720BD1F84E55E222DB412EA3E783F8200013A93"
+    },
+    {
+      "path": "Overdox_Data\\level1",
+      "bytes": 1276188,
+      "sha256": "015D95375BFB3F58B71285FEF1EE4F37F50E67A14A012E23455157C543ED3E98"
+    },
+    {
+      "path": "Overdox_Data\\level2",
+      "bytes": 5771024,
+      "sha256": "D56A7C8AC643A376AC8E632020608087628222DAF0B5265852F15FEE3F87DF78"
+    },
+    {
+      "path": "Overdox_Data\\resources.assets",
+      "bytes": 8619152,
+      "sha256": "605EC4C2300E9F06C2C3784454D8FDB935A64AFCA25BEFCCBDB554C75583888A"
+    },
+    {
+      "path": "Overdox_Data\\resources.assets.resS",
+      "bytes": 1538048,
+      "sha256": "EEB772F292C57E792D0EB67E5D5AA6D48831E0654158F38FA84F13DC7639EA11"
+    },
+    {
+      "path": "Overdox_Data\\RuntimeInitializeOnLoads.json",
+      "bytes": 352,
+      "sha256": "0A1D6C30591A864D9F3A329A7B4EE6AD7056A37AA3A454CD20CDC25CBD3BEC76"
+    },
+    {
+      "path": "Overdox_Data\\ScriptingAssemblies.json",
+      "bytes": 3110,
+      "sha256": "2C59D8F4DD4F73F49B2D6D6ABFA6828984B2C79BBAFB91B0515497C01F1F2549"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets0.assets",
+      "bytes": 7386200,
+      "sha256": "52DAB0644A574B5CC1C884AC931F518447279B258D2D7F5F055E9483DD60DA3A"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets0.assets.resS",
+      "bytes": 524288,
+      "sha256": "393EFE6399536384AA91BDFC4E64F244B4D3E1FBB6A4FF145C483FFEE64CCB36"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets1.assets",
+      "bytes": 74298664,
+      "sha256": "022C0A01FB7E661FC4DB47FD3FBC21B5D2317306B07F660672E2440899BDB0A1"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets1.assets.resS",
+      "bytes": 47533936,
+      "sha256": "D75A68D151DFE7E877AA43E5EF011E33521160E8BD84251E499A0EFF74E28084"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets2.assets",
+      "bytes": 11890376,
+      "sha256": "E0C3D6FB09E157E19404549A02E620282136C67C403478228E07E501DCB8307B"
+    },
+    {
+      "path": "Overdox_Data\\sharedassets2.assets.resS",
+      "bytes": 13346768,
+      "sha256": "BFB08F93EC7C28F805DCE9A2AA273C7C51C65C9AD4DD3AFF80744B72D7518BA0"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\DesignDataTable.Runtime.dll",
+      "bytes": 18432,
+      "sha256": "6DA120E34A94B8D44E0A214AE9EED7AE97B4D8973ECE9C7755658A43644FEA98"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\Mono.Security.dll",
+      "bytes": 241152,
+      "sha256": "86E4D8ECB2D5AB93EE60E871C1523E7852EF542268D26FCDFA964CDFABC336DA"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\mscorlib.dll",
+      "bytes": 4632064,
+      "sha256": "C93DFEB6F8F6299ACBA40891833BB66C286EB4E6344FAF498DE6EE9F82744D89"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\netstandard.dll",
+      "bytes": 90112,
+      "sha256": "6AE62E082DC494A2433984177F60CA4DB5FAE69B1F360A8B33754172B310B8C5"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\Overdox.Runtime.dll",
+      "bytes": 105984,
+      "sha256": "66C8A43F9E3CF7C6A92C56EE44CFDC6F71AD819BB1D3EF5D68C8A9E74E33CC14"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\Overdox.Verification.dll",
+      "bytes": 11776,
+      "sha256": "CB2ADBEDF13576E2208EE677AF664BBCB64712B7B2B86489797275E4B0C12B65"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.ComponentModel.Composition.dll",
+      "bytes": 257024,
+      "sha256": "6E2A3BBBE29EE7E586679959AA5849440D46BAC6F83742890380272A7DE7191C"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Configuration.dll",
+      "bytes": 124928,
+      "sha256": "68A7EC15B69150AEC4C574D1D11860D8E463C78AE195FFF73F4B66046F90CF7C"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Core.dll",
+      "bytes": 1113088,
+      "sha256": "899F09C1EB288F9035AF67B25397FF6274FC14CEA35AA4C93605FC0DE3BD8D2D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Data.DataSetExtensions.dll",
+      "bytes": 29696,
+      "sha256": "46312B09B782215A3CB2EBBFBDBA15DF2181421D1ED4B973FD4149C241D900F2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Data.dll",
+      "bytes": 2125312,
+      "sha256": "9741C5A2B75CC7CF1CF264A31F52892AB323EA2CCF0EC62429BD233ACA0524FF"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.dll",
+      "bytes": 2641920,
+      "sha256": "21B1DE2DE0A18FD354CCBA03C8688AB5DC46E822C905850607D8893C31551F69"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Drawing.dll",
+      "bytes": 489984,
+      "sha256": "96EEDDBD7CEBFED21F490FB88E892DBA676A74D93BF7F22BE6CA31B5627D010F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.EnterpriseServices.dll",
+      "bytes": 44544,
+      "sha256": "79B921FEB2292D3478A4B0A8D008E262562EC0708ED9CF332A15FB527D74E66A"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.IO.Compression.dll",
+      "bytes": 114688,
+      "sha256": "7840C5A713B9A29019A1092EFA28ECF295A43975E0F2DC341493C1BF1060E22D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+      "bytes": 18432,
+      "sha256": "6ACB659CD514F3666AA7DE3DBFA6970E41D2DBEA93B6CE07163BF94C8A3BCF45"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Net.Http.dll",
+      "bytes": 122880,
+      "sha256": "F081F8586D28DE09443511174581DA9906B263CE6290E1D66C40B8BDFE4F7019"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Numerics.dll",
+      "bytes": 119296,
+      "sha256": "26CB0ADDBB161AD0700DA37B7BCF75259381533D5B87E6890359C0BAE4F102D1"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Runtime.Serialization.dll",
+      "bytes": 934400,
+      "sha256": "FC3F192BE840818E4FFA3C8F25C3C652F2FB46C20DDD004580E51BD9AD4AE0CD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Security.dll",
+      "bytes": 320000,
+      "sha256": "C95B47CDB2352E648CD2623A483F3999EC59C019E5A783A6715E2A3787D3B8AA"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "bytes": 215040,
+      "sha256": "4F6EBD34F3D5708E73790C77E40A735F18E7CA9ADCFE3F6D74D63717D6258FB2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Transactions.dll",
+      "bytes": 35328,
+      "sha256": "73669CF6BE9C8329411033E9365203A62A49C8735EF7400C9920F6256E501D9D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Xml.dll",
+      "bytes": 3160064,
+      "sha256": "E48752988B8B94E0EF735E5F8CD3FBEE52E5FAD87B986E7914C53F8229F04C40"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\System.Xml.Linq.dll",
+      "bytes": 136704,
+      "sha256": "1A0241FDCEDACCF14F653D23511FEE92B91671757CB963F4AD0535B804DE54AD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\TurnRoom.Templete.Runtime.dll",
+      "bytes": 9216,
+      "sha256": "1D7C4002012EAEEAAF6F110EA59728002A10B4439023718C298E278DF6E805D3"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\Unity.TextMeshPro.dll",
+      "bytes": 436224,
+      "sha256": "638F9F49B8F5182ECF227BB5A2A1ABD3662F7F4A7CBC68CEFFF2EDFE40B0E24A"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+      "bytes": 54192,
+      "sha256": "CC609887BD6E599BC26EB0F3D228322B3F0D5406996F31895EF95016F9F83E7C"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AIModule.dll",
+      "bytes": 74160,
+      "sha256": "5AE5DAC7321782EF1A23FA2C571AE97B2FAFB085247710D33794BB0E32FA231C"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AMDModule.dll",
+      "bytes": 21928,
+      "sha256": "8EF375CA04E26635B35B5A0496CDA21798D1774D2232193D55FA7082F8D810B2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+      "bytes": 117168,
+      "sha256": "10C596F2F85E4FB357699CD0209ADD39F836B7C074B002F1C1C419A3CC6FAB9B"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AnimationModule.dll",
+      "bytes": 214952,
+      "sha256": "715308A8D1D9761875F7C7A7E2C307A1D50F5FA79F5F2854C8B07AE5B14D49D5"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ARModule.dll",
+      "bytes": 22960,
+      "sha256": "431623CCA5EA21237FA7BDF51F7E3AFB24F2E9171847E8548325EA53EA0912A3"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+      "bytes": 39856,
+      "sha256": "E31F341EBF3C5AA05DE7431BE465CCD45AAE4D8C0C25082A2FD79720A4149A71"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.AudioModule.dll",
+      "bytes": 104368,
+      "sha256": "F6133CB3BE60BFC3AF76F6D9CA593CB7C5AE319B0CB829396D5CE23DC1C61C73"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ClothModule.dll",
+      "bytes": 33712,
+      "sha256": "C3A0F4FAA0A07277610C63E6B151DF7FF6C0E4C7A65B772D00DEA6B11928F56F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+      "bytes": 25008,
+      "sha256": "5FF793DACC38AE2074CAF72C31FDB3C390234C825895388D025932262AB91A8D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+      "bytes": 23976,
+      "sha256": "5BA576CF36F319FB741AD3649B5D2684954EC5ADF2B87CA8D9C1871DD9CC1F17"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+      "bytes": 29608,
+      "sha256": "BB21517FC63C6139A0A732A2EAF60EE4ECDEDFB91A6E092D91155CF6E7951006"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.CoreModule.dll",
+      "bytes": 1803176,
+      "sha256": "D752A89AE4AE75A8D66275CD909E46E1B57527295FCF8B97DDB9F9502ECD826E"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+      "bytes": 23984,
+      "sha256": "E4977A78058DA770EDDF41D4DC5A7559F8EDDA4E74DEA4A027DD2454E701A7DA"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.DirectorModule.dll",
+      "bytes": 39336,
+      "sha256": "89050AFBD5668C3C72C32450877BEFC52EAA5719C91AA365D4ECDC384798AE8D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.dll",
+      "bytes": 170920,
+      "sha256": "0078D657B6822470AA2B25F398A9A557DF7C5E242BF3D929B7231F311CED61A0"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+      "bytes": 31144,
+      "sha256": "229BD1E2011A3511593F817DB201DBE05EAD51B42CBD90CB9E2F26AA80B67B80"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+      "bytes": 42928,
+      "sha256": "C936B67F239019A3632510E25E4ADCA80B5B4EE79EFE6F0D75F809B3311CA74B"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.GIModule.dll",
+      "bytes": 21928,
+      "sha256": "C7BB462DDC500A64BB76F153F1DF629F2D960524E3C2BDA63C492DB2F120FE99"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+      "bytes": 14248,
+      "sha256": "59C379B6BE9B69C0A317EB7506C0604F13A408C8C93E8BFB737EC74D2DB3C953"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.GridModule.dll",
+      "bytes": 27560,
+      "sha256": "A4FA802E212CABE4070440F6B7F14566A63C113679D6FC5403DB1FB798217A14"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+      "bytes": 91568,
+      "sha256": "B2269A65E5C7E4A417D77A7F098CC01F7A4A04FBBC5FAA14FEFAD226A3414178"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+      "bytes": 21936,
+      "sha256": "2DD68D4506BA60702C8BC6638ED439E575271E2FD79769F51CB01B94B77F822F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+      "bytes": 16808,
+      "sha256": "E4D62EE06FA72CF91442ABB694817D3E303A94F905462C98694B100C8EE1E987"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+      "bytes": 28592,
+      "sha256": "C3FFAD27C446A681157396F3E3ACAF185AD4C31403A113716CE6B6CA3659C424"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+      "bytes": 207792,
+      "sha256": "08612351CF32DFE6FEC679DDF0981333C346412359D3CB9AA51F8EA7418F6D12"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+      "bytes": 57264,
+      "sha256": "7E109F9F32807A9ABF3F8B0B761AAFA513461C0F9DD684E5A2BD51F82F162D16"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+      "bytes": 42928,
+      "sha256": "F356C8A68CB9FE044233879377AF24326431184633FDA15E5B859D3D66D435D2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.InputModule.dll",
+      "bytes": 25512,
+      "sha256": "615DC7898BA6054887E1D240AA0EE361D3FB312B4C5AFFDA024B57630CBACE8E"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.InsightsModule.dll",
+      "bytes": 14256,
+      "sha256": "309A64F3CA72DE882E0148F51D889039C50D995310C8D527CEBFE5A3FB6C9B74"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+      "bytes": 24488,
+      "sha256": "548AF819970985638A32CD3889EB52FB34A53BC12848EE4CCC9BD1A5A43C9A6B"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+      "bytes": 24488,
+      "sha256": "94953E5795526C22D189BD748835F750BEB81E0A46A60E8FAEB241AAD4072BB8"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+      "bytes": 64944,
+      "sha256": "A51D86365A85E593342091538D945D55F0CB3F06BC59DBF9BE90006B430AC07F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+      "bytes": 15792,
+      "sha256": "552E34A7AAE3EB227B59C399FD20F4C818B10401A6ED1A7DBB22616ED6833688"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+      "bytes": 35760,
+      "sha256": "A20C1DE617C0D2A6C3ECA2531BB66C5F08A6FBCB26C48D77846C4C7BB836FA84"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+      "bytes": 167336,
+      "sha256": "A2F22EA5F51EB94BBCC04D5DA97A2A4A0717E27CB3204D08FCD1F4067E8D2327"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+      "bytes": 22440,
+      "sha256": "DCD293A185991907E7A0C1DC0357591B0E3AF030F459DB3812DB5530ABA61BC9"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+      "bytes": 201648,
+      "sha256": "D113FF6B724FE07E86C0A7FDBD3ADF61AA06564AD30CEAA11E706A0D5C6FB6BD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+      "bytes": 183216,
+      "sha256": "3F401D8553F55E5CCFA4F42CB6B850A15B9DB627C6B1D6F74278254C276AFD1C"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+      "bytes": 149416,
+      "sha256": "E1B4A71E2076028DFF1D6CC4AE4A2774B5720E42C93F758B9AF9F0843841E80D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+      "bytes": 21936,
+      "sha256": "8E2EFDA9BF3F24F73DD8E65378A1CE012F51D64E7F22E1F2E91EF33B8E7829D8"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+      "bytes": 23464,
+      "sha256": "CE97260EA68D95066AF6C4F86CA0D91662CC17A7FFBB623176C66B22379824E3"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+      "bytes": 21928,
+      "sha256": "DA0423575E285C2B8E81D8A4516769B372C6D6A5145104C9DDDC2EAD7AC2F975"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+      "bytes": 33192,
+      "sha256": "3C54ED5E0350527B385947056BD2D616AE94127B4B84BBFF71182311D88201AF"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+      "bytes": 26024,
+      "sha256": "92EF99131308CFA11C482C7202D445ED949076845F6292099EFEA1B4A6867985"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+      "bytes": 29096,
+      "sha256": "D589575339D3278479C2E3FB2FB6C173D16755BB335BD301F86B4171C61C85F8"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.StreamingModule.dll",
+      "bytes": 22960,
+      "sha256": "7A66F0C4380DA4F80A19DDB896EC04CBDA621CD6C4D103EE33FBC2ED0234BC06"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+      "bytes": 26544,
+      "sha256": "EB71DF2E4AD19813B34519A787E756785ABDBB91EC456503F90372205BA32CA2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+      "bytes": 39344,
+      "sha256": "AE0E9942B3D2D85146F5BF981D03A5A49A1722C222099B3364BAE80AF99B7650"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TerrainModule.dll",
+      "bytes": 130480,
+      "sha256": "95A4408D9D84424C62CED03C07A1B76519D92A210DCAD6DF2F44B59F419653AD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+      "bytes": 22960,
+      "sha256": "606AD683A1E8ED9BBD9B436EDBAC2F01013D06C22C6A14302A2AA5B0F5268EFD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+      "bytes": 85416,
+      "sha256": "76C18BC53861A57BFB7AA0108B04E6AC7162A39E8C1289181D6AC9BD50F7E96A"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+      "bytes": 305072,
+      "sha256": "FF84155B2C855C0A51E5D23B1F6D0507BB8D8F7DAE4CCA9B01F5AD15A6DBB1BA"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+      "bytes": 46512,
+      "sha256": "AB9BE140755A9374218A1FE3FCBE02E0FB73CFABA39707042D59C6A05949E05E"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TilemapModule.dll",
+      "bytes": 55208,
+      "sha256": "DF64A5170748D588B0F2030CD40A0936946C0A0A62B4A7F9E2931DCEBCD9F693"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.TLSModule.dll",
+      "bytes": 29616,
+      "sha256": "F9A16FE69D4195C02CF963ED2C2C45B9E9A6D9CD659DA2C7B5F02BA8227401B3"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UI.dll",
+      "bytes": 249344,
+      "sha256": "BE6725960AB44408973EF31B6352AFAF824B0070A12439F924A93EA9E4417565"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+      "bytes": 2076584,
+      "sha256": "F7C5A85207A4CBB3B16A89F0A02E6902BBF4E1A830FB89CAF05EA0E1D2D5ECF5"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UIModule.dll",
+      "bytes": 46000,
+      "sha256": "DAF952A6AF972624960543A9F3BE05AA70965B921A9FF3E8F922F6404732F471"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UmbraModule.dll",
+      "bytes": 21928,
+      "sha256": "D4E01FFFBB3A935F7080BA803E3EA381BFC5EDD96547DEBAE3FB4E55A3E837FF"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+      "bytes": 33200,
+      "sha256": "B08CC559A6F44847F38AAB5BB8941A89317BC98409D7012C4255D014E4A392C5"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+      "bytes": 58288,
+      "sha256": "16544DF503360D94F295C9D4D63B1BA5F8CAA11835635B8BFB6C6FD1AED34294"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+      "bytes": 25000,
+      "sha256": "754F82B2373F5BB0C2EA6358930F6ED7E8E936CDEF25E018DCAB360C1B7B65A2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+      "bytes": 16304,
+      "sha256": "190A5F28B0D7CCC43AB32D455748234F560FC6B831D14329F6E5E9C5817A0421"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+      "bytes": 23472,
+      "sha256": "4C7B6400997ABCD0124B95845F07FE481C2D154884819DA0418A9A027A8C7FD7"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityTestProtocolModule.dll",
+      "bytes": 21928,
+      "sha256": "1B8072CE7BCE1C31F28C232F2A34CB595D5A957CEF0C387F08C2D986339F794B"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "bytes": 26024,
+      "sha256": "9DDC6AE133CAE3B7D00E33C9DA90C8A3B8B01B98A2919E83670A9AEA2F2C0D99"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+      "bytes": 25520,
+      "sha256": "FD29EAB2749551278C92FDD88233ED4FDDEEB8A8DBFD97874359D90601322E6F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+      "bytes": 66480,
+      "sha256": "83DF6AFB7F03EDC7BF1680B5A45A7F50579BFB33F2257CDC8FA0F25BB40A9CAD"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+      "bytes": 25008,
+      "sha256": "78FD2C70492AA0E843F15E960AFAFDFEB0D6F365A1FCF06519AE90E069D7636F"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+      "bytes": 33704,
+      "sha256": "B246B261306CB81111E1595B79E90C0A1770EEC8D83D4FDB8B8A459D9E496558"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+      "bytes": 28584,
+      "sha256": "115864CEF17FE43BB9BC92790F32B8E4B4A3327380868542992E18F6765E90C4"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.VFXModule.dll",
+      "bytes": 75696,
+      "sha256": "764B6BFFC0F0408A62C677696BEE9EE384F0B7C00068C22FD02E18D0AFE64591"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.VideoModule.dll",
+      "bytes": 55720,
+      "sha256": "3E1FDBF22A97A3250D4D6A154DF3559B7E953576EF130D291CF5C806FE19F0F0"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+      "bytes": 40360,
+      "sha256": "6998A3553970B7D212754FF98854E6723461AE79F2FA4A18D36CA1B4A1DD856D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.VRModule.dll",
+      "bytes": 29096,
+      "sha256": "4AA5EE1A30F3D85E608D193FED218B54CE612C360D18F7C46BEF5E26F2EA7E4D"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.WindModule.dll",
+      "bytes": 23984,
+      "sha256": "2DDB38EA840FC2405F88587C99ED807F321AE4D6FF74F6EC538D3063EFA601F2"
+    },
+    {
+      "path": "Overdox_Data\\Managed\\UnityEngine.XRModule.dll",
+      "bytes": 85424,
+      "sha256": "8854A9A2BD15BBBA7C7E9689C4E5060CBF3F1DED623B94A58FA381288290D15A"
+    },
+    {
+      "path": "Overdox_Data\\Resources\\unity default resources",
+      "bytes": 5858404,
+      "sha256": "D204FDF35008484A2154098EC2DA8DC25F76219F6654A9A8525A28F2FC11C529"
+    },
+    {
+      "path": "Overdox_Data\\Resources\\unity_builtin_extra",
+      "bytes": 374532,
+      "sha256": "320FBE2BFF543DC3F3D390947E22A97945382BE6AE82A41484610B61CB3F320F"
+    }
+  ]
+}

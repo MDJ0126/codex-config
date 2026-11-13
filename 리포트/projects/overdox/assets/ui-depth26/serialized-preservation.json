@@ -1,0 +1,126 @@
+{
+  "comparisonBase": "a8d2a28173dfb9c360b6768efe94f2ce5f39c1d2",
+  "scope": "All existing serialized objects in both scenes and UI prefabs; only sibling list/component additions and Image disabling are allowed",
+  "results": [
+    {
+      "path": "Assets/Scenes/OverdoxLobby.unity",
+      "beforeObjects": 10546,
+      "afterObjects": 10554,
+      "addedObjects": [
+        {
+          "id": "6855448382792584156",
+          "kind": 114
+        },
+        {
+          "id": "7215067339847411674",
+          "kind": 114
+        },
+        {
+          "id": "7825586315402693168",
+          "kind": 114
+        },
+        {
+          "id": "8235994883197807541",
+          "kind": 114
+        },
+        {
+          "id": "8373786794650367780",
+          "kind": 114
+        },
+        {
+          "id": "8796412687804920517",
+          "kind": 114
+        },
+        {
+          "id": "8885971152848873126",
+          "kind": 114
+        },
+        {
+          "id": "9190176292182879408",
+          "kind": 114
+        }
+      ],
+      "reorderedRectTransforms": 168,
+      "disabledComponents": [
+        "1287570914699331536",
+        "1415108553525872442",
+        "2515969217324770596",
+        "3447056210292654954",
+        "6142468391480465829",
+        "6414580120758782312",
+        "7653308970846501768",
+        "8521606641037327204"
+      ],
+      "unexpected": []
+    },
+    {
+      "path": "Assets/Scenes/OverdoxArena.unity",
+      "beforeObjects": 51115,
+      "afterObjects": 51115,
+      "addedObjects": [],
+      "reorderedRectTransforms": 160,
+      "disabledComponents": [],
+      "unexpected": []
+    },
+    {
+      "path": "Assets/Art/Restored/UI/OriginalLobbyUI.v2.prefab",
+      "beforeObjects": 9694,
+      "afterObjects": 9702,
+      "addedObjects": [
+        {
+          "id": "5412491746687210810",
+          "kind": 114
+        },
+        {
+          "id": "6160555466021790005",
+          "kind": 114
+        },
+        {
+          "id": "5254499217636742338",
+          "kind": 114
+        },
+        {
+          "id": "5410076549282561003",
+          "kind": 114
+        },
+        {
+          "id": "7417491817714246080",
+          "kind": 114
+        },
+        {
+          "id": "4183675859216784576",
+          "kind": 114
+        },
+        {
+          "id": "7036969126421993501",
+          "kind": 114
+        },
+        {
+          "id": "4548402799972952782",
+          "kind": 114
+        }
+      ],
+      "reorderedRectTransforms": 178,
+      "disabledComponents": [
+        "7653308970735424958",
+        "3447056211112832348",
+        "6142468391797094291",
+        "1415108552609343756",
+        "2515969217033308946",
+        "6414580120446527326",
+        "8521606641492219218",
+        "1287570914109827558"
+      ],
+      "unexpected": []
+    },
+    {
+      "path": "Assets/Art/Restored/UI/OriginalGameRoomUI.v2.prefab",
+      "beforeObjects": 12201,
+      "afterObjects": 12201,
+      "addedObjects": [],
+      "reorderedRectTransforms": 160,
+      "disabledComponents": [],
+      "unexpected": []
+    }
+  ]
+}
