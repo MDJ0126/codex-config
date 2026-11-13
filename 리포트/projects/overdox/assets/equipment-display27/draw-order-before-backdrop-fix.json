@@ -1,0 +1,39 @@
+{
+    "recordedAt": "2026-11-13T13:28:53.8231132Z",
+    "point": {
+        "x": 570.0,
+        "y": 239.9993438720703
+    },
+    "records": [
+        {
+            "sourceId": 35057,
+            "sourceDepth": 100,
+            "drawDepth": 273,
+            "name": "100. Label - SetAbilityTitle",
+            "text": "<color=#00AEFF>Four Stars</color> 세트효과",
+            "sprite": "",
+            "shader": "UI/Default",
+            "color": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            }
+        },
+        {
+            "sourceId": 38064,
+            "sourceDepth": 5,
+            "drawDepth": 274,
+            "name": "5. Sprite - Gradation",
+            "text": "",
+            "sprite": "LobbyUI_Line_Gradation",
+            "shader": "UI/Default",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            }
+        }
+    ]
+}

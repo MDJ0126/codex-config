@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-11-13T23:01:07.8398158+09:00",
+  "pid": 15104,
+  "root": "VerificationBuilds/Build27Soak",
+  "fileCount": 150,
+  "allCopiedHashesMatch": true,
+  "requestedSeconds": 36000,
+  "status": "launch-failed",
+  "rendering": "batchmode without nographics",
+  "expectedCompletion": "프로세스 실제 시작부터10시간 뒤이며 완료 JSON과 로그로 별도 확인",
+  "failureEvidence": "프로세스 종료, Player.log: Process is running in low integrity mode..."
+}

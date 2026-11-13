@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-11-13T23:02:57.7589837+09:00",
+  "pid": 2008,
+  "root": "VerificationBuilds/Build27Soak",
+  "evidence": "Evidence27Run4",
+  "fileCount": 150,
+  "allCopiedHashesMatch": true,
+  "requestedSeconds": 36000,
+  "status": "stopped-no-arena-progress",
+  "rendering": "batchmode without nographics",
+  "execution": "tracked Wait-Process session",
+  "findings": "샌드박스 프로세스 조회가 일반 권한 프로세스를 누락했습니다. 실제 중복3개를 경로·PID 확인 후 정리했습니다. batchmode 로비 이후 전투·텔레메트리 미확인으로 완료 아님."
+}

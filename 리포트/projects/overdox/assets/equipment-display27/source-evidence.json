@@ -1,0 +1,63 @@
+{
+  "source": "Ordinary shell Capstone/ELF analysis; not REA output",
+  "nativeMethods": {
+    "slotUpdate": "0x1831bb8",
+    "setText": "0x14e7c2c",
+    "getSetEffect": "0x2bb9e38",
+    "titleIcon": "0x2bb8b38",
+    "rarityColor": "0x2bba58c",
+    "colorInitialization": "0x193c4cc-0x193c54c"
+  },
+  "setMark": "EquipParts4 disabled; otherwise EquipmentCategory matches all3 armor pieces",
+  "categoryMapping": "catalog.brand + 1 = Equipment.EquipmentCategory = ArmorBrand.Id",
+  "checkedCatalogRows": 119,
+  "mismatches": [],
+  "setEffectDisplayMultipliers": {
+    "9": 100.0,
+    "34": 1.0,
+    "35": 100.0,
+    "36": 100.0,
+    "37": 100.0,
+    "59": 100.0
+  },
+  "strongColorPackedHex": [
+    "ffc2c2c2",
+    "ffffae00",
+    "ff00aeff",
+    "ffff00a8",
+    "ff0000ff"
+  ],
+  "strongColorsRgba": [
+    [
+      194,
+      194,
+      194,
+      255
+    ],
+    [
+      0,
+      174,
+      255,
+      255
+    ],
+    [
+      255,
+      174,
+      0,
+      255
+    ],
+    [
+      168,
+      0,
+      255,
+      255
+    ],
+    [
+      255,
+      0,
+      0,
+      255
+    ]
+  ],
+  "correction": "The green S is SetMark, not rarity grade. Previous UI-depth report classified it incorrectly."
+}

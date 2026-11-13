@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-11-13T23:04:29.2414203+09:00",
+  "pid": 29152,
+  "root": "VerificationBuilds/Build27Soak",
+  "evidence": "Evidence27Arena",
+  "fileCount": 150,
+  "allCopiedHashesMatch": true,
+  "requestedSeconds": 36000,
+  "status": "running-arena-confirmed-not-completed",
+  "rendering": "batchmode without nographics",
+  "entry": "existing gear-combat-review direct arena flag",
+  "limitation": "기존 Splash→Lobby 자동 진입은 ArenaSession.Start 시점의 _loading=true로 거부됩니다. 이번 장시간 검증은 기존 Arena 직접 진입 플래그를 사용하며 수동 UI 검증과 구분합니다.",
+  "sessionStartUtc": "2026-11-13T14:04:31.4141134Z",
+  "expectedCompletionKst": "2026-11-14 09:04:31 KST 무렵, 실제 완료 파일로 별도 확인"
+}

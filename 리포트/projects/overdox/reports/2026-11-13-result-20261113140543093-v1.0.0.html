@@ -1,0 +1,182 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 장비 세트 제목 depth·실제 장착 표시 복구와 S 표식 정정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 장비 세트 제목 depth·실제 장착 표시 복구와 S 표식 정정</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">세트 제목을 가리던 배경 순서를 수정하고 DDT 기반 레벨·프레임·세트 문구·무기군 아이콘을 연결했습니다. 현재 남녀 아바타는 보존했으며 전체 UI 동일성은 진행 중입니다.</p><div class="post-byline"><time datetime="2026-11-13T14:05:43.093Z">2026년 11월 13일 오후 11:05 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>검정 그라데이션이 제목을 덮는 순서를 바로잡아 Four Stars 세트효과와 무기공격력5% 증가가 읽힙니다. 다른 브랜드 머리를 장착하면 세트효과 없음·Lv6·공격력48로, 기본 머리 복구 후50으로 바뀝니다. 여성 전설 무기는 Lv11·공격력214를 확인했습니다. 실제 카메라 캡처1600×900이며 전후 캐릭터 포즈 시점은 다릅니다.</p>
+<p><figure><img class="report-image" src="../assets/equipment-display27/equipment-build26-before.webp" alt="Build26 수정 전" loading="lazy"><figcaption>Build26 수정 전</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/equipment-display27/equipment-build27-after.webp" alt="Build27 수정 후" loading="lazy"><figcaption>Build27 수정 후</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/equipment-display27/equipment-mixed-brand-build27.png" alt="다른 브랜드 머리 장착" loading="lazy"><figcaption>다른 브랜드 머리 장착</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/equipment-display27/equipment-female-mixed-build27.png" alt="여성 아바타와 세트 해제" loading="lazy"><figcaption>여성 아바타와 세트 해제</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/equipment-display27/equipment-legendary-build27.png" alt="여성 전설 무기 Lv11" loading="lazy"><figcaption>여성 전설 무기 Lv11</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>원본 제목35057 depth100의 자식38064 배경 depth5가 uGUI 실제 순서273→274로 글자를 덮었습니다. 플레이용 정적 배경만 SetOption38500의 첫 형제로 옮겨55→57로 수정했습니다. 월드 모서리 최대 차이9.536743E-07. 원본 파일·ID·Image·문서 바인딩은 보존하고 별도 Canvas·복제 이미지·프레임 동기화는 추가하지 않았습니다. 다른 가지까지 일반 적용하지 않습니다.</p>
+<pre class="mermaid">flowchart LR
+ A[원본 depth와 실제 Graphic 순서] --&gt; B[글자를 덮는 정적 배경 확인]
+ B --&gt; C[같은 컨테이너 첫 형제로 이동]
+ C --&gt; D[월드 모서리 보존 검사]
+ D --&gt; E[씬 저장과 Windows 화면 확인]
+</pre>
+<p>RestoredEquipmentDisplayBuilder.cs 핵심 메서드 전체:</p>
+<pre><code data-language="csharp">        private static void RestoreSetTitleBackdrop(RestoredUiDocument document, Layout layout)
+        {
+            // NGUI 원본: 글자35057 depth100, 검정 Gradation38064 depth5.
+            // 실제 uGUI 진단은 두 Graphic만 제목 중심과 겹쳤고 검정 배경이 나중에 그려졌음을 확인했다.
+            var title = document.Find(35057);
+            var backdrop = document.Find(38064);
+            var before = new Vector3[4];
+            backdrop.GetWorldCorners(before);
+            if (backdrop.parent == title)
+            {
+                // 이 배경에는 입력·동적 바인딩·애니메이션이 없다. 객체 ID·Image·원본 문서 참조는 유지한다.
+                // 같은 Canvas의 정적 형제로 옮겨 추가 Canvas·복제 Graphic·매 프레임 동기화를 피한다.
+                backdrop.SetParent(title.parent, true);
+            }
+            if (backdrop.parent != title.parent)
+            {
+                throw new InvalidOperationException(&quot;세트 배경의 예상 계층과 다릅니다. 사용자 변경을 보존합니다.&quot;);
+            }
+            backdrop.SetAsFirstSibling();
+            var after = new Vector3[4];
+            backdrop.GetWorldCorners(after);
+            float cornerDelta = Enumerable.Range(0, 4).Max(index =&gt; Vector3.Distance(before[index], after[index]));
+            if (cornerDelta &gt; .001f)
+            {
+                throw new InvalidOperationException(&quot;배경의 화면 배치가 변경됐습니다: &quot; + cornerDelta);
+            }
+            // 앞선 진단용 Anchor-Bottom 가지 이동은 원인이 아니었으므로 원본 순서로 복구한다.
+            document.Find(38386).SetSiblingIndex(layout.transforms.Single(node =&gt; node.id == 38386).order);
+            Debug.Log($&quot;OVERDOX_EQUIPMENT_BACKDROP_RESTORED sourceId=38064 sourceDepth=5 parent=38500 worldCornerDelta={cornerDelta}&quot;);
+        }
+</code></pre>
+<p>이전 보고의 ‘녹색S등급’은 잘못된 해석이었습니다. 원본 EquippedItemSlot.UpdateUI(RVA0x1831BB8)는 같은 브랜드 방어구3부위에 SetMark를 켜고 무기에는 끕니다. Build26에서 바인딩이 미완료였다는 관찰은 맞지만 희귀도로 지칭한 판단을 정정합니다. 희귀도는 원본 STRONG Color32·전설 전용 프레임으로 구분합니다.</p>
+<p>브랜드·세트 문구는 저장 XLSX→기존 DDT의 ArmorBrand·EquipmentSetAbility·LocalizedText로 읽습니다. 원본4302행 중 한국어14키만 캐시하며 최초 읽기는 전체 기존 리더입니다. 측정한 메모리·FPS 개선량은 없습니다. 무기 카드의 잘못된 DCompany 로고는 원작 ELF 문자열 포인터로 확인한8무기군 아이콘으로 교체했습니다.</p>
+<pre class="mermaid">flowchart LR
+ A[실제 장착 장비] --&gt; B[레벨과 희귀도 프레임]
+ A --&gt; C{방어구3부위 같은 브랜드}
+ C --&gt;|예| D[S 표식과 DDT 효과 문구]
+ C --&gt;|아니오| E[세트효과 없음]
+ F[열람 카드] --&gt; G{무기인가}
+ G --&gt;|예| H[8종 무기군 아이콘]
+ G --&gt;|아니오| I[6종 브랜드 아이콘]
+</pre>
+<p>세트 조건과 단위 변환 전체:</p>
+<pre><code data-language="csharp">        private void UpdateSetText(GearRow[] armor)
+        {
+            // 카탈로그 brand는0부터, 원본 EquipmentCategory와 ArmorBrand ID는1부터다.
+            int brandId = armor[0].brand + 1;
+            int count = armor.Count(row =&gt; row.brand + 1 == brandId);
+            var effects = _abilities.Values.Where(row =&gt; row.SetRequireStatus == 1 &amp;&amp; row.ConditionType == 1 &amp;&amp;
+                row.ConditionValue1 == brandId &amp;&amp; count &gt;= row.SetRequireCount).OrderBy(row =&gt; row.Id).ToArray();
+            bool isActive = effects.Length &gt; 0;
+            if (!isActive)
+            {
+                setTitle.text = TextFor(&quot;armor_set_2&quot;);
+                setDescription.text = string.Empty;
+                setDescription.gameObject.SetActive(false);
+                return;
+            }
+            string brandName = TextFor(_brands[brandId].NameKey);
+            setTitle.text = RichText(string.Format(CultureInfo.InvariantCulture, TextFor(&quot;armor_set_1&quot;), brandName));
+            setDescription.text = string.Join(&quot;\n&quot;, effects.Select(FormatEffect));
+            setDescription.gameObject.SetActive(true);
+        }
+</code></pre>
+<pre><code data-language="csharp">        private string FormatEffect(EquipmentSetAbility effect)
+        {
+            // 현 원본 세트 표에서9·35·59는 비율이며 원작 GetSetEffect의 배율 표도100을 사용한다.
+            bool isPercent = effect.AbilityType == 9 || effect.AbilityType == 35 || effect.AbilityType == 59;
+            string value = (effect.AbilityValue1 * (isPercent ? 100 : 1)).ToString(&quot;0.##&quot;, CultureInfo.InvariantCulture);
+            return RichText(string.Format(CultureInfo.InvariantCulture, TextFor(effect.ExplanationKey), value));
+        }
+</code></pre>
+<pre><code data-language="csharp">        public void Bind(GearRow row, int gearLevel, Color32 color, bool matchingSet)
+        {
+            level.text = gearLevel.ToString(CultureInfo.InvariantCulture);
+            setMark.SetActive(matchingSet);
+            bool isLegendary = row.rarity == 4;
+            normalFrame.gameObject.SetActive(!isLegendary);
+            normalFrame.color = color;
+            legendaryFrame.SetActive(isLegendary);
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>실제 저장 DDT Equipment119행(무기38·방어구81)의 레벨·희귀도·분류와 카드풀10개의8무기군·6브랜드 Sprite 참조 경로가 오류0건입니다. 첫 진단은 Sprite.name의 LobbyUI_ 접두어를 놓쳐20건 실패했고 실제 에셋 경로 비교로 검사기를 수정했습니다. 실패 기록도 보존합니다. 전 장비 실행 판정은 아닙니다.</p>
+<p>Unity6000.0.83f1 Windows Build27은22:38:04 KST 성공258,972,186B. 고정 사본150파일 해시 보존. 기존 FX 누락 스크립트 경고1건이 남습니다. 현재 남녀 프리팹·비주얼 라이브러리·코드4파일 SHA256 동일. 기본 세트→같은 브랜드 다른 머리(S유지)→다른 브랜드(S숨김)→남녀 전환→기본 복구→여성 전설 무기 장착을 실제 조작했습니다. 조사 예외 패턴0건입니다.</p>
+<p><a class="report-link" href="../assets/equipment-display27/ddt-display-verification.json">DDT 참조 대조</a> · <a class="report-link" href="../assets/equipment-display27/build27-flow.log">수동 흐름</a> · <a class="report-link" href="../assets/equipment-display27/avatar-preserved.json">아바타 해시</a> · <a class="report-link" href="../assets/equipment-display27/build27-manifest.json">빌드 해시</a></p>
+<p>실제 장착 값 갱신과 캐시 준비 전체:</p>
+<pre><code data-language="csharp">        public void Refresh(Fighter player, int trainingOffset)
+        {
+            EnsureData();
+            bool isMatched = player.armor[0].brand == player.armor[1].brand &amp;&amp; player.armor[1].brand == player.armor[2].brand;
+            for (int index = 0; index &lt; slots.Length; index++)
+            {
+                var row = index == 3 ? player.weapon : player.armor[index];
+                int level = Mathf.Clamp(row.startLevel + trainingOffset, 1, row.maxLevel);
+                slots[index].Bind(row, level, rarityColors[row.rarity], index &lt; 3 &amp;&amp; isMatched);
+            }
+            UpdateSetText(player.armor);
+        }
+</code></pre>
+<pre><code data-language="csharp">        private void EnsureData()
+        {
+            if (_texts != null)
+            {
+                return;
+            }
+            _brands = DataLoader.ReadBinaryDictionary&lt;ArmorBrand&gt;(armorBrandBinary.bytes, GearCatalog.BINARY_KEY);
+            _abilities = DataLoader.ReadBinaryDictionary&lt;EquipmentSetAbility&gt;(setAbilityBinary.bytes, GearCatalog.BINARY_KEY);
+            // 제작용 DDT 리더를 그대로 사용하되 표시용14개 키만 유지한다. 전체4302행·영어 문자열은 캐시하지 않는다.
+            var requiredKeys = new HashSet&lt;string&gt;(_brands.Values.Select(row =&gt; row.NameKey).Concat(_abilities.Values.Select(row =&gt; row.ExplanationKey)))
+            {
+                &quot;armor_set_1&quot;, &quot;armor_set_2&quot;
+            };
+            _texts = DataLoader.ReadBinaryDictionary&lt;LocalizedText&gt;(localizedTextBinary.bytes, GearCatalog.BINARY_KEY).Values
+                .Where(row =&gt; requiredKeys.Contains(row.Key)).ToDictionary(row =&gt; row.Key, row =&gt; row.Korean);
+        }
+</code></pre>
+<p>무기군·브랜드 카드 연결 전체:</p>
+<pre><code data-language="csharp">        public void Bind(RestoredLobbyController owner, int index, GearRow row, Sprite icon, bool selected, bool weapon, int gearLevel, float value)
+        {
+            _owner = owner;
+            _index = index;
+            title.text = row.name;
+            level.text = gearLevel.ToString();
+            stat.text = value.ToString(&quot;0&quot;);
+            if (statName != null)
+            {
+                statName.text = weapon ? &quot;Damage&quot; : &quot;HP&quot;;
+            }
+            if (legendaryEffect != null)
+            {
+                legendaryEffect.SetActive(row.rarity == 4);
+            }
+            // 배열은 현재 카탈로그의 0 이상 희귀도·브랜드 값으로 구성한다.
+            if (frame != null &amp;&amp; rarityFrames != null &amp;&amp; row.rarity &gt;= 0 &amp;&amp; row.rarity &lt; rarityFrames.Length)
+            {
+                frame.sprite = rarityFrames[row.rarity];
+            }
+            // 원작 무기 제목은 무기군 아이콘을 쓰며, 방어구 제목에만 브랜드를 표시한다.
+            var titleIcons = weapon ? weaponTitleIcons : brandIcons;
+            int titleIndex = weapon ? row.family : row.brand;
+            if (brand != null)
+            {
+                brand.sprite = titleIcons != null &amp;&amp; titleIndex &gt;= 0 &amp;&amp; titleIndex &lt; titleIcons.Length ? titleIcons[titleIndex] : null;
+                brand.enabled = brand.sprite != null;
+            }
+            thumbnail.sprite = icon;
+            thumbnail.enabled = icon != null;
+            selectedMark.SetActive(selected);
+        }
+</code></pre>
+<p>Affinity 전후2개 AF 원본을 모두 닫고 재열어 확인했으며 dirty=false입니다. 작업 문서만 닫고 기존6개 문서를 보존했습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>전체 UI 동일성은 미완료입니다. 추가 부모·자식과 가지 간 depth, NEW99·업그레이드·TP 템플릿, 모든 장비 실제 전투·남녀 리깅·카메라·FX·새 Build27의10시간 완료는 미확인입니다. 왼쪽 이전 버튼 좌표 입력은 변화가 기록되지 않아 히트 영역을 추가 확인합니다. 빈 영역 휠 이전 선택은 실제 동작했습니다. OS 드래그 성공으로 해석하지 않습니다. 이번 빌드의 전투 재진입은 미실행입니다.</p>
+<p>원본 PNG5장 보존, 실제 Affinity에서 전후2장 원본AF 저장·WebP 내보내기. 나머지3장 압축은 미완료입니다. 원작명 비공개 개발일지에는 실행 이미지를 게시하지 않고 기존 구조도 썸네일을 유지합니다.</p>
+<p><a class="report-link" href="../assets/equipment-display27/RestoredEquipmentPresentation.cs">런타임 전체 클래스</a> · <a class="report-link" href="../assets/equipment-display27/RestoredEquipmentDisplayBuilder.cs">에디터 연결 전체</a> · <a class="report-link" href="../assets/equipment-display27/RestoredGearCard.cs">카드 전체 코드</a> · <a class="report-link" href="../assets/equipment-display27/10-equipment-display.md">개발 문서</a>. SampleProjectForUnity c7b40e5 관련 문서 기준 한국어 XML·중괄호·Runtime/Editor 책임 분리를 유지했습니다. 원작 고유 ID와 스키마에 의존해 샘플 환류는 보류했습니다. 전역 지침 변경 없음, 프로젝트 지침에 확인된 SetMark와 정적 배경 교정 범위를 통합했습니다.</p>
+<p><a class="report-link" href="../assets/equipment-display27/build27-soak-arena-start.json">새 Build27 장시간 시작</a>:23:04:31 KST 실제 Arena 1라운드·캡처·텔레메트리 확인,10시간 완료 전입니다. 최초 샌드박스 실행은 낮은 무결성으로 종료됐고, 일반 권한 분리 실행3개는 샌드박스 조회에서 누락됐습니다. 정확한 경로·PID로 모두 정리했습니다. 로비 자동 시작은 로딩 중 진입 거부를 확인해 기존 Arena 직접 진입 옵션을 사용했습니다. 직접 진입으로 로비 흐름 문제를 해결했다고 보고하지 않습니다.</p>
+<p>대화 기록: 사용자는 남녀 아바타·리깅 변경을 참고하고 추가 UI depth를 점검하라고 요청했습니다(요청 시각 미기록). 현재 참조 보존·세트 제목 수정·장착 표시 실행 근거를 보고했습니다. 잘못 지칭한 S등급을 세트 표식으로 정정했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 22:11:09 KST 시작. 구현·실행30<del>60분 예상. 핵심 실행 후 이미지·공개 보고15</del>25분 추가 안내. 전체 복원 완료 예상과 구분합니다.</li>
+<li>실제로 완료된 시간: 구현22:32:55 KST(21분46초),DDT 확인22:36:21,빌드22:38:04(26분55초). 수동 장비·남녀·전설 표시 확인22:50 KST 무렵. 문서·공개 게시 후 회차 실제 종료를 별도 기록합니다. 설치·새 장시간 완료를 포함하지 않습니다.</li>
+<li>XERJ: 미사용 — XERJ 연결·검색 없음. 원작 추출 표·ELF의 읽기 전용 분석과 실제 Unity·Windows 화면을 사용했습니다. REA 호출 도구가 없는 환경이며 일반 분석을 REA 실행으로 표시하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113140543093-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113140543093-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
