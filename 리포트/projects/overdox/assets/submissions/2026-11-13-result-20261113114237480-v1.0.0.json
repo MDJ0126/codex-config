@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "overdox",
+    "kind": "result",
+    "title": "OVERDOX 사망 전후 비교 캡션 정정: 두 실행 모두 무기10140",
+    "summary": "사망 자세 보고서의 무기가 다르다는 캡션을 정정합니다. 실제 Build20·Build22 로그는 모두10140이며, 전투 시각과 주변 봇 배치가 다른 비교입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "게임 코드·자산·실행 결과의 변경은 없습니다. 비교 캡션의 사실 관계를 정정합니다. Build21 후보 캡처가121HP여서 실제0HP인 Build20 캡처를 사용했다는 설명은 유지합니다. 기존의330개 커브 미연결,18개 리그 포즈 변화·13개 전체 연결, Build22의 실제 사망 자세와 미완료 범위도 바뀌지 않습니다.",
+    "verification": "프로젝트의 Docs/Verification/build20-manual-player.log에서 OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140 및 OVERDOX_FLOW_READY phase=Arena weapon=10140을 확인했습니다. Build22 보존 로그에도 Arena 진입 무기10140이 기록돼 있습니다. 공개용 필터 로그만 연결합니다.\n\n[Build20 흐름 로그](../assets/native-ui20/build20-manual-player.log) · [Build22 흐름 로그](../assets/native-ui22/build22-flow.log). 원본 화면은 각각0/390HP를 보이며 같은 프레임·같은 전투 상황의 비교는 아닙니다.",
+    "remaining": "문서 캡션 정정이며 새로운 게임 동작 검증을 뜻하지 않습니다. 추가 뼈 경로5경우, 다른 무기군·성별의 실제 경기, 사망 FX·페이드·결과 UI 및 OS 장비 목록 드래그 검증은 남습니다.",
+    "outcome": "[사망 클립·자세 보고서](2026-11-13-result-20261113111408715-v1.0.0.html)의 ‘무기·전투 시각·주변 봇 배치가 다릅니다’ 중 무기가 다르다는 부분은 잘못됐습니다. 보존된 Player.log를 다시 대조한 결과 Build20 Arena 진입도10140, Build22에서 사망 전 재장착한 무기도10140입니다. 정정 캡션은 ‘같은 맵·같은 무기10140의0HP 상태 비교이며, 전투 시각과 주변 봇 배치가 다릅니다’입니다. 원 보고서와 첨부는 덮어쓰지 않고 정정 이력을 남깁니다.",
+    "proposedTime": "2026-11-13 19:57:25 KST부터 게시·첫 입력 확인30~60분을 제안한 지속 회차의 최종 근거 대조 구간입니다.",
+    "actualTime": "두 실행 로그 대조2026-11-13 20:40~20:42 KST 약2분. 게임 재실행은 하지 않았으며 보존된 로그의 실제 무기 ID를 대조했습니다. 전체 회차와 공개 배포 시간은 별도입니다.",
+    "xerjEvidence": "XERJ 연결 확인 없음. 보존된 두 고정 빌드의 실제 실행 로그를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}

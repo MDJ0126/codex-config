@@ -1,5 +1,15 @@
 [
   {
+    "title": "OVERDOX 사망 전후 비교 캡션 정정: 두 실행 모두 무기10140",
+    "summary": "사망 자세 보고서의 무기가 다르다는 캡션을 정정합니다. 실제 Build20·Build22 로그는 모두10140이며, 전투 시각과 주변 봇 배치가 다른 비교입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113114237480-v1.0.0.html",
+    "date": "2026-11-13T11:42:37.480Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
     "summary": "Build22 장비 캐러셀·별도 장착·사망 자세와 샘플 작성 규칙·개발 문서의 부분 적용 결과를 보존하며 전체 복원을 이어갑니다.",
     "project": "overdox",
