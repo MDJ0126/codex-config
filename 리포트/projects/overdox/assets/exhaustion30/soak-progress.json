@@ -1,0 +1,20 @@
+{
+  "recordedAt": "2026-11-14T00:20:00.5106431+09:00",
+  "pid": 30244,
+  "path": "C:\\Projects\\FH\\VerificationBuilds\\Build30Soak\\Overdox.exe",
+  "elapsedSeconds": 146.8873403,
+  "workingSetBytes": 421732352,
+  "exceptions": [],
+  "flow": [
+    "OVERDOX_FLOW_LOADING destination=OverdoxLobby weapon=10140",
+    "OVERDOX_FLOW_READY phase=Lobby weapon=10140",
+    "OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140",
+    "OVERDOX_FLOW_READY phase=Arena weapon=10140",
+    "OVERDOX_ROUND_START round=1 weapon=그림자 칼날 set=인펜튜리"
+  ],
+  "lastTelemetry": [
+    "utc=2026-11-13T15:18:39.2085798Z elapsed=60.1 rounds=1 alive=3 playerPosition=(4.98, 0.03, -6.42) memory=185686241 objects=9673 [attack, 124],[skill, 18],[hit, 88],[condition-4, 9],[buff, 24],[dash, 49],[death, 9],[block, 3],[condition-2, 7],[condition-3, 3],[condition-1, 3]",
+    "utc=2026-11-13T15:19:39.2121282Z elapsed=120.1 rounds=1 alive=2 playerPosition=(-1.88, 0.03, -2.00) memory=186148649 objects=9671 [attack, 174],[skill, 22],[hit, 107],[condition-4, 9],[buff, 29],[dash, 69],[death, 10],[block, 3],[condition-2, 7],[condition-3, 3],[condition-1, 3]"
+  ],
+  "complete": false
+}

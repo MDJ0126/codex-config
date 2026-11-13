@@ -1,6 +1,26 @@
 [
   {
     "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "누락된 탈진을 지원해 세 자세 회복량0.2배를 실제 Windows에서 확인했습니다. 전체38무기 일반 명중 검증을 통과하고, 시작 예외가 있던 장시간 실행은 보존 후 최신 빌드로 다시 시작했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113152129751-v1.0.9.html",
+    "date": "2026-11-13T15:21:29.751Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 탈진의 세 자세 회복 배율 복구와 검증기 시작 예외 수정",
+    "summary": "누락된 탈진을 지원해 세 자세 회복량0.2배를 실제 Windows에서 확인했습니다. 전체38무기 일반 명중 검증을 통과하고, 시작 예외가 있던 장시간 실행은 보존 후 최신 빌드로 다시 시작했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113152108277-v1.0.0.html",
+    "date": "2026-11-13T15:21:08.277Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
     "summary": "이전·다음 버튼을 원본 콜라이더30×350으로 복구하고 자동 전투 요청을 로딩 완료 뒤 전달했습니다. Build28에서 같은 좌표 클릭·여성 전투와20초 자동 흐름을 확인했습니다.",
     "project": "overdox",
     "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113143923605-v1.0.8.html",

@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-11-13T15:16:15.546847+00:00",
+  "analysis": "ordinary ELF/Capstone and shipped metadata; not REA output",
+  "dataSource": "main81 original ConditionEffect501; compiled workbook DDT used at runtime",
+  "nativeSource": "APK87 / 2.2.3 / arm64-v8a",
+  "nativeSha256": "06E07EAB6D21302276F885340894E86F69F0C890A8B7B4CD33CCE6C63C653FEC",
+  "apkNativeSha256": {
+    "2.2.1": "66C03207F0DCF34F6E1117390E0607462984B7E1EC7533F3184E2D301CD9A47F",
+    "2.2.3": "06E07EAB6D21302276F885340894E86F69F0C890A8B7B4CD33CCE6C63C653FEC"
+  },
+  "sameAs221": false,
+  "condition": {
+    "id": 501,
+    "type": 60,
+    "stackCount": 4,
+    "durationSeconds": 10,
+    "variable1": 0.20000000298023224
+  },
+  "dispatch": {
+    "table": "0x2DB02E0",
+    "index": 59,
+    "base": "0x1690A50",
+    "destination": "0x1690ac0"
+  },
+  "initialization": {
+    "methodRva": "0x169099C",
+    "vectorAddress": "0x2DB02C0",
+    "floatsAt20": [
+      0.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "staminaAt28": 1.0
+  },
+  "accumulation": {
+    "methodRva": "0x16909E8",
+    "instructions": "0x1690AC8 load BuffStat+0x28; 0x1690ACC load ConditionEffect+0x48; 0x1690AD0 fmul; store +0x28"
+  },
+  "consumer": {
+    "methodRva": "0xCEBDA8",
+    "instructions": "0xCEBFCC..0xCEBFE4 multiplies HeroStats+0x40/+0x44/+0x48 (guard/combat/normal) by BuffStat+0x28"
+  },
+  "interpretation": "remaining stamina recovery multiplier 0.2, not 20 percent reduction",
+  "limits": "Native APK221 differs. main81+APK87 combined evidence does not prove same-version or server parity. Hydra hit application still requires separate assertion."
+}

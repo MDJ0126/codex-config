@@ -1,0 +1,254 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>OVERDOX 탈진의 세 자세 회복 배율 복구와 검증기 시작 예외 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/theme.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/discussions.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/manuals.css?v=97adcbde9b37"><link rel="stylesheet" href="../../../assets/copy-links.css?v=97adcbde9b37"><script defer src="../../../assets/copy-links.js?v=97adcbde9b37"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">O</span><span>OVERDOX 복원</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>OVERDOX 탈진의 세 자세 회복 배율 복구와 검증기 시작 예외 수정</h1><span class="badge" data-state="partial">부분 완료</span></div><p class="post-summary">누락된 탈진을 지원해 세 자세 회복량0.2배를 실제 Windows에서 확인했습니다. 전체38무기 일반 명중 검증을 통과하고, 시작 예외가 있던 장시간 실행은 보존 후 최신 빌드로 다시 시작했습니다.</p><div class="post-byline"><time datetime="2026-11-13T15:21:08.277Z">2026년 11월 14일 오전 12:21 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>탈진을 전달해도 버리던 조건60을 지원합니다. 실제 Fighter.Update에서0.6초간 측정한 수정 전·후입니다. 모의 계산이나 히드라 실제 명중 검증으로 확대하지 않습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>자세</th>
+<th align="right">기준 회복/초</th>
+<th align="right">수정 전 조건 적용</th>
+<th align="right">수정 후 조건 적용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>가드</td>
+<td align="right">30</td>
+<td align="right">30</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>전투</td>
+<td align="right">35</td>
+<td align="right">35</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>일반</td>
+<td align="right">60</td>
+<td align="right">60</td>
+<td align="right">12</td>
+</tr>
+</tbody></table>
+</div><p>세 자세에 공통 배율을 적용한 Fighter.Update 전체:</p>
+<pre><code data-language="csharp">        private void Update()
+        {
+            if (!IsAlive) { return; }
+            float dt = Time.deltaTime;
+            if(ArenaSession.Instance!=null&amp;&amp;ArenaSession.Instance.IsFighting) { _skillCharge=Mathf.Min(MaxSkillCharges*_skillChargeTime,_skillCharge+dt); }
+            bool inCombat = Time.time - Mathf.Max(_lastDamage, _lastAttack) &lt; 5;
+            if (Time.time - _lastSpend &gt; .7f)
+            {
+                float regen = State == CombatState.Guard ? _regenGuard : inCombat ? _regenCombat : _regenNormal;
+                // 탈진은 세 자세의 회복량에 공통 적용한다. 장비 회복 보너스와 별도 배율이다.
+                float recoveryMultiplier = _conditions.StaminaRecoveryMultiplier(Time.time);
+                Stamina = Mathf.Min(MaxStamina, Stamina + dt * regen * (1 + Effects.Sum(18)) * recoveryMultiplier);
+            }
+            if (!inCombat&amp;&amp;!HasCondition(3)) { Health = Mathf.Min(MaxHealth, Health + dt * Effects.Sum(26)); }
+            if (Effects.Sum(41) &gt; 0 &amp;&amp; Time.time &gt;= _nextOrbAt)
+            {
+                int count = 0;
+                foreach (var entry in Effects.Entries) { if (entry.type == 41) { count++; } }
+                _nextOrbAt = Time.time + 20;
+                MaxHealth += 20 * count; Health += 20 * count;
+            }
+            TickStatus();
+            TickSpecialEffects();
+            TickState();
+            if (ArenaSession.Instance == null || !ArenaSession.Instance.IsFighting) { Animate(); return; }
+            if (CombatRules.CanAct(State))
+            {
+                if (DashIntent &amp;&amp; !HasCondition(25) &amp;&amp; Time.time &gt;= _dashReady &amp;&amp; Spend(22))
+                {
+                    _dashDirection = MoveIntent.sqrMagnitude &gt; .01f ? MoveIntent.normalized : transform.forward;
+                    _dashReady = Time.time + _dashCooldown * (HasBuffType(11) ? 1 + BuffValue(11) : 1);
+                    SetState(CombatState.Dash, .24f);
+                    ArenaSession.Instance.Record(&quot;dash&quot;);
+                }
+                else if (SkillIntent &amp;&amp; SkillCharges&gt;0 &amp;&amp; Time.time &gt;= SkillReadyAt &amp;&amp; Spend(AttackCost(true)))
+                {
+                    _skillCharge-=_skillChargeTime;
+                    SkillReadyAt = Time.time + weapon.cooldown * Mathf.Max(.1f, 1 - Effects.Sum(32));
+                    if (!ExecuteUtilitySpecial()) { BeginAttack(true); }
+                    ArenaSession.Instance.RecordAction(&quot;skill&quot;,this);
+                }
+                else if (AttackIntent &amp;&amp; Spend(AttackCost(false))) { BeginAttack(false); }
+                else if (GuardIntent &amp;&amp; Stamina &gt; 0)
+                {
+                    if (State != CombatState.Guard) { _guardStart = Time.time; SetState(CombatState.Guard, 0); }
+                }
+                else if (State == CombatState.Guard) { SetState(CombatState.Idle, 0); }
+            }
+            if (State == CombatState.Dash) { Move(_dashDirection * (_dashDistance / .24f) * dt); }
+            else if (State == CombatState.Idle || State == CombatState.Guard)
+            {
+                float slow = _conditions.MovementMultiplier(Time.time);
+                float speed = State == CombatState.Guard ? _guardSpeed : inCombat ? MoveSpeed : _normalSpeed;
+                speed *= SpecialMovementMultiplier;
+                Move(Vector3.ClampMagnitude(MoveIntent, 1) * speed * slow * dt);
+            }
+            else if (State == CombatState.Active) { Move(transform.forward * dt * (_skillAttack ? 4.5f : 1.5f)); }
+            if (State != CombatState.Active &amp;&amp; State != CombatState.Stunned &amp;&amp; State != CombatState.Dash &amp;&amp; AimIntent.sqrMagnitude &gt; .01f)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(AimIntent), dt * 850);
+            }
+            DashIntent = false;
+            SkillIntent = false;
+            Animate();
+        }
+</code></pre>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>ConditionEffect501은4스택·10초·Variable1=0.2입니다. APK87 BuffStat.Init의 회복 배율 초기값1,AddToBuffStat 타입60의 곱셈,HeroInfo.UpdateStat의 세 자세 소비를 확인했습니다.0.2는 남는 회복량이며20% 감소로 해석하지 않습니다. main81 표와 APK87 클라이언트의 조합이고 APK2.2.1 바이너리는 해시가 다릅니다. 동일 버전·서버 일치는 미확인입니다.</p>
+<pre class="mermaid">flowchart LR
+ A[조건501 타입60] --&gt; B[기존 스택 컬렉션]
+ B --&gt; C{4스택 도달}
+ C --&gt;|아니오| D[미발동]
+ C --&gt;|예| E[지속시간과 회복 저항 적용]
+ E --&gt; F[활성 Variable1 배율]
+ F --&gt; G[가드 전투 일반 회복량에 곱셈]
+ E --&gt; H[만료 또는 부활]
+ H --&gt; I[배율1]
+</pre>
+<p>조건 수신과 배율 조회 전체:</p>
+<pre><code data-language="csharp">        public void ApplyCondition(Overdox.OriginalData.ConditionEffect condition, int count = 1)
+        {
+            string label;
+            switch (condition.ConditionType)
+            {
+                case 1:
+                {
+                    if (Effects.Sum(36) &gt; 0) { return; }
+                    label = &quot;화상&quot;;
+                    break;
+                }
+                case 2:
+                {
+                    label = &quot;동상&quot;;
+                    break;
+                }
+                case 3:
+                {
+                    if (Effects.Sum(37) &gt; 0) { return; }
+                    label = &quot;출혈&quot;;
+                    break;
+                }
+                case 4:
+                {
+                    label = &quot;감전&quot;;
+                    break;
+                }
+                case 25:
+                {
+                    label = &quot;속박&quot;;
+                    break;
+                }
+                case 60:
+                {
+                    label = &quot;탈진&quot;;
+                    break;
+                }
+                default:
+                {
+                    return;
+                }
+            }
+            if (_conditions.Add(condition, count, Time.time, _conditionRecovery))
+            {
+                Impact?.Invoke(this, label, 0);
+                ArenaSession.Instance.Record(&quot;condition-&quot; + condition.ConditionType);
+            }
+        }
+</code></pre>
+<pre><code data-language="csharp">        public float StaminaRecoveryMultiplier(float now)
+        {
+            return TryActive(60, now, out var exhaustion) ? exhaustion.Variable1 : 1;
+        }
+</code></pre>
+<p><a class="report-link" href="../assets/exhaustion30/native-calculation.json">네이티브 주소·해시·버전 경계</a> · <a class="report-link" href="../assets/exhaustion30/Fighter.cs">제품 전체 소스</a></p>
+<h2 id="section-4">검증</h2>
+<p>Build29 제품 DLL은 Build28과 동일합니다. 수정 전 실패를 보존했고 Build30은3스택 미발동·4스택 발동·비율0.2·실제10초 만료·부활 초기화를 통과했습니다. Build30의 별도 전체 무기 검증도38/38 일반 공격 명중을 확인했습니다. 고유 스킬의 피해·회복·효용 동작과 원작 동일성은 별도입니다.</p>
+<p>스플래시에서 ArenaSession을 즉시 요구하던 예외를 수정한 검증기 전체 시작 흐름입니다.</p>
+<pre class="mermaid">flowchart LR
+ A[명시적 검증 인자] --&gt; B[검증 오브젝트 씬 전환 보존]
+ B --&gt; C{세션 선수 경기 준비}
+ C --&gt;|아니오| D[다음 프레임 대기]
+ D --&gt; C
+ C --&gt;|예| E[실제 명중 측정]
+ E --&gt; F[결과 저장과 검증 종료]
+</pre>
+<pre><code data-language="csharp">        private static void Install()
+        {
+            if(!Environment.GetCommandLineArgs().Contains(&quot;-gear-combat-review&quot;)) { return; }
+            var runner = new GameObject(&quot;Verification · all weapon contact&quot;);
+            DontDestroyOnLoad(runner);
+            runner.AddComponent&lt;GearCombatReview&gt;();
+        }
+</code></pre>
+<pre><code data-language="csharp">        private IEnumerator Start()
+        {
+            // AfterSceneLoad는 스플래시에서도 실행된다. 실제 경기 세션과 선수 생성까지 기다린다.
+            // 씬 전환 중의 이전 Lobby 세션을 붙잡거나 경기 시작을 중복 요청하지 않는다.
+            while (ArenaSession.Instance == null || ArenaSession.Instance.Player == null || !ArenaSession.Instance.IsFighting)
+            {
+                yield return null;
+            }
+            _session = ArenaSession.Instance;
+            var report=new Report { startedUtc=DateTime.UtcNow.ToString(&quot;O&quot;), scope=&quot;Isolated stationary target, four normal-attack distances and one special activation per weapon. Verifies actual hit callbacks, not original server parity.&quot; };
+            _session.enabled=false; // 검증 동안만 구역 피해·승패·자동 재시작을 정지합니다.
+            foreach(var fighter in _session.Fighters) { fighter.GetComponent&lt;FighterBrain&gt;().enabled=false; }
+            _actor=_session.Player;_target=_session.Fighters[1];
+            foreach(var fighter in _session.Fighters.Skip(2)) { fighter.gameObject.SetActive(false); }
+            var floor=GameObject.CreatePrimitive(PrimitiveType.Cube);
+            floor.name=&quot;Verification fixture floor&quot;;floor.transform.position=_origin+Vector3.down*.55f;floor.transform.localScale=new Vector3(60,1,60);
+            _target.Impact+=OnImpact;
+            var results=new List&lt;Result&gt;();
+            for(int i=0;i&lt;_session.catalog.Weapons.Count;i++)
+            {
+                _session.ChangeWeapon(i-_session.SelectedWeapon);
+                var weapon=_actor.weapon;
+                _current=new Result { id=weapon.id, family=weapon.family, name=weapon.name, specialName=weapon.skill };
+                _special=false;
+                foreach(float distance in new[]{.65f,1f,1.4f,1.8f})
+                {
+                    _distance=distance;ResetActors();
+                    _actor.AttackIntent=true;
+                    yield return new WaitForSeconds(2.5f);
+                    _actor.AttackIntent=false;
+                }
+                _current.normalPassed=_current.normalHits&gt;0;
+                _special=true;_distance=1.2f;ResetActors();
+                _actor.Receive(null,_actor.MaxHealth*.4f,0);
+                _current.healthBefore=_actor.Health;
+                _current.chargesBefore=_actor.SkillCharges;
+                _actor.SkillIntent=true;
+                yield return new WaitForSeconds(6);
+                _current.healthAfter=_actor.Health;_current.chargesAfter=_actor.SkillCharges;
+                _current.hidden=_actor.IsHidden;
+                _current.targetCondition=Enumerable.Range(1,4).Any(_target.HasCondition);
+                _current.specialObservation=_current.specialHits&gt;0?&quot;damage observed&quot;:_current.healthAfter&gt;_current.healthBefore?&quot;recovery observed&quot;:&quot;activation only; utility behavior requires separate assertion&quot;;
+                _session.Capture(&quot;gear-contact-&quot;+weapon.id);
+                results.Add(_current);
+                Debug.Log($&quot;GEAR_CONTACT id={weapon.id} normalHits={_current.normalHits} normalDamage={_current.normalDamage} specialHits={_current.specialHits} charges={_current.chargesBefore}-&gt;{_current.chargesAfter}&quot;);
+                Save(report,results,false);
+            }
+            Save(report,results,true);
+            Debug.Log($&quot;GEAR_CONTACT_COMPLETE passed={results.Count(r=&gt;r.normalPassed)}/{results.Count}&quot;);
+            Application.Quit();
+        }
+</code></pre>
+<h2 id="section-5">남은 사항</h2>
+<p><a class="report-link" href="../assets/exhaustion30/before-review.json">수정 전 실패</a> · <a class="report-link" href="../assets/exhaustion30/after-review.json">수정 후 통과</a> · <a class="report-link" href="../assets/exhaustion30/gear-contact-results.json">전38무기 실제 결과</a> · <a class="report-link" href="../assets/exhaustion30/after.log">전후 로그</a></p>
+<p>기존 Build27 장시간 실행은 시작 예외1건 때문에3742.600초·마지막31라운드에서 중단했습니다. 이전 보고의 진행 중·고정 파일 보존은 맞는 관찰이며 무오류 통과는 아닙니다. 오류 발견 후 중단 기록을 추가했고 이전 결과를 바꾸지 않았습니다. Build30Soak은2026-11-14 00:17:33 KST부터 기본Splash→Lobby→Arena로36000초 실행을 다시 시작했습니다. 예정10:17경이며 아직 완료가 아닙니다. 이전 시간을 합산하지 않습니다.</p>
+<p><a class="report-link" href="../assets/exhaustion30/build27-interrupted.json">이전 중단과 예외</a> · <a class="report-link" href="../assets/exhaustion30/soak-start.json">새 시작</a> · <a class="report-link" href="../assets/exhaustion30/soak-progress.json">새 진행 관찰</a> · <a class="report-link" href="../assets/exhaustion30/build30-manifest.json">148파일 고정 해시</a> · <a class="report-link" href="../assets/exhaustion30/soak-build-match.json">장시간 고정 사본 대조</a></p>
+<p>현행 남녀 아바타4파일·수식XLSX 해시는 보존했습니다. 아래는 실제 Windows 장비 창의 보존 점검 화면이며 탈진의 시각 전후 증거가 아닙니다. 이번 제품 수정은 회복 계산입니다. 상단 어두운 전설 템플릿·추가depth·전119장비 능력·리깅·카메라·FX 일치는 미완료입니다.</p>
+<p><figure><img class="report-image" src="../assets/exhaustion30/male-equipment-build30.png" alt="현행 남성 장비 점검" loading="lazy"><figcaption>현행 남성 장비 점검</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/exhaustion30/female-equipment-build30.webp" alt="현행 여성 장비 점검" loading="lazy"><figcaption>현행 여성 장비 점검</figcaption></figure></p>
+<p><a class="report-link" href="../assets/exhaustion30/preservation.json">아바타·수식Excel 보존</a> · <a class="report-link" href="../assets/exhaustion30/affinity-reopened.json">실제 Affinity 두AF 재열기</a> · <a class="report-link" href="../assets/exhaustion30/affinity-cleanup.json">기존6문서 보존</a> · <a class="report-link" href="../assets/exhaustion30/12-exhaustion-and-verification-lifecycle.md">개발 문서</a>. 실제 Affinity에서 두AF 저장·닫기·재열기 dirty=false와 여성WebP139132B를 확인했습니다. 남성PNG 추가압축 미완료. 기존 FX 누락 스크립트 경고도 남습니다. 히드라의 실제 명중에서 조건60 발동과 원본FX·퍼센트 치환은 별도 검증이 필요합니다.</p>
+<p>샘플 SceneEntry·한국어XML·분기 규칙을 참고했습니다. 게임 고유 조건ID는 환류하지 않으며 초기화 준비 원칙은 기존 샘플과 중복돼 환류 보류입니다. 전역 지침 변경 없이 프로젝트 교훈만 통합했습니다.</p>
+<p>대화 요약:사용자는 중단 지시 전 지속 복원,남녀 아바타·리깅 변경 참고와 추가UI depth점검을 요청했습니다(발언 시각 미기록). AI는 원본 계산 추적 뒤0.2배를 적용하고 실제 측정 결과를 보고했습니다. 장시간 시작 예외 발견·기존 실행 중단·새10시간 재시작 및 예정 변경을 알렸습니다. 전체UI·원작동일성 완료로 판정하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-13 23:48:02 KST 시작,첫 구현·실행 확인45~75분 예상. 전체 복원 종료와 구분합니다.</li>
+<li>실제로 완료된 시간: 수정 전 검증00:03:42.403,수정 후 통과00:06:12.671,전체38무기 종료00:17:02.683,새10시간 시작00:17:33.660 KST(2026-11-14). 핵심 회복 검증까지18분10.7초. 문서·공개 확인 종료는 별도 기록합니다. 설치·전체복원·10시간 완료를 포함하지 않습니다.</li>
+<li>XERJ: 미사용 — XERJ 연결·검색 없음. 보존된 main81 표·APK87 ELF/Capstone와 실제 Windows 측정 사용. REA 도구는 제공되지 않아 해당 출력으로 표시하지 않습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-13-result-20261113152108277-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=overdox&topic=qa&relatedReport=projects%2Foverdox%2Freports%2F2026-11-13-result-20261113152108277-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=overdox">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=overdox">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=dcc34878b321"><script type="module" src="../../../assets/report-visuals.js?v=dcc34878b321"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,0 +1,77 @@
+Mono path[0] = 'C:/Projects/FH/VerificationBuilds/Build30/Overdox_Data/Managed'
+Mono config path = 'C:/Projects/FH/VerificationBuilds/Build30/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.0.83f1 (dacc44548933)
+[Subsystems] Discovering subsystems at path C:/Projects/FH/VerificationBuilds/Build30/Overdox_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4030 MB
+    Driver:   32.0.15.8266
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.093 seconds
+- Finished resetting the current domain, in  0.002 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+UnloadTime: 0.356100 ms
+OVERDOX_FLOW_LOADING destination=OverdoxArena weapon=10140
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.090800 ms
+OVERDOX_SESSION_START utc=2026-11-13T15:06:54.0397643Z autoplay=False soak=False duration=36000 weapons=38 armor=81
+OVERDOX_FLOW_READY phase=Arena weapon=10140
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 63018.
+Total: 6.225000 ms (FindLiveObjects: 2.583500 ms CreateObjectMapping: 0.670600 ms MarkObjects: 2.900400 ms  DeleteObjects: 0.070300 ms)
+
+OVERDOX_ROUND_START round=1 weapon=그림자 칼날 set=인펜튜리
+GEAR_CONTACT id=10110 normalHits=8 normalDamage=241.92 specialHits=1 charges=1->0
+GEAR_CONTACT id=10120 normalHits=8 normalDamage=488.8799 specialHits=12 charges=1->0
+GEAR_CONTACT id=10130 normalHits=8 normalDamage=797.58 specialHits=0 charges=1->0
+GEAR_CONTACT id=10140 normalHits=8 normalDamage=241.92 specialHits=0 charges=1->0
+GEAR_CONTACT id=10150 normalHits=9 normalDamage=1071 specialHits=2 charges=2->1
+GEAR_CONTACT id=10210 normalHits=5 normalDamage=311.85 specialHits=0 charges=1->0
+GEAR_CONTACT id=10220 normalHits=5 normalDamage=552.825 specialHits=1 charges=1->0
+GEAR_CONTACT id=10230 normalHits=5 normalDamage=793.8 specialHits=1 charges=1->0
+GEAR_CONTACT id=10240 normalHits=5 normalDamage=335.475 specialHits=0 charges=1->0
+GEAR_CONTACT id=10250 normalHits=5 normalDamage=1106.359 specialHits=1 charges=2->1
+GEAR_CONTACT id=10310 normalHits=19 normalDamage=598.752 specialHits=0 charges=1->0
+GEAR_CONTACT id=10320 normalHits=19 normalDamage=1090.908 specialHits=10 charges=1->0
+GEAR_CONTACT id=10330 normalHits=19 normalDamage=1586.477 specialHits=0 charges=1->0
+GEAR_CONTACT id=10340 normalHits=19 normalDamage=488.544 specialHits=0 charges=1->0
+GEAR_CONTACT id=10350 normalHits=11 normalDamage=1028.963 specialHits=1 charges=2->1
+GEAR_CONTACT id=10410 normalHits=8 normalDamage=739.2 specialHits=3 charges=1->0
+GEAR_CONTACT id=10420 normalHits=8 normalDamage=1159.2 specialHits=1 charges=1->0
+GEAR_CONTACT id=10430 normalHits=8 normalDamage=1528.8 specialHits=1 charges=1->0
+GEAR_CONTACT id=10440 normalHits=8 normalDamage=789.6 specialHits=0 charges=1->0
+GEAR_CONTACT id=10450 normalHits=8 normalDamage=2049.6 specialHits=1 charges=2->1
+GEAR_CONTACT id=10510 normalHits=8 normalDamage=811.44 specialHits=1 charges=1->0
+GEAR_CONTACT id=10520 normalHits=8 normalDamage=1243.62 specialHits=0 charges=1->0
+GEAR_CONTACT id=10530 normalHits=8 normalDamage=1631.7 specialHits=1 charges=1->0
+GEAR_CONTACT id=10540 normalHits=8 normalDamage=882 specialHits=0 charges=1->0
+GEAR_CONTACT id=10550 normalHits=5 normalDamage=1359.54 specialHits=1 charges=2->1
+GEAR_CONTACT id=10610 normalHits=12 normalDamage=554.4 specialHits=1 charges=1->0
+GEAR_CONTACT id=10620 normalHits=8 normalDamage=585.9 specialHits=1 charges=1->0
+GEAR_CONTACT id=10630 normalHits=8 normalDamage=917.5615 specialHits=1 charges=1->0
+GEAR_CONTACT id=10640 normalHits=8 normalDamage=315 specialHits=0 charges=1->0
+GEAR_CONTACT id=10650 normalHits=8 normalDamage=1234.8 specialHits=0 charges=2->1
+GEAR_CONTACT id=10710 normalHits=12 normalDamage=396.06 specialHits=1 charges=1->0
+GEAR_CONTACT id=10720 normalHits=12 normalDamage=927.36 specialHits=1 charges=1->0
+GEAR_CONTACT id=10730 normalHits=12 normalDamage=1352.4 specialHits=0 charges=1->0
+GEAR_CONTACT id=10740 normalHits=12 normalDamage=425.04 specialHits=0 charges=1->0
+GEAR_CONTACT id=10750 normalHits=12 normalDamage=1225.613 specialHits=1 charges=2->1
+GEAR_CONTACT id=10820 normalHits=12 normalDamage=1247.4 specialHits=1 charges=1->0
+GEAR_CONTACT id=10830 normalHits=12 normalDamage=1293.701 specialHits=1 charges=1->0
+GEAR_CONTACT id=10850 normalHits=12 normalDamage=1848 specialHits=1 charges=2->1
+GEAR_CONTACT_COMPLETE passed=38/38
+[Physics::Module] Cleanup current backned.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.

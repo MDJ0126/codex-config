@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-11-14T00:06:51.8142009+09:00",
+  "pid": 29152,
+  "startTime": "2026-11-13T23:04:29.2190787+09:00",
+  "elapsedSeconds": 3742.6001703,
+  "status": "interrupted; startup exception violates clean-run criterion",
+  "exceptions": [
+    "InvalidOperationException: ArenaSession is required"
+  ],
+  "lastTelemetry": [
+    "utc=2026-11-13T15:03:32.0199414Z elapsed=3540.6 rounds=29 alive=5 playerPosition=(-3.36, 0.03, -2.63) memory=202057354 objects=9663 [attack, 6041],[skill, 662],[dash, 2415],[hit, 3332],[buff, 664],[death, 303],[block, 81],[condition-2, 57],[condition-3, 87],[condition-1, 36],[condition-4, 58],[round, 28],[parry, 4],[condition-25, 8]",
+    "utc=2026-11-13T15:04:32.0297470Z elapsed=3600.6 rounds=30 alive=12 playerPosition=(0.28, 0.03, -6.19) memory=202079233 objects=9693 [attack, 6088],[skill, 668],[dash, 2431],[hit, 3354],[buff, 669],[death, 307],[block, 81],[condition-2, 57],[condition-3, 87],[condition-1, 36],[condition-4, 58],[round, 29],[parry, 5],[condition-25, 8]",
+    "utc=2026-11-13T15:05:32.0361111Z elapsed=3660.6 rounds=30 alive=3 playerPosition=(1.93, 0.03, 1.41) memory=202057970 objects=9659 [attack, 6222],[skill, 683],[dash, 2488],[hit, 3425],[buff, 681],[death, 316],[block, 84],[condition-2, 57],[condition-3, 87],[condition-1, 36],[condition-4, 59],[round, 29],[parry, 6],[condition-25, 8]",
+    "utc=2026-11-13T15:06:32.0503960Z elapsed=3720.6 rounds=31 alive=4 playerPosition=(-0.52, 0.03, -1.90) memory=202083410 objects=9713 [attack, 6335],[skill, 700],[dash, 2530],[hit, 3490],[buff, 700],[death, 326],[block, 86],[condition-2, 57],[condition-3, 87],[condition-1, 36],[condition-4, 59],[round, 30],[parry, 6],[condition-25, 8]"
+  ],
+  "reason": "Replacing with Build30 default-entry soak after recovery integration passed"
+}

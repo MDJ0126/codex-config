@@ -1,0 +1,37 @@
+{
+    "startedUtc": "2026-11-13T15:05:56.6791589Z",
+    "finishedUtc": "2026-11-13T15:06:12.6711015Z",
+    "scope": "Isolated actual Fighter.Update measurements with controlled stamina and combat timestamps. Direct DDT condition application; Hydra contact and original server parity are not asserted.",
+    "conditionId": 501,
+    "threeStacksInactive": true,
+    "fourStacksActive": true,
+    "expired": true,
+    "respawnCleared": true,
+    "passed": true,
+    "samples": [
+        {
+            "stance": "guard",
+            "healthyRate": 30.000009536743165,
+            "affectedRate": 6.000002384185791,
+            "ratio": 0.20000001788139344,
+            "expectedRatio": 0.20000000298023225,
+            "passed": true
+        },
+        {
+            "stance": "combat",
+            "healthyRate": 34.99998474121094,
+            "affectedRate": 7.000002861022949,
+            "ratio": 0.20000016689300538,
+            "expectedRatio": 0.20000000298023225,
+            "passed": true
+        },
+        {
+            "stance": "normal",
+            "healthyRate": 60.000003814697269,
+            "affectedRate": 11.999987602233887,
+            "ratio": 0.19999977946281434,
+            "expectedRatio": 0.20000000298023225,
+            "passed": true
+        }
+    ]
+}
