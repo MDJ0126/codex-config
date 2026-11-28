@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "이전 M1 목소리 및 내레이션 음량 3dB 상향 영상 재출력",
+    "summary": "최근 대화체 후보를 보류하고 이전 연속 M1 음성으로 흰색 자막 쇼츠를 재출력했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "비공개 output/shorts/09-gameplay-m1-continuous/gameplay-m1-white-volume-up.mp4 및 output/shorts/gameplay-m1-white-volume-up-editable.zip 생성.",
+    "verification": "영상 비트스트림 SHA-256이 직전 영상과 동일. 전체 디코딩 성공. 평균 -23.6dB, 최고 -5.4dB. 프로젝트 참조 17개 존재, XML UTF-8 선언 수정 후 재파싱 성공, ZIP CRC 통과.",
+    "remaining": "사용자 최종 청취 확인 대기. Shotcut 앱 직접 재렌더 대조 미실시. 공개 게시 없음. 프로젝트 Markdown·문서 관계도 변경 없음.",
+    "outcome": "25.6초. 직전 흰색 자막 버전에서 내레이션만 3dB 상향. 배경음·짧은 쉬는 텀·밈 제외 유지. 별도 MP4와 편집 ZIP 생성.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
