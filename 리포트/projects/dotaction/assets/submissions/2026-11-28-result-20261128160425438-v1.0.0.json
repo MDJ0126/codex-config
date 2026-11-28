@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Windows 대시보드 재시작 시 창 상태 복원",
+    "summary": "일반 창의 위치와 크기, 최대화 여부를 저장하고 다시 열 때 복원하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "창 닫기, 서버 중지, 트레이 종료와 재시작 시 로컬 파일에 창 배치를 저장합니다. 최소화된 경우 직전 창 상태를 사용하며, 저장된 위치의 제목 표시줄이 화면 밖에 있으면 사용 가능한 화면으로 옮깁니다.",
+    "verification": "C# 창 빌드와 PowerShell 구문 검사 통과. 별도 Windows 창과 임시 프로필에서 일반 창 위치·크기, 최대화, 최대화 해제 후 일반 창 배치, 최소화 후 재시작, 화면 밖 좌표와 손상 설정 처리까지 검증했습니다. 프로젝트 원격 main의 커밋 해시를 조회해 반영을 확인했습니다.",
+    "remaining": "사용 중인 트레이 프로세스와 실제 대시보드 페이지를 통과하는 재시작 및 화면 촬영은 미검수입니다.",
+    "outcome": "Windows 대시보드의 창 상태 복원 코드를 원격 main에 반영했습니다. 프로젝트 커밋은 22d3c2898b253b71c615ce7f6ab5187acdd30ee8입니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
