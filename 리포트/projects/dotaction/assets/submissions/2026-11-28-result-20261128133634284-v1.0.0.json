@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Markdown 변경과 문서 관계도를 최종 보고에 포함",
+    "summary": "Markdown 추가·수정·삭제와 관계도 변경 및 검증 결과를 항상 보고하도록 하고, 장비 제작 관계도의 원격 요약을 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장비 단계 분리 커밋 495a4805의 Markdown 수정은 agent-route-art.md, sprite-guide-equipped-five.md, sprite-guide-file-names.md, sprite-guide-relationships.md, sprite-guide-submission-idle.md 다섯 개입니다. 추가·삭제는 없었습니다. 후속 작업에서 AGENTS.md의 보고 규칙과 agent-map-details.md의 제작 가이드 노드 요약 및 대시보드 표시를 수정했습니다.",
+    "verification": "원격 이전·이후 커밋의 문서 목록을 대조했습니다. AGENTS.md는 로컬 3973바이트 및 원격 3655바이트로 4 KiB 이내입니다. 원격 대시보드 원본에서 새 모달 요약이 반영된 위치를 대조했습니다.",
+    "remaining": "공개 Pages 게시 확인은 하지 않았습니다.",
+    "outcome": "프로젝트 원격 main에서 2b47d902를 확인했습니다.",
+    "proposedTime": "별도 소요 시간 약정 없음",
+    "actualTime": "2026-11-28 KST에 문서 범위 대조와 프로젝트 원격 반영을 확인했습니다.",
+    "xerjEvidence": "Git 변경 기록과 대시보드 원본을 직접 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
