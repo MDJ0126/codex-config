@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장비 제작을 5시와 2시 개별 출력으로 분리",
+    "summary": "각 방향의 정지 마네킹을 첫 입력으로 사용하는 1024px 장비 제작 두 단계를 등록했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장비 5시와 2시를 개별 요청·등록 단계로 분리했습니다. 방향별 남녀 기본형 PNG를 연결하고 현재 단계의 마네킹만 첫 이미지로 첨부하도록 했습니다. 5시 결과가 512px 대기 참조로 이어지고 기존 장비 시트도 기존 대기 작업에서 읽을 수 있습니다. 원격의 별도 바디·의복 단계는 유지했습니다.",
+    "verification": "격리된 제작 요청에서 5시만, 2시만, 둘 모두의 마네킹 배정을 검사했습니다. 1247×1261 실물 PNG를 1024×1024 등록용으로 바꾼 뒤 512×512 대기 참조까지 검증했습니다. 대시보드 빌드 및 헤드리스 브라우저에서 각 카드의 서로 다른 1024px 이미지 로드를 확인하고 촬영했습니다. 원격 main을 대조했습니다.",
+    "remaining": "새 흐름으로 실제 캐릭터를 ImageGen에 제출하는 테스트는 수행하지 않았습니다. 공개 Pages 확인은 수행하지 않았습니다.",
+    "outcome": "프로젝트 원격 main 반영을 확인했습니다. 커밋 495a4805.\n\n![대시보드에서 분리된 장비 두 단계와 방향별 마네킹](../assets/2026-11-28-equipped-se-ne-dashboard.png)",
+    "proposedTime": "사전 소요 시간 약정 없음",
+    "actualTime": "2026-11-28 KST에 요청·등록·화면을 검수하고 반영했습니다.",
+    "xerjEvidence": "로컬 큐·PNG 검사·브라우저와 Git 원격을 직접 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
