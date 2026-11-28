@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커뮤니티 활동에 수퍼토닉 TTS 테스트 페이지 추가",
+    "summary": "입력한 대본으로 목소리와 말투를 직접 조절해 샘플을 생성·비교·저장하는 로컬 페이지를 구현했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "HTML/CSS/JS 전용 페이지 및 로컬 API·Python 생성 워커 추가. 서버에는 API import·라우트·디렉터리 처리만 분리 반영. 다른 세션의 서버 수정은 커밋에서 제외. 프로젝트 Markdown 및 문서 관계도 변경 없음.",
+    "verification": "실제 M1 기본 샘플과 M2 음높이 -0.5·억양 90%·음량 -3dB 샘플 생성 성공. 측정 -23.44/-26.46LUFS. 실제 대시보드 링크 이동, 브라우저 오디오 재생·MP3 다운로드, 206 Range, 기록 재로딩 및 설정 복구, 모바일 420px 넘침 없음 확인. 빈 입력 400·외부 Origin 403·동시 생성 409·작업 취소 확인. 사설 화면 증거 로컬 보관. task commit b2d28638486ae06575174814d773560a8bbb02aa 원격 codex/tts-test-page 반영 확인.",
+    "remaining": "main 브랜치가 로컬·원격 간 크게 갈라져 있어 자동 병합하지 않고 별도 기능 브랜치로 푸시했습니다. 공개 Pages에서는 로컬 TTS API가 동작하지 않으며 현재 PC 로컬 대시보드에서 사용합니다. 앱 설치·모델이 없는 다른 PC 준비는 미검증.",
+    "outcome": "커뮤니티 활동에 TTS 테스트 링크 추가. 수퍼토닉 10종 목소리, 속도·음높이·억양 폭·음량·쉬는 텀·시드 조절. 실제 로컬 생성, 진행 상태와 취소, 샘플 기록·설정 다시 불러오기, MP3·설정 다운로드. 이 PC 대시보드 서버 재시작 후 실제 URL 반영.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
