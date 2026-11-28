@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹을 남녀 기본형으로 정리하고 2시 걷는 자세 제작",
+    "summary": "제작 목록을 남녀 기본형만 남기고 정리했습니다. 각 기본형의 5시는 정지 자세를 유지하고 2시는 걷는 자세로 준비했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "로컬 제작 목록의 기본 외 6종과 원격 SD 2종을 제거했습니다. 활성 캐릭터 설정에서 제거된 선택을 남녀 기본형으로 옮겼습니다. 5시 파일 두 장을 유지했고, 2시에서 여성은 사용자가 고른 시안을 쓰고 남성은 해당 보행 자세를 따라 새로 생성했습니다.",
+    "verification": "대시보드 빌드와 기본형 선택지 두 종, 기존 캐릭터 설정이 유효한 마네킹을 가리키는 것을 확인했습니다. 원격 프로젝트 커밋과 4장 ZIP, 투명도·1024×1024 크기, 5시 파일의 내용 일치를 검사했습니다.",
+    "remaining": "두 방향 1024px 참조는 별도 파일입니다. 실제 캐릭터 제작 및 Pages 공개 접근은 미확인입니다.",
+    "outcome": "프로젝트 원격 main에 커밋 c85caf53을 반영했습니다. 남녀 기본형의 방향별 1024px 투명 PNG 네 장을 별도로 제공했습니다.\n\n![남녀 기본형 5시 정지와 2시 걷기 비교](../assets/2026-11-28-basic-mannequin-walk.png)",
+    "proposedTime": "별도 소요 시간 약정 없음",
+    "actualTime": "2026-11-28 KST에 제작·검수·원격 반영했습니다.",
+    "xerjEvidence": "생성 자료와 로컬 빌드, 원격 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
